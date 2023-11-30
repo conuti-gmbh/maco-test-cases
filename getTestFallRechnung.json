@@ -1,0 +1,505 @@
+{
+    "stammdaten": {
+      "RECHNUNG": [
+        {
+          "ausfuehrungsdatum": "2021-10-31T23:00:00Z",
+          "bearbeitungsdatum": "2023-07-14",
+          "buchungsdatum": "2021-10-31T23:00:00Z",
+          "beginnPeriodeBilanzierung": "2021-10-31T23:00:00Z",
+          "datumVorgaengerrechnung": "2021-10-31T23:00:00Z",
+          "endePeriodeNetznutzung": "2021-10-31T23:00:00Z",
+          "energierichtung": "AUSSP",
+          "faelligkeitsdatum": "2023-07-28",
+          "gemeinderabatt": {
+            "bemessungsgrundlage": 124.5,
+            "wert": 12.5
+          },
+          "gesamtbrutto": {
+            "waehrung": "EUR",
+            "wert": 122.07
+          },
+          "istReverseCharge": false,
+          "istSelbstausgestellt": false,
+          "netzkonto": null,
+          "originalRechnungsnummer": null,
+          "rechnungsdatum": "2023-07-14",
+          "rechnungsperiode": {
+            "enddatum": "2023-05-31",
+            "startdatum": "2023-04-01"
+          },
+          "rechnungspositionen": [
+            {
+              "abschlag": {
+                "typ": "GEMEINDERABATT_KAV",
+                "prozent": 10
+              },
+              "artikelnummer": "1-02-0-002",
+              "ausfuehrungsdatum": "2021-10-31T23:00:00Z",
+              "einzelpreis": {
+                "bezugswert": "JAHR",
+                "einheit": "EUR",
+                "status": "ENDGUELTIG",
+                "wert": 0.06
+              },
+              "gemeinderabatt": {
+                "bemessungsgrundlage": 123.5,
+                "wert": 12.5
+              },
+              "gesamtZuAbschlagsbetrag": 58.65,
+              "korrekturfaktor": 2,
+              "lieferungBis": "2023-05-31",
+              "lieferungVon": "2023-04-01",
+              "positionsMenge": {
+                "einheit": "KWH",
+                "wert": 1000
+              },
+              "positionsnummer": 1,
+              "teilsummeNetto": {
+                "waehrung": "EUR",
+                "wert": 60
+              },
+              "teilsummeSteuer": {
+                "steuerkennzeichen": "UST_19"
+              },
+              "zeitbezogeneMenge": {
+                "wert": 243,
+                "einheit": "KWH"
+              },
+              "zuschlag": {
+                "prozent": 10,
+                "typ": "UMSPANNUNGSZUSCHLAG"
+              }
+            },
+            {
+              "abschlag": {
+                "typ": "GEMEINDERABATT_KAV",
+                "prozent": 10
+              },
+              "artikelnummer": "1-02-0-001",
+              "ausfuehrungsdatum": "2021-10-31T23:00:00Z",
+              "einzelpreis": {
+                "bezugswert": "JAHR",
+                "einheit": "EUR",
+                "status": "ENDGUELTIG",
+                "wert": 65
+              },
+              "gemeinderabatt": {
+                "bemessungsgrundlage": 123.5,
+                "wert": 12.5
+              },
+              "gesamtZuAbschlagsbetrag": 58.65,
+              "korrekturfaktor": 2,
+              "lieferungBis": "2023-05-31",
+              "lieferungVon": "2023-04-01",
+              "positionsMenge": {
+                "einheit": "KWH",
+                "wert": 1
+              },
+              "positionsnummer": 2,
+              "teilsummeNetto": {
+                "waehrung": "EUR",
+                "wert": 10.86
+              },
+              "teilsummeSteuer": {
+                "steuerkennzeichen": "UST_19"
+              },
+              "zeitbezogeneMenge": {
+                "wert": 243,
+                "einheit": "KWH"
+              },
+              "zuschlag": {
+                "prozent": 10,
+                "typ": "UMSPANNUNGSZUSCHLAG"
+              }
+            },
+            {
+              "abschlag": {
+                "typ": "GEMEINDERABATT_KAV",
+                "prozent": 10
+              },
+              "artikelnummer": "1-08-4-002",
+              "ausfuehrungsdatum": "2021-10-31T23:00:00Z",
+              "einzelpreis": {
+                "bezugswert": "JAHR",
+                "einheit": "EUR",
+                "status": "ENDGUELTIG",
+                "wert": 0.0159
+              },
+              "gemeinderabatt": {
+                "bemessungsgrundlage": 123.5,
+                "wert": 12.5
+              },
+              "gesamtZuAbschlagsbetrag": 58.65,
+              "korrekturfaktor": 2,
+              "lieferungBis": "2023-05-31",
+              "lieferungVon": "2023-04-01",
+              "positionsMenge": {
+                "einheit": "KWH",
+                "wert": 1000
+              },
+              "positionsnummer": 3,
+              "teilsummeNetto": {
+                "waehrung": "EUR",
+                "wert": 15.9
+              },
+              "teilsummeSteuer": {
+                "steuerkennzeichen": "UST_19"
+              },
+              "zeitbezogeneMenge": {
+                "wert": 243,
+                "einheit": "KWH"
+              },
+              "zuschlag": {
+                "prozent": 10,
+                "typ": "UMSPANNUNGSZUSCHLAG"
+              }
+            },
+            {
+              "abschlag": {
+                "typ": "GEMEINDERABATT_KAV",
+                "prozent": 10
+              },
+              "artikelnummer": "1-06-7-004",
+              "ausfuehrungsdatum": "2021-10-31T23:00:00Z",
+              "einzelpreis": {
+                "bezugswert": "JAHR",
+                "einheit": "EUR",
+                "status": "ENDGUELTIG",
+                "wert": 13
+              },
+              "gemeinderabatt": {
+                "bemessungsgrundlage": 123.5,
+                "wert": 12.5
+              },
+              "gesamtZuAbschlagsbetrag": 58.65,
+              "korrekturfaktor": 2,
+              "lieferungBis": "2023-05-31",
+              "lieferungVon": "2023-04-01",
+              "positionsMenge": {
+                "einheit": "KWH",
+                "wert": 1
+              },
+              "positionsnummer": 4,
+              "teilsummeNetto": {
+                "waehrung": "EUR",
+                "wert": 2.17
+              },
+              "teilsummeSteuer": {
+                "steuerkennzeichen": "UST_19"
+              },
+              "zeitbezogeneMenge": {
+                "wert": 243,
+                "einheit": "KWH"
+              },
+              "zuschlag": {
+                "prozent": 10,
+                "typ": "UMSPANNUNGSZUSCHLAG"
+              }
+            },
+            {
+              "abschlag": {
+                "typ": "GEMEINDERABATT_KAV",
+                "prozent": 10
+              },
+              "artikelnummer": "1-10-5-001",
+              "ausfuehrungsdatum": "2021-10-31T23:00:00Z",
+              "einzelpreis": {
+                "bezugswert": "JAHR",
+                "einheit": "EUR",
+                "status": "ENDGUELTIG",
+                "wert": 0.00357
+              },
+              "gemeinderabatt": {
+                "bemessungsgrundlage": 123.5,
+                "wert": 12.5
+              },
+              "gesamtZuAbschlagsbetrag": 58.65,
+              "korrekturfaktor": 2,
+              "lieferungBis": "2023-05-31",
+              "lieferungVon": "2023-04-01",
+              "positionsMenge": {
+                "einheit": "KWH",
+                "wert": 1000
+              },
+              "positionsnummer": 5,
+              "teilsummeNetto": {
+                "waehrung": "EUR",
+                "wert": 3.57
+              },
+              "teilsummeSteuer": {
+                "steuerkennzeichen": "UST_19"
+              },
+              "zeitbezogeneMenge": {
+                "wert": 243,
+                "einheit": "KWH"
+              },
+              "zuschlag": {
+                "prozent": 10,
+                "typ": "UMSPANNUNGSZUSCHLAG"
+              }
+            },
+            {
+              "abschlag": {
+                "typ": "GEMEINDERABATT_KAV",
+                "prozent": 10
+              },
+              "artikelnummer": "1-10-4-001",
+              "ausfuehrungsdatum": "2021-10-31T23:00:00Z",
+              "einzelpreis": {
+                "bezugswert": "JAHR",
+                "einheit": "EUR",
+                "status": "ENDGUELTIG",
+                "wert": 0.00417
+              },
+              "gemeinderabatt": {
+                "bemessungsgrundlage": 123.5,
+                "wert": 12.5
+              },
+              "gesamtZuAbschlagsbetrag": 58.65,
+              "korrekturfaktor": 2,
+              "lieferungBis": "2023-05-31",
+              "lieferungVon": "2023-04-01",
+              "positionsMenge": {
+                "einheit": "KWH",
+                "wert": 1000
+              },
+              "positionsnummer": 6,
+              "teilsummeNetto": {
+                "waehrung": "EUR",
+                "wert": 4.17
+              },
+              "teilsummeSteuer": {
+                "steuerkennzeichen": "UST_19"
+              },
+              "zeitbezogeneMenge": {
+                "wert": 243,
+                "einheit": "KWH"
+              },
+              "zuschlag": {
+                "prozent": 10,
+                "typ": "UMSPANNUNGSZUSCHLAG"
+              }
+            },
+            {
+              "abschlag": {
+                "typ": "GEMEINDERABATT_KAV",
+                "prozent": 10
+              },
+              "artikelnummer": "1-10-3-001",
+              "ausfuehrungsdatum": "2021-10-31T23:00:00Z",
+              "einzelpreis": {
+                "bezugswert": "JAHR",
+                "einheit": "EUR",
+                "status": "ENDGUELTIG",
+                "wert": 0
+              },
+              "gemeinderabatt": {
+                "bemessungsgrundlage": 123.5,
+                "wert": 12.5
+              },
+              "gesamtZuAbschlagsbetrag": 58.65,
+              "korrekturfaktor": 2,
+              "lieferungBis": "2023-05-31",
+              "lieferungVon": "2023-04-01",
+              "positionsMenge": {
+                "einheit": "KWH",
+                "wert": 1000
+              },
+              "positionsnummer": 7,
+              "teilsummeNetto": {
+                "waehrung": "EUR",
+                "wert": 0
+              },
+              "teilsummeSteuer": {
+                "steuerkennzeichen": "UST_19"
+              },
+              "zeitbezogeneMenge": {
+                "wert": 243,
+                "einheit": "KWH"
+              },
+              "zuschlag": {
+                "prozent": 10,
+                "typ": "UMSPANNUNGSZUSCHLAG"
+              }
+            },
+            {
+              "abschlag": {
+                "typ": "GEMEINDERABATT_KAV",
+                "prozent": 10
+              },
+              "artikelnummer": "1-10-2-001",
+              "ausfuehrungsdatum": "2021-10-31T23:00:00Z",
+              "einzelpreis": {
+                "bezugswert": "JAHR",
+                "einheit": "EUR",
+                "status": "ENDGUELTIG",
+                "wert": 0.00591
+              },
+              "gemeinderabatt": {
+                "bemessungsgrundlage": 123.5,
+                "wert": 12.5
+              },
+              "gesamtZuAbschlagsbetrag": 58.65,
+              "korrekturfaktor": 2,
+              "lieferungBis": "2023-05-31",
+              "lieferungVon": "2023-04-01",
+              "positionsMenge": {
+                "einheit": "KWH",
+                "wert": 1000
+              },
+              "positionsnummer": 8,
+              "teilsummeNetto": {
+                "waehrung": "EUR",
+                "wert": 5.91
+              },
+              "teilsummeSteuer": {
+                "steuerkennzeichen": "UST_19"
+              },
+              "zeitbezogeneMenge": {
+                "wert": 243,
+                "einheit": "KWH"
+              },
+              "zuschlag": {
+                "prozent": 10,
+                "typ": "UMSPANNUNGSZUSCHLAG"
+              }
+            },
+            {
+              "abschlag": {
+                "typ": "GEMEINDERABATT_KAV",
+                "prozent": 10
+              },
+              "artikelnummer": "1-10-2-001",
+              "ausfuehrungsdatum": "2021-10-31T23:00:00Z",
+              "einzelpreis": {
+                "bezugswert": "JAHR",
+                "einheit": "EUR",
+                "status": "ENDGUELTIG",
+                "wert": 0
+              },
+              "gemeinderabatt": {
+                "bemessungsgrundlage": 123.5,
+                "wert": 12.5
+              },
+              "gesamtZuAbschlagsbetrag": 58.65,
+              "korrekturfaktor": 2,
+              "lieferungBis": "2023-05-31",
+              "lieferungVon": "2023-04-01",
+              "positionsMenge": {
+                "einheit": "KWH",
+                "wert": 0
+              },
+              "positionsnummer": 9,
+              "teilsummeNetto": {
+                "waehrung": "EUR",
+                "wert": 19.49
+              },
+              "teilsummeSteuer": {
+                "steuerkennzeichen": "UST_19"
+              },
+              "zeitbezogeneMenge": {
+                "wert": 243,
+                "einheit": "KWH"
+              },
+              "zuschlag": {
+                "prozent": 11,
+                "typ": "UMSPANNUNGSZUSCHLAG"
+              }
+            }
+          ],
+          "rechnungstyp": "ABSCHLUSSRECHNUNG",
+          "rechnungsstatus": "ORIGINAL",
+          "referenzDokumentennummer": "EXT000000001",
+          "referenzNachrichtendatum": "2021-10-31T23:00:00Z",
+          "referenzVorgaengerrechnung": null,
+          "sonderrechnungsart": "INDIVIDUELL_ATYPISCH",
+          "storno": 0,
+          "vorauszahlungen": {
+            "betrag": {
+              "wert": "33.4",
+              "waehrung": "EUR"
+            }
+          },
+          "vorlaeufigerAbrechnungszeitraum": {
+            "enddatum": "2023-05-31",
+            "startdatum": "2023-04-01"
+          },
+          "zuZahlen": {
+            "waehrung": "EUR",
+            "wert": 122.07
+          },
+          "boTyp": "RECHNUNG",
+          "versionStruktur": "1",
+          "steuerbetraege": [
+            {
+              "basiswert": 475.42,
+              "basiswertVorausbezahlt": 116.45,
+              "steuerkennzeichen": "UST_19",
+              "steuerwert": 90.33,
+              "steuerwertVorausbezahhlt": 116.87,
+              "waehrung": "EUR"
+            }
+          ]
+        }
+      ],
+      "MARKTLOKATION": [
+        {
+          "lokationsadresse": {
+            "postleitzahl": "67655",
+            "ort": "Kaiserslautern",
+            "strasse": "Pariser Str.",
+            "hausnummer": "19",
+            "landescode": "DE"
+          },
+          "marktlokationsId": "20210582179",
+          "sparte": "STROM",
+          "energierichtung": "AUSSP",
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "9900051000002",
+        "rollencodetyp": "BDEW",
+        "marktrolle": "NB",
+        "umsatzsteuerId": "9999999999",
+        "gewerbekennzeichnung": true,
+        "name1": "Strom123",
+        "partneradresse": {
+          "postleitzahl": "12345",
+          "ort": "Ort",
+          "landescode": "DE"
+        },
+        "ansprechpartner": {
+          "boTyp": "ANSPRECHPARTNER",
+          "versionStruktur": "1",
+          "nachname": "D Bowen",
+          "rufnummern": [
+            {
+              "nummerntyp": "RUF_DURCHWAHL",
+              "rufnummer": "004922271020"
+            }
+          ]
+        }
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "9904079000002",
+        "rollencodetyp": "BDEW",
+        "marktrolle": "LF",
+        "gewerbekennzeichnung": true,
+        "name1": "Strom456",
+        "partneradresse": {
+          "postleitzahl": "12345",
+          "ort": "Ort",
+          "landescode": "DE"
+        }
+      }
+    }
+  }
+  
