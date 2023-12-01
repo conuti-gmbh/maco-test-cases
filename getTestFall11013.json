@@ -1,0 +1,378 @@
+{
+  "stammdaten":{
+  "BILANZIERUNG":[
+  {
+  "boTyp":"BILANZIERUNG",
+  "bilanzkreis": "11Y0-0000-0077-K",
+  "bilanzierungsbeginn": "2023-02-28T23:00:00+00:00",
+  "bilanzierungsende": "2023-05-28T23:00:00+00:00",   
+  "marktlokationsId":"50000083289",
+  "lastprofile":[
+  {
+  "bezeichnung":"H00",
+  "verfahren":"ANALYTISCH",
+  "profilart":"ART_STANDARDLASTPROFIL",
+  "einspeisung":false,
+  "herausgeber":"NB"
+  }
+  ],
+  "jahresverbrauchsprognose":{
+  "wert":2000,
+  "einheit":"KWH"
+  },
+  "kundenwert":{
+  "wert":5000
+  },
+  "verbrauchsaufteilung":{
+  "wert":0.3
+  },
+  "aggregationsverantwortung":"VNB",
+  "zeitreihentyp":"SLS",
+  "prognosegrundlage":"PROFILE",
+  "wahlrechtPrognosegrundlage":"DURCH_LF",
+  "grundWahlrechtPrognosegrundlage":"NICHT_WEGEN_EIGENVERBRAUCH",
+  "detailsPrognosegrundlage":[
+  "SLP_SEP"
+  ]
+  }
+  ],
+  "MARKTLOKATION":[
+  {
+  "boTyp":"MARKTLOKATION",
+  "inbetriebnahmeDatum":"2019-02-28T23:00:00+00:00",
+  "energierichtung":"AUSSP",
+  "netzebene":"NSP",
+  "marktlokationsId":"50000083289",
+  "bilanzierungsgebiet":"11YR00000003039P",
+  "regelzone":"10YDE-RWENET---I",
+  "messtechnischeEinordnung":"KME_MME",
+  "netzbetreiberCodeNr": "9900321000005",
+  "grundversorgerCodeNr": "9903790000002",
+  "sperrstatus": "GESPERRT",  
+  "lokationsadresse":{
+  "postleitzahl":"12346",
+  "ort":"Ort",
+  "strasse":"Straße",
+  "hausnummer":"3",
+  "adresszusatz":"Hinterhaus",
+  "landescode":"DE"
+  },
+  "marktrollen":[
+  {
+  "boTyp": "MARKTTEILNEHMER",
+  "versionStruktur": "1",
+  "rollencodenummer":"4045399000077",
+  "marktrolle":"UENB",
+  "rollencodetyp":"BDEW"
+  },
+  {
+  "boTyp": "MARKTTEILNEHMER",
+  "versionStruktur": "1",
+  "rollencodenummer":"9903790000002",
+  "marktrolle":"LF",
+  "rollencodetyp":"BDEW"
+  },
+  {
+  "boTyp": "MARKTTEILNEHMER",
+  "versionStruktur": "1",
+  "rollencodenummer":"9904446000007",
+  "marktrolle":"MSB",
+  "rollencodetyp":"BDEW",
+  "weiterverpflichtet":true
+  } 
+  ],
+  "zaehlwerke":[
+  {
+  "obisKennzahl":"1-1:1.9.0",
+  "verbrauchsart":"KL",
+  "unterbrechbarkeit":"NUV",
+  "schwachlastfaehig":"NICHT_SCHWACHLASTFAEHIG",
+  "wertegranularitaet":"JAEHRLICH",
+  "waermenutzung": "WAERMEPUMPE",
+  "artEMobilitaet": "WB",
+  "stromsteuerbefreit": true,
+  "konzessionsabgabe":{
+  "satz":"TA"
+  },
+  "verwendungszwecke":[
+  {
+  "marktrolle":"LF",
+  "zweck":[
+  "NETZNUTZUNGSABRECHNUNG",
+  "ENDKUNDENABRECHNUNG",
+  "MEHRMINDERMENGENABRECHNUNG"
+  ]
+  }
+  ],
+  "zaehlzeiten":{
+  "zaehlzeitDefinition":"XYZ",
+  "register":"XYZ"
+  }
+  }
+  ],
+  "netznutzungsabrechnungsdaten":[
+  {
+  "marktlokation.netznutzungsabrechnungsdaten.singulaereBetriebsmittel":{
+  "wert":0
+  },
+  "marktlokation.netznutzungsabrechnungsdaten.preisSingulaereBetriebsmittel":{
+  "wert":0
+  },
+  "zuschlag":0,
+  "abschlag":0,
+  "artikelId":"1-02-0-001",
+  "artikelIdTyp":"ARTIKELID",
+  "gemeinderabatt":0,
+  "anzahl":1
+  }
+  ],
+  "energieherkunft": [
+  {
+    "erzeugungsart": "SOLAR",
+    "anteilProzent": 5.2
+  }
+]
+  }
+  ], 
+  "MESSLOKATION":[
+  {
+  "boTyp":"MESSLOKATION",
+  "versionStruktur":"1",
+  "messlokationsId":"DE0073395252733953513649640711234",
+  "sparte":"STROM",
+  "netzebenemessung":"NSP",
+    "ablesekartenempfaenger": {
+    "boTyp": "GESCHAEFTSPARTNER",
+    "geschaeftspartnerrolle": [
+        "KUNDE"
+    ],
+    "versionStruktur": "1",
+    "gewerbekennzeichnung": false,
+    "anrede": "XX",
+    "name1": "XX",
+    "name2": "XX",
+    "name3": "XX",
+    "name4": "XX",
+    "partneradresse": {
+      "postleitzahl": "123",
+      "ort": "XX",
+      "strasse": "XX",
+      "hausnummer": "3",
+      "landescode": "DE",
+      "ortsteil": "XX"
+    }
+  },
+  "marktrollen":[
+  {
+  "boTyp": "MARKTTEILNEHMER",
+  "versionStruktur": "1",
+  "rollencodenummer":"9904446000007",
+  "marktrolle":"MSB",
+  "weiterverpflichtet":true
+  },
+  {
+  "boTyp": "MARKTTEILNEHMER",
+  "versionStruktur": "1",
+  "rollencodenummer":"9903372000008",
+  "marktrolle":"GMSB"
+  }
+  ],
+  "zaehlwerke":[
+  {
+  "obisKennzahl":"1-1:1.8.0"
+  }
+  ]
+  }
+  ],
+  "NETZNUTZUNGSVERTRAG":[
+  {
+  "boTyp":"VERTRAG",
+  "vertragsart":"NETZNUTZUNGSVERTRAG",
+  "marktlokationsId":"",
+  "vertragsbeginn":"2023-02-28T23:00:00+00:00",
+  "vertragsende":"2023-05-28T23:00:00+00:00",
+  "gemeinderabatt":0,
+  "vertragspartner2": [
+    {
+      "boTyp": "GESCHAEFTSPARTNER",
+      "geschaeftspartnerrolle": ["KUNDE"],
+      "gewerbekennzeichnung": false,
+      "name1": "Mustermann",
+      "name2": "Max"
+    }
+  ],
+  "vertragskonditionen": {
+    "netznutzungszahler": "LIEFERANT",
+    "netznutzungsvertrag": "LIEFERANTEN_NB",
+    "netznutzungsabrechnungsgrundlage": "LIEFERSCHEIN",
+    "netznutzungsabrechnungsvariante": "ARBEITSPREIS_GRUNDPREIS",
+    "naechstenetznutzungsabrechnung": "01011201",
+    "netznutzungsabrechnungIntervall": 12,
+    "beinhaltetSingulaerGenutzteBetriebsmittel": true,
+    "haushaltskunde": true,
+    "terminnetznutzungsabrechnung": "0101",
+    "abrechnungsintervall": 12,
+    "startAbrechnungsjahr": "2024-03-14T14:30:31Z",
+    "geplanteTurnusablesung": {
+    "ableseZeitraum": "01011201"
+    },
+    "netznutzungsabrechnung": {
+    "abrechnungsZeitraum": "01011201"
+    }
+    }
+  }
+ ],
+  "MESSSTELLENBETRIEBSVERTRAG":[
+  {
+  "boTyp":"VERTRAG",
+  "versionStruktur":"1",
+  "vertragsart":"MESSSTELLENBETRIEBSVERTRAG",
+  "sparte":"STROM",
+  "vertragskonditionen":{
+  "abrechnungUeberNna":true,
+  "beauftragungMsb": "VERTRAG_AN_MSB",
+  "geplanteTurnusablesung":{
+  "ableseZeitraum": "01011201"
+  }
+  }
+  }
+  ],
+  "ENERGIELIEFERVERTRAG":[
+  {
+  "boTyp":"VERTRAG",
+  "versionStruktur":"1",
+  "vertragsart":"ENERGIELIEFERVERTRAG",
+  "lokationsId":"50074561188",
+  "korrespondenzpartner": {
+    "boTyp": "GESCHAEFTSPARTNER",
+    "versionStruktur": "1",
+    "anrede": "Name_Z04_5",
+    "name1": "Name_Z04_1",
+    "name2": "Name_Z04_2",
+    "name3": "Name_Z04_3",
+    "name4": "Name_Z04_4",
+    "gewerbekennzeichnung": true,
+    "partneradresse": {
+      "postleitzahl": "<string>",
+      "ort": "<string>",
+      "strasse": "<string>",
+      "hausnummer": "<string>",
+      "postfach": "<string>",
+      "adresszusatz": "<string>",
+      "coErgaenzung": "<string>",
+      "landescode": "DE",
+      "ortsteil": "<string>"
+    }
+  },
+  "vertragspartner2":[
+  {
+  "boTyp":"GESCHAEFTSPARTNER",
+  "geschaeftspartnerrolle":["KUNDE"],
+  "versionStruktur":"1",
+  "gewerbekennzeichnung":false,
+  "anrede":"Dr.",
+  "name1":"Mustermann",
+  "name2":"Max",
+  "name3":"von",
+  "externeReferenzen":[
+  {
+  "exRefName":"KundennummerbeimLieferant",
+  "exRefWert":"12345678910",
+  "vertragskonditionen":{
+  "abrechnungsintervall":12
+  }
+  }
+  ]
+  }
+  ]
+  }
+  ],
+  "ZAEHLER":[
+  {
+  "boTyp":"ZAEHLER",
+  "geraetetyp":"ZAEHLER",
+  "sparte":"STROM",
+  "messlokationsId":"DE0073395252733953513649640711235",
+  "marktlokationsId": "50000083289",
+  "zaehlernummer":"G12345678",
+  "zaehlerauspraegung":"EINRICHTUNGSZAEHLER",
+  "zaehlertyp":"DREHSTROMZAEHLER",
+  "tarifart":"EINTARIF",
+  "fernschaltung":"NICHT_VORHANDEN",
+  "messwerterfassung":"MANUELL_AUSGELESENE",
+  "zaehlwerke":[
+  {
+  "obisKennzahl":"1-1:1.8.0",
+  "schwachlastfaehig":"NICHT_SCHWACHLASTFAEHIG",
+  "wertegranularitaet":"JAEHRLICH",
+  "hochfrequenzsonde":false,
+  "konfiguration": "XYZ",
+  "vorkommastelle":7,
+  "nachkommastelle":3,
+  "bezeichnung": "XYZ",
+  "zaehlzeiten":{
+  "zaehlzeitDefinition":"XYZ",
+  "register":"XYZ"
+  }
+  }
+  ],
+  "geraete":[
+  {
+  "geraetenummer": "1234",
+  "geraeteeigenschaften":{
+  "geraetetyp": "ELEKTRONISCHER_HAUSHALTSZAEHLER"
+  }
+  }
+  ]
+  }
+  ]
+  },
+  "transaktionsdaten": 
+  {
+    "datenaustauschreferenz": "155645",
+    "sparte": "STROM",
+    "pruefidentifikator": "11013",
+    "vorgangsnummer":"1324865",
+    "transaktionsgrund":"Z38",
+      "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "9900051000002",
+      "rollencodetyp": "BDEW",
+      "marktrolle":"NB",
+      "ansprechpartner": {
+        "boTyp": "ANSPRECHPARTNER",
+        "versionStruktur": "1",
+        "nachname": "Max Mustermann",
+        "eMailAdresse": "max@mustermann.de",
+        "rufnummern": [
+          {
+            "nummerntyp": "MOBIL_NUMMER",
+            "rufnummer": "123456789"
+          }
+        ]
+      }
+    },
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "9904079000002",
+      "rollencodetyp": "BDEW",
+      "marktrolle":"LF"
+    },
+    "dokumentennummer": "486158BGM",
+    "kategorie": "456",
+    "nachrichtendatum": "2023-02-15T07:50:00Z",
+    "nachrichtenreferenznummer": "486158",
+    "antwortstatusCodeliste": "S_0109"
+  },
+  "zusatzdaten":{ 
+    
+    "zuordnungsermaechtigung": true,
+    "anzahlMalo4": true,
+    "anzahlMalo6": false,
+    "betriebszustand": "active",
+    "gMSBCode": "9904446000007"
+  
+  }
+  }
