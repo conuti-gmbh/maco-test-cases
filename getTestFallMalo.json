@@ -1,0 +1,147 @@
+{
+    "stammdaten":{
+    "MARKTLOKATION":[
+    {
+    "boTyp":"MARKTLOKATION",
+    "inbetriebnahmeDatum":"2019-02-28T23:00:00+00:00",
+    "energierichtung":"AUSSP",
+    "netzebene":"NSP",
+    "marktlokationsId":"50000083289",
+    "bilanzierungsgebiet":"11YR00000003039P",
+    "regelzone":"10YDE-RWENET---I",
+    "messtechnischeEinordnung":"KME_MME",
+    "netzbetreiberCodeNr": "9900321000005",
+    "grundversorgerCodeNr": "9903790000002",
+    "sperrstatus": "GESPERRT",  
+    "lokationsadresse":{
+    "postleitzahl":"12346",
+    "ort":"Ort",
+    "strasse":"Straße",
+    "hausnummer":"3",
+    "adresszusatz":"Hinterhaus",
+    "landescode":"DE"
+    },
+    "marktrollen":[
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"4045399000077",
+    "marktrolle":"UENB",
+    "rollencodetyp":"BDEW"
+    },
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"9903790000002",
+    "marktrolle":"LF",
+    "rollencodetyp":"BDEW"
+    },
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"9904446000007",
+    "marktrolle":"MSB",
+    "rollencodetyp":"BDEW",
+    "weiterverpflichtet":true
+    } 
+    ],
+    "zaehlwerke":[
+    {
+    "obisKennzahl":"1-1:1.9.0",
+    "verbrauchsart":"KL",
+    "unterbrechbarkeit":"NUV",
+    "schwachlastfaehig":"NICHT_SCHWACHLASTFAEHIG",
+    "wertegranularitaet":"JAEHRLICH",
+    "waermenutzung": "WAERMEPUMPE",
+    "artEMobilitaet": "WB",
+    "stromsteuerbefreit": true,
+    "konzessionsabgabe":{
+    "satz":"TA"
+    },
+    "verwendungszwecke":[
+    {
+    "marktrolle":"LF",
+    "zweck":[
+    "NETZNUTZUNGSABRECHNUNG",
+    "ENDKUNDENABRECHNUNG",
+    "MEHRMINDERMENGENABRECHNUNG"
+    ]
+    }
+    ],
+    "zaehlzeiten":{
+    "zaehlzeitDefinition":"XYZ",
+    "register":"XYZ"
+    }
+    }
+    ],
+    "netznutzungsabrechnungsdaten":[
+    {
+    "marktlokation.netznutzungsabrechnungsdaten.singulaereBetriebsmittel":{
+    "wert":0
+    },
+    "marktlokation.netznutzungsabrechnungsdaten.preisSingulaereBetriebsmittel":{
+    "wert":0
+    },
+    "zuschlag":0,
+    "abschlag":0,
+    "artikelId":"1-02-0-001",
+    "artikelIdTyp":"ARTIKELID",
+    "gemeinderabatt":0,
+    "anzahl":1
+    }
+    ],
+    "energieherkunft": [
+    {
+      "erzeugungsart": "SOLAR",
+      "anteilProzent": 5.2
+    }
+  ]
+    }
+    ]
+    },
+  "transaktionsdaten": 
+    {
+      "datenaustauschreferenz": "155645",
+      "sparte": "STROM",
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "9900051000002",
+        "rollencodetyp": "BDEW",
+        "marktrolle":"NB",
+        "ansprechpartner": {
+          "boTyp": "ANSPRECHPARTNER",
+          "versionStruktur": "1",
+          "nachname": "Max Mustermann",
+          "eMailAdresse": "max@mustermann.de",
+          "rufnummern": [
+            {
+              "nummerntyp": "MOBIL_NUMMER",
+              "rufnummer": "123456789"
+            }
+          ]
+        }
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "9904079000002",
+        "rollencodetyp": "BDEW",
+        "marktrolle":"LF"
+      },
+      "dokumentennummer": "486158BGM",
+      "kategorie": "456",
+      "nachrichtendatum": "2023-02-15T07:50:00Z",
+      "nachrichtenreferenznummer": "486158",
+      "antwortstatusCodeliste": "S_0109"
+    },
+    "zusatzdaten":{ 
+      
+      "zuordnungsermaechtigung": true,
+      "anzahlMalo4": true,
+      "anzahlMalo6": false,
+      "betriebszustand": "active",
+      "gMSBCode": "9904446000007"
+    
+    }
+    }
