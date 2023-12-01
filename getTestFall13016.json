@@ -1,0 +1,80 @@
+{
+  "stammdaten": {
+    "ENERGIEMENGE": [
+      {
+        "boTyp": "ENERGIEMENGE",
+        "versionStruktur": "1",
+        "lokationsId": "50000082284",
+        "lokationsTyp": "MALO",
+        "konfiguration":"Test13016",
+        "energieverbrauch": [
+          {
+          "position": 1,
+          "startdatum": "2022-11-30T23:00:00Z",
+          "enddatum": "2023-01-31T23:00:00Z",
+          "messwertstatus": "ABGELESEN",
+          "obiskennzahl": "1-1:1.9.0",
+          "wert": 3000,
+          "statuszusatzinformationen": [
+              {
+            "art": "PLAUSIBILISIERUNGSHINWEIS",
+            "status": "PLAUSIBEL_WG_KUNDENHINWEIS"
+              }
+            ]
+          },
+          {
+            "position": 2,
+            "startdatum": "2021-11-30T23:00:00Z",
+            "enddatum": "2022-01-31T23:00:00Z",
+            "messwertstatus": "ABGELESEN",
+            "obiskennzahl": "1-1:1.9.0",
+            "wert": 5000
+        }
+          ]
+        }
+      ]
+  },
+  "transaktionsdaten":{
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "9910046000008",
+      "rollencodetyp": "BDEW",
+      "marktrolle":"NB",
+      "ansprechpartner": {
+        "boTyp": "ANSPRECHPARTNER",
+        "versionStruktur": "1",
+        "nachname": "Max Mustermann",
+        "eMailAdresse": "max@mustermann.de",
+        "rufnummern": [
+          {
+            "nummerntyp": "RUF_DURCHWAHL",
+            "rufnummer": "012345678910"
+          },
+          {
+            "nummerntyp": "RUF_ZENTRALE",
+            "rufnummer": "012345678910"
+          },
+          {
+            "nummerntyp": "MOBIL_NUMMER",
+            "rufnummer": "012345678910"
+          },
+          {
+            "nummerntyp": "FAX_DURCHWAHL",
+            "rufnummer": "012345678910"
+          }
+        ]
+      }
+    },
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "9900051000002",
+      "rollencodetyp": "BDEW",
+      "marktrolle":"LF"
+    }
+  },
+  "zusatzdaten":{
+        "pruefidentifikator": "13016"
+  }
+  }
