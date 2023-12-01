@@ -1,0 +1,99 @@
+{
+  "stammdaten":{
+  "MESSLOKATION":[
+  {
+  "boTyp":"MESSLOKATION",
+  "versionStruktur":"1",
+  "messlokationsId":"DE0073395252733953513649640711234",
+  "sparte":"STROM",
+  "netzebenemessung":"NSP",
+    "ablesekartenempfaenger": {
+    "boTyp": "GESCHAEFTSPARTNER",
+    "geschaeftspartnerrolle": [
+        "KUNDE"
+    ],
+    "versionStruktur": "1",
+    "gewerbekennzeichnung": false,
+    "anrede": "XX",
+    "name1": "XX",
+    "name2": "XX",
+    "name3": "XX",
+    "name4": "XX",
+    "partneradresse": {
+      "postleitzahl": "123",
+      "ort": "XX",
+      "strasse": "XX",
+      "hausnummer": "3",
+      "landescode": "DE",
+      "ortsteil": "XX"
+    }
+  },
+  "marktrollen":[
+  {
+  "boTyp": "MARKTTEILNEHMER",
+  "versionStruktur": "1",
+  "rollencodenummer":"9904446000007",
+  "marktrolle":"MSB",
+  "weiterverpflichtet":true
+  },
+  {
+  "boTyp": "MARKTTEILNEHMER",
+  "versionStruktur": "1",
+  "rollencodenummer":"9903372000008",
+  "marktrolle":"GMSB"
+  }
+  ],
+  "zaehlwerke":[
+  {
+  "obisKennzahl":"1-1:1.8.0"
+  }
+  ]
+  }
+  ]
+  },
+  "transaktionsdaten": 
+  {
+    "datenaustauschreferenz": "155645",
+    "sparte": "STROM",
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "9900051000002",
+      "rollencodetyp": "BDEW",
+      "marktrolle":"NB",
+      "ansprechpartner": {
+        "boTyp": "ANSPRECHPARTNER",
+        "versionStruktur": "1",
+        "nachname": "Max Mustermann",
+        "eMailAdresse": "max@mustermann.de",
+        "rufnummern": [
+          {
+            "nummerntyp": "MOBIL_NUMMER",
+            "rufnummer": "123456789"
+          }
+        ]
+      }
+    },
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "9904079000002",
+      "rollencodetyp": "BDEW",
+      "marktrolle":"LF"
+    },
+    "dokumentennummer": "486158BGM",
+    "kategorie": "456",
+    "nachrichtendatum": "2023-02-15T07:50:00Z",
+    "nachrichtenreferenznummer": "486158",
+    "antwortstatusCodeliste": "S_0109"
+  },
+  "zusatzdaten":{ 
+    
+    "zuordnungsermaechtigung": true,
+    "anzahlMalo4": true,
+    "anzahlMalo6": false,
+    "betriebszustand": "active",
+    "gMSBCode": "9904446000007"
+  
+  }
+  }
