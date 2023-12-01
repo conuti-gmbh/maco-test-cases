@@ -1,0 +1,42 @@
+{
+  "stammdaten":{
+  "NETZNUTZUNGSVERTRAG":[
+  {
+  "boTyp":"VERTRAG",
+  "vertragsart":"NETZNUTZUNGSVERTRAG",
+  "marktlokationsId":"",
+  "vertragsbeginn":"2023-02-28T23:00:00+00:00",
+  "vertragsende":"2023-05-28T23:00:00+00:00",
+  "gemeinderabatt":0,
+  "vertragspartner2": [
+    {
+      "boTyp": "GESCHAEFTSPARTNER",
+      "geschaeftspartnerrolle": ["KUNDE"],
+      "gewerbekennzeichnung": false,
+      "name1": "Mustermann",
+      "name2": "Max"
+    }
+  ],
+  "vertragskonditionen": {
+    "netznutzungszahler": "LIEFERANT",
+    "netznutzungsvertrag": "LIEFERANTEN_NB",
+    "netznutzungsabrechnungsgrundlage": "LIEFERSCHEIN",
+    "netznutzungsabrechnungsvariante": "ARBEITSPREIS_GRUNDPREIS",
+    "naechstenetznutzungsabrechnung": "01011201",
+    "netznutzungsabrechnungIntervall": 12,
+    "beinhaltetSingulaerGenutzteBetriebsmittel": true,
+    "haushaltskunde": true,
+    "terminnetznutzungsabrechnung": "0101",
+    "abrechnungsintervall": 12,
+    "startAbrechnungsjahr": "2024-03-14T14:30:31Z",
+    "geplanteTurnusablesung": {
+    "ableseZeitraum": "01011201"
+    },
+    "netznutzungsabrechnung": {
+    "abrechnungsZeitraum": "01011201"
+    }
+    }
+  }
+ ]
+  }
+}
