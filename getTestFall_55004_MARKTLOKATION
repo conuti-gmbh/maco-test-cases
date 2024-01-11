@@ -1,0 +1,79 @@
+{
+    "stammdaten":{
+    "MARKTLOKATION":[
+    {
+    "boTyp":"MARKTLOKATION",
+    "energierichtung":"AUSSP",
+    "netzebene":"NSP",
+    "marktlokationsId":"50000099999",
+    "bilanzierungsgebiet":"11YR00000003039P",
+    "regelzone":"10YDE-RWENET---I",
+    "messtechnischeEinordnung":"KME_MME",
+    "netzbetreiberCodeNr": "9900321000005",
+    "grundversorgerCodeNr": "9903790000002",
+    "sperrstatus": "NICHT_GESPERRT",  
+    "lokationsadresse":{
+    "postleitzahl":"12346",
+    "ort":"Ort",
+    "strasse":"Straße",
+    "hausnummer":"3",
+    "adresszusatz":"Hinterhaus",
+    "landescode":"DE"
+    },
+    "marktrollen":[
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"4045399000077",
+    "marktrolle":"UENB",
+    "rollencodetyp":"BDEW"
+    },
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"9903790000002",
+    "marktrolle":"LF",
+    "rollencodetyp":"BDEW"
+    },
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"9904446000007",
+    "marktrolle":"MSB",
+    "rollencodetyp":"BDEW",
+    "weiterverpflichtet":true
+    } 
+    ],
+    "zaehlwerke":[
+    {
+    "obisKennzahl":"1-1:1.9.0",
+    "verbrauchsart":"KL",
+    "unterbrechbarkeit":"NUV",
+    "schwachlastfaehig":"NICHT_SCHWACHLASTFAEHIG",
+    "wertegranularitaet":"JAEHRLICH",
+    "waermenutzung": "WAERMEPUMPE",
+    "artEMobilitaet": "WB",
+    "stromsteuerbefreit": true,
+    "konzessionsabgabe":{
+    "satz":"TA"
+    },
+    "verwendungszwecke":[
+    {
+    "marktrolle":"LF",
+    "zweck":[
+    "NETZNUTZUNGSABRECHNUNG",
+    "ENDKUNDENABRECHNUNG",
+    "MEHRMINDERMENGENABRECHNUNG"
+    ]
+    }
+    ],
+    "zaehlzeiten":{
+    "zaehlzeitDefinition":"XYZ",
+    "register":"XYZ"
+    }
+    }
+    ]
+    }
+    ]
+    }
+    }
