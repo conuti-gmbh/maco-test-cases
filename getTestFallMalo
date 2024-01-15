@@ -32,7 +32,7 @@
     {
     "boTyp": "MARKTTEILNEHMER",
     "versionStruktur": "1",
-    "rollencodenummer":"9903790000002",
+    "rollencodenummer":"9903323000007",
     "marktrolle":"LF",
     "rollencodetyp":"BDEW"
     },
@@ -43,7 +43,15 @@
     "marktrolle":"MSB",
     "rollencodetyp":"BDEW",
     "weiterverpflichtet":true
-    } 
+    },
+    {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer":"9900321000005",
+      "marktrolle":"VNB",
+      "rollencodetyp":"BDEW",
+      "weiterverpflichtet":true
+      }  
     ],
     "zaehlwerke":[
     {
