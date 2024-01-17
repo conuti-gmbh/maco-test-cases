@@ -11,7 +11,7 @@
     "messtechnischeEinordnung":"KME_MME",
     "netzbetreiberCodeNr": "9900321000005",
     "grundversorgerCodeNr": "9903790000002",
-    "sperrstatus": "NICHT_GESPERRT",  
+    "sperrstatus": "ENTSPERRT",  
     "lokationsadresse":{
     "postleitzahl":"12346",
     "ort":"Ort",
