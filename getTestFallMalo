@@ -106,50 +106,5 @@
   ]
     }
     ]
-    },
-  "transaktionsdaten": 
-    {
-      "datenaustauschreferenz": "155645",
-      "sparte": "STROM",
-      "absender": {
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "rollencodenummer": "9900051000002",
-        "rollencodetyp": "BDEW",
-        "marktrolle":"NB",
-        "ansprechpartner": {
-          "boTyp": "ANSPRECHPARTNER",
-          "versionStruktur": "1",
-          "nachname": "Max Mustermann",
-          "eMailAdresse": "max@mustermann.de",
-          "rufnummern": [
-            {
-              "nummerntyp": "MOBIL_NUMMER",
-              "rufnummer": "123456789"
-            }
-          ]
-        }
-      },
-      "empfaenger": {
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "rollencodenummer": "9904079000002",
-        "rollencodetyp": "BDEW",
-        "marktrolle":"LF"
-      },
-      "dokumentennummer": "486158BGM",
-      "kategorie": "456",
-      "nachrichtendatum": "2023-02-15T07:50:00Z",
-      "nachrichtenreferenznummer": "486158",
-      "antwortstatusCodeliste": "S_0109"
-    },
-    "zusatzdaten":{ 
-      
-      "zuordnungsermaechtigung": true,
-      "anzahlMalo4": true,
-      "anzahlMalo6": false,
-      "betriebszustand": "active",
-      "gMSBCode": "9904446000007"
-    
     }
     }
