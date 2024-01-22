@@ -1,0 +1,40 @@
+{
+    "stammdaten":{
+    "BILANZIERUNG":[
+    {
+    "boTyp":"BILANZIERUNG",
+    "bilanzkreis": "11Y0-0000-0077-K",
+    "bilanzierungsbeginn": "2023-02-28T23:00:00Z",
+    "bilanzierungsende": "2024-05-28T22:00:00Z",   
+    "marktlokationsId":"5000009999",
+    "lastprofile":[
+    {
+    "bezeichnung":"H00",
+    "verfahren":"ANALYTISCH",
+    "profilart":"ART_STANDARDLASTPROFIL",
+    "einspeisung":false,
+    "herausgeber":"NB"
+    }
+    ],
+    "jahresverbrauchsprognose":{
+    "wert":2000,
+    "einheit":"KWH"
+    },
+    "kundenwert":{
+    "wert":5000
+    },
+    "verbrauchsaufteilung":{
+    "wert":0.3
+    },
+    "aggregationsverantwortung":"VNB",
+    "zeitreihentyp":"SLS",
+    "prognosegrundlage":"PROFILE",
+    "wahlrechtPrognosegrundlage":"DURCH_LF",
+    "grundWahlrechtPrognosegrundlage":"NICHT_WEGEN_EIGENVERBRAUCH",
+    "detailsPrognosegrundlage":[
+    "SLP_SEP"
+    ]
+    }
+    ]
+    }
+    }
