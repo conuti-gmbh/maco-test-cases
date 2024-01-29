@@ -26,7 +26,7 @@
     "verbrauchsaufteilung":{
     "wert":0.3
     },
-    "aggregationsverantwortung":"VNB",
+    "aggregationsverantwortung":"UENB",
     "zeitreihentyp":"SLS",
     "prognosegrundlage":"PROFILE",
     "wahlrechtPrognosegrundlage":"DURCH_LF",
