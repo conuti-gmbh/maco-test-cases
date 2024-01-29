@@ -3,7 +3,7 @@
     "BILANZIERUNG":[
     {
     "boTyp":"BILANZIERUNG",
-    "bilanzkreis": "11Y0-0000-0077-K",
+    "bilanzkreis": "11Y0-0000-0076-N",
     "bilanzierungsbeginn": "2023-02-28T23:00:00+00:00",
     "bilanzierungsende": "2023-05-28T23:00:00+00:00",   
     "marktlokationsId":"50000083289",
