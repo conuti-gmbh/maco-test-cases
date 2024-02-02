@@ -1,0 +1,52 @@
+{
+    "stammdaten":{
+    "ZAEHLER":[
+    {
+    "boTyp":"ZAEHLER",
+    "geraetetyp":"ZAEHLER",
+    "sparte":"STROM",
+    "messlokationsId":"DE0073395252733953513649640711235",
+    "marktlokationsId": "50000083289",
+    "zaehlernummer":"G12345678",
+    "zaehlerauspraegung":"EINRICHTUNGSZAEHLER",
+    "zaehlertyp":"DREHSTROMZAEHLER",
+    "tarifart":"EINTARIF",
+    "fernschaltung":"NICHT_VORHANDEN",
+    "messwerterfassung":"MANUELL_AUSGELESENE",
+    "zaehlwerke":[
+    {
+    "obisKennzahl":"1-1:1.8.0",
+    "schwachlastfaehig":"NICHT_SCHWACHLASTFAEHIG",
+    "wertegranularitaet":"JAEHRLICH",
+    "hochfrequenzsonde":false,
+    "konfiguration": "XYZ",
+    "vorkommastelle":7,
+    "nachkommastelle":3,
+    "bezeichnung": "XYZ",
+    "zaehlzeiten":{
+    "zaehlzeitDefinition":"XYZ",
+    "register":"XYZ"
+    }
+    }
+    ],
+    "geraete":[
+    {
+    "geraetenummer": "1234",
+    "geraeteeigenschaften":{
+    "geraetetyp": "ELEKTRONISCHER_HAUSHALTSZAEHLER"
+    }
+    }
+    ]
+    }
+    ]
+    }
+    "zusatzdaten":{ 
+      
+      "zuordnungsermaechtigung": true,
+      "anzahlMalo4": true,
+      "anzahlMalo6": false,
+      "betriebszustand": "active",
+      "gMSBCode": "9904446000007"
+    
+    }
+    }
