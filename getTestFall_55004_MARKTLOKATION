@@ -14,8 +14,8 @@
     "sperrstatus": "ENTSPERRT",  
     "lokationsadresse":{
     "postleitzahl":"12346",
-    "ort":"Ort",
-    "strasse":"Straße",
+    "ort":"Musterort",
+    "strasse":"Musterstraße",
     "hausnummer":"3",
     "adresszusatz":"Hinterhaus",
     "landescode":"DE"
@@ -26,13 +26,34 @@
     "versionStruktur": "1",
     "rollencodenummer":"4045399000077",
     "marktrolle":"UENB",
-    "rollencodetyp":"BDEW"
+    "rollencodetyp":"GLN"
+    },
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"4045399000008",
+    "marktrolle":"BIKO",
+    "rollencodetyp":"GLN"
     },
     {
     "boTyp": "MARKTTEILNEHMER",
     "versionStruktur": "1",
     "rollencodenummer":"9903790000002",
     "marktrolle":"LF",
+    "rollencodetyp":"BDEW"
+    },
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"4045458000000",
+    "marktrolle":"NB",
+    "rollencodetyp":"GLN"
+    },
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"9905714000000",
+    "marktrolle":"BKV",
     "rollencodetyp":"BDEW"
     },
     {

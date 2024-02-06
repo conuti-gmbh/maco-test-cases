@@ -9,7 +9,7 @@
     "marktlokationsId":"5000009999",
     "lastprofile":[
     {
-    "bezeichnung":"H00",
+    "bezeichnung":"H0",
     "verfahren":"ANALYTISCH",
     "profilart":"ART_STANDARDLASTPROFIL",
     "einspeisung":false,
@@ -19,12 +19,6 @@
     "jahresverbrauchsprognose":{
     "wert":2000,
     "einheit":"KWH"
-    },
-    "kundenwert":{
-    "wert":5000
-    },
-    "verbrauchsaufteilung":{
-    "wert":0.3
     },
     "aggregationsverantwortung":"VNB",
     "zeitreihentyp":"SLS",
