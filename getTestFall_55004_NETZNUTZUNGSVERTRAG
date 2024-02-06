@@ -6,7 +6,7 @@
   "vertragsart":"NETZNUTZUNGSVERTRAG",
   "marktlokationsId":"50000099999",
   "vertragsbeginn":"2023-02-28T23:00:00Z",
-  "vertragsende":"2024-05-28T22:00:00Z",
+  "vertragsende":"9999-12-31T23:59:59Z",
   "gemeinderabatt":0,
   "vertragspartner2": [
     {
