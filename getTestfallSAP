@@ -1,133 +1,46 @@
 {
-  "HEADER": {
-    "MALO": "46224739744",
-    "SENDER_ID": "CCN050678",
-    "SENDER_CODELIST": "293",
-    "RECEIVER_ID": "9903790000002",
-    "RECEIVER_CODELIST": "293"
-  },
-  "DATA": {
-    "MRDOC_CREATED": {
-      "EABL": [
+      "stammdaten": {
+      "ZAEHLER": [
+      {
+        "boTyp": "ZAEHLER",
+        "versionStruktur": "1", 
+        "zaehlernummer": "000000000403076006",
+        "sparte": "STROM"
+      }
+    ],
+    "ENERGIEMENGE": [{
+      "boTyp": "ENERGIEMENGE",
+      "versionStruktur": "1",
+      "lokationsId": "462247397440000000000000000000000",
+      "lokationsTyp": "MELO",
+      "energieverbrauch": [
         {
-          "MANDT": "350",
-          "ABLBELNR": "00000000000000171971",
-          "GERNR": "000000000403076006",
-          "EQUNR": "000000000010028267",
-          "ZWNUMMER": 1,
-          "ADAT": "2024-02-01",
-          "ATIM": "2125",
-          "V_ZWSTAND": 9506,
-          "N_ZWSTAND": 0.10000000000000,
-          "V_ZWSTNDAB": 9506,
-          "N_ZWSTNDAB": 0.10000000000000,
-          "MASSREAD": "KWH",
-          "MASSBILL": "KWH",
-          "STANZVOR": 4,
-          "STANZNAC": 1,
-          "SCHAEVER": "",
-          "SCHAEGR": "",
-          "AKTIV": "1",
-          "ADATSOLL": "2024-02-01",
-          "ADATMAX": "",
-          "ATIMMAX": "0000",
-          "ADATTATS": "",
-          "ATIMTATS": "0000",
-          "ADATERZ": "",
-          "ATIMERZ": "2125",
-          "ADATPROG": "",
-          "ATIMPROG": "0000",
-          "ZUORDDAT": "2024-02-01",
-          "THGDATUM": "",
-          "PRUEFZAHL": 36,
-          "BAPERTYP": "",
-          "ABLSTAT": "1",
-          "PRUEFPKT": "",
-          "POPCODE": "",
-          "PRUEFTYP": "",
-          "ABLHINW": "",
-          "STABLHW": "",
-          "KONTRVRF": "",
-          "ABLESART": "01",
-          "ABLESER": "",
-          "NACHERF": "",
-          "MDENR": 0,
-          "MDEUPL": "",
-          "E_ZEITVBL": "",
-          "E_ZVLZUORD": 0,
-          "STEUERGRP": "",
-          "ARBAUF": "",
-          "KSTATUS": "",
-          "ERDAT": "2024-02-11",
-          "ERNAM": "MSKUPCH",
-          "AEDAT": "",
-          "AENAM": "",
-          "ENTRYNUMB": 1,
-          "ACTOR": "",
-          "ISTABLART": "03",
-          "ABLESTYP": "03",
-          "E_ZVBL_BEZDAT": "2024-02-01",
-          "SM_AUFNR": "",
-          "DOC_TYPE": "",
-          "ADATREAL": "",
-          "ATIMREAL": "0000",
-          "S_ISTABLART": "",
-          "S_AKTIV": "",
-          "S_ABLSTAT": "",
-          "S_V_ZWSTAND": 0,
-          "S_N_ZWSTAND": 0,
-          "S_V_ZWSTNDAB": 0,
-          "S_N_ZWSTNDAB": 0,
-          "REMOVED": "",
-          "BP": "",
-          "REM_ABLBELNR": "",
-          "REM_ABLESER": "",
-          "S_ADATSOLL": "",
-          "S_ZVBL_BEZDAT": "",
-          "AMS": "",
-          "TRANSSTAT": "",
-          "TRANSTSTAMP": 0,
-          "SOURCESYST": 0,
-          "QNT": 0,
-          "QDSTAT": "",
-          "QDPROC": 0,
-          "PREV_MRDOC": ""
-        }
-      ],
-      "EABLG": [
-        {
-          "MANDT": "350",
-          "ABLBELNR": "00000000000000171971",
-          "ANLAGE": "4100001504",
-          "ABLESGR": "09",
-          "ABRDATS": "",
-          "ABLEINH": "SLP1",
-          "ADATSOLL": "2024-02-01",
-          "UNTERDR": "",
-          "/IDEXGE/F_DVREP": "",
-          "/IDEXGE/MR_INFO": ""
-        },
-        {
-          "MANDT": "350",
-          "ABLBELNR": "00000000000000171971",
-          "ANLAGE": "4100001505",
-          "ABLESGR": "09",
-          "ABRDATS": "",
-          "ABLEINH": "SLP1",
-          "ADATSOLL": "2024-02-01",
-          "UNTERDR": "",
-          "/IDEXGE/F_DVREP": "",
-          "/IDEXGE/MR_INFO": ""
+          "messwertstatus": "ABGELESEN",
+          "obiskennzahl": "1-1:1.8.0",
+            "wert": 9506.10,
+          "einheit": "KWH",
+          "nutzungszeitpunkt": "2024-02-01",
+            "position": 1, 
+            "ablesedatum": "2024-02-01"
         }
       ]
-    },
-    "MRDOC_CHANGED": {
-      "EABL": [],
-      "EABLG": []
-    },
-    "MRDOC_CANCELED": {
-      "EABL": [],
-      "EABLG": []
     }
-  }
-}
+    ]
+    },
+    "transaktionsdaten":{
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "marktrolle": "MSB",
+        "rollencodenummer": "CCN050678",
+        "rollencodetyp": "BDEW"
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "marktrolle": "LF",
+        "rollencodenummer": "9903790000002",
+        "rollencodetyp": "BDEW"
+      }
+    }
+    }
