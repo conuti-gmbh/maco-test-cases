@@ -4,9 +4,9 @@
       "absender": {
         "boTyp": "MARKTTEILNEHMER",
         "versionStruktur": "1",
-        "rollencodenummer": "9903790000002",
+        "rollencodenummer": "CCN050678",
         "rollencodetyp": "BDEW",
-        "marktrolle":"LF",
+        "marktrolle":"MSB",
         "ansprechpartner": {
           "boTyp": "ANSPRECHPARTNER",
           "versionStruktur": "1",
