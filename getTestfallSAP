@@ -1,0 +1,47 @@
+{
+      "stammdaten": {
+      "ZAEHLER": [
+      {
+        "boTyp": "ZAEHLER",
+        "versionStruktur": "1", 
+        "zaehlernummer": "000000000403076006",
+        "sparte": "STROM"
+      }
+    ],
+    "ENERGIEMENGE": [{
+      "boTyp": "ENERGIEMENGE",
+      "versionStruktur": "1",
+      "lokationsId": "462247397440000000000000000000000",
+      "lokationsTyp": "MELO",
+      "energieverbrauch": [
+        {
+          "messwertstatus": "ABGELESEN",
+          "obiskennzahl": "1-1:1.8.0",
+            "wert": 9506.10,
+          "einheit": "KWH",
+          "nutzungszeitpunkt": "2024-02-01",
+            "position": 1, 
+            "ablesedatum": "2024-02-01"
+        }
+      ],
+      "konfiguration": "000000000010028267"
+    }
+    ]
+    },
+    "transaktionsdaten":{
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "marktrolle": "MSB",
+        "rollencodenummer": "CCN050678",
+        "rollencodetyp": "BDEW"
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "marktrolle": "LF",
+        "rollencodenummer": "9903790000002",
+        "rollencodetyp": "BDEW"
+      }
+    }
+    }
