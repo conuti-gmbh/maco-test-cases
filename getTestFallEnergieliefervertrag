@@ -1,11 +1,57 @@
 {
-  "stammdaten":{
-  "ENERGIELIEFERVERTRAG":[
-  {
-  "boTyp":"VERTRAG",
-  "versionStruktur":"1",
-  "vertragsart":"ENERGIELIEFERVERTRAG",
-  "lokationsId":"50074561188",
+  "boTyp": "VERTRAG",
+  "versionStruktur": "1",
+  "vertragsnummer": "134568",
+  "beschreibung": "null",
+  "vertragsart": "ENERGIELIEFERVERTRAG",
+  "vertragstatus": "ENUM_Vertragstatus",
+  "sparte": "ENUM_Sparte",
+  "vertragsbeginn": "2023-04-01T00:00:00Z",
+  "vertragsende": "null",
+  "vertragspartner2": [
+    {
+      "boTyp": "GESCHAEFTSPARTNER",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": false,
+      "anrede": "Name_Z09_5",
+      "name1": "Name_Z09_1",
+      "name2": "Name_Z09_2",
+      "name3": "Name_Z09_3",
+      "name4": "Name_Z09_4",
+      "geschaeftspartnerrolle": [
+        "ENUM_rolle1",
+        "ENUM_rolle2"
+      ],
+      "partneradresse": {
+        "postleitzahl": "<string>",
+        "ort": "<string>",
+        "strasse": "<string>",
+        "hausnummer": "<string>",
+        "postfach": "<string>",
+        "adresszusatz": "<string>",
+        "coErgaenzung": "<string>",
+        "landescode": "ENUM_Landescode",
+        "ortsteil": "<string>"
+      },
+      "externeReferenzen": [
+        {
+          "exRefName": "Kundennummer beim Altlieferanten",
+          "exRefWert": "NummerLFA123456_Z01"
+        },
+        {
+          "exRefName": "Kundennummer beim Lieferanten",
+          "exRefWert": "NummerLFN123456_Z01"
+        }
+      ]
+    }
+  ],
+  "vertragskonditionen": {
+    "kuendigungsfrist": {
+      "zeitraumText": "01JM"
+    },
+    "kuendigungstermin": "<string>",
+    "abrechnungsintervall": 12
+  },
   "korrespondenzpartner": {
     "boTyp": "GESCHAEFTSPARTNER",
     "versionStruktur": "1",
@@ -23,77 +69,19 @@
       "postfach": "<string>",
       "adresszusatz": "<string>",
       "coErgaenzung": "<string>",
-      "landescode": "DE",
+      "landescode": "ENUM_Landescode",
       "ortsteil": "<string>"
     }
   },
-  "vertragspartner2":[
-  {
-  "boTyp":"GESCHAEFTSPARTNER",
-  "geschaeftspartnerrolle":["KUNDE"],
-  "versionStruktur":"1",
-  "gewerbekennzeichnung":false,
-  "anrede":"Dr.",
-  "name1":"Mustermann",
-  "name2":"Max",
-  "name3":"von",
-  "externeReferenzen":[
-  {
-  "exRefName":"KundennummerbeimLieferant",
-  "exRefWert":"12345678910",
-  "vertragskonditionen":{
-  "abrechnungsintervall":12
-  }
-  }
+  "lokationsId": "<string>",
+  "lokationsTyp": "ENUM_Lokationstyp",
+  "enFG": [
+    {
+      "grundlageVerringerungUmlagen": "ENUM",
+      "grund": [
+        "grund1",
+        "grund2"
+      ]
+    }
   ]
-  }
-  ]
-  }
-  ]
-  },
-  "transaktionsdaten": 
-  {
-    "datenaustauschreferenz": "155645",
-    "sparte": "STROM",
-    "absender": {
-      "boTyp": "MARKTTEILNEHMER",
-      "versionStruktur": "1",
-      "rollencodenummer": "9900051000002",
-      "rollencodetyp": "BDEW",
-      "marktrolle":"NB",
-      "ansprechpartner": {
-        "boTyp": "ANSPRECHPARTNER",
-        "versionStruktur": "1",
-        "nachname": "Max Mustermann",
-        "eMailAdresse": "max@mustermann.de",
-        "rufnummern": [
-          {
-            "nummerntyp": "MOBIL_NUMMER",
-            "rufnummer": "123456789"
-          }
-        ]
-      }
-    },
-    "empfaenger": {
-      "boTyp": "MARKTTEILNEHMER",
-      "versionStruktur": "1",
-      "rollencodenummer": "9904079000002",
-      "rollencodetyp": "BDEW",
-      "marktrolle":"LF"
-    },
-    "dokumentennummer": "486158BGM",
-    "kategorie": "456",
-    "nachrichtendatum": "2023-02-15T07:50:00Z",
-    "nachrichtenreferenznummer": "486158",
-    "antwortstatusCodeliste": "S_0109"
-  },
-  "zusatzdaten":{ 
-    
-    "zuordnungsermaechtigung": true,
-    "anzahlMalo4": true,
-    "anzahlMalo6": false,
-    "betriebszustand": "active",
-    "gMSBCode": "9904446000007"
-  
-  }
-  }
+}
