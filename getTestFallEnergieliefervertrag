@@ -10,40 +10,6 @@
   "vertragsende": "2023-04-01T00:00:00Z",
   "vertragspartner2": [
     {
-      "boTyp": "GESCHAEFTSPARTNER",
-      "versionStruktur": "1",
-      "gewerbekennzeichnung": false,
-      "anrede": "Test",
-      "name1": "Test",
-      "name2": "Test",
-      "name3": "Test",
-      "name4": "Test",
-      "geschaeftspartnerrolle": [
-        "GESCHAEFTSPARTNER"
-      ],
-      "partneradresse": {
-        "postleitzahl": "42553",
-        "ort": "Test",
-        "strasse": "Test",
-        "hausnummer": "3",
-        "postfach": "1345",
-        "adresszusatz": "Test",
-        "coErgaenzung": "Test",
-        "landescode": "DE",
-        "ortsteil": "Test"
-      },
-      "externeReferenzen": [
-        {
-          "exRefName": "Kundennummer beim Altlieferanten",
-          "exRefWert": "NummerLFA123456_Z01"
-        },
-        {
-          "exRefName": "Kundennummer beim Lieferanten",
-          "exRefWert": "NummerLFN123456_Z01"
-        }
-      ]
-    },
-    {
       "boTyp": "KUNDE",
       "versionStruktur": "1",
       "gewerbekennzeichnung": false,
