@@ -9,7 +9,7 @@
     "marktlokationsId":"50000083289",
     "bilanzierungsgebiet":"11YR00000003039P",
     "regelzone":"10YDE-RWENET---I",
-    "messtechnischeEinordnung":"iMS",
+    "messtechnischeEinordnung":"IMS",
     "netzbetreiberCodeNr": "9900321000005",
     "grundversorgerCodeNr": "9903790000002",
     "sperrstatus": "GESPERRT",  
