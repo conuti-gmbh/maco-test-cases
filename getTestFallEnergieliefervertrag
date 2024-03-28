@@ -13,7 +13,7 @@
   "vertragsende": "2023-04-01T00:00:00Z",
   "vertragspartner2": [
     {
-      "boTyp": "KUNDE",
+      "boTyp": "GESCHAEFTSPARTNER",
       "versionStruktur": "1",
       "gewerbekennzeichnung": false,
       "anrede": "Test",
