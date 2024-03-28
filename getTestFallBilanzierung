@@ -20,6 +20,10 @@
     "wert":2000,
     "einheit":"KWH"
     },
+    "vorjahresverbrauch": {
+    "wert": 45.8,
+    "einheit": "KWH"
+    },
     "kundenwert":{
     "wert":5000
     },
