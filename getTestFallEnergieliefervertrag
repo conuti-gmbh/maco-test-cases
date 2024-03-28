@@ -19,8 +19,41 @@
       "name3": "Name_Z09_3",
       "name4": "Name_Z09_4",
       "geschaeftspartnerrolle": [
-        "ENUM_rolle1",
-        "ENUM_rolle2"
+        "GESCHAEFTSPARTNER"
+      ],
+      "partneradresse": {
+        "postleitzahl": "<string>",
+        "ort": "<string>",
+        "strasse": "<string>",
+        "hausnummer": "<string>",
+        "postfach": "<string>",
+        "adresszusatz": "<string>",
+        "coErgaenzung": "<string>",
+        "landescode": "ENUM_Landescode",
+        "ortsteil": "<string>"
+      },
+      "externeReferenzen": [
+        {
+          "exRefName": "Kundennummer beim Altlieferanten",
+          "exRefWert": "NummerLFA123456_Z01"
+        },
+        {
+          "exRefName": "Kundennummer beim Lieferanten",
+          "exRefWert": "NummerLFN123456_Z01"
+        }
+      ]
+    },
+    {
+      "boTyp": "KUNDE",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": false,
+      "anrede": "Name_Z09_5",
+      "name1": "Name_Z09_1",
+      "name2": "Name_Z09_2",
+      "name3": "Name_Z09_3",
+      "name4": "Name_Z09_4",
+      "geschaeftspartnerrolle": [
+        "KUNDE"
       ],
       "partneradresse": {
         "postleitzahl": "<string>",
