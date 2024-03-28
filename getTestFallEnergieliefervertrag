@@ -81,8 +81,7 @@
     {
       "grundlageVerringerungUmlagen": "KEINE_ANGABE",
       "grund": [
-        "Test",
-        "Test"
+        "ENFG_STROMSPEICHER_UND_VERLUSTENERGIE"
       ]
     }
   ]
