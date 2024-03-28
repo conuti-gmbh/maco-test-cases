@@ -2,35 +2,35 @@
   "boTyp": "VERTRAG",
   "versionStruktur": "1",
   "vertragsnummer": "134568",
-  "beschreibung": "null",
+  "beschreibung": "Test",
   "vertragsart": "ENERGIELIEFERVERTRAG",
-  "vertragstatus": "ENUM_Vertragstatus",
-  "sparte": "ENUM_Sparte",
+  "vertragstatus": "BEENDET",
+  "sparte": "GAS",
   "vertragsbeginn": "2023-04-01T00:00:00Z",
-  "vertragsende": "null",
+  "vertragsende": "2023-04-01T00:00:00Z",
   "vertragspartner2": [
     {
       "boTyp": "GESCHAEFTSPARTNER",
       "versionStruktur": "1",
       "gewerbekennzeichnung": false,
-      "anrede": "Name_Z09_5",
-      "name1": "Name_Z09_1",
-      "name2": "Name_Z09_2",
-      "name3": "Name_Z09_3",
-      "name4": "Name_Z09_4",
+      "anrede": "Test",
+      "name1": "Test",
+      "name2": "Test",
+      "name3": "Test",
+      "name4": "Test",
       "geschaeftspartnerrolle": [
         "GESCHAEFTSPARTNER"
       ],
       "partneradresse": {
-        "postleitzahl": "<string>",
-        "ort": "<string>",
-        "strasse": "<string>",
-        "hausnummer": "<string>",
-        "postfach": "<string>",
-        "adresszusatz": "<string>",
-        "coErgaenzung": "<string>",
+        "postleitzahl": "42553",
+        "ort": "Test",
+        "strasse": "Test",
+        "hausnummer": "3",
+        "postfach": "1345",
+        "adresszusatz": "Test",
+        "coErgaenzung": "Test",
         "landescode": "DE",
-        "ortsteil": "<string>"
+        "ortsteil": "Test"
       },
       "externeReferenzen": [
         {
@@ -47,24 +47,24 @@
       "boTyp": "KUNDE",
       "versionStruktur": "1",
       "gewerbekennzeichnung": false,
-      "anrede": "Name_Z09_5",
-      "name1": "Name_Z09_1",
-      "name2": "Name_Z09_2",
-      "name3": "Name_Z09_3",
-      "name4": "Name_Z09_4",
+      "anrede": "Test",
+      "name1": "Test",
+      "name2": "Test",
+      "name3": "Test",
+      "name4": "Test",
       "geschaeftspartnerrolle": [
         "KUNDE"
       ],
       "partneradresse": {
-        "postleitzahl": "<string>",
-        "ort": "<string>",
-        "strasse": "<string>",
-        "hausnummer": "<string>",
-        "postfach": "<string>",
-        "adresszusatz": "<string>",
-        "coErgaenzung": "<string>",
+        "postleitzahl": "42553",
+        "ort": "Test",
+        "strasse": "Test",
+        "hausnummer": "3",
+        "postfach": "1345",
+        "adresszusatz": "Test",
+        "coErgaenzung": "Test",
         "landescode": "DE",
-        "ortsteil": "<string>"
+        "ortsteil": "Test"
       },
       "externeReferenzen": [
         {
@@ -82,38 +82,38 @@
     "kuendigungsfrist": {
       "zeitraumText": "01JM"
     },
-    "kuendigungstermin": "<string>",
+    "kuendigungstermin": "2023-04-01T00:00:00Z",
     "abrechnungsintervall": 12
   },
   "korrespondenzpartner": {
     "boTyp": "GESCHAEFTSPARTNER",
     "versionStruktur": "1",
-    "anrede": "Name_Z04_5",
-    "name1": "Name_Z04_1",
-    "name2": "Name_Z04_2",
-    "name3": "Name_Z04_3",
-    "name4": "Name_Z04_4",
+    "anrede": "Test",
+      "name1": "Test",
+      "name2": "Test",
+      "name3": "Test",
+      "name4": "Test",
     "gewerbekennzeichnung": true,
     "partneradresse": {
-      "postleitzahl": "<string>",
-      "ort": "<string>",
-      "strasse": "<string>",
-      "hausnummer": "<string>",
-      "postfach": "<string>",
-      "adresszusatz": "<string>",
-      "coErgaenzung": "<string>",
-      "landescode": "DE",
-      "ortsteil": "<string>"
+      "postleitzahl": "42553",
+        "ort": "Test",
+        "strasse": "Test",
+        "hausnummer": "3",
+        "postfach": "1345",
+        "adresszusatz": "Test",
+        "coErgaenzung": "Test",
+        "landescode": "DE",
+        "ortsteil": "Test"
     }
   },
-  "lokationsId": "<string>",
-  "lokationsTyp": "ENUM_Lokationstyp",
+  "lokationsId": "50074561188",
+  "lokationsTyp": "MALO",
   "enFG": [
     {
-      "grundlageVerringerungUmlagen": "ENUM",
+      "grundlageVerringerungUmlagen": "KEINE_ANGABE",
       "grund": [
-        "grund1",
-        "grund2"
+        "Test",
+        "Test"
       ]
     }
   ]
