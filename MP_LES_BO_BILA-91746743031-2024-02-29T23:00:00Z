@@ -1,0 +1,33 @@
+[
+    {
+        "stammdaten.BILANZIERUNG.marktlokationsId": "91746743031",
+        "stammdaten.BILANZIERUNG.lastprofile.bezeichnung": null,
+        "stammdaten.BILANZIERUNG.lastprofile.profilschar": null,
+        "stammdaten.BILANZIERUNG.lastprofile.verfahren": null,
+        "stammdaten.BILANZIERUNG.lastprofile.einspeisung": 0,
+        "stammdaten.BILANZIERUNG.lastprofile.tagesparameter.klimazone": "TEMP_TEMPLATE",
+        "stammdaten.BILANZIERUNG.lastprofile.tagesparameter.temperaturmessstelle": "12345",
+        "stammdaten.BILANZIERUNG.lastprofile.tagesparameter.dienstanbieter": null,
+        "stammdaten.BILANZIERUNG.lastprofile.tagesparameter.herausgeber": "VNB",
+        "stammdaten.BILANZIERUNG.lastprofile.profilart": "SLP",
+        "stammdaten.BILANZIERUNG.lastprofile.herausgeber": "VNB",
+        "stammdaten.BILANZIERUNG.bilanzierungsbeginn": null,
+        "stammdaten.BILANZIERUNG.bilanzierungsende": null,
+        "stammdaten.BILANZIERUNG.bilanzkreis": null,
+        "stammdaten.BILANZIERUNG.jahresverbrauchsprognose.wert": null,
+        "stammdaten.BILANZIERUNG.jahresverbrauchsprognose.einheit": null,
+        "stammdaten.BILANZIERUNG.temperaturarbeit.wert": null,
+        "stammdaten.BILANZIERUNG.temperaturarbeit.einheit": null,
+        "stammdaten.BILANZIERUNG.kundenwert.wert": null,
+        "stammdaten.BILANZIERUNG.kundenwert.einheit": null,
+        "stammdaten.BILANZIERUNG.verbrauchsaufteilung": null,
+        "stammdaten.BILANZIERUNG.zeitreihentyp": null,
+        "stammdaten.BILANZIERUNG.aggregationsverantwortung": "VNB",
+        "stammdaten.BILANZIERUNG.prognosegrundlage": "PROFILE",
+        "stammdaten.BILANZIERUNG.detailsPrognosegrundlage": "SLP",
+        "stammdaten.BILANZIERUNG.wahlrechtPrognosegrundlage": null,
+        "stammdaten.BILANZIERUNG.fallgruppenzuordnung": null,
+        "stammdaten.BILANZIERUNG.prioritaet": null,
+        "stammdaten.BILANZIERUNG.grundWahlrechtPrognosegrundlage": null
+    }
+]
