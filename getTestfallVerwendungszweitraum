@@ -1,0 +1,13 @@
+{
+    "stammdaten":{
+        "VERWENDUNGSZEITRAUM": [
+          {
+            "boTyp": "VERWENDUNGSZEITRAUM",
+            "versionStruktur": "1",
+            "verwendungAb": "2024-04-12T22:00:00Z",
+            "zeitraumId": 1,
+            "qualitaet": "GUELTIGE_DATEN"
+          }
+        ]
+    }    
+}    
