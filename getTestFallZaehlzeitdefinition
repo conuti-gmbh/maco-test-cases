@@ -1,0 +1,35 @@
+{
+    "stammdaten":{
+        "ZAEHLZEITDEFINITION":[
+    {
+        "boTyp": "ZAEHLZEITDEFINITION",
+  "versionStruktur": "1",
+  "code": "ABC",
+  "beginndatum": "2021-06-07T15:15:00Z",
+  "endedatum": "2021-06-30T15:15:00Z",
+  "version": "2023-03-13T15:48:00Z",
+  "notwendigkeit": "DEFINITIONEN_WERDEN_VERWENDET",
+  "zaehlzeiten": [
+    {
+      "code": "ABC",
+      "aenderungszeitpunkt": "2023-03-21T15:48:00Z",
+      "register": "XYZ",
+      "haeufigkeit": "JAEHRLICH",
+      "uebermittelbarkeit": "ELEKTRONISCH",
+      "ermittlungLeistungsmaximum": "VERWENDUNG_HOCHLASTFENSTER",
+      "istBestellbar": true,
+      "typ": "WAERMEPUMPE",
+      "beschreibungTyp": "XYZ"
+    }
+  ],
+  "zaehlzeitregister": [
+    {
+      "zaehlzeitDefinition": "XYZ",
+      "register": "XYZ",
+      "schwachlastfaehig": "NICHT_SCHWACHLASTFAEHIG"
+    }
+  ]
+}
+        ]
+    }
+}
