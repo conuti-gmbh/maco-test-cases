@@ -1,0 +1,26 @@
+{
+    "stammdaten":{
+        "SCHALTZEITDEFINITION":[
+    {
+        "boTyp": "SCHALTZEITDEFINITION",
+        "versionStruktur": "1",
+        "sparte": "ENUM_Sparte",
+        "code": "<string>",
+        "beginndatum": "2021-06-07T15:15:00Z",
+        "endedatum": "2021-06-30T15:15:00Z",
+        "version": "2023-03-13T15:48:00Z",
+        "notwendigkeit": "WAERMEPUMPE",
+        "schaltzeiten": [
+          {
+            "aenderungszeitpunkt": "2023-03-21T15:48:00Z",
+            "code": "<string>",
+            "haeufigkeit": "JAEHRLICH",
+            "uebermittelbarkeit": "ELEKTRONISCH",
+            "schalthandlung": "LEISTUNG_AN",
+            "konfigurationsprodukt": "416854"
+          }
+        ]
+    }
+        ]
+}
+    }

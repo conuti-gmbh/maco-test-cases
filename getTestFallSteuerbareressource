@@ -1,0 +1,38 @@
+{
+    "stammdaten":{
+        "STEUERBARE_RESSOURCE":[
+    {
+        "boTyp": "STEUERBARE_RESSOURCE",
+        "versionStruktur": "1",
+        "ressourcenId": "45",
+        "sparte": "STROM",
+        "lokationszuordnung": "UNVERAENDERT",
+        "steuerkanal": "AN_AUS",
+        "konfigurationsprodukt": "45",
+        "produktdatenRelevanteRolle": "NB", 
+        "auftraggebenderMarktpartner": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "marktrolle": "LF", 
+          "rollencodenummer": "9900321000005"
+        },
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "MSB", 
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9900369000005",
+            "rollencodetyp": "BDEW",
+            "weiterverpflichtet": false,
+            "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+          }
+        ],
+        "zugeordneteDefinition": {
+          "schaltzeitdefinition": "654",
+          "leistungskurvendefinition": "645"
+        }
+    }
+        ]
+}
+    }

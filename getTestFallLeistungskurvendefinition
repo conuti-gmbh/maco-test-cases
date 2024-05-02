@@ -1,0 +1,28 @@
+{
+    "stammdaten":{
+        "LEISTUNGSKURVENDEFINITION":[
+    {
+        "boTyp": "LEISTUNGSKURVENDEFINITION",
+        "versionStruktur": "1",
+        "code": "465",
+        "sparte": "STROM",
+        "beginndatum": "2021-06-07T15:15:00Z",
+        "endedatum": "2021-06-30T15:15:00Z",
+        "version": "2023-03-13T15:48:00Z",
+        "notwendigkeit": "ZAEHLZEITDEFINITIONEN_WERDEN_VERWENDET",
+        "leistungskurven": [
+          {
+            "code": "47685",
+            "aenderungszeitpunkt": "2023-03-21T15:48:00Z",
+            "haeufigkeit": "JAEHRLICH",
+            "uebermittelbarkeit": "ELEKTRONISCH",
+            "konfigurationsprodukt": "6451",
+            "schwellwert": {
+              "obererSchwellwert": 70.00
+            }
+          }
+        ]
+    }
+        ]
+}
+    }

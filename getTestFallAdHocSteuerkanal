@@ -1,0 +1,39 @@
+{
+    "stammdaten":{
+        "AD_HOC_STEUERKANAL":[
+    {
+        "boTyp": "AD_HOC_STEUERKANAL",
+        "versionStruktur": "1",
+        "konfigurationsprodukt": "465",
+        "zieladresse": {
+          "zieladresse1": "XXX",
+          "zieladresse2": "XXX",
+          "zieladresse3": "XXX",
+          "zieladresse4": "XXX",
+          "zieladresse5": "XXX"
+        },
+        "aussteller": {
+          "aussteller1": "XXX",
+          "aussteller2": "XXX",
+          "aussteller3": "XXX",
+          "aussteller4": "XXX",
+          "aussteller5": "XXX"
+        },
+        "zertifikatsNutzer": {
+          "zertifikatsNutzer1": "XXX",
+          "zertifikatsNutzer2": "XXX",
+          "zertifikatsNutzer3": "XXX",
+          "zertifikatsNutzer4": "XXX",
+          "zertifikatsNutzer5": "XXX"
+        },
+        "IPAdresseCLSDevice": {
+          "IPAdresseCLSDevice1": "XXX",
+          "IPAdresseCLSDevice2": "XXX",
+          "IPAdresseCLSDevice3": "XXX",
+          "IPAdresseCLSDevice4": "XXX",
+          "IPAdresseCLSDevice5": "XXX"
+        }
+    }
+        ]
+}
+    }
