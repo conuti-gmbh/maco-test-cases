@@ -1,0 +1,29 @@
+{
+    "stammdaten":{
+    "HANDELSUNSTIMMIGKEIT":[
+    {
+        "boTyp": "HANDELSUNSTIMMIGKEIT",
+  "versionStruktur": "1",
+  "nummer": "5",
+  "typ": "HANDELSRECHNUNG",
+  "begruendung": {
+	  "referenzen": [
+	    "referenz1",
+		"referenz2",
+		"referenz3"
+	  ],
+	  "richtigkeit": "MSCONS",
+	  "referenzDar": "941736BGM",
+	  "referenznummer": "465841435",
+	  "bestaetigungsDar": "941536BGM",
+	  "grund": "NN_MSCONS_UEBERSENDET",
+	  "hinweis": "hinweis"
+  },
+  "zuZahlen": {
+	  "wert": 45.4,
+	  "waehrung": "EUR"
+  }
+    }
+    ]
+    }
+    }

@@ -1,0 +1,31 @@
+{
+    "stammdaten":{
+    "LOKATIONSBUENDEL":[
+    {
+        "boTyp": "LOKATIONSBUENDEL",
+        "versionStruktur": "1",
+        "lokationsbuendelstrukturId": "46",
+        "lokationsbuendelNummer": 1,
+        "standardisierteLokationsbuendelstruktur": true,
+        "zuordnungObjectcode": [
+          {
+            "referenzLokationsTyp": "MALO", 
+            "referenzLokationsId": "50000083289",
+            "objectcode": [
+              {
+                "objectcode": "9",
+                "lokationsbuendelNummer": 1
+              }
+            ],
+            "vorgelagerteLokationTyp": "MELO", 
+            "vorgelagerteLokationId": "DE36854189874FDVFMOZZNWOTQ2BIGVPP",
+            "referenzMarktlokationTechnischeRessource": [
+              "Marktlokation1",
+              "Marktlokation2"
+            ]
+          }
+        ]
+    }
+    ]
+    }
+    }

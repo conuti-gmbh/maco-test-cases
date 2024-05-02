@@ -1,0 +1,97 @@
+{
+    "stammdaten":{
+    "AUFTRAG":[
+    {
+        "boTyp": "AUFTRAG",
+  "versionStruktur": "1",
+  "ausfuehrungsdatum": "2022-10-14T07:52:00Z",
+  "fertigstellungsdatum": "2022-10-14T07:52:00Z",
+  "startdatum": "2022-10-14T07:52:00Z",
+  "sparte": "STROM",
+  "lieferanschrift": {
+    "postleitzahl": "76229",
+            "ort": "Karlruhe",
+            "strasse": "Haiallee",
+            "hausnummer": "25",
+            "postfach": "41658",
+            "adresszusatz": "Felsen",
+            "coErgaenzung": "XYZ",
+    "landescode": "DE",
+    "ortsteil": "Bucht"
+  },
+  "marktlokationsId": "50000083289",
+  "bemerkungen": [
+    "bemerkung1",
+    "bemerkung2"
+  ],
+  "mindestpreis": {
+    "wert": 15.4,
+    "einheit": "EUR",
+    "bezugswert": "KWH",
+    "status": "VORLAEUFIG"
+  },
+  "hoechstpreis": {
+    "wert": 15.4,
+    "einheit": "EUR",
+    "bezugswert": "KWH",
+    "status": "VORLAEUFIG"
+  },
+  "positionsdaten": [
+    {
+      "positionsnummer": 1,
+      "positionsnummerAngebot": "1",
+      "energieerfassung": "SEPARAT_ERFASSEN",
+      "definitionsTyp": "ZAEHLZEIT",
+      "artikelnummer": "LEISTUNG",
+      "positionsbetrag": "416514",
+      "startdatum": "2022-10-14T07:52:00Z",
+      "enddatum": "2022-10-14T07:52:00Z",
+      "istBestand": "1",
+      "obiskennzahl": "1-1:1.8.2",
+      "anfragegrund": "ABGRENZUNG_VON_ENERGIEMENGEN",
+      "allgemeineInformationen": {
+        "info1": "XYZ",
+        "info2": "XYZ",
+        "info3": "XYZ",
+        "info4": "XYZ",
+        "info5": "XYZ"
+      },
+      "infoAbweichung": {
+        "abweichung1": "XYZ",
+        "abweichung2": "XYZ",
+        "abweichung3": "XYZ",
+        "abweichung4": "XYZ",
+        "abweichung5": "XYZ"
+      }
+    }
+  ],
+  "energierichtung": "AUSSP",
+  "berechnungspreis": 123,
+  "summeGesamt": 123,
+  "verschobenerAbmeldetermin": "2022-10-14T07:52:00Z",
+  "behebungsZeitpunkt": "2022-10-14T07:52:00Z",
+  "lieferadresseAltgeraete": {
+    "boTyp": "GESCHAEFTSPARTNER",
+    "versionStruktur": "1",
+    "anrede": "Herr",
+          "name1": "Hai",
+          "name2": "Heiko",
+          "name3": "Fisch",
+    "name4": "vonundzu",
+    "gewerbekennzeichnung": true,
+    "partneradresse": {
+        "postleitzahl": "76229",
+        "ort": "Karlruhe",
+        "strasse": "Haiallee",
+        "hausnummer": "25",
+        "postfach": "41658",
+        "adresszusatz": "Felsen",
+        "coErgaenzung": "XYZ",
+      "landescode": "DE",
+      "ortsteil": "Bucht"
+    }
+  }
+    }
+    ]
+    }
+    }

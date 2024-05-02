@@ -1,0 +1,34 @@
+{
+    "stammdaten":{
+    "SPERRAUFTRAG":[
+    {
+        "boTyp": "SPERRAUFTRAG",
+        "versionStruktur": "1",
+        "sperrauftragsart": "SPERREN",
+        "sperrauftragsstatus": "GESCHEITERT",
+        "sperrauftragsablehngrund": "DUPLIKAT",
+        "sperrauftragsverhinderungsgrund": "RECHTLICHER_GRUND_FEHLT",
+        "zaehlernummer": "1ISK465846",
+        "istVomGerichtsvollzieherAngeordnet": true,
+        "treffpunkt": {
+            "postleitzahl": "76229",
+            "ort": "Karlruhe",
+            "strasse": "Haiallee",
+            "hausnummer": "25",
+            "postfach": "41658",
+            "adresszusatz": "Felsen",
+            "coErgaenzung": "XYZ",
+          "landescode": "DE",
+          "ortsteil": "Bucht",
+          "zusatzInformation": {
+            "zusatz1": "XYZ",
+            "zusatz2": "XYZ",
+            "zusatz3": "XYZ",
+            "zusatz4": "XYZ",
+            "zusatz5": "XYZ"
+          }
+        }
+    }
+    ]
+    }
+    }

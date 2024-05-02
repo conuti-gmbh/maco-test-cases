@@ -1,0 +1,76 @@
+{
+    "stammdaten":{
+    "SPERRAUFTRAG":[
+    {
+        "boTyp": "AVIS",
+  "versionStruktur": "1",
+  "avisNummer": "468541",
+  "avisTyp": "ABGELEHNTE_FORDERUNG",
+  "positionen": [
+    {
+      "zuZahlen": {
+        "wert": 11.81,
+        "waehrung": "EUR"
+      },
+      "gesamtBrutto": {
+        "wert": 0,
+        "waehrung": "EUR"
+      },
+      "abweichung": [
+        {
+          "abweichungsgrund": "PREIS_RECHENREGEL_FALSCH",
+          "abweichungsgrundBemerkung1": "XYZ",
+          "abweichungsgrundBemerkung2": "XYZ",
+          "abweichungsgrundBemerkung3": "XYZ",
+          "abweichungsgrundBemerkung4": "XYZ",
+          "abweichungsgrundBemerkung5": "XYZ",
+          "abweichungsgrundCodeliste": "XYZ",
+          "abweichungsgrundCode": "XYZ",
+          "zugehoerigeRechnung": "XYZ",
+          "zugehoerigeBestellung": "XYZ",
+          "fehlendePositionen1": "XYZ",
+          "fehlendePositionen2": "XYZ",
+          "fehlendePositionen3": "XYZ",
+          "fehlendePositionen4": "XYZ",
+          "fehlendePositionen5": "XYZ",
+          "abschlagsrechnungen": [
+            "abschlagsrechnung1",
+            "abschlagsrechnung2"
+          ]
+        }
+      ],
+      "rechnungsNummer": "4165846",
+      "rechnungsDatum": "2021-09-02T22:00:00Z",
+      "istStorno": false,
+      "istSelbstausgestellt": false,
+      "referenz": "7489465",
+      "positionen": [
+        {
+          "positionsnummer": 1,
+          "abweichung": [
+            {
+              "abweichungsgrund": "PREIS_RECHENREGEL_FALSCH",
+              "abweichungsgrundBemerkung1": "XYZ",
+              "abweichungsgrundBemerkung2": "XYZ",
+              "abweichungsgrundBemerkung3": "XYZ",
+              "abweichungsgrundBemerkung4": "XYZ",
+              "abweichungsgrundBemerkung5": "XYZ",
+              "abweichungsgrundCodeliste": "XYZ",
+              "abweichungsgrundCode": "XYZ",
+              "zugehoerigeRechnung": "XYZ",
+              "zugehoerigeBestellung": "XYZ",
+              "referenz": "XYZ"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "zuZahlen": {
+    "wert": 0,
+    "waehrung": "EUR"
+  }
+    }
+    ]
+    }
+    }

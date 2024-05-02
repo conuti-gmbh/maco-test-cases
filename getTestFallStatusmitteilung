@@ -1,0 +1,55 @@
+{
+    "stammdaten":{
+    "STATUSMITTEILUNG":[
+    {
+        "boTyp": "STATUSMITTEILUNG",
+        "versionStruktur": "1",
+        "statusObjekt": "MSBWECHSEL",
+        "statusanlass": "KEIN_ZUGANG",
+        "antwortstatusCodeliste": "G_0055",
+        "antwortstatus": "Z66",
+        "auftragsstatus": "GESCHEITERT",
+        "positionsdaten": [
+          {
+            "positionsnummer": 1,
+            "bearbeitungsdatum": "2022-09-30T22:00:00Z",
+            "verwendungAb": "2022-09-30T22:00:00Z",
+            "verwendungBis": "2022-09-30T22:00:00Z",
+            "enddatum": "2022-09-30T22:00:00Z",
+            "statusVeraenderungsZeitpunkt": "2022-10-14T07:52:00Z",
+            "statusObjekt": "MSBWECHSEL",
+            "auftragsstatus": "ERFOLGREICH",
+            "auftragsStatusListe": [
+              "ERFOLGREICH"
+            ],
+            "statusanlass": "KEIN_ZUGANG",
+            "antwortstatus": "Z66",
+            "fehlerbeschreibung": {
+              "beschreibung1": "XYZ",
+              "beschreibung2": "XYZ",
+              "beschreibung3": "XYZ",
+              "beschreibung4": "XYZ",
+              "beschreibung5": "XYZ"
+            },
+            "begruendung": {
+              "begruendung1": "XYZ",
+              "begruendung2": "XYZ",
+              "begruendung3": "XYZ",
+              "begruendung4": "XYZ",
+              "begruendung5": "XYZ"
+            },
+            "lokationsId": "50000083289",
+            "referenzMelo": "DE36854189874FDVFMOZZNWOTQ2BIGVPP",
+            "allgemeineInformationen": {
+              "info1": "XYZ",
+              "info2": "XYZ",
+              "info3": "XYZ",
+              "info4": "XYZ",
+              "info5": "XYZ"
+            }
+          }
+        ]
+    }
+    ]
+    }
+    }

@@ -1,0 +1,30 @@
+{
+    "stammdaten":{
+    "REKLAMATION":[
+    {
+        "boTyp": "REKLAMATION",
+        "versionStruktur": "1",
+        "lokationsId": "50000083289",
+        "lokationsTyp": "MALO",
+        "obiskennzahl": "1-1:1.8.2",
+        "zeitraumMesswertanfrage": {
+          "einheit": "TAG",
+          "dauer": 5,
+          "startdatum": "2022-11-10T09:22:00+00:00",
+          "enddatum": "2022-11-10T09:22:00+00:00",
+          "startzeitpunkt": "2022-11-10T09:22:00+00:00",
+          "endzeitpunkt": "2022-11-10T09:22:00+00:00"
+        },
+        "reklamationsgrund": "WERTE_FEHLEN",
+        "reklamationsgrundBemerkung": {
+          "bemerkung1": "bemerkung1",
+          "bemerkung2": "bemerkung1",
+          "bemerkung3": "bemerkung1",
+          "bemerkung4": "bemerkung1",
+          "bemerkung5": "bemerkung1"
+        },
+        "konfiguration": "XYZ"
+    }
+    ]
+    }
+    }
