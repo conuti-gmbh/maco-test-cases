@@ -1,0 +1,223 @@
+{
+    "stammdaten":{
+    "TRANCHE":[
+    {
+        "boTyp": "TRANCHE",
+        "versionStruktur": "1",
+        "tranchenId": "11111111111",
+        "zukuenftigerMeldepunkt": true,
+        "sparte": "STROM",
+        "energierichtung": "AUSSP",
+        "bilanzierungsmethode": "SLP",
+        "verbrauchsart": "KL",
+        "unterbrechbar": true,
+        "netzebene": "NSP",
+        "netzbetreiberCodeNr": "9903790000002",
+        "gebietTyp": "VERSORGUNGSGEBIET",
+        "netzgebietNr": "<string>",
+        "bilanzierungsgebiet": "<string>",
+        "grundversorgerCodeNr": "9900321000005",
+        "gasqualitaet": "H_GAS",
+        "endkunde": {
+          "boTyp": "GESCHAEFTSPARTNER",
+          "versionStruktur": "1",
+          "anrede": "Herr",
+          "name1": "Hai",
+          "name2": "Heiko",
+          "name3": "Fisch",
+          "gewerbekennzeichnung": true,
+          "hrnummer": "12345",
+          "amtsgericht": "Karlsruhe",
+          "kontaktweg": [
+            "TELEFONAT"
+          ],
+          "umsatzsteuerId": "13235",
+          "glaeubigerId": "534631",
+          "eMailAdresse": "hai.heiko@fisch.de",
+          "website": "www.heikoderhai.de",
+          "partneradresse": {
+            "postleitzahl": "76229",
+            "ort": "Karlruhe",
+            "strasse": "Haiallee",
+            "hausnummer": "25",
+            "postfach": "41658",
+            "adresszusatz": "Felsen",
+            "coErgaenzung": "xyz",
+            "landescode": "DE",
+            "ortsteil": "Bucht"
+          }
+        },
+        "lokationsadresse": {
+            "postleitzahl": "76229",
+            "ort": "Karlruhe",
+            "strasse": "Haiallee",
+            "hausnummer": "25",
+            "postfach": "41658",
+            "adresszusatz": "Felsen",
+            "coErgaenzung": "xyz",
+          "landescode": "DE",
+          "ortsteil": "Bucht",
+          "zusatzInformation": {
+            "zusatz1": "XYZ",
+            "zusatz2": "XYZ",
+            "zusatz3": "XYZ",
+            "zusatz4": "XYZ",
+            "zusatz5": "XYZ"
+          }
+        },
+        "katasterinformation": {
+          "gemarkung_flur": "XYZ",
+          "flurstueck": "XYZ"
+        },
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "NB",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9903790000002",
+            "rollencodetyp": "BDEW",
+            "weiterverpflichtet": false
+          },
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "LF",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9900321000005",
+            "rollencodetyp": "BDEW",
+            "weiterverpflichtet": false
+          }
+        ],
+        "regelzone": "10YDE-VNBNET---I",
+        "marktgebiet": "XYZ",
+        "zeitreihentyp": "SLS",
+        "zaehlwerke": [
+          {
+            "zaehlwerkId": "1465874",
+            "bezeichnung": "HT",
+            "richtung": "AUSSP",
+            "obisKennzahl": "1-1:1.9.1",
+            "wandlerfaktor": 5,
+            "einheit": "KWH",
+            "schwachlastfaehig": "NICHT_SCHWACHLASTFAEHIG",
+            "verwendungszwecke": [
+              {
+                "marktrolle": "NB",
+                "zweck": [
+                  "NETZNUTZUNGSABRECHNUNG"
+                ]
+              }
+            ],
+            "verbrauchsart": "KL",
+            "unterbrechbarkeit": "UV",
+            "waermenutzung": "WAERMEPUMPE",
+            "konzessionsabgabe": {
+              "satz": "SA",
+              "kosten": 45.73,
+              "kategorie": "Staffel 1 bis 10.000"
+            },
+            "steuerbefreit": true,
+            "vorkommastelle": "5",
+            "nachkommastelle": "0",
+            "abrechnungsrelevant": true,
+            "anzahlAblesungen": "12",
+            "zaehlzeiten": {
+              "zaehlzeitDefinition": "XXX",
+              "register": "XXX",
+              "schwachlastfaehig": "NICHT_SCHWACHLASTFAEHIG"
+            },
+            "konfiguration": "XXXXXXXXXXXXXX",
+            "messprodukt": "XXXXXXXXXXXXXX",
+            "wertegranularitaet": "JAEHRLICH",
+            "notwendigkeitZweiteMessung": "NICHT_VORHANDEN",
+            "werteuebermittlungVerwendungszweck": "VORHANDEN",
+            "artEMobilitaet": "WB"
+          }
+        ],
+        "zaehlwerkeBeteiligteMarktrolle": [
+          "rolle1",
+          "rolle2"
+        ],
+        "verbrauchsmenge": [
+          {
+            "startdatum": "2022-10-14T07:52:00Z",
+            "enddatum": "2022-10-14T07:52:00Z",
+            "wertermittlungsverfahren": "PROGNOSE",
+            "messwertstatus": "ABGELESEN",
+            "statuszusatzinformationen": [
+              {
+                "art": "PLAUSIBILISIERUNGSHINWEIS",
+                "status": "KEIN_ZUGANG"
+              }
+            ],
+            "obiskennzahl": "1-1:1.9.2",
+            "wert": "1000",
+            "einheit": "KWH"
+          }
+        ],
+        "zugehoerigeMesslokationen": [
+          {
+            "messlokationsId": "DE36854189874FDVFMOZZNWOTQ2BIGVPP",
+            "arithmetik": "ADDITION",
+            "gueltigSeit": "2022-10-14T07:52:00Z",
+            "gueltigBis": "2022-10-14T07:52:00Z"
+          }
+        ],
+        "messtechnischeEinordnung": "IMS",
+        "netznutzungsabrechnungsdaten": [
+          {
+            "artikelId": "XXYZ",
+            "artikelIdTyp": "ARTIKELID",
+            "anzahl": 5,
+            "gemeinderabatt": 5.45,
+            "zuschlag": 5.78,
+            "abschlag": 5.87,
+            "singulaereBetriebsmittel": {
+              "wert": 5,
+              "einheit": "KWH"
+            },
+            "preisSingulaereBetriebsmittel": {
+              "wert": 5.7,
+              "einheit": "EUR",
+              "bezugswert": "JAHR",
+              "status": "VORLAEUFIG"
+            },
+            "abrechnungBlindarbeit": true,
+            "zahlerBlindarbeit": "ANSCHLUSSNUTZER",
+            "zahlerBlindarbeitLf": true
+          }
+        ],
+        "sperrstatus": "ENTSPERRT",
+        "referenzMarktlokationsId": "50000083289",
+        "energieherkunft": [
+          {
+            "erzeugungsart": "KWK",
+            "anteilProzent": 5.2
+          }
+        ],
+        "versorgungsart": "ERSATZVERSORGUNG",
+        "fernsteuerbarkeit": "TECHNISCH_NICHT_FERNSTEUERBAR",
+        "verguetungEmpfaenger": "KUNDE",
+        "foerderungsLand": "DE",
+        "statusErzeugendeMalo": "EINSPEISEVERGUETUNG_PARAGRAPH",
+        "referenzTranche": "11111111112",
+        "aufteilungsmenge": {
+          "wert": 5.3,
+          "einheit": "PROZENT"
+        },
+        "bilanzkreis": "<string>",
+        "bildungTranchengroesse": "PROZENTUAL",
+        "lokationszuordnung": "UNVERAENDERT",
+        "beteiligterMarktpartner": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "marktrolle": "NB",
+          "gewerbekennzeichnung": true,
+          "rollencodenummer": "9900259000002",
+          "rollencodetyp": "BDEW"
+        }
+    }
+    ]
+    }
+    }

@@ -1,0 +1,60 @@
+{
+    "stammdaten":{
+    "NETZLOKATION":[
+    {
+    "boTyp":"NETZLOKATION",
+    "versionStruktur": "1",
+    "netzlokationsId": "11111111111",
+    "sparte": "STROM",
+    "netzanschlussleistung": "5",
+    "grundzustaendigerMSBCodeNr": "9900321000005",
+    "steuerkanal": true,
+    "produktdatenRelevanteRolle": "NB",
+    "konfigurationsprodukt": "9991000000721",
+    "keinKonfigurationsprodukt": true,
+    "leistungskurvendefinition": "ABC",
+    "auftraggebenderMarktpartner": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "marktrolle": "NB", 
+      "rollencodenummer": "9903790000002"
+    },
+    "marktrollen": [
+      {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "marktrolle": "NB",
+        "gewerbekennzeichnung": true,
+        "rollencodenummer": "9900321000005",
+        "rollencodetyp": "BDEW",
+        "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+      }
+    ],
+    "zaehlwerke": [
+      {
+        "obisKennzahl": "1-1:1.9.1",
+        "verwendungszwecke": [
+          {
+            "marktrolle": "NB",
+            "zweck": [
+              "NETZNUTZUNGSABRECHNUNG"
+            ]
+          }
+        ],
+        "messprodukt": "9988000000043"
+      }
+    ],
+    "lokationszuordnung": "UNVERAENDERT",
+    "abrechnungsdaten": [
+      {
+        "artikelId": "12345",
+        "artikelIdTyp": "ARTIKELID",
+        "abrechnungBlindarbeit": true,
+        "zahlerBlindarbeit": "LIEFERANT",
+        "zahlerBlindarbeitLf": true
+      }
+    ]
+    }
+    ]
+    }
+    }

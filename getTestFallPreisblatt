@@ -1,0 +1,67 @@
+{
+    "stammdaten":{
+    "PREISBLATT":[
+    {
+        "boTyp": "PREISBLATT",
+  "versionStruktur": "1",
+  "bezeichnung": "XYZ",
+  "nichtGenutzt": true,
+  "gueltigkeit": {
+    "einheit": "MONAT",
+    "dauer": 5,
+    "startdatum": "2023-03-10T16:22:38Z",
+    "enddatum": "2023-03-10T16:22:38Z"
+  },
+  "preispositionen": [
+    {
+      "berechnungsmethode": "<Kalkulationsmethode>",
+      "leistungstyp": "ARBEITSPREIS_WIRKARBEIT",
+      "leistungsbezeichnung": "XYZ",
+      "preiseinheit": "EUR",
+      "bezugsgroesse": "KWH",
+      "zeitbasis": "MINUTE",
+      "tarifzeit": "TZ_STANDARD",
+      "bdewArtikelnummer": "LEISTUNG",
+      "zonungsgroesse": "WIRKARBEIT_EL",
+      "zu_abschlaege": {
+        "bezeichnung": "XYZ",
+        "beschreibung": "XYZ",
+        "aufAbschlagstyp": "RELATIV",
+        "aufAbschlagswert": 5.2,
+        "aufAbschlagswaehrung": "EUR"
+      },
+      "preisstaffeln": [
+        {
+          "einheitspreis": 5.1,
+          "staffelgrenzeVon": 4,
+          "staffelgrenzeBis": 9,
+          "sigmoidparameter": {
+            "A": 1,
+            "B": 5,
+            "C": 2,
+            "D": 8
+          }
+        }
+      ],
+      "preisschluesselstamm": "416854765",
+      "positionsnummer": 1,
+      "messebene": "NSP",
+      "beschreibung": "XYZ",
+      "verarbeitungszeitraum": {
+        "einheit": "STUNDE",
+        "dauer": 5,
+        "startdatum": "2023-03-10T16:22:38Z",
+        "enddatum": "2023-03-10T16:22:38Z",
+        "wert": 25.3
+      },
+      "artikelId": "XYZ"
+    }
+  ],
+  "preisstatus": "VORLAEUFIG",
+  "sparte": "STROM",
+  "bilanzierungsdatum": "2023-03-01T00:00:00Z",
+  "regelzone": "10YDE-VNBNET---I"
+    }
+    ]
+    }
+    }

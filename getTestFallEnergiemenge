@@ -1,0 +1,43 @@
+{
+    "stammdaten":{
+    "ENERGIEMENGE":[
+    {
+        "boTyp": "ENERGIEMENGE",
+        "versionStruktur": "1",
+        "lokationsId": "DE36854189874FDVFMOZZNWOTQ2BIGVPP",
+        "lokationsTyp": "MELO",
+        "energieverbrauch": [
+          {
+            "startdatum": "2022-10-14T07:52:00Z",
+            "enddatum": "2022-10-14T07:52:00Z",
+            "wertermittlungsverfahren": " ",
+            "messwertstatus": "ABGELESEN",
+            "statuszusatzinformationen": [
+              {
+                "art": "PLAUSIBILISIERUNGHINWEIS",
+                "status": "PLAUSIBEL_WG_KONTROLLABLESUNG"
+              }
+            ],
+            "obiskennzahl": "1-1:1.8.2",
+            "wert": 5,
+            "einheit": "KWH",
+            "type": "VERANSCHLAGTEJAHRESMENGE",
+            "tarifstufe": "TARIFSTUFE_0",
+            "nutzungszeitpunkt": "2022-10-14T07:52:00Z",
+            "ausfuehrungszeitpunkt": "2022-10-14T07:52:00Z",
+            "position": 1,
+            "ablesedatum": "2022-10-14T07:52:00Z",
+            "leistungsperiode": "202302"
+          }
+        ],
+        "fertigstellungsdatum": "2022-10-14T07:52:00Z",
+        "startdatum": "2022-10-14T07:52:00Z",
+        "enddatum": "2022-10-14T07:52:00Z",
+        "bilanzierungsdatum": "2022-10-14T07:52:00Z",
+        "beginndatum": "202406",
+        "referenzStammdatenmeldungMsb": "941736BGM",
+        "konfiguration": "xyz"
+    }
+    ]
+    }
+    }
