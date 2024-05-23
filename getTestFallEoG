@@ -1,0 +1,370 @@
+{
+    "stammdaten":{
+    "MARKTLOKATION":[
+    {
+    "boTyp":"MARKTLOKATION",
+    "inbetriebnahmeDatum":"2019-02-28T23:00:00+00:00",
+    "energierichtung":"AUSSP",
+    "netzebene":"NSP",
+    "marktlokationsId":"50000083289",
+    "bilanzierungsgebiet":"11YR00000003039P",
+    "regelzone":"10YDE-RWENET---I",
+    "messtechnischeEinordnung":"IMS",
+    "netzbetreiberCodeNr": "9900321000005",
+    "grundversorgerCodeNr": "9903790000002",
+    "sperrstatus": "ENTSPERRT",  
+    "lokationsadresse":{
+    "postleitzahl":"12346",
+    "ort":"Ort",
+    "strasse":"Straße",
+    "hausnummer":"3",
+    "adresszusatz":"Hinterhaus",
+    "landescode":"DE"
+    },
+    "marktrollen":[
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"4045399000077",
+    "marktrolle":"UENB",
+    "rollencodetyp":"BDEW"
+    },
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"9903004000003",
+    "marktrolle":"LF",
+    "rollencodetyp":"BDEW"
+    },
+    {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"9904446000007",
+    "marktrolle":"MSB",
+    "rollencodetyp":"BDEW",
+    "weiterverpflichtet":true
+    },
+    {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer":"9900321000005",
+      "marktrolle":"NB",
+      "rollencodetyp":"BDEW",
+      "weiterverpflichtet":true
+      }  
+    ],
+    "zaehlwerke":[
+    {
+    "obisKennzahl":"1-1:1.9.0",
+    "verbrauchsart":"KL",
+    "unterbrechbarkeit":"NUV",
+    "schwachlastfaehig":"NICHT_SCHWACHLASTFAEHIG",
+    "wertegranularitaet":"JAEHRLICH",
+    "waermenutzung": "WAERMEPUMPE",
+    "artEMobilitaet": "WB",
+    "stromsteuerbefreit": true,
+    "konzessionsabgabe":{
+    "satz":"TA"
+    },
+    "verwendungszwecke":[
+    {
+    "marktrolle":"LF",
+    "zweck":[
+    "NETZNUTZUNGSABRECHNUNG",
+    "ENDKUNDENABRECHNUNG",
+    "MEHRMINDERMENGENABRECHNUNG"
+    ]
+    }
+    ],
+    "zaehlzeiten":{
+    "zaehlzeitDefinition":"XYZ",
+    "register":"XYZ"
+    }
+    }
+    ],
+    "netznutzungsabrechnungsdaten":[
+    {
+    "marktlokation.netznutzungsabrechnungsdaten.singulaereBetriebsmittel":{
+    "wert":0
+    },
+    "marktlokation.netznutzungsabrechnungsdaten.preisSingulaereBetriebsmittel":{
+    "wert":0
+    },
+    "zuschlag":0,
+    "abschlag":0,
+    "artikelId":"1-02-0-001",
+    "artikelIdTyp":"ARTIKELID",
+    "gemeinderabatt":0,
+    "anzahl":1
+    }
+    ],
+    "energieherkunft": [
+    {
+      "erzeugungsart": "SOLAR",
+      "anteilProzent": 5.2
+    }
+    ]
+    }
+    ],
+    "MESSLOKATION":[
+        {
+        "boTyp":"MESSLOKATION",
+        "versionStruktur":"1",
+        "messlokationsId":"DE36854189874FDVFMOZZNWOTQ2BIGVPP",
+        "sparte":"STROM",
+        "netzebenemessung":"NSP",
+          "ablesekartenempfaenger": {
+          "boTyp": "GESCHAEFTSPARTNER",
+          "geschaeftspartnerrolle": [
+              "KUNDE"
+          ],
+          "versionStruktur": "1",
+          "gewerbekennzeichnung": false,
+          "anrede": "XX",
+          "name1": "XX",
+          "name2": "XX",
+          "name3": "XX",
+          "name4": "XX",
+          "partneradresse": {
+            "postleitzahl": "123",
+            "ort": "XX",
+            "strasse": "XX",
+            "hausnummer": "3",
+            "landescode": "DE",
+            "ortsteil": "XX"
+          }
+        },
+        "marktrollen":[
+        {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer":"9904446000007",
+        "marktrolle":"MSB",
+        "weiterverpflichtet":true
+        },
+        {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer":"9903372000008",
+        "marktrolle":"GMSB"
+        }
+        ],
+        "zaehlwerke":[
+        {
+        "obisKennzahl":"1-1:1.8.0"
+        }
+        ]
+        }
+        ],
+    "NETZNUTZUNGSVERTRAG":[
+            {
+            "boTyp":"VERTRAG",
+            "vertragsart":"NETZNUTZUNGSVERTRAG",
+            "vertragsnummer": "123456",
+            "marktlokationsId":"50000083289",
+            "vertragsbeginn":"2023-02-28T23:00:00+00:00",
+            "vertragsende":"2024-05-31T22:00:00+00:00",
+            "gemeinderabatt":0,
+            "vertragspartner2": [
+              {
+                "boTyp": "GESCHAEFTSPARTNER",
+                "geschaeftspartnerrolle": ["KUNDE"],
+                "gewerbekennzeichnung": false,
+                "name1": "Mustermann",
+                "name2": "Max"
+              }
+            ],
+            "vertragskonditionen": {
+              "netznutzungszahler": "LIEFERANT",
+              "netznutzungsvertrag": "LIEFERANTEN_NB",
+              "netznutzungsabrechnungsgrundlage": "LIEFERSCHEIN",
+              "netznutzungsabrechnungsvariante": "ARBEITSPREIS_GRUNDPREIS",
+              "naechstenetznutzungsabrechnung": "01011201",
+              "netznutzungsabrechnungIntervall": 12,
+              "beinhaltetSingulaerGenutzteBetriebsmittel": true,
+              "haushaltskunde": true,
+              "terminnetznutzungsabrechnung": "0101",
+              "abrechnungsintervall": 12,
+              "startAbrechnungsjahr": "2024-03-14T14:30:31Z",
+              "geplanteTurnusablesung": {
+              "ableseZeitraum": "01011201"
+              },
+              "netznutzungsabrechnung": {
+              "abrechnungsZeitraum": "01011201"
+              }
+              }
+            }
+           ],
+    "MESSSTELLENBETRIEBSVERTRAG":[
+                {
+                "boTyp":"VERTRAG",
+                "versionStruktur":"1",
+                "vertragsart":"MESSSTELLENBETRIEBSVERTRAG",
+                "sparte":"STROM",
+                "vertragskonditionen":{
+                "abrechnungUeberNna":true,
+                "beauftragungMsb": "VERTRAG_AN_MSB",
+                "geplanteTurnusablesung":{
+                "ableseZeitraum": "01011201"
+                }
+                }
+                }
+                ],
+        "ENERGIELIEFERVERTRAG":[
+                    {
+                      "boTyp": "VERTRAG",
+                      "versionStruktur": "1",
+                      "vertragsnummer": "134568",
+                      "beschreibung": "Test",
+                      "vertragsart": "ENERGIELIEFERVERTRAG",
+                      "vertragstatus": "BEENDET",
+                      "sparte": "GAS",
+                      "vertragsbeginn": "2023-04-01T00:00:00Z",
+                      "vertragsende": "2023-04-01T00:00:00Z",
+                      "vertragspartner2": [
+                        {
+                          "boTyp": "GESCHAEFTSPARTNER",
+                          "versionStruktur": "1",
+                          "gewerbekennzeichnung": false,
+                          "anrede": "Test",
+                          "name1": "Test",
+                          "name2": "Test",
+                          "name3": "Test",
+                          "name4": "Test",
+                          "geschaeftspartnerrolle": [
+                            "KUNDE"
+                          ],
+                          "partneradresse": {
+                            "postleitzahl": "42553",
+                            "ort": "Test",
+                            "strasse": "Test",
+                            "hausnummer": "3",
+                            "postfach": "1345",
+                            "adresszusatz": "Test",
+                            "coErgaenzung": "Test",
+                            "landescode": "DE",
+                            "ortsteil": "Test"
+                          },
+                          "externeReferenzen": [
+                            {
+                              "exRefName": "Kundennummer beim Altlieferanten",
+                              "exRefWert": "NummerLFA123456_Z01"
+                            },
+                            {
+                              "exRefName": "Kundennummer beim Lieferanten",
+                              "exRefWert": "NummerLFN123456_Z01"
+                            }
+                          ]
+                        }
+                      ],
+                      "vertragskonditionen": {
+                        "kuendigungsfrist": {
+                          "zeitraumText": "01JM"
+                        },
+                        "kuendigungstermin": "2023-04-01T00:00:00Z",
+                        "abrechnungsintervall": 12
+                      },
+                      "korrespondenzpartner": {
+                        "boTyp": "GESCHAEFTSPARTNER",
+                        "versionStruktur": "1",
+                        "anrede": "Test",
+                          "name1": "Test",
+                          "name2": "Test",
+                          "name3": "Test",
+                          "name4": "Test",
+                        "gewerbekennzeichnung": true,
+                        "partneradresse": {
+                          "postleitzahl": "42553",
+                            "ort": "Test",
+                            "strasse": "Test",
+                            "hausnummer": "3",
+                            "postfach": "1345",
+                            "adresszusatz": "Test",
+                            "coErgaenzung": "Test",
+                            "landescode": "DE",
+                            "ortsteil": "Test"
+                        }
+                      },
+                      "lokationsId": "50074561188",
+                      "lokationsTyp": "MALO",
+                      "enFG": [
+                        {
+                          "grundlageVerringerungUmlagen": "KEINE_ANGABE",
+                          "grund": [
+                            "ENFG_STROMSPEICHER_UND_VERLUSTENERGIE"
+                          ]
+                        }
+                      ]
+                    }
+                    ],
+            "ZAEHLER":[
+                        {
+                        "boTyp":"ZAEHLER",
+                        "geraetetyp":"ZAEHLER",
+                        "sparte":"GAS",
+                        "messlokationsId":"DE36854189874FDVFMOZZNWOTQ2BIGVPP",
+                        "zaehlernummer":"248709755",
+                        "zaehlerauspraegung":"EINRICHTUNGSZAEHLER",
+                        "zaehlertyp":"DREHSTROMZAEHLER",
+                        "tarifart":"EINTARIF",
+                        "fernschaltung":"NICHT_VORHANDEN",
+                        "messwerterfassung":"MANUELL_AUSGELESENE",
+                        "zaehlwerke":[
+                        {
+                        "obisKennzahl":"7-1:3.1.0",
+                        "schwachlastfaehig":"NICHT_SCHWACHLASTFAEHIG",
+                        "wertegranularitaet":"JAEHRLICH",
+                        "hochfrequenzsonde":false,
+                        "konfiguration": "XYZ",
+                        "vorkommastelle":4,
+                        "nachkommastelle":1,
+                        "bezeichnung": "XYZ",
+                        "zaehlzeiten":{
+                        "zaehlzeitDefinition":"XYZ",
+                        "register":"XYZ"
+                        }
+                        }
+                        ]
+                        }
+                        ],
+                        "BILANZIERUNG":[
+                            {
+                            "boTyp":"BILANZIERUNG",
+                            "bilanzkreis": "11Y0-0000-0076-N",
+                            "bilanzierungsbeginn": "2024-06-30T23:00:00+00:00",
+                            "bilanzierungsende": "2024-12-31T22:00:00+00:00",   
+                            "marktlokationsId":"50000083289",
+                            "lastprofile":[
+                            {
+                            "bezeichnung":"H00",
+                            "verfahren":"ANALYTISCH",
+                            "profilart":"ART_STANDARDLASTPROFIL",
+                            "einspeisung":false,
+                            "herausgeber":"NB"
+                            }
+                            ],
+                            "jahresverbrauchsprognose":{
+                            "wert":2000,
+                            "einheit":"KWH"
+                            },
+                            "vorjahresverbrauch": {
+                            "wert": 45.8,
+                            "einheit": "KWH"
+                            },
+                            "kundenwert":{
+                            "wert":5000
+                            },
+                            "verbrauchsaufteilung":{
+                            "wert":0.3
+                            },
+                            "aggregationsverantwortung":"UENB",
+                            "zeitreihentyp":"SLS",
+                            "prognosegrundlage":"PROFILE",
+                            "wahlrechtPrognosegrundlage":"DURCH_LF",
+                            "grundWahlrechtPrognosegrundlage":"NICHT_WEGEN_EIGENVERBRAUCH",
+                            "detailsPrognosegrundlage":[
+                            "SLP_SEP"
+                            ]
+                            }
+                            ]
+                        }}
