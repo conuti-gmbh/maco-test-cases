@@ -1,7 +1,14 @@
 {
-    "stammdaten":{
-    "SPERRAUFTRAG":[
-    {
+  "stammdaten": {
+    "AUFTRAG": [
+      {
+        "boTyp": "AUFTRAG",
+        "versionStruktur": "1",
+        "ausfuehrungsdatum": "2024-05-31T22:00:00Z"
+      }
+    ],
+    "SPERRAUFTRAG": [
+      {
         "boTyp": "SPERRAUFTRAG",
         "versionStruktur": "1",
         "sperrauftragsart": "SPERREN",
@@ -11,13 +18,13 @@
         "zaehlernummer": "1ISK465846",
         "istVomGerichtsvollzieherAngeordnet": true,
         "treffpunkt": {
-            "postleitzahl": "76229",
-            "ort": "Karlruhe",
-            "strasse": "Haiallee",
-            "hausnummer": "25",
-            "postfach": "41658",
-            "adresszusatz": "Felsen",
-            "coErgaenzung": "XYZ",
+          "postleitzahl": "76229",
+          "ort": "Karlruhe",
+          "strasse": "Haiallee",
+          "hausnummer": "25",
+          "postfach": "41658",
+          "adresszusatz": "Felsen",
+          "coErgaenzung": "XYZ",
           "landescode": "DE",
           "ortsteil": "Bucht",
           "zusatzInformation": {
@@ -28,7 +35,7 @@
             "zusatz5": "XYZ"
           }
         }
-    }
+      }
     ]
-    }
-    }
+  }
+}
