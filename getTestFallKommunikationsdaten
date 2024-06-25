@@ -316,6 +316,31 @@
                   }
                 ]
               }
+            },
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "name1": "Lieferant",
+              "gewerbekennzeichnung": true,
+              "partneradresse": {
+                "postleitzahl": "12345",
+                "ort": "Lieferantenort",
+                "strasse": "Lieferantenstr",
+                "landescode": "DE"
+              },
+              "kommunikationsrolle": "KUENDIGUNGSPROZESSE",
+              "ansprechpartner": {
+                "boTyp": "ANSPRECHPARTNER",
+                "versionStruktur": "1",
+                "nachname": "Mustermann",
+                "eMailAdresse": "mustermann@max.de",
+                "rufnummern": [
+                  {
+                    "nummerntyp": "RUF_DURCHWAHL",
+                    "rufnummer": "+012345678910"
+                  }
+                ]
+              }
             }
           ]
         }
