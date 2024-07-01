@@ -1,0 +1,118 @@
+{
+  "stammdaten":{
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "50074561192",
+          "sparte": "STROM",
+          "erforderlichesProdukt": {
+            "produkt": [
+              {
+                "produktpaketID": 1,
+                "produktCode": "9991000002008",
+                "positionscode": "9991000002115"
+              },
+              {
+                "produktpaketID": 1,
+                "produktCode": "9991000002024",
+                "positionscode": "9991000002165"
+              },
+              {
+                "produktpaketID": 1,
+                "produktCode": "9991000002040",
+                "positionscode": "9991000002230"
+              },
+              {
+                "produktpaketID": 1,
+                "produktCode": "9991000002058",
+                "positionscode": "9991000002256"
+              },
+              {
+                "produktpaketID": 1,
+                "produktCode": "9991000002082",
+                "wertedetails": "11Y0-0000-0076-N"
+              },
+              {
+                "produktpaketID": 1,
+                "produktCode": "9991000002074",
+                "positionscode": "9991000002280"
+              },
+              {
+                "produktpaketID": 2,
+                "produktCode": "9991000002397",
+                "wertedetails": "2000"
+              },
+              {
+                "produktpaketID": 2,
+                "produktCode": "9991000002082",
+                "wertedetails": "11Y0-0000-0076-N"
+              }
+            ],
+            "priorisierung": [
+              {
+                "produktpaketID": 1,
+                "notwendigkeitProduktpaket": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR",
+                "priorisierungErforderlichesProduktpaket": "PRIORITAET1"
+              },
+              {
+                "produktpaketID": 2,
+                "notwendigkeitProduktpaket": "ZUORDNUNG_AUCH_WENN_PRODUKTPAKET_NICHT_UMSETZBAR",
+                "priorisierungErforderlichesProduktpaket": "PRIORITAET2"
+              }
+            ]
+          }
+        }
+      ],
+      "NETZNUTZUNGSVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "NETZNUTZUNGSVERTRAG",
+          "vertragsbeginn": "2025-06-30T22:00:00Z",
+          "vertragsende": "2025-07-30T22:00:00Z",
+          "sparte": "STROM",
+          "lokationsId": "50074561192",
+          "lokationsTyp": "MALO",
+          "vertragskonditionen": {
+            "haushaltskunde": true
+          }
+        }
+      ],
+      "ENERGIELIEFERVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "ENERGIELIEFERVERTRAG",
+          "sparte": "STROM",
+          "vertragspartner2": [
+            {
+              "boTyp": "GESCHAEFTSPARTNER",
+              "versionStruktur": "1",
+              "gewerbekennzeichnung": false,
+              "anrede": "Dr.",
+              "name1": "Mustermann",
+              "name2": "Max",
+              "geschaeftspartnerrolle": [
+                "KUNDE"
+              ]
+            }
+          ],
+          "korrespondenzpartner": {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "name1": "Fank Müller",
+            "gewerbekennzeichnung": false,
+            "partneradresse": {
+              "postleitzahl": "55555",
+              "ort": "Musterstadt",
+              "strasse": "Wohnstrasse",
+              "hausnummer": "25",
+              "landescode": "DE",
+              "ortsteil": "Musterortsteil"
+            }
+          }
+        }
+      ]
+    }
+  }
