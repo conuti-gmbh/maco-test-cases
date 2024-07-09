@@ -4,8 +4,8 @@
             {
                 "boTyp": "ANFRAGE",
                 "versionStruktur": "1",
-                "marktlokationsId": "${marktlokationsId}",
-                "sparte": "${sparte}",
+                "marktlokationsId": "_marktlokationsId",
+                "sparte": "_sparte",
                 "anfragekategorie": "SPERRUNG"
             }
         ]
