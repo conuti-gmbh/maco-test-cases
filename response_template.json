@@ -1,0 +1,13 @@
+{
+    "stammdaten": {
+        "ANFRAGE": [
+            {
+                "boTyp": "ANFRAGE",
+                "versionStruktur": "1",
+                "marktlokationsId": "${marktlokationsId}",
+                "sparte": "${sparte}",
+                "anfragekategorie": "SPERRUNG"
+            }
+        ]
+    }
+}
