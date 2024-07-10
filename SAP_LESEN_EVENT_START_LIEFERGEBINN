@@ -1,17 +1,90 @@
 {
     "stammdaten": {
-        "ANFRAGE": [
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "_marktlokationsId",
+          "sparte": "_sparte"
+        }
+      ],
+      "NETZNUTZUNGSVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "NETZNUTZUNGSVERTRAG",
+          "vertragsbeginn": "_vertragsbeginn",
+          "vertragsende": "_vertragsende",
+          "sparte": "_sparte",
+          "lokationsId": "_marktlokationsId",
+          "lokationsTyp": "MALO",
+          "vertragskonditionen": {
+            "haushaltskunde": "_haushaltskunde"
+          }
+        }
+      ],
+      "ENERGIELIEFERVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "ENERGIELIEFERVERTRAG",
+          "sparte": "_sparte",
+          "vertragspartner2": [
             {
-                "boTyp": "ANFRAGE",
-                "versionStruktur": "1",
-                "marktlokationsId": "_marktlokationsId",
-                "sparte": "_sparte",
-                "anfragekategorie": "SPERRUNG"
+              "boTyp": "GESCHAEFTSPARTNER",
+              "versionStruktur": "1",
+              "gewerbekennzeichnung": "_vp_gewerbekennzeichnung",
+              "anrede": "_anrede",
+              "name1": "_vp_name1",
+              "name2": "_vp_name2",
+              "geschaeftspartnerrolle": [
+                "KUNDE"
+              ]
             }
-        ]
+          ],
+          "korrespondenzpartner": {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "name1": "_ke_name1",
+            "gewerbekennzeichnung": "_ke_gewerbekennzeichnung",
+            "partneradresse": {
+              "postleitzahl": "_ke_plz",
+              "ort": "_ke_ort",
+              "strasse": "_ke_strasse",
+              "hausnummer": "_ke_hausnummer",
+              "landescode": "_ke_landescode",
+              "ortsteil": "_ke_ortsteil"
+            }
+          }
+        }
+      ]
     },
-    "processDate": null,
-    "data": {
-        "stammdaten": {}
+    "transaktionsdaten": {
+      "nachrichtendatum": null,
+      "vorgangsnummer": null,
+      "nachrichtenreferenznummer": null,
+      "sparte": "_sparte",
+      "dokumentennummer": null,
+      "kategorie": null,
+      "empfaenger": {
+        "rollencodenummer": "_messageReceiver",
+        "rollencodetyp": "BDEW",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      },
+      "transaktionsgrund": "_transaktionsgrund",
+      "transaktionsgrundergaenzung": "_transaktionsgrundergaenzung",
+      "transaktionsgrundergaenzungBefristeteAnmeldung": "_transaktionsgrundergaenzungBefristeteAnmeldung",
+      "absender": {
+        "rollencodenummer": "_messageSender",
+        "rollencodetyp": "BDEW",
+        "marktrolle": "LF",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      },
+      "vertragsbeginn": "_vertragsbeginn",
+      "vertragsende": "_vertragsende"
     }
 }
