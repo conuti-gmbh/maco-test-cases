@@ -4,8 +4,8 @@
         {
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
-          "marktlokationsId": _marktlokationsId,
-          "sparte": _sparte
+          "marktlokationsId": ${data:jsonPath('$_marktlokationsId')},
+          "sparte": ${data:jsonPath('$_sparte')}
         }
       ],
       "NETZNUTZUNGSVERTRAG": [
@@ -13,13 +13,13 @@
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
           "vertragsart": "NETZNUTZUNGSVERTRAG",
-          "vertragsbeginn": _vertragsbeginn,
-          "vertragsende": _vertragsende,
-          "sparte": _sparte,
-          "lokationsId": _marktlokationsId,
+          "vertragsbeginn": ${data:jsonPath('$_vertragsbeginn')},
+          "vertragsende": ${data:jsonPath('$_vertragsende')},
+          "sparte": ${data:jsonPath('$_sparte')},
+          "lokationsId": ${data:jsonPath('$_marktlokationsId')},
           "lokationsTyp": "MALO",
           "vertragskonditionen": {
-            "haushaltskunde": _haushaltskunde
+            "haushaltskunde": ${data:jsonPath('$_haushaltskunde')}
           }
         }
       ],
@@ -28,15 +28,15 @@
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
           "vertragsart": "ENERGIELIEFERVERTRAG",
-          "sparte": _sparte,
+          "sparte": ${data:jsonPath('$_sparte')},
           "vertragspartner2": [
             {
               "boTyp": "GESCHAEFTSPARTNER",
               "versionStruktur": "1",
-              "gewerbekennzeichnung": _vpgewerbekennzeichnung,
-              "anrede": _vpanrede,
-              "name1": _vpname1,
-              "name2": _vpname2,
+              "gewerbekennzeichnung": ${data:jsonPath('$_vpgewerbekennzeichnung')},
+              "anrede": ${data:jsonPath('$_vpanrede')},
+              "name1": ${data:jsonPath('$_vpname1')},
+              "name2": ${data:jsonPath('$_vpname2')},
               "geschaeftspartnerrolle": [
                 "KUNDE"
               ]
@@ -45,15 +45,15 @@
           "korrespondenzpartner": {
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
-            "name1": _kename1,
-            "gewerbekennzeichnung": _kegewerbekennzeichnung,
+            "name1": ${data:jsonPath('$_kename1')},
+            "gewerbekennzeichnung": ${data:jsonPath('$_kegewerbekennzeichnung')},
             "partneradresse": {
-              "postleitzahl": _keplz,
-              "ort": _keort,
+              "postleitzahl": ${data:jsonPath('$_keplz')},
+              "ort": ${data:jsonPath('$_keort')},
               "strasse": _kestrasse,
-              "hausnummer": _kehausnummer,
-              "landescode": _kelandescode,
-              "ortsteil": _keortsteil
+              "hausnummer": ${data:jsonPath('$_kehausnummer')},
+              "landescode":${data:jsonPath('$_kelandescode')} ,
+              "ortsteil": ${data:jsonPath('$_keortsteil')}
             }
           }
         }
@@ -63,11 +63,11 @@
       "nachrichtendatum": null,
       "vorgangsnummer": null,
       "nachrichtenreferenznummer": null,
-      "sparte": _sparte,
+      "sparte": ${data:jsonPath('$_sparte')},
       "dokumentennummer": "1",
       "kategorie": null,
       "empfaenger": {
-        "rollencodenummer": _messageReceiver,
+        "rollencodenummer": ${data:jsonPath('$_messageReceiver')},
         "rollencodetyp": "BDEW",
         "boTyp": "MARKTTEILNEHMER",
         "versionStruktur": "1",
