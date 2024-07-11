@@ -4,8 +4,8 @@
         {
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
-          "marktlokationsId": ${data:jsonPath('$_marktlokationsId')},
-          "sparte": ${data:jsonPath('$_sparte')}
+          "marktlokationsId": "${data:jsonPath('$_marktlokationsId')}",
+          "sparte": "${data:jsonPath('$_sparte')}"
         }
       ],
       "NETZNUTZUNGSVERTRAG": [
@@ -14,8 +14,8 @@
           "versionStruktur": "1",
           "vertragsart": "NETZNUTZUNGSVERTRAG",
           "vertragsbeginn": ${data:jsonPath('$_vertragsbeginn')},
-          "vertragsende": ${data:jsonPath('$_vertragsende')},
-          "sparte": ${data:jsonPath('$_sparte')},
+          "vertragsende": "${data:jsonPath('$_vertragsende')}",
+          "sparte": "${data:jsonPath('$_sparte')}",
           "lokationsId": ${data:jsonPath('$_marktlokationsId')},
           "lokationsTyp": "MALO",
           "vertragskonditionen": {
