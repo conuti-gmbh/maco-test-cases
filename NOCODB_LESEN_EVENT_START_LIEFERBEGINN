@@ -33,10 +33,10 @@
             {
               "boTyp": "GESCHAEFTSPARTNER",
               "versionStruktur": "1",
-              "gewerbekennzeichnung": "_vp_gewerbekennzeichnung",
-              "anrede": "_anrede",
-              "name1": "_vp_name1",
-              "name2": "_vp_name2",
+              "gewerbekennzeichnung": "_vpgewerbekennzeichnung",
+              "anrede": "_vpanrede",
+              "name1": "_vpname1",
+              "name2": "_vpname2",
               "geschaeftspartnerrolle": [
                 "KUNDE"
               ]
@@ -45,15 +45,15 @@
           "korrespondenzpartner": {
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
-            "name1": "_ke_name1",
-            "gewerbekennzeichnung": "_ke_gewerbekennzeichnung",
+            "name1": "_kename1",
+            "gewerbekennzeichnung": "_kegewerbekennzeichnung",
             "partneradresse": {
-              "postleitzahl": "_ke_plz",
-              "ort": "_ke_ort",
-              "strasse": "_ke_strasse",
-              "hausnummer": "_ke_hausnummer",
-              "landescode": "_ke_landescode",
-              "ortsteil": "_ke_ortsteil"
+              "postleitzahl": "_keplz",
+              "ort": "_keort",
+              "strasse": "_kestrasse",
+              "hausnummer": "_kehausnummer",
+              "landescode": "_kelandescode",
+              "ortsteil": "_keortsteil"
             }
           }
         }
