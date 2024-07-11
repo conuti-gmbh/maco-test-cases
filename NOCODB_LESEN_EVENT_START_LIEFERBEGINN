@@ -64,7 +64,7 @@
       "vorgangsnummer": null,
       "nachrichtenreferenznummer": null,
       "sparte": _sparte,
-      "dokumentennummer": null,
+      "dokumentennummer": "1",
       "kategorie": null,
       "empfaenger": {
         "rollencodenummer": _messageReceiver,
