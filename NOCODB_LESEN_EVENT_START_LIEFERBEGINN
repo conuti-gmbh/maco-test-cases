@@ -5,7 +5,7 @@
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
           "marktlokationsId": _marktlokationsId,
-          "sparte": "_sparte"
+          "sparte": _sparte
         }
       ],
       "NETZNUTZUNGSVERTRAG": [
@@ -13,13 +13,13 @@
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
           "vertragsart": "NETZNUTZUNGSVERTRAG",
-          "vertragsbeginn": "_vertragsbeginn",
-          "vertragsende": "_vertragsende",
-          "sparte": "_sparte",
-          "lokationsId": "_marktlokationsId",
+          "vertragsbeginn": _vertragsbeginn,
+          "vertragsende": _vertragsende,
+          "sparte": _sparte,
+          "lokationsId": _marktlokationsId,
           "lokationsTyp": "MALO",
           "vertragskonditionen": {
-            "haushaltskunde": "_haushaltskunde"
+            "haushaltskunde": _haushaltskunde
           }
         }
       ],
@@ -28,15 +28,15 @@
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
           "vertragsart": "ENERGIELIEFERVERTRAG",
-          "sparte": "_sparte",
+          "sparte": _sparte,
           "vertragspartner2": [
             {
               "boTyp": "GESCHAEFTSPARTNER",
               "versionStruktur": "1",
-              "gewerbekennzeichnung": "_vpgewerbekennzeichnung",
-              "anrede": "_vpanrede",
-              "name1": "_vpname1",
-              "name2": "_vpname2",
+              "gewerbekennzeichnung": _vpgewerbekennzeichnung,
+              "anrede": _vpanrede,
+              "name1": _vpname1,
+              "name2": _vpname2,
               "geschaeftspartnerrolle": [
                 "KUNDE"
               ]
@@ -45,15 +45,15 @@
           "korrespondenzpartner": {
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
-            "name1": "_kename1",
-            "gewerbekennzeichnung": "_kegewerbekennzeichnung",
+            "name1": _kename1,
+            "gewerbekennzeichnung": _kegewerbekennzeichnung,
             "partneradresse": {
-              "postleitzahl": "_keplz",
-              "ort": "_keort",
-              "strasse": "_kestrasse",
-              "hausnummer": "_kehausnummer",
-              "landescode": "_kelandescode",
-              "ortsteil": "_keortsteil"
+              "postleitzahl": _keplz,
+              "ort": _keort,
+              "strasse": _kestrasse,
+              "hausnummer": _kehausnummer,
+              "landescode": _kelandescode,
+              "ortsteil": _keortsteil
             }
           }
         }
@@ -63,28 +63,28 @@
       "nachrichtendatum": null,
       "vorgangsnummer": null,
       "nachrichtenreferenznummer": null,
-      "sparte": "_sparte",
+      "sparte": _sparte,
       "dokumentennummer": null,
       "kategorie": null,
       "empfaenger": {
-        "rollencodenummer": "_messageReceiver",
+        "rollencodenummer": _messageReceiver,
         "rollencodetyp": "BDEW",
         "boTyp": "MARKTTEILNEHMER",
         "versionStruktur": "1",
         "gewerbekennzeichnung": true
       },
-      "transaktionsgrund": "_transaktionsgrund",
-      "transaktionsgrundergaenzung": "_transaktionsgrundergaenzung",
-      "transaktionsgrundergaenzungBefristeteAnmeldung": "_transaktionsgrundergaenzungBefristeteAnmeldung",
+      "transaktionsgrund": _transaktionsgrund,
+      "transaktionsgrundergaenzung": _transaktionsgrundergaenzung,
+      "transaktionsgrundergaenzungBefristeteAnmeldung": _transaktionsgrundergaenzungBefristeteAnmeldung,
       "absender": {
-        "rollencodenummer": "_messageSender",
+        "rollencodenummer": _messageSender,
         "rollencodetyp": "BDEW",
         "marktrolle": "LF",
         "boTyp": "MARKTTEILNEHMER",
         "versionStruktur": "1",
         "gewerbekennzeichnung": true
       },
-      "vertragsbeginn": "_vertragsbeginn",
-      "vertragsende": "_vertragsende"
+      "vertragsbeginn": _vertragsbeginn,
+      "vertragsende": _vertragsende
     }
 }
