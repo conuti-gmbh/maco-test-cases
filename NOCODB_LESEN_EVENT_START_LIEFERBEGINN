@@ -4,7 +4,7 @@
         {
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
-          "marktlokationsId": "_marktlokationsId",
+          "marktlokationsId": _marktlokationsId,
           "sparte": "_sparte"
         }
       ],
