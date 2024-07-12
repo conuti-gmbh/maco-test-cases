@@ -5,7 +5,7 @@
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
           "sparte": "${data:jsonPath('$._sparte')}",
-          "energierichtung": "${data:jsonPath('$.energierichtung')}"
+          "energierichtung": "${data:jsonPath('$._energierichtung')}"
         }
       ]
     }
