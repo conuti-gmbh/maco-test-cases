@@ -4,73 +4,9 @@
         {
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
-          "sparte": "${data:jsonPath('$._sparte')}"
-        }
-      ],
-      "NETZNUTZUNGSVERTRAG": [
-        {
-          "boTyp": "VERTRAG",
-          "versionStruktur": "1",
-          "vertragsart": "NETZNUTZUNGSVERTRAG",
-          "vertragsbeginn": "${data:jsonPath('$._vertragsbeginn')}",
-          "vertragsende": "${data:jsonPath('$._vertragsende'):equals("null"):ifElse('default_value','9999999999999999999')}",
           "sparte": "${data:jsonPath('$._sparte')}",
-          "lokationsId": "${data:jsonPath('$._marktlokationsId')}",
-          "lokationsTyp": "MALO",
-          "vertragskonditionen": {
-            "haushaltskunde": "${data:jsonPath('$._haushaltskunde')}"
-          }
-        }
-      ],
-      "ENERGIELIEFERVERTRAG": [
-        {
-          "boTyp": "VERTRAG",
-          "versionStruktur": "1",
-          "vertragsart": "ENERGIELIEFERVERTRAG",
-          "sparte": "${data:jsonPath('$._sparte')}",
-          "vertragspartner2": [
-            {
-              "boTyp": "GESCHAEFTSPARTNER",
-              "versionStruktur": "1",
-              "gewerbekennzeichnung": "${data:jsonPath('$._vpgewerbekennzeichnung')}",
-              "anrede": "${data:jsonPath('$._vpanrede')}",
-              "name1": "${data:jsonPath('$._vpname1')}",
-              "name2": "${data:jsonPath('$._vpname2')}",
-              "geschaeftspartnerrolle": [
-                "KUNDE"
-              ]
-            }
-          ],
-          "korrespondenzpartner": {
-            "boTyp": "GESCHAEFTSPARTNER",
-            "versionStruktur": "1",
-            "name1": "${data:jsonPath('$._kename1')}",
-            "gewerbekennzeichnung": "${data:jsonPath('$._kegewerbekennzeichnung')}",
-            "partneradresse": {
-              "postleitzahl": "${data:jsonPath('$._keplz')}",
-              "ort": "${data:jsonPath('$._keort')}",
-              "strasse": "_kestrasse",
-              "hausnummer": "${data:jsonPath('$._kehausnummer')}",
-              "landescode":"${data:jsonPath('$._kelandescode')}" ,
-              "ortsteil": "${data:jsonPath('$._keortsteil')}"
-            }
-          }
+          "energierichtung": "${data:jsonPath('$.energierichtung')}"
         }
       ]
-    },
-    "transaktionsdaten": {
-      "nachrichtendatum": null,
-      "vorgangsnummer": null,
-      "nachrichtenreferenznummer": null,
-      "sparte": "${data:jsonPath('$._sparte')}",
-      "dokumentennummer": "1",
-      "kategorie": null,
-      "empfaenger": {
-        "rollencodenummer": "${data:jsonPath('$._messageReceiver')}",
-        "rollencodetyp": "BDEW",
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "gewerbekennzeichnung": true
-      }
     }
 }
