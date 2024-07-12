@@ -4,8 +4,8 @@
         {
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
-          "marktlokationsId": _marktlokationsId,
-          "sparte": _sparte
+          "marktlokationsId": "${marktlokationsId}",
+          "sparte": "${sparte}"
         }
       ],
       "NETZNUTZUNGSVERTRAG": [
@@ -13,13 +13,13 @@
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
           "vertragsart": "NETZNUTZUNGSVERTRAG",
-          "vertragsbeginn": _vertragsbeginn,
-          "vertragsende": _vertragsende,
-          "sparte": _sparte,
-          "lokationsId": _marktlokationsId,
+          "vertragsbeginn": "${vertragsbeginn}",
+          "vertragsende": "${vertragsende}",
+          "sparte": "${sparte}",
+          "lokationsId": "${marktlokationsId}",
           "lokationsTyp": "MALO",
           "vertragskonditionen": {
-            "haushaltskunde": _haushaltskunde
+            "haushaltskunde": ${if(${haushaltskunde}=="true"){true}else{false}}
           }
         }
       ],
@@ -28,7 +28,7 @@
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
           "vertragsart": "ENERGIELIEFERVERTRAG",
-          "sparte": _sparte,
+          "sparte": "${sparte}",
           "vertragspartner2": [
             {
               "boTyp": "GESCHAEFTSPARTNER",
