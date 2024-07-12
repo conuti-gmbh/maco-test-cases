@@ -14,7 +14,7 @@
           "versionStruktur": "1",
           "vertragsart": "NETZNUTZUNGSVERTRAG",
           "vertragsbeginn": "${data:jsonPath('$._vertragsbeginn')}",
-          "vertragsende": "${data:jsonPath('$._vertragsende')}",
+          "vertragsende": "${data:jsonPath('$._vertragsende'):equals(null):ifElse('default_value','9999999999999999999')}",
           "sparte": "${data:jsonPath('$._sparte')}",
           "lokationsId": "${data:jsonPath('$._marktlokationsId')}",
           "lokationsTyp": "MALO",
