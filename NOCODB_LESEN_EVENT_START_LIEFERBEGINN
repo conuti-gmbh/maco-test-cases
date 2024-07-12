@@ -4,10 +4,10 @@
         {
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
-          "sparte": "${data:jsonPath('$._sparte')}",
-          "energierichtung": "${data:jsonPath('$._energierichtung')}",
-          "haushaltskunde": ${data:jsonPath('$._haushaltskunde'):equals("true"):ifElse(true,false)},
-          "verify": ${data:jsonPath('$._verify'):equals("data"):ifElse(true,false)}
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "energierichtung": "${data:jsonPath('$.energierichtung')}",
+          "haushaltskunde": ${data:jsonPath('$.haushaltskunde'):equals("true"):ifElse(true,false)},
+          "verify": ${data:jsonPath('$.verify'):equals("data"):ifElse(true,false)}
         }
       ]
     }
