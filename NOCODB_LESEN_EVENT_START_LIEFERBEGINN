@@ -13,13 +13,13 @@
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
           "vertragsart": "NETZNUTZUNGSVERTRAG",
-          "vertragsbeginn": ${data:jsonPath('$_vertragsbeginn')},
+          "vertragsbeginn": "${data:jsonPath('$_vertragsbeginn')}",
           "vertragsende": "${data:jsonPath('$_vertragsende')}",
           "sparte": "${data:jsonPath('$_sparte')}",
-          "lokationsId": ${data:jsonPath('$_marktlokationsId')},
+          "lokationsId": "${data:jsonPath('$_marktlokationsId')}",
           "lokationsTyp": "MALO",
           "vertragskonditionen": {
-            "haushaltskunde": ${data:jsonPath('$_haushaltskunde')}
+            "haushaltskunde": "${data:jsonPath('$_haushaltskunde')}"
           }
         }
       ],
@@ -28,15 +28,15 @@
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
           "vertragsart": "ENERGIELIEFERVERTRAG",
-          "sparte": ${data:jsonPath('$_sparte')},
+          "sparte": "${data:jsonPath('$_sparte')}",
           "vertragspartner2": [
             {
               "boTyp": "GESCHAEFTSPARTNER",
               "versionStruktur": "1",
-              "gewerbekennzeichnung": ${data:jsonPath('$_vpgewerbekennzeichnung')},
-              "anrede": ${data:jsonPath('$_vpanrede')},
-              "name1": ${data:jsonPath('$_vpname1')},
-              "name2": ${data:jsonPath('$_vpname2')},
+              "gewerbekennzeichnung": "${data:jsonPath('$_vpgewerbekennzeichnung')}",
+              "anrede": "${data:jsonPath('$_vpanrede')}",
+              "name1": "${data:jsonPath('$_vpname1')}",
+              "name2": "${data:jsonPath('$_vpname2')}",
               "geschaeftspartnerrolle": [
                 "KUNDE"
               ]
@@ -45,15 +45,15 @@
           "korrespondenzpartner": {
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
-            "name1": ${data:jsonPath('$_kename1')},
-            "gewerbekennzeichnung": ${data:jsonPath('$_kegewerbekennzeichnung')},
+            "name1": "${data:jsonPath('$_kename1')}",
+            "gewerbekennzeichnung": "${data:jsonPath('$_kegewerbekennzeichnung')}",
             "partneradresse": {
-              "postleitzahl": ${data:jsonPath('$_keplz')},
-              "ort": ${data:jsonPath('$_keort')},
-              "strasse": _kestrasse,
-              "hausnummer": ${data:jsonPath('$_kehausnummer')},
-              "landescode":${data:jsonPath('$_kelandescode')} ,
-              "ortsteil": ${data:jsonPath('$_keortsteil')}
+              "postleitzahl": "${data:jsonPath('$_keplz')}",
+              "ort": "${data:jsonPath('$_keort')}",
+              "strasse": "_kestrasse",
+              "hausnummer": "${data:jsonPath('$_kehausnummer')}",
+              "landescode":"${data:jsonPath('$_kelandescode')}" ,
+              "ortsteil": "${data:jsonPath('$_keortsteil')}"
             }
           }
         }
@@ -63,28 +63,15 @@
       "nachrichtendatum": null,
       "vorgangsnummer": null,
       "nachrichtenreferenznummer": null,
-      "sparte": ${data:jsonPath('$_sparte')},
+      "sparte": "${data:jsonPath('$_sparte')}",
       "dokumentennummer": "1",
       "kategorie": null,
       "empfaenger": {
-        "rollencodenummer": ${data:jsonPath('$_messageReceiver')},
+        "rollencodenummer": "${data:jsonPath('$_messageReceiver')}",
         "rollencodetyp": "BDEW",
         "boTyp": "MARKTTEILNEHMER",
         "versionStruktur": "1",
         "gewerbekennzeichnung": true
-      },
-      "transaktionsgrund": _transaktionsgrund,
-      "transaktionsgrundergaenzung": _transaktionsgrundergaenzung,
-      "transaktionsgrundergaenzungBefristeteAnmeldung": _transaktionsgrundergaenzungBefristeteAnmeldung,
-      "absender": {
-        "rollencodenummer": _messageSender,
-        "rollencodetyp": "BDEW",
-        "marktrolle": "LF",
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "gewerbekennzeichnung": true
-      },
-      "vertragsbeginn": _vertragsbeginn,
-      "vertragsende": _vertragsende
+      }
     }
 }
