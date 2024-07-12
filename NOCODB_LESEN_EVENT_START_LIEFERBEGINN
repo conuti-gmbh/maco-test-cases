@@ -4,7 +4,6 @@
         {
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
-          "marktlokationsId": "${data:jsonPath('$._marktlokationsId')}",
           "sparte": "${data:jsonPath('$._sparte')}"
         }
       ],
