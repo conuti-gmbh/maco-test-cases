@@ -6,7 +6,8 @@
           "versionStruktur": "1",
           "sparte": "${data:jsonPath('$._sparte')}",
           "energierichtung": "${data:jsonPath('$._energierichtung')}",
-          "haushaltskunde": ${data:jsonPath('$._haushaltskunde'):equals("true"):ifElse(true,false)}
+          "haushaltskunde": ${data:jsonPath('$._haushaltskunde'):equals("true"):ifElse(true,false)},
+          "verify": ${data:jsonPath('$._verify'):equals("data"):ifElse(true,false)}
         }
       ]
     }
