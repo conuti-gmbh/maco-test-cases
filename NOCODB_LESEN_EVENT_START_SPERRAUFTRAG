@@ -1,8 +1,6 @@
 {
   "stammdaten":{
-
     "ANFRAGE": [
-
     {
     "boTyp": "ANFRAGE",
     "versionStruktur": "1",
@@ -11,7 +9,6 @@
     "anfragekategorie": "SPERRUNG"
     }
     ]
-
     }
   }
  
