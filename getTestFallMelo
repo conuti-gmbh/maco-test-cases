@@ -4,7 +4,7 @@
   {
   "boTyp":"MESSLOKATION",
   "versionStruktur":"1",
-  "messlokationsId":"DE36854189874FDVFMOZZNWOTQ2BIGVPP",
+  "messlokationsId":"DE0032106765712000000000000000037",
   "sparte":"STROM",
   "netzebenemessung":"NSP",
     "ablesekartenempfaenger": {
@@ -36,6 +36,20 @@
   "marktrolle":"MSB",
   "weiterverpflichtet":true
   },
+  {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "rollencodenummer":"9870013800007",
+    "marktrolle":"NB",
+    "weiterverpflichtet":true
+    },
+    {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer":"9800044300007",
+      "marktrolle":"LF",
+      "weiterverpflichtet":true
+      },
   {
   "boTyp": "MARKTTEILNEHMER",
   "versionStruktur": "1",
