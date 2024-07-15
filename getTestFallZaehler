@@ -20,7 +20,7 @@
     "hochfrequenzsonde":false,
     "konfiguration": "XYZ",
     "vorkommastelle":4,
-    "nachkommastelle":1,
+    "nachkommastelle":4,
     "bezeichnung": "XYZ",
     "zaehlzeiten":{
     "zaehlzeitDefinition":"XYZ",
