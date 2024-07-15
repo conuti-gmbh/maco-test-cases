@@ -19,7 +19,7 @@
     "wertegranularitaet":"JAEHRLICH",
     "hochfrequenzsonde":false,
     "konfiguration": "XYZ",
-    "vorkommastelle":4,
+    "vorkommastellen":4,
     "nachkommastelle":4,
     "bezeichnung": "XYZ",
     "zaehlzeiten":{
