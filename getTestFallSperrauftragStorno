@@ -1,0 +1,8 @@
+{
+  "stammdaten": {
+      "originalSperrauftragsart": "SPERREN",
+      "auftragsId": "007",
+      "boTyp": "SPERRAUFTRAGSSTORNO",
+      "versionStruktur": "1"
+  }
+}
