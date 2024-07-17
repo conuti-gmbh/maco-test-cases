@@ -1,0 +1,45 @@
+{
+    "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "netznutzungsabrechnungsdaten": [
+            {
+              "artikelId": "${data:jsonPath('$.artikelId')}",
+              "artikelIdTyp": "${data:jsonPath('$.artikelIdTyp')}",
+              "gemeinderabatt": 0
+            }
+          ]
+        }
+      ],
+      "NETZNUTZUNGSVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "NETZNUTZUNGSVERTRAG",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "empfaenger": {
+        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+        "rollencodetyp": "BDEW",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      },
+      "absender": {
+        "rollencodenummer": "${data:jsonPath('$.absender')}",
+        "rollencodetyp": "BDEW",
+        "marktrolle": "LF",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      }
+    }
+}
