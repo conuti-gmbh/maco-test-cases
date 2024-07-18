@@ -11,7 +11,6 @@
     {
       "boTyp": "MARKTLOKATION",
       "versionStruktur": "1",
-      "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
       "sparte": "${data:jsonPath('$.sparte')}"
     }
   ],
@@ -19,17 +18,19 @@
     {
       "boTyp": "STEUERBARE_RESSOURCE",
       "versionStruktur": "1",
-      "ressourcenId": "${data:jsonPath('$.ressourcenId')}"
+      "ressourcenId": "${data:jsonPath('$.ressourcenId')}",
+      "sparte": "${data:jsonPath('$.sparte')}"
     }
   ],
   "SCHALTZEITDEFINITION": [
     {
       "boTyp": "SCHALTZEITDEFINITION",
       "versionStruktur": "1",
+      "sparte": "${data:jsonPath('$.sparte')}",
       "schaltzeiten": [
         {
-          "code": "XYZ",
-          "konfigurationsprodukt": "9991000000713"
+          "code": "${data:jsonPath('$.code')}",
+          "konfigurationsprodukt": "${data:jsonPath('$.konfigurationsprodukt')}"
         }
       ]
     }
