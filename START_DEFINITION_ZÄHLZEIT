@@ -1,0 +1,37 @@
+{
+  "stammdaten": {
+      "ZAEHLZEITDEFINITION": [
+        {
+          "boTyp": "ZAEHLZEITDEFINITION",
+          "versionStruktur": "1",
+          "code": "${data:jsonPath('$.code')}",
+          "beginndatum": "${data:jsonPath('$.beginndatum')}",
+          "endedatum": "${data:jsonPath('$.endedatum')}",
+          "version": "${data:jsonPath('$.version')}",
+          "schaltzeiten": [
+            {
+              "aenderungszeitpunkt": "${data:jsonPath('$.aenderungszeitpunkt')}",
+              "haeufigkeit": "${data:jsonPath('$.haeufigkeit')}",
+              "register": "${data:jsonPath('$.register')}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte":"${data:jsonPath('$.sparte')}",
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.absender')}",
+        "rollencodetyp": "BDEW"
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+        "rollencodetyp": "BDEW"
+      },
+      "kategorie": "Z59"
+    }
+}
