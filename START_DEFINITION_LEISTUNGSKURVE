@@ -13,7 +13,7 @@
               "aenderungszeitpunkt": "${data:jsonPath('$.aenderungszeitpunkt')}",
               "haeufigkeit": "${data:jsonPath('$.haeufigkeit')}",
               "schwellwert": {
-                "obererSchwellwert": "${data:jsonPath('$.obererSchwellwert')}"
+                "obererSchwellwert": ${data:jsonPath('$.obererSchwellwert')}
               }
             }
           ]
