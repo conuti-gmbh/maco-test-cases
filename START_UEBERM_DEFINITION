@@ -1,0 +1,36 @@
+{
+  "stammdaten": {
+      "SCHALTZEITDEFINITION": [
+        {
+          "boTyp": "SCHALTZEITDEFINITION",
+          "versionStruktur": "1",
+          "code": "${data:jsonPath('$.code')}",
+          "beginndatum": "${data:jsonPath('$.beginndatum')}",
+          "endedatum": "${data:jsonPath('$.endedatum')}",
+          "version": "${data:jsonPath('$.version')}",
+          "schaltzeiten": [
+            {
+              "aenderungszeitpunkt": "${data:jsonPath('$.aenderungszeitpunkt')}",
+              "haeufigkeit": "${data:jsonPath('$.haeufigkeit')}",
+              "schalthandlung": "${data:jsonPath('$.schalthandlung')}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.absender')}",
+        "rollencodetyp": "BDEW"
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+        "rollencodetyp": "BDEW"
+      },
+      "kategorie": "Z80"
+    }
+}
