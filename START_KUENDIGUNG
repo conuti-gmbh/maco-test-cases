@@ -20,7 +20,6 @@
     ]
   },
   "transaktionsdaten": {
-    
     "absender": {
       "rollencodenummer": "${data:jsonPath('$.absender')}"
     },
