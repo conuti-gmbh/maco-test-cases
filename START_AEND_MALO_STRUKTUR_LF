@@ -1,0 +1,65 @@
+{
+  "stammdaten":{
+    "MARKTLOKATION": [
+    {
+    "boTyp": "MARKTLOKATION",
+    "versionStruktur": "1",
+		"marktlokationsId": "${data:jsonPath('$.marktlokationsId')}"
+    }
+    ],
+    "NETZLOKATION": [
+    {
+    "boTyp": "NETZLOKATION",
+    "versionStruktur": "1",
+		"netzlokationsId": "${data:jsonPath('$.netzlokationsId')}",
+    "lokationszuordnung": "${data:jsonPath('$.lokationszuordnungNelo')}"
+    }
+    ],
+    "MESSLOKATION": [
+    {
+    "boTyp": "MESSLOKATION",
+    "versionStruktur": "1",
+		"messlokationsId": "${data:jsonPath('$.messlokationsId')}",
+    "lokationszuordnung": "${data:jsonPath('$.lokationszuordnungMelo')}"
+    }
+    ],
+    "TECHNISCHE_RESSOURCE": [
+    {
+    "boTyp": "TECHNISCHE_RESSOURCE",
+    "versionStruktur": "1",
+		"ressourcenId": "${data:jsonPath('$.technischeRessourcenId')}",
+    "lokationszuordnung": "${data:jsonPath('$.lokationszuordnungTr')}"
+    }
+    ],
+    "STEUERBARE_RESSOURCE": [
+    {
+    "boTyp": "STEUERBARE_RESSOURCE",
+    "versionStruktur": "1",
+		"ressourcenId": "${data:jsonPath('$.steuerbareRessourcenId')}",
+    "lokationszuordnung": "${data:jsonPath('$.lokationszuordnungSr')}"
+    }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+    {
+    "boTyp": "NETZNUTZUNGSVERTRAG",
+    "versionStruktur": "1",
+		"vertragsart": "${data:jsonPath('$.vertragsart')}",
+    "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}"
+    }
+    ],
+    "TRANCHE": [
+    {
+    "boTyp": "TRANCHE",
+    "versionStruktur": "1",
+		"tranchenId": "${data:jsonPath('$.tranchenId')}"
+    }
+    ]
+    },
+  "transaktionsdaten": {
+    "empfaenger": "${data:jsonPath('$.empfaenger')}",
+    "absender": "${data:jsonPath('$.absender')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+  }
+  }
+ 
