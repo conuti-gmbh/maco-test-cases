@@ -1,0 +1,33 @@
+{
+  "stammdaten":{
+    "MARKTLOKATION": [
+    {
+    "boTyp": "MARKTLOKATION",
+    "versionStruktur": "1",
+		"marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+    "netznutzungsabrechnungsdaten": [
+      {
+        "artikelId": "${data:jsonPath('$.artikelId')}",
+        "artikelIdTyp": "${data:jsonPath('$.artikelIdTyp')}",
+        "gemeinderabatt": ${data:jsonPath('$.gemeinderabatt')}
+      }
+    ]
+    }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+    {
+    "boTyp": "NETZNUTZUNGSVERTRAG",
+    "versionStruktur": "1",
+		"vertragsart": "${data:jsonPath('$.vertragsart')}",
+    "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}"
+    }
+    ]
+    },
+  "transaktionsdaten": {
+    "empfaenger": "${data:jsonPath('$.empfaenger')}",
+    "absender": "${data:jsonPath('$.absender')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+  }
+  }
+ 
