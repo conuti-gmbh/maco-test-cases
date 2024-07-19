@@ -49,9 +49,6 @@
       ]
     },
     "transaktionsdaten": {
-      "datenaustauschreferenz": "181168",
-      "sparte": "STROM",
-      "pruefidentifikator": "17123",
       "absender": {
         "boTyp": "MARKTTEILNEHMER",
         "versionStruktur": "1",
