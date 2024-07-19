@@ -29,7 +29,7 @@
       {
         "bezeichnung": "${data:jsonPath('$.bezeichnung')}",
         "verfahren": "${data:jsonPath('$.verfahren')}",
-        "einspeisung": "${data:jsonPath('$.einspeisung')}",
+        "einspeisung": ${data:jsonPath('$.einspeisung')},
         "profilart": "${data:jsonPath('$.profilart')}",
         "herausgeber": "${data:jsonPath('$.herausgeber')}"
       }
