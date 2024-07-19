@@ -8,6 +8,27 @@
           "sparte": "${data:jsonPath('$.sparte')}"
         }
       ],
+      "TRANCHE": [
+        {
+          "boTyp": "TRANCHE",
+          "versionStruktur": "1",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "verguetungEmpfaenger": "${data:jsonPath('$.verguetungEmpfaenger')}",
+          "bildungTranchengroesse": "${data:jsonPath('$.bildungTranchengroesse')}",
+          "aufteilungsmenge": {
+            "wert": ${data:jsonPath('$.wert')},
+            "einheit": "${data:jsonPath('$.einheit')}"
+          }
+        }
+      ],
+      "BILANZIERUNG": [
+        {
+          "boTyp": "BILANZIERUNG",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+          "bilanzkreis": "${data:jsonPath('$.bilanzkreis')}"
+        }
+      ],
       "NETZNUTZUNGSVERTRAG": [
         {
           "boTyp": "VERTRAG",
