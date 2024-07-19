@@ -39,12 +39,12 @@
 "transaktionsdaten": {
   "absender": {
       "rollencodenummer": "${data:jsonPath('$.absender')}"
-    }
-  },
+    },
   "empfaenger": {
       "rollencodenummer": "${data:jsonPath('$.empfaenger')}"
   },
   "lieferdatum": "${data:jsonPath('$.lieferdatum')}",
   "nachrichtenReferenzBestellbestaetigung": "${data:jsonPath('$.nachrichtenReferenzBestellbestaetigung')}",
   "vorgangsReferenzBestellbestaetigung": "${data:jsonPath('$.vorgangsReferenzBestellbestaetigung')}"
+ }
 }
