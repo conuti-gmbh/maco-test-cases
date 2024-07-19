@@ -1,90 +1,51 @@
 {
-    "stammdaten": {
-      "MARKTLOKATION": [
-        {
-          "boTyp": "MARKTLOKATION",
-          "versionStruktur": "1",
-          "marktlokationsId": _marktlokationsId,
-          "sparte": _sparte
-        }
-      ],
-      "NETZNUTZUNGSVERTRAG": [
-        {
-          "boTyp": "VERTRAG",
-          "versionStruktur": "1",
-          "vertragsart": "NETZNUTZUNGSVERTRAG",
-          "vertragsbeginn": _vertragsbeginn,
-          "vertragsende": _vertragsende,
-          "sparte": _sparte,
-          "lokationsId": _marktlokationsId,
-          "lokationsTyp": "MALO",
-          "vertragskonditionen": {
-            "haushaltskunde": _haushaltskunde
+  "stammdaten": {
+    "ZAEHLER": [
+      {
+        "boTyp": "ZAEHLER",
+        "versionStruktur": "1",
+        "zaehlernummer": "1234567",
+        "sparte": "GAS"
+      }
+    ],
+    "ENERGIEMENGE": [
+      {
+        "boTyp": "ENERGIEMENGE",
+        "versionStruktur": "1",
+        "lokationsId": "${data:jsonPath('$.lokationsId')}",
+        "lokationsTyp": "${data:jsonPath('$.sparte')}",
+        "energieverbrauch": [
+          {
+            "messwertstatus": "ABGELESEN",
+            "obiskennzahl": "7-0:3.0.0",
+            "wert": 1234.123,
+            "nutzungszeitpunkt": "2023-07-31T04:00:00Z",
+            "position": 1,
+            "ablesedatum": "2023-07-31T04:00:00Z"
           }
-        }
-      ],
-      "ENERGIELIEFERVERTRAG": [
-        {
-          "boTyp": "VERTRAG",
-          "versionStruktur": "1",
-          "vertragsart": "ENERGIELIEFERVERTRAG",
-          "sparte": _sparte,
-          "vertragspartner2": [
-            {
-              "boTyp": "GESCHAEFTSPARTNER",
-              "versionStruktur": "1",
-              "gewerbekennzeichnung": _vpgewerbekennzeichnung,
-              "anrede": _vpanrede,
-              "name1": _vpname1,
-              "name2": _vpname2,
-              "geschaeftspartnerrolle": [
-                "KUNDE"
-              ]
-            }
-          ],
-          "korrespondenzpartner": {
-            "boTyp": "GESCHAEFTSPARTNER",
-            "versionStruktur": "1",
-            "name1": _kename1,
-            "gewerbekennzeichnung": _kegewerbekennzeichnung,
-            "partneradresse": {
-              "postleitzahl": _keplz,
-              "ort": _keort,
-              "strasse": _kestrasse,
-              "hausnummer": _kehausnummer,
-              "landescode": _kelandescode,
-              "ortsteil": _keortsteil
-            }
+        ]
+      }
+    ]
+  },
+  "transaktionsdaten": {
+
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "${data:jsonPath('$.absender')}"
+          {
+            "nummerntyp": "RUF_DURCHWAHL",
+            "rufnummer": "+1234 5678910"
           }
-        }
-      ]
+        ]
+      }
     },
-    "transaktionsdaten": {
-      "nachrichtendatum": null,
-      "vorgangsnummer": null,
-      "nachrichtenreferenznummer": null,
-      "sparte": _sparte,
-      "dokumentennummer": "1",
-      "kategorie": null,
-      "empfaenger": {
-        "rollencodenummer": _messageReceiver,
-        "rollencodetyp": "BDEW",
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "gewerbekennzeichnung": true
-      },
-      "transaktionsgrund": _transaktionsgrund,
-      "transaktionsgrundergaenzung": _transaktionsgrundergaenzung,
-      "transaktionsgrundergaenzungBefristeteAnmeldung": _transaktionsgrundergaenzungBefristeteAnmeldung,
-      "absender": {
-        "rollencodenummer": _messageSender,
-        "rollencodetyp": "BDEW",
-        "marktrolle": "LF",
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "gewerbekennzeichnung": true
-      },
-      "vertragsbeginn": _vertragsbeginn,
-      "vertragsende": _vertragsende
-    }
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+      "rollencodetyp": "DVGW"
+    },
+  "zusatzdaten": {}
 }
+} 
