@@ -4,11 +4,11 @@
         {
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
-          "marktlokationsId": "50074561188",
-          "sparte": "STROM",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+          "sparte": "${data:jsonPath('$.sparte')}",
           "zaehlwerke": [
             {
-              "messprodukt": "9991000000044"
+              "messprodukt": "${data:jsonPath('$.messprodukt')}"
             }
           ]
         }
@@ -17,21 +17,21 @@
         {
           "boTyp": "ANFRAGE",
           "versionStruktur": "1",
-          "lokationsId": "50074561188",
-          "lokationsTyp": "MALO",
-          "anfragekategorie": "AENDERUNG_ZAEHLZEITDEFINITION",
-          "anfragetyp": "AENDERUNG_KONFIGURATION"
+          "lokationsId": "${data:jsonPath('$.lokationsId')}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}",
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie')}",
+          "anfragetyp": "${data:jsonPath('$.anfragetyp')}"
         }
       ],
       "AUFTRAG": [
         {
           "boTyp": "AUFTRAG",
           "versionStruktur": "1",
-          "ausfuehrungsdatum": "2024-06-30T22:00:00Z",
+          "ausfuehrungsdatum": "${data:jsonPath('$.ausfuehrungsdatum')}",
           "positionsdaten": [
             {
               "positionsnummer": 1,
-              "obiskennzahl": "9991000000044"
+              "obiskennzahl": "${data:jsonPath('$.obiskennzahl')}"
             }
           ]
         }
@@ -42,7 +42,7 @@
           "versionStruktur": "1",
           "zaehlzeiten": [
             {
-              "code": "ABC"
+              "code": "${data:jsonPath('$.code')}"
             }
           ]
         }
@@ -52,18 +52,14 @@
       "absender": {
         "boTyp": "MARKTTEILNEHMER",
         "versionStruktur": "1",
-        "rollencodenummer": "9903790000002",
+        "rollencodenummer": "${data:jsonPath('$.absender')}",
         "rollencodetyp": "BDEW"
       },
       "empfaenger": {
         "boTyp": "MARKTTEILNEHMER",
         "versionStruktur": "1",
-        "rollencodenummer": "9904446000007",
+        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
         "rollencodetyp": "BDEW"
-      },
-      "dokumentennummer": "103358BGM",
-      "kategorie": "Z56",
-      "nachrichtendatum": "2024-04-01T13:56:00Z",
-      "nachrichtenreferenznummer": "103358"
+      }
     }
     }
