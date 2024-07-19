@@ -9,7 +9,7 @@
       {
         "artikelId": "${data:jsonPath('$.artikelId')}",
         "artikelIdTyp": "${data:jsonPath('$.artikelIdTyp')}",
-        "abrechnungBlindarbeit": "${data:jsonPath('$.abrechnungBlindarbeit')}",
+        "abrechnungBlindarbeit": ${data:jsonPath('$.abrechnungBlindarbeit')},
         "zahlerBlindarbeit": "${data:jsonPath('$.zahlerBlindarbeit')}"
       }
     ]
