@@ -1,0 +1,57 @@
+{
+  "stammdaten":{
+    "MARKTLOKATION": [
+    {
+    "boTyp": "MARKTLOKATION",
+    "versionStruktur": "1",
+		"marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+    "energierichtung": "${data:jsonPath('$.energierichtung')}",
+    "bilanzierungsgebiet": "${data:jsonPath('$.bilanzierungsgebiet')}",
+    "regelzone": "${data:jsonPath('$.regelzone')}"
+    }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+    {
+    "boTyp": "NETZNUTZUNGSVERTRAG",
+    "versionStruktur": "1",
+		"vertragsart": "${data:jsonPath('$.vertragsart')}",
+    "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
+    "lokationsId": "${data:jsonPath('$.lokationsId')}",
+    "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
+    }
+    ],
+    "BILANZIERUNG": [
+    {
+    "boTyp": "BILANZIERUNG",
+    "versionStruktur": "1",
+		"marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+    "lastprofile": [
+      {
+        "bezeichnung": "${data:jsonPath('$.bezeichnung')}",
+        "verfahren": "${data:jsonPath('$.verfahren')}",
+        "einspeisung": ${data:jsonPath('$.einspeisung')},
+        "profilart": "${data:jsonPath('$.profilart')}",
+        "herausgeber": "${data:jsonPath('$.herausgeber')}"
+      }
+    ],
+    "jahresverbrauchsprognose": {
+      "wert": ${data:jsonPath('$.herausgeber')},
+      "einheit": "${data:jsonPath('$.herausgeber')}"
+    },
+    "aggregationsverantwortung": "${data:jsonPath('$.aggregationsverantwortung')}",
+    "prognosegrundlage": "${data:jsonPath('$.prognosegrundlage')}",
+    "detailsPrognosegrundlage": [
+      "${data:jsonPath('$.detailsPrognosegrundlage')}"
+    ]
+    }
+    ]
+    },
+  "transaktionsdaten": {
+    "empfaenger": "${data:jsonPath('$.empfaengerLf')}",
+    "empfaenger": "${data:jsonPath('$.empfaengerMsb')}",
+    "absender": "${data:jsonPath('$.absender')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+  }
+  }
+ 
