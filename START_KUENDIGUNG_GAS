@@ -25,6 +25,15 @@
       "vertragsart": "${data:jsonPath('$.vertragsart')}",
       "sparte": "${data:jsonPath('$.sparte')}",
   ],
+  "ZAEHLER": [
+    {
+      "boTyp": "ZAEHLER",
+      "versionStruktur": "1",
+      "zaehlernummer": "${data:jsonPath('$.zaehlernummer')}",
+      "sparte": "${data:jsonPath('$.sparte')}"
+    }
+  ]
+},
   "transaktionsdaten": {
     "absender": {
       "rollencodenummer": "${data:jsonPath('$.absender')}"
