@@ -38,7 +38,7 @@
             "externeReferenzen": [
               {
                 "exRefName": "${data:jsonPath('$.exRefName')}",
-                "exRefWert": "exRefWert"
+                "exRefWert": "${data:jsonPath('$.exRefWert')}"
               }
             ]
           }
