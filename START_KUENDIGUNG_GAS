@@ -8,16 +8,6 @@
         "sparte": "${data:jsonPath('$.sparte')}"
       }
     ],
-    "NETZNUTZUNGSVERTRAG": [
-      {
-        "boTyp": "VERTRAG",
-        "versionStruktur": "1",
-        "vertragsart": "${data:jsonPath('$.vertragsart')}",
-        "sparte": "${data:jsonPath('$.sparte')}",
-        "vertragsende": "${data:jsonPath('$.vertragsende')}"
-      }
-    ]
-  },
   "ENERGIELIEFERVERTRAG": [
     {
       "boTyp": "VERTRAG",
