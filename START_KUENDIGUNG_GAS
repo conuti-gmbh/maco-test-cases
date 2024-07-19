@@ -1,0 +1,37 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+        "sparte": "${data:jsonPath('$.sparte')}"
+      }
+    ],
+  "ENERGIELIEFERVERTRAG": [
+    {
+      "boTyp": "VERTRAG",
+      "versionStruktur": "1",
+      "vertragsart": "${data:jsonPath('$.vertragsart')}",
+      "sparte": "${data:jsonPath('$.sparte')}",
+  ],
+  "ZAEHLER": [
+    {
+      "boTyp": "ZAEHLER",
+      "versionStruktur": "1",
+      "zaehlernummer": "${data:jsonPath('$.zaehlernummer')}",
+      "sparte": "${data:jsonPath('$.sparte')}"
+    }
+  ]
+},
+  "transaktionsdaten": {
+    "absender": {
+      "rollencodenummer": "${data:jsonPath('$.absender')}"
+    },
+    "empfaenger": {
+      "rollencodenummer": "${data:jsonPath('$.empfaenger')}"
+    },
+      "endezumtermin": "${data:jsonPath('$.endezumtermin')}"
+    }
+  }
+}

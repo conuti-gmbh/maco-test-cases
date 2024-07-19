@@ -5,7 +5,7 @@
         "boTyp": "ZAEHLER",
         "versionStruktur": "1",
         "zaehlernummer": "1234567",
-        "sparte": "GAS"
+        "sparte": "${data:jsonPath('$.sparte')}"
       }
     ],
     "ENERGIEMENGE": [
