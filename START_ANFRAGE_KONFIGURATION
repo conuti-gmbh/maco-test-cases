@@ -1,0 +1,47 @@
+{
+"stammdaten": {
+  "ANFRAGE": [
+    {
+      "boTyp": "ANFRAGE",
+      "versionStruktur": "1",
+      "anfragetyp": "AENDERUNG_KONFIGURATION"
+    }
+  ],
+  "MARKTLOKATION": [
+    {
+      "boTyp": "MARKTLOKATION",
+      "versionStruktur": "1",
+      "sparte": "${data:jsonPath('$.sparte')}"
+    }
+  ],
+  "STEUERBARE_RESSOURCE": [
+    {
+      "boTyp": "STEUERBARE_RESSOURCE",
+      "versionStruktur": "1",
+      "ressourcenId": "${data:jsonPath('$.ressourcenId')}",
+      "sparte": "${data:jsonPath('$.sparte')}"
+    }
+  ],
+  "SCHALTZEITDEFINITION": [
+    {
+      "boTyp": "SCHALTZEITDEFINITION",
+      "versionStruktur": "1",
+      "sparte": "${data:jsonPath('$.sparte')}",
+      "schaltzeiten": [
+        {
+          "code": "${data:jsonPath('$.code')}",
+          "konfigurationsprodukt": "${data:jsonPath('$.konfigurationsprodukt')}"
+        }
+      ]
+    }
+  ]
+},
+"transaktionsdaten": {
+  "absender": {
+      "rollencodenummer": "${data:jsonPath('$.absender')}"
+    }
+  },
+  "empfaenger": {
+      "rollencodenummer": "${data:jsonPath('$.empfaenger')}"
+  }
+}
