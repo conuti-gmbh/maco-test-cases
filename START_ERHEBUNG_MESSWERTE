@@ -12,8 +12,8 @@
       {
         "boTyp": "ENERGIEMENGE",
         "versionStruktur": "1",
-        "lokationsId": "DE0032106765712000000000000000041",
-        "lokationsTyp": "MELO",
+        "lokationsId": "${data:jsonPath('$.lokationsId')}",
+        "lokationsTyp": "${data:jsonPath('$.sparte')}",
         "energieverbrauch": [
           {
             "messwertstatus": "ABGELESEN",
@@ -32,13 +32,7 @@
     "absender": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
-      "rollencodenummer": "9870013800007",
-      "rollencodetyp": "DVGW",
-      "ansprechpartner": {
-        "boTyp": "ANSPRECHPARTNER",
-        "versionStruktur": "1",
-        "nachname": "Max Mustermann",
-        "rufnummern": [
+      "rollencodenummer": "${data:jsonPath('$.absender')}"
           {
             "nummerntyp": "RUF_DURCHWAHL",
             "rufnummer": "+1234 5678910"
@@ -49,7 +43,7 @@
     "empfaenger": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
-      "rollencodenummer": "9800044300007",
+      "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
       "rollencodetyp": "DVGW"
     },
   "zusatzdaten": {}
