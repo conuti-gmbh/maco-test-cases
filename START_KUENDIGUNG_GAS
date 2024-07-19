@@ -33,7 +33,7 @@
             "name2": "${data:jsonPath('$.name2')}",
             "gewerbekennzeichnung": false,
             "geschaeftspartnerrolle": [
-              "KUNDE"
+              "${data:jsonPath('$.geschaeftspartnerrolle')}"
             ],
             "externeReferenzen": [
               {
