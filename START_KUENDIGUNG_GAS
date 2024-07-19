@@ -3,27 +3,57 @@
     "MARKTLOKATION": [
       {
         "boTyp": "MARKTLOKATION",
-        "versionStruktur": "1",
+        "versionStruktur": "${data:jsonPath('$.versionStruktur')}",
         "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
-        "sparte": "${data:jsonPath('$.sparte')}"
+        "sparte": "${data:jsonPath('$.sparte')}",
+        "lokationsadresse": {
+          "postleitzahl": "${data:jsonPath('$.postleitzahl')}",
+          "ort": "${data:jsonPath('$.ort')}",
+          "strasse": "${data:jsonPath('$.strasse')}.",
+          "hausnummer": "${data:jsonPath('$.hausnummer')}",
+          "landescode": "${data:jsonPath('$.landescode)}",
+          "zusatzInformation": {
+            "zusatz1": "${data:jsonPath('$.zusatz1')}",
+            "zusatz2": "${data:jsonPath('$.zusatz2)}"
+          }
+        }
       }
     ],
-  "ENERGIELIEFERVERTRAG": [
-    {
-      "boTyp": "VERTRAG",
-      "versionStruktur": "1",
-      "vertragsart": "${data:jsonPath('$.vertragsart')}",
-      "sparte": "${data:jsonPath('$.sparte')}",
-  ],
-  "ZAEHLER": [
-    {
-      "boTyp": "ZAEHLER",
-      "versionStruktur": "1",
-      "zaehlernummer": "${data:jsonPath('$.zaehlernummer')}",
-      "sparte": "${data:jsonPath('$.sparte')}"
-    }
-  ]
-},
+    "ENERGIELIEFERVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "${data:jsonPath('$.versionStruktur')}",
+        "vertragsart": "${data:jsonPath('$.vertragsart')}",
+        "sparte": "${data:jsonPath('$.sparte')}",
+        "vertragspartner2": [
+          {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "name1": "${data:jsonPath('$.name1')}",
+            "name2": "${data:jsonPath('$.name2')}",
+            "gewerbekennzeichnung": false,
+            "geschaeftspartnerrolle": [
+              "KUNDE"
+            ],
+            "externeReferenzen": [
+              {
+                "exRefName": "${data:jsonPath('$.exRefName')}",
+                "exRefWert": "exRefWert"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "ZAEHLER": [
+      {
+        "boTyp": "ZAEHLER",
+        "versionStruktur": "${data:jsonPath('$.versionStruktur')}",
+        "zaehlernummer": "${data:jsonPath('$.zaehlernummer')}",
+        "sparte": "${data:jsonPath('$.sparte')}"
+      }
+    ]
+  },
   "transaktionsdaten": {
     "absender": {
       "rollencodenummer": "${data:jsonPath('$.absender')}"
@@ -34,4 +64,3 @@
       "endezumtermin": "${data:jsonPath('$.endezumtermin')}"
     }
   }
-}
