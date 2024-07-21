@@ -1,0 +1,39 @@
+{
+  "stammdaten":{
+    "MARKTLOKATION": [
+    {
+    "boTyp": "MARKTLOKATION",
+    "versionStruktur": "1",
+		"marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+    "energierichtung": "${data:jsonPath('$.energierichtung')}",
+    "statusErzeugendeMalo": "${data:jsonPath('$.statusErzeugendeMalo')}",
+    "foerderungsLand": "${data:jsonPath('$.foerderungsLand')}"
+    }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+    {
+    "boTyp": "NETZNUTZUNGSVERTRAG",
+    "versionStruktur": "1",
+		"vertragsart": "${data:jsonPath('$.vertragsart')}",
+    "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
+    "lokationsId": "${data:jsonPath('$.lokationsId')}",
+    "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
+    }
+    ],
+    "BILANZIERUNG": [
+    {
+    "boTyp": "BILANZIERUNG",
+    "versionStruktur": "1",
+		"marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+    "bilanzkreis": "${data:jsonPath('$.bilanzkreis')}"
+    }
+    ]
+    },
+  "transaktionsdaten": {
+    "empfaenger": "${data:jsonPath('$.empfaenger')}",
+    "absender": "${data:jsonPath('$.absender')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+  }
+  }
+ 
