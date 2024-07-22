@@ -55,6 +55,7 @@
         "rollencodetyp": "DVGW"
       },
       "kategorie": "${data:jsonPath('$.kategorie')}",
+      "typ": "${data:jsonPath('$.typ')}",
       "anfrageReferenz": "${data:jsonPath('$.anfrageReferenz')}"
     } 
 }
