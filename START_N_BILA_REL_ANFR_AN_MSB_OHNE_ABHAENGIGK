@@ -1,0 +1,92 @@
+{
+    "stammdaten": {
+      "MESSLOKATION": [
+        {
+          "boTyp": "MESSLOKATION",
+          "versionStruktur": "1",
+          "messlokationsId": "${data:jsonPath('$.messlokationsId')}",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "messadresse": {
+            "postleitzahl": "${data:jsonPath('$.messadressePostleitzahl')}",
+            "ort": "${data:jsonPath('$.messadresseOrt')}",
+            "strasse": "${data:jsonPath('$.messadresseStrasse')}",
+            "hausnummer": "${data:jsonPath('$.messadresseHausnummer')}",
+            "landescode": "${data:jsonPath('$.messadresselandescode')}",
+            "zusatzInformation": {
+              "zusatz1": "${data:jsonPath('$.messadresseZusatz1')}",
+              "zusatz2": "${data:jsonPath('$.messadresseZusatz2')}"
+            }
+          },
+          "ablesekartenempfaenger": {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "geschaeftspartnerrolle": [
+              "${data:jsonPath('$.aleGeschaeftspartnerrolle')}"
+            ],
+            "versionStruktur": "1",
+            "gewerbekennzeichnung": ${data:jsonPath('$.aleGewerbekennzeichen')},
+            "name1": "${data:jsonPath('$.aleName1')}",
+            "name2": "${data:jsonPath('$.aleName2')}",
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.alePostleitzahl')}",
+              "ort": "${data:jsonPath('$.aleOrt')}",
+              "strasse": "${data:jsonPath('$.aleStrasse')}",
+              "hausnummer": "${data:jsonPath('$.aleHausnummer')}",
+              "landescode": "${data:jsonPath('$.aleLandescode')}"
+            }
+          }
+        }
+      ],
+      "NETZNUTZUNGSVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "${data:jsonPath('$.vertragsartNn')}",
+          "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "lokationsId": "${data:jsonPath('$.lokationsId')}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
+        }
+      ],
+      "MESSSTELLENBETRIEBSVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "${data:jsonPath('$.vertragsartMsb')}",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "vertragspartner2": [
+            {
+              "boTyp": "GESCHAEFTSPARTNER",
+              "geschaeftspartnerrolle": [
+                "${data:jsonPath('$.vp2Geschaeftspartnerrolle')}"
+              ],
+              "versionStruktur": "1",
+              "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung')},
+              "name1": "${data:jsonPath('$.vp2Name1')}",
+              "name2": "${data:jsonPath('$.vp2Name2')}"
+            }
+          ],
+          "korrespondenzpartner": {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "name1": "${data:jsonPath('$.kpName1')}",
+            "name2": "${data:jsonPath('$.kpName2')}",
+            "gewerbekennzeichnung": ${data:jsonPath('$.vp2Gewerbekennzeichnung')},
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.kpPostleitzahl')}",
+              "ort": "${data:jsonPath('$.kpOrt')}",
+              "strasse": "${data:jsonPath('$.kpStrasse')}",
+              "hausnummer": "${data:jsonPath('$.kpHausnummer')}",
+              "landescode": "${data:jsonPath('$.kpLandescode')}"
+            }
+          },
+          "lokationsId": "${data:jsonPath('$.lokationsId')}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "empfaenger": "${data:jsonPath('$.empfaenger')}",
+      "absender": "${data:jsonPath('$.absender')}",
+      "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+  }
+}
