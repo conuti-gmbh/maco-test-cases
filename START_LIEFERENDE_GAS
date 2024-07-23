@@ -20,16 +20,9 @@
         "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
       }
     ],
-    "BILANZIERUNG": [
-      {
-        "boTyp": "BILANZIERUNG",
-        "versionStruktur": "1",
-        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}"
-      }
-    ]
   },
   "transaktionsdaten": {
-    "datenaustauschreferenz": "117398",
+    "datenaustauschreferenz": "192789",
     "sparte": "${data:jsonPath('$.sparte')}",
     "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}",
     "vorgangsnummer": "${data:jsonPath('$.vorgangsnummer')}",
