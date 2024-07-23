@@ -1,0 +1,95 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+    {
+    "boTyp": "MARKTLOKATION",
+    "versionStruktur": "1",
+		"marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "energierichtung": "${data:jsonPath('$.energierichtung')}"
+    }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+    {
+    "boTyp": "NETZNUTZUNGSVERTRAG",
+    "versionStruktur": "1",
+		"vertragsart": "${data:jsonPath('$.vertragsart')}",
+    "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
+    "vertragskonditionen": {
+      "haushaltskunde": ${data:jsonPath('$.vertragsbeginn')}
+    },
+    "lokationsId": "${data:jsonPath('$.vertragsbeginn')}",
+    "lokationsTyp": "${data:jsonPath('$.vertragsbeginn')}"
+    }
+    ],
+    "ENERGIELIEFERVERTRAG": [
+    {
+    "boTyp": "ENERGIELIEFERVERTRAG",
+    "versionStruktur": "1",
+		"vertragsart": "${data:jsonPath('$.vertragsart')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "vertragspartner2": [
+      {
+        "boTyp": "GESCHAEFTSPARTNER",
+        "versionStruktur": "1",
+        "anrede": "${data:jsonPath('$.vp2Anrede')}",
+        "name1": "${data:jsonPath('$.vp2Name1')}",
+        "name2": "${data:jsonPath('$.vp2Name2')}",
+        "name3": "${data:jsonPath('$.vp2Name3')}",
+        "name4": "${data:jsonPath('$.vp2Name4')}",
+        "gewerbekennzeichnung": ${data:jsonPath('$.vp2Gewerbekennzeichnung')},
+        "geschaeftspartnerrolle": [
+          "${data:jsonPath('$.geschaeftspartnerrolle')}"
+        ],
+        "externeReferenzen": [
+          {
+            "exRefName": "${data:jsonPath('$.exRefName')}",
+            "exRefWert": "${data:jsonPath('$.exRefWert')}"
+          }
+        ]
+      }
+    ],
+    "korrespondenzpartner": {
+      "boTyp": "GESCHAEFTSPARTNER",
+      "versionStruktur": "1",
+      "anrede": "${data:jsonPath('$.kpAnrede')}",
+      "name1": "${data:jsonPath('$.kpName1')}",
+      "name2": "${data:jsonPath('$.kpName2')}",
+      "name3": "${data:jsonPath('$.kpName3')}",
+      "name4": "${data:jsonPath('$.kpName4')}",
+      "gewerbekennzeichnung": ${data:jsonPath('$.kpGewerbekennzeichnung')},
+      "partneradresse": {
+        "postleitzahl": "${data:jsonPath('$.postleitzahl')}",
+        "ort": "${data:jsonPath('$.ort')}",
+        "strasse": "${data:jsonPath('$.strasse')}",
+        "hausnummer": "${data:jsonPath('$.hausnummer')}",
+        "landescode": "${data:jsonPath('$.landescode')}"
+      }
+    },
+    "lokationsId": "${data:jsonPath('$.lokationsId')}",
+    "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}",
+    "enFG": [
+      {
+        "grundlageVerringerungUmlagen": "${data:jsonPath('$.grundlageVerringerungUmlagen')}",
+        "grund": [
+          "${data:jsonPath('$.grund')}"
+        ]
+      }
+    ]
+    }
+    ],
+    "BILANZIERUNG": [
+      {
+        "boTyp": "BILANZIERUNG",
+        "versionStruktur": "1",
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}"
+      }
+    ]
+    },
+  "transaktionsdaten": {
+    "empfaenger": "${data:jsonPath('$.empfaenger')}",
+    "absender": "${data:jsonPath('$.absender')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+  }
+  }

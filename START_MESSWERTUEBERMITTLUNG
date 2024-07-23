@@ -1,0 +1,61 @@
+{
+   "stammdaten": {
+    "ZAEHLER": [
+        {
+          "boTyp": "ZAEHLER",
+          "versionStruktur": "1",
+          "zaehlernummer": "${data:jsonPath('$.zaehlernummer')}",
+          "sparte": "${data:jsonPath('$.sparte')}"
+        }
+      ],
+      "ENERGIEMENGE": [
+        {
+          "boTyp": "ENERGIEMENGE",
+          "versionStruktur": "1",
+          "lokationsId": "${data:jsonPath('$.lokationsId')}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}",
+          "energieverbrauch": [
+            {
+              "startdatum": "${data:jsonPath('$.startdatum1')}",
+              "enddatum": "${data:jsonPath('$.enddatum1')}",
+              "messwertstatus": "${data:jsonPath('$.messwertstatus1')}",
+              "obiskennzahl": "${data:jsonPath('$.obiskennzahl1')}",
+              "nutzungszeitpunkt": "${data:jsonPath('$.nutzungszeitpunkt')}",
+              "wert": ${data:jsonPath('$.wert1')},
+              "position": ${data:jsonPath('$.position1')},
+              "ablesedatum": "${data:jsonPath('$.ablesedatum')}"
+            },
+            {
+              "startdatum": "${data:jsonPath('$.startdatum')}",
+              "enddatum": "${data:jsonPath('$.enddatum2')}",
+              "messwertstatus": "${data:jsonPath('$.messwertstatus2')}",
+              "obiskennzahl": "${data:jsonPath('$.obiskennzahl2')}",
+              "wert": ${data:jsonPath('$.wert2')},
+              "position": ${data:jsonPath('$.position2')}
+            }
+          ],
+          "fertigstellungsdatum": "${data:jsonPath('$.fertigstellungsdatum')}",
+          "startdatum": "${data:jsonPath('$.startdatum')}",
+          "enddatum": "${data:jsonPath('$.enddatum')}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte')}",
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.absender')}",
+        "rollencodetyp": "DVGW"
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+        "rollencodetyp": "DVGW"
+      },
+      "kategorie": "${data:jsonPath('$.kategorie')}",
+      "typ": "${data:jsonPath('$.typ')}",
+      "anfrageReferenz": "${data:jsonPath('$.anfrageReferenz')}"
+    } 
+}
