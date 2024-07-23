@@ -1,0 +1,56 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+        "sparte": "${data:jsonPath('$.sparte')}",
+        "energierichtung": "${data:jsonPath('$.energierichtung')}"
+      }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "${data:jsonPath('$.vertragsart')}",
+        "sparte": "${data:jsonPath('$.sparte')}",
+        "vertragsende": "${data:jsonPath('$.vertragsende')}",
+        "lokationsId": "${data:jsonPath('$.lokationsId')}",
+        "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
+      }
+    ],
+    "BILANZIERUNG": [
+      {
+        "boTyp": "BILANZIERUNG",
+        "versionStruktur": "1",
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}"
+      }
+    ]
+  },
+  "transaktionsdaten": {
+    "datenaustauschreferenz": "117398",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}",
+    "vorgangsnummer": "${data:jsonPath('$.vorgangsnummer')}",
+    "pruefidentifikator": "${data:jsonPath('$.pruefidentifikator')}",
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "${data:jsonPath('$.absender')}"
+    },
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "${data:jsonPath('$.empfaenger')}"
+    },
+    "dokumentennummer": "12345",
+    "kategorie": "E02",
+    "nachrichtendatum": "${data:jsonPath('$.nachrichtendatum')}",
+    "nachrichtenreferenznummer": "{data:jsonPath('$.nachrichtenreferenznummer')}",
+    "freitext": {
+      "freitext1": "ABC"
+    }
+  },
+  "zusatzdaten": {}
+}
