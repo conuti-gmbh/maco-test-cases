@@ -1,0 +1,59 @@
+{
+    "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "energierichtung": "${data:jsonPath('$.energierichtung')}",
+          "zaehlwerke": [
+            {
+                "obisKennzahl": "${data:jsonPath('$.obisKennzahl')}",
+                "verwendungszwecke": [
+                    {
+                        "marktrolle": "${data:jsonPath('$.marktrolle1')}",
+                        "zweck": [
+                            "${data:jsonPath('$.zweck1')}",
+                            "${data:jsonPath('$.zweck2')}"
+                        ]
+                    },
+                    {
+                        "marktrolle": "${data:jsonPath('$.marktrolle2')}",
+                        "zweck": [
+                            "${data:jsonPath('$.zweck3')}",
+                            "${data:jsonPath('$.zweck4')}"
+                        ]
+                    }
+                ],
+                "wertegranularitaet": "${data:jsonPath('$.wertegranularitaet')}"
+            }
+          ]
+        }
+      ],
+      "NETZNUTZUNGSVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "${data:jsonPath('$.vertragsart')}",
+          "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "lokationsId": "${data:jsonPath('$.lokationsId')}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
+        }
+      ],
+      "BILANZIERUNG": [
+        {
+          "boTyp": "BILANZIERUNG",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+          "sparte": "${data:jsonPath('$.sparte')}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "empfaenger": "${data:jsonPath('$.empfaenger')}",
+      "absender": "${data:jsonPath('$.absender')}",
+      "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+  }
+}
