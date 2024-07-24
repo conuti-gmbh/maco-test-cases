@@ -19,7 +19,7 @@
         "lokationsId": "${data:jsonPath('$.lokationsId')}",
         "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
       }
-    ],
+    ]
   },
   "transaktionsdaten": {
     "datenaustauschreferenz": "192789",
