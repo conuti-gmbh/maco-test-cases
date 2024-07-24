@@ -1,0 +1,42 @@
+{
+    "stammdaten": {
+      "ENERGIEMENGE": [
+        {
+          "boTyp": "ENERGIEMENGE",
+          "versionStruktur": "1",
+          "lokationsId": "${data:jsonPath('$.lokationsId')}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}",
+          "energieverbrauch": [
+            {
+              "startdatum": "${data:jsonPath('$.startdatum')}",
+              "enddatum": "${data:jsonPath('$.enddatum')}",
+              "messwertstatus": "${data:jsonPath('$.messwertstatus')}",
+              "obiskennzahl": "${data:jsonPath('$.obiskennzahl')}",
+              "wert": ${data:jsonPath('$.wert')},
+              "position": ${data:jsonPath('$.position')},
+              "leistungsperiode": "${data:jsonPath('$.leistungsperiode')}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte')}",
+      "kategorie": null,
+      "empfaenger": {
+        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+        "rollencodetyp": "BDEW",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      },
+      "absender": {
+        "rollencodenummer": "${data:jsonPath('$.absender')}",
+        "rollencodetyp": "BDEW",
+        "marktrolle": "LF",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      }
+    }
+}
