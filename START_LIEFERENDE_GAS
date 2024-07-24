@@ -35,7 +35,7 @@
     "empfaenger": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
-      "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+      "rollencodenummer": "${data:jsonPath('$.empfaenger')}"
     },
     "dokumentennummer": "${data:jsonPath('$.dokumentennummer')}",
     "kategorie": "${data:jsonPath('$.kategorie')}",
