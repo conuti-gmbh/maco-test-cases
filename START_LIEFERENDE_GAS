@@ -5,8 +5,7 @@
         "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
         "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
-        "sparte": "${data:jsonPath('$.sparte')}",
-        "energierichtung": "${data:jsonPath('$.energierichtung')}"
+        "sparte": "${data:jsonPath('$.sparte')}"
       }
     ],
     "NETZNUTZUNGSVERTRAG": [
@@ -15,34 +14,35 @@
         "versionStruktur": "1",
         "vertragsart": "${data:jsonPath('$.vertragsart')}",
         "sparte": "${data:jsonPath('$.sparte')}",
-        "vertragsende": "${data:jsonPath('$.vertragsende')}",
+        "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
         "lokationsId": "${data:jsonPath('$.lokationsId')}",
         "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
       }
     ]
   },
   "transaktionsdaten": {
-    "datenaustauschreferenz": "192789",
+    "datenaustauschreferenz": "${data:jsonPath('$.datenaustauschreferenz')}",
     "sparte": "${data:jsonPath('$.sparte')}",
-    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}",
+    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund)}",
     "vorgangsnummer": "${data:jsonPath('$.vorgangsnummer')}",
     "pruefidentifikator": "${data:jsonPath('$.pruefidentifikator')}",
     "absender": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
-      "rollencodenummer": "${data:jsonPath('$.absender')}"
+      "rollencodenummer": "${data:jsonPath('$.absender')}",
+      "rollencodetyp": "DVGW"
     },
     "empfaenger": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
-      "rollencodenummer": "${data:jsonPath('$.empfaenger')}"
+      "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
     },
-    "dokumentennummer": "12345",
-    "kategorie": "E02",
+    "dokumentennummer": "${data:jsonPath('$.dokumentennummer')}",
+    "kategorie": "${data:jsonPath('$.kategorie')}",
     "nachrichtendatum": "${data:jsonPath('$.nachrichtendatum')}",
-    "nachrichtenreferenznummer": "{data:jsonPath('$.nachrichtenreferenznummer')}",
+    "nachrichtenreferenznummer": "${data:jsonPath('$.nachrichtenreferenznummer')}",
     "freitext": {
-      "freitext1": "ABC"
+      "freitext1": "${data:jsonPath('$.freitext1')}"
     }
   },
   "zusatzdaten": {}
