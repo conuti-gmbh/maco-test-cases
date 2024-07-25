@@ -44,12 +44,12 @@
       "versionStruktur": "1",
       "rollencodenummer": "${data:jsonPath('$.empfaenger')}"
     },
-    "dokumentennummer": "12345",
+    "dokumentennummer": "${data:jsonPath('$.dokumentennummer')}",
     "kategorie": "E02",
     "nachrichtendatum": "${data:jsonPath('$.nachrichtendatum')}",
     "nachrichtenreferenznummer": "${data:jsonPath('$.nachrichtenreferenznummer')}",
     "freitext": {
-      "freitext1": "ABC"
+      "freitext1": "${data:jsonPath('$.freitext1')}"
     }
   },
   "zusatzdaten": {}
