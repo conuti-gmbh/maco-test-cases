@@ -1,4 +1,13 @@
 {
+  "stammdaten": {
+  "ENERGIEMENGE": [
+        {
+          "boTyp": "ENERGIEMENGE",
+          "versionStruktur": "1",
+          "lokationsId": "${data:jsonPath('$.lokationsId')}"
+            }
+          ]
+    },
       "transaktionsdaten": {
       "sparte": "${data:jsonPath('$.sparte')}",
       "absender": {
