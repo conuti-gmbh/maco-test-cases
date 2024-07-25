@@ -11,10 +11,10 @@
           "ort": "${data:jsonPath('$.ort')}",
           "strasse": "${data:jsonPath('$.strasse')}.",
           "hausnummer": "${data:jsonPath('$.hausnummer')}",
-          "landescode": "${data:jsonPath('$.landescode)}",
+          "landescode": "${data:jsonPath('$.landescode')}",
           "zusatzInformation": {
             "zusatz1": "${data:jsonPath('$.zusatz1')}",
-            "zusatz2": "${data:jsonPath('$.zusatz2)}"
+            "zusatz2": "${data:jsonPath('$.zusatz2')}"
           }
         }
       }
