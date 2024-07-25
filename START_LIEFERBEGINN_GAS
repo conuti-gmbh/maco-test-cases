@@ -59,8 +59,8 @@
         "vertragsende": "${data:jsonPath('$.vertragsende')}",
         "vertragskonditionen": {
           "haushaltskunde": true,
-          "netznutzungsvertrag": "LIEFERANTEN_NB",
-          "netznutzungszahler": "LIEFERANT"
+          "netznutzungsvertrag": "${data:jsonPath('$.netznutzungsvertrag')}",
+          "netznutzungszahler": "${data:jsonPath('$.netznutzungszahler')}"
         },
         "gemeinderabatt": 0
       }
