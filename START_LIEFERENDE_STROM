@@ -47,7 +47,7 @@
     "dokumentennummer": "12345",
     "kategorie": "E02",
     "nachrichtendatum": "${data:jsonPath('$.nachrichtendatum')}",
-    "nachrichtenreferenznummer": "{data:jsonPath('$.nachrichtenreferenznummer')}",
+    "nachrichtenreferenznummer": "${data:jsonPath('$.nachrichtenreferenznummer')}",
     "freitext": {
       "freitext1": "ABC"
     }

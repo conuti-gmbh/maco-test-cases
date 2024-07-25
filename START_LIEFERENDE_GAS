@@ -23,7 +23,7 @@
   "transaktionsdaten": {
     "datenaustauschreferenz": "${data:jsonPath('$.datenaustauschreferenz')}",
     "sparte": "${data:jsonPath('$.sparte')}",
-    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund)}",
+    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}",
     "vorgangsnummer": "${data:jsonPath('$.vorgangsnummer')}",
     "pruefidentifikator": "${data:jsonPath('$.pruefidentifikator')}",
     "absender": {
