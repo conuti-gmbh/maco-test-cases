@@ -1,0 +1,35 @@
+{
+    "stammdaten": {
+      "HANDELSUNSTIMMIGKEIT": [
+        {
+          "boTyp": "HANDELSUNSTIMMIGKEIT",
+          "versionStruktur": "1",
+          "nummer": "${data:jsonPath('$.nummer')}",
+          "typ": "${data:jsonPath('$.typ')}",
+          "begruendung": {
+            "grund": "${data:jsonPath('$.grund')}",
+            "hinweis": "${data:jsonPath('$.hinweis')}."
+          }
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte')}",
+      "kategorie": null,
+      "empfaenger": {
+        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+        "rollencodetyp": "BDEW",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      },
+      "absender": {
+        "rollencodenummer": "${data:jsonPath('$.absender')}",
+        "rollencodetyp": "BDEW",
+        "marktrolle": "LF",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      }
+    }
+}
