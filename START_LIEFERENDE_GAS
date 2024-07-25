@@ -30,7 +30,7 @@
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
       "rollencodenummer": "${data:jsonPath('$.absender')}",
-      "rollencodetyp": "DVGW"
+      "rollencodetyp": "${data:jsonPath('$.rollencodetyp')}"
     },
     "empfaenger": {
       "boTyp": "MARKTTEILNEHMER",
