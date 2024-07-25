@@ -1,0 +1,104 @@
+{
+    "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+          "sparte": "${data:jsonPath('$.sparte')}"
+        }
+      ],
+      "TRANCHE": [
+        {
+          "boTyp": "TRANCHE",
+          "versionStruktur": "1",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "verguetungEmpfaenger": "${data:jsonPath('$.verguetungEmpfaenger')}",
+          "bildungTranchengroesse": "${data:jsonPath('$.bildungTranchengroesse')}",
+          "aufteilungsmenge": {
+            "wert": ${data:jsonPath('$.wert')},
+            "einheit": "${data:jsonPath('$.einheit')}"
+          }
+        }
+      ],
+      "BILANZIERUNG": [
+        {
+          "boTyp": "BILANZIERUNG",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+          "bilanzkreis": "${data:jsonPath('$.bilanzkreis')}"
+        }
+      ],
+      "NETZNUTZUNGSVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "NETZNUTZUNGSVERTRAG",
+          "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
+          "vertragsende": "${data:jsonPath('$.vertragsende')}",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "lokationsId": "${data:jsonPath('$.lokationsId')}",
+          "lokationsTyp": "MALO",
+          "vertragskonditionen": {
+            "haushaltskunde": ${data:jsonPath('$.haushaltskunde')}
+          }
+        }
+      ],
+      "ENERGIELIEFERVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "ENERGIELIEFERVERTRAG",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "vertragspartner2": [
+            {
+              "boTyp": "GESCHAEFTSPARTNER",
+              "versionStruktur": "1",
+              "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung')},
+              "anrede": "${data:jsonPath('$.anrede')}",
+              "name1": "${data:jsonPath('$.name1')}",
+              "name2": "${data:jsonPath('$.name2')}",
+              "geschaeftspartnerrolle": [
+                "KUNDE"
+              ]
+            }
+          ],
+          "korrespondenzpartner": {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "name1": "${data:jsonPath('$.kename1')}",
+            "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung')},
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.postleitzahl')}",
+              "ort": "${data:jsonPath('$.ort')}",
+              "strasse": "${data:jsonPath('$.strasse')}",
+              "hausnummer": "${data:jsonPath('$.hausnummer')}",
+              "landescode": "${data:jsonPath('$.landescode')}",
+              "ortsteil": "${data:jsonPath('$.ortsteil')}"
+            }
+          }
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte')}",
+      "empfaenger": {
+        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+        "rollencodetyp": "BDEW",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      },
+      "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}",
+      "transaktionsgrundergaenzung": "${data:jsonPath('$.transaktionsgrundergaenzung')}",
+      "transaktionsgrundergaenzungBefristeteAnmeldung": "${data:jsonPath('$.transaktionsgrundergaenzungBefristeteAnmeldung')}",
+      "absender": {
+        "rollencodenummer": "${data:jsonPath('$.absender')}",
+        "rollencodetyp": "BDEW",
+        "marktrolle": "LF",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      }
+    }
+}
