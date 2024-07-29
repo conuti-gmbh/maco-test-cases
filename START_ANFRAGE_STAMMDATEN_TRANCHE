@@ -1,0 +1,56 @@
+{
+      "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "lokationsadresse": {
+            "postleitzahl": "${data:jsonPath('$.postleitzahl')}",
+            "ort": "${data:jsonPath('$.ort')}",
+            "strasse": "${data:jsonPath('$.strasse')}",
+            "hausnummer": "${data:jsonPath('$.hausnummer')}",
+            "landescode": "${data:jsonPath('$.landescode')}",
+            "zusatzInformation": {
+              "zusatz1": "${data:jsonPath('$.zusatz1')}",
+              "zusatz2": "${data:jsonPath('$.zusatz2')}",
+              "zusatz3": "${data:jsonPath('$.zusatz3')}",
+              "zusatz4": "${data:jsonPath('$.zusatz4')}",
+              "zusatz5": "${data:jsonPath('$.zusatz5')}"
+            }
+          }
+        }
+      ],
+      "ANFRAGE": [
+        {
+          "boTyp": "ANFRAGE",
+          "versionStruktur": "1",
+          "lokationsId": "${data:jsonPath('$.lokationsId')}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}",
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie')}"
+        }
+      ],
+      "TRANCHE": [
+        {
+          "boTyp": "TRANCHE",
+          "versionStruktur": "1",
+          "tranchenId": "${data:jsonPath('$.tranchenId')}",
+          "sparte": "${data:jsonPath('$.sparte')}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.absender')}",
+        "rollencodetyp": "BDEW"
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+        "rollencodetyp": "BDEW"
+      }
+    }
+    }
