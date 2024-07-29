@@ -6,7 +6,7 @@
           "versionStruktur": "1",
           "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
           "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
-          "energierichtung": "AUSSP"
+          "energierichtung": "${data:jsonPath('$.energierichtung'):isEmpty():ifElse('null',${data:jsonPath('$.energierichtung')})}"
         }
       ],
       "TRANCHE": [
