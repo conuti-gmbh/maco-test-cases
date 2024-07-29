@@ -131,10 +131,10 @@
             "herausgeber": "${data:jsonPath('$.herausgeber')}"
           }
         ],
-        "bilanzkreis": "11Y0-0000-0076-N",
+        "bilanzkreis": "${data:jsonPath('$.bilanzkreis')}",
         "jahresverbrauchsprognose": {
-          "wert": 5000,
-          "einheit": "KWH"
+          "wert": "${data:jsonPath('$.wert')}",
+          "einheit": "${data:jsonPath('$.einheit')}"
         },
         "kundenwert": {
           "wert": 10
@@ -143,30 +143,30 @@
     ]
   },
   "transaktionsdaten": {
-    "datenaustauschreferenz": "233808",
-    "sparte": "GAS",
-    "transaktionsgrund": "E03",
-    "transaktionsgrundergaenzung": "E01",
-    "vorgangsnummer": "1452176992",
-    "pruefidentifikator": "44001",
+    "datenaustauschreferenz": "${data:jsonPath('$.datenaustauschreferenz')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}",
+    "transaktionsgrundergaenzung": "${data:jsonPath('$.transaktionsgrundergaenzung')}",
+    "vorgangsnummer": "${data:jsonPath('$.vorgangsnummer')}",
+    "pruefidentifikator": "${data:jsonPath('$.pruefidentifikator')}",
     "absender": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
-      "rollencodenummer": "9800044300007",
+      "rollencodenummer": "${data:jsonPath('$.absender')}",
       "rollencodetyp": "DVGW"
     },
     "empfaenger": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
-      "rollencodenummer": "9870013800007",
+      "rollencodenummer": "${data:jsonPath('$.emppfaenger')}",
       "rollencodetyp": "DVGW"
     },
-    "dokumentennummer": "417738BGM",
-    "kategorie": "E01",
-    "nachrichtendatum": "2024-04-11T10:51:00Z",
-    "nachrichtenreferenznummer": "417738",
+    "dokumentennummer": "${data:jsonPath('$.dokumentennummer')}",
+    "kategorie": "${data:jsonPath('$.kategorie')}",
+    "nachrichtendatum": "${data:jsonPath('$.nachrichtendatum')}",
+    "nachrichtenreferenznummer": "${data:jsonPath('$.nachrichtenreferenznummer')}",
     "freitext": {
-      "freitext1": "Blabla"
+      "freitext1": "${data:jsonPath('$.freitext1')}"
     },
     "bilanzkreis": [
       {
@@ -180,5 +180,4 @@
     ]
   },
   "zusatzdaten": {}
-}
 }
