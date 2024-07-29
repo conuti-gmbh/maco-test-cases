@@ -40,6 +40,7 @@
       ]
     },
     "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte')}"
       "absender": {
         "boTyp": "MARKTTEILNEHMER",
         "versionStruktur": "1",
