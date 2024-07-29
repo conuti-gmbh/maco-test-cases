@@ -1,0 +1,50 @@
+{
+      "stammdaten": {
+      "MESSLOKATION": [
+        {
+          "boTyp": "MESSLOKATION",
+          "versionStruktur": "1",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "messlokationsId": "${data:jsonPath('$.messlokationsId')}"
+        }
+      ],
+      "ANFRAGE": [
+        {
+          "boTyp": "ANFRAGE",
+          "versionStruktur": "1",
+          "lokationsId": "${data:jsonPath('$.lokationsId')}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}",
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie')}",
+          "anfragetyp": "${data:jsonPath('$.anfragetyp')}"
+        }
+      ],
+      "AUFTRAG": [
+        {
+          "boTyp": "AUFTRAG",
+          "versionStruktur": "1",
+          "positionsdaten": [
+            {
+              "positionsnummer": 1,
+              "startdatum": "${data:jsonPath('$.startdatum')}",
+              "enddatum": "${data:jsonPath('$.enddatum')}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte')}",
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.absender')}",
+        "rollencodetyp": "BDEW"
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+        "rollencodetyp": "BDEW"
+      }
+    }
+    }
