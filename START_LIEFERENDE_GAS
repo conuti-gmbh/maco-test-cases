@@ -18,6 +18,13 @@
         "lokationsId": "${data:jsonPath('$.lokationsId')}",
         "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
       }
+    ],
+    "BILANZIERUNG": [
+      {
+        "boTyp": "BILANZIERUNG",
+        "versionStruktur": "1",
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}"
+      }
     ]
   },
   "transaktionsdaten": {
