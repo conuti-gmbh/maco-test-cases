@@ -1,0 +1,99 @@
+{
+      "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "lokationsadresse": {
+            "postleitzahl": "${data:jsonPath('$.postleitzahl')}",
+            "ort": "${data:jsonPath('$.ort')}",
+            "strasse": "${data:jsonPath('$.strasse')}",
+            "hausnummer": "${data:jsonPath('$.hausnummer')}",
+            "landescode": "${data:jsonPath('$.landescode')}",
+            "zusatzInformation": {
+              "zusatz1": "${data:jsonPath('$.zusatz1')}"
+            }
+          }
+        }
+      ],
+      "ENERGIELIEFERVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "${data:jsonPath('$.vertragsart')}",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "vertragspartner2": [
+            {
+              "boTyp": "GESCHAEFTSPARTNER",
+              "versionStruktur": "1",
+              "anrede": "${data:jsonPath('$.anrede')}",
+              "name1": "${data:jsonPath('$.name1')}",
+              "name2": "${data:jsonPath('$.name2')}",
+              "gewerbekennzeichnung": "${data:jsonPath('$.gewerbekennzeichnung')}",
+              "geschaeftspartnerrolle": [
+                "${data:jsonPath('$.geschaeftspartnerrolle')}"
+              ],
+              "externeReferenzen": [
+                {
+                  "exRefName": "${data:jsonPath('$.exRefName')}",
+                  "exRefWert": "${data:jsonPath('$.exRefWert')}"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ANFRAGE": [
+        {
+          "boTyp": "ANFRAGE",
+          "versionStruktur": "1",
+          "lokationsId": "${data:jsonPath('$.lokationsId')}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}",
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie')}",
+          "energierichtung": "${data:jsonPath('$.energierichtung')}"
+        }
+      ],
+      "AUFTRAG": [
+        {
+          "boTyp": "AUFTRAG",
+          "versionStruktur": "1",
+          "positionsdaten": [
+            {
+              "positionsnummer": 1,
+              "allgemeineInformationen":{
+                "info1": "${data:jsonPath('$.info1')}"
+              }
+            }
+          ],
+          "energierichtung": "${data:jsonPath('$.energierichtung')}"
+        }
+      ],
+      "ZAEHLER": [
+        {
+          "boTyp": "ZAEHLER",
+          "versionStruktur": "1",
+          "zaehlernummer": "${data:jsonPath('$.zaehlernummer')}",
+          "sparte": "${data:jsonPath('$.sparte')}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.absender')}",
+        "rollencodetyp": "BDEW"
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
+        "rollencodetyp": "BDEW"
+      },
+      "freitext": {
+        "freitext1": "${data:jsonPath('$.freitext')}"
+      }
+    }
+    }
