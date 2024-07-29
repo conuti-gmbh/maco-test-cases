@@ -82,12 +82,12 @@
             ],
             "externeReferenzen": [
               {
-                "exRefName": "Kundennummer beim Altlieferanten",
-                "exRefWert": "ABC11111"
+                "exRefName": "${data:jsonPath('$.exRefName')}",
+                "exRefWert": "${data:jsonPath('$.exRefWert')}"
               },
               {
-                "exRefName": "Kundennummer beim Lieferanten",
-                "exRefWert": "ABC12345"
+                "exRefName": "${data:jsonPath('$.exRefName')}",
+                "exRefWert": "${data:jsonPath('$.exRefWert')}"
               }
             ]
           }
@@ -101,7 +101,7 @@
           "name1": "${data:jsonPath('$.name1')}",
           "gewerbekennzeichnung": false,
           "partneradresse": {
-            "postleitzahl": "12345",
+            "postleitzahl": "${data:jsonPath('$.postleitzahl')}",
             "ort": "${data:jsonPath('$.ort')}",
             "strasse": "${data:jsonPath('$.strasse')}",
             "hausnummer": "${data:jsonPath('$.hausnummer')}",
