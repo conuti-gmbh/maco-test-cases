@@ -69,16 +69,16 @@
       {
         "boTyp": "VERTRAG",
         "versionStruktur": "1",
-        "vertragsart": "ENERGIELIEFERVERTRAG",
-        "sparte": "GAS",
+        "vertragsart": "${data:jsonPath('$.vertragsart')}",
+        "sparte": "${data:jsonPath('$.sparte')}",
         "vertragspartner2": [
           {
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
-            "name1": "Mustermann",
+            "name1": "${data:jsonPath('$.name1')}",
             "gewerbekennzeichnung": false,
             "geschaeftspartnerrolle": [
-              "KUNDE"
+              "${data:jsonPath('$.geschaeftspartnerrolle')}"
             ],
             "externeReferenzen": [
               {
@@ -98,14 +98,14 @@
         "korrespondenzpartner": {
           "boTyp": "GESCHAEFTSPARTNER",
           "versionStruktur": "1",
-          "name1": "Mustermann",
+          "name1": "${data:jsonPath('$.name1')}",
           "gewerbekennzeichnung": false,
           "partneradresse": {
             "postleitzahl": "12345",
-            "ort": "Ort",
-            "strasse": "Str",
-            "hausnummer": "1",
-            "landescode": "DE"
+            "ort": "${data:jsonPath('$.ort')}",
+            "strasse": "${data:jsonPath('$.strasse')}",
+            "hausnummer": "${data:jsonPath('$.hausnummer')}",
+            "landescode": "${data:jsonPath('$.landescode')}"
           }
         }
       }
@@ -114,8 +114,8 @@
       {
         "boTyp": "ZAEHLER",
         "versionStruktur": "1",
-        "zaehlernummer": "G12345",
-        "sparte": "GAS"
+        "zaehlernummer": "${data:jsonPath('$.zaehlernummer')}",
+        "sparte": "${data:jsonPath('$.sparte')}"
       }
     ],
     "BILANZIERUNG": [
@@ -124,11 +124,11 @@
         "versionStruktur": "1",
         "lastprofile": [
           {
-            "bezeichnung": "H0",
-            "verfahren": "ANALYTISCH",
+            "bezeichnung": "${data:jsonPath('$.bezeichnung')}",
+            "verfahren": "${data:jsonPath('$.verfahren')}",
             "einspeisung": false,
-            "profilart": "ART_LASTPROFIL",
-            "herausgeber": "TUM"
+            "profilart": "${data:jsonPath('$.profilart)}",
+            "herausgeber": "${data:jsonPath('$.herausgeber')}"
           }
         ],
         "bilanzkreis": "11Y0-0000-0076-N",
