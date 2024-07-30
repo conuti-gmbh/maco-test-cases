@@ -1,0 +1,36 @@
+{
+  "stammdaten": {
+      "LEISTUNGSKURVENDEFINITION": [
+        {
+          "boTyp": "LEISTUNGSKURVENDEFINITION",
+          "versionStruktur": "1",
+          "beginndatum": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+          "version": "${data:jsonPath('$.version'):isEmpty():ifElse('null',${data:jsonPath('$.version')})}",
+          "notwendigkeit": "${data:jsonPath('$.notwendigkeit'):isEmpty():ifElse('null',${data:jsonPath('$.notwendigkeit')})}",
+          "leistungskurven": [
+            {
+              "code": "${data:jsonPath('$.code'):isEmpty():ifElse('null',${data:jsonPath('$.code')})}",
+              "haeufigkeit": "${data:jsonPath('$.haeufigkeit'):isEmpty():ifElse('null',${data:jsonPath('$.haeufigkeit')})}",
+              "uebermittelbarkeit": "${data:jsonPath('$.uebermittelbarkeit'):isEmpty():ifElse('null',${data:jsonPath('$.uebermittelbarkeit')})}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte":"${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+        "rollencodetyp": "BDEW"
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+        "rollencodetyp": "BDEW"
+      },
+      "anfrageReferenz": "${data:jsonPath('$.anfrageReferenz'):isEmpty():ifElse('null',${data:jsonPath('$.anfrageReferenz')})}"
+    }
+}

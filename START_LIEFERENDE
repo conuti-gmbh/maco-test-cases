@@ -4,52 +4,52 @@
       {
         "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
-        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
-        "sparte": "${data:jsonPath('$.sparte')}"
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
       }
     ],
     "NETZNUTZUNGSVERTRAG": [
       {
         "boTyp": "VERTRAG",
         "versionStruktur": "1",
-        "vertragsart": "${data:jsonPath('$.vertragsart')}",
-        "sparte": "${data:jsonPath('$.sparte')}",
-        "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
-        "lokationsId": "${data:jsonPath('$.lokationsId')}",
-        "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
+        "vertragsart": "${data:jsonPath('$.vertragsart'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsart')})}",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsbeginn')})}",
+        "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+        "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
       }
     ],
     "BILANZIERUNG": [
       {
         "boTyp": "BILANZIERUNG",
         "versionStruktur": "1",
-        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}"
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
       }
     ]
   },
   "transaktionsdaten": {
-    "datenaustauschreferenz": "${data:jsonPath('$.datenaustauschreferenz')}",
-    "sparte": "${data:jsonPath('$.sparte')}",
-    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}",
-    "vorgangsnummer": "${data:jsonPath('$.vorgangsnummer')}",
-    "pruefidentifikator": "${data:jsonPath('$.pruefidentifikator')}",
+    "datenaustauschreferenz": "${data:jsonPath('$.datenaustauschreferenz'):isEmpty():ifElse('null',${data:jsonPath('$.datenaustauschreferenz')})}",
+    "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrund')})}",
+    "vorgangsnummer": "${data:jsonPath('$.vorgangsnummer'):isEmpty():ifElse('null',${data:jsonPath('$.vorgangsnummer')})}",
+    "pruefidentifikator": "${data:jsonPath('$.pruefidentifikator'):isEmpty():ifElse('null',${data:jsonPath('$.pruefidentifikator')})}",
     "absender": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
-      "rollencodenummer": "${data:jsonPath('$.absender')}",
-      "rollencodetyp": "${data:jsonPath('$.rollencodetyp')}"
+      "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "rollencodetyp": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}"
     },
     "empfaenger": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
-      "rollencodenummer": "${data:jsonPath('$.empfaenger')}"
+      "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
     },
-    "dokumentennummer": "${data:jsonPath('$.dokumentennummer')}",
-    "kategorie": "${data:jsonPath('$.kategorie')}",
-    "nachrichtendatum": "${data:jsonPath('$.nachrichtendatum')}",
-    "nachrichtenreferenznummer": "${data:jsonPath('$.nachrichtenreferenznummer')}",
+    "dokumentennummer": "${data:jsonPath('$.dokumentennummer'):isEmpty():ifElse('null',${data:jsonPath('$.dokumentennummer')})}",
+    "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}",
+    "nachrichtendatum": "${data:jsonPath('$.nachrichtendatum'):isEmpty():ifElse('null',${data:jsonPath('$.nachrichtendatum')})}",
+    "nachrichtenreferenznummer": "${data:jsonPath('$.nachrichtenreferenznummer'):isEmpty():ifElse('null',${data:jsonPath('$.nachrichtenreferenznummer')})}",
     "freitext": {
-      "freitext1": "${data:jsonPath('$.freitext1')}"
+      "freitext1": "${data:jsonPath('$.freitext1'):isEmpty():ifElse('null',${data:jsonPath('$.freitext1')})}"
     }
   },
   "zusatzdaten": {}
