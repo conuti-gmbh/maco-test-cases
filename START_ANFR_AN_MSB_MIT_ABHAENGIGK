@@ -4,56 +4,101 @@
         {
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
-          "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
-          "sparte": "${data:jsonPath('$.sparte')}",
-          "energierichtung": "${data:jsonPath('$.energierichtung')}",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "energierichtung": "${data:jsonPath('$.energierichtung'):isEmpty():ifElse('null',${data:jsonPath('$.energierichtung')})}",
           "zaehlwerke": [
             {
-                "obisKennzahl": "${data:jsonPath('$.obisKennzahl')}",
+                "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
                 "verwendungszwecke": [
                     {
-                        "marktrolle": "${data:jsonPath('$.marktrolle1')}",
+                        "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
                         "zweck": [
-                            "${data:jsonPath('$.zweck1')}",
-                            "${data:jsonPath('$.zweck2')}"
+                            "${data:jsonPath('$.zweck1'):isEmpty():ifElse('null',${data:jsonPath('$.zweck1')})}",
+                            "${data:jsonPath('$.zweck2'):isEmpty():ifElse('null',${data:jsonPath('$.zweck2')})}"
                         ]
                     },
                     {
-                        "marktrolle": "${data:jsonPath('$.marktrolle2')}",
+                        "marktrolle": "${data:jsonPath('$.marktrolle2'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle2')})}",
                         "zweck": [
-                            "${data:jsonPath('$.zweck3')}",
-                            "${data:jsonPath('$.zweck4')}"
+                            "${data:jsonPath('$.zweck3'):isEmpty():ifElse('null',${data:jsonPath('$.zweck3')})}",
+                            "${data:jsonPath('$.zweck4'):isEmpty():ifElse('null',${data:jsonPath('$.zweck4')})}"
                         ]
                     }
                 ],
-                "wertegranularitaet": "${data:jsonPath('$.wertegranularitaet')}"
+                "wertegranularitaet": "${data:jsonPath('$.wertegranularitaet'):isEmpty():ifElse('null',${data:jsonPath('$.wertegranularitaet')})}"
             }
           ]
+        }
+      ],
+      "MESSLOKATION": [
+        {
+          "boTyp": "MESSLOKATION",
+          "versionStruktur": "1",
+          "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
         }
       ],
       "NETZNUTZUNGSVERTRAG": [
         {
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
-          "vertragsart": "${data:jsonPath('$.vertragsart')}",
-          "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
-          "sparte": "${data:jsonPath('$.sparte')}",
-          "lokationsId": "${data:jsonPath('$.lokationsId')}",
-          "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
+          "vertragsart": "${data:jsonPath('$.vertragsart'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsart')})}",
+          "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsbeginn')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
+        }
+      ],
+      "ZAEHLER": [
+        {
+          "boTyp": "ZAEHLER",
+          "versionStruktur": "1",
+          "zaehlernummer": "${data:jsonPath('$.zaehlernummer'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlernummer')})}",
+          "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zaehlertyp": "${data:jsonPath('$.zaehlertyp'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlertyp')})}",
+          "zaehlwerke": [
+            {
+              "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
+              "vorkommastelle": "${data:jsonPath('$.vorkommastelle'):isEmpty():ifElse('null',${data:jsonPath('$.vorkommastelle')})}",
+              "nachkommastelle": "${data:jsonPath('$.nachkommastelle'):isEmpty():ifElse('null',${data:jsonPath('$.nachkommastelle')})}",
+              "wertegranularitaet": "${data:jsonPath('$.wertegranularitaet'):isEmpty():ifElse('null',${data:jsonPath('$.wertegranularitaet')})}"
+            }
+          ],
+          "messwerterfassung": "${data:jsonPath('$.messwerterfassung'):isEmpty():ifElse('null',${data:jsonPath('$.messwerterfassung')})}",
+          "befestigungsart": "${data:jsonPath('$.befestigungsart'):isEmpty():ifElse('null',${data:jsonPath('$.befestigungsart')})}",
+          "zaehlergroesse": "${data:jsonPath('$.zaehlergroesse'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlergroesse')})}",
+          "geraete": [
+            {
+              "geraetenummer": "${data:jsonPath('$.geraetenummer'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer')})}"
+            }
+          ]
         }
       ],
       "BILANZIERUNG": [
         {
           "boTyp": "BILANZIERUNG",
           "versionStruktur": "1",
-          "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
-          "sparte": "${data:jsonPath('$.sparte')}"
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
         }
       ]
     },
     "transaktionsdaten": {
-      "empfaenger": "${data:jsonPath('$.empfaenger')}",
-      "absender": "${data:jsonPath('$.absender')}",
-      "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+        "rollencodetyp": "${data:jsonPath('$.rollencodetypEmpfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetypEmpfaenger')})}"
+      },
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rolldencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+        "rollencodetyp": "${data:jsonPath('$.rollencodetypAbsender'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetypAbsender')})}"
+      }
+      "gueltigAb": "${data:jsonPath('$.gueltigAb'):isEmpty():ifElse('null',${data:jsonPath('$.gueltigAb')})}",
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
   }
 }
