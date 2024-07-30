@@ -1,0 +1,49 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+        "sparte": "${data:jsonPath('$.sparte')}"
+      }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "${data:jsonPath('$.vertragsart')}",
+        "sparte": "${data:jsonPath('$.sparte')}",
+        "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
+        "lokationsId": "${data:jsonPath('$.lokationsId')}",
+        "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
+      }
+    ]
+  },
+  "transaktionsdaten": {
+    "datenaustauschreferenz": "${data:jsonPath('$.datenaustauschreferenz')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}",
+    "vorgangsnummer": "${data:jsonPath('$.vorgangsnummer')}",
+    "pruefidentifikator": "${data:jsonPath('$.pruefidentifikator')}",
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "${data:jsonPath('$.absender')}",
+      "rollencodetyp": "${data:jsonPath('$.rollencodetyp')}"
+    },
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "${data:jsonPath('$.empfaenger')}"
+    },
+    "dokumentennummer": "${data:jsonPath('$.dokumentennummer')}",
+    "kategorie": "${data:jsonPath('$.kategorie')}",
+    "nachrichtendatum": "${data:jsonPath('$.nachrichtendatum')}",
+    "nachrichtenreferenznummer": "${data:jsonPath('$.nachrichtenreferenznummer')}",
+    "freitext": {
+      "freitext1": "${data:jsonPath('$.freitext1')}"
+    }
+  },
+  "zusatzdaten": {}
+}
