@@ -4,9 +4,9 @@
     {
       "boTyp": "ANFRAGE",
       "versionStruktur": "1",
-		  "lokationsId": "${data:jsonPath('$.marktlokationsId')}",
+		  "lokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
       "lokationsTyp": "MALO",
-		  "sparte": "${data:jsonPath('$.sparte')}",
+		  "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
       "anfragekategorie": "SPERRUNG"
     }
     ],
@@ -14,7 +14,7 @@
       {
         "boTyp": "AUFTRAG",
         "versionStruktur": "1",
-        "startdatum": "${data:jsonPath('$.startdatum')}"
+        "startdatum": "${data:jsonPath('$.startdatum'):isEmpty():ifElse('null',${data:jsonPath('$.startdatum')})}"
       }
     ],
     "SPERRAUFTRAG": [
@@ -23,6 +23,11 @@
         "versionStruktur": "1"
       }
     ]
-    }
+    },
+  "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"
   }
+}
  
