@@ -1,0 +1,259 @@
+{
+    "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "energierichtung": "${data:jsonPath('$.energierichtung'):isEmpty():ifElse('null',${data:jsonPath('$.energierichtung')})}",
+          "netzebene": "${data:jsonPath('$.netzebene'):isEmpty():ifElse('null',${data:jsonPath('$.netzebene')})}",
+          "bilanzierungsgebiet": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "lokationsadresse": {
+            "postleitzahl": "${data:jsonPath('$.postleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.postleitzahl')})}",
+            "ort": "${data:jsonPath('$.ort'):isEmpty():ifElse('null',${data:jsonPath('$.ort')})}",
+            "strasse": "${data:jsonPath('$.strasse'):isEmpty():ifElse('null',${data:jsonPath('$.strasse')})}",
+            "hausnummer": "${data:jsonPath('$.hausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.hausnummer')})}",
+            "landescode": "${data:jsonPath('$.landescode'):isEmpty():ifElse('null',${data:jsonPath('$.landescode')})}",
+            "zusatzInformation": {
+              "${data:jsonPath('$.zusatz1'):isEmpty():ifElse('null',${data:jsonPath('$.zusatz1')})}",
+            }
+          },
+          "marktrollen": [
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "rollencodenummer": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "marktrolle": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+            },
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "rollencodenummer": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "marktrolle": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",,
+              "weiterverpflichtet": ${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})},
+              "messstellenbetreiberEigenschaft": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+            }
+          ],
+          "regelzone": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "zaehlwerke": [
+            {
+              "obisKennzahl": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "verwendungszwecke": [
+                {
+                  "marktrolle": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+                  "zweck": [
+                    "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+                    "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+                    "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+                  ]
+                }
+              ],
+              "verbrauchsart": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "unterbrechbarkeit": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "wertegranularitaet": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+            }
+          ],
+          "messtechnischeEinordnung": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "netznutzungsabrechnungsdaten": [
+            {
+              "artikelId": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "artikelIdTyp": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "gemeinderabatt": ${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})},
+            }
+          ],
+          "sperrstatus": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+        }
+      ],
+      "MESSLOKATION": [
+        {
+          "boTyp": "MESSLOKATION",
+          "versionStruktur": "1",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "messlokationsId": "${data:jsonPath('$.verguetungEmpfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.verguetungEmpfaenger')})}",
+          "netzebenemessung": "${data:jsonPath('$.bildungTranchengroesse'):isEmpty():ifElse('null',${data:jsonPath('$.bildungTranchengroesse')})}",
+          "ablesekartenempfaenger": {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "name1": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+            "gewerbekennzeichnung": ${data:jsonPath('$.wert'):isEmpty():ifElse('null',${data:jsonPath('$.wert')})},
+            "geschaeftspartnerrolle": [
+              "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+            ],
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "ort": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "strasse": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "hausnummer": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "landescode": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+            }
+          },
+          "marktrollen": [
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "rollencodenummer": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "marktrolle": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "weiterverpflichtet": ${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})},
+              "messstellenbetreiberEigenschaft": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+            },
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "rollencodenummer": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "marktrolle": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+            }
+          ]
+        }
+      ],
+      "BILANZIERUNG": [
+        {
+          "boTyp": "BILANZIERUNG",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "lastprofile": [
+            {
+              "bezeichnung": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "verfahren": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "profilart": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "einspeisung": ${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})},
+              "herausgeber": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+            }
+          ],
+          "bilanzierungsbeginn": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "jahresverbrauchsprognose": {
+            "wert": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+            "einheit": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+          },
+          "aggregationsverantwortung": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "zeitreihentyp": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "prognosegrundlage": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "detailsPrognosegrundlage": [
+            "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+          ],
+          "abwicklungsmodell": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+        }
+      ],
+      "NETZNUTZUNGSVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "NETZNUTZUNGSVERTRAG",
+          "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsbeginn')})}",
+          "vertragsende": "${data:jsonPath('$.vertragsende'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsende')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "MALO",
+          "vertragskonditionen": {
+            "haushaltskunde": ${data:jsonPath('$.haushaltskunde'):isEmpty():ifElse('null',${data:jsonPath('$.haushaltskunde')})},
+            "netznutzungsabrechnung": {
+              "abrechnungsZeitraum": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+            },
+            "netznutzungsabrechnungIntervall": ${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})},
+            "netznutzungsvertrag": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+            "netznutzungszahler": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+            "netznutzungsabrechnungsvariante": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+            "netznutzungsabrechnungsgrundlage": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+          }
+        }
+      ],
+      "MESSSTELLENBETRIEBSVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "MESSSTELLENBETRIEBSVERTRAG",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "vertragskonditionen": {
+            "geplanteTurnusablesung": {
+              "ablesezeitraum": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+            },
+            "abrechnungUeberNna": ${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}
+          },
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+        }
+      ],
+      "ENERGIELIEFERVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "sparte": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "vertragspartner2": [
+            {
+              "boTyp": "GESCHAEFTSPARTNER",
+              "versionStruktur": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "name1": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "gewerbekennzeichnung": ${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})},
+              "geschaeftspartnerrolle": [
+                "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+              ]
+            }
+          ],
+          "korrespondenzpartner": {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "name1": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+            "gewerbekennzeichnung": ${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})},
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "ort": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "strasse": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "hausnummer": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "landescode": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+            }
+          },
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+        }
+      ],
+      "ZAEHLER": [
+        {
+          "boTyp": "ZAEHLER",
+          "versionStruktur": "1",
+          "zaehlernummer": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "messlokationsId": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "sparte": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "zaehlerauspraegung": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "zaehlertyp": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "tarifart": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "zaehlwerke": [
+            {
+              "obisKennzahl": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+              "vorkommastelle": ${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})},
+              "nachkommastelle": ${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})},
+              "wertegranularitaet": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+            }
+          ],
+          "fernschaltung": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "messwerterfassung": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "geraete": [
+            {
+              "geraetenummer": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "empfaenger": {
+        "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+        "rollencodetyp": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      },
+      "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrund')})}",
+      "transaktionsgrundergaenzung": "${data:jsonPath('$.transaktionsgrundergaenzung'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrundergaenzung')})}",
+      "transaktionsgrundergaenzungBefristeteAnmeldung": "${data:jsonPath('$.transaktionsgrundergaenzungBefristeteAnmeldung'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrundergaenzungBefristeteAnmeldung')})}",
+      "absender": {
+        "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+        "rollencodetyp": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+        "marktrolle": "LF",
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gewerbekennzeichnung": true
+      }
+    }
+}
