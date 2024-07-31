@@ -30,7 +30,7 @@
       "rollencodenummer":"${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
       },
       "absender":{
-        "rollencodenummer":"${data:jsonPath('$.absender):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"
+      "rollencodenummer":"${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"
       }
   }
 }
