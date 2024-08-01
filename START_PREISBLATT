@@ -1,0 +1,36 @@
+    "stammdaten": {
+      "PREISBLATT": [
+        {
+          "boTyp": "PREISBLATT",
+          "versionStruktur": "1",
+          "nichtGenutzt": true,
+          "gueltigkeit": {
+            "startdatum": "${data:jsonPath('$.startdatum'):isEmpty():ifElse('null',${data:jsonPath('$.startdatum')})}"
+          },
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "datenaustauschreferenz": "${data:jsonPath('$.datenaustauschreferenz'):isEmpty():ifElse('null',${data:jsonPath('$.datenaustauschreferenz')})}",
+      "sparte": "STROM",
+      "pruefidentifikator": "${data:jsonPath('$.pruefidentifikator'):isEmpty():ifElse('null',${data:jsonPath('$.pruefidentifikator')})}",
+      "absender": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+        "rollencodetyp": "BDEW"
+      },
+      "empfaenger": {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+        "rollencodetyp": "BDEW"
+      },
+      "dokumentennummer": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+      "kategorie": "Z64",
+      "nachrichtendatum": "${data:jsonPath('$.nachrichtendatum'):isEmpty():ifElse('null',${data:jsonPath('$.nachrichtendatum')})}",
+      "nachrichtenreferenznummer": "${data:jsonPath('$.nachrichtenreferenznummer'):isEmpty():ifElse('null',${data:jsonPath('$.nachrichtenreferenznummer')})}"
+    },
+    "zusatzdaten": {}
+  }
