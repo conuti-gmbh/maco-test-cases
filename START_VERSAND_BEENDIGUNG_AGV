@@ -1,0 +1,69 @@
+{
+  "data": {
+    "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "energierichtung": "${data:jsonPath('$.energierichtung'):isEmpty():ifElse('null',${data:jsonPath('$.energierichtung')})}",
+          "netzbetreiberCodeNr": "${data:jsonPath('$.netzbetreiberCodeNr'):isEmpty():ifElse('null',${data:jsonPath('$.netzbetreiberCodeNr')})}",
+          "marktrollen": [
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "rollencodenummer": "${data:jsonPath('$.rollencodenummerMA'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummerMA')})}",
+              "marktrolle": "${data:jsonPath('$.marktrolleMA'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleMA')})}"
+            }
+          ]
+        }
+      ],
+      "NETZNUTZUNGSVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "${data:jsonPath('$.vertragsart'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsart')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
+        }
+      ],
+      "BILANZIERUNG": [
+        {
+          "boTyp": "BILANZIERUNG",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+        }
+      ],
+      "TRANCHE": [
+        {
+          "boTyp": "TRANCHE",
+          "versionStruktur": "1",
+          "tranchenId": "${data:jsonPath('$.tranchenId'):isEmpty():ifElse('null',${data:jsonPath('$.tranchenId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "marktrollen": [
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "rollencodenummer": "${data:jsonPath('$.rollencodenummerTR'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummerTR')})}",
+              "marktrolle": "${data:jsonPath('$.marktrolleTR'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleTR')})}"
+            }
+          ],
+          "referenzTranche": "${data:jsonPath('$.referenzTranche'):isEmpty():ifElse('null',${data:jsonPath('$.referenzTranche')})}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrund')})}",
+      "absender": {
+        "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"
+      },
+      "empfaenger": {
+        "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
+      },
+      "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
+    }
+  }
+}
