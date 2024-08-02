@@ -9,44 +9,10 @@
           ]
     },
       "transaktionsdaten": {
-      "sparte": "${data:jsonPath('$.sparte')}",
-      "absender": {
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "rollencodenummer": "${data:jsonPath('$.absender')}",
-        "rollencodetyp": "BDEW",
-        "ansprechpartner": {
-          "boTyp": "ANSPRECHPARTNER",
-          "versionStruktur": "1",
-          "nachname": "Max Mustermann",
-          "eMailAdresse": "max@mustermann.de",
-          "rufnummern": [
-            {
-              "nummerntyp": "RUF_ZENTRALE",
-              "rufnummer": "+123456789 20"
-            },
-            {
-              "nummerntyp": "FAX_DURCHWAHL",
-              "rufnummer": "+123456789 40"
-            },
-            {
-              "nummerntyp": "RUF_DURCHWAHL",
-              "rufnummer": "+123456789 10"
-            },
-            {
-              "nummerntyp": "MOBIL_NUMMER",
-              "rufnummer": "+123456789 30"
-            }
-          ]
-        }
-      },
-      "empfaenger": {
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
-        "rollencodetyp": "BDEW"
-      },
-      "kategorie": "${data:jsonPath('$.kategorie')}",
-      "vorgangsreferenznummer": "${data:jsonPath('$.vorgangsreferenznummer')}"
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender":{"rollencodenummer":"${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"},
+      "empfaenger":{"rollencodenummer":"${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"},
+      "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}",
+      "vorgangsreferenznummer": "${data:jsonPath('$.vorgangsreferenznummer'):isEmpty():ifElse('null',${data:jsonPath('$.vorgangsreferenznummer')})}"
     }
     }

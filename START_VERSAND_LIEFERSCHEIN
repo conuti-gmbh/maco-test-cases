@@ -1,42 +1,28 @@
 {
-    "stammdaten": {
-      "ENERGIEMENGE": [
-        {
-          "boTyp": "ENERGIEMENGE",
-          "versionStruktur": "1",
-          "lokationsId": "${data:jsonPath('$.lokationsId')}",
-          "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}",
-          "energieverbrauch": [
-            {
-              "startdatum": "${data:jsonPath('$.startdatum')}",
-              "enddatum": "${data:jsonPath('$.enddatum')}",
-              "messwertstatus": "${data:jsonPath('$.messwertstatus')}",
-              "obiskennzahl": "${data:jsonPath('$.obiskennzahl')}",
-              "wert": ${data:jsonPath('$.wert')},
-              "position": ${data:jsonPath('$.position')},
-              "leistungsperiode": "${data:jsonPath('$.leistungsperiode')}"
-            }
-          ]
-        }
-      ]
-    },
-    "transaktionsdaten": {
-      "sparte": "${data:jsonPath('$.sparte')}",
-      "kategorie": null,
-      "empfaenger": {
-        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
-        "rollencodetyp": "BDEW",
-        "boTyp": "MARKTTEILNEHMER",
+  "stammdaten": {
+    "ENERGIEMENGE": [
+      {
+        "boTyp": "ENERGIEMENGE",
         "versionStruktur": "1",
-        "gewerbekennzeichnung": true
-      },
-      "absender": {
-        "rollencodenummer": "${data:jsonPath('$.absender')}",
-        "rollencodetyp": "BDEW",
-        "marktrolle": "LF",
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "gewerbekennzeichnung": true
+        "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+        "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+        "energieverbrauch": [
+          {
+            "startdatum": "${data:jsonPath('$.startdatum'):isEmpty():ifElse('null',${data:jsonPath('$.startdatum')})}",
+            "enddatum": "${data:jsonPath('$.enddatum'):isEmpty():ifElse('null',${data:jsonPath('$.enddatum')})}",
+            "messwertstatus": "${data:jsonPath('$.messwertstatus'):isEmpty():ifElse('null',${data:jsonPath('$.messwertstatus')})}",
+            "obiskennzahl": "${data:jsonPath('$.obiskennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obiskennzahl')})}",
+            "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse('null',${data:jsonPath('$.wert')})},
+            "position": ${data:jsonPath('$.position'):isEmpty():ifElse('null',${data:jsonPath('$.position')})},
+            "leistungsperiode": "${data:jsonPath('$.leistungsperiode'):isEmpty():ifElse('null',${data:jsonPath('$.leistungsperiode')})}"
+          }
+        ]
       }
-    }
+    ]
+  },
+  "transaktionsdaten": {
+    "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+    "empfaenger":{"rollencodenummer":"${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"},
+    "absender":{"rollencodenummer":"${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"}
+  }
 }

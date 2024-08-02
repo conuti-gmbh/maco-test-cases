@@ -14,22 +14,8 @@
       ]
     },
     "transaktionsdaten": {
-      "sparte": "${data:jsonPath('$.sparte')}",
-      "kategorie": null,
-      "empfaenger": {
-        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
-        "rollencodetyp": "BDEW",
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "gewerbekennzeichnung": true
-      },
-      "absender": {
-        "rollencodenummer": "${data:jsonPath('$.absender')}",
-        "rollencodetyp": "BDEW",
-        "marktrolle": "LF",
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "gewerbekennzeichnung": true
-      }
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "empfaenger":{"rollencodenummer":"${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"},
+      "absender":{"rollencodenummer":"${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"}
     }
 }

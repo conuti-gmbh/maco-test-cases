@@ -4,13 +4,13 @@
         {
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
-          "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
-          "sparte": "${data:jsonPath('$.sparte')}",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
           "netznutzungsabrechnungsdaten": [
             {
-              "artikelId": "${data:jsonPath('$.artikelId')}",
-              "artikelIdTyp": "${data:jsonPath('$.artikelIdTyp')}",
-              "gemeinderabatt": 0
+              "artikelId": "${data:jsonPath('$.artikelId'):isEmpty():ifElse('null',${data:jsonPath('$.artikelId')})}",
+              "artikelIdTyp": "${data:jsonPath('$.artikelIdTyp'):isEmpty():ifElse('null',${data:jsonPath('$.artikelIdTyp')})}",
+              "gemeinderabatt": ${data:jsonPath('$.gemeinderabatt'):isEmpty():ifElse('0',${data:jsonPath('$.gemeinderabatt')})}
             }
           ]
         }
@@ -20,26 +20,13 @@
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
           "vertragsart": "NETZNUTZUNGSVERTRAG",
-          "sparte": "${data:jsonPath('$.sparte')}",
-          "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}"
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsbeginn')})}"
         }
       ]
     },
     "transaktionsdaten": {
-      "empfaenger": {
-        "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
-        "rollencodetyp": "BDEW",
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "gewerbekennzeichnung": true
-      },
-      "absender": {
-        "rollencodenummer": "${data:jsonPath('$.absender')}",
-        "rollencodetyp": "BDEW",
-        "marktrolle": "LF",
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "gewerbekennzeichnung": true
-      }
+      "empfaenger":{"rollencodenummer":"${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"},
+      "absender":{"rollencodenummer":"${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"}
     }
 }
