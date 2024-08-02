@@ -12,6 +12,7 @@
       {
         "boTyp": "VERTRAG",
         "versionStruktur": "1",
+        "vertragsart": "${data:jsonPath('$.vertragsart'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsart')})}",
         "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
         "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('',${data:jsonPath('$.vertragsbeginn')})}",
         "vertragsende": "${data:jsonPath('$.vertragsende'):isEmpty():ifElse('',${data:jsonPath('$.vertragsende')})}"
@@ -26,13 +27,29 @@
     ]
   },
   "transaktionsdaten": {
+    "datenaustauschreferenz": "${data:jsonPath('$.datenaustauschreferenz'):isEmpty():ifElse('null',${data:jsonPath('$.datenaustauschreferenz')})}",
     "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
     "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrund')})}",
+    "vorgangsnummer": "${data:jsonPath('$.vorgangsnummer'):isEmpty():ifElse('null',${data:jsonPath('$.vorgangsnummer')})}",
+    "pruefidentifikator": "${data:jsonPath('$.pruefidentifikator'):isEmpty():ifElse('null',${data:jsonPath('$.pruefidentifikator')})}",
     "absender": {
-      "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "rollencodetyp": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}"
     },
     "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
       "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
+    },
+    "dokumentennummer": "${data:jsonPath('$.dokumentennummer'):isEmpty():ifElse('null',${data:jsonPath('$.dokumentennummer')})}",
+    "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}",
+    "nachrichtendatum": "${data:jsonPath('$.nachrichtendatum'):isEmpty():ifElse('null',${data:jsonPath('$.nachrichtendatum')})}",
+    "nachrichtenreferenznummer": "${data:jsonPath('$.nachrichtenreferenznummer'):isEmpty():ifElse('null',${data:jsonPath('$.nachrichtenreferenznummer')})}",
+    "freitext": {
+      "freitext1": "${data:jsonPath('$.freitext1'):isEmpty():ifElse('null',${data:jsonPath('$.freitext1')})}"
     }
-}
+  },
+  "zusatzdaten": {}
 }
