@@ -41,7 +41,7 @@
           "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
           "lokationsTyp": "MALO",
           "vertragskonditionen": {
-            "haushaltskunde": ${data:jsonPath('$.haushaltskunde'):isEmpty():ifElse('null',${data:jsonPath('$.haushaltskunde')})}
+            "haushaltskunde": ${data:jsonPath('$.haushaltskunde'):isEmpty():ifElse('',${data:jsonPath('$.haushaltskunde')})}
           }
         }
       ],
@@ -84,22 +84,13 @@
     "transaktionsdaten": {
       "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
       "empfaenger": {
-        "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
-        "rollencodetyp": "BDEW",
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "gewerbekennzeichnung": true
+        "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
       },
       "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrund')})}",
       "transaktionsgrundergaenzung": "${data:jsonPath('$.transaktionsgrundergaenzung'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrundergaenzung')})}",
       "transaktionsgrundergaenzungBefristeteAnmeldung": "${data:jsonPath('$.transaktionsgrundergaenzungBefristeteAnmeldung'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrundergaenzungBefristeteAnmeldung')})}",
       "absender": {
-        "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
-        "rollencodetyp": "BDEW",
-        "marktrolle": "LF",
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
-        "gewerbekennzeichnung": true
+        "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"
       }
     }
 }
