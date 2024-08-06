@@ -6,15 +6,15 @@
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
           "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
-          "sparte": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
         }
       ],
       "STATUSMITTEILUNG": [
         {
           "boTyp": "STATUSMITTEILUNG",
           "versionStruktur": "1",
-          "statusObjekt": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
-          "auftragsstatus": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "statusObjekt": "${data:jsonPath('$.statusObjekt'):isEmpty():ifElse('null',${data:jsonPath('$.statusObjekt')})}",
+          "auftragsstatus": "${data:jsonPath('$.auftragsstatus'):isEmpty():ifElse('null',${data:jsonPath('$.auftragsstatus')})}",
           "positionsdaten": [
             {
               "positionsnummer": 1
@@ -24,13 +24,14 @@
       ]
     },
     "transaktionsdaten": {
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
       "absender": {
-        "rollencodenummer": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+        "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"
       },
       "empfaenger": {
-        "rollencodenummer": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+        "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
       },
-      "fertigstellungsdatum": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+      "fertigstellungsdatum": "${data:jsonPath('$.fertigstellungsdatum'):isEmpty():ifElse('null',${data:jsonPath('$.fertigstellungsdatum')})}"
     }
   }
 }
