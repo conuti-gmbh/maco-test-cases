@@ -17,7 +17,7 @@
           "auftragsstatus": "${data:jsonPath('$.auftragsstatus'):isEmpty():ifElse('null',${data:jsonPath('$.auftragsstatus')})}",
           "positionsdaten": [
             {
-              "positionsnummer": 1
+              "positionsnummer": ${data:jsonPath('$.positionsnummer'):isEmpty():ifElse('null',${data:jsonPath('$.positionsnummer')})}
             }
           ]
         }
@@ -31,7 +31,10 @@
       "empfaenger": {
         "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
       },
-      "fertigstellungsdatum": "${data:jsonPath('$.fertigstellungsdatum'):isEmpty():ifElse('null',${data:jsonPath('$.fertigstellungsdatum')})}"
+      "fertigstellungsdatum": "${data:jsonPath('$.fertigstellungsdatum'):isEmpty():ifElse('null',${data:jsonPath('$.fertigstellungsdatum')})}",
+      "antwortstatus": "${data:jsonPath('$.antwortstatus'):isEmpty():ifElse('null',${data:jsonPath('$.antwortstatus')})}",
+      "antwortstatusCodeliste": "${data:jsonPath('$.antwortstatusCodeliste'):isEmpty():ifElse('null',${data:jsonPath('$.antwortstatusCodeliste')})}",
+      "sendungsposition": "${data:jsonPath('$.sendungsposition'):isEmpty():ifElse('null',${data:jsonPath('$.sendungsposition')})}"
     }
   }
 }
