@@ -1,0 +1,36 @@
+{
+  "data": {
+    "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+        }
+      ],
+      "STATUSMITTEILUNG": [
+        {
+          "boTyp": "STATUSMITTEILUNG",
+          "versionStruktur": "1",
+          "statusObjekt": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "auftragsstatus": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "positionsdaten": [
+            {
+              "positionsnummer": 1
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "absender": {
+        "rollencodenummer": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+      },
+      "empfaenger": {
+        "rollencodenummer": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+      },
+      "fertigstellungsdatum": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+    }
+  }
+}
