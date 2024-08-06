@@ -22,7 +22,8 @@
       {
         "boTyp": "BILANZIERUNG",
         "versionStruktur": "1",
-        "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+        "bilanzierungsende": "${data:jsonPath('$.bilanzierungsende'):isEmpty():ifElse('',${data:jsonPath('$.bilanzierungsende')})}"
       }
     ]
   },
