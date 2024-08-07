@@ -1,0 +1,668 @@
+openapi: 3.0.0
+info:
+  title: Trigger Event API
+  description: API zum Auslösen von ausgehenden Prozessen in der MACO APP
+  version: 1.0.0
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+servers:
+  - url: https://api.macoapp.de
+    description: Fake Env 
+  - url: https://gateway.gravitee.rcs.lief.makoapp-mps.conuti.dev/core/inproxy/  
+    description: LF RCS Gateway
+paths:
+  /START_SPERRAUFTRAG:
+    post:
+      summary: START_SPERRAUFTRAG
+      description: Event aus der MCS beim Nachrichteneingang
+      operationId: startSperrauftrag
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_SPERRAUFTRAG'
+      responses:
+        '200':
+          description: Erfolgreiche Verarbeitung des Ereignisses
+
+  /START_NEUANLAGE:
+    post:
+      summary: START_NEUANLAGE
+      description: Event für die Anmeldung einer Neuanlage
+      operationId: startNeulanage
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_NEUANLAGE'
+      responses:
+        '200':
+          description: Erfolgreiche Verarbeitung des Ereignisses
+          
+  /START_PARTIN:
+    post:
+      summary: START_PARTIN
+      description: Erfassung / Änderung eigener SA / Kommunikationsdaten. Manuelle Auslösung Partin
+      operationId: startPartin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_PARTIN'
+      responses:
+        '200':
+          description: Erfolgreiche Verarbeitung des Ereignisses
+  /START_LASTGANG:
+    post:
+      summary: START_LASTGANG
+      description: Erfassung / Änderung Lastgang an makorelevanter Lieferstelle
+      operationId: startLastgang
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_LASTGANG'
+      responses:
+        '200':
+          description: Erfolgreiche Verarbeitung des Ereignisses
+  /START_ZAEHLERSTAND:
+    post:
+      summary: START_ZAEHLERSTAND
+      description: Erfassung / Änderung / Freigabe eines Zählerstand an makorelevanter Lieferstelle
+      operationId: startZaehlerstand
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_ZAEHLERSTAND'
+      responses:
+        '200':
+          description: Erfolgreiche Verarbeitung des Ereignisses
+  /START_ENERGIEMENGE:
+    post:
+      summary: START_ENERGIEMENGE
+      description: Erzeugung einer Energiemenge an makorelevanter Lieferstelle
+      operationId: startEnergiemenge
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_ENERGIEMENGE'
+      responses:
+        '200':
+          description: Erfolgreiche Verarbeitung des Ereignisses
+  /AENDERUNG_SD:
+    post:
+      summary: AENDERUNG_SD
+      description: Änderung der Stammdaten einer Lokation
+      operationId: aenderungSd
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AENDERUNG_SD'
+      responses:
+        '200':
+          description: Erfolgreiche Verarbeitung des Ereignisses
+  /AENDERUNG_AD:
+    post:
+      summary: AENDERUNG_AD
+      description: Änderung der Abrechnungsdaten einer Lokation
+      operationId: aenderungAd
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AENDERUNG_AD'
+      responses:
+        '200':
+          description: Erfolgreiche Verarbeitung des Ereignisses
+  /START_KUENDIGUNG:
+    post:
+      summary: START_KUENDIGUNG
+      description: Start des Prozesses Kündigung an LFA
+      operationId: startKuendigung
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_KUENDIGUNG'
+      responses:
+        '200':
+          description: Erfolgreiche Verarbeitung des Ereignisses
+  /START_LIEFERBEGINN:
+    post:
+      summary: START_LIEFERBEGINN
+      description: Start des Prozess Lieferbeginn an NB
+      operationId: startLieferbeginn
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_LIEFERBEGINN'
+      responses:
+        '200':
+          description: Erfolgreiche Verarbeitung des Ereignisses
+
+components:
+  schemas:
+    START_SPERRAUFTRAG:
+      type: object
+      properties:
+        eventId:
+          type: string
+          example: "STARTSPERRAUFTRAG1"      
+        eventName:
+          type: string
+          example: "START_SPERRAUFTRAG"     
+        marktlokationsId:
+          type: string
+          example: "50000083216"    
+        sparte:
+          type: string
+          example: "STROM"   
+        absenderRollencodenummer:
+          type: string
+          example: "9903790000002"    
+        empfaengerRollencodenummer:
+          type: string
+          example: "9900321000005"                                          
+
+    START_NEUANLAGE:
+      type: object
+      properties:
+        eventId:
+          type: string
+          example: "STARTNEUANLAGE1"
+        eventName:
+          type: string
+          example: "START_NEUANLAGE"
+        marktlokationsId:
+          type: string
+          example: "1234567890"
+        sparte:
+          type: string
+          example: "ELEKTRIZITAET"
+        energierichtung:
+          type: string
+          example: "ABGANG"
+        vertragsbeginn:
+          type: string
+          example: "2023-01-01T00:00:00Z"
+        vertragsende:
+          type: string
+          example: "2024-07-01T00:00:00Z"
+        haushaltskunde:
+          type: boolean
+          example: true
+        gewerbekennzeichnung:
+          type: boolean
+          example: true
+        vpanrede:
+          type: string
+          example: "Herr"
+        vpname1:
+          type: string
+          example: "Mustermann"
+        vpname2:
+          type: string
+          example: "Max"
+        kename2:
+          type: string
+          example: "Musterfirma"
+        kegewerbekennzeichnung:
+          type: boolean
+          example: true
+        keplz:
+          type: string
+          example: "12345"
+        keort:
+          type: string
+          example: "Musterstadt"
+        kestrasse:
+          type: string
+          example: "Musterstrasse"
+        kehaushnummer:
+          type: string
+          example: "10"
+        kelandescode:
+          type: string
+          example: "DE"
+        keortsteil:
+          type: string
+          example: "Zentrum"
+        empfaengerRollencodenummer:
+          type: string
+          example: "9900321000005"
+        transaktonsgrund:
+          type: string
+          example: "Z02"
+        transaktionsgrundergaenzung:
+          type: string
+          example: "E03"
+        transaktionsgrundergaenzungBefristeteAnmeldung:
+          type: string
+          example: "E03"
+        absenderRollencodenummer:
+          type: string
+          example: "9903790000002"      
+
+    START_PARTIN:
+      type: object
+      properties:
+        eventId:
+          type: string
+          example: "123123"      
+        eventName:
+          type: string
+          example: START_PARTIN          
+        empfaenger:
+          $ref: '#/components/schemas/Marktpartner'
+        eigenerSA:
+          type: string
+          example: "9903790000002"
+        eigenerSARolle:
+          type: string
+          example: NB
+          enum:
+            - NB
+            - LF
+            - MSB
+            - MSBA
+            - GMSB
+            - MDL
+            - DL
+            - BKV
+            - BKO
+            - UENB
+            - KUNDE-SELBST-NN
+            - MGV
+            - EIV
+            - RB
+            - KUNDE
+            - INTERESSENT
+            - KN
+            - UBA
+            - BIKO
+            - ESA          
+
+    START_LASTGANG:
+      type: object
+      properties:
+        eventId:
+          type: string
+          example: "124"          
+        eventName:
+          type: string
+          example: START_LASTGANG      
+        lokationsId:
+          type: string
+          example: "50074561188"
+        lokationsTyp:
+          type: string
+          example: MALO
+          enum:
+            - MALO
+            - MELO
+            - NELO
+            - TECHNISCHE_RESSOURCE             
+        obisKennzahl:
+          type: string
+          example: 1-1:1.9.0
+        zeitraumVon:
+          type: string
+          format: date-time
+          example: "2024-06-28T12:18:00Z" 
+          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+        zeitraumBis:
+          type: string
+          format: date-time
+          example: "2024-06-28T12:18:00Z" 
+          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+        absender:
+          $ref: '#/components/schemas/Marktpartner'
+        empfaenger:
+          $ref: '#/components/schemas/Marktpartner'
+
+    START_ZAEHLERSTAND:
+      type: object
+      properties:
+        eventId:
+          type: string
+          example: "123123"      
+        eventName:
+          type: string
+          example: START_ZAEHLERSTAND           
+        lokationsId:
+          type: string
+          example: "50074561188"
+        lokationsTyp:
+          type: string
+          example: MALO
+          enum:
+            - MALO
+            - MELO
+            - NELO
+            - TECHNISCHE_RESSOURCE             
+        obisKennzahl:
+          type: string
+          example: 1-1:1.9.0
+        zeitraumVon:
+          type: string
+          format: date-time
+          example: "2024-06-28T12:18:00Z" 
+          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+        zeitraumBis:
+          type: string
+          format: date-time
+          example: "2024-06-28T12:18:00Z" 
+          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+        absender:
+          $ref: '#/components/schemas/Marktpartner'
+        empfaenger:
+          $ref: '#/components/schemas/Marktpartner'
+
+    START_ENERGIEMENGE:
+      type: object
+      properties:
+        eventId:
+          type: string
+          example: "123123"      
+        eventName:
+          type: string
+          example: START_ENERGIEMENGE               
+        lokationsId:
+          type: string
+          example: "50074561188"
+        lokationsTyp:
+          type: string
+          example: MALO
+          enum:
+            - MALO
+            - MELO
+            - NELO
+            - TECHNISCHE_RESSOURCE             
+        obisKennzahl:
+          type: string
+          example: 1-1:1.9.0
+        zeitraumVon:
+          type: string
+          format: date-time
+          example: "2024-06-28T12:18:00Z" 
+          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+        zeitraumBis:
+          type: string
+          format: date-time
+          example: "2024-06-28T12:18:00Z" 
+          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+        absender:
+          $ref: '#/components/schemas/Marktpartner'
+        empfaenger:
+          $ref: '#/components/schemas/Marktpartner'
+
+    AENDERUNG_SD:
+      type: object
+      properties:
+        eventId:
+          type: string
+          example: "123123"      
+        eventName:
+          type: string
+          example: AENDERUNG_SD          
+        lokationsId:
+          type: string
+          example: "50074561188"
+        lokationsTyp:
+          type: string
+          example: MALO
+          enum:
+            - MALO
+            - MELO
+            - NELO
+            - TECHNISCHE_RESSOURCE             
+        aenderungGueltigAb:
+          type: string
+          format: date-time
+          example: "2024-06-28T12:18:00Z" 
+          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+        empfaenger:
+          $ref: '#/components/schemas/Marktpartner'
+        eigenerSA:
+          type: string
+          example: "9903790000002"
+        eigenerSARolle:
+          type: string
+          example: NB
+          enum:
+            - NB
+            - LF
+            - MSB
+            - MSBA
+            - GMSB
+            - MDL
+            - DL
+            - BKV
+            - BKO
+            - UENB
+            - KUNDE-SELBST-NN
+            - MGV
+            - EIV
+            - RB
+            - KUNDE
+            - INTERESSENT
+            - KN
+            - UBA
+            - BIKO
+            - ESA           
+
+    AENDERUNG_AD:
+      type: object
+      properties:
+        eventId:
+          type: string
+          example: "123123"      
+        eventName:
+          type: string
+          example: AENDERUNG_AD            
+        lokationsId:
+          type: string
+          example: "50074561188"
+        lokationsTyp:
+          type: string
+          example: MALO
+          enum:
+            - MALO
+            - MELO
+            - NELO
+            - TECHNISCHE_RESSOURCE             
+        aenderungGueltigAb:
+          type: string
+          format: date-time
+          example: "2024-06-28T12:18:00Z" 
+          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+        empfaenger:
+          $ref: '#/components/schemas/Marktpartner'
+        eigenerSA:
+          type: string
+          example: "9903790000002"
+        eigenerSARolle:
+          type: string
+          example: NB
+          enum:
+            - NB
+            - LF
+            - MSB
+            - MSBA
+            - GMSB
+            - MDL
+            - DL
+            - BKV
+            - BKO
+            - UENB
+            - KUNDE-SELBST-NN
+            - MGV
+            - EIV
+            - RB
+            - KUNDE
+            - INTERESSENT
+            - KN
+            - UBA
+            - BIKO
+            - ESA           
+
+    START_KUENDIGUNG:
+      type: object
+      properties:
+        eventId:
+          type: string
+          example: "123123"      
+        eventName:
+          type: string
+          example: START_KUENDIGUNG        
+        lokationsId:
+          type: string
+          example: "50074561188"
+        lokationsTyp:
+          type: string
+          example: MALO
+          enum:
+            - MALO
+            - MELO
+            - NELO
+            - TECHNISCHE_RESSOURCE             
+        kuendigungsdatum:
+          type: string
+          format: date-time
+          example: "2024-06-28T12:18:00Z" 
+          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+        empfaengerLFA:
+          $ref: '#/components/schemas/Marktpartner'
+        eigenerSA:
+          type: string
+          example: "9903790000002"
+        eigenerSARolle:
+          type: string
+          example: NB
+          enum:
+            - NB
+            - LF
+            - MSB
+            - MSBA
+            - GMSB
+            - MDL
+            - DL
+            - BKV
+            - BKO
+            - UENB
+            - KUNDE-SELBST-NN
+            - MGV
+            - EIV
+            - RB
+            - KUNDE
+            - INTERESSENT
+            - KN
+            - UBA
+            - BIKO
+            - ESA           
+        belegID:
+          type: string
+          example: "4711"
+
+    START_LIEFERBEGINN:
+      type: object
+      properties:
+        eventId:
+          type: string
+          example: "123123"     
+        eventName:
+          type: string
+          example: START_LIEFERBEGINN       
+        lokationsId:
+          type: string
+          example: "50074561188"
+        lokationsTyp:
+          type: string
+          example: MALO
+          enum:
+            - MALO
+            - MELO
+            - NELO
+            - TECHNISCHE_RESSOURCE          
+        lieferbeginndatum:
+          type: string
+          format: date-time
+          example: "2024-06-28T12:18:00Z" 
+          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+        empfaengerNB:
+          $ref: '#/components/schemas/Marktpartner'
+        eigenerSA:
+          type: string
+          example: "9903790000002"
+        eigenerSARolle:
+          type: string
+          example: NB
+          enum:
+            - NB
+            - LF
+            - MSB
+            - MSBA
+            - GMSB
+            - MDL
+            - DL
+            - BKV
+            - BKO
+            - UENB
+            - KUNDE-SELBST-NN
+            - MGV
+            - EIV
+            - RB
+            - KUNDE
+            - INTERESSENT
+            - KN
+            - UBA
+            - BIKO
+            - ESA           
+        belegID:
+          type: string
+          example: "4711"
+    Marktpartner:
+      type: object
+      properties:
+        rollencodenummer::
+          type: string
+          example: "9903790000002"
+        marktrolle:
+          type: string      
+          example: LF
+          enum:
+            - NB
+            - LF
+            - MSB
+            - MSBA
+            - GMSB
+            - MDL
+            - DL
+            - BKV
+            - BKO
+            - UENB
+            - KUNDE-SELBST-NN
+            - MGV
+            - EIV
+            - RB
+            - KUNDE
+            - INTERESSENT
+            - KN
+            - UBA
+            - BIKO
+            - ESA           
