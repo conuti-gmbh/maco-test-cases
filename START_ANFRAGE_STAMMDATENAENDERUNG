@@ -100,7 +100,6 @@
             "geplanteTurnusablesung": {
                 "ableseZeitraum": "${data:jsonPath('$.nnvableseZeitraum'):isEmpty():ifElse('',${data:jsonPath('$.nnvableseZeitraum')})}"
               },
-            "haushaltskunde": ${data:jsonPath('$.haushaltskunde'):isEmpty():ifElse('',${data:jsonPath('$.haushaltskunde')})},
           "korrespondenzpartner": {
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
@@ -170,6 +169,7 @@
         {
           "boTyp": "BILANZIERUNG",
           "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
           "bilanzkreis": "${data:jsonPath('$.bilanzkreis'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzkreis')})}"
         }
       ]
