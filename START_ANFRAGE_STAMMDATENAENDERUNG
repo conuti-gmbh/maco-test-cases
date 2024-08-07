@@ -100,7 +100,6 @@
             "geplanteTurnusablesung": {
                 "ableseZeitraum": "${data:jsonPath('$.nnvableseZeitraum'):isEmpty():ifElse('',${data:jsonPath('$.nnvableseZeitraum')})}"
               },
-            "haushaltskunde": ${data:jsonPath('$.haushaltskunde'):isEmpty():ifElse('',${data:jsonPath('$.haushaltskunde')})},
           "korrespondenzpartner": {
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
