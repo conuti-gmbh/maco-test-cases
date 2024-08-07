@@ -170,6 +170,7 @@
         {
           "boTyp": "BILANZIERUNG",
           "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
           "bilanzkreis": "${data:jsonPath('$.bilanzkreis'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzkreis')})}"
         }
       ]
