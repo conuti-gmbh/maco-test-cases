@@ -11,9 +11,34 @@ servers:
     description: Fake Env 
   - url: https://gateway.gravitee.rcs.lief.makoapp-mps.conuti.dev/core/inproxy/  
     description: LF RCS Gateway
+tags:
+  - name: SLIM EVENTS
+    description: Trigger Event mit Angabe vom Typ und eine BelegId, wo Daten nachgelesen werden können.
+    x-description-i18n: 
+  - name: FAT EVENTS
+    description: Trigger Events, die alle notwendigen Informationen enthalten, wo Daten nachgelesen werden können.
 paths:
+  /EVENT_MIT_BELEGID:
+    post:
+      tags: 
+        -  SLIM EVENTS
+      summary: EVENT_MIT_BELEGID
+      description: Event aus der MCS beim Nachrichteneingang
+      operationId: startSperrauftrag
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EVENT_MIT_BELEGID'
+      responses:
+        '200':
+          description: Erfolgreiche Übermittlung des Events
+
   /START_SPERRAUFTRAG:
     post:
+      tags: 
+        -  FAT EVENTS
       summary: START_SPERRAUFTRAG
       description: Event aus der MCS beim Nachrichteneingang
       operationId: startSperrauftrag
@@ -25,10 +50,12 @@ paths:
               $ref: '#/components/schemas/START_SPERRAUFTRAG'
       responses:
         '200':
-          description: Erfolgreiche Verarbeitung des Ereignisses
+          description: Erfolgreiche Übermittlung des Events
 
   /START_NEUANLAGE:
     post:
+      tags: 
+        -  FAT EVENTS
       summary: START_NEUANLAGE
       description: Event für die Anmeldung einer Neuanlage
       operationId: startNeulanage
@@ -40,10 +67,12 @@ paths:
               $ref: '#/components/schemas/START_NEUANLAGE'
       responses:
         '200':
-          description: Erfolgreiche Verarbeitung des Ereignisses
+          description: Erfolgreiche Übermittlung des Eventss
           
   /START_PARTIN:
     post:
+      tags: 
+        -  FAT EVENTS
       summary: START_PARTIN
       description: Erfassung / Änderung eigener SA / Kommunikationsdaten. Manuelle Auslösung Partin
       operationId: startPartin
@@ -55,9 +84,11 @@ paths:
               $ref: '#/components/schemas/START_PARTIN'
       responses:
         '200':
-          description: Erfolgreiche Verarbeitung des Ereignisses
+          description: Erfolgreiche Übermittlung des Events
   /START_LASTGANG:
     post:
+      tags: 
+        -  FAT EVENTS
       summary: START_LASTGANG
       description: Erfassung / Änderung Lastgang an makorelevanter Lieferstelle
       operationId: startLastgang
@@ -69,9 +100,11 @@ paths:
               $ref: '#/components/schemas/START_LASTGANG'
       responses:
         '200':
-          description: Erfolgreiche Verarbeitung des Ereignisses
+          description: Erfolgreiche Übermittlung des Events
   /START_ZAEHLERSTAND:
     post:
+      tags: 
+        -  FAT EVENTS
       summary: START_ZAEHLERSTAND
       description: Erfassung / Änderung / Freigabe eines Zählerstand an makorelevanter Lieferstelle
       operationId: startZaehlerstand
@@ -83,9 +116,11 @@ paths:
               $ref: '#/components/schemas/START_ZAEHLERSTAND'
       responses:
         '200':
-          description: Erfolgreiche Verarbeitung des Ereignisses
+          description: Erfolgreiche Übermittlung des Events
   /START_ENERGIEMENGE:
     post:
+      tags: 
+        -  FAT EVENTS
       summary: START_ENERGIEMENGE
       description: Erzeugung einer Energiemenge an makorelevanter Lieferstelle
       operationId: startEnergiemenge
@@ -97,9 +132,11 @@ paths:
               $ref: '#/components/schemas/START_ENERGIEMENGE'
       responses:
         '200':
-          description: Erfolgreiche Verarbeitung des Ereignisses
+          description: Erfolgreiche Übermittlung des Events
   /AENDERUNG_SD:
     post:
+      tags: 
+        -  FAT EVENTS
       summary: AENDERUNG_SD
       description: Änderung der Stammdaten einer Lokation
       operationId: aenderungSd
@@ -111,9 +148,11 @@ paths:
               $ref: '#/components/schemas/AENDERUNG_SD'
       responses:
         '200':
-          description: Erfolgreiche Verarbeitung des Ereignisses
+          description: Erfolgreiche Übermittlung des Events
   /AENDERUNG_AD:
     post:
+      tags: 
+        -  FAT EVENTS
       summary: AENDERUNG_AD
       description: Änderung der Abrechnungsdaten einer Lokation
       operationId: aenderungAd
@@ -125,9 +164,11 @@ paths:
               $ref: '#/components/schemas/AENDERUNG_AD'
       responses:
         '200':
-          description: Erfolgreiche Verarbeitung des Ereignisses
+          description: Erfolgreiche Übermittlung des Events
   /START_KUENDIGUNG:
     post:
+      tags: 
+        -  FAT EVENTS
       summary: START_KUENDIGUNG
       description: Start des Prozesses Kündigung an LFA
       operationId: startKuendigung
@@ -139,9 +180,11 @@ paths:
               $ref: '#/components/schemas/START_KUENDIGUNG'
       responses:
         '200':
-          description: Erfolgreiche Verarbeitung des Ereignisses
+          description: Erfolgreiche Übermittlung des Events
   /START_LIEFERBEGINN:
     post:
+      tags: 
+        -  FAT EVENTS
       summary: START_LIEFERBEGINN
       description: Start des Prozess Lieferbeginn an NB
       operationId: startLieferbeginn
@@ -153,7 +196,7 @@ paths:
               $ref: '#/components/schemas/START_LIEFERBEGINN'
       responses:
         '200':
-          description: Erfolgreiche Verarbeitung des Ereignisses
+          description: Erfolgreiche Übermittlung des Events
 
 components:
   schemas:
@@ -666,3 +709,54 @@ components:
             - UBA
             - BIKO
             - ESA           
+
+    EVENT_MIT_BELEGID:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "110000000408"      
+        eventName:
+          type: string
+          example: START_LIEFERBEGINN   
+          enum:
+            - START_LIEFERBEGINN
+            - START_ABR_NN
+            - START_DEFINITION_SCHALTZEIT
+            - START_DEFINITION_LEISTUNGSKURVE
+            - START_DEFINITION_ZÄHLZEIT
+            - START_KUENDIGUNG
+            - START_ERHEBUNG_MESSWERTE
+            - START_AEND_MALO_STRUKTUR_LF
+            - START_AEND_NNA_MALO
+            - START_AEND_ABR_BLINDARBEIT
+            - START_AEND_PROGNOSEGRUNDLAGE
+            - START_BILA_REL_AEND_VON_NB_MIT_ABHAENGIGK
+            - START_N_BILA_REL_AEND_VON_NB
+            - START_N_BILA_REL_AEND_VON_LF
+            - START_N_BILA_REL_ANFR_ABR_BLINDARBEIT_AN_LF
+            - START_BILA_REL_ANFR_AN_LF
+            - START_N_BILA_REL_ANFR_AN_LF
+            - START_N_BILA_REL_ANFR_AN_MSB_OHNE_ABHAENGIGK
+            - START_ANFR_AN_MSB_MIT_ABHAENGIGK
+            - START_BESTELLUNG_ZAEHLZEITDEFINITION
+            - START_BESTELLUNG_ANGEBOT_KONFIGURATION
+            - START_BESTELLUNG_KONFIGURATION
+            - START_VERSAND_STORNO_MSCONS
+            - START_VERSAND_LIEFERSCHEIN
+            - START_VERSAND_COMDIS
+            - START_LIEFERENDE
+            - START_UEBERSICHT_ZAEHLZEITDEF
+            - START_UEBERSICHT_SCHALTZEITDEF
+            - START_UEBERSICHT_LEISTUNGSKURVENDEF
+            - START_ANFRAGE_STAMMDATEN_MALO
+            - START_ANFRAGE_MESSWERTE
+            - START_ANFRAGE_STAMMDATEN_TRANCHE
+            - START_EOG
+            - START_VERSAND_BEENDIGUNG_AGV
+            - START_VERSAND_ANF_STORNO
+            - START_PREISBLATT
+            - START_LIEFERBEGINN
+            - START_AUFTRAGSSTATUS
+            - START_ANFRAGE_STAMMDATENAENDERUNG
+            - START_UEBERM_DEFINITION

@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
-  title: MACO APP - Virtuelle lesende Schnittstellen
-  x-title-i18n:
-  description: Lesende Schnittstellen aus Sicht der Marktprozesse
+  title: MACO APP - erforderliche ERP Schnittstellen
+  x-title-i18n: MACO APP - needed ERP interfaces
+  description: Übersicht der erforderlichen BO4E- und Prozesschnittstellen, die die MACO APP für die Ausführung der Marktprozesse benötigt.
   x-description-i18n:
   version: '1.0'
   license:
