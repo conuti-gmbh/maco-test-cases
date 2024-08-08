@@ -190,8 +190,31 @@
           "boTyp": "BILANZIERUNG",
           "versionStruktur": "1",
           "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
-          "bilanzkreis": "${data:jsonPath('$.bilanzkreis'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzkreis')})}"
+          "bilanzkreis": "${data:jsonPath('$.bilanzkreis'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzkreis')})}",
+          "lastprofile": [
+            {
+              "bezeichnung": "${data:jsonPath('$.bezeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.bezeichnung')})}"",
+              "verfahren": "${data:jsonPath('$.verfahren'):isEmpty():ifElse('null',${data:jsonPath('$.verfahren')})}"",
+              "einspeisung": ${data:jsonPath('$.einspeisung'):isEmpty():ifElse('null',${data:jsonPath('$.einspeisung')})}",
+              "tagesparameter": {
+                "temperaturmessstelle": "${data:jsonPath('$.temperaturmessstelle'):isEmpty():ifElse('null',${data:jsonPath('$.temperaturmessstelle')})}"",
+                "dienstanbieter": "${data:jsonPath('$.dienstanbieter'):isEmpty():ifElse('null',${data:jsonPath('$.dienstanbieter')})}"",
+                "herausgeber": "${data:jsonPath('$.herausgeber'):isEmpty():ifElse('null',${data:jsonPath('$.herausgeber')})}""
+              },
+              "profilart": "${data:jsonPath('$.profilart'):isEmpty():ifElse('null',${data:jsonPath('$.profilart')})}"",
+              "herausgeber": "${data:jsonPath('$.herausgeber'):isEmpty():ifElse('null',${data:jsonPath('$.herausgeber')})}""
+            }
+          ],
+          "jahresverbrauchsprognose": {
+            "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse('',${data:jsonPath('$.wert')})}",
+            "einheit": "${data:jsonPath('$.einheit'):isEmpty():ifElse('null',${data:jsonPath('$.einheit')})}""
+          },
+          "kundenwert": {
+            "wert": ${data:jsonPath('$.wertk'):isEmpty():ifElse('null',${data:jsonPath('$.wertk')})}"
+          },
+          "prognosegrundlage": "${data:jsonPath('$.prognosegrundlage'):isEmpty():ifElse('null',${data:jsonPath('$.prognosegrundlage')})}""
         }
+          
       ],
       "ZAEHLER": [
         {
