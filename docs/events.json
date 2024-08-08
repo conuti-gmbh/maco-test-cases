@@ -31,6 +31,83 @@
     }
   ],
   "paths": {
+    "/inbound": {
+      "post": {
+          "summary": "Trigger Events",
+          "deprecated": false,
+          "description": "reeive Event From Backend",
+          "operationId": "inbound",
+          "tags": [],
+          "parameters": [],
+          "requestBody": {
+              "content": {
+                  "application/json": {
+                      "schema": {
+                          "oneOf": [
+                              {
+                                  "$ref": "#/components/schemas/START_SPERRAUFTRAG"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/START_NEUANLAGE"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/START_PARTIN"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/START_LIEFERBEGINN"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/START_KUENDIGUNG"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/START_ZAEHLERSTAND"
+                              }
+                          ]
+                      },
+                      "example": ""
+                  }
+              }
+          },
+          "responses": {
+              "200": {
+                  "description": "Success",
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "type": "object",
+                              "properties": {
+                                  "businessKey": {
+                                      "type": "string",
+                                      "format": "uuid"
+                                  },
+                                  "message": {
+                                      "type": "string",
+                                      "examples": [
+                                          "received event START_LIEFERBEGINN with id  at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                                      ]
+                                  }
+                              },
+                              "required": [
+                                  "businessKey",
+                                  "message"
+                              ]
+                          },
+                          "examples": {
+                              "1": {
+                                  "summary": "Success",
+                                  "value": {
+                                      "businessKey": "4c7170ed-3518-41ee-8582-39ab65b00107",
+                                      "message": "received event START_LIEFERBEGINN with id  at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          },
+          "security": []
+      }
+  },    
     "/EVENT_MIT_BELEGID": {
       "post": {
         "tags": [
