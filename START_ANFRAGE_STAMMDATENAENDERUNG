@@ -62,7 +62,27 @@
               "rollencodenummer": "${data:jsonPath('$.gmsbrollencodenummer'):isEmpty():ifElse('null',${data:jsonPath('$.gmsbrollencodenummer')})}",
               "marktrolle": "${data:jsonPath('$.gmsbmarktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.gmsbmarktrolle')})}"
             }
-          ]
+          ],
+          "ablesekartenempfaenger": {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "anrede": "${data:jsonPath('$.aanrede'):isEmpty():ifElse('null',${data:jsonPath('$.aanrede')})}",
+            "name1": "${data:jsonPath('$.aname1'):isEmpty():ifElse('null',${data:jsonPath('$.aname1')})}",
+            "name2": "${data:jsonPath('$.aname2'):isEmpty():ifElse('null',${data:jsonPath('$.aname2')})}",
+            "name3": "${data:jsonPath('$.aname3'):isEmpty():ifElse('null',${data:jsonPath('$.aname3')})}",
+            "name4": "${data:jsonPath('$.aname4'):isEmpty():ifElse('null',${data:jsonPath('$.aname4')})}",
+            "gewerbekennzeichnung": ${data:jsonPath('$.agewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.agewerbekennzeichnung')})},
+            "geschaeftspartnerrolle": [
+              "${data:jsonPath('$.ageschaeftspartnerrolle'):isEmpty():ifElse('null',${data:jsonPath('$.ageschaeftspartnerrolle')})}"
+            ],
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.apostleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.apostleitzahl')})}",
+              "ort": "${data:jsonPath('$.aort'):isEmpty():ifElse('null',${data:jsonPath('$.aort')})}",
+              "strasse": "${data:jsonPath('$.astrasse'):isEmpty():ifElse('null',${data:jsonPath('$.astrasse')})}.",
+              "hausnummer": "${data:jsonPath('$.ahausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.ahausnummer')})}",
+              "landescode": "${data:jsonPath('$.alandescode'):isEmpty():ifElse('null',${data:jsonPath('$.alandescode')})}"
+            }
+          }
         }
       ],
       "MESSSTELLENBETRIEBSVERTRAG": [
@@ -172,6 +192,55 @@
           "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
           "bilanzkreis": "${data:jsonPath('$.bilanzkreis'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzkreis')})}"
         }
+      ],
+      "ZAEHLER": [
+        {
+          "boTyp": "ZAEHLER",
+          "versionStruktur": "1",
+          "zaehlernummer": "${data:jsonPath('$.zaehlernummer'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlernummer')})}",
+          "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zaehlertyp": "${data:jsonPath('$.zaehlertyp'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlertyp')})}",
+          "zaehlwerke": [
+            {
+              "bezeichnung": "${data:jsonPath('$.bezeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.bezeichnung')})}",
+              "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
+              "vorkommastelle": ${data:jsonPath('$.vorkommastelle'):isEmpty():ifElse('',${data:jsonPath('$.vorkommastelle')})},
+              "nachkommastelle": ${data:jsonPath('$.nachkommastelle'):isEmpty():ifElse('',${data:jsonPath('$.nachkommastelle')})},
+              "wertegranularitaet": "${data:jsonPath('$.wertegranularitaet'):isEmpty():ifElse('null',${data:jsonPath('$.wertegranularitaet')})}"
+            }
+          ],
+          "messwerterfassung": "${data:jsonPath('$.messwerterfassung'):isEmpty():ifElse('null',${data:jsonPath('$.messwerterfassung')})}",
+          "zaehlergroesse": "${data:jsonPath('$.zaehlergroesse'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlergroesse')})}",
+          "geraete": [
+            {
+              "geraetenummer": "${data:jsonPath('$.geraetenummer1'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer1')})}",
+              "geraeteeigenschaften": {
+                "geraetetyp": "${data:jsonPath('$.geraetetyp1'):isEmpty():ifElse('null',${data:jsonPath('$.geraetetyp1')})}"
+              }
+            },
+            {
+              "geraetenummer": "${data:jsonPath('$.geraetenummer2'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer2')})}",
+              "geraeteeigenschaften": {
+                "geraetetyp": "${data:jsonPath('$.geraetetyp2'):isEmpty():ifElse('null',${data:jsonPath('$.geraetetyp2')})}",
+                "geraetemerkmal": "${data:jsonPath('$.geraetemerkmal2'):isEmpty():ifElse('null',${data:jsonPath('$.geraetemerkmal2')})}"
+              }
+            },
+            {
+              "geraetenummer": "${data:jsonPath('$.geraetenummer3'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer3')})}",
+              "geraeteeigenschaften": {
+                "geraetetyp": "${data:jsonPath('$.geraetetyp3'):isEmpty():ifElse('null',${data:jsonPath('$.geraetetyp3')})}",
+                "geraetemerkmal": "${data:jsonPath('$.geraetemerkmal3'):isEmpty():ifElse('null',${data:jsonPath('$.geraetemerkmal3')})}"
+              }
+            },
+            {
+              "geraetenummer": "${data:jsonPath('$.geraetenummer4'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer4')})}",
+              "geraeteeigenschaften": {
+                "geraetetyp": "${data:jsonPath('$.geraetetyp4'):isEmpty():ifElse('null',${data:jsonPath('$.geraetetyp4')})}"
+              }
+            }
+          ]
+        }
       ]
     },
     "transaktionsdaten": {
@@ -186,6 +255,7 @@
       },
       "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}",
       "gueltigAb": "${data:jsonPath('$.gueltigAb'):isEmpty():ifElse('',${data:jsonPath('$.gueltigAb')})}",
+      "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('',${data:jsonPath('$.vertragsbeginn')})}",
       "bilanzkreis": [
         {
           "bezeichnung": "${data:jsonPath('$.bezeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.bezeichnung')})}"
