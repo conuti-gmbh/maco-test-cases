@@ -12,7 +12,7 @@
       {
         "boTyp": "VERTRAG",
         "versionStruktur": "1",
-        "vertragsart": "${data:jsonPath('$.vertragsart'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsart')})}",
+        "vertragsart": "NETZNUTZUNGSVERTRAG",
         "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
         "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('',${data:jsonPath('$.vertragsbeginn')})}",
         "vertragsende": "${data:jsonPath('$.vertragsende'):isEmpty():ifElse('',${data:jsonPath('$.vertragsende')})}"
