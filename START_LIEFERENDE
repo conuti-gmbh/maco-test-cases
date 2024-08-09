@@ -11,7 +11,7 @@
     "NETZNUTZUNGSVERTRAG": [
       {
         "boTyp": "VERTRAG",
-        "versionStruktur": "1",
+        "versionStruktur": "2",
         "vertragsart": "NETZNUTZUNGSVERTRAG",
         "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
         "vertragsende": "${data:jsonPath('$.vertragsende'):isEmpty():ifElse('',${data:jsonPath('$.vertragsende')})}"
