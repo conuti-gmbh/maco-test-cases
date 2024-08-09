@@ -17,7 +17,7 @@
           "verguetungEmpfaenger": "${data:jsonPath('$.verguetungEmpfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.verguetungEmpfaenger')})}",
           "bildungTranchengroesse": "${data:jsonPath('$.bildungTranchengroesse'):isEmpty():ifElse('null',${data:jsonPath('$.bildungTranchengroesse')})}",
           "aufteilungsmenge": {
-            "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse('null',${data:jsonPath('$.wert')})},
+            "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse(null,${data:jsonPath('$.wert')})},
             "einheit": "${data:jsonPath('$.einheit'):isEmpty():ifElse('null',${data:jsonPath('$.einheit')})}"
           }
         }
@@ -36,7 +36,7 @@
           "versionStruktur": "1",
           "vertragsart": "NETZNUTZUNGSVERTRAG",
           "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsbeginn')})}",
-          "vertragsende": ${data:jsonPath('$.vertragsende'):isEmpty():ifElse('null',\"${data:jsonPath('$.vertragsende')}\")},
+          "vertragsende": ${data:jsonPath('$.vertragsende'):isEmpty():ifElse('null',"${data:jsonPath('$.vertragsende')}")},
           "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
           "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
           "lokationsTyp": "MALO",
