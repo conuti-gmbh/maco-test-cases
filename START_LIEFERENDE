@@ -14,14 +14,16 @@
         "versionStruktur": "1",
         "vertragsart": "NETZNUTZUNGSVERTRAG",
         "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
-        "vertragsende": "${data:jsonPath('$.vertragsende'):isEmpty():ifElse('',${data:jsonPath('$.vertragsende')})}"
+        "vertragsende": "${data:jsonPath('$.vertragsende'):isEmpty():ifElse('',${data:jsonPath('$.vertragsende')})}",
+        "vertragsbeginn": ${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('',"${data:jsonPath('$.vertragsbeginn')}")}
       }
     ],
     "BILANZIERUNG": [
       {
         "boTyp": "BILANZIERUNG",
         "versionStruktur": "1",
-        "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+        "bilanzierungsende": ${data:jsonPath('$.bilanzierungsende'):isEmpty():ifElse('',"${data:jsonPath('$.bilanzierungsende')}")}
       }
     ]
   },
