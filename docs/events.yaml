@@ -1,724 +1,426 @@
 openapi: 3.0.0
 info:
   title: Trigger Event API
-  description: API zum Auslösen von ausgehenden Prozessen in der MACO APP
-  version: 1.0.0
-  license:
-    name: MIT
-    url: https://opensource.org/licenses/MIT
+  description: |
+    API zum Auslösen von ausgehenden Prozessen in der MACO APP | API for triggering outbound maco processes in the MACO APP
+
+    <details>
+    <summary>Changelog</summary>
+
+    **Version 1.0.1** - *08. August 2024* - _Autor: DAS_
+
+    - Erweiterung der API um zusätzliche Schemas und Beispiele.
+    - Hinzugefügte Schemas: `START_LIEFERBEGINN_STROM`, `START_LIEFERBEGINN_GAS`, `START_ABR_NN`, `START_DEFINITION_SCHALTZEIT`, `START_DEFINITION_LEISTUNGSKURVE`, `START_DEFINITION_ZAEHLZEIT`, `START_KUENDIGUNG`.
+
+    **Version 1.0.0** - *01. August 2024* - _Autor: DAS_
+
+    - Initiale Veröffentlichung der API mit dem `START_SPERRAUFTRAG`-Schema.
+
+    </details>
+  version: 1.0.1
 servers:
   - url: https://api.macoapp.de
-    description: Fake Env 
-  - url: https://gateway.gravitee.rcs.lief.makoapp-mps.conuti.dev/core/inproxy/  
-    description: LF RCS Gateway
+    description: Fake Env
 tags:
   - name: SLIM EVENTS
-    description: Trigger Event mit Angabe vom Typ und eine BelegId, wo Daten nachgelesen werden können.
-    x-description-i18n: 
-  - name: FAT EVENTS
-    description: Trigger Events, die alle notwendigen Informationen enthalten, wo Daten nachgelesen werden können.
+    description: Trigger Event mit Angabe vom Typ und einer BelegId, mit der Daten im ERP nachgelesen werden können. | Trigger event with specification of the type and a document ID where data can be read in the backend.
+  - name: EXTENDED EVENTS
+    description: | 
+      Trigger Events, die alle notwendigen Informationen enthalten, ohne Daten nachlesen zu müssen. | Trigger events that contain all necessary information.
+      *Die erweiterten Events dokumentieren welche Parameter ein Event eines bestimmten Type enthalten kann und mindestens muss* | *The extended events document which parameters an event of a certain type can and at least must contain.*
 paths:
-  /EVENT_MIT_BELEGID:
+  /inbound[SLIM]:
     post:
+      summary: Trigger Events
+      deprecated: false
+      description: Erhalte Event vom Backend | Receive Event From Backend
+      operationId: inboundSlim
       tags: 
-        -  SLIM EVENTS
-      summary: EVENT_MIT_BELEGID
-      description: Event aus der MCS beim Nachrichteneingang
-      operationId: startSperrauftrag
+        - SLIM EVENTS
+      parameters: []
       requestBody:
-        required: true
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/EVENT_MIT_BELEGID'
       responses:
-        '200':
-          description: Erfolgreiche Übermittlung des Events
-
-  /START_SPERRAUFTRAG:
+        '201':
+          description: Erfolg | Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  businessKey:
+                    type: string
+                    format: uuid
+                    description: Einzigartige Kennung des Geschäftsprozesses | Unique identifier of the business process
+                  message:
+                    type: string
+                    example: "received event START_LIEFERBEGINN_STROM with id at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                    description: Nachricht mit Details zum ausgelösten Event | Message with details about the triggered event
+                required:
+                  - businessKey
+                  - message
+      security: []
+  /inbound[EXTENDED]:
     post:
+      summary: Trigger Events
+      deprecated: false
+      description: Erhalte Event vom Backend | Receive Event From Backend
+      operationId: inbound
       tags: 
-        -  FAT EVENTS
-      summary: START_SPERRAUFTRAG
-      description: Event aus der MCS beim Nachrichteneingang
-      operationId: startSperrauftrag
+        - EXTENDED EVENTS
+      parameters: []
       requestBody:
-        required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/START_SPERRAUFTRAG'
+              oneOf:
+                - $ref: '#/components/schemas/START_SPERRAUFTRAG'
+                - $ref: '#/components/schemas/START_LIEFERBEGINN_STROM'
+                - $ref: '#/components/schemas/START_LIEFERBEGINN_GAS'
+                - $ref: '#/components/schemas/START_ABR_NN'
+                - $ref: '#/components/schemas/START_DEFINITION_SCHALTZEIT'
+                - $ref: '#/components/schemas/START_DEFINITION_LEISTUNGSKURVE'
+                - $ref: '#/components/schemas/START_DEFINITION_ZAEHLZEIT'
+                - $ref: '#/components/schemas/START_KUENDIGUNG'
+            examples:
+              START_SPERRAUFTRAG:
+                $ref: '#/components/examples/START_SPERRAUFTRAG'
+              START_LIEFERBEGINN_STROM:
+                $ref: '#/components/examples/START_LIEFERBEGINN_STROM'
+              START_LIEFERBEGINN_GAS:
+                $ref: '#/components/examples/START_LIEFERBEGINN_GAS'
+              START_ABR_NN:
+                $ref: '#/components/examples/START_ABR_NN'
+              START_DEFINITION_SCHALTZEIT:
+                $ref: '#/components/examples/START_DEFINITION_SCHALTZEIT'
+              START_DEFINITION_LEISTUNGSKURVE:
+                $ref: '#/components/examples/START_DEFINITION_LEISTUNGSKURVE'
+              START_DEFINITION_ZAEHLZEIT:
+                $ref: '#/components/examples/START_DEFINITION_ZAEHLZEIT'
+              START_KUENDIGUNG:
+                $ref: '#/components/examples/START_KUENDIGUNG'
       responses:
-        '200':
-          description: Erfolgreiche Übermittlung des Events
-
-  /START_NEUANLAGE:
-    post:
-      tags: 
-        -  FAT EVENTS
-      summary: START_NEUANLAGE
-      description: Event für die Anmeldung einer Neuanlage
-      operationId: startNeulanage
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/START_NEUANLAGE'
-      responses:
-        '200':
-          description: Erfolgreiche Übermittlung des Eventss
-          
-  /START_PARTIN:
-    post:
-      tags: 
-        -  FAT EVENTS
-      summary: START_PARTIN
-      description: Erfassung / Änderung eigener SA / Kommunikationsdaten. Manuelle Auslösung Partin
-      operationId: startPartin
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/START_PARTIN'
-      responses:
-        '200':
-          description: Erfolgreiche Übermittlung des Events
-  /START_LASTGANG:
-    post:
-      tags: 
-        -  FAT EVENTS
-      summary: START_LASTGANG
-      description: Erfassung / Änderung Lastgang an makorelevanter Lieferstelle
-      operationId: startLastgang
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/START_LASTGANG'
-      responses:
-        '200':
-          description: Erfolgreiche Übermittlung des Events
-  /START_ZAEHLERSTAND:
-    post:
-      tags: 
-        -  FAT EVENTS
-      summary: START_ZAEHLERSTAND
-      description: Erfassung / Änderung / Freigabe eines Zählerstand an makorelevanter Lieferstelle
-      operationId: startZaehlerstand
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/START_ZAEHLERSTAND'
-      responses:
-        '200':
-          description: Erfolgreiche Übermittlung des Events
-  /START_ENERGIEMENGE:
-    post:
-      tags: 
-        -  FAT EVENTS
-      summary: START_ENERGIEMENGE
-      description: Erzeugung einer Energiemenge an makorelevanter Lieferstelle
-      operationId: startEnergiemenge
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/START_ENERGIEMENGE'
-      responses:
-        '200':
-          description: Erfolgreiche Übermittlung des Events
-  /AENDERUNG_SD:
-    post:
-      tags: 
-        -  FAT EVENTS
-      summary: AENDERUNG_SD
-      description: Änderung der Stammdaten einer Lokation
-      operationId: aenderungSd
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/AENDERUNG_SD'
-      responses:
-        '200':
-          description: Erfolgreiche Übermittlung des Events
-  /AENDERUNG_AD:
-    post:
-      tags: 
-        -  FAT EVENTS
-      summary: AENDERUNG_AD
-      description: Änderung der Abrechnungsdaten einer Lokation
-      operationId: aenderungAd
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/AENDERUNG_AD'
-      responses:
-        '200':
-          description: Erfolgreiche Übermittlung des Events
-  /START_KUENDIGUNG:
-    post:
-      tags: 
-        -  FAT EVENTS
-      summary: START_KUENDIGUNG
-      description: Start des Prozesses Kündigung an LFA
-      operationId: startKuendigung
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/START_KUENDIGUNG'
-      responses:
-        '200':
-          description: Erfolgreiche Übermittlung des Events
-  /START_LIEFERBEGINN:
-    post:
-      tags: 
-        -  FAT EVENTS
-      summary: START_LIEFERBEGINN
-      description: Start des Prozess Lieferbeginn an NB
-      operationId: startLieferbeginn
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/START_LIEFERBEGINN'
-      responses:
-        '200':
-          description: Erfolgreiche Übermittlung des Events
+        '201':
+          description: Erfolg | Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  businessKey:
+                    type: string
+                    format: uuid
+                    description: Einzigartige Kennung des Geschäftsprozesses | Unique identifier of the business process
+                  message:
+                    type: string
+                    example: "received event START_LIEFERBEGINN_STROM with id at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                    description: Nachricht mit Details zum ausgelösten Event | Message with details about the triggered event
+                required:
+                  - businessKey
+                  - message
+      security: []
 
 components:
   schemas:
     START_SPERRAUFTRAG:
       type: object
-      properties:
-        eventId:
-          type: string
-          example: "STARTSPERRAUFTRAG1"      
-        eventName:
-          type: string
-          example: "START_SPERRAUFTRAG"     
-        marktlokationsId:
-          type: string
-          example: "50000083216"    
-        sparte:
-          type: string
-          example: "STROM"   
-        absenderRollencodenummer:
-          type: string
-          example: "9903790000002"    
-        empfaengerRollencodenummer:
-          type: string
-          example: "9900321000005"                                          
-
-    START_NEUANLAGE:
-      type: object
-      properties:
-        eventId:
-          type: string
-          example: "STARTNEUANLAGE1"
-        eventName:
-          type: string
-          example: "START_NEUANLAGE"
-        marktlokationsId:
-          type: string
-          example: "1234567890"
-        sparte:
-          type: string
-          example: "ELEKTRIZITAET"
-        energierichtung:
-          type: string
-          example: "ABGANG"
-        vertragsbeginn:
-          type: string
-          example: "2023-01-01T00:00:00Z"
-        vertragsende:
-          type: string
-          example: "2024-07-01T00:00:00Z"
-        haushaltskunde:
-          type: boolean
-          example: true
-        gewerbekennzeichnung:
-          type: boolean
-          example: true
-        vpanrede:
-          type: string
-          example: "Herr"
-        vpname1:
-          type: string
-          example: "Mustermann"
-        vpname2:
-          type: string
-          example: "Max"
-        kename2:
-          type: string
-          example: "Musterfirma"
-        kegewerbekennzeichnung:
-          type: boolean
-          example: true
-        keplz:
-          type: string
-          example: "12345"
-        keort:
-          type: string
-          example: "Musterstadt"
-        kestrasse:
-          type: string
-          example: "Musterstrasse"
-        kehaushnummer:
-          type: string
-          example: "10"
-        kelandescode:
-          type: string
-          example: "DE"
-        keortsteil:
-          type: string
-          example: "Zentrum"
-        empfaengerRollencodenummer:
-          type: string
-          example: "9900321000005"
-        transaktonsgrund:
-          type: string
-          example: "Z02"
-        transaktionsgrundergaenzung:
-          type: string
-          example: "E03"
-        transaktionsgrundergaenzungBefristeteAnmeldung:
-          type: string
-          example: "E03"
-        absenderRollencodenummer:
-          type: string
-          example: "9903790000002"      
-
-    START_PARTIN:
-      type: object
-      properties:
-        eventId:
-          type: string
-          example: "123123"      
-        eventName:
-          type: string
-          example: START_PARTIN          
-        empfaenger:
-          $ref: '#/components/schemas/Marktpartner'
-        eigenerSA:
-          type: string
-          example: "9903790000002"
-        eigenerSARolle:
-          type: string
-          example: NB
-          enum:
-            - NB
-            - LF
-            - MSB
-            - MSBA
-            - GMSB
-            - MDL
-            - DL
-            - BKV
-            - BKO
-            - UENB
-            - KUNDE-SELBST-NN
-            - MGV
-            - EIV
-            - RB
-            - KUNDE
-            - INTERESSENT
-            - KN
-            - UBA
-            - BIKO
-            - ESA          
-
-    START_LASTGANG:
-      type: object
-      properties:
-        eventId:
-          type: string
-          example: "124"          
-        eventName:
-          type: string
-          example: START_LASTGANG      
-        lokationsId:
-          type: string
-          example: "50074561188"
-        lokationsTyp:
-          type: string
-          example: MALO
-          enum:
-            - MALO
-            - MELO
-            - NELO
-            - TECHNISCHE_RESSOURCE             
-        obisKennzahl:
-          type: string
-          example: 1-1:1.9.0
-        zeitraumVon:
-          type: string
-          format: date-time
-          example: "2024-06-28T12:18:00Z" 
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
-        zeitraumBis:
-          type: string
-          format: date-time
-          example: "2024-06-28T12:18:00Z" 
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
-        absender:
-          $ref: '#/components/schemas/Marktpartner'
-        empfaenger:
-          $ref: '#/components/schemas/Marktpartner'
-
-    START_ZAEHLERSTAND:
-      type: object
-      properties:
-        eventId:
-          type: string
-          example: "123123"      
-        eventName:
-          type: string
-          example: START_ZAEHLERSTAND           
-        lokationsId:
-          type: string
-          example: "50074561188"
-        lokationsTyp:
-          type: string
-          example: MALO
-          enum:
-            - MALO
-            - MELO
-            - NELO
-            - TECHNISCHE_RESSOURCE             
-        obisKennzahl:
-          type: string
-          example: 1-1:1.9.0
-        zeitraumVon:
-          type: string
-          format: date-time
-          example: "2024-06-28T12:18:00Z" 
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
-        zeitraumBis:
-          type: string
-          format: date-time
-          example: "2024-06-28T12:18:00Z" 
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
-        absender:
-          $ref: '#/components/schemas/Marktpartner'
-        empfaenger:
-          $ref: '#/components/schemas/Marktpartner'
-
-    START_ENERGIEMENGE:
-      type: object
-      properties:
-        eventId:
-          type: string
-          example: "123123"      
-        eventName:
-          type: string
-          example: START_ENERGIEMENGE               
-        lokationsId:
-          type: string
-          example: "50074561188"
-        lokationsTyp:
-          type: string
-          example: MALO
-          enum:
-            - MALO
-            - MELO
-            - NELO
-            - TECHNISCHE_RESSOURCE             
-        obisKennzahl:
-          type: string
-          example: 1-1:1.9.0
-        zeitraumVon:
-          type: string
-          format: date-time
-          example: "2024-06-28T12:18:00Z" 
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
-        zeitraumBis:
-          type: string
-          format: date-time
-          example: "2024-06-28T12:18:00Z" 
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
-        absender:
-          $ref: '#/components/schemas/Marktpartner'
-        empfaenger:
-          $ref: '#/components/schemas/Marktpartner'
-
-    AENDERUNG_SD:
-      type: object
-      properties:
-        eventId:
-          type: string
-          example: "123123"      
-        eventName:
-          type: string
-          example: AENDERUNG_SD          
-        lokationsId:
-          type: string
-          example: "50074561188"
-        lokationsTyp:
-          type: string
-          example: MALO
-          enum:
-            - MALO
-            - MELO
-            - NELO
-            - TECHNISCHE_RESSOURCE             
-        aenderungGueltigAb:
-          type: string
-          format: date-time
-          example: "2024-06-28T12:18:00Z" 
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
-        empfaenger:
-          $ref: '#/components/schemas/Marktpartner'
-        eigenerSA:
-          type: string
-          example: "9903790000002"
-        eigenerSARolle:
-          type: string
-          example: NB
-          enum:
-            - NB
-            - LF
-            - MSB
-            - MSBA
-            - GMSB
-            - MDL
-            - DL
-            - BKV
-            - BKO
-            - UENB
-            - KUNDE-SELBST-NN
-            - MGV
-            - EIV
-            - RB
-            - KUNDE
-            - INTERESSENT
-            - KN
-            - UBA
-            - BIKO
-            - ESA           
-
-    AENDERUNG_AD:
-      type: object
-      properties:
-        eventId:
-          type: string
-          example: "123123"      
-        eventName:
-          type: string
-          example: AENDERUNG_AD            
-        lokationsId:
-          type: string
-          example: "50074561188"
-        lokationsTyp:
-          type: string
-          example: MALO
-          enum:
-            - MALO
-            - MELO
-            - NELO
-            - TECHNISCHE_RESSOURCE             
-        aenderungGueltigAb:
-          type: string
-          format: date-time
-          example: "2024-06-28T12:18:00Z" 
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
-        empfaenger:
-          $ref: '#/components/schemas/Marktpartner'
-        eigenerSA:
-          type: string
-          example: "9903790000002"
-        eigenerSARolle:
-          type: string
-          example: NB
-          enum:
-            - NB
-            - LF
-            - MSB
-            - MSBA
-            - GMSB
-            - MDL
-            - DL
-            - BKV
-            - BKO
-            - UENB
-            - KUNDE-SELBST-NN
-            - MGV
-            - EIV
-            - RB
-            - KUNDE
-            - INTERESSENT
-            - KN
-            - UBA
-            - BIKO
-            - ESA           
-
-    START_KUENDIGUNG:
-      type: object
-      properties:
-        eventId:
-          type: string
-          example: "123123"      
-        eventName:
-          type: string
-          example: START_KUENDIGUNG        
-        lokationsId:
-          type: string
-          example: "50074561188"
-        lokationsTyp:
-          type: string
-          example: MALO
-          enum:
-            - MALO
-            - MELO
-            - NELO
-            - TECHNISCHE_RESSOURCE             
-        kuendigungsdatum:
-          type: string
-          format: date-time
-          example: "2024-06-28T12:18:00Z" 
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
-        empfaengerLFA:
-          $ref: '#/components/schemas/Marktpartner'
-        eigenerSA:
-          type: string
-          example: "9903790000002"
-        eigenerSARolle:
-          type: string
-          example: NB
-          enum:
-            - NB
-            - LF
-            - MSB
-            - MSBA
-            - GMSB
-            - MDL
-            - DL
-            - BKV
-            - BKO
-            - UENB
-            - KUNDE-SELBST-NN
-            - MGV
-            - EIV
-            - RB
-            - KUNDE
-            - INTERESSENT
-            - KN
-            - UBA
-            - BIKO
-            - ESA           
-        belegID:
-          type: string
-          example: "4711"
-
-    START_LIEFERBEGINN:
-      type: object
-      properties:
-        eventId:
-          type: string
-          example: "123123"     
-        eventName:
-          type: string
-          example: START_LIEFERBEGINN       
-        lokationsId:
-          type: string
-          example: "50074561188"
-        lokationsTyp:
-          type: string
-          example: MALO
-          enum:
-            - MALO
-            - MELO
-            - NELO
-            - TECHNISCHE_RESSOURCE          
-        lieferbeginndatum:
-          type: string
-          format: date-time
-          example: "2024-06-28T12:18:00Z" 
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
-        empfaengerNB:
-          $ref: '#/components/schemas/Marktpartner'
-        eigenerSA:
-          type: string
-          example: "9903790000002"
-        eigenerSARolle:
-          type: string
-          example: NB
-          enum:
-            - NB
-            - LF
-            - MSB
-            - MSBA
-            - GMSB
-            - MDL
-            - DL
-            - BKV
-            - BKO
-            - UENB
-            - KUNDE-SELBST-NN
-            - MGV
-            - EIV
-            - RB
-            - KUNDE
-            - INTERESSENT
-            - KN
-            - UBA
-            - BIKO
-            - ESA           
-        belegID:
-          type: string
-          example: "4711"
-    Marktpartner:
-      type: object
-      properties:
-        rollencodenummer::
-          type: string
-          example: "9903790000002"
-        marktrolle:
-          type: string      
-          example: LF
-          enum:
-            - NB
-            - LF
-            - MSB
-            - MSBA
-            - GMSB
-            - MDL
-            - DL
-            - BKV
-            - BKO
-            - UENB
-            - KUNDE-SELBST-NN
-            - MGV
-            - EIV
-            - RB
-            - KUNDE
-            - INTERESSENT
-            - KN
-            - UBA
-            - BIKO
-            - ESA           
-
-    EVENT_MIT_BELEGID:
-      type: object
+      description: Schema zum Sperren einer Marktlokation | Schema for locking a market location
       properties:
         id:
           type: string
-          example: "110000000408"      
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: STARTSPERRAUFTRAG1
         eventName:
           type: string
-          example: START_LIEFERBEGINN   
+          description: Name des Events | Name of the event
+          example: START_SPERRAUFTRAG
+          enum: 
+            - START_SPERRAUFTRAG
+        marktlokationsId:
+          type: string
+          description: Marktlokations-ID | Market location ID
+          example: '50000083216'
+        sparte:
+          type: string
+          description: Sparte, z.B. Strom oder Gas | Sector, e.g., electricity or gas
+          example: STROM
+        absender:
+          type: string
+          description: Rollencodenummer des Absenders | Role code number of the sender
+          example: '9903790000002'
+        empfaenger:
+          type: string
+          description: Rollencodenummer des Empfängers | Role code number of the recipient
+          example: '9900321000005'
+      required:
+        - id, eventName, marktlokationsId, sparte, absender, empfaenger
+    START_LIEFERBEGINN_STROM:
+      type: object
+      description: Schema zum Starten des Lieferbeginns für Strom | Schema for starting the delivery of electricity
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: 110000000408
+        eventName:
+          type: string
+          description: Name des Events | Name of the event
+          example: START_LIEFERBEGINN
+        marktlokationsId:
+          type: string
+          description: Marktlokations-ID | Market location ID
+          example: '50074561188'
+        sparte:
+          type: string
+          description: Sparte, z.B. Strom | Sector, e.g., electricity
+          example: STROM
+        energierichtung:
+          type: string
+          description: Energierichtung, z.B. AUSSP | Energy direction, e.g., AUSSP
+          example: AUSSP
+        vertragsbeginn:
+          type: string
+          format: date-time
+          description: Beginn des Vertrags | Start of the contract
+          example: '2024-09-30T22:00:00Z'
+        absender:
+          type: string
+          description: Rollencodenummer des Absenders | Role code number of the sender
+          example: '9903790000002'
+        empfaenger:
+          type: string
+          description: Rollencodenummer des Empfängers | Role code number of the recipient
+          example: '9900321000005'
+      required:
+        - id, eventName, marktlokationsId, sparte, energierichtung, vertragsbeginn, absender, empfaenger
+    START_LIEFERBEGINN_GAS:
+      type: object
+      description: Schema zum Starten des Lieferbeginns für Gas | Schema for starting the delivery of gas
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: 110000000611
+        eventName:
+          type: string
+          description: Name des Events | Name of the event
+          example: START_LIEFERBEGINN
+        marktlokationsId:
+          type: string
+          description: Marktlokations-ID | Market location ID
+          example: '50074561188'
+        sparte:
+          type: string
+          description: Sparte, z.B. Gas | Sector, e.g., gas
+          example: GAS
+        vertragsbeginn:
+          type: string
+          format: date-time
+          description: Beginn des Vertrags | Start of the contract
+          example: '2024-06-01T04:00:00Z'
+        absender:
+          type: string
+          description: Rollencodenummer des Absenders | Role code number of the sender
+          example: '9800044300007'
+        empfaenger:
+          type: string
+          description: Rollencodenummer des Empfängers | Role code number of the recipient
+          example: '9870013800007'
+      required:
+        - id, eventName, marktlokationsId, sparte, vertragsbeginn, absender, empfaenger
+    START_ABR_NN:
+      type: object
+      description: Schema zum Starten der Netznutzungsabrechnung | Schema for starting network usage billing
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: 110000000409
+        eventName:
+          type: string
+          description: Name des Events | Name of the event
+          example: START_ABR_NN
+        marktlokationsId:
+          type: string
+          description: Marktlokations-ID | Market location ID
+          example: '50074561188'
+        sparte:
+          type: string
+          description: Sparte, z.B. Strom | Sector, e.g., electricity
+          example: STROM
+        artikelId:
+          type: string
+          description: Artikel-ID | Article ID
+          example: '1-02-0-001'
+        vertragsbeginn:
+          type: string
+          format: date-time
+          description: Beginn des Vertrags | Start of the contract
+          example: '2024-10-31T23:00:00Z'
+        absender:
+          type: string
+          description: Rollencodenummer des Absenders | Role code number of the sender
+          example: '9900321000005'
+        empfaenger:
+          type: string
+          description: Rollencodenummer des Empfängers | Role code number of the recipient
+          example: '9903790000002'
+      required:
+        - id, eventName, marktlokationsId, sparte, artikelId, vertragsbeginn, absender, empfaenger
+    START_DEFINITION_SCHALTZEIT:
+      type: object
+      description: Schema zur Definition von Schaltzeiten | Schema for defining switching times
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: 110000000406
+        eventName:
+          type: string
+          description: Name des Events | Name of the event
+          example: START_DEFINITION_SCHALTZEIT
+        code:
+          type: string
+          description: Code für die Schaltzeit | Code for the switching time
+          example: AC
+        beginndatum:
+          type: string
+          format: date-time
+          description: Beginndatum der Schaltzeit | Start date of the switching time
+          example: '2024-06-30T22:00:00Z'
+        endedatum:
+          type: string
+          format: date-time
+          description: Enddatum der Schaltzeit | End date of the switching time
+          example: '2024-08-30T22:00:00Z'
+        haeufigkeit:
+          type: string
+          description: Häufigkeit der Schaltzeit | Frequency of the switching time
+          example: JAEHRLICH
+        schalthandlung:
+          type: string
+          description: Art der Schalthandlung | Type of switching action
+          example: LEISTUNG_AN
+      required:
+        - id, eventName, code, beginndatum, endedatum, haeufigkeit, schalthandlung
+    START_DEFINITION_LEISTUNGSKURVE:
+      type: object
+      description: Schema zur Definition der Leistungskurve | Schema for defining the performance curve
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: 110000000405
+        eventName:
+          type: string
+          description: Name des Events | Name of the event
+          example: START_DEFINITION_LEISTUNGSKURVE
+        code:
+          type: string
+          description: Code für die Leistungskurve | Code for the performance curve
+          example: ABC
+        beginndatum:
+          type: string
+          format: date-time
+          description: Beginndatum der Leistungskurve | Start date of the performance curve
+          example: '2024-06-30T22:00:00Z'
+        endedatum:
+          type: string
+          format: date-time
+          description: Enddatum der Leistungskurve | End date of the performance curve
+          example: '2024-08-30T22:00:00Z'
+        obererSchwellwert:
+          type: number
+          description: Oberer Schwellwert für die Leistungskurve | Upper threshold for the performance curve
+          example: 50
+      required:
+        - id, eventName, code, beginndatum, endedatum, obererSchwellwert
+    START_DEFINITION_ZAEHLZEIT:
+      type: object
+      description: Schema zur Definition der Zählzeit | Schema for defining the metering time
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: 110000000404
+        eventName:
+          type: string
+          description: Name des Events | Name of the event
+          example: START_DEFINITION_ZAEHLZEIT
+        code:
+          type: string
+          description: Code für die Zählzeit | Code for the metering time
+          example: ABC
+        beginndatum:
+          type: string
+          format: date-time
+          description: Beginndatum der Zählzeit | Start date of the metering time
+          example: '2024-06-30T22:00:00Z'
+        endedatum:
+          type: string
+          format: date-time
+          description: Enddatum der Zählzeit | End date of the metering time
+          example: '2024-08-30T22:00:00Z'
+        haeufigkeit:
+          type: string
+          description: Häufigkeit der Zählzeit | Frequency of the metering time
+          example: JAEHRLICH
+      required:
+        - id, eventName, code, beginndatum, endedatum, haeufigkeit
+    START_KUENDIGUNG:
+      type: object
+      description: Schema für die Kündigung eines Vertrags | Schema for the termination of a contract
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: 110000000605
+        eventName:
+          type: string
+          description: Name des Events | Name of the event
+          example: START_KUENDIGUNG
+        marktlokationsId:
+          type: string
+          description: Marktlokations-ID | Market location ID
+          example: '50074561188'
+        sparte:
+          type: string
+          description: Sparte, z.B. Gas | Sector, e.g., gas
+          example: GAS
+        vertragsart:
+          type: string
+          description: Art des Vertrags | Type of contract
+          example: ENERGIELIEFERVERTRAG
+        vertragsende:
+          type: string
+          format: date-time
+          description: Ende des Vertrags | End of the contract
+          example: '2024-06-01T04:00:00Z'
+        empfaenger:
+          type: string
+          description: Rollencodenummer des Empfängers | Role code number of the recipient
+          example: '9870013800007'
+        absender:
+          type: string
+          description: Rollencodenummer des Absenders | Role code number of the sender
+          example: '9800044300007'
+      required:
+        - id, eventName, marktlokationsId, sparte, vertragsart, vertragsende, empfaenger, absender
+    EVENT_MIT_BELEGID:
+      type: object
+      description: Generisches Schema für Events, die eine BelegID erfordern | Generic schema for events that require a DocumentID
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: '110000000408'
+        eventName:
+          type: string
+          description: Name des Events | Name of the event
+          example: START_LIEFERBEGINN
           enum:
             - START_LIEFERBEGINN
             - START_ABR_NN
@@ -760,3 +462,86 @@ components:
             - START_AUFTRAGSSTATUS
             - START_ANFRAGE_STAMMDATENAENDERUNG
             - START_UEBERM_DEFINITION
+      required:
+        - id, eventName
+  examples:
+    START_SPERRAUFTRAG:
+      summary: START_SPERRAUFTRAG Versand Sperrauftrag auslösen | Trigger shipping blocking order
+      value:
+        id: STARTSPERRAUFTRAG1
+        eventName: START_SPERRAUFTRAG
+        marktlokationsId: '50000083216'
+        sparte: STROM
+        absenderRollencodenummer: '9903790000002'
+        empfaengerRollencodenummer: '9900321000005'
+    START_LIEFERBEGINN_STROM:
+      summary: START_LIEFERBEGINN (Strom) Lieferbeginn in Sparte Strom auslösen | Trigger start of delivery in the electricity division
+      value:
+        id: 110000000408
+        eventName: START_LIEFERBEGINN
+        marktlokationsId: '50074561188'
+        sparte: STROM
+        energierichtung: AUSSP
+        vertragsbeginn: '2024-09-30T22:00:00Z'
+        absender: '9903790000002'
+        empfaenger: '9900321000005'
+    START_LIEFERBEGINN_GAS:
+      summary: Beispiel für einen START_LIEFERBEGINN_GAS Event | Example for a START_LIEFERBEGINN_GAS event
+      value:
+        id: 110000000611
+        eventName: START_LIEFERBEGINN
+        marktlokationsId: '50074561188'
+        sparte: GAS
+        vertragsbeginn: '2024-06-01T04:00:00Z'
+        absender: '9800044300007'
+        empfaenger: '9870013800007'
+    START_ABR_NN:
+      summary: START_ABR_NN Versand Netznutzungsabrechnung auslösen | Trigger dispatch grid usage billing
+      value:
+        id: 110000000409
+        eventName: START_ABR_NN
+        marktlokationsId: '50074561188'
+        sparte: STROM
+        artikelId: '1-02-0-001'
+        vertragsbeginn: '2024-10-31T23:00:00Z'
+        absender: '9900321000005'
+        empfaenger: '9903790000002'
+    START_DEFINITION_SCHALTZEIT:
+      summary: Beispiel für einen START_DEFINITION_SCHALTZEIT Event | Example for a START_DEFINITION_SCHALTZEIT event
+      value:
+        id: 110000000406
+        eventName: START_DEFINITION_SCHALTZEIT
+        code: AC
+        beginndatum: '2024-06-30T22:00:00Z'
+        endedatum: '2024-08-30T22:00:00Z'
+        haeufigkeit: JAEHRLICH
+        schalthandlung: LEISTUNG_AN
+    START_DEFINITION_LEISTUNGSKURVE:
+      summary: Beispiel für einen START_DEFINITION_LEISTUNGSKURVE Event | Example for a START_DEFINITION_LEISTUNGSKURVE event
+      value:
+        id: 110000000405
+        eventName: START_DEFINITION_LEISTUNGSKURVE
+        code: ABC
+        beginndatum: '2024-06-30T22:00:00Z'
+        endedatum: '2024-08-30T22:00:00Z'
+        obererSchwellwert: 50
+    START_DEFINITION_ZAEHLZEIT:
+      summary: Beispiel für einen START_DEFINITION_ZAEHLZEIT Event | Example for a START_DEFINITION_ZAEHLZEIT event
+      value:
+        id: 110000000404
+        eventName: START_DEFINITION_ZAEHLZEIT
+        code: ABC
+        beginndatum: '2024-06-30T22:00:00Z'
+        endedatum: '2024-08-30T22:00:00Z'
+        haeufigkeit: JAEHRLICH
+    START_KUENDIGUNG:
+      summary: Beispiel für einen START_KUENDIGUNG Event | Example for a START_KUENDIGUNG event
+      value:
+        id: 110000000605
+        eventName: START_KUENDIGUNG
+        marktlokationsId: '50074561188'
+        sparte: GAS
+        vertragsart: ENERGIELIEFERVERTRAG
+        vertragsende: '2024-06-01T04:00:00Z'
+        empfaenger: '9870013800007'
+        absender: '9800044300007'

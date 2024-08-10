@@ -36,7 +36,7 @@
           "versionStruktur": "1",
           "vertragsart": "NETZNUTZUNGSVERTRAG",
           "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsbeginn')})}",
-          "vertragsende": ${data:jsonPath('$.vertragsende'):isEmpty():ifElse('null',"${data:jsonPath('$.vertragsende')}")},
+          "vertragsende": ${data:jsonPath('$.vertragsende'):isEmpty():ifElse(null,"${data:jsonPath('$.vertragsende')}")},
           "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
           "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
           "lokationsTyp": "MALO",
@@ -55,7 +55,7 @@
             {
               "boTyp": "GESCHAEFTSPARTNER",
               "versionStruktur": "1",
-              "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse(null,true)},
+              "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse(null,${data:jsonPath('$.gewerbekennzeichnung')})},
               "anrede": "${data:jsonPath('$.anrede'):isEmpty():ifElse('null',${data:jsonPath('$.anrede')})}",
               "name1": "${data:jsonPath('$.name1'):isEmpty():ifElse('null',${data:jsonPath('$.name1')})}",
               "name2": "${data:jsonPath('$.name2'):isEmpty():ifElse('null',${data:jsonPath('$.name2')})}",
@@ -68,7 +68,7 @@
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
             "name1": "${data:jsonPath('$.name1'):isEmpty():ifElse('null',${data:jsonPath('$.name1')})}",
-            "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse(null,true)},
+            "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse(null,${data:jsonPath('$.gewerbekennzeichnung')})},
             "partneradresse": {
               "postleitzahl": "${data:jsonPath('$.postleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.postleitzahl')})}",
               "ort": "${data:jsonPath('$.ort'):isEmpty():ifElse('null',${data:jsonPath('$.ort')})}",
