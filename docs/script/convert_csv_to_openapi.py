@@ -72,8 +72,10 @@ with open(csv_file, mode='r', encoding='utf-8') as file:
         # Wenn der Prüfidentifikator `--` ist, verwenden wir REF und Aktion
         if data['pruefidentifikator'].strip() == '--':
             schema_name = f"REF{data['aktion'].strip()}"
+            display_name = f"→ {data['aktion'].strip()}"
         else:
             schema_name = f"PI{data['pruefidentifikator'].strip()}"
+            display_name = schema_name
         
         # Pfad hinzufügen, wenn nicht schon vorhanden
         if f"/{path}" not in openapi_document['paths']:
@@ -101,27 +103,32 @@ with open(csv_file, mode='r', encoding='utf-8') as file:
                     }
                 }
             }
+            # Markdown-Tabelle für die description erstellen (nur einmal hinzufügen)
+            markdown_table_header = (
+                "| Prüfidentifikator | Von | An | Beschreibung | Reaktion | Prozessschritt |\n"
+                "|-------------------|-----|----|--------------|----------|----------------|\n"
+            )
+            openapi_document['paths'][f"/{path}"]['options']['description'] += markdown_table_header
         
-        # Markdown-Tabelle für die description erstellen
-        markdown_table = (
-            "| Prüfidentifikator | Von | An | Beschreibung | Reaktion | Prozessschritt |\n"
-            "|-------------------|-------------------|------------------|--------------|----------|----------------|\n"
-            f"| {schema_name} | {data['komm_von']} | {data['komm_an']} | {data['beschreibung']} | {data['reaktion']} | {data['prozessschritt']} |\n"
+        # Tabellenzeile für die description hinzufügen
+        markdown_table_row = (
+            f"| {display_name} | {data['komm_von']} | {data['komm_an']} | {data['beschreibung']} | {data['reaktion']} | {data['prozessschritt']} |\n"
         )
-        openapi_document['paths'][f"/{path}"]['options']['description'] += markdown_table
+        openapi_document['paths'][f"/{path}"]['options']['description'] += markdown_table_row
         
-        # Example-Datenstruktur
-        example = {
-            'pi': data['pruefidentifikator'] + data['aktion'].strip() + ' ' + data['beschreibung'],
-            'VON_' + data['komm_von'] + '_TRIGGER_EVENT' : data['komm_von_ausloesende_events'],
-            'komm_von_lesende_schnittstellen': data['komm_von_lesende_schnittstellen'],
-            'komm_von_schreibende_schnittstellen': data['komm_von_schreibende_schnittstellen'],
-            'komm_an_lesende_schnittstellen': data['komm_an_lesende_schnittstellen'],
-            'komm_an_schreibende_schnittstellen': data['komm_an_schreibende_schnittstellen']
-        }
-        openapi_document['paths'][f"/{path}"]['options']['responses']['200']['content']['application/json']['examples']['example']['value'].append(
-            example
-        )
+        # Example-Datenstruktur (nur für PI, nicht für REF)
+        if not schema_name.startswith("REF"):
+            example = {
+                'pi': schema_name,
+                'VON_' + data['komm_von'] + '_TRIGGER_EVENT' : data['komm_von_ausloesende_events'],
+                'komm_von_lesende_schnittstellen': data['komm_von_lesende_schnittstellen'],
+                'komm_von_schreibende_schnittstellen': data['komm_von_schreibende_schnittstellen'],
+                'komm_an_lesende_schnittstellen': data['komm_an_lesende_schnittstellen'],
+                'komm_an_schreibende_schnittstellen': data['komm_an_schreibende_schnittstellen']
+            }
+            openapi_document['paths'][f"/{path}"]['options']['responses']['200']['content']['application/json']['examples']['example']['value'].append(
+                example
+            )
 
         # Schema-Referenz hinzufügen, wenn es ein PI ist
         if not schema_name.startswith("REF"):
@@ -133,6 +140,7 @@ with open(csv_file, mode='r', encoding='utf-8') as file:
         if not schema_name.startswith("REF") and schema_name not in openapi_document['components']['schemas']:
             openapi_document['components']['schemas'][schema_name] = {
                 'type': 'object',
+                'description': data['pruefidentifikator'] + ' ' + data['komm_von'] + ' AN ' +  data['komm_an']+ ' ' + data['beschreibung'],
                 'properties': {
                     'komm_von_ausloesende_events': {
                         'type': 'string',
