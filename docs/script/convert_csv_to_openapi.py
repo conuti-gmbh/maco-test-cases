@@ -78,7 +78,7 @@ with open(csv_file, mode='r', encoding='utf-8') as file:
         # Pfad hinzufügen, wenn nicht schon vorhanden
         if f"/{path}" not in openapi_document['paths']:
             openapi_document['paths'][f"/{path}"] = {
-                'get': {
+                'options': {
                     'summary': path,
                     'description': '',
                     'tags': [data['prozessbeschreibung']],  # Prozessbeschreibung als Tag hinzufügen
@@ -104,28 +104,28 @@ with open(csv_file, mode='r', encoding='utf-8') as file:
         
         # Markdown-Tabelle für die description erstellen
         markdown_table = (
-            "| Prüfidentifikator | Kommunikation von | Kommunikation an | Beschreibung | Reaktion | Prozessschritt |\n"
+            "| Prüfidentifikator | Von | An | Beschreibung | Reaktion | Prozessschritt |\n"
             "|-------------------|-------------------|------------------|--------------|----------|----------------|\n"
             f"| {schema_name} | {data['komm_von']} | {data['komm_an']} | {data['beschreibung']} | {data['reaktion']} | {data['prozessschritt']} |\n"
         )
-        openapi_document['paths'][f"/{path}"]['get']['description'] += markdown_table
+        openapi_document['paths'][f"/{path}"]['options']['description'] += markdown_table
         
         # Example-Datenstruktur
         example = {
-            'pi': schema_name + ' ' + data['beschreibung'],
-            'komm_von_ausloesende_events': data['komm_von_ausloesende_events'],
+            'pi': data['pruefidentifikator'] + data['aktion'].strip() + ' ' + data['beschreibung'],
+            'VON_' + data['komm_von'] + '_TRIGGER_EVENT' : data['komm_von_ausloesende_events'],
             'komm_von_lesende_schnittstellen': data['komm_von_lesende_schnittstellen'],
             'komm_von_schreibende_schnittstellen': data['komm_von_schreibende_schnittstellen'],
             'komm_an_lesende_schnittstellen': data['komm_an_lesende_schnittstellen'],
             'komm_an_schreibende_schnittstellen': data['komm_an_schreibende_schnittstellen']
         }
-        openapi_document['paths'][f"/{path}"]['get']['responses']['200']['content']['application/json']['examples']['example']['value'].append(
+        openapi_document['paths'][f"/{path}"]['options']['responses']['200']['content']['application/json']['examples']['example']['value'].append(
             example
         )
 
         # Schema-Referenz hinzufügen, wenn es ein PI ist
         if not schema_name.startswith("REF"):
-            openapi_document['paths'][f"/{path}"]['get']['responses']['200']['content']['application/json']['schema']['anyOf'].append(
+            openapi_document['paths'][f"/{path}"]['options']['responses']['200']['content']['application/json']['schema']['anyOf'].append(
                 {'$ref': f'#/components/schemas/{schema_name}'}
             )
         
