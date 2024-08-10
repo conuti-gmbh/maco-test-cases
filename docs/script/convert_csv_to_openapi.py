@@ -119,7 +119,7 @@ with open(csv_file, mode='r', encoding='utf-8') as file:
         # Example-Datenstruktur (nur für PI, nicht für REF)
         if not schema_name.startswith("REF"):
             example = {
-                'PRUEFIDENTIFIKATOR': schema_name,
+                'PRUEFIDENTIFIKATOR': schema_name + ' ' + data['beschreibung'],
                 'VON [' + data['komm_von'] + '] TRIGGER EVENT' : data['komm_von_ausloesende_events'],
                 'VON [' + data['komm_von'] + '] LESENDE API': data['komm_von_lesende_schnittstellen'],
                 'VON [' + data['komm_von'] + '] SCHREIBENDE API': data['komm_von_schreibende_schnittstellen'],
