@@ -1081,43 +1081,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SteuerbareRessource'       
-  /SAP_LESEN_EVENT_START_LIEFERGEBINN:
-    get:
-      tags: 
-        -  LESEN    
-      summary: Lesen eines Events | Reading an event
-      description: Lesen eines Lokationsbündels mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a location bundle using location ID (Parameter1) at the time (Parameter2)
-      operationId: SAP_LESEN_EVENT_START_LIEFERGEBINN
-      parameters:
-        - name: command
-          in: query
-          required: true
-          description: Name der Operation | Name of the operation
-          schema:
-            type: string
-            default: SAP_LESEN_EVENT_START_LIEFERGEBINN
-            example: SAP_LESEN_EVENT_START_LIEFERGEBINN             
-        - name: parameter1
-          description: LokationsId | Location ID      
-          in: query
-          required: true
-          schema:
-            type: string
-            example: "50074561188"
-        - name: parameter4
-          description: Stichtag | Key date     
-          in: query
-          required: true
-          schema:
-            type: string
-            example: "START_ABR_NN"
-      responses:
-        '200':
-          description: Erfolgreiches Lesen von Eventdaten | Successful reading of event data
-          content:
-            application/json:
-              schema:
-                type: object  
 
 components:
   schemas:

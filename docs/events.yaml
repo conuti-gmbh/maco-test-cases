@@ -472,8 +472,8 @@ components:
         eventName: START_SPERRAUFTRAG
         marktlokationsId: '50000083216'
         sparte: STROM
-        absenderRollencodenummer: '9903790000002'
-        empfaengerRollencodenummer: '9900321000005'
+        absender: '9903790000002'
+        empfaenger: '9900321000005'
     START_LIEFERBEGINN_STROM:
       summary: START_LIEFERBEGINN (Strom) Lieferbeginn in Sparte Strom auslösen | Trigger start of delivery in the electricity division
       value:
