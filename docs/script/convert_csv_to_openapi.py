@@ -119,12 +119,12 @@ with open(csv_file, mode='r', encoding='utf-8') as file:
         # Example-Datenstruktur (nur für PI, nicht für REF)
         if not schema_name.startswith("REF"):
             example = {
-                'pi': schema_name,
-                'VON_' + data['komm_von'] + '_TRIGGER_EVENT' : data['komm_von_ausloesende_events'],
-                'komm_von_lesende_schnittstellen': data['komm_von_lesende_schnittstellen'],
-                'komm_von_schreibende_schnittstellen': data['komm_von_schreibende_schnittstellen'],
-                'komm_an_lesende_schnittstellen': data['komm_an_lesende_schnittstellen'],
-                'komm_an_schreibende_schnittstellen': data['komm_an_schreibende_schnittstellen']
+                'PRUEFIDENTIFIKATOR': schema_name,
+                'VON [' + data['komm_von'] + '] TRIGGER EVENT' : data['komm_von_ausloesende_events'],
+                'VON [' + data['komm_von'] + '] LESENDE API': data['komm_von_lesende_schnittstellen'],
+                'VON [' + data['komm_von'] + '] SCHREIBENDE API': data['komm_von_schreibende_schnittstellen'],
+                'AN [' + data['komm_an'] + '] LESENDE API': data['komm_an_lesende_schnittstellen'],
+                'AN [' + data['komm_an'] + '] SCHREIBENDE API': data['komm_an_schreibende_schnittstellen']
             }
             openapi_document['paths'][f"/{path}"]['options']['responses']['200']['content']['application/json']['examples']['example']['value'].append(
                 example
@@ -140,32 +140,32 @@ with open(csv_file, mode='r', encoding='utf-8') as file:
         if not schema_name.startswith("REF") and schema_name not in openapi_document['components']['schemas']:
             openapi_document['components']['schemas'][schema_name] = {
                 'type': 'object',
-                'description': data['pruefidentifikator'] + ' ' + data['komm_von'] + ' AN ' +  data['komm_an']+ ' ' + data['beschreibung'],
+                'description': data['pruefidentifikator'] + ' ' + data['komm_von'] + '→' +  data['komm_an']+ ' ' + data['beschreibung'],
                 'properties': {
-                    'komm_von_ausloesende_events': {
+                    'VON:TRIGGER_EVENT': {
                         'type': 'string',
-                        'description': 'Kommunikation von - Auslösende Events',
-                        'example': data['komm_von_ausloesende_events']
+                        'description': data['komm_von_ausloesende_events'],
+                        'enum': [data['komm_von']]
                     },
-                    'komm_von_lesende_schnittstellen': {
+                    'VON:LESENDE_API': {
                         'type': 'string',
-                        'description': 'Kommunikation von - Lesende Schnittstellen',
-                        'example': data['komm_von_lesende_schnittstellen']
+                        'description': data['komm_von_lesende_schnittstellen'],
+                        'enum': [data['komm_von']]                        
                     },
-                    'komm_von_schreibende_schnittstellen': {
+                    'VON:SCHREIBENDE_API': {
                         'type': 'string',
-                        'description': 'Kommunikation von - Schreibende Schnittstellen',
-                        'example': data['komm_von_schreibende_schnittstellen']
+                        'description': data['komm_von_schreibende_schnittstellen'],
+                        'enum': [data['komm_von']]                        
                     },
-                    'komm_an_lesende_schnittstellen': {
+                    'AN:LESENDE_API': {
                         'type': 'string',
-                        'description': 'Kommunikation an - Lesende Schnittstellen',
-                        'example': data['komm_an_lesende_schnittstellen']
+                        'description': data['komm_an_lesende_schnittstellen'],
+                        'enum': [data['komm_an']]                        
                     },
-                    'komm_an_schreibende_schnittstellen': {
+                    'AN:SCHREIBENDE_API': {
                         'type': 'string',
-                        'description': 'Kommunikation an - Schreibende Schnittstellen',
-                        'example': data['komm_an_schreibende_schnittstellen']
+                        'description': data['komm_an_schreibende_schnittstellen'],
+                        'enum': [data['komm_an']]                        
                     }
                 }
             }
