@@ -37,9 +37,70 @@ tags:
     externalDocs:
       description: BO4E JSON Schema
       url: https://github.com/conuti-gmbh/bo4e-schema   
-  - name: PROZESS
+  - name: PROZESSDATEN
     description: Auslösen von Prozessen im ERP System | Triggering processes in the ERP system  
 paths: 
+  /ERSTELLEN_PROZESSDATEN_LIEFERBEGINN:
+    post:
+      tags: 
+        -  PROZESSDATEN
+      summary: Starten eines Lieferbeginns im Backend. Aufbau zu Zuordnung der Stammdaten | Starting a delivery start in the backend. Structure for assigning master data
+      description: Starten eines Lieferbeginns zum gegebenen Datum (Parameter1) an der gegeben marktlokationsId (Parameter2) | Start a delivery start on the given date (Parameter1)  at the given market location ID (Parameter2)
+      operationId: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
+      parameters:
+        - name: command
+          in: query
+          description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
+          schema:
+            type: string
+            default: NOCODB_ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
+            example: NOCODB_ERSTELLEN_PROZESSDATEN_LIEFERBEGINN               
+        - name: parameter1
+          description: marktlokationsId | market location identifier
+          in: query
+          required: true
+          schema:
+            type: string
+            example: 50074561188  
+        - name: parameter2 
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: "2024-06-28T12:18:00Z" 
+            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/STAMMDATEN_LIEFERBEGINN' 
+            examples:
+              'PI 55001 - ROLLE NB : DATEN AUS ANFRAGE LF':
+                $ref: '#/components/examples/PI_55001'
+              'PI 55002 - ROLLE LF : DATEN AUS ANTWORT NB':
+                $ref: '#/components/examples/PI_55002'              
+      responses:
+        '200':
+          description: Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of communication data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OK_RESPONSE'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'                
   /LESEN_KOMMUNIKATIONSDATEN_BASIS:
     get:
       tags: 
@@ -50,8 +111,7 @@ paths:
       parameters:
         - name: command
           in: query
-          required: true
-          description: Name der Operation | Name of the operation
+          description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
           schema:
             type: string
             default: NOCODB_LESEN_KOMMUNIKATIONSDATEN_BASIS 
@@ -1083,7 +1143,387 @@ paths:
                 $ref: '#/components/schemas/SteuerbareRessource'       
 
 components:
+  examples:
+    PI_55001:
+      value:
+        stammdaten:
+          MARKTLOKATION:
+            - boTyp: "MARKTLOKATION"
+              versionStruktur: "1"
+              marktlokationsId: "50074561192"
+              sparte: "STROM"
+              energierichtung: "AUSSP"
+          MESSLOKATION:
+            - boTyp: "MESSLOKATION"
+              versionStruktur: "1"
+              sparte: "STROM"
+              ablesekartenempfaenger:
+                boTyp: "GESCHAEFTSPARTNER"
+                versionStruktur: "1"
+                name1: "Test2312312"
+                gewerbekennzeichnung: true
+                geschaeftspartnerrolle:
+                  - "ABLESEKARTENEMPFAENGER"
+                partneradresse:
+                  postleitzahl: "11111"
+                  ort: "Dummyort"
+                  strasse: "Dummyweg"
+                  landescode: "DE"
+          NETZNUTZUNGSVERTRAG:
+            - boTyp: "VERTRAG"
+              versionStruktur: "1"
+              vertragsart: "NETZNUTZUNGSVERTRAG"
+              sparte: "STROM"
+              vertragsbeginn: "2024-12-31T23:00:00Z"
+              vertragskonditionen:
+                haushaltskunde: true
+                netznutzungsvertrag: "LIEFERANTEN_NB"
+                netznutzungszahler: "LIEFERANT"
+              gemeinderabatt: 0
+          ENERGIELIEFERVERTRAG:
+            - boTyp: "VERTRAG"
+              versionStruktur: "1"
+              vertragsart: "ENERGIELIEFERVERTRAG"
+              sparte: "STROM"
+              vertragspartner2:
+                - boTyp: "GESCHAEFTSPARTNER"
+                  versionStruktur: "1"
+                  anrede: "Dr."
+                  name1: "Mustermann"
+                  name2: "Max"
+                  gewerbekennzeichnung: false
+                  geschaeftspartnerrolle:
+                    - "KUNDE"
+              korrespondenzpartner:
+                boTyp: "GESCHAEFTSPARTNER"
+                versionStruktur: "1"
+                name1: "Test2312312"
+                gewerbekennzeichnung: false
+                partneradresse:
+                  postleitzahl: "00000"
+                  ort: "Dummyort"
+                  strasse: "Dummystrasse"
+                  landescode: "DE"
+              enFG:
+                - grundlageVerringerungUmlagen: "KEINE_ANGABE"
+          BILANZIERUNG:
+            - boTyp: "BILANZIERUNG"
+              versionStruktur: "1"
+              lastprofile:
+                - bezeichnung: "H00"
+                  verfahren: "SYNTHETISCH"
+                  profilart: "ART_STANDARDLASTPROFIL"
+                  einspeisung: false
+                  herausgeber: "NB"
+              bilanzkreis: "Test2312312"
+              jahresverbrauchsprognose:
+                wert: 2000
+                einheit: "KWH"
+
+    PI_55002:
+      value:
+        stammdaten:
+          MARKTLOKATION:
+            - boTyp: "MARKTLOKATION"
+              versionStruktur: "1"
+              marktlokationsId: "50754496956"
+              sparte: "STROM"
+              energierichtung: "AUSSP"
+              netzebene: "NSP"
+              bilanzierungsgebiet: "11YW-STU-NETZE-R"
+              lokationsadresse:
+                postleitzahl: "70569"
+                ort: "Stuttgart"
+                strasse: "Schwarzwaldstr."
+                hausnummer: "102"
+                landescode: "DE"
+                ortsteil: "Kaltental"
+              marktrollen:
+                - boTyp: "MARKTTEILNEHMER"
+                  versionStruktur: "1"
+                  rollencodenummer: "4045399000077"
+                  marktrolle: "UENB"
+                - boTyp: "MARKTTEILNEHMER"
+                  versionStruktur: "1"
+                  rollencodenummer: "1234567890128"
+                  marktrolle: "MSB"
+                  weiterverpflichtet: false
+                  messstellenbetreiberEigenschaft: "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+              regelzone: "10YDE-RWENET---I"
+              zaehlwerke:
+                - obisKennzahl: "1-1:1.9.0"
+                  verwendungszwecke:
+                    - marktrolle: "LF"
+                      zweck:
+                        - "ENDKUNDENABRECHNUNG"
+                        - "NETZNUTZUNGSABRECHNUNG"
+                        - "MEHRMINDERMENGENABRECHNUNG"
+                  verbrauchsart: "KL"
+                  unterbrechbarkeit: "NUV"
+                  wertegranularitaet: "JAEHRLICH"
+              messtechnischeEinordnung: "KME_MME"
+              netznutzungsabrechnungsdaten:
+                - artikelId: "1-02-0-002"
+                  artikelIdTyp: "ARTIKELID"
+                  gemeinderabatt: 0
+                - artikelId: "1-06-7-004"
+                  artikelIdTyp: "ARTIKELID"
+                  anzahl: 1
+                  gemeinderabatt: 0
+                - artikelId: "1-08-4-004"
+                  artikelIdTyp: "ARTIKELID"
+                  gemeinderabatt: 0
+                - artikelId: "1-10-1"
+                  artikelIdTyp: "GRUPPENARTIKELID"
+                  gemeinderabatt: 0
+                - artikelId: "1-10-2"
+                  artikelIdTyp: "GRUPPENARTIKELID"
+                  gemeinderabatt: 0
+                - artikelId: "1-10-4"
+                  artikelIdTyp: "GRUPPENARTIKELID"
+                  gemeinderabatt: 0
+          MESSLOKATION:
+            - boTyp: "MESSLOKATION"
+              versionStruktur: "1"
+              messlokationsId: "DE0009697056900614312080040415184"
+              sparte: "STROM"
+              netzebenemessung: "NSP"
+              ablesekartenempfaenger:
+                boTyp: "GESCHAEFTSPARTNER"
+                versionStruktur: "1"
+                name1: "Schmidgall"
+                name2: "Sandra-Martina"
+                gewerbekennzeichnung: false
+                geschaeftspartnerrolle:
+                  - "ABLESEKARTENEMPFAENGER"
+                partneradresse:
+                  postleitzahl: "70569"
+                  ort: "Stuttgart"
+                  strasse: "Schwarzwaldstr."
+                  hausnummer: "102"
+                  landescode: "DE"
+                  ortsteil: "Kaltental"
+              marktrollen:
+                - boTyp: "MARKTTEILNEHMER"
+                  versionStruktur: "1"
+                  rollencodenummer: "9977764000009"
+                  marktrolle: "MSB"
+                  weiterverpflichtet: false
+                  messstellenbetreiberEigenschaft: "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+                - boTyp: "MARKTTEILNEHMER"
+                  versionStruktur: "1"
+                  rollencodenummer: "9977764000009"
+                  marktrolle: "GMSB"
+          NETZNUTZUNGSVERTRAG:
+            - boTyp: "VERTRAG"
+              versionStruktur: "1"
+              vertragsart: "NETZNUTZUNGSVERTRAG"
+              sparte: "STROM"
+              vertragsbeginn: "2024-05-30T22:00:00Z"
+              vertragskonditionen:
+                netznutzungsabrechnung:
+                  abrechnungsZeitraum: "03020401"
+                netznutzungsabrechnungIntervall: 12
+                haushaltskunde: true
+                netznutzungsvertrag: "LIEFERANTEN_NB"
+                netznutzungszahler: "LIEFERANT"
+                netznutzungsabrechnungsvariante: "ARBEITSPREIS_GRUNDPREIS"
+                netznutzungsabrechnungsgrundlage: "LIEFERSCHEIN"
+                naechstenetznutzungsabrechnung: "2025"
+              lokationsId: "50754496956"
+              lokationsTyp: "MALO"
+          MESSSTELLENBETRIEBSVERTRAG:
+            - boTyp: "VERTRAG"
+              versionStruktur: "1"
+              vertragsart: "MESSSTELLENBETRIEBSVERTRAG"
+              sparte: "STROM"
+              vertragskonditionen:
+                geplanteTurnusablesung:
+                  ableseZeitraum: "03020401"
+                abrechnungUeberNna: true
+              lokationsId: "DE0009697056900614312080040415184"
+              lokationsTyp: "MELO"
+              vertragsbeginn: "2024-05-30T22:00:00Z"
+          ENERGIELIEFERVERTRAG:
+            - boTyp: "VERTRAG"
+              versionStruktur: "1"
+              vertragsart: "ENERGIELIEFERVERTRAG"
+              sparte: "STROM"
+              vertragspartner2:
+                - boTyp: "GESCHAEFTSPARTNER"
+                  versionStruktur: "1"
+                  name1: "Müller"
+                  name2: "Michaela"
+                  gewerbekennzeichnung: false
+                  geschaeftspartnerrolle:
+                    - "KUNDE"
+                  partneradresse:
+                    postleitzahl: "70569"
+                    ort: "Stuttgart"
+                    strasse: "Schwarzwaldstr."
+                    hausnummer: "102"
+                    landescode: "DE"
+                    ortsteil: "Kaltental"
+              korrespondenzpartner:
+                boTyp: "GESCHAEFTSPARTNER"
+                versionStruktur: "1"
+                name1: "Müller"
+                name2: "Michaela"
+                gewerbekennzeichnung: false
+                partneradresse:
+                  postleitzahl: "70569"
+                  ort: "Stuttgart"
+                  strasse: "Schwarzwaldstr."
+                  hausnummer: "102"
+                  landescode: "DE"
+                  ortsteil: "Kaltental"
+              enFG:
+                - grundlageVerringerungUmlagen: "KEINE_ANGABE"
+          BILANZIERUNG:
+            - boTyp: "BILANZIERUNG"
+              versionStruktur: "1"
+              lastprofile:
+                - bezeichnung: "H00"
+                  verfahren: "SYNTHETISCH"
+                  profilart: "ART_STANDARDLASTPROFIL"
+                  einspeisung: false
+                  herausgeber: "NB"
+              bilanzkreis: "Test2312312"
+              jahresverbrauchsprognose:
+                wert: 1200
+                einheit: "KWH"
+
+
   schemas:
+    STAMMDATEN_LIEFERBEGINN:
+      type: object
+      properties:
+        stammdaten:
+          type: object
+          properties:
+            BILANZIERUNG:
+              type: array
+              items:
+                $ref: "#/components/schemas/Bilanzierung"
+            MARKTLOKATION:
+              type: array
+              items:
+                $ref: "#/components/schemas/Marktlokation"
+            MESSLOKATION:
+              type: array
+              items:
+                $ref: "#/components/schemas/Messlokation"
+            NETZNUTZUNGSVERTRAG:
+              type: array
+              items:
+                $ref: "#/components/schemas/Vertrag"
+            MESSSTELLENBETRIEBSVERTRAG:
+              type: array
+              items:
+                $ref: "#/components/schemas/Vertrag"
+            ENERGIELIEFERVERTRAG:
+              type: array
+              items:
+                $ref: "#/components/schemas/Vertrag"
+            ENERGIEMENGE:
+              type: array
+              items:
+                $ref: "#/components/schemas/Energiemenge"
+            ZAEHLER:
+              type: array
+              items:
+                $ref: "#/components/schemas/Zaehler"
+            TRANCHE:
+              type: array
+              items:
+                $ref: "#/components/schemas/Tranche"
+            NETZLOKATION:
+              type: array
+              items:
+                $ref: "#/components/schemas/Netzlokation"
+            STEUERBARE_RESSOURCE:
+              type: array
+              items:
+                $ref: "#/components/schemas/SteuerbareRessource"
+            TECHNISCHE_RESSOURCE:
+              type: array
+              items:
+                $ref: "#/components/schemas/TechnischeRessource"
+            LOKATIONSBUENDEL:
+              type: array
+              items:
+                $ref: "#/components/schemas/Lokationsbuendel"
+            AD_HOC_STEUERKANAL:
+              type: array
+              items:
+                $ref: "#/components/schemas/AdHocSteuerkanal"
+            WERTE_NACH_TYP2:
+              type: array
+              items:
+                $ref: "#/components/schemas/WerteNachTyp2"
+            RUHENDE_MARKTLOKATION:
+              type: array
+              items:
+                $ref: "#/components/schemas/Marktlokation"
+            MARKTLOKATION_KUNDENANLAGE:
+              type: array
+              items:
+                $ref: "#/components/schemas/Marktlokation"
+            VERWENDUNGSZEITRAUM:
+              type: array
+              items:
+                $ref: "#/components/schemas/Verwendungszeitraum"
+    OK_RESPONSE:
+      type: object
+      description: "Erfolgsmeldung auf Prozessdaten API Aufruf | Success message on process data API call"
+      properties:
+        messages:
+          description: "Fachliche Rückmeldungen zur Anzeige in der Oberfläche | Professional feedback on the display in the user interface"
+          type: array
+          items:
+            type: object
+            properties:
+              objectId:
+                type: string
+                example: "DE63653316530AEOJQLMHUW55UC6J5513"
+              objectType:
+                type: string
+                example: "Messlokation"
+              message:
+                type: string
+                example: "Messlokation DE63653316530AEOJQLMHUW55UC6J5513 wurde der Marktlokation 84043719589 zugeordnet"
+        message:
+          type: string
+          description: "Technische Meldung | Technische Meldung"
+          example: "meterlocation assigned."
+    ERROR_RESPONSE:
+      type: object
+      description: "Fehlermeldung auf Prozessdaten API Aufruf | Error message on process data API call"      
+      properties:
+        errorCode:
+          type: string
+          description: "Error identifier"          
+          example: "400"
+        message:
+          type: string
+          description: "Technische Meldung | Technische Meldung"          
+          example: "Validation Failed"
+        errors:
+          type: array
+          description: "Sammlung von Fehlercodes in einem Bucket | Collection of error codes in a bucket "             
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                example: 5432
+              field:
+                type: string
+                example: "first_name"
+              message:
+                type: string
+                example: "First name cannot have fancy characters"
+# BELOW GENERATED BO4E OBJECTS          
     AdHocSteuerkanal:
       type: object
       properties:
