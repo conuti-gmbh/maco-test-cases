@@ -43,7 +43,7 @@ paths:
   /ERSTELLEN_PROZESSDATEN_LIEFERENDE:
     post:
       tags:
-        - PROZESSDATEN
+        - PROZESSDATEN | PROCESSING DATA
       summary: ERSTELLEN_PROZESSDATEN_LIEFERENDE
       description: Beenden einer Liefersituation zum gegebenen Datum (Parameter1) an der gegebenen marktlokationsId (Parameter2) | Start a delivery end on the given date (Parameter1)  at the given market location ID (Parameter2)
       operationId: ERSTELLEN_PROZESSDATEN_LIEFERENDE
