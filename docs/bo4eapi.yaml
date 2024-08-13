@@ -184,21 +184,21 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Marktteilnehmer'      
-  /LESEN_ENERGIELIEFERVERTAG_BASIS:
+  /LESEN_ENERGIELIEFERVERTRAG_BASIS:
     get:
       tags: 
         -  LESEN
-      summary: LESEN_ENERGIELIEFERVERTAG_BASIS
+      summary: LESEN_ENERGIELIEFERVERTRAG_BASIS
       description: Lesen des Energieliefervertrages einer Lokation (Parameter1) zum Zeitpunkt (Parameter2) | Reading the energy delivery contract of a location (Parameter1) at the time (Parameter2)
-      operationId: LESEN_ENERGIELIEFERVERTAG_BASIS
+      operationId: LESEN_ENERGIELIEFERVERTRAG_BASIS
       parameters:
         - name: command
           in: query
           description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
           schema:
             type: string
-            default: LESEN_KOMMUNIKATIONSDATEN_BASIS 
-            example: NOCODB_LESEN_ENERGIELIEFERVERTAG_BASIS                
+            default: LESEN_ENERGIELIEFERVERTRAG_BASIS
+            example: NOCODB_LESEN_ENERGIELIEFERVERTRAG_BASIS                
         - name: parameter1
           description: LokationsId | Location ID     
           in: query
