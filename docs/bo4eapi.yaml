@@ -185,7 +185,44 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Marktteilnehmer'
-
+  /LESEN_ENERGIELIEFERVERTAG_BASIS:
+    get:
+      tags: 
+        -  LESEN
+      summary: Lesen des Energieliefervertrages | Reading communication data
+      description: Lesen des Energieliefervertrages einer Lokation (Parameter1) zum Zeitpunkt (Parameter2) | Reading the energy delivery contract of a location (Parameter1) at the time (Parameter2)
+      operationId: LESEN_ENERGIELIEFERVERTAG_BASIS
+      parameters:
+        - name: command
+          in: query
+          description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
+          schema:
+            type: string
+            default: LESEN_KOMMUNIKATIONSDATEN_BASIS 
+            example: NOCODB_LESEN_ENERGIELIEFERVERTAG_BASIS                
+        - name: parameter1
+          description: LokationsId | Location ID     
+          in: query
+          required: true
+          schema:
+            type: string
+            example: 50074561188 
+        - name: parameter2 
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: "2024-06-28T12:18:00Z" 
+            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+      responses:
+        '200':
+          description: Erfolgreiches Lesen des Energieliefervertrages | Successful reading of energy delivery contract
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Energieliefervertrag'
   /LESEN_ENERGIEMENGE_LASTGANG:
     get:
       tags: 
