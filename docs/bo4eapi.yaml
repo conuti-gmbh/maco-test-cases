@@ -61,7 +61,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188  
+            example: 50074561189  
         - name: parameter2 
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
