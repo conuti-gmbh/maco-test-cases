@@ -105,6 +105,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ERROR_RESPONSE"
+  
   /ERSTELLEN_PROZESSDATEN_LIEFERBEGINN:
     post:
       tags:
@@ -166,6 +167,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ERROR_RESPONSE"
+  
   /LESEN_KOMMUNIKATIONSDATEN_BASIS:
     get:
       tags:
@@ -204,6 +206,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Kommunikationsdaten"
+  
   /AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
@@ -249,6 +252,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Kommunikationsdaten"
+  
   /LESEN_ENERGIELIEFERVERTRAG_BASIS:
     get:
       tags:
@@ -287,6 +291,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Vertrag"
+  
   /LESEN_ENERGIEMENGE_LASTGANG:
     get:
       tags:
@@ -342,6 +347,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+  
   /ERSTELLEN_ENERGIEMENGE_LASTGANG:
     post:
       tags:
@@ -403,6 +409,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+  
   /LESEN_ENERGIEMENGE_ZAEHLERSTAND:
     get:
       tags:
@@ -458,6 +465,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+ 
   /ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND:
     post:
       tags:
@@ -519,6 +527,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+  
   /LESEN_ENERGIEMENGE_ENERGIEMENGE:
     get:
       tags:
@@ -574,6 +583,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+  
   /ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE:
     post:
       tags:
@@ -635,6 +645,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+  
   /LESEN_MARKTLOKATION_BASIS:
     get:
       tags:
@@ -674,6 +685,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Marktlokation"
+  
   /AKTUALISIEREN_MARKTLOKATION_BASIS:
     post:
       tags:
@@ -719,6 +731,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Marktlokation"
+ 
   /LESEN_MESSLOKATION_BASIS:
     get:
       tags:
@@ -758,6 +771,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Messlokation"
+ 
   /AKTUALISIEREN_MESSLOKATION_BASIS:
     post:
       tags:
@@ -803,6 +817,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Messlokation"
+
   /LESEN_NETZLOKATION_BASIS:
     get:
       tags:
@@ -842,6 +857,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Netzlokation"
+ 
   /AKTUALISIEREN_NETZLOKATION_BASIS:
     post:
       tags:
@@ -887,6 +903,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Netzlokation"
+ 
   /LESEN_TRANCHE_BASIS:
     get:
       tags:
@@ -926,6 +943,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Tranche"
+
   /AKTUALISIEREN_TRANCHE_BASIS:
     post:
       tags:
@@ -971,6 +989,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Tranche"
+ 
   /LESEN_LOKATIONSBUENDEL_BASIS:
     get:
       tags:
@@ -1010,6 +1029,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Lokationsbuendel"
+ 
   /AKTUALISIEREN_LOKATIONSBUENDEL_BASIS:
     post:
       tags:
@@ -1055,6 +1075,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Lokationsbuendel"
+ 
   /LESEN_TECHNISCHE_RESSOURCE_BASIS:
     get:
       tags:
@@ -1094,6 +1115,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/TechnischeRessource"
+ 
   /AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS:
     post:
       tags:
@@ -1139,6 +1161,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/TechnischeRessource"
+ 
   /LESEN_STEUERBARE_RESSOURCE_BASIS:
     get:
       tags:
@@ -1178,7 +1201,8 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/SteuerbareRessource"
-  /AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS:
+ 
+ /AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS:
     post:
       tags:
         - AKTUALISIEREN | UPDATE
