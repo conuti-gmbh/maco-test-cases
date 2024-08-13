@@ -1,0 +1,88 @@
+openapi: 3.0.0
+info:
+  title: MACO APP - erforderliche ERP Schnittstellen | MACO APP - needed ERP interfaces
+  description: |
+    Übersicht der erforderlichen BO4E- und Prozessschnittstellen, die die MACO APP für die Ausführung der Marktprozesse benötigt. | Overview of the necessary BO4E and process interfaces that the MACO APP requires to execute market processes.
+
+    <details>
+    <summary>Changelog</summary>
+
+    **Version 1.0.1** - *08. August 2024* - _Autor: DAS_
+
+    - Hinzufügen von mehrsprachigen Beschreibungen und Changelog.
+    - Anpassung der Schema-Beschreibungen in Deutsch und Englisch.
+
+    **Version 1.0** - *01. August 2024* - _Autor: DAS_
+
+    - Initiale Version der API-Dokumentation.
+
+    </details>
+  version: "1.0.1"
+servers:
+  - url: https://api.macoapp.de
+    description: Mock-Umgebung | Mock environment
+tags:
+  - name: LESEN | READ
+    description: Lesender Zugriff auf Geschäftsobjekte | Reading access to business objects
+    externalDocs:
+      description: BO4E JSON Schema
+      url: https://github.com/conuti-gmbh/bo4e-schema
+  - name: AKTUALISIEREN | UPDATE
+    description: Aktualisierung bestehender Geschäftsobjekte | Updating existing business objects
+    externalDocs:
+      description: BO4E JSON Schema
+      url: https://github.com/conuti-gmbh/bo4e-schema
+  - name: ERSTELLEN | CREATE
+    description: Erstellen von Geschäftsobjekten | Creating business objects
+    externalDocs:
+      description: BO4E JSON Schema
+      url: https://github.com/conuti-gmbh/bo4e-schema
+  - name: PROZESSDATEN | PROCESSING DATA
+    description: Auslösen von Prozessen im ERP System | Triggering processes in the ERP system
+paths:
+  /ERSTELLEN_PROZESSDATEN_LIEFERENDE:
+    post:
+      tags:
+        - PROZESSDATEN
+      summary: ERSTELLEN_PROZESSDATEN_LIEFERENDE
+      description: Beenden einer Liefersituation zum gegebenen Datum (Parameter1) an der gegebenen marktlokationsId (Parameter2) | Start a delivery end on the given date (Parameter1)  at the given market location ID (Parameter2)
+      operationId: ERSTELLEN_PROZESSDATEN_LIEFERENDE
+      parameters:
+        - name: command
+          in: query
+          description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
+          schema:
+            type: string
+            default: ERSTELLEN_PROZESSDATEN_LIEFERENDE
+            example: NOCODB_ERSTELLEN_PROZESSDATEN_LIEFERENDE
+        - name: parameter1
+          description: marktlokationsId | market location identifier
+          in: query
+          required: true
+          schema:
+            type: string
+            example: "50074561188"
+        - name: parameter2
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: "2024-06-28T12:18:00Z"
+            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/STAMMDATEN_LIEFERENDE"
+            examples:
+              "PI 55004 - ROLLE NB : DATEN AUS ANFRAGE LF":
+                $ref: "#/components/examples/PI_55004"
+              "PI 55005 - ROLLE LF : DATEN AUS ANTWORT NB":
+                $ref: "#/components/examples/PI_55005"
+              "PI 55008 - ROLLE NB : DATEN AUS ANFRAGE LF":
+                $ref: "#/components/examples/PI_55008"
+              "PI 55007 - ROLLE LF : DATEN AUS ANTWORT NB":
+                $ref: "#/components/examples/PI_55007"
