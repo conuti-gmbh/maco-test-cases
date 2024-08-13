@@ -2765,8 +2765,8 @@ components:
       properties:
         boTyp:
           $ref: '#/components/schemas/BOTyp'
-          default: VERTRAG
-          example: VERTRAG
+          default: "VERTRAG"
+          example: "VERTRAG"
         versionStruktur:
           type: string
           default: '1'
