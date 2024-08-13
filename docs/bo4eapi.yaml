@@ -1545,8 +1545,8 @@ components:
       type: object
       properties:
         boTyp:
-          $ref: '#/components/schemas/BOTyp'
-          default: AD_HOC_STEUERKANAL
+          type: string
+          default: 'AD_HOC_STEUERKANAL'
         versionStruktur:
           type: string
           default: '1'
@@ -1568,7 +1568,7 @@ components:
       properties:
         boTyp:
           $ref: '#/components/schemas/BOTyp'
-          default: ANFRAGE
+          default: 'ANFRAGE'
         versionStruktur:
           type: string
           default: '1'
