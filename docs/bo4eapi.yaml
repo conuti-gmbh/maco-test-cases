@@ -54,7 +54,7 @@ paths:
           schema:
             type: string
             default: ERSTELLEN_PROZESSDATEN_LIEFERENDE
-            example: NOCODB_ERSTELLEN_PROZESSDATEN_LIEFERBEGINN               
+            example: NOCODB_ERSTELLEN_PROZESSDATEN_LIEFERENDE               
         - name: parameter1
           description: marktlokationsId | market location identifier
           in: query
@@ -1225,7 +1225,238 @@ paths:
                 $ref: '#/components/schemas/SteuerbareRessource'       
 
 components:
-  examples:
+  examples:    
+    PI_55004:
+      value: 
+        stammdaten: 
+          MARKTLOKATION: 
+          - boTyp: "MARKTLOKATION"
+            versionStruktur: "1"
+            marktlokationsId: "50074561188"
+            sparte: "STROM"
+            energierichtung: "AUSSP"
+          NETZNUTZUNGSVERTRAG: 
+          - boTyp: "VERTRAG"
+            versionStruktur: "1"
+            vertragsart: "NETZNUTZUNGSVERTRAG"
+            sparte: "STROM"
+            vertragsende: "2024-06-30T22:00:00Z"
+            lokationsId: "50074561188"
+            lokationsTyp: "MALO"
+          BILANZIERUNG: 
+            - boTyp: "BILANZIERUNG"
+              versionStruktur: "1"
+              marktlokationsId: "50074561188"
+        transaktionsdaten: 
+          datenaustauschreferenz: "117398"
+          sparte: "STROM"
+          transaktionsgrund: "E01"
+          vorgangsnummer: "1043400522"
+          pruefidentifikator: "55004"
+          absender:  
+            boTyp: "MARKTTEILNEHMER"
+            versionStruktur: "1"
+            rollencodenummer: "9903790000002"
+            rollencodetyp: "BDEW"
+          empfaenger: 
+            boTyp: "MARKTTEILNEHMER"
+            versionStruktur: "1"
+            rollencodenummer: "9900321000005"
+            rollencodetyp: "BDEW"
+          dokumentennummer: "12345"
+          kategorie: "E02"
+          nachrichtendatum: "2024-04-01T07:40:00Z"
+          nachrichtenreferenznummer: "796205"
+          freitext: 
+            freitext1: "ABC"
+        zusatzdaten:
+
+    PI_55005:
+      value:
+        stammdaten: 
+          MARKTLOKATION: 
+          - boTyp: "MARKTLOKATION"
+            versionStruktur: "1"
+            marktlokationsId: "50263461490"
+            sparte: "STROM"
+            energierichtung: "AUSSP"
+          NETZNUTZUNGSVERTRAG: 
+          - boTyp: "VERTRAG"
+            versionStruktur: "1"
+            vertragsart: "NETZNUTZUNGSVERTRAG"
+            sparte: "STROM"
+            vertragsende: "2024-04-30T22:00:00Z"
+            lokationsId: "50263461490"
+            lokationsTyp: "MALO"
+          BILANZIERUNG: 
+          - boTyp: "BILANZIERUNG"
+            versionStruktur: "1"
+            marktlokationsId: "50263461490"
+            bilanzierungsende: "2024-04-30T22:00:00Z"
+        transaktionsdaten: 
+          datenaustauschreferenz: "10000159359739"
+          sparte: "STROM"
+          transaktionsgrund: "ZT4"
+          vorgangsnummer: "BE08461C62B11EEE99D02638E374580A"
+          pruefidentifikator: "55005"
+          absender: 
+            boTyp: "MARKTTEILNEHMER"
+            versionStruktur: "1"
+            rollencodenummer: "9900321000005"
+            rollencodetyp: "BDEW"
+            ansprechpartner: 
+              boTyp: "ANSPRECHPARTNER"
+              versionStruktur: "1"
+              nachname: "Ansprechpartner GPKE SWBK Netz"
+              eMailAdresse: "marktpartnerwechsel.swbk@energis-netzgesellschaft.de"
+          empfaenger: 
+            boTyp: "MARKTTEILNEHMER"
+            versionStruktur: "1"
+            rollencodenummer: "9903790000002"
+            rollencodetyp: "BDEW"
+          dokumentennummer: "10000159359739"
+          kategorie: "E02"
+          nachrichtendatum: "2024-04-01T08:52:00Z"
+          nachrichtenreferenznummer: "10000159359739"
+          anfragereferenznummer: "PCL_5923100909360499050790000005011"
+          antwortstatus: "A06"
+          antwortstatusCodeliste: "E_0401"
+        zusatzdaten: 
+
+    PI_55006:
+      value:
+        stammdaten: 
+          MARKTLOKATION: 
+          - boTyp: "MARKTLOKATION"
+            versionStruktur: "1"
+            marktlokationsId: "51216620950"
+            sparte: "STROM"
+            energierichtung: "AUSSP"
+          NETZNUTZUNGSVERTRAG: 
+          - boTyp: "VERTRAG"
+            versionStruktur: "1"
+            vertragsart: "NETZNUTZUNGSVERTRAG"
+            sparte: "STROM"
+            lokationsId: "51216620950"
+            lokationsTyp: "MALO"
+          BILANZIERUNG: 
+          - boTyp: "BILANZIERUNG"
+            versionStruktur: "1"
+            marktlokationsId: "51216620950"
+        transaktionsdaten: 
+          datenaustauschreferenz: "D0000000762312"
+          sparte: "STROM"
+          transaktionsgrund: "ZT4"
+          vorgangsnummer: "VID00000000002244135231010104605000"
+          pruefidentifikator: "55006"
+          absender: 
+            boTyp: "MARKTTEILNEHMER"
+            versionStruktur: "1"
+            rollencodenummer: "9900321000005"
+            rollencodetyp: "BDEW"
+          empfaenger: 
+            boTyp: "MARKTTEILNEHMER"
+            versionStruktur: "1"
+            rollencodenummer: "9903790000002"
+            rollencodetyp: "BDEW"
+          dokumentennummer: "UT0000377481"
+          kategorie: "E02"
+          nachrichtendatum: "2024-04-01T08:46:00Z"
+          nachrichtenreferenznummer: "UT0000377481"
+          anfragereferenznummer: "PCL_7823101008565599050790000006659"
+          antwortstatus: "A07"
+          antwortstatusCodeliste: "E_0401"
+        zusatzdaten: 
+
+    PI_55007:
+      value:
+        stammdaten: 
+          MARKTLOKATION: 
+          - boTyp: "MARKTLOKATION"
+            versionStruktur: "1"
+            marktlokationsId: "50263791178"
+            energierichtung: "AUSSP"
+          NETZNUTZUNGSVERTRAG: 
+          - boTyp: "VERTRAG"
+            versionStruktur: "1"
+            vertragsart: "NETZNUTZUNGSVERTRAG"
+            sparte: "STROM"
+            vertragsende: "2024-04-30T22:00:00Z"
+            lokationsId: "50263791178"
+            lokationsTyp: "MALO"
+          BILANZIERUNG: 
+          - boTyp: "BILANZIERUNG"
+            versionStruktur: "1"
+            marktlokationsId: "50263791178"
+            bilanzierungsende: "2024-04-30T22:00:00Z"
+        transaktionsdaten: 
+          datenaustauschreferenz: "100806646839"
+          sparte: "STROM"
+          transaktionsgrund: "Z33"
+          vorgangsnummer: "9901064000005P010011008066468391"
+          pruefidentifikator: "55007"
+          absender: 
+            boTyp: "MARKTTEILNEHMER"
+            versionStruktur: "1"
+            rollencodenummer: "9900321000005"
+            rollencodetyp: "BDEW"
+          empfaenger: 
+            boTyp: "MARKTTEILNEHMER"
+            versionStruktur: "1"
+            rollencodenummer: "9903790000002"
+            rollencodetyp: "BDEW"
+          dokumentennummer: "100806646839"
+          kategorie: "E02"
+          nachrichtendatum: "2024-04-01T12:14:00Z"
+          nachrichtenreferenznummer: "100806646839"
+
+    PI_55008:
+      value:
+        stammdaten: 
+          MARKTLOKATION: 
+          - boTyp: "MARKTLOKATION"
+            versionStruktur: "1"
+            marktlokationsId: "50074561188"
+            sparte: "STROM"
+            energierichtung: "AUSSP"
+          NETZNUTZUNGSVERTRAG: 
+          - boTyp: "VERTRAG"
+            versionStruktur: "1"
+            vertragsart: "NETZNUTZUNGSVERTRAG"
+            sparte: "STROM"
+            vertragsende: "2024-06-30T22:00:00Z"
+            lokationsId: "50074561188"
+            lokationsTyp: "MALO"
+          BILANZIERUNG: 
+          - boTyp: "BILANZIERUNG"
+            versionStruktur: "1"
+            marktlokationsId: "50074561188"
+            bilanzierungsende: "2024-06-30T22:00:00Z"
+        transaktionsdaten: 
+          datenaustauschreferenz: "745100"
+          sparte: "STROM"
+          transaktionsgrund: "ZQ7"
+          vorgangsnummer: "310913210"
+          pruefidentifikator: "55008"
+          absender: 
+            boTyp: "MARKTTEILNEHMER"
+            versionStruktur: "1"
+            rollencodenummer: "9903790000002"
+            rollencodetyp: "BDEW"
+          empfaenger: 
+            boTyp: "MARKTTEILNEHMER"
+            versionStruktur: "1"
+            rollencodenummer: "9900321000005"
+            rollencodetyp: "BDEW"
+          dokumentennummer: "711412BGM"
+          kategorie: "E02"
+          nachrichtendatum: "2024-04-03T12:31:00Z"
+          nachrichtenreferenznummer: "711412"
+          anfragereferenznummer: "ABC1234567"
+          antwortstatus: "A10"
+          antwortstatusCodeliste: "E_0502"
+        zusatzdaten: 
+
     PI_55001:
       value:
         stammdaten:
@@ -1477,6 +1708,84 @@ components:
 
 
   schemas:
+  STAMMDATEN_LIEFERENDE:
+      type: object
+      properties:
+        stammdaten:
+          type: object
+          properties:
+            BILANZIERUNG:
+              type: array
+              items:
+                $ref: "#/components/schemas/Bilanzierung"
+            MARKTLOKATION:
+              type: array
+              items:
+                $ref: "#/components/schemas/Marktlokation"
+            MESSLOKATION:
+              type: array
+              items:
+                $ref: "#/components/schemas/Messlokation"
+            NETZNUTZUNGSVERTRAG:
+              type: array
+              items:
+                $ref: "#/components/schemas/Vertrag"
+            MESSSTELLENBETRIEBSVERTRAG:
+              type: array
+              items:
+                $ref: "#/components/schemas/Vertrag"
+            ENERGIELIEFERVERTRAG:
+              type: array
+              items:
+                $ref: "#/components/schemas/Vertrag"
+            ENERGIEMENGE:
+              type: array
+              items:
+                $ref: "#/components/schemas/Energiemenge"
+            ZAEHLER:
+              type: array
+              items:
+                $ref: "#/components/schemas/Zaehler"
+            TRANCHE:
+              type: array
+              items:
+                $ref: "#/components/schemas/Tranche"
+            NETZLOKATION:
+              type: array
+              items:
+                $ref: "#/components/schemas/Netzlokation"
+            STEUERBARE_RESSOURCE:
+              type: array
+              items:
+                $ref: "#/components/schemas/SteuerbareRessource"
+            TECHNISCHE_RESSOURCE:
+              type: array
+              items:
+                $ref: "#/components/schemas/TechnischeRessource"
+            LOKATIONSBUENDEL:
+              type: array
+              items:
+                $ref: "#/components/schemas/Lokationsbuendel"
+            AD_HOC_STEUERKANAL:
+              type: array
+              items:
+                $ref: "#/components/schemas/AdHocSteuerkanal"
+            WERTE_NACH_TYP2:
+              type: array
+              items:
+                $ref: "#/components/schemas/WerteNachTyp2"
+            RUHENDE_MARKTLOKATION:
+              type: array
+              items:
+                $ref: "#/components/schemas/Marktlokation"
+            MARKTLOKATION_KUNDENANLAGE:
+              type: array
+              items:
+                $ref: "#/components/schemas/Marktlokation"
+            VERWENDUNGSZEITRAUM:
+              type: array
+              items:
+                $ref: "#/components/schemas/Verwendungszeitraum"	
     STAMMDATEN_LIEFERBEGINN:
       type: object
       properties:
