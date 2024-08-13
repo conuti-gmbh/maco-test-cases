@@ -185,6 +185,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Marktteilnehmer'
+                
   /LESEN_ENERGIELIEFERVERTAG_BASIS:
     get:
       tags: 
