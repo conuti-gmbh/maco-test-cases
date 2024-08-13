@@ -29,6 +29,40 @@ tags:
       Trigger Events, die alle notwendigen Informationen enthalten, ohne Daten nachlesen zu müssen. | Trigger events that contain all necessary information.
       *Die erweiterten Events dokumentieren welche Parameter ein Event eines bestimmten Type enthalten kann und mindestens muss* | *The extended events document which parameters an event of a certain type can and at least must contain.*
 paths:
+  /START_LIEFERBEGINN:
+    post:
+      summary: START_LIEFERBEGINN
+      deprecated: false
+      description: Erhalte Event vom Backend | Receive Event From Backend
+      operationId: START_LIEFERBEGINN
+      tags: 
+        - SLIM EVENTS
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_LIEFERBEGINN'
+      responses:
+        '201':
+          description: Erfolg | Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  businessKey:
+                    type: string
+                    format: uuid
+                    description: Einzigartige Kennung des Geschäftsprozesses | Unique identifier of the business process
+                  message:
+                    type: string
+                    example: "received event START_LIEFERBEGINN_STROM with id at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                    description: Nachricht mit Details zum ausgelösten Event | Message with details about the triggered event
+                required:
+                  - businessKey
+                  - message
+      security: []
   /inbound[SLIM]:
     post:
       summary: Trigger Events
@@ -464,6 +498,20 @@ components:
             - START_UEBERM_DEFINITION
       required:
         - id, eventName
+    START_LIEFERBEGINN:
+      type: object
+      description: Schema für Lieferbeginn | Schema for the delivery start
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: "110000000605"
+        eventName:
+          type: string
+          default: 'START_LIEFERBEGINN'
+      required:
+        - id, eventName
+
   examples:
     START_SPERRAUFTRAG:
       summary: START_SPERRAUFTRAG Versand Sperrauftrag auslösen | Trigger shipping blocking order
@@ -545,3 +593,8 @@ components:
         vertragsende: '2024-06-01T04:00:00Z'
         empfaenger: '9870013800007'
         absender: '9800044300007'
+    START_LIEFERBEGINN:
+      summary: Beispiel für einen START_KUENDIGUNG Event | Example for a START_KUENDIGUNG event
+      value:
+        id: "110000000605"
+        eventName: "START_LIEFERBEGINN"
