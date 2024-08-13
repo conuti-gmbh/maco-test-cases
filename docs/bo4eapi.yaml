@@ -1,8 +1,11 @@
 openapi: 3.0.0
 info:
   title: MACO APP - erforderliche ERP Schnittstellen | MACO APP - needed ERP interfaces
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT    
   description: |
-    Übersicht der erforderlichen BO4E- und Prozessschnittstellen, die die MACO APP für die Ausführung der Marktprozesse benötigt. | Overview of the necessary BO4E and process interfaces that the MACO APP requires to execute market processes.
+    testing ... sdsds Übersicht der erforderlichen BO4E- und Prozessschnittstellen, die die MACO APP für die Ausführung der Marktprozesse benötigt. | Overview of the necessary BO4E and process interfaces that the MACO APP requires to execute market processes.
 
     <details>
     <summary>Changelog</summary>
@@ -44,6 +47,8 @@ paths:
     post:
       tags:
         - PROZESSDATEN
+      security:
+        - BearerAuth: []
       summary: ERSTELLEN_PROZESSDATEN_LIEFERENDE
       description: Beenden einer Liefersituation zum gegebenen Datum (Parameter1) an der gegebenen marktlokationsId (Parameter2) | Start a delivery end on the given date (Parameter1)  at the given market location ID (Parameter2)
       operationId: ERSTELLEN_PROZESSDATEN_LIEFERENDE
@@ -109,6 +114,8 @@ paths:
     post:
       tags:
         - PROZESSDATEN | PROCESSING DATA
+      security:
+        - BearerAuth: []
       summary: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
       description: Starten eines Lieferbeginns zum gegebenen Datum (Parameter1) an der gegeben marktlokationsId (Parameter2) | Start a delivery start on the given date (Parameter1)  at the given market location ID (Parameter2)
       operationId: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
@@ -170,6 +177,8 @@ paths:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_KOMMUNIKATIONSDATEN_BASIS
       description: Lesen der Kommunikationsdaten des Serviceanbieters (Parameter1) zum Zeitpunkt (Parameter2) | Reading the communication data of the service provider (Parameter1) at the time (Parameter2)
       operationId: LESEN_KOMMUNIKATIONSDATEN_BASIS
@@ -204,10 +213,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Kommunikationsdaten"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
         - AKTUALISIEREN | UPDATE
+      security:
+        - BearerAuth: []
       summary: AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS
       description: Aktualisieren der Kommunikationsdaten des Serviceanbieters (Parameter1) zum Zeitpunkt (Parameter2) | Updating the communication data of the service provider (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS
@@ -249,10 +262,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Kommunikationsdaten"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /LESEN_ENERGIELIEFERVERTRAG_BASIS:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_ENERGIELIEFERVERTRAG_BASIS
       description: Lesen des Energieliefervertrages einer Lokation (Parameter1) zum Zeitpunkt (Parameter2) | Reading the energy delivery contract of a location (Parameter1) at the time (Parameter2)
       operationId: LESEN_ENERGIELIEFERVERTRAG_BASIS
@@ -287,10 +304,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Vertrag"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /LESEN_ENERGIEMENGE_LASTGANG:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_ENERGIEMENGE_LASTGANG
       description: Lesen eines Profils über eine Lokation (Parameter1) zum Start- und Endezeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading a profile for a location (Parameter1) at the start and end time (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_LASTGANG
@@ -342,10 +363,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /ERSTELLEN_ENERGIEMENGE_LASTGANG:
     post:
       tags:
         - ERSTELLEN | CREATE
+      security:
+        - BearerAuth: []
       summary: ERSTELLEN_ENERGIEMENGE_LASTGANG
       description: Schreiben eines Lastgangs über eine Lokation (Parameter1) zu einem Zeitintervall (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing a load profile for a location (Parameter1) over a time interval (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_LASTGANG
@@ -403,10 +428,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /LESEN_ENERGIEMENGE_ZAEHLERSTAND:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_ENERGIEMENGE_ZAEHLERSTAND
       description: Lesen eines oder mehrerer Zählerstände über eine Lokation (Parameter1) in einer Range (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading one or more meter readings for a location (Parameter1) in a range (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_ZAEHLERSTAND
@@ -458,10 +487,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND:
     post:
       tags:
         - ERSTELLEN | CREATE
+      security:
+        - BearerAuth: []
       summary: ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND
       description: Schreiben eines Zählerstands über eine Lokation (Parameter1) zu einem Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing a meter reading for a location (Parameter1) at a point in time (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND
@@ -519,10 +552,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /LESEN_ENERGIEMENGE_ENERGIEMENGE:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_ENERGIEMENGE_ENERGIEMENGE
       description: Lesen einer Energiemenge über eine Lokation (Parameter1) in einer Range (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading an energy quantity for a location (Parameter1) in a range (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_ENERGIEMENGE
@@ -574,10 +611,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE:
     post:
       tags:
         - ERSTELLEN | CREATE
+      security:
+        - BearerAuth: []
       summary: ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE
       description: Schreiben einer Energiemenge über eine Lokation (Parameter1) zu einem Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing an energy quantity for a location (Parameter1) at a point in time (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE
@@ -635,10 +676,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Energiemenge"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /LESEN_MARKTLOKATION_BASIS:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_MARKTLOKATION_BASIS
       description: Lesen einer MaLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a MaLo using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_MARKTLOKATION_BASIS
@@ -674,10 +719,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Marktlokation"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /AKTUALISIEREN_MARKTLOKATION_BASIS:
     post:
       tags:
         - AKTUALISIEREN | UPDATE
+      security:
+        - BearerAuth: []
       summary: AKTUALISIEREN_MARKTLOKATION_BASIS
       description: Ändern einer MaLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a MaLo using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_MARKTLOKATION_BASIS
@@ -719,10 +768,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Marktlokation"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /LESEN_MESSLOKATION_BASIS:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_MESSLOKATION_BASIS
       description: Lesen einer MeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a MeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_MESSLOKATION_BASIS
@@ -758,10 +811,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Messlokation"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /AKTUALISIEREN_MESSLOKATION_BASIS:
     post:
       tags:
         - AKTUALISIEREN | UPDATE
+      security:
+        - BearerAuth: []
       summary: AKTUALISIEREN_MESSLOKATION_BASIS
       description: Ändern einer MeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a MeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_MESSLOKATION_BASIS
@@ -803,10 +860,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Messlokation"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /LESEN_NETZLOKATION_BASIS:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_NETZLOKATION_BASIS
       description: Lesen einer NeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a NeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_NETZLOKATION_BASIS
@@ -842,10 +903,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Netzlokation"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /AKTUALISIEREN_NETZLOKATION_BASIS:
     post:
       tags:
         - AKTUALISIEREN | UPDATE
+      security:
+        - BearerAuth: []
       summary: AKTUALISIEREN_NETZLOKATION_BASIS
       description: Ändern einer NeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a NeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_NETZLOKATION_BASIS
@@ -887,10 +952,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Netzlokation"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /LESEN_TRANCHE_BASIS:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_TRANCHE_BASIS
       description: Lesen einer Tranche mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a tranche using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_TRANCHE_BASIS
@@ -926,10 +995,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Tranche"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /AKTUALISIEREN_TRANCHE_BASIS:
     post:
       tags:
         - AKTUALISIEREN | UPDATE
+      security:
+        - BearerAuth: []
       summary: AKTUALISIEREN_TRANCHE_BASIS
       description: Ändern einer Tranche mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a tranche using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_TRANCHE_BASIS
@@ -971,10 +1044,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Tranche"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /LESEN_LOKATIONSBUENDEL_BASIS:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_LOKATIONSBUENDEL_BASIS
       description: Lesen eines Lokationsbündels mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a location bundle using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_LOKATIONSBUENDEL_BASIS
@@ -1010,10 +1087,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Lokationsbuendel"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /AKTUALISIEREN_LOKATIONSBUENDEL_BASIS:
     post:
       tags:
         - AKTUALISIEREN | UPDATE
+      security:
+        - BearerAuth: []
       summary: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
       description: Ändern eines Lokationsbündels mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a location bundle using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
@@ -1055,10 +1136,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Lokationsbuendel"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /LESEN_TECHNISCHE_RESSOURCE_BASIS:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_TECHNISCHE_RESSOURCE_BASIS
       description: Lesen einer technischen Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a technical resource using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_TECHNISCHE_RESSOURCE_BASIS
@@ -1094,10 +1179,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/TechnischeRessource"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS:
     post:
       tags:
         - AKTUALISIEREN | UPDATE
+      security:
+        - BearerAuth: []
       summary: AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS
       description: Ändern einer technischen Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a technical resource using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS
@@ -1139,10 +1228,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/TechnischeRessource"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /LESEN_STEUERBARE_RESSOURCE_BASIS:
     get:
       tags:
         - LESEN | READ
+      security:
+        - BearerAuth: []
       summary: LESEN_STEUERBARE_RESSOURCE_BASIS
       description: Lesen einer steuerbaren Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a controllable resource using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_STEUERBARE_RESSOURCE_BASIS
@@ -1178,10 +1271,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/SteuerbareRessource"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
   /AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS:
     post:
       tags:
         - AKTUALISIEREN | UPDATE
+      security:
+        - BearerAuth: []
       summary: AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS
       description: Ändern einer steuerbaren Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a controllable resource using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS
@@ -1223,8 +1320,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/SteuerbareRessource"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
 
 components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
   examples:
     PI_55004:
       value:

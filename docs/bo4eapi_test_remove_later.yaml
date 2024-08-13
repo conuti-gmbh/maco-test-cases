@@ -1,6 +1,9 @@
 openapi: 3.0.0
 info:
   title: MACO APP - erforderliche ERP Schnittstellen | MACO APP - needed ERP interfaces
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT    
   description: |
     Übersicht der erforderlichen BO4E- und Prozessschnittstellen, die die MACO APP für die Ausführung der Marktprozesse benötigt. | Overview of the necessary BO4E and process interfaces that the MACO APP requires to execute market processes.
 
@@ -17,6 +20,7 @@ info:
     - Initiale Version der API-Dokumentation.
 
     </details>
+    
   version: "1.0.1"
 servers:
   - url: https://api.macoapp.de
@@ -44,6 +48,8 @@ paths:
     post:
       tags:
         - PROZESSDATEN
+      security:
+        - BearerAuth: []
       summary: ERSTELLEN_PROZESSDATEN_LIEFERENDE
       description: Beenden einer Liefersituation zum gegebenen Datum (Parameter1) an der gegebenen marktlokationsId (Parameter2) | Start a delivery end on the given date (Parameter1)  at the given market location ID (Parameter2)
       operationId: ERSTELLEN_PROZESSDATEN_LIEFERENDE
