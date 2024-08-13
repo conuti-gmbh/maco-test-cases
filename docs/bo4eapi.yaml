@@ -46,7 +46,7 @@ paths:
   /ERSTELLEN_PROZESSDATEN_LIEFERENDE:
     post:
       tags:
-        - PROZESSDATEN
+        - PROZESSDATEN | PROCESSING DATA
       security:
         - BearerAuth: []
       summary: ERSTELLEN_PROZESSDATEN_LIEFERENDE
