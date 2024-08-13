@@ -44,7 +44,7 @@ paths:
     post:
       tags: 
         -  PROZESSDATEN | PROCESSING DATA
-      summary: Starten eines Lieferbeginns | Starting a delivery
+      summary: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
       description: Starten eines Lieferbeginns zum gegebenen Datum (Parameter1) an der gegeben marktlokationsId (Parameter2) | Start a delivery start on the given date (Parameter1)  at the given market location ID (Parameter2)
       operationId: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
       parameters:
@@ -53,7 +53,7 @@ paths:
           description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
           schema:
             type: string
-            default: NOCODB_ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
+            default: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
             example: NOCODB_ERSTELLEN_PROZESSDATEN_LIEFERBEGINN               
         - name: parameter1
           description: marktlokationsId | market location identifier
@@ -105,7 +105,7 @@ paths:
     get:
       tags: 
         -  LESEN | READ
-      summary: Lesen der Kommunikationsdaten | Reading communication data
+      summary: LESEN_KOMMUNIKATIONSDATEN_BASIS
       description: Lesen der Kommunikationsdaten des Serviceanbieters (Parameter1) zum Zeitpunkt (Parameter2) | Reading the communication data of the service provider (Parameter1) at the time (Parameter2)
       operationId: LESEN_KOMMUNIKATIONSDATEN_BASIS
       parameters:
@@ -114,7 +114,7 @@ paths:
           description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
           schema:
             type: string
-            default: NOCODB_LESEN_KOMMUNIKATIONSDATEN_BASIS 
+            default: LESEN_KOMMUNIKATIONSDATEN_BASIS 
             example: NOCODB_LESEN_KOMMUNIKATIONSDATEN_BASIS                
         - name: parameter1
           description: ILN Nummer | ILN number
@@ -138,12 +138,12 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Marktteilnehmer'
+                $ref: '#/components/schemas/Kommunikationsdaten'
   /AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags: 
         -  AKTUALISIEREN | UPDATE
-      summary: Aktualisieren der Kommunikationsdaten | Updating communication data
+      summary: AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS
       description: Aktualisieren der Kommunikationsdaten des Serviceanbieters (Parameter1) zum Zeitpunkt (Parameter2) | Updating the communication data of the service provider (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS
       parameters:
@@ -153,7 +153,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS    
+            default: AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS    
             example: NOCODB_AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS            
         - name: parameter1
           description: ILN Nummer | ILN number     
@@ -183,12 +183,12 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Marktteilnehmer'      
+                $ref: '#/components/schemas/Kommunikationsdaten'      
   /LESEN_ENERGIELIEFERVERTRAG_BASIS:
     get:
       tags: 
         -  LESEN | READ
-      summary: Lesen des Energieliefervertrages einer Lokation zum Zeitpunkt | Reading the energy supply contract of a location at the time
+      summary: LESEN_ENERGIELIEFERVERTRAG_BASIS
       description: Lesen des Energieliefervertrages einer Lokation (Parameter1) zum Zeitpunkt (Parameter2) | Reading the energy delivery contract of a location (Parameter1) at the time (Parameter2)
       operationId: LESEN_ENERGIELIEFERVERTRAG_BASIS
       parameters:
@@ -226,7 +226,7 @@ paths:
     get:
       tags: 
         -  LESEN | READ    
-      summary: Lesen eines Lastgangs | Reading a load profile
+      summary: LESEN_ENERGIEMENGE_LASTGANG
       description: Lesen eines Profils über eine Lokation (Parameter1) zum Start- und Endezeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading a profile for a location (Parameter1) at the start and end time (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_LASTGANG
       parameters:
@@ -236,7 +236,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_LESEN_ENERGIEMENGE_LASTGANG   
+            default: LESEN_ENERGIEMENGE_LASTGANG   
             example: NOCODB_LESEN_ENERGIEMENGE_LASTGANG            
         - name: parameter1
           description: LokationsId | Location ID     
@@ -281,7 +281,7 @@ paths:
     post:
       tags: 
         -  ERSTELLEN | CREATE
-      summary: Schreiben eines Lastgangs | Writing a load profile
+      summary: ERSTELLEN_ENERGIEMENGE_LASTGANG
       description: Schreiben eines Lastgangs über eine Lokation (Parameter1) zu einem Zeitintervall (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing a load profile for a location (Parameter1) over a time interval (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_LASTGANG
       parameters:
@@ -291,7 +291,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_ERSTELLEN_ENERGIEMENGE_LASTGANG  
+            default: ERSTELLEN_ENERGIEMENGE_LASTGANG  
             example: NOCODB_ERSTELLEN_ENERGIEMENGE_LASTGANG            
         - name: parameter1
           description: LokationsId | Location ID     
@@ -342,7 +342,7 @@ paths:
     get:
       tags: 
         -  LESEN | READ    
-      summary: Lesen eines oder mehrerer Zählerstände | Reading one or more meter readings
+      summary: LESEN_ENERGIEMENGE_ZAEHLERSTAND
       description: Lesen eines oder mehrerer Zählerstände über eine Lokation (Parameter1) in einer Range (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading one or more meter readings for a location (Parameter1) in a range (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_ZAEHLERSTAND
       parameters:
@@ -352,7 +352,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_LESEN_ENERGIEMENGE_ZAEHLERSTAND 
+            default: LESEN_ENERGIEMENGE_ZAEHLERSTAND 
             example: NOCODB_LESEN_ENERGIEMENGE_ZAEHLERSTAND            
         - name: parameter1
           description: LokationsId | Location ID         
@@ -397,7 +397,7 @@ paths:
     post:
       tags: 
         -  ERSTELLEN | CREATE
-      summary: Schreiben eines Zählerstands | Writing a meter reading
+      summary: ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND
       description: Schreiben eines Zählerstands über eine Lokation (Parameter1) zu einem Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing a meter reading for a location (Parameter1) at a point in time (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND
       parameters:
@@ -407,7 +407,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND 
+            default: ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND 
             example: NOCODB_ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND            
         - name: parameter1
           description: LokationsId | Location ID         
@@ -458,7 +458,7 @@ paths:
     get:
       tags: 
         -  LESEN | READ    
-      summary: Lesen einer Energiemenge | Reading an energy quantity
+      summary: LESEN_ENERGIEMENGE_ENERGIEMENGE
       description: Lesen einer Energiemenge über eine Lokation (Parameter1) in einer Range (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading an energy quantity for a location (Parameter1) in a range (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_ENERGIEMENGE
       parameters:
@@ -468,7 +468,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_LESEN_ENERGIEMENGE_ENERGIEMENGE
+            default: LESEN_ENERGIEMENGE_ENERGIEMENGE
             example: NOCODB_LESEN_ENERGIEMENGE_ENERGIEMENGE            
         - name: parameter1
           description: LokationsId | Location ID      
@@ -513,7 +513,7 @@ paths:
     post:
       tags: 
         -  ERSTELLEN | CREATE
-      summary: Schreiben einer Energiemenge | Writing an energy quantity
+      summary: ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE
       description: Schreiben einer Energiemenge über eine Lokation (Parameter1) zu einem Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing an energy quantity for a location (Parameter1) at a point in time (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE
       parameters:
@@ -523,7 +523,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE
+            default: ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE
             example: NOCODB_ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE                        
         - name: parameter1
           description: LokationsId | Location ID        
@@ -574,7 +574,7 @@ paths:
     get:
       tags: 
         -  LESEN | READ    
-      summary: Lesen einer Marktlokation | Reading a market location
+      summary: LESEN_MARKTLOKATION_BASIS
       description: Lesen einer MaLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a MaLo using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_MARKTLOKATION_BASIS
       parameters:
@@ -584,7 +584,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_LESEN_MARKTLOKATION_BASIS
+            default: LESEN_MARKTLOKATION_BASIS
             example: NOCODB_LESEN_MARKTLOKATION_BASIS            
         - name: parameter1
           description: LokationsId | Location ID         
@@ -613,7 +613,7 @@ paths:
     post:
       tags: 
         -  AKTUALISIEREN | UPDATE
-      summary: Aktualisieren einer Marktlokation | Updating a market location
+      summary: AKTUALISIEREN_MARKTLOKATION_BASIS
       description: Ändern einer MaLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a MaLo using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_MARKTLOKATION_BASIS
       parameters:
@@ -623,7 +623,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_AKTUALISIEREN_MARKTLOKATION_BASIS
+            default: AKTUALISIEREN_MARKTLOKATION_BASIS
             example: NOCODB_AKTUALISIEREN_MARKTLOKATION_BASIS            
         - name: parameter1
           description: LokationsId | Location ID         
@@ -631,7 +631,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date      
           in: query
@@ -658,7 +658,7 @@ paths:
     get:
       tags: 
         -  LESEN | READ    
-      summary: Lesen einer Messlokation | Reading a metering location
+      summary: LESEN_MESSLOKATION_BASIS
       description: Lesen einer MeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a MeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_MESSLOKATION_BASIS
       parameters:
@@ -668,7 +668,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_LESEN_MESSLOKATION_BASIS
+            default: LESEN_MESSLOKATION_BASIS
             example: NOCODB_LESEN_MESSLOKATION_BASIS            
         - name: parameter1
           description: LokationsId | Location ID      
@@ -676,7 +676,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "DE00056266802AO6G56M11SN51G21M24S"
         - name: parameter2
           description: Stichtag | Key date      
           in: query
@@ -697,7 +697,7 @@ paths:
     post:
       tags: 
         -  AKTUALISIEREN | UPDATE
-      summary: Aktualisieren einer Messlokation | Updating a metering location
+      summary: AKTUALISIEREN_MESSLOKATION_BASIS
       description: Ändern einer MeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a MeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_MESSLOKATION_BASIS
       parameters:
@@ -707,7 +707,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_AKTUALISIEREN_MESSLOKATION_BASIS
+            default: AKTUALISIEREN_MESSLOKATION_BASIS
             example: NOCODB_AKTUALISIEREN_MESSLOKATION_BASIS            
         - name: parameter1
           description: LokationsId | Location ID      
@@ -715,7 +715,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "DE00056266802AO6G56M11SN51G21M24S"
         - name: parameter2
           description: Stichtag | Key date     
           in: query
@@ -742,7 +742,7 @@ paths:
     get:
       tags: 
         -  LESEN | READ    
-      summary: Lesen einer Netzlokation | Reading a network location
+      summary: LESEN_NETZLOKATION_BASIS
       description: Lesen einer NeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a NeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_NETZLOKATION_BASIS
       parameters:
@@ -752,7 +752,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_LESEN_NETZLOKATION_BASIS
+            default: LESEN_NETZLOKATION_BASIS
             example: NOCODB_LESEN_NETZLOKATION_BASIS            
         - name: parameter1
           description: LokationsId | Location ID     
@@ -760,7 +760,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date      
           in: query
