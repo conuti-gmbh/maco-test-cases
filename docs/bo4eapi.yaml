@@ -1270,7 +1270,6 @@ components:
           freitext: 
             freitext1: "ABC"
         zusatzdaten:
-
     PI_55005:
       value:
         stammdaten: 
@@ -1322,7 +1321,6 @@ components:
           antwortstatus: "A06"
           antwortstatusCodeliste: "E_0401"
         zusatzdaten: 
-
     PI_55006:
       value:
         stammdaten: 
@@ -1367,7 +1365,6 @@ components:
           antwortstatus: "A07"
           antwortstatusCodeliste: "E_0401"
         zusatzdaten: 
-
     PI_55007:
       value:
         stammdaten: 
@@ -1409,7 +1406,6 @@ components:
           kategorie: "E02"
           nachrichtendatum: "2024-04-01T12:14:00Z"
           nachrichtenreferenznummer: "100806646839"
-
     PI_55008:
       value:
         stammdaten: 
@@ -1456,7 +1452,6 @@ components:
           antwortstatus: "A10"
           antwortstatusCodeliste: "E_0502"
         zusatzdaten: 
-
     PI_55001:
       value:
         stammdaten:
@@ -1532,7 +1527,6 @@ components:
               jahresverbrauchsprognose:
                 wert: 2000
                 einheit: "KWH"
-
     PI_55002:
       value:
         stammdaten:
@@ -1705,7 +1699,6 @@ components:
               jahresverbrauchsprognose:
                 wert: 1200
                 einheit: "KWH"
-
 
   schemas:
     STAMMDATEN_LIEFERENDE:
@@ -1914,6 +1907,7 @@ components:
               message:
                 type: string
                 example: "First name cannot have fancy characters"
+
 # BELOW GENERATED BO4E OBJECTS          
     AdHocSteuerkanal:
       type: object
