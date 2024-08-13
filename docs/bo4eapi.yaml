@@ -43,7 +43,7 @@ paths:
   /ERSTELLEN_PROZESSDATEN_LIEFERBEGINN:
     post:
       tags: 
-        -  PROZESSDATEN
+        -  PROZESSDATEN | PROCESSING DATA
       summary: Starten eines Lieferbeginns | Starting a delivery
       description: Starten eines Lieferbeginns zum gegebenen Datum (Parameter1) an der gegeben marktlokationsId (Parameter2) | Start a delivery start on the given date (Parameter1)  at the given market location ID (Parameter2)
       operationId: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
@@ -104,7 +104,7 @@ paths:
   /LESEN_KOMMUNIKATIONSDATEN_BASIS:
     get:
       tags: 
-        -  LESEN
+        -  LESEN | READ
       summary: Lesen der Kommunikationsdaten | Reading communication data
       description: Lesen der Kommunikationsdaten des Serviceanbieters (Parameter1) zum Zeitpunkt (Parameter2) | Reading the communication data of the service provider (Parameter1) at the time (Parameter2)
       operationId: LESEN_KOMMUNIKATIONSDATEN_BASIS
@@ -142,7 +142,7 @@ paths:
   /AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags: 
-        -  AKTUALISIEREN    
+        -  AKTUALISIEREN | UPDATE
       summary: Aktualisieren der Kommunikationsdaten | Updating communication data
       description: Aktualisieren der Kommunikationsdaten des Serviceanbieters (Parameter1) zum Zeitpunkt (Parameter2) | Updating the communication data of the service provider (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS
@@ -187,8 +187,8 @@ paths:
   /LESEN_ENERGIELIEFERVERTRAG_BASIS:
     get:
       tags: 
-        -  LESEN
-      summary: LESEN_ENERGIELIEFERVERTRAG_BASIS
+        -  LESEN | READ
+      summary: Lesen des Energieliefervertrages einer Lokation zum Zeitpunkt | Reading the energy supply contract of a location at the time
       description: Lesen des Energieliefervertrages einer Lokation (Parameter1) zum Zeitpunkt (Parameter2) | Reading the energy delivery contract of a location (Parameter1) at the time (Parameter2)
       operationId: LESEN_ENERGIELIEFERVERTRAG_BASIS
       parameters:
@@ -225,7 +225,7 @@ paths:
   /LESEN_ENERGIEMENGE_LASTGANG:
     get:
       tags: 
-        -  LESEN    
+        -  LESEN | READ    
       summary: Lesen eines Lastgangs | Reading a load profile
       description: Lesen eines Profils über eine Lokation (Parameter1) zum Start- und Endezeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading a profile for a location (Parameter1) at the start and end time (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_LASTGANG
@@ -341,7 +341,7 @@ paths:
   /LESEN_ENERGIEMENGE_ZAEHLERSTAND:
     get:
       tags: 
-        -  LESEN    
+        -  LESEN | READ    
       summary: Lesen eines oder mehrerer Zählerstände | Reading one or more meter readings
       description: Lesen eines oder mehrerer Zählerstände über eine Lokation (Parameter1) in einer Range (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading one or more meter readings for a location (Parameter1) in a range (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_ZAEHLERSTAND
@@ -457,7 +457,7 @@ paths:
   /LESEN_ENERGIEMENGE_ENERGIEMENGE:
     get:
       tags: 
-        -  LESEN    
+        -  LESEN | READ    
       summary: Lesen einer Energiemenge | Reading an energy quantity
       description: Lesen einer Energiemenge über eine Lokation (Parameter1) in einer Range (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading an energy quantity for a location (Parameter1) in a range (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_ENERGIEMENGE
@@ -573,7 +573,7 @@ paths:
   /LESEN_MARKTLOKATION_BASIS:
     get:
       tags: 
-        -  LESEN    
+        -  LESEN | READ    
       summary: Lesen einer Marktlokation | Reading a market location
       description: Lesen einer MaLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a MaLo using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_MARKTLOKATION_BASIS
@@ -612,7 +612,7 @@ paths:
   /AKTUALISIEREN_MARKTLOKATION_BASIS:
     post:
       tags: 
-        -  AKTUALISIEREN    
+        -  AKTUALISIEREN | UPDATE
       summary: Aktualisieren einer Marktlokation | Updating a market location
       description: Ändern einer MaLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a MaLo using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_MARKTLOKATION_BASIS
@@ -657,7 +657,7 @@ paths:
   /LESEN_MESSLOKATION_BASIS:
     get:
       tags: 
-        -  LESEN    
+        -  LESEN | READ    
       summary: Lesen einer Messlokation | Reading a metering location
       description: Lesen einer MeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a MeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_MESSLOKATION_BASIS
@@ -696,7 +696,7 @@ paths:
   /AKTUALISIEREN_MESSLOKATION_BASIS:
     post:
       tags: 
-        -  AKTUALISIEREN    
+        -  AKTUALISIEREN | UPDATE
       summary: Aktualisieren einer Messlokation | Updating a metering location
       description: Ändern einer MeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a MeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_MESSLOKATION_BASIS
@@ -741,7 +741,7 @@ paths:
   /LESEN_NETZLOKATION_BASIS:
     get:
       tags: 
-        -  LESEN    
+        -  LESEN | READ    
       summary: Lesen einer Netzlokation | Reading a network location
       description: Lesen einer NeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a NeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_NETZLOKATION_BASIS
@@ -780,7 +780,7 @@ paths:
   /AKTUALISIEREN_NETZLOKATION_BASIS:
     post:
       tags: 
-        -  AKTUALISIEREN    
+        -  AKTUALISIEREN | UPDATE
       summary: Aktualisieren einer Netzlokation | Updating a network location
       description: Ändern einer NeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a NeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_NETZLOKATION_BASIS
@@ -825,7 +825,7 @@ paths:
   /LESEN_TRANCHE_BASIS:
     get:
       tags: 
-        -  LESEN    
+        -  LESEN | READ    
       summary: Lesen einer Tranche | Reading a tranche
       description: Lesen einer Tranche mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a tranche using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_TRANCHE_BASIS
@@ -864,7 +864,7 @@ paths:
   /AKTUALISIEREN_TRANCHE_BASIS:
     post:
       tags: 
-        -  AKTUALISIEREN    
+        -  AKTUALISIEREN | UPDATE
       summary: Aktualisieren einer Tranche | Updating a tranche
       description: Ändern einer Tranche mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a tranche using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_TRANCHE_BASIS
@@ -909,7 +909,7 @@ paths:
   /LESEN_LOKATIONSBUENDEL_BASIS:
     get:
       tags: 
-        -  LESEN    
+        -  LESEN | READ    
       summary: Lesen eines Lokationsbündels | Reading a location bundle
       description: Lesen eines Lokationsbündels mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a location bundle using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_LOKATIONSBUENDEL_BASIS
@@ -948,7 +948,7 @@ paths:
   /AKTUALISIEREN_LOKATIONSBUENDEL_BASIS:
     post:
       tags: 
-        -  AKTUALISIEREN    
+        -  AKTUALISIEREN | UPDATE
       summary: Aktualisieren eines Lokationsbündels | Updating a location bundle
       description: Ändern eines Lokationsbündels mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a location bundle using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
@@ -993,7 +993,7 @@ paths:
   /LESEN_TECHNISCHE_RESSOURCE_BASIS:
     get:
       tags: 
-        -  LESEN    
+        -  LESEN | READ    
       summary: Lesen einer technischen Ressource | Reading a technical resource
       description: Lesen einer technischen Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a technical resource using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_TECHNISCHE_RESSOURCE_BASIS
@@ -1032,7 +1032,7 @@ paths:
   /AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS:
     post:
       tags: 
-        -  AKTUALISIEREN    
+        -  AKTUALISIEREN | UPDATE
       summary: Aktualisieren einer technischen Ressource | Updating a technical resource
       description: Ändern einer technischen Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a technical resource using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS
@@ -1077,7 +1077,7 @@ paths:
   /LESEN_STEUERBARE_RESSOURCE_BASIS:
     get:
       tags: 
-        -  LESEN    
+        -  LESEN | READ    
       summary: Lesen einer steuerbaren Ressource | Reading a controllable resource
       description: Lesen einer steuerbaren Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a controllable resource using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_STEUERBARE_RESSOURCE_BASIS
@@ -1116,7 +1116,7 @@ paths:
   /AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS:
     post:
       tags: 
-        -  AKTUALISIEREN    
+        -  AKTUALISIEREN | UPDATE
       summary: Aktualisieren einer steuerbaren Ressource | Updating a controllable resource
       description: Ändern einer steuerbaren Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a controllable resource using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS
@@ -2606,8 +2606,7 @@ components:
       properties:
         boTyp:
           $ref: '#/components/schemas/BOTyp'
-          type: string
-          default: 'TECHNISCHE_RESSOURCE'
+          default: TECHNISCHE_RESSOURCE
         versionStruktur:
           type: string
           default: '1'
