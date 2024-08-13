@@ -22,22 +22,22 @@ servers:
   - url: https://api.macoapp.de
     description: Mock-Umgebung | Mock environment
 tags:
-  - name: LESEN
+  - name: LESEN | READING
     description: Lesender Zugriff auf Geschäftsobjekte | Reading access to business objects
     externalDocs:
       description: BO4E JSON Schema
       url: https://github.com/conuti-gmbh/bo4e-schema
-  - name: AKTUALISIEREN
+  - name: AKTUALISIEREN | UPDATING
     description: Aktualisierung bestehender Geschäftsobjekte | Updating existing business objects
     externalDocs:
       description: BO4E JSON Schema
       url: https://github.com/conuti-gmbh/bo4e-schema
-  - name: ERSTELLEN
+  - name: ERSTELLEN | CREATING
     description: Erstellen von Geschäftsobjekten | Creating business objects
     externalDocs:
       description: BO4E JSON Schema
       url: https://github.com/conuti-gmbh/bo4e-schema   
-  - name: PROZESSDATEN
+  - name: PROZESSDATEN | PROCESSING DATA
     description: Auslösen von Prozessen im ERP System | Triggering processes in the ERP system  
 paths: 
   /ERSTELLEN_PROZESSDATEN_LIEFERBEGINN:
