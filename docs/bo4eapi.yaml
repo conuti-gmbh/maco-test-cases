@@ -61,7 +61,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561189  
+            example: "50074561188"  
         - name: parameter2 
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
@@ -122,7 +122,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 9903790000002  
+            example: "9903790000002"  
         - name: parameter2 
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
@@ -161,7 +161,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 9903790000002              
+            example: "9903790000002"              
         - name: parameter2
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
@@ -205,7 +205,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188 
+            example: "50074561188" 
         - name: parameter2 
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
@@ -244,7 +244,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Datum (ab) | Date (from)    
           in: query
@@ -299,7 +299,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Datum (ab) | Date (from)    
           in: query
@@ -360,7 +360,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Datum (ab) | Date (from)         
           in: query
@@ -415,7 +415,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Datum (ab) | Date (from)         
           in: query
@@ -476,7 +476,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Datum (ab) | Date (from)      
           in: query
@@ -531,7 +531,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Datum (ab) | Date (from)      
           in: query
@@ -592,7 +592,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date         
           in: query
@@ -781,7 +781,7 @@ paths:
     post:
       tags: 
         -  AKTUALISIEREN | UPDATE
-      summary: Aktualisieren einer Netzlokation | Updating a network location
+      summary: AKTUALISIEREN_NETZLOKATION_BASIS
       description: Ändern einer NeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a NeLo using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_NETZLOKATION_BASIS
       parameters:
@@ -791,7 +791,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_AKTUALISIEREN_NETZLOKATION_BASIS
+            default: AKTUALISIEREN_NETZLOKATION_BASIS
             example: NOCODB_AKTUALISIEREN_NETZLOKATION_BASIS            
         - name: parameter1
           description: LokationsId | Location ID       
@@ -799,7 +799,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date     
           in: query
@@ -826,7 +826,7 @@ paths:
     get:
       tags: 
         -  LESEN | READ    
-      summary: Lesen einer Tranche | Reading a tranche
+      summary: LESEN_TRANCHE_BASIS
       description: Lesen einer Tranche mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a tranche using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_TRANCHE_BASIS
       parameters:
@@ -836,7 +836,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_LESEN_TRANCHE_BASIS
+            default: LESEN_TRANCHE_BASIS
             example: NOCODB_LESEN_TRANCHE_BASIS              
         - name: parameter1
           description: LokationsId | Location ID        
@@ -844,7 +844,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date      
           in: query
@@ -865,7 +865,7 @@ paths:
     post:
       tags: 
         -  AKTUALISIEREN | UPDATE
-      summary: Aktualisieren einer Tranche | Updating a tranche
+      summary: AKTUALISIEREN_TRANCHE_BASIS
       description: Ändern einer Tranche mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a tranche using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_TRANCHE_BASIS
       parameters:
@@ -875,7 +875,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_AKTUALISIEREN_TRANCHE_BASIS
+            default: AKTUALISIEREN_TRANCHE_BASIS
             example: NOCODB_AKTUALISIEREN_TRANCHE_BASIS        
         - name: parameter1
           description: LokationsId | Location ID         
@@ -883,7 +883,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date         
           in: query
@@ -910,7 +910,7 @@ paths:
     get:
       tags: 
         -  LESEN | READ    
-      summary: Lesen eines Lokationsbündels | Reading a location bundle
+      summary: LESEN_LOKATIONSBUENDEL_BASIS
       description: Lesen eines Lokationsbündels mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a location bundle using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_LOKATIONSBUENDEL_BASIS
       parameters:
@@ -920,7 +920,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_LESEN_LOKATIONSBUENDEL_BASIS
+            default: LESEN_LOKATIONSBUENDEL_BASIS
             example: NOCODB_LESEN_LOKATIONSBUENDEL_BASIS             
         - name: parameter1
           description: LokationsId | Location ID       
@@ -928,7 +928,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date       
           in: query
@@ -949,7 +949,7 @@ paths:
     post:
       tags: 
         -  AKTUALISIEREN | UPDATE
-      summary: Aktualisieren eines Lokationsbündels | Updating a location bundle
+      summary: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
       description: Ändern eines Lokationsbündels mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a location bundle using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
       parameters:
@@ -959,7 +959,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
+            default: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
             example: NOCODB_AKTUALISIEREN_LOKATIONSBUENDEL_BASIS                 
         - name: parameter1
           description: LokationsId | Location ID       
@@ -967,7 +967,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date      
           in: query
@@ -994,7 +994,7 @@ paths:
     get:
       tags: 
         -  LESEN | READ    
-      summary: Lesen einer technischen Ressource | Reading a technical resource
+      summary: LESEN_TECHNISCHE_RESSOURCE_BASIS
       description: Lesen einer technischen Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a technical resource using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_TECHNISCHE_RESSOURCE_BASIS
       parameters:
@@ -1004,7 +1004,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_LESEN_TECHNISCHE_RESSOURCE_BASIS
+            default: LESEN_TECHNISCHE_RESSOURCE_BASIS
             example: NOCODB_LESEN_TECHNISCHE_RESSOURCE_BASIS             
         - name: parameter1
           description: LokationsId | Location ID       
@@ -1012,7 +1012,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date       
           in: query
@@ -1033,7 +1033,7 @@ paths:
     post:
       tags: 
         -  AKTUALISIEREN | UPDATE
-      summary: Aktualisieren einer technischen Ressource | Updating a technical resource
+      summary: AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS
       description: Ändern einer technischen Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a technical resource using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS
       parameters:
@@ -1043,7 +1043,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS
+            default: AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS
             example: NOCODB_AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS                 
         - name: parameter1
           description: LokationsId | Location ID       
@@ -1051,7 +1051,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date        
           in: query
@@ -1078,7 +1078,7 @@ paths:
     get:
       tags: 
         -  LESEN | READ    
-      summary: Lesen einer steuerbaren Ressource | Reading a controllable resource
+      summary: LESEN_STEUERBARE_RESSOURCE_BASIS
       description: Lesen einer steuerbaren Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a controllable resource using location ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_STEUERBARE_RESSOURCE_BASIS
       parameters:
@@ -1088,7 +1088,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_LESEN_STEUERBARE_RESSOURCE_BASIS
+            default: LESEN_STEUERBARE_RESSOURCE_BASIS
             example: NOCODB_LESEN_STEUERBARE_RESSOURCE_BASIS            
         - name: parameter1
           description: LokationsId | Location ID        
@@ -1096,7 +1096,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date      
           in: query
@@ -1117,7 +1117,7 @@ paths:
     post:
       tags: 
         -  AKTUALISIEREN | UPDATE
-      summary: Aktualisieren einer steuerbaren Ressource | Updating a controllable resource
+      summary: AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS
       description: Ändern einer steuerbaren Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a controllable resource using location ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS
       parameters:
@@ -1127,7 +1127,7 @@ paths:
           description: Name der Operation | Name of the operation
           schema:
             type: string
-            default: NOCODB_AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS
+            default: AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS
             example: NOCODB_AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS
         - name: parameter1
           description: LokationsId | Location ID      
@@ -1135,7 +1135,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 50074561188
+            example: "50074561188"
         - name: parameter2
           description: Stichtag | Key date      
           in: query
