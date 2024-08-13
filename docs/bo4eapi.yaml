@@ -189,7 +189,7 @@ paths:
     get:
       tags: 
         -  LESEN
-      summary: Lesen des Energieliefervertrages | Reading communication data
+      summary: LESEN_ENERGIELIEFERVERTAG_BASIS
       description: Lesen des Energieliefervertrages einer Lokation (Parameter1) zum Zeitpunkt (Parameter2) | Reading the energy delivery contract of a location (Parameter1) at the time (Parameter2)
       operationId: LESEN_ENERGIELIEFERVERTAG_BASIS
       parameters:
@@ -223,6 +223,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Energieliefervertrag'
+
   /LESEN_ENERGIEMENGE_LASTGANG:
     get:
       tags: 
