@@ -44,7 +44,7 @@ paths:
     post:
       tags: 
         -  PROZESSDATEN
-      summary: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
+      summary: Starten eines Lieferbeginns | Starting a delivery
       description: Starten eines Lieferbeginns zum gegebenen Datum (Parameter1) an der gegeben marktlokationsId (Parameter2) | Start a delivery start on the given date (Parameter1)  at the given market location ID (Parameter2)
       operationId: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
       parameters:
