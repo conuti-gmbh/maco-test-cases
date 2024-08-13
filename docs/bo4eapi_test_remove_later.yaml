@@ -86,3 +86,22 @@ paths:
                 $ref: "#/components/examples/PI_55008"
               "PI 55007 - ROLLE LF : DATEN AUS ANTWORT NB":
                 $ref: "#/components/examples/PI_55007"
+      responses:
+        "200":
+          description: Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of communication data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OK_RESPONSE"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ERROR_RESPONSE"
+        "422":
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ERROR_RESPONSE"
