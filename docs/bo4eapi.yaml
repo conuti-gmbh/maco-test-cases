@@ -2605,8 +2605,8 @@ components:
       type: object
       properties:
         boTyp:
-          $ref: '#/components/schemas/BOTyp'
-          default: TECHNISCHE_RESSOURCE
+          type: string
+          default: 'TECHNISCHE_RESSOURCE'
         versionStruktur:
           type: string
           default: '1'
