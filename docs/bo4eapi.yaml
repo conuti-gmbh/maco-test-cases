@@ -280,7 +280,7 @@ paths:
   /ERSTELLEN_ENERGIEMENGE_LASTGANG:
     post:
       tags: 
-        -  ERSTELLEN    
+        -  ERSTELLEN | CREATE
       summary: Schreiben eines Lastgangs | Writing a load profile
       description: Schreiben eines Lastgangs über eine Lokation (Parameter1) zu einem Zeitintervall (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing a load profile for a location (Parameter1) over a time interval (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_LASTGANG
@@ -396,7 +396,7 @@ paths:
   /ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND:
     post:
       tags: 
-        -  ERSTELLEN    
+        -  ERSTELLEN | CREATE
       summary: Schreiben eines Zählerstands | Writing a meter reading
       description: Schreiben eines Zählerstands über eine Lokation (Parameter1) zu einem Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing a meter reading for a location (Parameter1) at a point in time (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND
@@ -512,7 +512,7 @@ paths:
   /ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE:
     post:
       tags: 
-        -  ERSTELLEN    
+        -  ERSTELLEN | CREATE
       summary: Schreiben einer Energiemenge | Writing an energy quantity
       description: Schreiben einer Energiemenge über eine Lokation (Parameter1) zu einem Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing an energy quantity for a location (Parameter1) at a point in time (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE
