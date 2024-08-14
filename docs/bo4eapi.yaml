@@ -1,91 +1,116 @@
 openapi: 3.0.0
 info:
-  title: MACO APP - erforderliche ERP Schnittstellen | MACO APP - needed ERP interfaces
+  title: >-
+    MACO APP - erforderliche ERP Schnittstellen | MACO APP - needed ERP
+    interfaces
   license:
     name: MIT
-    url: https://opensource.org/licenses/MIT
-  description: |
-    Übersicht der erforderlichen BO4E- und Prozessschnittstellen, die die MACO APP für die Ausführung der Marktprozesse benötigt. | Overview of the necessary BO4E and process interfaces that the MACO APP requires to execute market processes.
+    url: 'https://opensource.org/licenses/MIT'
+  description: >
+    Übersicht der erforderlichen BO4E- und Prozessschnittstellen, die die MACO
+    APP für die Ausführung der Marktprozesse benötigt. | Overview of the
+    necessary BO4E and process interfaces that the MACO APP requires to execute
+    market processes.
+
 
     <details>
+
     <summary>Changelog</summary>
+
 
     **Version 1.0.1** - *08. August 2024* - _Autor: DAS_
 
+
     - Hinzufügen von mehrsprachigen Beschreibungen und Changelog.
+
     - Anpassung der Schema-Beschreibungen in Deutsch und Englisch.
+
 
     **Version 1.0** - *01. August 2024* - _Autor: DAS_
 
+
     - Initiale Version der API-Dokumentation.
+
 
     </details>
   version: 1.0.1
 servers:
-  - url: https://api.macoapp.de
+  - url: 'https://api.macoapp.de'
     description: Mock-Umgebung | Mock environment
 tags:
   - name: LESEN | READ
     description: Lesender Zugriff auf Geschäftsobjekte | Reading access to business objects
     externalDocs:
       description: BO4E JSON Schema
-      url: https://github.com/conuti-gmbh/bo4e-schema
+      url: 'https://github.com/conuti-gmbh/bo4e-schema'
   - name: AKTUALISIEREN | UPDATE
-    description: Aktualisierung bestehender Geschäftsobjekte | Updating existing business objects
+    description: >-
+      Aktualisierung bestehender Geschäftsobjekte | Updating existing business
+      objects
     externalDocs:
       description: BO4E JSON Schema
-      url: https://github.com/conuti-gmbh/bo4e-schema
+      url: 'https://github.com/conuti-gmbh/bo4e-schema'
   - name: ERSTELLEN | CREATE
     description: Erstellen von Geschäftsobjekten | Creating business objects
     externalDocs:
       description: BO4E JSON Schema
-      url: https://github.com/conuti-gmbh/bo4e-schema
+      url: 'https://github.com/conuti-gmbh/bo4e-schema'
   - name: PROZESSDATEN | PROCESSING DATA
-    description: Auslösen von Prozessen im ERP System | Triggering processes in the ERP system
+    description: >-
+      Auslösen von Prozessen im ERP System | Triggering processes in the ERP
+      system
   - name: EVENTDATEN | EVENT DATA
     description: Lesen von Eventdaten im ERP System | Reading event data in the ERP system
 paths:
   security: []
   /LESEN_EVENTDATEN_LIEFERBEGINN:
     post:
-      tags: 
-        -  EVENTDATEN | EVENT DATA
+      tags:
+        - EVENTDATEN | EVENT DATA
       summary: LESEN_EVENTDATEN_LIEFERBEGINN
-      description: Lesen der Belegdaten zur Id (Parameter1) mit dem Datum (Parameter2) | Reading data from id (Parameter1) at the given date (Parameter2)
+      description: >-
+        Lesen der Belegdaten zur Id (Parameter1) mit dem Datum (Parameter2) |
+        Reading data from id (Parameter1) at the given date (Parameter2)
       operationId: LESEN_EVENTDATEN_LIEFERBEGINN
       parameters:
         - name: command
           in: query
-          description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
           schema:
             type: string
             default: LESEN_EVENTDATEN_LIEFERBEGINN
-            example: NOCODB_LESEN_EVENTDATEN_LIEFERBEGINN               
+            example: NOCODB_LESEN_EVENTDATEN_LIEFERBEGINN
         - name: parameter1
-          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          description: >-
+            BelegId des Datensatzes in der Tabelle im Backend | DocumentId of
+            the data record in the table in the backend
           in: query
           required: true
           schema:
             type: string
-            example: '110000000605' 
-        - name: parameter2 
+            example: '110000000605'
+        - name: parameter2
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
           required: true
           schema:
             type: string
             format: date-time
-            example: "2024-06-28T12:18:00Z" 
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            example: '2024-06-28T12:18:00Z'
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/START_LIEFERBEGINN'  				
+              $ref: '#/components/schemas/START_LIEFERBEGINN'
       responses:
         '200':
-          description: Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of communication data
+          description: >-
+            Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of
+            communication data
           content:
             application/json:
               schema:
@@ -97,22 +122,27 @@ paths:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
         '422':
-          description: Nicht verarbeitbare Anfrage | Unprocessable Request 
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ERROR_RESPONSE'  
+                $ref: '#/components/schemas/ERROR_RESPONSE'
   /ERSTELLEN_PROZESSDATEN_LIEFERENDE:
     post:
       tags:
         - PROZESSDATEN | PROCESSING DATA
       summary: ERSTELLEN_PROZESSDATEN_LIEFERENDE
-      description: Beenden einer Liefersituation zum gegebenen Datum (Parameter1) an der gegebenen marktlokationsId (Parameter2) | Start a delivery end on the given date (Parameter1)  at the given market location ID (Parameter2)
+      description: >-
+        Beenden einer Liefersituation zum gegebenen Datum (Parameter1) an der
+        gegebenen marktlokationsId (Parameter2) | Start a delivery end on the
+        given date (Parameter1)  at the given market location ID (Parameter2)
       operationId: ERSTELLEN_PROZESSDATEN_LIEFERENDE
       parameters:
         - name: command
           in: query
-          description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
           schema:
             type: string
             default: ERSTELLEN_PROZESSDATEN_LIEFERENDE
@@ -132,7 +162,7 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       requestBody:
         required: true
         content:
@@ -150,7 +180,9 @@ paths:
                 $ref: '#/components/examples/PI_55007'
       responses:
         '200':
-          description: Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of communication data
+          description: >-
+            Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of
+            communication data
           content:
             application/json:
               schema:
@@ -172,12 +204,17 @@ paths:
       tags:
         - PROZESSDATEN | PROCESSING DATA
       summary: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
-      description: Starten eines Lieferbeginns zum gegebenen Datum (Parameter1) an der gegeben marktlokationsId (Parameter2) | Start a delivery start on the given date (Parameter1)  at the given market location ID (Parameter2)
+      description: >-
+        Starten eines Lieferbeginns zum gegebenen Datum (Parameter1) an der
+        gegeben marktlokationsId (Parameter2) | Start a delivery start on the
+        given date (Parameter1)  at the given market location ID (Parameter2)
       operationId: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
       parameters:
         - name: command
           in: query
-          description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
           schema:
             type: string
             default: ERSTELLEN_PROZESSDATEN_LIEFERBEGINN
@@ -197,7 +234,7 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       requestBody:
         required: true
         content:
@@ -211,7 +248,9 @@ paths:
                 $ref: '#/components/examples/PI_55002'
       responses:
         '200':
-          description: Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of communication data
+          description: >-
+            Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of
+            communication data
           content:
             application/json:
               schema:
@@ -233,12 +272,17 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_KOMMUNIKATIONSDATEN_BASIS
-      description: Lesen der Kommunikationsdaten des Serviceanbieters (Parameter1) zum Zeitpunkt (Parameter2) | Reading the communication data of the service provider (Parameter1) at the time (Parameter2)
+      description: >-
+        Lesen der Kommunikationsdaten des Serviceanbieters (Parameter1) zum
+        Zeitpunkt (Parameter2) | Reading the communication data of the service
+        provider (Parameter1) at the time (Parameter2)
       operationId: LESEN_KOMMUNIKATIONSDATEN_BASIS
       parameters:
         - name: command
           in: query
-          description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
           schema:
             type: string
             default: LESEN_KOMMUNIKATIONSDATEN_BASIS
@@ -258,10 +302,12 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       responses:
         '200':
-          description: Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of communication data
+          description: >-
+            Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of
+            communication data
           content:
             application/json:
               schema:
@@ -283,7 +329,10 @@ paths:
       tags:
         - AKTUALISIEREN | UPDATE
       summary: AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS
-      description: Aktualisieren der Kommunikationsdaten des Serviceanbieters (Parameter1) zum Zeitpunkt (Parameter2) | Updating the communication data of the service provider (Parameter1) at the time (Parameter2)
+      description: >-
+        Aktualisieren der Kommunikationsdaten des Serviceanbieters (Parameter1)
+        zum Zeitpunkt (Parameter2) | Updating the communication data of the
+        service provider (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS
       parameters:
         - name: command
@@ -309,7 +358,7 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       requestBody:
         required: true
         content:
@@ -318,7 +367,9 @@ paths:
               $ref: '#/components/schemas/Marktteilnehmer'
       responses:
         '200':
-          description: Erfolgreiches Aktualisieren der Kommunikationsdaten | Successful updating of communication data
+          description: >-
+            Erfolgreiches Aktualisieren der Kommunikationsdaten | Successful
+            updating of communication data
           content:
             application/json:
               schema:
@@ -328,12 +379,17 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_ENERGIELIEFERVERTRAG_BASIS
-      description: Lesen des Energieliefervertrages einer Lokation (Parameter1) zum Zeitpunkt (Parameter2) | Reading the energy delivery contract of a location (Parameter1) at the time (Parameter2)
+      description: >-
+        Lesen des Energieliefervertrages einer Lokation (Parameter1) zum
+        Zeitpunkt (Parameter2) | Reading the energy delivery contract of a
+        location (Parameter1) at the time (Parameter2)
       operationId: LESEN_ENERGIELIEFERVERTRAG_BASIS
       parameters:
         - name: command
           in: query
-          description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
           schema:
             type: string
             default: LESEN_ENERGIELIEFERVERTRAG_BASIS
@@ -353,10 +409,12 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       responses:
         '200':
-          description: Erfolgreiches Lesen des Energieliefervertrages | Successful reading of energy delivery contract
+          description: >-
+            Erfolgreiches Lesen des Energieliefervertrages | Successful reading
+            of energy delivery contract
           content:
             application/json:
               schema:
@@ -366,7 +424,12 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_ENERGIEMENGE_LASTGANG
-      description: Lesen eines Profils über eine Lokation (Parameter1) zum Start- und Endezeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading a profile for a location (Parameter1) at the start and end time (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
+      description: >-
+        Lesen eines Profils über eine Lokation (Parameter1) zum Start- und
+        Endezeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl
+        (Parameter4 optional) | Reading a profile for a location (Parameter1) at
+        the start and end time (Parameter2/Parameter3) and an OBIS code
+        (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_LASTGANG
       parameters:
         - name: command
@@ -392,7 +455,7 @@ paths:
             type: string
             format: date-time
             example: '2024-05-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter3
           description: Datum (bis) | Date (until)
           in: query
@@ -401,17 +464,19 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter4
           description: OBIS Kennzahl | OBIS code
           in: query
           required: false
           schema:
             type: string
-            example: 1-1:1.9.0
+            example: '1-1:1.9.0'
       responses:
         '200':
-          description: Erfolgreiches Lesen des Lastgangs | Successful reading of the load profile
+          description: >-
+            Erfolgreiches Lesen des Lastgangs | Successful reading of the load
+            profile
           content:
             application/json:
               schema:
@@ -421,7 +486,11 @@ paths:
       tags:
         - ERSTELLEN | CREATE
       summary: ERSTELLEN_ENERGIEMENGE_LASTGANG
-      description: Schreiben eines Lastgangs über eine Lokation (Parameter1) zu einem Zeitintervall (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing a load profile for a location (Parameter1) over a time interval (Parameter2/Parameter3) and an OBIS code (Parameter4)
+      description: >-
+        Schreiben eines Lastgangs über eine Lokation (Parameter1) zu einem
+        Zeitintervall (Parameter2/Parameter3) und einer OBIS Kennzahl
+        (Parameter4) | Writing a load profile for a location (Parameter1) over a
+        time interval (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_LASTGANG
       parameters:
         - name: command
@@ -447,7 +516,7 @@ paths:
             type: string
             format: date-time
             example: '2024-05-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter3
           description: Datum (bis) | Date (until)
           in: query
@@ -456,14 +525,14 @@ paths:
             type: string
             format: date-time
             example: '2024-05-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter4
           description: OBIS Kennzahl | OBIS code
           in: query
           required: false
           schema:
             type: string
-            example: 1-1:1.9.0
+            example: '1-1:1.9.0'
       requestBody:
         required: true
         content:
@@ -472,7 +541,9 @@ paths:
               $ref: '#/components/schemas/Energiemenge'
       responses:
         '201':
-          description: Erfolgreiches Schreiben des Lastgangs | Successful writing of the load profile
+          description: >-
+            Erfolgreiches Schreiben des Lastgangs | Successful writing of the
+            load profile
           content:
             application/json:
               schema:
@@ -482,7 +553,12 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_ENERGIEMENGE_ZAEHLERSTAND
-      description: Lesen eines oder mehrerer Zählerstände über eine Lokation (Parameter1) in einer Range (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading one or more meter readings for a location (Parameter1) in a range (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
+      description: >-
+        Lesen eines oder mehrerer Zählerstände über eine Lokation (Parameter1)
+        in einer Range (Parameter2/Parameter3) und einer OBIS Kennzahl
+        (Parameter4 optional) | Reading one or more meter readings for a
+        location (Parameter1) in a range (Parameter2/Parameter3) and an OBIS
+        code (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_ZAEHLERSTAND
       parameters:
         - name: command
@@ -508,7 +584,7 @@ paths:
             type: string
             format: date-time
             example: '2024-05-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter3
           description: Datum (bis) | Date (until)
           in: query
@@ -517,17 +593,19 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter4
           description: OBIS Kennzahl | OBIS code
           in: query
           required: false
           schema:
             type: string
-            example: 1-1:1.9.0
+            example: '1-1:1.9.0'
       responses:
         '200':
-          description: Erfolgreiches Lesen der Zählerstände | Successful reading of the meter readings
+          description: >-
+            Erfolgreiches Lesen der Zählerstände | Successful reading of the
+            meter readings
           content:
             application/json:
               schema:
@@ -537,7 +615,11 @@ paths:
       tags:
         - ERSTELLEN | CREATE
       summary: ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND
-      description: Schreiben eines Zählerstands über eine Lokation (Parameter1) zu einem Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing a meter reading for a location (Parameter1) at a point in time (Parameter2/Parameter3) and an OBIS code (Parameter4)
+      description: >-
+        Schreiben eines Zählerstands über eine Lokation (Parameter1) zu einem
+        Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) |
+        Writing a meter reading for a location (Parameter1) at a point in time
+        (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND
       parameters:
         - name: command
@@ -563,7 +645,7 @@ paths:
             type: string
             format: date-time
             example: '2024-05-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter3
           description: Datum (bis) | Date (until)
           in: query
@@ -572,14 +654,14 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter4
           description: OBIS Kennzahl | OBIS code
           in: query
           required: false
           schema:
             type: string
-            example: 1-1:1.9.0
+            example: '1-1:1.9.0'
       requestBody:
         required: true
         content:
@@ -588,7 +670,9 @@ paths:
               $ref: '#/components/schemas/Energiemenge'
       responses:
         '201':
-          description: Erfolgreiches Schreiben des Zählerstands | Successful writing of the meter reading
+          description: >-
+            Erfolgreiches Schreiben des Zählerstands | Successful writing of the
+            meter reading
           content:
             application/json:
               schema:
@@ -598,7 +682,11 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_ENERGIEMENGE_ENERGIEMENGE
-      description: Lesen einer Energiemenge über eine Lokation (Parameter1) in einer Range (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) | Reading an energy quantity for a location (Parameter1) in a range (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
+      description: >-
+        Lesen einer Energiemenge über eine Lokation (Parameter1) in einer Range
+        (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) |
+        Reading an energy quantity for a location (Parameter1) in a range
+        (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
       operationId: LESEN_ENERGIEMENGE_ENERGIEMENGE
       parameters:
         - name: command
@@ -624,7 +712,7 @@ paths:
             type: string
             format: date-time
             example: '2024-05-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter3
           description: Datum (bis) | Date (until)
           in: query
@@ -633,17 +721,19 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter4
           description: OBIS Kennzahl | OBIS code
           in: query
           required: false
           schema:
             type: string
-            example: 1-1:1.9.0
+            example: '1-1:1.9.0'
       responses:
         '200':
-          description: Erfolgreiches Lesen der Energiemenge | Successful reading of the energy quantity
+          description: >-
+            Erfolgreiches Lesen der Energiemenge | Successful reading of the
+            energy quantity
           content:
             application/json:
               schema:
@@ -653,7 +743,11 @@ paths:
       tags:
         - ERSTELLEN | CREATE
       summary: ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE
-      description: Schreiben einer Energiemenge über eine Lokation (Parameter1) zu einem Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) | Writing an energy quantity for a location (Parameter1) at a point in time (Parameter2/Parameter3) and an OBIS code (Parameter4)
+      description: >-
+        Schreiben einer Energiemenge über eine Lokation (Parameter1) zu einem
+        Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) |
+        Writing an energy quantity for a location (Parameter1) at a point in
+        time (Parameter2/Parameter3) and an OBIS code (Parameter4)
       operationId: ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE
       parameters:
         - name: command
@@ -679,7 +773,7 @@ paths:
             type: string
             format: date-time
             example: '2024-05-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter3
           description: Datum (bis) | Date (until)
           in: query
@@ -688,14 +782,14 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
         - name: parameter4
           description: OBIS Kennzahl | OBIS code
           in: query
           required: false
           schema:
             type: string
-            example: 1-1:1.9.0
+            example: '1-1:1.9.0'
       requestBody:
         required: true
         content:
@@ -704,7 +798,9 @@ paths:
               $ref: '#/components/schemas/Energiemenge'
       responses:
         '201':
-          description: Erfolgreiches Schreiben der Energiemenge | Successful writing of the energy quantity
+          description: >-
+            Erfolgreiches Schreiben der Energiemenge | Successful writing of the
+            energy quantity
           content:
             application/json:
               schema:
@@ -714,7 +810,10 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_MARKTLOKATION_BASIS
-      description: Lesen einer MaLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a MaLo using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Lesen einer MaLo mittels LokationsId (Parameter1) zum Zeitpunkt
+        (Parameter2) | Reading a MaLo using location ID (Parameter1) at the time
+        (Parameter2)
       operationId: LESEN_MARKTLOKATION_BASIS
       parameters:
         - name: command
@@ -740,10 +839,12 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       responses:
         '200':
-          description: Erfolgreiches Lesen der Marktlokation | Successful reading of the market location
+          description: >-
+            Erfolgreiches Lesen der Marktlokation | Successful reading of the
+            market location
           content:
             application/json:
               schema:
@@ -753,7 +854,10 @@ paths:
       tags:
         - AKTUALISIEREN | UPDATE
       summary: AKTUALISIEREN_MARKTLOKATION_BASIS
-      description: Ändern einer MaLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a MaLo using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Ändern einer MaLo mittels LokationsId (Parameter1) zum Zeitpunkt
+        (Parameter2) | Changing a MaLo using location ID (Parameter1) at the
+        time (Parameter2)
       operationId: AKTUALISIEREN_MARKTLOKATION_BASIS
       parameters:
         - name: command
@@ -779,7 +883,7 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       requestBody:
         required: true
         content:
@@ -788,7 +892,9 @@ paths:
               $ref: '#/components/schemas/Marktlokation'
       responses:
         '200':
-          description: Erfolgreiches Aktualisieren der Marktlokation | Successful updating of the market location
+          description: >-
+            Erfolgreiches Aktualisieren der Marktlokation | Successful updating
+            of the market location
           content:
             application/json:
               schema:
@@ -798,7 +904,10 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_MESSLOKATION_BASIS
-      description: Lesen einer MeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a MeLo using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Lesen einer MeLo mittels LokationsId (Parameter1) zum Zeitpunkt
+        (Parameter2) | Reading a MeLo using location ID (Parameter1) at the time
+        (Parameter2)
       operationId: LESEN_MESSLOKATION_BASIS
       parameters:
         - name: command
@@ -824,10 +933,12 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       responses:
         '200':
-          description: Erfolgreiches Lesen der Messlokation | Successful reading of the metering location
+          description: >-
+            Erfolgreiches Lesen der Messlokation | Successful reading of the
+            metering location
           content:
             application/json:
               schema:
@@ -837,7 +948,10 @@ paths:
       tags:
         - AKTUALISIEREN | UPDATE
       summary: AKTUALISIEREN_MESSLOKATION_BASIS
-      description: Ändern einer MeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a MeLo using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Ändern einer MeLo mittels LokationsId (Parameter1) zum Zeitpunkt
+        (Parameter2) | Changing a MeLo using location ID (Parameter1) at the
+        time (Parameter2)
       operationId: AKTUALISIEREN_MESSLOKATION_BASIS
       parameters:
         - name: command
@@ -863,7 +977,7 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       requestBody:
         required: true
         content:
@@ -872,7 +986,9 @@ paths:
               $ref: '#/components/schemas/Messlokation'
       responses:
         '200':
-          description: Erfolgreiches Aktualisieren der Messlokation | Successful updating of the metering location
+          description: >-
+            Erfolgreiches Aktualisieren der Messlokation | Successful updating
+            of the metering location
           content:
             application/json:
               schema:
@@ -882,7 +998,10 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_NETZLOKATION_BASIS
-      description: Lesen einer NeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a NeLo using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Lesen einer NeLo mittels LokationsId (Parameter1) zum Zeitpunkt
+        (Parameter2) | Reading a NeLo using location ID (Parameter1) at the time
+        (Parameter2)
       operationId: LESEN_NETZLOKATION_BASIS
       parameters:
         - name: command
@@ -908,10 +1027,12 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       responses:
         '200':
-          description: Erfolgreiches Lesen der Netzlokation | Successful reading of the network location
+          description: >-
+            Erfolgreiches Lesen der Netzlokation | Successful reading of the
+            network location
           content:
             application/json:
               schema:
@@ -921,7 +1042,10 @@ paths:
       tags:
         - AKTUALISIEREN | UPDATE
       summary: AKTUALISIEREN_NETZLOKATION_BASIS
-      description: Ändern einer NeLo mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a NeLo using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Ändern einer NeLo mittels LokationsId (Parameter1) zum Zeitpunkt
+        (Parameter2) | Changing a NeLo using location ID (Parameter1) at the
+        time (Parameter2)
       operationId: AKTUALISIEREN_NETZLOKATION_BASIS
       parameters:
         - name: command
@@ -947,7 +1071,7 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       requestBody:
         required: true
         content:
@@ -956,7 +1080,9 @@ paths:
               $ref: '#/components/schemas/Netzlokation'
       responses:
         '200':
-          description: Erfolgreiches Aktualisieren der Netzlokation | Successful updating of the network location
+          description: >-
+            Erfolgreiches Aktualisieren der Netzlokation | Successful updating
+            of the network location
           content:
             application/json:
               schema:
@@ -966,7 +1092,10 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_TRANCHE_BASIS
-      description: Lesen einer Tranche mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a tranche using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Lesen einer Tranche mittels LokationsId (Parameter1) zum Zeitpunkt
+        (Parameter2) | Reading a tranche using location ID (Parameter1) at the
+        time (Parameter2)
       operationId: LESEN_TRANCHE_BASIS
       parameters:
         - name: command
@@ -992,7 +1121,7 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$$'
       responses:
         '200':
           description: Erfolgreiches Lesen der Tranche | Successful reading of the tranche
@@ -1005,7 +1134,10 @@ paths:
       tags:
         - AKTUALISIEREN | UPDATE
       summary: AKTUALISIEREN_TRANCHE_BASIS
-      description: Ändern einer Tranche mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a tranche using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Ändern einer Tranche mittels LokationsId (Parameter1) zum Zeitpunkt
+        (Parameter2) | Changing a tranche using location ID (Parameter1) at the
+        time (Parameter2)
       operationId: AKTUALISIEREN_TRANCHE_BASIS
       parameters:
         - name: command
@@ -1031,7 +1163,7 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       requestBody:
         required: true
         content:
@@ -1040,7 +1172,9 @@ paths:
               $ref: '#/components/schemas/Tranche'
       responses:
         '200':
-          description: Erfolgreiches Aktualisieren der Tranche | Successful updating of the tranche
+          description: >-
+            Erfolgreiches Aktualisieren der Tranche | Successful updating of the
+            tranche
           content:
             application/json:
               schema:
@@ -1050,7 +1184,10 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_LOKATIONSBUENDEL_BASIS
-      description: Lesen eines Lokationsbündels mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a location bundle using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Lesen eines Lokationsbündels mittels LokationsId (Parameter1) zum
+        Zeitpunkt (Parameter2) | Reading a location bundle using location ID
+        (Parameter1) at the time (Parameter2)
       operationId: LESEN_LOKATIONSBUENDEL_BASIS
       parameters:
         - name: command
@@ -1076,10 +1213,12 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       responses:
         '200':
-          description: Erfolgreiches Lesen des Lokationsbündels | Successful reading of the location bundle
+          description: >-
+            Erfolgreiches Lesen des Lokationsbündels | Successful reading of the
+            location bundle
           content:
             application/json:
               schema:
@@ -1089,7 +1228,10 @@ paths:
       tags:
         - AKTUALISIEREN | UPDATE
       summary: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
-      description: Ändern eines Lokationsbündels mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a location bundle using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Ändern eines Lokationsbündels mittels LokationsId (Parameter1) zum
+        Zeitpunkt (Parameter2) | Changing a location bundle using location ID
+        (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
       parameters:
         - name: command
@@ -1115,7 +1257,7 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       requestBody:
         required: true
         content:
@@ -1124,7 +1266,9 @@ paths:
               $ref: '#/components/schemas/Lokationsbuendel'
       responses:
         '200':
-          description: Erfolgreiches Aktualisieren des Lokationsbündels | Successful updating of the location bundle
+          description: >-
+            Erfolgreiches Aktualisieren des Lokationsbündels | Successful
+            updating of the location bundle
           content:
             application/json:
               schema:
@@ -1134,7 +1278,10 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_TECHNISCHE_RESSOURCE_BASIS
-      description: Lesen einer technischen Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a technical resource using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Lesen einer technischen Ressource mittels LokationsId (Parameter1) zum
+        Zeitpunkt (Parameter2) | Reading a technical resource using location ID
+        (Parameter1) at the time (Parameter2)
       operationId: LESEN_TECHNISCHE_RESSOURCE_BASIS
       parameters:
         - name: command
@@ -1160,10 +1307,12 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       responses:
         '200':
-          description: Erfolgreiches Lesen der technischen Ressource | Successful reading of the technical resource
+          description: >-
+            Erfolgreiches Lesen der technischen Ressource | Successful reading
+            of the technical resource
           content:
             application/json:
               schema:
@@ -1173,7 +1322,10 @@ paths:
       tags:
         - AKTUALISIEREN | UPDATE
       summary: AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS
-      description: Ändern einer technischen Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a technical resource using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Ändern einer technischen Ressource mittels LokationsId (Parameter1) zum
+        Zeitpunkt (Parameter2) | Changing a technical resource using location ID
+        (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_TECHNISCHE_RESSOURCE_BASIS
       parameters:
         - name: command
@@ -1199,7 +1351,7 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       requestBody:
         required: true
         content:
@@ -1208,7 +1360,9 @@ paths:
               $ref: '#/components/schemas/TechnischeRessource'
       responses:
         '200':
-          description: Erfolgreiches Aktualisieren der technischen Ressource | Successful updating of the technical resource
+          description: >-
+            Erfolgreiches Aktualisieren der technischen Ressource | Successful
+            updating of the technical resource
           content:
             application/json:
               schema:
@@ -1218,7 +1372,10 @@ paths:
       tags:
         - LESEN | READ
       summary: LESEN_STEUERBARE_RESSOURCE_BASIS
-      description: Lesen einer steuerbaren Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Reading a controllable resource using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Lesen einer steuerbaren Ressource mittels LokationsId (Parameter1) zum
+        Zeitpunkt (Parameter2) | Reading a controllable resource using location
+        ID (Parameter1) at the time (Parameter2)
       operationId: LESEN_STEUERBARE_RESSOURCE_BASIS
       parameters:
         - name: command
@@ -1244,10 +1401,12 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       responses:
         '200':
-          description: Erfolgreiches Lesen der steuerbaren Ressource | Successful reading of the controllable resource
+          description: >-
+            Erfolgreiches Lesen der steuerbaren Ressource | Successful reading
+            of the controllable resource
           content:
             application/json:
               schema:
@@ -1257,7 +1416,10 @@ paths:
       tags:
         - AKTUALISIEREN | UPDATE
       summary: AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS
-      description: Ändern einer steuerbaren Ressource mittels LokationsId (Parameter1) zum Zeitpunkt (Parameter2) | Changing a controllable resource using location ID (Parameter1) at the time (Parameter2)
+      description: >-
+        Ändern einer steuerbaren Ressource mittels LokationsId (Parameter1) zum
+        Zeitpunkt (Parameter2) | Changing a controllable resource using location
+        ID (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_STEUERBARE_RESSOURCE_BASIS
       parameters:
         - name: command
@@ -1283,7 +1445,7 @@ paths:
             type: string
             format: date-time
             example: '2024-06-28T12:18:00Z'
-            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
       requestBody:
         required: true
         content:
@@ -1292,7 +1454,9 @@ paths:
               $ref: '#/components/schemas/SteuerbareRessource'
       responses:
         '200':
-          description: Erfolgreiches Aktualisieren der steuerbaren Ressource | Successful updating of the controllable resource
+          description: >-
+            Erfolgreiches Aktualisieren der steuerbaren Ressource | Successful
+            updating of the controllable resource
           content:
             application/json:
               schema:
@@ -1633,7 +1797,7 @@ components:
                   messstellenbetreiberEigenschaft: GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER
               regelzone: 10YDE-RWENET---I
               zaehlwerke:
-                - obisKennzahl: 1-1:1.9.0
+                - obisKennzahl: '1-1:1.9.0'
                   verwendungszwecke:
                     - marktrolle: LF
                       zweck:
@@ -1949,7 +2113,7 @@ components:
           $ref: '#/components/schemas/VerguetungEmpfaenger'
         bilanzkreis:
           type: string
-          default: '11X----123456'
+          default: 11X----123456
         vertragsbeginn:
           type: string
           default: '2024-04-01T07:40:00Z'
@@ -1962,37 +2126,37 @@ components:
           type: boolean
         anrede:
           type: string
-          default: 'Musteranrede'
+          default: Musteranrede
         name1:
           type: string
-          default: 'Mustername1'
+          default: Mustername1
         name2:
           type: string
-          default: 'Mustername2'
+          default: Mustername2
         postleitzahl:
           type: string
           default: '12345'
         ort:
           type: string
-          default: 'Musterort'
+          default: Musterort
         strasse:
           type: string
-          default: 'Musterstrasse'
+          default: Musterstrasse
         hausnummer:
           type: string
-          default: '11a'
+          default: 11a
         landescode:
           type: string
-          default: 'DE'
+          default: DE
         ortsteil:
           type: string
-          default: 'Musterortsteil'
+          default: Musterortsteil
         empfaenger:
           type: string
           default: '9900321000005'
         transaktionsgrund:
           type: string
-          default: 'E01'
+          default: E01
         transaktionsgrundergaenzung:
           type: string
         transaktionsgrundergaenzungBefristeteAnmeldung:
@@ -2002,10 +2166,14 @@ components:
           default: '9900321000005'
     OK_RESPONSE:
       type: object
-      description: Erfolgsmeldung auf Prozessdaten API Aufruf | Success message on process data API call
+      description: >-
+        Erfolgsmeldung auf Prozessdaten API Aufruf | Success message on process
+        data API call
       properties:
         messages:
-          description: Fachliche Rückmeldungen zur Anzeige in der Oberfläche | Professional feedback on the display in the user interface
+          description: >-
+            Fachliche Rückmeldungen zur Anzeige in der Oberfläche | Professional
+            feedback on the display in the user interface
           type: array
           items:
             type: object
@@ -2018,14 +2186,18 @@ components:
                 example: Messlokation
               message:
                 type: string
-                example: Messlokation DE63653316530AEOJQLMHUW55UC6J5513 wurde der Marktlokation 84043719589 zugeordnet
+                example: >-
+                  Messlokation DE63653316530AEOJQLMHUW55UC6J5513 wurde der
+                  Marktlokation 84043719589 zugeordnet
         message:
           type: string
           description: Technische Meldung | Technische Meldung
           example: meterlocation assigned.
     ERROR_RESPONSE:
       type: object
-      description: Fehlermeldung auf Prozessdaten API Aufruf | Error message on process data API call
+      description: >-
+        Fehlermeldung auf Prozessdaten API Aufruf | Error message on process
+        data API call
       properties:
         errorCode:
           type: string
@@ -2037,7 +2209,9 @@ components:
           example: Validation Failed
         errors:
           type: array
-          description: 'Sammlung von Fehlercodes in einem Bucket | Collection of error codes in a bucket '
+          description: >-
+            Sammlung von Fehlercodes in einem Bucket | Collection of error codes
+            in a bucket 
           items:
             type: object
             properties:
@@ -4723,7 +4897,8 @@ components:
         - MEHR_MINDERMENGE_FALSCH
         - UNGUELTIGES_RECHNUNGSDATUM
         - ZEITINTERVALL_DER_BILANZIERTEN_MENGE_INKONSISTENT
-        - RECHNUNGSEMPFAENGER_WIDERSPRICHT_DER_STEUERRECHTLICHEN_EINSCHAETZUNG_DES_RECHNUNGSSTELLERS
+        - >-
+          RECHNUNGSEMPFAENGER_WIDERSPRICHT_DER_STEUERRECHTLICHEN_EINSCHAETZUNG_DES_RECHNUNGSSTELLERS
         - ANGEGEBENE_QUOTES_AN_MARKTLOKATION_NICHT_VORHANDEN
         - RECHNUNGSABWICKLUNG_NICHT_VEREINBART
         - COMDIS_WIRD_ABGELEHNT
@@ -4789,7 +4964,8 @@ components:
         - BESTELLUNG_EINER_KONFIGURATION
         - BESTELLUNG_EINES_ANGEBOTS_EINER_KONFIGURATION
         - REKLAMATION_EINER_KONFIGURATION
-        - BESTELLUNG_AENDERUNG_NETZENTGELTE_NETZORIENTIERTER_STEUERUNGSMOEGLICHKEIT
+        - >-
+          BESTELLUNG_AENDERUNG_NETZENTGELTE_NETZORIENTIERTER_STEUERUNGSMOEGLICHKEIT
     Anfragetyp:
       type: string
       enum:
@@ -6139,12 +6315,17 @@ components:
         - WARTUNGSARBEITEN_AN_EICHRECHTSKONFORMEN_MESSGERAETEN
         - KONSISTENZ_UND_SYNCHRONPRUEFUNG
         - GRUND_ANGABEN_MESSLOKATION
-        - ANFORDERUNG_IN_DIE_VERGANGENHEIT_ZUM_ANGEFORDERTEN_ZEITPUNKT_LIEGT_KEIN_WERT_VOR
+        - >-
+          ANFORDERUNG_IN_DIE_VERGANGENHEIT_ZUM_ANGEFORDERTEN_ZEITPUNKT_LIEGT_KEIN_WERT_VOR
         - UMSTELLUNG_GASQUALITAET
-        - ZAEHLERSTAND_ZUM_BEGINN_DER_ANGEGEBENEN_ENERGIEMENGE_VORHANDEN_UND_KOMMUNIZIERT
-        - ZAEHLERSTAND_ZUM_ENDE_DER_ANGEGEBENEN_ENERGIEMENGE_VORHANDEN_UND_KOMMUNIZIERT
-        - ZAEHLERSTAND_ZUM_BEGINN_DER_ANGEGEBENEN_ENERGIEMENGE_NICHT_VORHANDEN_DA_MENGENABGRENZUNG
-        - ZAEHLERSTAND_ZUM_ENDE_DER_ANGEGEBENEN_ENERGIEMENGE_NICHT_VORHANDEN_DA_MENGENABGRENZUNG
+        - >-
+          ZAEHLERSTAND_ZUM_BEGINN_DER_ANGEGEBENEN_ENERGIEMENGE_VORHANDEN_UND_KOMMUNIZIERT
+        - >-
+          ZAEHLERSTAND_ZUM_ENDE_DER_ANGEGEBENEN_ENERGIEMENGE_VORHANDEN_UND_KOMMUNIZIERT
+        - >-
+          ZAEHLERSTAND_ZUM_BEGINN_DER_ANGEGEBENEN_ENERGIEMENGE_NICHT_VORHANDEN_DA_MENGENABGRENZUNG
+        - >-
+          ZAEHLERSTAND_ZUM_ENDE_DER_ANGEGEBENEN_ENERGIEMENGE_NICHT_VORHANDEN_DA_MENGENABGRENZUNG
         - GESCHEITERT
         - AUSGEBAUT
     Statusanlass:
@@ -6456,4 +6637,5 @@ components:
         - UMSPANNUNGSZUSCHLAG
         - BETRIEBSMITTEL_P19_STROM_NEV
         - ANPASSUNG_P19_STROM_NEV
-        - ANPASSUNG_PAUSCHALE_NETZENTGELTREDUZIERUNG_NACH_P14A_ENWG_AUF_HOEHE_DER_NNE
+        - >-
+          ANPASSUNG_PAUSCHALE_NETZENTGELTREDUZIERUNG_NACH_P14A_ENWG_AUF_HOEHE_DER_NNE
