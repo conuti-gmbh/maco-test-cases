@@ -462,7 +462,7 @@ paths:
   /LOESCHEN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
-        - LOESCHEN | DELETE
+        - LÖSCHEN | DELETE
       summary: LOESCHEN_KOMMUNIKATIONSDATEN_BASIS
       description: >-
         Löschen der Kommunikationsdaten des Serviceanbieters (Parameter1)
