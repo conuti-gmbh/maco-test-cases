@@ -580,6 +580,65 @@ paths:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'                
 
+  /LESEN_AVIS_BASIS:
+    get:
+      tags:
+        - LESEN | READ
+      summary: LESEN_AVIS_BASIS
+      description: >-
+        Lesen des Avises mittels Avisnummer (Parameter1) zum
+        Zeitpunkt (Parameter2) | Reading the avis via
+        avisnumber (Parameter1) at the time (Parameter2)
+      operationId: LESEN_AVIS_BASIS
+      parameters:
+        - name: command
+          in: query
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
+          schema:
+            type: string
+            default: LESEN_AVIS_BASIS
+            example: NOCODB_LESEN_AVIS_BASIS
+        - name: parameter1
+          description: avisNummer | avis Number
+          in: query
+          required: true
+          schema:
+            type: string
+            example: '123456'
+        - name: parameter2
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: '2024-06-28T12:18:00Z'
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      responses:
+        '200':
+          description: >-
+            Erfolgreiches Lesen des Avises | Successful reading
+            of energy delivery contract
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Avis'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'   
+
+
   /ERSTELLEN_ENERGIELIEFERVERTRAG_BASIS:
     post:
       tags:
