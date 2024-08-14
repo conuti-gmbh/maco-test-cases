@@ -8,7 +8,7 @@ info:
     url: 'https://opensource.org/licenses/MIT'
   description: >
     Ãœbersicht der erforderlichen BO4E- und Prozessschnittstellen, die die MACO
-    APP für die Ausführung der Marktprozesse benötigt. | Overview of the
+    APP fÃ¼r die AusfÃ¼hrung der Marktprozesse benÃ¶tigt. | Overview of the
     necessary BO4E and process interfaces that the MACO APP requires to execute
     market processes.
 
@@ -21,7 +21,7 @@ info:
     **Version 1.0.1** - *08. August 2024* - _Autor: DAS_
 
 
-    - Hinzufügen von mehrsprachigen Beschreibungen und Changelog.
+    - HinzufÃ¼gen von mehrsprachigen Beschreibungen und Changelog.
 
     - Anpassung der Schema-Beschreibungen in Deutsch und Englisch.
 
@@ -39,30 +39,30 @@ servers:
     description: Mock-Umgebung | Mock environment
 tags:
   - name: LESEN | READ
-    description: Lesender Zugriff auf Geschäftsobjekte | Reading access to business objects
+    description: Lesender Zugriff auf GeschÃ¤ftsobjekte | Reading access to business objects
     externalDocs:
       description: BO4E JSON Schema
       url: 'https://github.com/conuti-gmbh/bo4e-schema'
   - name: AKTUALISIEREN | UPDATE
     description: >-
-      Aktualisierung bestehender Geschäftsobjekte | Updating existing business
+      Aktualisierung bestehender GeschÃ¤ftsobjekte | Updating existing business
       objects
     externalDocs:
       description: BO4E JSON Schema
       url: 'https://github.com/conuti-gmbh/bo4e-schema'
   - name: ERSTELLEN | CREATE
-    description: Erstellen von Geschäftsobjekten | Creating business objects
+    description: Erstellen von GeschÃ¤ftsobjekten | Creating business objects
     externalDocs:
       description: BO4E JSON Schema
       url: 'https://github.com/conuti-gmbh/bo4e-schema'
-  - name: LÖSCHEN | DELETE
-    description: Löschen von Geschäftsobjekten | Deleting business objects
+  - name: LÃ–SCHEN | DELETE
+    description: LÃ¶schen von GeschÃ¤ftsobjekten | Deleting business objects
     externalDocs:
       description: BO4E JSON Schema
       url: 'https://github.com/conuti-gmbh/bo4e-schema'
   - name: PROZESSDATEN | PROCESSING DATA
     description: >-
-      Auslösen von Prozessen im ERP System | Triggering processes in the ERP
+      Auslï¿½sen von Prozessen im ERP System | Triggering processes in the ERP
       system
   - name: EVENTDATEN | EVENT DATA
     description: Lesen von Eventdaten im ERP System | Reading event data in the ERP system
@@ -97,7 +97,7 @@ paths:
             type: string
             example: '110000000605'
         - name: parameter2
-          description: Datum (Gültig ab) | Date (Valid from)
+          description: Datum (GÃ¼ltig ab) | Date (Valid from)
           in: query
           required: true
           schema:
@@ -161,7 +161,7 @@ paths:
             type: string
             example: '50074561188'
         - name: parameter2
-          description: Datum (Gültig ab) | Date (Valid from)
+          description: Datum (GÃ¼ltig ab) | Date (Valid from)
           in: query
           required: true
           schema:
@@ -234,7 +234,7 @@ paths:
             type: string
             example: '50074561188'
         - name: parameter2
-          description: Datum (Gültig ab) | Date (Valid from)
+          description: Datum (GÃ¼ltig ab) | Date (Valid from)
           in: query
           required: true
           schema:
@@ -303,7 +303,7 @@ paths:
             type: string
             example: '9903790000002'
         - name: parameter2
-          description: Datum (Gültig ab) | Date (Valid from)
+          description: Datum (GÃ¼ltig ab) | Date (Valid from)
           in: query
           required: true
           schema:
@@ -360,7 +360,7 @@ paths:
             type: string
             example: '9903790000002'
         - name: parameter2
-          description: Datum (Gültig ab) | Date (Valid from)
+          description: Datum (GÃ¼ltig ab) | Date (Valid from)
           in: query
           required: true
           schema:
@@ -423,7 +423,7 @@ paths:
             type: string
             example: '9903790000002'
         - name: parameter2
-          description: Datum (Gültig ab) | Date (Valid from)
+          description: Datum (GÃ¼ltig ab) | Date (Valid from)
           in: query
           required: true
           schema:
@@ -462,10 +462,10 @@ paths:
   /LOESCHEN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
-        - LÖSCHEN | DELETE
+        - LÃ–SCHEN | DELETE
       summary: LOESCHEN_KOMMUNIKATIONSDATEN_BASIS
       description: >-
-        Löschen der Kommunikationsdaten des Serviceanbieters (Parameter1)
+        LÃ¶schen der Kommunikationsdaten des Serviceanbieters (Parameter1)
         zum Zeitpunkt (Parameter2) | Deleting the communication data of the
         service provider (Parameter1) at the time (Parameter2)
       operationId: LOESCHEN_KOMMUNIKATIONSDATEN_BASIS
@@ -486,7 +486,7 @@ paths:
             type: string
             example: '9903790000002'
         - name: parameter2
-          description: Datum (Gültig ab) | Date (Valid from)
+          description: Datum (GÃ¼ltig ab) | Date (Valid from)
           in: query
           required: true
           schema:
@@ -503,7 +503,7 @@ paths:
       responses:
         '200':
           description: >-
-            Erfolgreiches Löschen der Kommunikationsdaten | Successful
+            Erfolgreiches LÃ¶schen der Kommunikationsdaten | Successful
             deleting of communication data
           content:
             application/json:
@@ -550,7 +550,7 @@ paths:
             type: string
             example: '50074561188'
         - name: parameter2
-          description: Datum (Gültig ab) | Date (Valid from)
+          description: Datum (GÃ¼ltig ab) | Date (Valid from)
           in: query
           required: true
           schema:
@@ -608,7 +608,7 @@ paths:
             type: string
             example: '123456'
         - name: parameter2
-          description: Datum (Gültig ab) | Date (Valid from)
+          description: Datum (GÃ¼ltig ab) | Date (Valid from)
           in: query
           required: true
           schema:
@@ -667,7 +667,7 @@ paths:
             type: string
             example: '50074561188'
         - name: parameter2
-          description: Datum (Gültig ab) | Date (Valid from)
+          description: Datum (GÃ¼ltig ab) | Date (Valid from)
           in: query
           required: true
           schema:
@@ -710,7 +710,7 @@ paths:
         - LESEN | READ
       summary: LESEN_ENERGIEMENGE_LASTGANG
       description: >-
-        Lesen eines Profils über eine Lokation (Parameter1) zum Start- und
+        Lesen eines Profils ï¿½ber eine Lokation (Parameter1) zum Start- und
         Endezeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl
         (Parameter4 optional) | Reading a profile for a location (Parameter1) at
         the start and end time (Parameter2/Parameter3) and an OBIS code
@@ -773,7 +773,7 @@ paths:
         - ERSTELLEN | CREATE
       summary: ERSTELLEN_ENERGIEMENGE_LASTGANG
       description: >-
-        Schreiben eines Lastgangs über eine Lokation (Parameter1) zu einem
+        Schreiben eines Lastgangs ï¿½ber eine Lokation (Parameter1) zu einem
         Zeitintervall (Parameter2/Parameter3) und einer OBIS Kennzahl
         (Parameter4) | Writing a load profile for a location (Parameter1) over a
         time interval (Parameter2/Parameter3) and an OBIS code (Parameter4)
@@ -840,7 +840,7 @@ paths:
         - LESEN | READ
       summary: LESEN_ENERGIEMENGE_ZAEHLERSTAND
       description: >-
-        Lesen eines oder mehrerer Zählerstände über eine Lokation (Parameter1)
+        Lesen eines oder mehrerer Zï¿½hlerstï¿½nde ï¿½ber eine Lokation (Parameter1)
         in einer Range (Parameter2/Parameter3) und einer OBIS Kennzahl
         (Parameter4 optional) | Reading one or more meter readings for a
         location (Parameter1) in a range (Parameter2/Parameter3) and an OBIS
@@ -890,7 +890,7 @@ paths:
       responses:
         '200':
           description: >-
-            Erfolgreiches Lesen der Zählerstände | Successful reading of the
+            Erfolgreiches Lesen der Zï¿½hlerstï¿½nde | Successful reading of the
             meter readings
           content:
             application/json:
@@ -902,7 +902,7 @@ paths:
         - ERSTELLEN | CREATE
       summary: ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND
       description: >-
-        Schreiben eines Zählerstands über eine Lokation (Parameter1) zu einem
+        Schreiben eines Zï¿½hlerstands ï¿½ber eine Lokation (Parameter1) zu einem
         Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) |
         Writing a meter reading for a location (Parameter1) at a point in time
         (Parameter2/Parameter3) and an OBIS code (Parameter4)
@@ -957,7 +957,7 @@ paths:
       responses:
         '201':
           description: >-
-            Erfolgreiches Schreiben des Zählerstands | Successful writing of the
+            Erfolgreiches Schreiben des Zï¿½hlerstands | Successful writing of the
             meter reading
           content:
             application/json:
@@ -969,7 +969,7 @@ paths:
         - LESEN | READ
       summary: LESEN_ENERGIEMENGE_ENERGIEMENGE
       description: >-
-        Lesen einer Energiemenge über eine Lokation (Parameter1) in einer Range
+        Lesen einer Energiemenge ï¿½ber eine Lokation (Parameter1) in einer Range
         (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) |
         Reading an energy quantity for a location (Parameter1) in a range
         (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
@@ -1030,7 +1030,7 @@ paths:
         - ERSTELLEN | CREATE
       summary: ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE
       description: >-
-        Schreiben einer Energiemenge über eine Lokation (Parameter1) zu einem
+        Schreiben einer Energiemenge ï¿½ber eine Lokation (Parameter1) zu einem
         Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) |
         Writing an energy quantity for a location (Parameter1) at a point in
         time (Parameter2/Parameter3) and an OBIS code (Parameter4)
@@ -1471,7 +1471,7 @@ paths:
         - LESEN | READ
       summary: LESEN_LOKATIONSBUENDEL_BASIS
       description: >-
-        Lesen eines Lokationsbündels mittels LokationsId (Parameter1) zum
+        Lesen eines Lokationsbï¿½ndels mittels LokationsId (Parameter1) zum
         Zeitpunkt (Parameter2) | Reading a location bundle using location ID
         (Parameter1) at the time (Parameter2)
       operationId: LESEN_LOKATIONSBUENDEL_BASIS
@@ -1503,7 +1503,7 @@ paths:
       responses:
         '200':
           description: >-
-            Erfolgreiches Lesen des Lokationsbündels | Successful reading of the
+            Erfolgreiches Lesen des Lokationsbï¿½ndels | Successful reading of the
             location bundle
           content:
             application/json:
@@ -1515,7 +1515,7 @@ paths:
         - AKTUALISIEREN | UPDATE
       summary: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
       description: >-
-        Ã„ndern eines Lokationsbündels mittels LokationsId (Parameter1) zum
+        Ã„ndern eines Lokationsbï¿½ndels mittels LokationsId (Parameter1) zum
         Zeitpunkt (Parameter2) | Changing a location bundle using location ID
         (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
@@ -1553,7 +1553,7 @@ paths:
       responses:
         '200':
           description: >-
-            Erfolgreiches Aktualisieren des Lokationsbündels | Successful
+            Erfolgreiches Aktualisieren des Lokationsbï¿½ndels | Successful
             updating of the location bundle
           content:
             application/json:
@@ -2184,7 +2184,7 @@ components:
               vertragspartner2:
                 - boTyp: GESCHAEFTSPARTNER
                   versionStruktur: '1'
-                  name1: Müller
+                  name1: Mï¿½ller
                   name2: Michaela
                   gewerbekennzeichnung: false
                   geschaeftspartnerrolle:
@@ -2199,7 +2199,7 @@ components:
               korrespondenzpartner:
                 boTyp: GESCHAEFTSPARTNER
                 versionStruktur: '1'
-                name1: Müller
+                name1: Mï¿½ller
                 name2: Michaela
                 gewerbekennzeichnung: false
                 partneradresse:
@@ -2383,7 +2383,7 @@ components:
                 $ref: '#/components/schemas/Verwendungszeitraum'
     START_LIEFERBEGINN:
       type: object
-      description: Schema für Lieferbeginn | Schema for the delivery start
+      description: Schema fÃ¼r Lieferbeginn | Schema for the delivery start
       properties:
         id:
           type: string
@@ -2458,7 +2458,7 @@ components:
       properties:
         messages:
           description: >-
-            Fachliche Rückmeldungen zur Anzeige in der Oberfläche | Professional
+            Fachliche Rï¿½ckmeldungen zur Anzeige in der Oberflï¿½che | Professional
             feedback on the display in the user interface
           type: array
           items:
