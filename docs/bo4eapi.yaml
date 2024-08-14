@@ -458,6 +458,69 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
+
+  /LOESCHEN_KOMMUNIKATIONSDATEN_BASIS:
+    post:
+      tags:
+        - LOESCHEN | DELETE
+      summary: LOESCHEN_KOMMUNIKATIONSDATEN_BASIS
+      description: >-
+        Löschen der Kommunikationsdaten des Serviceanbieters (Parameter1)
+        zum Zeitpunkt (Parameter2) | Deleting the communication data of the
+        service provider (Parameter1) at the time (Parameter2)
+      operationId: LOESCHEN_KOMMUNIKATIONSDATEN_BASIS
+      parameters:
+        - name: command
+          in: query
+          required: true
+          description: Name der Operation | Name of the operation
+          schema:
+            type: string
+            default: LOESCHEN_KOMMUNIKATIONSDATEN_BASIS
+            example: NOCODB_LOESCHEN_KOMMUNIKATIONSDATEN_BASIS
+        - name: parameter1
+          description: ILN Nummer | ILN number
+          in: query
+          required: true
+          schema:
+            type: string
+            example: '9903790000002'
+        - name: parameter2
+          description: Datum (GÃ¼ltig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: '2024-06-28T12:18:00Z'
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Marktteilnehmer'
+      responses:
+        '200':
+          description: >-
+            Erfolgreiches Löschen der Kommunikationsdaten | Successful
+            deleting of communication data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OK_RESPONSE'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
                 
   /LESEN_ENERGIELIEFERVERTRAG_BASIS:
     get:
