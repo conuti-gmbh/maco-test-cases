@@ -55,6 +55,11 @@ tags:
     externalDocs:
       description: BO4E JSON Schema
       url: 'https://github.com/conuti-gmbh/bo4e-schema'
+  - name: LÖSCHEN | DELETE
+    description: Löschen von Geschäftsobjekten | Deleting business objects
+    externalDocs:
+      description: BO4E JSON Schema
+      url: 'https://github.com/conuti-gmbh/bo4e-schema'
   - name: PROZESSDATEN | PROCESSING DATA
     description: >-
       Auslösen von Prozessen im ERP System | Triggering processes in the ERP
@@ -127,6 +132,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
+
   /ERSTELLEN_PROZESSDATEN_LIEFERENDE:
     post:
       tags:
@@ -199,6 +205,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
+
   /ERSTELLEN_PROZESSDATEN_LIEFERBEGINN:
     post:
       tags:
@@ -267,6 +274,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
+
   /LESEN_KOMMUNIKATIONSDATEN_BASIS:
     get:
       tags:
@@ -324,6 +332,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
+
   /AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
@@ -374,6 +383,82 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Kommunikationsdaten'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+ 
+  /ERSTELLEN_KOMMUNIKATIONSDATEN_BASIS:
+    post:
+      tags:
+        - ERSTELLEN | CREATE
+      summary: ERSTELLEN_KOMMUNIKATIONSDATEN_BASIS
+      description: >-
+        Erstellen der Kommunikationsdaten des Serviceanbieters (Parameter1)
+        zum Zeitpunkt (Parameter2) | Creating the communication data of the
+        service provider (Parameter1) at the time (Parameter2)
+      operationId: ERSTELLEN_KOMMUNIKATIONSDATEN_BASIS
+      parameters:
+        - name: command
+          in: query
+          required: true
+          description: Name der Operation | Name of the operation
+          schema:
+            type: string
+            default: ERSTELLEN_KOMMUNIKATIONSDATEN_BASIS
+            example: NOCODB_ERSTELLEN_KOMMUNIKATIONSDATEN_BASIS
+        - name: parameter1
+          description: ILN Nummer | ILN number
+          in: query
+          required: true
+          schema:
+            type: string
+            example: '9903790000002'
+        - name: parameter2
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: '2024-06-28T12:18:00Z'
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Marktteilnehmer'
+      responses:
+        '200':
+          description: >-
+            Erfolgreiches Aktualisieren der Kommunikationsdaten | Successful
+            updating of communication data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OK_RESPONSE'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+                
   /LESEN_ENERGIELIEFERVERTRAG_BASIS:
     get:
       tags:
@@ -419,6 +504,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Vertrag'
+
   /LESEN_ENERGIEMENGE_LASTGANG:
     get:
       tags:
