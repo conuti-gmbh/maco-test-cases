@@ -62,7 +62,7 @@ tags:
       url: 'https://github.com/conuti-gmbh/bo4e-schema'
   - name: PROZESSDATEN | PROCESSING DATA
     description: >-
-      Ausl�sen von Prozessen im ERP System | Triggering processes in the ERP
+      Auslösen von Prozessen im ERP System | Triggering processes in the ERP
       system
   - name: EVENTDATEN | EVENT DATA
     description: Lesen von Eventdaten im ERP System | Reading event data in the ERP system
@@ -710,7 +710,7 @@ paths:
         - LESEN | READ
       summary: LESEN_ENERGIEMENGE_LASTGANG
       description: >-
-        Lesen eines Profils �ber eine Lokation (Parameter1) zum Start- und
+        Lesen eines Profils über eine Lokation (Parameter1) zum Start- und
         Endezeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl
         (Parameter4 optional) | Reading a profile for a location (Parameter1) at
         the start and end time (Parameter2/Parameter3) and an OBIS code
@@ -773,7 +773,7 @@ paths:
         - ERSTELLEN | CREATE
       summary: ERSTELLEN_ENERGIEMENGE_LASTGANG
       description: >-
-        Schreiben eines Lastgangs �ber eine Lokation (Parameter1) zu einem
+        Schreiben eines Lastgangs über eine Lokation (Parameter1) zu einem
         Zeitintervall (Parameter2/Parameter3) und einer OBIS Kennzahl
         (Parameter4) | Writing a load profile for a location (Parameter1) over a
         time interval (Parameter2/Parameter3) and an OBIS code (Parameter4)
@@ -840,7 +840,7 @@ paths:
         - LESEN | READ
       summary: LESEN_ENERGIEMENGE_ZAEHLERSTAND
       description: >-
-        Lesen eines oder mehrerer Z�hlerst�nde �ber eine Lokation (Parameter1)
+        Lesen eines oder mehrerer Zählerstände über eine Lokation (Parameter1)
         in einer Range (Parameter2/Parameter3) und einer OBIS Kennzahl
         (Parameter4 optional) | Reading one or more meter readings for a
         location (Parameter1) in a range (Parameter2/Parameter3) and an OBIS
@@ -890,7 +890,7 @@ paths:
       responses:
         '200':
           description: >-
-            Erfolgreiches Lesen der Z�hlerst�nde | Successful reading of the
+            Erfolgreiches Lesen der Zählerstände | Successful reading of the
             meter readings
           content:
             application/json:
@@ -902,7 +902,7 @@ paths:
         - ERSTELLEN | CREATE
       summary: ERSTELLEN_ENERGIEMENGE_ZAEHLERSTAND
       description: >-
-        Schreiben eines Z�hlerstands �ber eine Lokation (Parameter1) zu einem
+        Schreiben eines Zählerstands über eine Lokation (Parameter1) zu einem
         Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) |
         Writing a meter reading for a location (Parameter1) at a point in time
         (Parameter2/Parameter3) and an OBIS code (Parameter4)
@@ -957,7 +957,7 @@ paths:
       responses:
         '201':
           description: >-
-            Erfolgreiches Schreiben des Z�hlerstands | Successful writing of the
+            Erfolgreiches Schreiben des Zählerstands | Successful writing of the
             meter reading
           content:
             application/json:
@@ -969,7 +969,7 @@ paths:
         - LESEN | READ
       summary: LESEN_ENERGIEMENGE_ENERGIEMENGE
       description: >-
-        Lesen einer Energiemenge �ber eine Lokation (Parameter1) in einer Range
+        Lesen einer Energiemenge über eine Lokation (Parameter1) in einer Range
         (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4 optional) |
         Reading an energy quantity for a location (Parameter1) in a range
         (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
@@ -1030,7 +1030,7 @@ paths:
         - ERSTELLEN | CREATE
       summary: ERSTELLEN_ENERGIEMENGE_ENERGIEMENGE
       description: >-
-        Schreiben einer Energiemenge �ber eine Lokation (Parameter1) zu einem
+        Schreiben einer Energiemenge über eine Lokation (Parameter1) zu einem
         Zeitpunkt (Parameter2/Parameter3) und einer OBIS Kennzahl (Parameter4) |
         Writing an energy quantity for a location (Parameter1) at a point in
         time (Parameter2/Parameter3) and an OBIS code (Parameter4)
@@ -1471,7 +1471,7 @@ paths:
         - LESEN | READ
       summary: LESEN_LOKATIONSBUENDEL_BASIS
       description: >-
-        Lesen eines Lokationsb�ndels mittels LokationsId (Parameter1) zum
+        Lesen eines Lokationsbündels mittels LokationsId (Parameter1) zum
         Zeitpunkt (Parameter2) | Reading a location bundle using location ID
         (Parameter1) at the time (Parameter2)
       operationId: LESEN_LOKATIONSBUENDEL_BASIS
@@ -1503,7 +1503,7 @@ paths:
       responses:
         '200':
           description: >-
-            Erfolgreiches Lesen des Lokationsb�ndels | Successful reading of the
+            Erfolgreiches Lesen des Lokationsbündels | Successful reading of the
             location bundle
           content:
             application/json:
@@ -1515,7 +1515,7 @@ paths:
         - AKTUALISIEREN | UPDATE
       summary: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
       description: >-
-        Ändern eines Lokationsb�ndels mittels LokationsId (Parameter1) zum
+        Ändern eines Lokationsbündels mittels LokationsId (Parameter1) zum
         Zeitpunkt (Parameter2) | Changing a location bundle using location ID
         (Parameter1) at the time (Parameter2)
       operationId: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
@@ -1553,7 +1553,7 @@ paths:
       responses:
         '200':
           description: >-
-            Erfolgreiches Aktualisieren des Lokationsb�ndels | Successful
+            Erfolgreiches Aktualisieren des Lokationsbündels | Successful
             updating of the location bundle
           content:
             application/json:
@@ -2184,7 +2184,7 @@ components:
               vertragspartner2:
                 - boTyp: GESCHAEFTSPARTNER
                   versionStruktur: '1'
-                  name1: M�ller
+                  name1: Müller
                   name2: Michaela
                   gewerbekennzeichnung: false
                   geschaeftspartnerrolle:
@@ -2199,7 +2199,7 @@ components:
               korrespondenzpartner:
                 boTyp: GESCHAEFTSPARTNER
                 versionStruktur: '1'
-                name1: M�ller
+                name1: Müller
                 name2: Michaela
                 gewerbekennzeichnung: false
                 partneradresse:
@@ -2458,7 +2458,7 @@ components:
       properties:
         messages:
           description: >-
-            Fachliche R�ckmeldungen zur Anzeige in der Oberfl�che | Professional
+            Fachliche Rückmeldungen zur Anzeige in der Oberfläche | Professional
             feedback on the display in the user interface
           type: array
           items:
