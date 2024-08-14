@@ -66,7 +66,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "110000000605"  
+            example: '110000000605' 
         - name: parameter2 
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
@@ -1924,72 +1924,71 @@ components:
       properties:
         id:
           type: string
-          example: "110000000605"
+          example: '110000000605'
         marktlokationsId:
           type: string
-          default: "50074561188"
-    sparte:
-          type: string
-      $ref: '#/components/schemas/Sparte'
-    energierichtung:
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        energierichtung:
           $ref: '#/components/schemas/Energierichtung'
         verguetungEmpfaenger:
           $ref: '#/components/schemas/VerguetungEmpfaenger'
-    bilanzkreis:
-      type: string
-          default: "11X----123456"
-    vertragsbeginn:
-      type: string
-          default: "2024-04-01T07:40:00Z"
-    vertragsende:
-      type: string
-          default: "2024-04-01T07:40:00Z"
+        bilanzkreis:
+          type: string
+          default: '11X----123456'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        vertragsende:
+          type: string
+          default: '2024-04-01T07:40:00Z'
         haushaltskunde:
           type: boolean
-    gewerbekennzeichnung:
-      type: boolean
-    anrede:
-      type: string
+        gewerbekennzeichnung:
+          type: boolean
+        anrede:
+          type: string
           default: "Musteranrede"
-    name1:
-      type: string
-          default: "Mustername1"
-    name2:
-      type: string
-          default: "Mustername2"
-    postleitzahl:
-      type: string
-          default: "12345"
-    ort:
-      type: string
-          default: "Musterort"
-    strasse:
-      type: string
-          default: "Musterstrasse"
-    hausnummer:
-      type: string
-          default: "11a"
-    landescode:
-      type: string
-          default: "DE"
-    ortsteil:
-      type: string
-          default: "Musterortsteil"
-    empfaenger:
-      type: string
-          default: "9900321000005"
-    transaktionsgrund:
-      type: string
-          default: "STROM"
-      default: "E01"
-    transaktionsgrundergaenzung:
-      type: string
-          default: ""
-    transaktionsgrundergaenzungBefristeteAnmeldung:
-      type: string
-    absender:
-      type: string
-          default: "9900321000005"
+        name1:
+          type: string
+              default: "Mustername1"
+        name2:
+          type: string
+              default: "Mustername2"
+        postleitzahl:
+          type: string
+              default: "12345"
+        ort:
+          type: string
+              default: "Musterort"
+        strasse:
+          type: string
+              default: "Musterstrasse"
+        hausnummer:
+          type: string
+              default: "11a"
+        landescode:
+          type: string
+              default: "DE"
+        ortsteil:
+          type: string
+              default: "Musterortsteil"
+        empfaenger:
+          type: string
+              default: "9900321000005"
+        transaktionsgrund:
+          type: string
+              default: "STROM"
+          default: "E01"
+        transaktionsgrundergaenzung:
+          type: string
+              default: ""
+        transaktionsgrundergaenzungBefristeteAnmeldung:
+          type: string
+        absender:
+          type: string
+              default: "9900321000005"
     OK_RESPONSE:
       type: object
       description: Erfolgsmeldung auf Prozessdaten API Aufruf | Success message on process data API call
