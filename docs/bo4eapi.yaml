@@ -567,6 +567,77 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Vertrag'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'                
+
+  /ERSTELLEN_ENERGIELIEFERVERTRAG_BASIS:
+    get:
+      tags:
+        - ERSTELLEN | CREATE
+      summary: ERSTELLEN_ENERGIELIEFERVERTRAG_BASIS
+      description: >-
+        Erstellen des Energieliefervertrages einer Lokation (Parameter1) zum
+        Zeitpunkt (Parameter2) | Create the energy delivery contract of a
+        location (Parameter1) at the time (Parameter2)
+      operationId: ERSTELLEN_ENERGIELIEFERVERTRAG_BASIS
+      parameters:
+        - name: command
+          in: query
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
+          schema:
+            type: string
+            default: ERSTELLEN_ENERGIELIEFERVERTRAG_BASIS
+            example: NOCODB_ERSTELLEN_ENERGIELIEFERVERTRAG_BASIS
+        - name: parameter1
+          description: LokationsId | Location ID
+          in: query
+          required: true
+          schema:
+            type: string
+            example: '50074561188'
+        - name: parameter2
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: '2024-06-28T12:18:00Z'
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      responses:
+        '200':
+          description: >-
+            Erfolgreiches Erstellen des Energieliefervertrages | Successful creating
+            of energy delivery contract
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OK_RESPONSE'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'   
+
 
   /LESEN_ENERGIEMENGE_LASTGANG:
     get:
