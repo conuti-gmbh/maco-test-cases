@@ -265,6 +265,18 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Kommunikationsdaten'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
   /AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
