@@ -1949,46 +1949,44 @@ components:
           type: boolean
         anrede:
           type: string
-          default: "Musteranrede"
+          default: 'Musteranrede'
         name1:
           type: string
-              default: "Mustername1"
+          default: 'Mustername1'
         name2:
           type: string
-              default: "Mustername2"
+          default: 'Mustername2'
         postleitzahl:
           type: string
-              default: "12345"
+          default: '12345'
         ort:
           type: string
-              default: "Musterort"
+          default: 'Musterort'
         strasse:
           type: string
-              default: "Musterstrasse"
+          default: 'Musterstrasse'
         hausnummer:
           type: string
-              default: "11a"
+          default: '11a'
         landescode:
           type: string
-              default: "DE"
+           default: 'DE'
         ortsteil:
           type: string
-              default: "Musterortsteil"
+          default: 'Musterortsteil'
         empfaenger:
           type: string
-              default: "9900321000005"
+          default: '9900321000005'
         transaktionsgrund:
           type: string
-              default: "STROM"
-          default: "E01"
+          default: 'E01'
         transaktionsgrundergaenzung:
           type: string
-              default: ""
         transaktionsgrundergaenzungBefristeteAnmeldung:
           type: string
         absender:
           type: string
-              default: "9900321000005"
+              default: '9900321000005'
     OK_RESPONSE:
       type: object
       description: Erfolgsmeldung auf Prozessdaten API Aufruf | Success message on process data API call
