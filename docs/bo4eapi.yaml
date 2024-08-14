@@ -45,6 +45,7 @@ tags:
   - name: EVENTDATEN | EVENT DATA
     description: Lesen von Eventdaten im ERP System | Reading event data in the ERP system
 paths:
+  security: []
   /LESEN_EVENTDATEN_LIEFERBEGINN:
     post:
       tags: 
@@ -1982,7 +1983,7 @@ components:
           default: '11a'
         landescode:
           type: string
-           default: 'DE'
+          default: 'DE'
         ortsteil:
           type: string
           default: 'Musterortsteil'
@@ -1998,7 +1999,7 @@ components:
           type: string
         absender:
           type: string
-              default: '9900321000005'
+          default: '9900321000005'
     OK_RESPONSE:
       type: object
       description: Erfolgsmeldung auf Prozessdaten API Aufruf | Success message on process data API call
