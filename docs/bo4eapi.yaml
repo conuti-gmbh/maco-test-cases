@@ -43,6 +43,62 @@ tags:
   - name: PROZESSDATEN | PROCESSING DATA
     description: Auslösen von Prozessen im ERP System | Triggering processes in the ERP system
 paths:
+  /LESEN_EVENTDATEN_LIEFERBEGINN:
+    post:
+      tags: 
+        -  EVENTDATEN
+      summary: LESEN_EVENTDATEN_LIEFERBEGINN
+      description: Lesen der Belegdaten zur Id (Parameter1) mit dem Datum (Parameter2) | Reading data from id (Parameter1) at the given date (Parameter2)
+      operationId: LESEN_EVENTDATEN_LIEFERBEGINN
+      parameters:
+        - name: command
+          in: query
+          description: Name der Operation | Name of the operation (MACO APP interal assignment between process and interface)
+          schema:
+            type: string
+            default: LESEN_EVENTDATEN_LIEFERBEGINN
+            example: NOCODB_LESEN_EVENTDATEN_LIEFERBEGINN               
+        - name: parameter1
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          in: query
+          required: true
+          schema:
+            type: string
+            example: "110000000605"  
+        - name: parameter2 
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: "2024-06-28T12:18:00Z" 
+            pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_LIEFERBEGINN'  				
+      responses:
+        '200':
+          description: Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of communication data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/START_LIEFERBEGINN'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'  
   /ERSTELLEN_PROZESSDATEN_LIEFERENDE:
     post:
       tags:
@@ -1860,6 +1916,78 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/Verwendungszeitraum'
+    START_LIEFERBEGINN:
+      type: object
+      description: Schema für Lieferbeginn | Schema for the delivery start
+      properties:
+        id:
+          type: string
+          example: "110000000605"
+        marktlokationsId:
+          type: string
+          default: "50074561188"
+    sparte:
+          type: string
+      $ref: '#/components/schemas/Sparte'
+    energierichtung:
+          $ref: '#/components/schemas/Energierichtung'
+        verguetungEmpfaenger:
+          $ref: '#/components/schemas/VerguetungEmpfaenger'
+    bilanzkreis:
+      type: string
+          default: "11X----123456"
+    vertragsbeginn:
+      type: string
+          default: "2024-04-01T07:40:00Z"
+    vertragsende:
+      type: string
+          default: "2024-04-01T07:40:00Z"
+        haushaltskunde:
+          type: boolean
+    gewerbekennzeichnung:
+      type: boolean
+    anrede:
+      type: string
+          default: "Musteranrede"
+    name1:
+      type: string
+          default: "Mustername1"
+    name2:
+      type: string
+          default: "Mustername2"
+    postleitzahl:
+      type: string
+          default: "12345"
+    ort:
+      type: string
+          default: "Musterort"
+    strasse:
+      type: string
+          default: "Musterstrasse"
+    hausnummer:
+      type: string
+          default: "11a"
+    landescode:
+      type: string
+          default: "DE"
+    ortsteil:
+      type: string
+          default: "Musterortsteil"
+    empfaenger:
+      type: string
+          default: "9900321000005"
+    transaktionsgrund:
+      type: string
+          default: "STROM"
+      default: "E01"
+    transaktionsgrundergaenzung:
+      type: string
+          default: ""
+    transaktionsgrundergaenzungBefristeteAnmeldung:
+      type: string
+    absender:
+      type: string
+          default: "9900321000005"
     OK_RESPONSE:
       type: object
       description: Erfolgsmeldung auf Prozessdaten API Aufruf | Success message on process data API call
