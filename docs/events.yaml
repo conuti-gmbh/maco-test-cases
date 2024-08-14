@@ -63,6 +63,244 @@ paths:
                   - businessKey
                   - message
       security: []
+  /START_KUENDIGUNG:
+    post:
+      summary: START_KUENDIGUNG
+      deprecated: false
+      description: Erhalte Event vom Backend | Receive Event From Backend
+      operationId: START_KUENDIGUNG
+      tags: 
+        - SLIM EVENTS
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_KUENDIGUNG'
+      responses:
+        '201':
+          description: Erfolg | Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  businessKey:
+                    type: string
+                    format: uuid
+                    description: Einzigartige Kennung des Geschäftsprozesses | Unique identifier of the business process
+                  message:
+                    type: string
+                    example: "received event START_KUENDIGUNG_STROM with id at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                    description: Nachricht mit Details zum ausgelösten Event | Message with details about the triggered event
+                required:
+                  - businessKey
+                  - message
+      security: []
+  /AENDERUNG_AD:
+    post:
+      summary: AENDERUNG_AD
+      deprecated: false
+      description: Erhalte Event vom Backend | Receive Event From Backend
+      operationId: AENDERUNG_AD
+      tags: 
+        - SLIM EVENTS
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AENDERUNG_AD'
+      responses:
+        '201':
+          description: Erfolg | Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  businessKey:
+                    type: string
+                    format: uuid
+                    description: Einzigartige Kennung des Geschäftsprozesses | Unique identifier of the business process
+                  message:
+                    type: string
+                    example: "received event AENDERUNG_AD_STROM with id at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                    description: Nachricht mit Details zum ausgelösten Event | Message with details about the triggered event
+                required:
+                  - businessKey
+                  - message
+      security: []
+  /START_ENERGIEMENGE:
+    post:
+      summary: START_ENERGIEMENGE
+      deprecated: false
+      description: Erhalte Event vom Backend | Receive Event From Backend
+      operationId: START_ENERGIEMENGE
+      tags: 
+        - SLIM EVENTS
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_ENERGIEMENGE'
+      responses:
+        '201':
+          description: Erfolg | Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  businessKey:
+                    type: string
+                    format: uuid
+                    description: Einzigartige Kennung des Geschäftsprozesses | Unique identifier of the business process
+                  message:
+                    type: string
+                    example: "received event START_ENERGIEMENGE_STROM with id at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                    description: Nachricht mit Details zum ausgelösten Event | Message with details about the triggered event
+                required:
+                  - businessKey
+                  - message
+      security: []
+  /START_ZAEHLERSTAND:
+    post:
+      summary: START_ZAEHLERSTAND
+      deprecated: false
+      description: Erhalte Event vom Backend | Receive Event From Backend
+      operationId: START_ZAEHLERSTAND
+      tags: 
+        - SLIM EVENTS
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_ZAEHLERSTAND'
+      responses:
+        '201':
+          description: Erfolg | Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  businessKey:
+                    type: string
+                    format: uuid
+                    description: Einzigartige Kennung des Geschäftsprozesses | Unique identifier of the business process
+                  message:
+                    type: string
+                    example: "received event START_ZAEHLERSTAND_STROM with id at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                    description: Nachricht mit Details zum ausgelösten Event | Message with details about the triggered event
+                required:
+                  - businessKey
+                  - message
+      security: []
+  /START_LASTGANG:
+    post:
+      summary: START_LASTGANG
+      deprecated: false
+      description: Erhalte Event vom Backend | Receive Event From Backend
+      operationId: START_LASTGANG
+      tags: 
+        - SLIM EVENTS
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_LASTGANG'
+      responses:
+        '201':
+          description: Erfolg | Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  businessKey:
+                    type: string
+                    format: uuid
+                    description: Einzigartige Kennung des Geschäftsprozesses | Unique identifier of the business process
+                  message:
+                    type: string
+                    example: "received event START_LASTGANG_STROM with id at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                    description: Nachricht mit Details zum ausgelösten Event | Message with details about the triggered event
+                required:
+                  - businessKey
+                  - message
+      security: []
+  /START_PARTIN:
+    post:
+      summary: START_PARTIN
+      deprecated: false
+      description: Erhalte Event vom Backend | Receive Event From Backend
+      operationId: START_PARTIN
+      tags: 
+        - SLIM EVENTS
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_PARTIN'
+      responses:
+        '201':
+          description: Erfolg | Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  businessKey:
+                    type: string
+                    format: uuid
+                    description: Einzigartige Kennung des Geschäftsprozesses | Unique identifier of the business process
+                  message:
+                    type: string
+                    example: "received event START_PARTIN_STROM with id at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                    description: Nachricht mit Details zum ausgelösten Event | Message with details about the triggered event
+                required:
+                  - businessKey
+                  - message
+      security: []
+  /START_NACHRICHTENEINGANG:
+    post:
+      summary: START_NACHRICHTENEINGANG
+      deprecated: false
+      description: Erhalte Event vom Backend | Receive Event From Backend
+      operationId: START_NACHRICHTENEINGANG
+      tags: 
+        - SLIM EVENTS
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_NACHRICHTENEINGANG'
+      responses:
+        '201':
+          description: Erfolg | Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  businessKey:
+                    type: string
+                    format: uuid
+                    description: Einzigartige Kennung des Geschäftsprozesses | Unique identifier of the business process
+                  message:
+                    type: string
+                    example: "received event START_NACHRICHTENEINGANG_STROM with id at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                    description: Nachricht mit Details zum ausgelösten Event | Message with details about the triggered event
+                required:
+                  - businessKey
+                  - message
+      security: []
   /inbound[SLIM]:
     post:
       summary: Trigger Events
@@ -511,7 +749,84 @@ components:
           default: 'START_LIEFERBEGINN'
       required:
         - id, eventName
-
+    AENDERUNG_AD:
+      type: object
+      description: Schema für Änderung | Schema for the update of object
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: "110000000605"
+        eventName:
+          type: string
+          default: 'AENDERUNG_AD'
+      required:
+        - id, eventName
+    START_ENERGIEMENGE:
+      type: object
+      description: Schema für Energiemenge | Schema for the Energiemenge
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: "110000000605"
+        eventName:
+          type: string
+          default: 'START_ENERGIEMENGE'
+      required:
+        - id, eventName
+    START_ZAEHLERSTAND:
+      type: object
+      description: Schema für Zaehlerstand | Schema for the Zaehlerstand
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: "110000000605"
+        eventName:
+          type: string
+          default: 'START_ZAEHLERSTAND'
+      required:
+        - id, eventName
+    START_LASTGANG:
+      type: object
+      description: Schema für Lastgang | Schema for the lastgang
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: "110000000605"
+        eventName:
+          type: string
+          default: 'START_LASTGANG'
+      required:
+        - id, eventName
+    START_PARTIN:
+      type: object
+      description: Schema für partin | Schema for the partin
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: "110000000605"
+        eventName:
+          type: string
+          default: 'START_PARTIN'
+      required:
+        - id, eventName
+    START_NACHRICHTENEINGANG:
+      type: object
+      description: Schema für Nachrichteingang | Schema for the inbound message
+      properties:
+        id:
+          type: string
+          description: BelegId des Datensatzes in der Tabelle im Backend | DocumentId of the data record in the table in the backend
+          example: "110000000605"
+        eventName:
+          type: string
+          default: 'START_NACHRICHTENEINGANG'
+      required:
+        - id, eventName
   examples:
     START_SPERRAUFTRAG:
       summary: START_SPERRAUFTRAG Versand Sperrauftrag auslösen | Trigger shipping blocking order
