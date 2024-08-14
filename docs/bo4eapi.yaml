@@ -42,11 +42,13 @@ tags:
       url: https://github.com/conuti-gmbh/bo4e-schema
   - name: PROZESSDATEN | PROCESSING DATA
     description: Auslösen von Prozessen im ERP System | Triggering processes in the ERP system
+  - name: EVENTDATEN | EVENT DATA
+    description: Lesen von Eventdaten im ERP System | Reading event data in the ERP system
 paths:
   /LESEN_EVENTDATEN_LIEFERBEGINN:
     post:
       tags: 
-        -  EVENTDATEN
+        -  EVENTDATEN | EVENT DATA
       summary: LESEN_EVENTDATEN_LIEFERBEGINN
       description: Lesen der Belegdaten zur Id (Parameter1) mit dem Datum (Parameter2) | Reading data from id (Parameter1) at the given date (Parameter2)
       operationId: LESEN_EVENTDATEN_LIEFERBEGINN
