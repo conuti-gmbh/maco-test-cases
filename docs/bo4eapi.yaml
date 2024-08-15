@@ -68,6 +68,71 @@ tags:
     description: Lesen von Eventdaten im ERP System | Reading event data in the ERP system
 paths:
   security: []
+  /LESEN_EVENT_START_KUENDIGUNG:
+    post:
+      tags:
+        - EVENTDATEN | EVENT DATA
+      summary: LESEN_EVENT_START_KUENDIGUNG:
+      description: >-
+        Lesen der Belegdaten zur Id (Parameter1) mit dem Datum (Parameter2) |
+        Reading data from id (Parameter1) at the given date (Parameter2)
+      operationId: LESEN_EVENT_START_KUENDIGUNG:
+      parameters:
+        - name: command
+          in: query
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
+          schema:
+            type: string
+            default: LESEN_EVENT_START_KUENDIGUNG:
+            example: NOCODB_LESEN_EVENT_START_KUENDIGUNG:
+        - name: parameter1
+          description: >-
+            BelegId des Datensatzes in der Tabelle im Backend | DocumentId of
+            the data record in the table in the backend
+          in: query
+          required: true
+          schema:
+            type: string
+            example: '110000000605'
+        - name: parameter2
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: '2024-06-28T12:18:00Z'
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/START_LIEFERBEGINN'
+      responses:
+        '200':
+          description: >-
+            Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of
+            communication data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/START_KUENDIGUNG'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+
   /LESEN_EVENT_START_LIEFERBEGINN:
     post:
       tags:
