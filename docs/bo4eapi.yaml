@@ -2517,7 +2517,7 @@ components:
           default: '9900321000005'
     START_KUENDIGUNG:
       type: object
-      description: Schema für kündigung | Scheme for termination
+      description: Schema für Lieferende | Scheme for termination
       properties:
         marktlokationsId:
           type: string
@@ -2536,6 +2536,33 @@ components:
         empfaenger:
           type: string
           default: '9900321000005'
+    START_LIEFERENDE:
+      type: object
+      description: Schema für Lieferende | Scheme for Delivery end
+      properties:
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        zaehlernummer:
+          type: string
+          default: '123456789'
+        vertragsart:
+          type: string
+          default: ENERGIELIEFERVERTRAG
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        transaktionsgrund:
+          type: string
+          default: E01
+        transaktionsgrundergaenzung:
+          type: string
+          default: transaktionsgrundergaenzung
     OK_RESPONSE:
       type: object
       description: >-
