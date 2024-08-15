@@ -2563,6 +2563,36 @@ components:
         transaktionsgrundergaenzung:
           type: string
           default: transaktionsgrundergaenzung
+    START_MALOIDENT:
+      type: object
+      description: Schema für start Malo Ident | Scheme for start Malo Ident
+      properties:
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        zaehlernummer:
+          type: string
+          default: '123456789'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        vertragsende:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        vertragsart:
+          type: string
+          default: ENERGIELIEFERVERTRAG
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        transaktionsgrund:
+          type: string
+          default: E01
     OK_RESPONSE:
       type: object
       description: >-
