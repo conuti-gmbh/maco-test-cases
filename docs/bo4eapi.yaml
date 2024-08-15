@@ -72,11 +72,11 @@ paths:
     post:
       tags:
         - EVENTDATEN | EVENT DATA
-      summary: LESEN_EVENT_START_KUENDIGUNG:
+      summary: LESEN_EVENT_START_KUENDIGUNG
       description: >-
         Lesen der Belegdaten zur Id (Parameter1) mit dem Datum (Parameter2) |
         Reading data from id (Parameter1) at the given date (Parameter2)
-      operationId: LESEN_EVENT_START_KUENDIGUNG:
+      operationId: LESEN_EVENT_START_KUENDIGUNG
       parameters:
         - name: command
           in: query
@@ -85,8 +85,8 @@ paths:
             assignment between process and interface)
           schema:
             type: string
-            default: LESEN_EVENT_START_KUENDIGUNG:
-            example: NOCODB_LESEN_EVENT_START_KUENDIGUNG:
+            default: LESEN_EVENT_START_KUENDIGUNG
+            example: NOCODB_LESEN_EVENT_START_KUENDIGUNG
         - name: parameter1
           description: >-
             BelegId des Datensatzes in der Tabelle im Backend | DocumentId of
@@ -110,7 +110,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/START_LIEFERBEGINN'
+              $ref: '#/components/schemas/START_KUENDIGUNG'
       responses:
         '200':
           description: >-
@@ -137,11 +137,11 @@ paths:
     post:
       tags:
         - EVENTDATEN | EVENT DATA
-      summary: LESEN_EVENT_START_LIEFERBEGINN:
+      summary: LESEN_EVENT_START_LIEFERBEGINN
       description: >-
         Lesen der Belegdaten zur Id (Parameter1) mit dem Datum (Parameter2) |
         Reading data from id (Parameter1) at the given date (Parameter2)
-      operationId: LESEN_EVENT_START_LIEFERBEGINN:
+      operationId: LESEN_EVENT_START_LIEFERBEGINN
       parameters:
         - name: command
           in: query
@@ -150,8 +150,8 @@ paths:
             assignment between process and interface)
           schema:
             type: string
-            default: LESEN_EVENT_START_LIEFERBEGINN:
-            example: NOCODB_LESEN_EVENT_START_LIEFERBEGINN:
+            default: LESEN_EVENT_START_LIEFERBEGINN
+            example: NOCODB_LESEN_EVENT_START_LIEFERBEGINN
         - name: parameter1
           description: >-
             BelegId des Datensatzes in der Tabelle im Backend | DocumentId of
