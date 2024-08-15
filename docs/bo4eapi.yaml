@@ -68,15 +68,15 @@ tags:
     description: Lesen von Eventdaten im ERP System | Reading event data in the ERP system
 paths:
   security: []
-  /LESEN_EVENTDATEN_LIEFERBEGINN:
+  /LESEN_EVENT_START_LIEFERBEGINN:
     post:
       tags:
         - EVENTDATEN | EVENT DATA
-      summary: LESEN_EVENTDATEN_LIEFERBEGINN
+      summary: LESEN_EVENT_START_LIEFERBEGINN:
       description: >-
         Lesen der Belegdaten zur Id (Parameter1) mit dem Datum (Parameter2) |
         Reading data from id (Parameter1) at the given date (Parameter2)
-      operationId: LESEN_EVENTDATEN_LIEFERBEGINN
+      operationId: LESEN_EVENT_START_LIEFERBEGINN:
       parameters:
         - name: command
           in: query
@@ -85,8 +85,8 @@ paths:
             assignment between process and interface)
           schema:
             type: string
-            default: LESEN_EVENTDATEN_LIEFERBEGINN
-            example: NOCODB_LESEN_EVENTDATEN_LIEFERBEGINN
+            default: LESEN_EVENT_START_LIEFERBEGINN:
+            example: NOCODB_LESEN_EVENT_START_LIEFERBEGINN:
         - name: parameter1
           description: >-
             BelegId des Datensatzes in der Tabelle im Backend | DocumentId of
