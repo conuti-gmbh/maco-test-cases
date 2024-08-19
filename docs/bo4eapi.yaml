@@ -2640,6 +2640,39 @@ components:
         transaktionsgrund:
           type: string
           default: E01
+    START_N_BILA_REL_AEND_VON_LF:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        marktlokationsId:
+          type: string
+          default: '123456789'
+        energierichtung:
+          type: string
+          default: 'GAS'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        vertragsart:
+          type: string
+          default: ENERGIELIEFERVERTRAG
+        typ:
+          type: string
+          default: 'kategorie'
+        absender:
+          type: string
+          default: '9900321000005'
+        anfrageReferenz:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        transaktionsgrund:
+          type: string
+          default: E01
     ENERGIEVERBRAUCH:
       type: object
       description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
