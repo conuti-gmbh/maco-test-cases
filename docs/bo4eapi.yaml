@@ -2593,6 +2593,78 @@ components:
         transaktionsgrund:
           type: string
           default: E01
+    START_MESSWERTUEBERMITTLUNG:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        zaehlernummer:
+          type: string
+          default: '123456789'
+        lokationsId:
+          type: string
+          default: '50074561188'
+        energieverbrauch:
+          $ref: '#/components/schemas/ENERGIEVERBRAUCH'
+        lokationsTyp:
+          type: string
+          default: '50074561188'
+        fertigstellungsdatum:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        startdatum:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        enddatum:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        vertragsart:
+          type: string
+          default: ENERGIELIEFERVERTRAG
+        kategorie:
+          type: string
+          default: 'kategorie'
+        typ:
+          type: string
+          default: 'kategorie'
+        absender:
+          type: string
+          default: '9900321000005'
+        anfrageReferenz:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        transaktionsgrund:
+          type: string
+          default: E01
+    ENERGIEVERBRAUCH:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        enddatum1:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        messwertstatus1:
+          type: string
+          default: '50074561188'
+        obiskennzahl1:
+          type: string
+          default: '50074561188'
+        nutzungszeitpunkt:
+          type: string
+          default: '50074561188'
+        wert1:
+          type: string
+          default: '50074561188'
+        position1:
+          type: string
+          default: '50074561188'
+        ablesedatum:
+          type: string
+          default: '2024-04-01T07:40:00Z'
     OK_RESPONSE:
       type: object
       description: >-
