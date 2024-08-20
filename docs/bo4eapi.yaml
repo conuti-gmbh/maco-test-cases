@@ -2724,6 +2724,46 @@ components:
         gueltigAb:
           type: string
           default: E01
+    START_N_BILA_REL_AEND_VON_NB:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+          netzlokationsId:
+            type: string
+            default: '9900321000005'
+          marktrolle:
+            type: string
+            default: 'malo'
+          gewerbekennzeichnung:
+            type: string
+            default: 'gewerbekennzeichnung'
+          rollencodenummer:
+            type: string
+            default: '9900321000005'
+          rollencodetyp:
+            type: string
+            default: 'test'
+          messstellenbetreiberEigenschaft:
+            type: string
+            default: 'messstellenbetreiberEigenschaft'
+          vertragsart:
+            type: string
+            default: 'ENERGIELIEFERVERTRAG'
+          vertragsbeginn:
+            type: string
+            default: '2024-04-01T07:40:00Z'
+          empfaenger:
+            type: string
+            default: '9900321000005'
+          absender:
+            type: string
+            default: '9900321000005'
+          sparte:
+            $ref: '#/components/schemas/Sparte'
+          gueltigAb:
+            type: string
+            default: 'E01'
+    
     ENERGIEVERBRAUCH:
       type: object
       description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
