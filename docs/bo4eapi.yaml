@@ -2644,33 +2644,84 @@ components:
       type: object
       description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
       properties:
-        sparte:
-          $ref: '#/components/schemas/Sparte'
         marktlokationsId:
           type: string
-          default: '123456789'
+          default: '9900321000005'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
         energierichtung:
           type: string
           default: 'GAS'
-        vertragsbeginn:
-          type: string
-          default: '2024-04-01T07:40:00Z'
         vertragsart:
           type: string
           default: ENERGIELIEFERVERTRAG
-        typ:
+        vertragsbeginn:
           type: string
-          default: 'kategorie'
-        absender:
+          default: '2024-04-01T07:40:00Z'
+        vertragspartner2Anrede:
+          type: string
+          default: 'Herr'
+        vertragspartner2Name1:
+          type: string
+          default: 'Mueler'
+        vertragspartner2Name2:
+          type: string
+          default: 'Mueler'
+        vertragspartner2Name3:
+          type: string
+          default: 'Mueler'
+        vertragspartner2Name4:
+          type: string
+          default: 'Mueler'
+        gewerbekennzeichnung:
+          type: string
+          default: 'gewerbekennzeichnung'
+        geschaeftspartnerrolle:
+          type: string
+          default: 'gewerbekennzeichnung'
+        korrespondenzpartnerAnrede:
+          type: string
+          default: 'Herr'
+        korrespondenzpartnerName1:
+          type: string
+          default: 'Mueler'
+        korrespondenzpartnerName2:
+          type: string
+          default: 'Mueler'
+        korrespondenzpartnerName3:
+          type: string
+          default: 'Mueler'
+        korrespondenzpartnerName4:
+          type: string
+          default: 'Mueler'
+        postleitzahl:
+          type: string
+          default: '01452'
+        ort:
+          type: string
+          default: 'Berlin'
+        strasse:
+          type: string
+          default: 'stadtstrasse'
+        hausnummer:
+          type: string
+          default: '1'
+        landescode:
+          type: string
+          default: 'de'
+        lokationsId:
           type: string
           default: '9900321000005'
-        anfrageReferenz:
+        lokationsTyp:
+          type: string
+          default: 'Malo'
+        absender:
           type: string
           default: '9900321000005'
         empfaenger:
           type: string
           default: '9900321000005'
-        transaktionsgrund:
+        gueltigAb:
           type: string
           default: E01
     ENERGIEVERBRAUCH:
