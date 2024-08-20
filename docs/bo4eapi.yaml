@@ -644,7 +644,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'                
-
   /LESEN_AVIS_BASIS:
     get:
       tags:
@@ -702,8 +701,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'   
-
-
   /ERSTELLEN_ENERGIELIEFERVERTRAG_BASIS:
     post:
       tags:
@@ -767,8 +764,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'   
-
-
   /LESEN_ENERGIEMENGE_LASTGANG:
     get:
       tags:
@@ -830,8 +825,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Energiemenge'
-                
+                $ref: '#/components/schemas/Energiemenge'     
   /ERSTELLEN_ENERGIEMENGE_LASTGANG:
     post:
       tags:
@@ -2763,7 +2757,2258 @@ components:
           gueltigAb:
             type: string
             default: 'E01'
-    
+    START_N_BILA_REL_ANFR_ABR_BLINDARBEIT_AN_LF:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+          marktlokationsId:
+            type: string
+            default: 'SOME_STRING'
+          sparte:
+            type: string
+            default: 'SOME_STRING'
+          energierichtung:
+            type: string
+            default: 'GAS'
+          vertragsart:
+            type: string
+            default: 'ENERGIELIEFERVERTRAG'
+          vertragsbeginn:
+            type: string
+            default: '2024-04-01T07:40:00Z'
+          vertragskonditionen:
+            haushaltskunde:
+              type: string
+              default: 'SOME_STRING'
+          lokationsId:
+            type: string
+            default: 'SOME_STRING'
+          lokationsTyp:
+            type: string
+            default: '50074561188'
+          vp2Anrede:
+            type: string
+            default: 'SOME_STRING'
+          vp2Name1:
+            type: string
+            default: 'SOME_STRING'
+          vp2Name2:
+            type: string
+            default: 'SOME_STRING'
+          vp2Name3:
+            type: string
+            default: 'SOME_STRING'
+          vp2Name4:
+            type: string
+            default: 'SOME_STRING'
+          vp2Gewerbekennzeichnung:
+            type: string
+            default: 'gewerbekennzeichnung'
+          geschaeftspartnerrolle:
+            type: string
+            default: 'SOME_STRING'
+          exRefName:
+            type: string
+            default: 'SOME_STRING'
+          exRefWert:
+            type: string
+            default: 'SOME_STRING'
+          kpAnrede:
+            type: string
+            default: 'SOME_STRING'
+          kpName1:
+            type: string
+            default: 'SOME_STRING'
+          kpName2:
+            type: string
+            default: 'SOME_STRING'
+          kpName3:
+            type: string
+            default: 'SOME_STRING'
+          kpName4:
+            type: string
+            default: 'SOME_STRING'
+          kpGewerbekennzeichnung:
+            type: string
+            default: 'gewerbekennzeichnung'
+          postleitzahl:
+            type: string
+            default: '12345'
+          ort:
+            type: string
+            default: 'Berlin'
+          strasse:
+            type: string
+            default: 'Berlinerstr'
+          hausnummer:
+            type: string
+            default: '123'
+          landescode:
+            type: string
+            default: 'de'
+          grundlageVerringerungUmlagen:
+            type: string
+            default: 'SOME_STRING'
+          grund:
+            type: string
+            default: 'SOME_STRING'
+          empfaenger:
+            type: string
+            default: 'SOME_STRING'
+          absender:
+            type: string
+            default: 'SOME_STRING'
+          gueltigAb:
+            type: string
+            default: 'SOME_STRING'
+    START_N_BILA_REL_ANFR_AN_LF:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        messlokationsId:
+          type: string
+          default: 'DE12345678901234567890123456789012'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        messadressePostleitzahl:
+          type: string
+          default: '12345'
+        messadresseort:
+          type: string
+          default: 'Berlin'
+        messadresseStrasse:
+          type: string
+          default: 'SOME_STRING'
+        messadressehausnummer:
+          type: string
+          default: '123'
+        messadresseLandescode:
+          type: string
+          default: 'de'
+        messadresseZusatz1:
+          type: string
+          default: 'SOME_STRING'
+        messadresseZusatz2:
+          type: string
+          default: 'SOME_STRING'
+        aleGeschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        aleGewerbekennzeichnung:
+          type: string
+          default: 'gewerbekennzeichnung'
+        aleName1:
+          type: string
+          default: 'SOME_STRING'
+        aleName2:
+          type: string
+          default: 'SOME_STRING'
+        alePostleitzahl:
+          type: string
+          default: '12345'
+        aleort:
+          type: string
+          default: 'Berlin'
+        aleStrasse:
+          type: string
+          default: 'SOME_STRING'
+        alehausnummer:
+          type: string
+          default: '123'
+        aleLandescode:
+          type: string
+          default: 'de'
+        vertragsartNn:
+          type: string
+          default: 'SOME_STRING'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        lokationsTyp:
+          type: string
+          default: '50074561188'
+        vertragsartMsb:
+          type: string
+          default: 'SOME_STRING'
+        vp2Geschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        vp2Gewerbekennzeichnung:
+          type: string
+          default: 'gewerbekennzeichnung'
+        vp2Name1:
+          type: string
+          default: 'SOME_STRING'
+        vp2Name2:
+          type: string
+          default: 'SOME_STRING'
+        kpName1:
+          type: string
+          default: 'SOME_STRING'
+        kpName2:
+          type: string
+          default: 'SOME_STRING'
+        kpGewerbekennzeichnung:
+          type: string
+          default: 'gewerbekennzeichnung'
+        kpPostleitzahl:
+          type: string
+          default: '12345'
+        kport:
+          type: string
+          default: 'Berlin'
+        kpStrasse:
+          type: string
+          default: 'SOME_STRING'
+        kphausnummer:
+          type: string
+          default: '123'
+        Landescode:
+          type: string
+          default: 'de'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        rollencodetypempfaenger:
+          type: string
+          default: '9900321000005'
+        absender:
+          type: string
+          default: '9900321000005'
+        rollencodetypabsender:
+          type: string
+          default: '9900321000005'
+        gueltigAb:
+          type: string
+          default: 'SOME_STRING'
+    START_N_BILA_REL_ANFR_AN_MSB_OHNE_ABHAENGIGK:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        messlokationsId:
+          type: string
+          default: 'SOME_STRING'
+        sparte:
+          type: string
+          default: 'SOME_STRING'
+        messadressePostleitzahl:
+          type: string
+          default: 'SOME_STRING'
+        messadresseOrt:
+          type: string
+          default: 'SOME_STRING'
+        messadresseStrasse:
+          type: string
+          default: 'SOME_STRING'
+        messadresseHausnummer:
+          type: string
+          default: 'SOME_STRING'
+        messadresseLandescode:
+          type: string
+          default: 'SOME_STRING'
+        messadresseZusatz1:
+          type: string
+          default: 'SOME_STRING'
+        messadresseZusatz2:
+          type: string
+          default: 'SOME_STRING'
+        aleGeschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        aleGewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        aleName1:
+          type: string
+          default: 'SOME_STRING'
+        aleName2:
+          type: string
+          default: 'SOME_STRING'
+        alePostleitzahl:
+          type: string
+          default: 'SOME_STRING'
+        aleOrt:
+          type: string
+          default: 'SOME_STRING'
+        aleStrasse:
+          type: string
+          default: 'SOME_STRING'
+        aleHausnummer:
+          type: string
+          default: 'SOME_STRING'
+        aleLandescode:
+          type: string
+          default: 'SOME_STRING'
+        vertragsartNn:
+          type: string
+          default: 'SOME_STRING'
+        vertragsbeginn:
+          type: string
+          default: 'SOME_STRING'
+        lokationsId:
+          type: string
+          default: 'SOME_STRING'
+        lokationsTyp:
+          type: string
+          default: 'SOME_STRING'
+        vertragsartMsb:
+          type: string
+          default: 'SOME_STRING'
+        vp2Geschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        vp2Gewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        vp2Name1:
+          type: string
+          default: 'SOME_STRING'
+        vp2Name2:
+          type: string
+          default: 'SOME_STRING'
+        kpName1:
+          type: string
+          default: 'SOME_STRING'
+        kpName2:
+          type: string
+          default: 'SOME_STRING'
+        kpGewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        kpPostleitzahl:
+          type: string
+          default: 'SOME_STRING'
+        kpOrt:
+          type: string
+          default: 'SOME_STRING'
+        kpStrasse:
+          type: string
+          default: 'SOME_STRING'
+        kpHausnummer:
+          type: string
+          default: 'SOME_STRING'
+        landescode:
+          type: string
+          default: 'SOME_STRING'
+        empfaenger:
+          type: string
+          default: 'SOME_STRING'
+        rollencodetypEmpfaenger:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: 'SOME_STRING'
+        rollencodetypAbsender:
+          type: string
+          default: 'SOME_STRING'
+        gueltigAb:
+          type: string
+          default: 'SOME_STRING'
+    START_NEUANLAGE:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        energierichtung:
+          $ref: '#/components/schemas/Energierichtung'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        vertragsende:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        haushaltskunde:
+          type: string
+          default: 'SOME_STRING'
+        gewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        vpanrede:
+          type: string
+          default: 'SOME_STRING'
+        vpname1:
+          type: string
+          default: 'SOME_STRING'
+        vpname2:
+          type: string
+          default: 'SOME_STRING'
+        kename2:
+          type: string
+          default: 'SOME_STRING'
+        kegewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        keplz:
+          type: string
+          default: 'SOME_STRING'
+        keort:
+          type: string
+          default: 'Berlin'
+        kestrasse:
+          type: string
+          default: 'SOME_STRING'
+        kehausnummer:
+          type: string
+          default: '123'
+        keLandescode:
+          type: string
+          default: 'de'
+        keortsteil:
+          type: string
+          default: 'SOME_STRING'
+        messageReceiver:
+          type: string
+          default: 'SOME_STRING'
+        transaktonsgrund:
+          type: string
+          default: 'SOME_STRING'
+        transaktionsgrundergaenzung:
+          type: string
+          default: 'SOME_STRING'
+        transaktionsgrundergaenzungBefristeteAnmeldung:
+          type: string
+          default: 'SOME_STRING'
+        messageSender:
+          type: string
+          default: 'SOME_STRING'        
+    START_PREISBLATT:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        startdatum:
+          type: string
+          default: '2024-01-01T07:40:00Z'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        datenaustauschreferenz:
+          type: string
+          default: 'SOME_STRING'
+        pruefidentifikator:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        nachrichtendatum:
+          type: string
+          default: 'SOME_STRING'
+        nachrichtenreferenznummer:
+          type: string
+          default: 'SOME_STRING'
+    START_SPERRAUFTRAG:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        lokationsTyp:
+          type: string
+          default: '50074561188'
+        anfragekategorie:
+          type: string
+          default: 'SOME_STRING'
+        startdatum:
+          type: string
+          default: '2024-01-01T07:40:00Z'
+        Postleitzahl:
+          type: string
+          default: '12345'
+        ort:
+          type: string
+          default: 'Berlin'
+        strasse:
+          type: string
+          default: 'SOME_STRING'
+        hausnummer:
+          type: string
+          default: '123'
+        Landescode:
+          type: string
+          default: 'de'
+        zusatz1:
+          type: string
+          default: 'SOME_STRING'
+        zusatz2:
+          type: string
+          default: 'SOME_STRING'
+        zusatz3:
+          type: string
+          default: 'SOME_STRING'
+        zusatz4:
+          type: string
+          default: 'SOME_STRING'
+        zusatz5:
+          type: string
+          default: 'SOME_STRING'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        absender:
+          type: string
+          default: '9900321000005'
+    START_UEBERSICHT_LEISTUNGSKURVENDEF:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        beginndatum:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        version:
+          type: string
+          default: 'SOME_STRING'
+        notwendigkeit:
+          type: string
+          default: 'SOME_STRING'
+        code:
+          type: string
+          default: 'SOME_STRING'
+        haeufigkeit:
+          type: string
+          default: 'SOME_STRING'
+        uebermittelbarkeit:
+          type: string
+          default: 'SOME_STRING'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        anfrageReferenz:
+          type: string
+          default: 'SOME_STRING'
+    START_UEBERSICHT_SCHALTZEITDEF:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        beginndatum:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        version:
+          type: string
+          default: 'SOME_STRING'
+        notwendigkeit:
+          type: string
+          default: 'SOME_STRING'
+        code:
+          type: string
+          default: 'SOME_STRING'
+        haeufigkeit:
+          type: string
+          default: 'SOME_STRING'
+        uebermittelbarkeit:
+          type: string
+          default: 'SOME_STRING'
+        ermittlungLeistungsmaximum:
+          type: string
+          default: 'SOME_STRING'
+        istBestellbar:
+          type: string
+          default: 'SOME_STRING'
+        typ:
+          type: string
+          default: 'SOME_STRING'
+        beschreibungTyp:
+          type: string
+          default: 'SOME_STRING'
+        zaehlzeitDefinition:
+          type: string
+          default: 'SOME_STRING'
+        register:
+          type: string
+          default: 'SOME_STRING'
+        schwachlastfaehig:
+          type: string
+          default: 'SOME_STRING'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        anfrageReferenz:
+          type: string
+          default: 'SOME_STRING'
+    START_VERSAND_ANF_STORNO:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        energierichtung:
+          $ref: '#/components/schemas/Energierichtung'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        kategorie:
+          type: string
+          default: 'SOME_STRING'
+        vorgangsreferenznummer:
+          type: string
+          default: 'SOME_STRING'
+    START_VERSAND_BEENDIGUNG_AGV:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        energierichtung:
+          $ref: '#/components/schemas/Energierichtung'
+        netzbetreiberCodeNr:
+          type: string
+          default: 'SOME_STRING'
+        rollencodenummerMA:
+          type: string
+          default: 'SOME_STRING'
+        marktrolleMA:
+          type: string
+          default: 'SOME_STRING'
+        vertragsart:
+          type: string
+          default: 'SOME_STRING'
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        lokationsTyp:
+          type: string
+          default: '50074561188'
+        tranchenId:
+          type: string
+          default: 'SOME_STRING'
+        rollencodenummerTR:
+          type: string
+          default: 'SOME_STRING'
+        marktrolleTR:
+          type: string
+          default: 'SOME_STRING'
+        referenzTranche:
+          type: string
+          default: 'SOME_STRING'
+        transaktionsgrund:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        verwendungBis:
+          type: string
+          default: 'SOME_STRING'
+    START_VERSAND_COMDIS:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        nummer:
+          type: string
+          default: 'SOME_STRING'
+        typ:
+          type: string
+          default: 'SOME_STRING'
+        grund:
+          type: string
+          default: 'SOME_STRING'
+        hinweis:
+          type: string
+          default: 'SOME_STRING'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        absender:
+          type: string
+          default: '9900321000005'
+    START_VERSAND_LIEFERSCHEIN:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        lokationsTyp:
+          type: string
+          default: '50074561188'
+        startdatum:
+          type: string
+          default: '2024-01-01T07:40:00Z'
+        enddatum:
+          type: string
+          default: '2024-01-01T07:40:00Z'
+        messwertstatus:
+          type: string
+          default: 'SOME_STRING'
+        obiskennzahl:
+          type: string
+          default: 'SOME_STRING'
+        wert:
+          type: string
+          default: 'SOME_STRING'
+        position:
+          type: string
+          default: 'SOME_STRING'
+        leistungsperiode:
+          type: string
+          default: 'SOME_STRING'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        absender:
+          type: string
+          default: '9900321000005'
+    START_VERSAND_STORNO_MSCONS:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        kategorie:
+          type: string
+          default: 'SOME_STRING'
+        vorgangsreferenznummer:
+          type: string
+          default: 'SOME_STRING'
+    START_ABR_NN:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        artikelId:
+          type: string
+          default: 'SOME_STRING'
+        artikelIdTyp:
+          type: string
+          default: 'SOME_STRING'
+        gemeinderabatt:
+          type: string
+          default: 'SOME_STRING'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        absender:
+          type: string
+          default: '9900321000005'
+    START_AEND_ABR_BLINDARBEIT:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        netzmarktlokationsId:
+          type: string
+          default: '50074561188'
+        artikelId:
+          type: string
+          default: 'SOME_STRING'
+        artikelIdTyp:
+          type: string
+          default: 'SOME_STRING'
+        abrechnungBlindarbeit:
+          type: string
+          default: 'SOME_STRING'
+        zahlerBlindarbeit:
+          type: string
+          default: 'SOME_STRING'
+        vertragsart:
+          type: string
+          default: 'SOME_STRING'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        absender:
+          type: string
+          default: '9900321000005'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        gueltigAb:
+          type: string
+          default: 'SOME_STRING'
+    START_AEND_MALO_STRUKTUR_LF:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        netzmarktlokationsId:
+          type: string
+          default: '50074561188'
+        lokationszuordnungNelo:
+          type: string
+          default: 'SOME_STRING'
+        messlokationsId:
+          type: string
+          default: 'DE12345678901234567890123456789012'
+        lokationszuordnungMelo:
+          type: string
+          default: 'SOME_STRING'
+        technischeRessourcenId:
+          type: string
+          default: 'SOME_STRING'
+        lokationszuordnungTr:
+          type: string
+          default: 'SOME_STRING'
+        steuerbareRessourcenId:
+          type: string
+          default: 'SOME_STRING'
+        lokationszuordnungSr:
+          type: string
+          default: 'SOME_STRING'
+        vertragsart:
+          type: string
+          default: 'SOME_STRING'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        tranchenId:
+          type: string
+          default: 'SOME_STRING'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        absender:
+          type: string
+          default: '9900321000005'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        gueltigAb:
+          type: string
+          default: 'SOME_STRING'
+    START_AEND_NNA_MALO:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        artikelId:
+          type: string
+          default: 'SOME_STRING'
+        artikelIdTyp:
+          type: string
+          default: 'SOME_STRING'
+        gemeinderabatt:
+          type: string
+          default: 'SOME_STRING'
+        vertragsart:
+          type: string
+          default: 'SOME_STRING'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        absender:
+          type: string
+          default: '9900321000005'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        gueltigAb:
+          type: string
+          default: 'SOME_STRING'
+    START_AEND_PROGNOSEGRUNDLAGE:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        energierichtung:
+          $ref: '#/components/schemas/Energierichtung'
+        bilanzierungsgebiet:
+          type: string
+          default: 'SOME_STRING'
+        regelzone:
+          type: string
+          default: 'SOME_STRING'
+        vertragsart:
+          type: string
+          default: 'SOME_STRING'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        lokationsTyp:
+          type: string
+          default: '50074561188'
+        bezeichnung:
+          type: string
+          default: 'SOME_STRING'
+        verfahren:
+          type: string
+          default: 'SOME_STRING'
+        einspeisung:
+          type: string
+          default: 'SOME_STRING'
+        profilart:
+          type: string
+          default: 'SOME_STRING'
+        herausgeber:
+          type: string
+          default: 'SOME_STRING'
+        jahresverbrauchsprognose:
+          type: object
+          properties:
+            wert:
+              type: string
+              default: 'SOME_STRING'
+            einheit:
+              type: string
+              default: 'SOME_STRING'
+        aggregationsverantwortung:
+          type: string
+          default: 'SOME_STRING'
+        zeitreihentyp:
+          type: string
+          default: 'SOME_STRING'
+        wahlrechtPrognosegrundlage:
+          type: string
+          default: 'SOME_STRING'
+        grundWahlrechtPrognosegrundlage:
+          type: string
+          default: 'SOME_STRING'
+        prognosegrundlage:
+          type: string
+          default: 'SOME_STRING'
+        detailsPrognosegrundlage:
+          type: array
+          items:
+            type: string
+            default: 'SOME_STRING'
+        abwicklungsmodell:
+          type: string
+          default: 'SOME_STRING'
+        empfaengerLf:
+          type: string
+          default: 'SOME_STRING'
+        empfaengerMsb:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        gueltigAb:
+          type: string
+          default: 'SOME_STRING'
+    START_ANFR_AN_MSB_MIT_ABHAENGIGK:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        energierichtung:
+          $ref: '#/components/schemas/Energierichtung'
+        obisKennzahl:
+          type: string
+          default: 'SOME_STRING'
+        marktrolle:
+          type: string
+          default: 'SOME_STRING'
+        zweck1:
+          type: string
+          default: 'SOME_STRING'
+        zweck2:
+          type: string
+          default: 'SOME_STRING'
+        marktrolle2:
+          type: string
+          default: 'SOME_STRING'
+        zweck3:
+          type: string
+          default: 'SOME_STRING'
+        zweck4:
+          type: string
+          default: 'SOME_STRING'
+        wertegranularitaet:
+          type: string
+          default: 'SOME_STRING'
+        messlokationsId:
+          type: string
+          default: 'DE12345678901234567890123456789012'
+        vertragsart:
+          type: string
+          default: 'SOME_STRING'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        lokationsTyp:
+          type: string
+          default: '50074561188'
+        zaehlernummer:
+          type: string
+          default: 'SOME_STRING'
+        zaehlertyp:
+          type: string
+          default: 'SOME_STRING'
+        obisKennzahl:
+          type: string
+          default: 'SOME_STRING'
+        vorkommastelle:
+          type: string
+          default: 'SOME_STRING'
+        nachkommastelle:
+          type: string
+          default: 'SOME_STRING'
+        wertegranularitaet:
+          type: string
+          default: 'SOME_STRING'
+        messwerterfassung:
+          type: string
+          default: 'SOME_STRING'
+        befestigungsart:
+          type: string
+          default: 'SOME_STRING'
+        zaehlergroesse:
+          type: string
+          default: 'SOME_STRING'
+        geraetenummer:
+          type: string
+          default: 'SOME_STRING'
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        rollencodenummer:
+          type: string
+          default: 'SOME_STRING'
+        rollencodetypempfaenger:
+          type: string
+          default: '9900321000005'
+        absender:
+          type: string
+          default: '9900321000005'
+        rolldencodenummer:
+          type: string
+          default: 'SOME_STRING'
+        rollencodetypabsender:
+          type: string
+          default: '9900321000005'
+        gueltigAb:
+          type: string
+          default: 'SOME_STRING'
+    START_ANFRAGE_KONFIGURATION:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        ressourcenId:
+          type: string
+          default: 'SOME_STRING'
+        code:
+          type: string
+          default: 'SOME_STRING'
+        konfigurationsprodukt:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        lieferdatum:
+          type: string
+          default: 'SOME_STRING'
+        nachrichtenReferenzBestellbestaetigung:
+          type: string
+          default: 'SOME_STRING'
+        vorgangsReferenzBestellbestaetigung:
+          type: string
+          default: 'SOME_STRING'
+    START_ANFRAGE_MESSWERTE:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        messlokationsId:
+          type: string
+          default: 'DE12345678901234567890123456789012'
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        lokationsTyp:
+          type: string
+          default: '50074561188'
+        anfragekategorie:
+          type: string
+          default: 'SOME_STRING'
+        anfragetyp:
+          type: string
+          default: 'SOME_STRING'
+        startdatum:
+          type: string
+          default: '2024-01-01T07:40:00Z'
+        enddatum:
+          type: string
+          default: '2024-01-01T07:40:00Z'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'        
+    START_ANFRAGE_STAMMDATEN_MALO:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        Postleitzahl:
+          type: string
+          default: '12345'
+        ort:
+          type: string
+          default: 'Berlin'
+        strasse:
+          type: string
+          default: 'SOME_STRING'
+        hausnummer:
+          type: string
+          default: '123'
+        Landescode:
+          type: string
+          default: 'de'
+        zusatz1:
+          type: string
+          default: 'SOME_STRING'
+        vertragsart:
+          type: string
+          default: 'SOME_STRING'
+        anrede:
+          type: string
+          default: 'SOME_STRING'
+        name1:
+          type: string
+          default: 'SOME_STRING'
+        name2:
+          type: string
+          default: 'SOME_STRING'
+        gewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        geschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        exRefName:
+          type: string
+          default: 'SOME_STRING'
+        exRefWert:
+          type: string
+          default: 'SOME_STRING'
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        lokationsTyp:
+          type: string
+          default: '50074561188'
+        anfragekategorie:
+          type: string
+          default: 'SOME_STRING'
+        energierichtung:
+          $ref: '#/components/schemas/Energierichtung'
+        zaehlernummer:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        info1:
+          type: string
+          default: 'SOME_STRING'
+        freitext:
+          type: string
+          default: 'SOME_STRING'
+    START_ANFRAGE_STAMMDATEN_TRANCHE:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        Postleitzahl:
+          type: string
+          default: '12345'
+        ort:
+          type: string
+          default: 'Berlin'
+        strasse:
+          type: string
+          default: 'SOME_STRING'
+        hausnummer:
+          type: string
+          default: '123'
+        Landescode:
+          type: string
+          default: 'de'
+        zusatz1:
+          type: string
+          default: 'SOME_STRING'
+        zusatz2:
+          type: string
+          default: 'SOME_STRING'
+        zusatz3:
+          type: string
+          default: 'SOME_STRING'
+        zusatz4:
+          type: string
+          default: 'SOME_STRING'
+        zusatz5:
+          type: string
+          default: 'SOME_STRING'
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        lokationsTyp:
+          type: string
+          default: '50074561188'
+        anfragekategorie:
+          type: string
+          default: 'SOME_STRING'
+        tranchenId:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+    START_ANFRAGE_STAMMDATENAENDERUNG:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        ename1:
+          type: string
+          default: 'SOME_STRING'
+        egewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        egeschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        ePostleitzahl:
+          type: string
+          default: '12345'
+        eort:
+          type: string
+          default: 'Berlin'
+        estrasse:
+          type: string
+          default: 'SOME_STRING'
+        ehausnummer:
+          type: string
+          default: '123'
+        eLandescode:
+          type: string
+          default: 'de'
+        hname1:
+          type: string
+          default: 'SOME_STRING'
+        hgewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        hgeschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        hPostleitzahl:
+          type: string
+          default: '12345'
+        hort:
+          type: string
+          default: 'Berlin'
+        hstrasse:
+          type: string
+          default: 'SOME_STRING'
+        hhausnummer:
+          type: string
+          default: '123'
+        hLandescode:
+          type: string
+          default: 'de'
+        messlokationsId:
+          type: string
+          default: 'DE12345678901234567890123456789012'
+        gasqualitaet:
+          type: string
+          default: 'SOME_STRING'
+        msbrollencodenummer:
+          type: string
+          default: 'SOME_STRING'
+        msbmarktrolle:
+          type: string
+          default: 'SOME_STRING'
+        gmsbrollencodenummer:
+          type: string
+          default: 'SOME_STRING'
+        gmsbmarktrolle:
+          type: string
+          default: 'SOME_STRING'
+        aanrede:
+          type: string
+          default: 'SOME_STRING'
+        aname1:
+          type: string
+          default: 'SOME_STRING'
+        aname2:
+          type: string
+          default: 'SOME_STRING'
+        aname3:
+          type: string
+          default: 'SOME_STRING'
+        aname4:
+          type: string
+          default: 'SOME_STRING'
+        agewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        ageschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        aPostleitzahl:
+          type: string
+          default: '12345'
+        aort:
+          type: string
+          default: 'Berlin'
+        astrasse:
+          type: string
+          default: 'SOME_STRING'
+        ahausnummer:
+          type: string
+          default: '123'
+        aLandescode:
+          type: string
+          default: 'de'
+        nnvname1:
+          type: string
+          default: 'SOME_STRING'
+        nnvgewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        nnvgeschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        nnvableseZeitraum:
+          type: string
+          default: 'SOME_STRING'
+        nnvkname1:
+          type: string
+          default: 'SOME_STRING'
+        nnvkgewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        nnvkPostleitzahl:
+          type: string
+          default: '12345'
+        nnvkort:
+          type: string
+          default: 'Berlin'
+        nnvkstrasse:
+          type: string
+          default: 'SOME_STRING'
+        nnvkhausnummer:
+          type: string
+          default: '123'
+        nnvkLandescode:
+          type: string
+          default: 'de'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        name1:
+          type: string
+          default: 'SOME_STRING'
+        name2:
+          type: string
+          default: 'SOME_STRING'
+        name3:
+          type: string
+          default: 'SOME_STRING'
+        name4:
+          type: string
+          default: 'SOME_STRING'
+        gewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        geschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        exRefName:
+          type: string
+          default: 'SOME_STRING'
+        exRefWert:
+          type: string
+          default: 'SOME_STRING'
+        abrechnungsintervall:
+          type: string
+          default: 'SOME_STRING'
+        kanrede:
+          type: string
+          default: 'SOME_STRING'
+        kname1:
+          type: string
+          default: 'SOME_STRING'
+        kname2:
+          type: string
+          default: 'SOME_STRING'
+        kname3:
+          type: string
+          default: 'SOME_STRING'
+        kname4:
+          type: string
+          default: 'SOME_STRING'
+        kgewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        kPostleitzahl:
+          type: string
+          default: '12345'
+        kort:
+          type: string
+          default: 'Berlin'
+        kstrasse:
+          type: string
+          default: 'SOME_STRING'
+        khausnummer:
+          type: string
+          default: '123'
+        kLandescode:
+          type: string
+          default: 'de'
+        bilanzkreis:
+          type: string
+          default: 'SOME_STRING'
+        bezeichnung:
+          type: string
+          default: 'SOME_STRING'
+        verfahren:
+          type: string
+          default: 'SOME_STRING'
+        einspeisung:
+          type: string
+          default: 'SOME_STRING'
+        temperaturmessstelle:
+          type: string
+          default: 'SOME_STRING'
+        dienstanbieter:
+          type: string
+          default: 'SOME_STRING'
+        herausgeber:
+          type: string
+          default: 'SOME_STRING'
+        profilart:
+          type: string
+          default: 'SOME_STRING'
+        wert:
+          type: string
+          default: 'SOME_STRING'
+        einheit:
+          type: string
+          default: 'SOME_STRING'
+        wertk:
+          type: string
+          default: 'SOME_STRING'
+        prognosegrundlage:
+          type: string
+          default: 'SOME_STRING'
+        zaehlernummer:
+          type: string
+          default: 'SOME_STRING'
+        zaehlertyp:
+          type: string
+          default: 'SOME_STRING'
+        obisKennzahl:
+          type: string
+          default: 'SOME_STRING'
+        vorkommastelle:
+          type: string
+          default: 'SOME_STRING'
+        nachkommastelle:
+          type: string
+          default: 'SOME_STRING'
+        wertegranularitaet:
+          type: string
+          default: 'SOME_STRING'
+        messwerterfassung:
+          type: string
+          default: 'SOME_STRING'
+        zaehlergroesse:
+          type: string
+          default: 'SOME_STRING'
+        geraetenummer1:
+          type: string
+          default: 'SOME_STRING'
+        geraetetyp1:
+          type: string
+          default: 'SOME_STRING'
+        geraetenummer2:
+          type: string
+          default: 'SOME_STRING'
+        geraetetyp2:
+          type: string
+          default: 'SOME_STRING'
+        geraetemerkmal2:
+          type: string
+          default: 'SOME_STRING'
+        geraetenummer3:
+          type: string
+          default: 'SOME_STRING'
+        geraetetyp3:
+          type: string
+          default: 'SOME_STRING'
+        geraetemerkmal3:
+          type: string
+          default: 'SOME_STRING'
+        geraetenummer4:
+          type: string
+          default: 'SOME_STRING'
+        geraetetyp4:
+          type: string
+          default: 'SOME_STRING'
+        transaktionsgrund:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger7:
+          type: string
+          default: 'SOME_STRING'
+        kategorie:
+          type: string
+          default: 'SOME_STRING'
+        gueltigAb:
+          type: string
+          default: 'SOME_STRING'
+    START_AUFTRAGSSTATUS:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        statusObjekt:
+          type: string
+          default: 'SOME_STRING'
+        auftragsstatus:
+          type: string
+          default: 'SOME_STRING'
+        positionsnummer:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        fertigstellungsdatum:
+          type: string
+          default: 'SOME_STRING'
+        antwortstatus:
+          type: string
+          default: 'SOME_STRING'
+        antwortstatusCodeliste:
+          type: string
+          default: 'SOME_STRING'
+        sendungsposition:
+          type: string
+          default: 'SOME_STRING'
+    START_BESTELLUNG_ANGEBOT_KONFIGURATION:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        anfragekategorie:
+          type: string
+          default: 'SOME_STRING'
+        sparte:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'        
+    START_BESTELLUNG_KONFIGURATION:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        konfigurationsprodukt:
+          type: string
+          default: 'SOME_STRING'
+        zieladresse1:
+          type: string
+          default: 'SOME_STRING'
+        aussteller1:
+          type: string
+          default: 'SOME_STRING'
+        zertifikatsNutzer1:
+          type: string
+          default: 'SOME_STRING'
+        netzlokationsId:
+          type: string
+          default: 'SOME_STRING'
+        sparte:
+          type: string
+          default: 'SOME_STRING'
+        lokationsId:
+          type: string
+          default: 'SOME_STRING'
+        anfragekategorie:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        vorgangsreferenznummer:
+          type: string
+          default: 'SOME_STRING'
+        beteiligterMarktpartner:
+          type: string
+          default: 'SOME_STRING'
+    START_BESTELLUNG_ZAEHLZEITDEFINITION:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktlokationsId:
+          type: string
+          default: 'SOME_STRING'
+        sparte:
+          type: string
+          default: 'SOME_STRING'
+        messprodukt:
+          type: string
+          default: 'SOME_STRING'
+        lokationsId:
+          type: string
+          default: 'SOME_STRING'
+        lokationsTyp:
+          type: string
+          default: 'SOME_STRING'
+        anfragekategorie:
+          type: string
+          default: 'SOME_STRING'
+        anfragetyp:
+          type: string
+          default: 'SOME_STRING'
+        ausfuehrungsdatum:
+          type: string
+          default: 'SOME_STRING'
+        obiskennzahl:
+          type: string
+          default: 'SOME_STRING'
+        code:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+    START_BILA_REL_AEND_VON_NB_MIT_ABHAENGIGK:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktlokationsId:
+          type: string
+          default: 'SOME_STRING'
+        energierichtung:
+          type: string
+          default: 'SOME_STRING'
+        bilanzierungsgebiet:
+          type: string
+          default: 'SOME_STRING'
+        regelzone:
+          type: string
+          default: 'SOME_STRING'
+        vertragsart:
+          type: string
+          default: 'SOME_STRING'
+        vertragsbeginn:
+          type: string
+          default: 'SOME_STRING'
+        lokationsId:
+          type: string
+          default: 'SOME_STRING'
+        lokationsTyp:
+          type: string
+          default: 'SOME_STRING'
+        bezeichnung:
+          type: string
+          default: 'SOME_STRING'
+        verfahren:
+          type: string
+          default: 'SOME_STRING'
+        einspeisung:
+          type: string
+          default: 'SOME_STRING'
+        profilart:
+          type: string
+          default: 'SOME_STRING'
+        herausgeber:
+          type: string
+          default: 'SOME_STRING'
+        aggregationsverantwortung:
+          type: string
+          default: 'SOME_STRING'
+        prognosegrundlage:
+          type: string
+          default: 'SOME_STRING'
+        detailsPrognosegrundlage:
+          type: string
+          default: 'SOME_STRING'
+        empfaengerLf:
+          type: string
+          default: 'SOME_STRING'
+        empfaengerMsb:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        sparte:
+          type: string
+          default: 'SOME_STRING'
+        gueltigAb:
+          type: string
+          default: 'SOME_STRING'
+    START_BILA_REL_ANFR_AN_LF:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktlokationsId:
+          type: string
+          default: 'SOME_STRING'
+        energierichtung:
+          type: string
+          default: 'SOME_STRING'
+        statusErzeugendeMalo:
+          type: string
+          default: 'SOME_STRING'
+        foerderungsLand:
+          type: string
+          default: 'SOME_STRING'
+        vertragsart:
+          type: string
+          default: 'SOME_STRING'
+        vertragsbeginn:
+          type: string
+          default: 'SOME_STRING'
+        lokationsId:
+          type: string
+          default: 'SOME_STRING'
+        lokationsTyp:
+          type: string
+          default: 'SOME_STRING'
+        bilanzkreis:
+          type: string
+          default: 'SOME_STRING'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        absender:
+          type: string
+          default: '9900321000005'
+        sparte:
+          type: string
+          default: 'SOME_STRING'
+        gueltigAb:
+          type: string
+          default: 'SOME_STRING'
+    START_DEFINITION_LEISTUNGSKURVE:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        code:
+          type: string
+          default: 'SOME_STRING'
+        beginndatum:
+          type: string
+          default: 'SOME_STRING'
+        endedatum:
+          type: string
+          default: 'SOME_STRING'
+        version:
+          type: string
+          default: 'SOME_STRING'
+        aenderungszeitpunkt:
+          type: string
+          default: 'SOME_STRING'
+        haeufigkeit:
+          type: string
+          default: 'SOME_STRING'
+        obererSchwellwert:
+          type: string
+          default: 'SOME_STRING'
+        sparte:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+    START_DEFINITION_SCHALTZEIT:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        code:
+          type: string
+          default: 'SOME_STRING'
+        beginndatum:
+          type: string
+          default: 'SOME_STRING'
+        endedatum:
+          type: string
+          default: 'SOME_STRING'
+        version:
+          type: string
+          default: 'SOME_STRING'
+        aenderungszeitpunkt:
+          type: string
+          default: 'SOME_STRING'
+        haeufigkeit:
+          type: string
+          default: 'SOME_STRING'
+        schalthandlung:
+          type: string
+          default: 'SOME_STRING'
+        sparte:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+    START_DEFINITION_ZAEHLZEIT:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        code:
+          type: string
+          default: 'SOME_STRING'
+        beginndatum:
+          type: string
+          default: 'SOME_STRING'
+        endedatum:
+          type: string
+          default: 'SOME_STRING'
+        version:
+          type: string
+          default: 'SOME_STRING'
+        aenderungszeitpunkt:
+          type: string
+          default: 'SOME_STRING'
+        haeufigkeit:
+          type: string
+          default: 'SOME_STRING'
+        schalthandlung:
+          type: string
+          default: 'SOME_STRING'
+        sparte:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'        
+    START_EOG:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        marktmarktlokationsId:
+          type: string
+          default: '50074561188'
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        energierichtung:
+          $ref: '#/components/schemas/Energierichtung'
+        netzebene:
+          type: string
+          default: 'SOME_STRING'
+        bilanzierungsgebiet:
+          type: string
+          default: 'SOME_STRING'
+        lokationsadressePlz:
+          type: string
+          default: 'SOME_STRING'
+        lokationsadresseort:
+          type: string
+          default: 'Berlin'
+        lokationsadresseStrasse:
+          type: string
+          default: 'SOME_STRING'
+        lokationsadresseHausnr:
+          type: string
+          default: 'SOME_STRING'
+        lokationsadresseLandescode:
+          type: string
+          default: 'de'
+        lokationsadresseZusatz1:
+          type: string
+          default: 'SOME_STRING'
+        marktrolleUenbCodenr:
+          type: string
+          default: 'SOME_STRING'
+        marktrolleUenb:
+          type: string
+          default: 'SOME_STRING'
+        marktrolleMsbCodenr:
+          type: string
+          default: 'SOME_STRING'
+        marktrolleMsb:
+          type: string
+          default: 'SOME_STRING'
+        weiterverpflichtet:
+          type: string
+          default: 'SOME_STRING'
+        messstellenbetreiberEigenschaft:
+          type: string
+          default: 'SOME_STRING'
+        regelzone:
+          type: string
+          default: 'SOME_STRING'
+        obisKennzahlMalo:
+          type: string
+          default: 'SOME_STRING'
+        verwendungszweckMarktrolle:
+          type: string
+          default: 'SOME_STRING'
+        verwendungszweck1:
+          type: string
+          default: 'SOME_STRING'
+        verwendungszweck2:
+          type: string
+          default: 'SOME_STRING'
+        verwendungszweck3:
+          type: string
+          default: 'SOME_STRING'
+        verbrauchsart:
+          type: string
+          default: 'SOME_STRING'
+        unterbrechbarkeit:
+          type: string
+          default: 'SOME_STRING'
+        wertegranularitaet:
+          type: string
+          default: 'SOME_STRING'
+        messtechnischeEinordnung:
+          type: string
+          default: 'SOME_STRING'
+        artikelId:
+          type: string
+          default: 'SOME_STRING'
+        artikelIdTyp:
+          type: string
+          default: 'SOME_STRING'
+        gemeinderabatt:
+          type: string
+          default: 'SOME_STRING'
+        sperrstatus:
+          type: string
+          default: 'SOME_STRING'
+        messlokationsId:
+          type: string
+          default: 'DE12345678901234567890123456789012'
+        netzebenemessung:
+          type: string
+          default: 'SOME_STRING'
+        akeName1:
+          type: string
+          default: 'SOME_STRING'
+        akeGewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        akeGeschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        partneradressePlz:
+          type: string
+          default: 'SOME_STRING'
+        partneradresseort:
+          type: string
+          default: 'Berlin'
+        partneradresseStrasse:
+          type: string
+          default: 'SOME_STRING'
+        partneradresseHausnr:
+          type: string
+          default: 'SOME_STRING'
+        partneradresseLandescode:
+          type: string
+          default: 'de'
+        marktrolleGmsb:
+          type: string
+          default: 'SOME_STRING'
+        vertragsbeginn:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        vertragsende:
+          type: string
+          default: '2024-04-01T07:40:00Z'
+        lokationsTyp:
+          type: string
+          default: '50074561188'
+        haushaltskunde:
+          type: string
+          default: 'SOME_STRING'
+        abrechnungsZeitraum:
+          type: string
+          default: 'SOME_STRING'
+        netznutzungsabrechnungIntervall:
+          type: string
+          default: 'SOME_STRING'
+        netznutzungsvertrag:
+          type: string
+          default: 'SOME_STRING'
+        netznutzungszahler:
+          type: string
+          default: 'SOME_STRING'
+        netznutzungsabrechnungsvariante:
+          type: string
+          default: 'SOME_STRING'
+        netznutzungsabrechnungsgrundlage:
+          type: string
+          default: 'SOME_STRING'
+        naechstenetznutzungsabrechnung:
+          type: string
+          default: 'SOME_STRING'
+        ablesezeitraum:
+          type: string
+          default: 'SOME_STRING'
+        abrechnungUeberNna:
+          type: string
+          default: 'SOME_STRING'
+        vp2Name1:
+          type: string
+          default: 'SOME_STRING'
+        vp2Gewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        vp2Geschaeftspartnerrolle:
+          type: string
+          default: 'SOME_STRING'
+        kpName1:
+          type: string
+          default: 'SOME_STRING'
+        kpGewerbekennzeichnung:
+          type: string
+          default: 'SOME_STRING'
+        kpPlz:
+          type: string
+          default: 'SOME_STRING'
+        kport:
+          type: string
+          default: 'Berlin'
+        kpStrasse:
+          type: string
+          default: 'SOME_STRING'
+        kpHausnr:
+          type: string
+          default: 'SOME_STRING'
+        kpLandescode:
+          type: string
+          default: 'de'
+        zaehlernummer:
+          type: string
+          default: 'SOME_STRING'
+        zaehlerauspraegung:
+          type: string
+          default: 'SOME_STRING'
+        zaehlertyp:
+          type: string
+          default: 'SOME_STRING'
+        tarifart:
+          type: string
+          default: 'SOME_STRING'
+        obisKennzahlZaehler:
+          type: string
+          default: 'SOME_STRING'
+        vorkommastelle:
+          type: string
+          default: 'SOME_STRING'
+        nachkommastelle:
+          type: string
+          default: 'SOME_STRING'
+        fernschaltung:
+          type: string
+          default: 'SOME_STRING'
+        messwerterfassung:
+          type: string
+          default: 'SOME_STRING'
+        geraetenummer:
+          type: string
+          default: 'SOME_STRING'
+        bezeichnung:
+          type: string
+          default: 'SOME_STRING'
+        verfahren:
+          type: string
+          default: 'SOME_STRING'
+        profilart:
+          type: string
+          default: 'SOME_STRING'
+        einspeisung:
+          type: string
+          default: 'SOME_STRING'
+        herausgeber:
+          type: string
+          default: 'SOME_STRING'
+        bilanzierungsbeginn:
+          type: string
+          default: 'SOME_STRING'
+        jvpWert:
+          type: string
+          default: 'SOME_STRING'
+        jvpEinheit:
+          type: string
+          default: 'SOME_STRING'
+        aggregationsverantwortung:
+          type: string
+          default: 'SOME_STRING'
+        zeitreihentyp:
+          type: string
+          default: 'SOME_STRING'
+        prognosegrundlage:
+          type: string
+          default: 'SOME_STRING'
+        detailsPrognosegrundlage:
+          type: string
+          default: 'SOME_STRING'
+        abwicklungsmodell:
+          type: string
+          default: 'SOME_STRING'
+        vertragsart:
+          type: string
+          default: 'SOME_STRING'
+        vertragskonditionen:
+          type: string
+          default: 'SOME_STRING'
+        geplanteTurnusablesung:
+          type: string
+          default: 'SOME_STRING'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
+        transaktionsgrund:
+          type: string
+          default: 'SOME_STRING'
+        transaktionsgrundergaenzung:
+          type: string
+          default: 'SOME_STRING'
+        transaktionsgrundergaenzungBefristeteAnmeldung:
+          type: string
+          default: 'SOME_STRING'
+        absenderCodetyp:
+          type: string
+          default: 'SOME_STRING'
+        empfaengerCodetyp:
+          type: string
+          default: 'SOME_STRING'
+    START_ERHEBUNG_MESSWERTE:
+      type: object
+      description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
+      properties:
+        sparte:
+          $ref: '#/components/schemas/Sparte'
+        marktlokationsId:
+          type: string
+          default: '50074561188'
+        absender:
+          type: string
+          default: '9900321000005'
+        empfaenger:
+          type: string
+          default: '9900321000005'
     ENERGIEVERBRAUCH:
       type: object
       description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
