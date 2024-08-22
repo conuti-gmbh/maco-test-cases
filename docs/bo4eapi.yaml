@@ -3737,9 +3737,6 @@ components:
         vertragsbeginn:
           type: string
           default: '2024-04-01T07:40:00Z'
-        marktlokationsId:
-          type: string
-          default: '50074561188'
         lokationsTyp:
           type: string
           default: '50074561188'
@@ -3848,9 +3845,6 @@ components:
         vertragsbeginn:
           type: string
           default: '2024-04-01T07:40:00Z'
-        marktlokationsId:
-          type: string
-          default: '50074561188'
         lokationsTyp:
           type: string
           default: '50074561188'
@@ -3860,16 +3854,10 @@ components:
         zaehlertyp:
           type: string
           default: 'SOME_STRING'
-        obisKennzahl:
-          type: string
-          default: 'SOME_STRING'
         vorkommastelle:
           type: string
           default: 'SOME_STRING'
         nachkommastelle:
-          type: string
-          default: 'SOME_STRING'
-        wertegranularitaet:
           type: string
           default: 'SOME_STRING'
         messwerterfassung:
@@ -3884,11 +3872,6 @@ components:
         geraetenummer:
           type: string
           default: 'SOME_STRING'
-        marktmarktlokationsId:
-          type: string
-          default: '50074561188'
-        sparte:
-          $ref: '#/components/schemas/Sparte'
         rollencodenummer:
           type: string
           default: 'SOME_STRING'
@@ -4021,9 +4004,6 @@ components:
         exRefWert:
           type: string
           default: 'SOME_STRING'
-        marktlokationsId:
-          type: string
-          default: '50074561188'
         lokationsTyp:
           type: string
           default: '50074561188'
