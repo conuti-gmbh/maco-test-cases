@@ -1,0 +1,20 @@
+{
+  "stammdaten":{
+    "TECHNISCHE_RESSOURCE": [
+      {
+      "boTyp": "STEUERBARE_RESSOURCE",
+      "versionStruktur": "1",
+      "ressourcenId": "${data:jsonPath('$.steuerbareRessourcenId')}",
+      "lokationszuordnung": "${data:jsonPath('$.lokationszuordnungTr')}"
+      }
+      ],
+    },
+  "transaktionsdaten": {
+    "empfaenger": "${data:jsonPath('$.empfaenger')}",
+    "absender": "${data:jsonPath('$.absender')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "kategorie": "${data:jsonPath('$.kategorie')}",
+    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+  }
+  }
+ 

@@ -1,0 +1,74 @@
+{
+  "stammdaten":{
+    "NETZLOKATION": [
+    {
+    "boTyp": "NETZLOKATION",
+    "versionStruktur": "1",
+		"netzlokationsId": "${data:jsonPath('$.netzlokationsId')}",
+    "marktrollen": [
+      {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "marktrolle": "${data:jsonPath('$.marktrolle')}",
+        "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung')},
+        "rollencodenummer": "${data:jsonPath('$.rollencodenummer')}",
+        "rollencodetyp": "${data:jsonPath('$.rollencodetyp')}",
+        "messstellenbetreiberEigenschaft": "${data:jsonPath('$.messstellenbetreiberEigenschaft')}"
+      }
+    ]
+    }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+    {
+    "boTyp": "NETZNUTZUNGSVERTRAG",
+    "versionStruktur": "1",
+		"vertragsart": "${data:jsonPath('$.vertragsart')}",
+    "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}"
+    }
+    ],
+    "MESSSTELLENBETRIEBSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "${data:jsonPath('$.vertragsartMsb'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsartMsb')})}",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "vertragspartner2": [
+          {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "geschaeftspartnerrolle": [
+              "${data:jsonPath('$.vp2Geschaeftspartnerrolle'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Geschaeftspartnerrolle')})}"
+            ],
+            "versionStruktur": "1",
+            "gewerbekennzeichnung": ${data:jsonPath('$.vp2Gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Gewerbekennzeichnung')})},
+            "name1": "${data:jsonPath('$.vp2Name1'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Name1')})}",
+            "name2": "${data:jsonPath('$.vp2Name2'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Name2')})}"
+          }
+        ],
+        "korrespondenzpartner": {
+          "boTyp": "GESCHAEFTSPARTNER",
+          "versionStruktur": "1",
+          "name1": "${data:jsonPath('$.kpName1'):isEmpty():ifElse('null',${data:jsonPath('$.kpName1')})}",
+          "name2": "${data:jsonPath('$.kpName2'):isEmpty():ifElse('null',${data:jsonPath('$.kpName2')})}",
+          "gewerbekennzeichnung": ${data:jsonPath('$.kpGewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.kpGewerbekennzeichnung')})},
+          "partneradresse": {
+            "postleitzahl": "${data:jsonPath('$.kpPostleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.kpPostleitzahl')})}",
+            "ort": "${data:jsonPath('$.kpOrt'):isEmpty():ifElse('null',${data:jsonPath('$.kpOrt')})}",
+            "strasse": "${data:jsonPath('$.kpStrasse'):isEmpty():ifElse('null',${data:jsonPath('$.kpStrasse')})}",
+            "hausnummer": "${data:jsonPath('$.kpHausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.kpHausnummer')})}",
+            "landescode": "${data:jsonPath('$.landescode'):isEmpty():ifElse('null',${data:jsonPath('$.landescode')})}"
+          }
+        },
+        "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+        "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
+      }
+    ],
+    },
+  "transaktionsdaten": {
+    "empfaenger": "${data:jsonPath('$.empfaenger')}",
+    "absender": "${data:jsonPath('$.absender')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "kategorie": "${data:jsonPath('$.kategorie')}",
+    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+  }
+  }
+ 

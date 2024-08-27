@@ -1,0 +1,25 @@
+{
+  "stammdaten":{
+    "TRANCHE": [
+      {
+        "boTyp": "TRANCHE",
+        "versionStruktur": "1",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "verguetungEmpfaenger": "${data:jsonPath('$.verguetungEmpfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.verguetungEmpfaenger')})}",
+        "bildungTranchengroesse": "${data:jsonPath('$.bildungTranchengroesse'):isEmpty():ifElse('null',${data:jsonPath('$.bildungTranchengroesse')})}",
+        "aufteilungsmenge": {
+          "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse(null,${data:jsonPath('$.wert')})},
+          "einheit": "${data:jsonPath('$.einheit'):isEmpty():ifElse('null',${data:jsonPath('$.einheit')})}"
+        }
+      }
+    ],
+    },
+  "transaktionsdaten": {
+    "empfaenger": "${data:jsonPath('$.empfaenger')}",
+    "absender": "${data:jsonPath('$.absender')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "kategorie": "${data:jsonPath('$.kategorie')}",
+    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+  }
+  }
+ 

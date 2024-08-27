@@ -71,6 +71,7 @@
     "empfaenger": "${data:jsonPath('$.empfaenger')}",
     "absender": "${data:jsonPath('$.absender')}",
     "sparte": "${data:jsonPath('$.sparte')}",
+    "kategorie": "${data:jsonPath('$.kategorie')}",
     "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
   }
   }
