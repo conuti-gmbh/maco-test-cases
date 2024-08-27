@@ -40,7 +40,7 @@
         {
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
-          "vertragsart": "${data:jsonPath('$.vertragsartNn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsartNn')})}",
+          "vertragsart": "${data:jsonPath('$.vertragsartNn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsartNN')})}",
           "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsbeginn')})}",
           "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
           "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
@@ -51,7 +51,7 @@
         {
           "boTyp": "VERTRAG",
           "versionStruktur": "1",
-          "vertragsart": "${data:jsonPath('$.vertragsartMsb'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsartMsb')})}",
+          "vertragsart": "${data:jsonPath('$.vertragsartMsb'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsartMSB')})}",
           "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
           "vertragspartner2": [
             {

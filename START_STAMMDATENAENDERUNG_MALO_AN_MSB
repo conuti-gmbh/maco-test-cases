@@ -53,13 +53,6 @@
         "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
       }
     ],
-    "BILANZIERUNG": [
-      {
-        "boTyp": "BILANZIERUNG",
-        "versionStruktur": "1",
-        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}"
-      }
-    ]
     },
   "transaktionsdaten": {
     "empfaenger": "${data:jsonPath('$.empfaenger')}",

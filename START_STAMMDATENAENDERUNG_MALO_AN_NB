@@ -13,7 +13,7 @@
     {
     "boTyp": "NETZNUTZUNGSVERTRAG",
     "versionStruktur": "1",
-		"vertragsart": "${data:jsonPath('$.vertragsart')}",
+		"vertragsart": "${data:jsonPath('$.vertragsartNN')}",
     "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}"
     }
     ],
@@ -21,7 +21,7 @@
     {
     "boTyp": "ENERGIELIEFERVERTRAG",
     "versionStruktur": "1",
-		"vertragsart": "${data:jsonPath('$.vertragsart')}",
+		"vertragsart": "${data:jsonPath('$.vertragsartNN')}",
     "sparte": "${data:jsonPath('$.sparte')}",
     "vertragspartner2": [
       {
@@ -57,15 +57,7 @@
     },
     "lokationsId": "${data:jsonPath('$.lokationsId')}",
     "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
-    }
-    ],
-    "BILANZIERUNG": [
-      {
-        "boTyp": "BILANZIERUNG",
-        "versionStruktur": "1",
-        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}"
-      }
-    ]
+    },
     },
   "transaktionsdaten": {
     "empfaenger": "${data:jsonPath('$.empfaenger')}",
