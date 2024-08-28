@@ -132,7 +132,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
-
   /LESEN_EVENT_START_LIEFERBEGINN:
     post:
       tags:
@@ -197,7 +196,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
-
   /ERSTELLEN_PROZESSDATEN_LIEFERENDE:
     post:
       tags:
@@ -270,7 +268,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
-
   /ERSTELLEN_PROZESSDATEN_LIEFERBEGINN:
     post:
       tags:
@@ -339,7 +336,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
-
   /LESEN_KOMMUNIKATIONSDATEN_BASIS:
     get:
       tags:
@@ -397,7 +393,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
-
   /AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
@@ -460,7 +455,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
- 
   /ERSTELLEN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
@@ -523,7 +517,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'
-
   /LOESCHEN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
@@ -585,8 +578,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ERROR_RESPONSE'
-                
+                $ref: '#/components/schemas/ERROR_RESPONSE'          
   /LESEN_ENERGIELIEFERVERTRAG_BASIS:
     get:
       tags:
@@ -644,7 +636,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'   
-
   /LESEN_MESSSTELLENBETRIEBSVERTRAG_BASIS:
        get:
          tags:
@@ -701,8 +692,7 @@ paths:
              content:
                application/json:
                  schema:
-                   $ref: '#/components/schemas/ERROR_RESPONSE'     
-                          
+                   $ref: '#/components/schemas/ERROR_RESPONSE'                               
   /LESEN_AVIS_BASIS:
     get:
       tags:
