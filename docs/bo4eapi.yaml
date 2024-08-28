@@ -1813,7 +1813,7 @@ paths:
               format: date-time
               example: '2024-06-28T12:18:00Z'
               pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
-          - name: parameter1
+          - name: parameter4
             description: OBIS | OBIS
             in: query
             required: true
@@ -1891,7 +1891,7 @@ paths:
               format: date-time
               example: '2024-06-28T12:18:00Z'
               pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
-          - name: parameter1
+          - name: parameter4
             description: OBIS | OBIS
             in: query
             required: true
@@ -1970,7 +1970,7 @@ paths:
               format: date-time
               example: '2024-06-28T12:18:00Z'
               pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
-          - name: parameter1
+          - name: parameter4
             description: OBIS | OBIS
             in: query
             required: true
@@ -2049,7 +2049,7 @@ paths:
               format: date-time
               example: '2024-06-28T12:18:00Z'
               pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
-          - name: parameter1
+          - name: parameter4
             description: OBIS | OBIS
             in: query
             required: true
