@@ -66,8 +66,8 @@ tags:
       system
   - name: EVENTDATEN | EVENT DATA
     description: Lesen von Eventdaten im ERP System | Reading event data in the ERP system
+security: []
 paths:
-  security: []
   /LESEN_EVENT_START_KUENDIGUNG:
     post:
       tags:
@@ -637,7 +637,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'   
   /AKTUALISEREN_TECHNISCHE_RESSOURCE_BASIS:
-    POST:
+    post:
       tags:
         - AKTUALISIEREN | UPDATE
       summary: AKTUALISEREN_TECHNISCHE_RESSOURCE_BASIS
@@ -1444,7 +1444,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/netznutzungsvertrag'
+                $ref: '#/components/schemas/Vertrag'
   /AKTUALISIEREN_MARKTLOKATION_BASIS:
     post:
       tags:
