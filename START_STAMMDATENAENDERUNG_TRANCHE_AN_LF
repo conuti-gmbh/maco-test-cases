@@ -4,6 +4,7 @@
       {
         "boTyp": "TRANCHE",
         "versionStruktur": "1",
+        "tranchenId": "${data:jsonPath('$.tranchenId'):isEmpty():ifElse('null',${data:jsonPath('$.tranchenId')})}",
         "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
         "verguetungEmpfaenger": "${data:jsonPath('$.verguetungEmpfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.verguetungEmpfaenger')})}",
         "bildungTranchengroesse": "${data:jsonPath('$.bildungTranchengroesse'):isEmpty():ifElse('null',${data:jsonPath('$.bildungTranchengroesse')})}",
