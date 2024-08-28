@@ -636,6 +636,120 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ERROR_RESPONSE'   
+  /AKTUALISEREN_TECHNISCHE_RESSOURCE_BASIS:
+    POST:
+      tags:
+        - AKTUALISIEREN | UPDATE
+      summary: AKTUALISEREN_TECHNISCHE_RESSOURCE_BASIS
+      description: >-
+        Lesen der Kommunikationsdaten des Serviceanbieters (Parameter1) 
+        zum Zeitpunkt (Parameter2) | Reading the communication data of the service provider (parameter 1) 
+        at the time (parameter 2)
+      operationId: AKTUALISEREN_TECHNISCHE_RESSOURCE_BASIS
+      parameters:
+        - name: command
+          in: query
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
+          schema:
+            type: string
+            default: AKTUALISEREN_TECHNISCHE_RESSOURCE_BASIS
+            example: NOCODB_AKTUALISEREN_TECHNISCHE_RESSOURCE_BASIS
+        - name: parameter1
+          description: LokationsId | Location ID
+          in: query
+          required: true
+          schema:
+            type: string
+            example: '50074561188'
+        - name: parameter2
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: '2024-06-28T12:18:00Z'
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      responses:
+        '200':
+          description: >-
+            Erfolgreiches Lesen des Energieliefervertrages | Successful reading
+            of energy delivery contract
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vertrag'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+  /AKTUALISIEREN_ENERGIELIEFERVERTRAG_BASIS:
+    post:
+      tags:
+        - AKTUALISIEREN | UPDATE
+      summary: AKTUALISIEREN_ENERGIELIEFERVERTRAG_BASIS
+      description: >-
+        Aktualisieren der Kommunikationsdaten des Serviceanbieters (Parameter1) 
+        zum Zeitpunkt (Parameter2) | Updating the service provider’s communication data (Parameter1) 
+        at time (Parameter2)
+      operationId: AKTUALISIEREN_ENERGIELIEFERVERTRAG_BASIS
+      parameters:
+        - name: command
+          in: query
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
+          schema:
+            type: string
+            default: AKTUALISIEREN_ENERGIELIEFERVERTRAG_BASIS
+            example: NOCODB_AKTUALISIEREN_ENERGIELIEFERVERTRAG_BASIS
+        - name: parameter1
+          description: LokationsId | Location ID
+          in: query
+          required: true
+          schema:
+            type: string
+            example: '50074561188'
+        - name: parameter2
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: '2024-06-28T12:18:00Z'
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      responses:
+        '200':
+          description: >-
+            Erfolgreiches Lesen des Energieliefervertrages | Successful reading
+            of energy delivery contract
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vertrag'
+        '400':
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'
+        '422':
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ERROR_RESPONSE'     
   /LESEN_MESSSTELLENBETRIEBSVERTRAG_BASIS:
        get:
          tags:
@@ -1243,6 +1357,94 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Marktlokation'
+  /LESEN_MESSLOKATIONS_BASIS:
+    get:
+      tags:
+        - LESEN | READ
+      summary: LESEN_MESSLOKATIONS_BASIS
+      description: >-
+        Ändert einen Netznutzungsvertrag mittels LokationsId  (Parameter1) 
+        zum Zeitpunkt (Parameter2) | Changes a network usage contract using LocationId (Parameter1)
+        at time (Parameter2)
+      operationId: LESEN_MESSLOKATIONS_BASIS
+      parameters:
+        - name: command
+          in: query
+          required: true
+          description: Name der Operation | Name of the operation
+          schema:
+            type: string
+            default: LESEN_MESSLOKATIONS_BASIS
+            example: LESEN_MESSLOKATIONS_BASIS
+        - name: parameter1
+          description: LokationsId | Location ID
+          in: query
+          required: true
+          schema:
+            type: string
+            example: '50074561188'
+        - name: parameter2
+          description: Stichtag | Key date
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: '2024-06-28T12:18:00Z'
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      responses:
+        '200':
+          description: >-
+            Erfolgreiches Lesen der Marktlokation | Successful reading of the
+            market location
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Messlokation'
+  /LESEN_NETZNUTZUNGSVERTRAG_BASIS:
+    get:
+      tags:
+        - LESEN | READ
+      summary: LESEN_NETZNUTZUNGSVERTRAG_BASIS
+      description: >-
+        Ändert einen Liefervertrag mittels LokationsId  (Parameter1) 
+        zum Zeitpunkt (Parameter2) | Changes a delivery contract using LocationId (Parameter1) 
+        at time (Parameter2)
+      operationId: LESEN_NETZNUTZUNGSVERTRAG_BASIS
+      parameters:
+        - name: command
+          in: query
+          required: true
+          description: Name der Operation | Name of the operation
+          schema:
+            type: string
+            default: LESEN_NETZNUTZUNGSVERTRAG_BASIS
+            example: LESEN_NETZNUTZUNGSVERTRAG_BASIS
+        - name: parameter1
+          description: LokationsId | Location ID
+          in: query
+          required: true
+          schema:
+            type: string
+            example: '50074561188'
+        - name: parameter2
+          description: Stichtag | Key date
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: '2024-06-28T12:18:00Z'
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      responses:
+        '200':
+          description: >-
+            Erfolgreiches Lesen der Marktlokation | Successful reading of the
+            market location
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/netznutzungsvertrag'
   /AKTUALISIEREN_MARKTLOKATION_BASIS:
     post:
       tags:
@@ -1431,56 +1633,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Netzlokation'
-  /AKTUALISIEREN_NETZLOKATION_BASIS:
-    post:
-      tags:
-        - AKTUALISIEREN | UPDATE
-      summary: AKTUALISIEREN_NETZLOKATION_BASIS
-      description: >-
-        Ändern einer NeLo mittels LokationsId (Parameter1) zum Zeitpunkt
-        (Parameter2) | Changing a NeLo using location ID (Parameter1) at the
-        time (Parameter2)
-      operationId: AKTUALISIEREN_NETZLOKATION_BASIS
-      parameters:
-        - name: command
-          in: query
-          required: true
-          description: Name der Operation | Name of the operation
-          schema:
-            type: string
-            default: AKTUALISIEREN_NETZLOKATION_BASIS
-            example: NOCODB_AKTUALISIEREN_NETZLOKATION_BASIS
-        - name: parameter1
-          description: LokationsId | Location ID
-          in: query
-          required: true
-          schema:
-            type: string
-            example: '50074561188'
-        - name: parameter2
-          description: Stichtag | Key date
-          in: query
-          required: true
-          schema:
-            type: string
-            format: date-time
-            example: '2024-06-28T12:18:00Z'
-            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Netzlokation'
-      responses:
-        '200':
-          description: >-
-            Erfolgreiches Aktualisieren der Netzlokation | Successful updating
-            of the network location
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Netzlokation'
   /LESEN_TRANCHE_BASIS:
     get:
       tags:
@@ -1618,55 +1770,398 @@ paths:
               schema:
                 $ref: '#/components/schemas/Lokationsbuendel'
   /AKTUALISIEREN_LOKATIONSBUENDEL_BASIS:
-    post:
-      tags:
-        - AKTUALISIEREN | UPDATE
-      summary: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
-      description: >-
-        Ändern eines Lokationsbündels mittels LokationsId (Parameter1) zum
-        Zeitpunkt (Parameter2) | Changing a location bundle using location ID
-        (Parameter1) at the time (Parameter2)
-      operationId: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
-      parameters:
-        - name: command
-          in: query
-          required: true
-          description: Name der Operation | Name of the operation
-          schema:
-            type: string
-            default: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
-            example: NOCODB_AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
-        - name: parameter1
-          description: LokationsId | Location ID
-          in: query
-          required: true
-          schema:
-            type: string
-            example: '50074561188'
-        - name: parameter2
-          description: Stichtag | Key date
-          in: query
-          required: true
-          schema:
-            type: string
-            format: date-time
-            example: '2024-06-28T12:18:00Z'
-            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
-      requestBody:
-        required: true
-        content:
-          application/json:
+      post:
+        tags:
+          - AKTUALISIEREN | UPDATE
+        summary: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
+        description: >-
+          Ändern eines Lokationsbündels mittels LokationsId (Parameter1) zum
+          Zeitpunkt (Parameter2) | Changing a location bundle using location ID
+          (Parameter1) at the time (Parameter2)
+        operationId: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
+        parameters:
+          - name: command
+            in: query
+            required: true
+            description: Name der Operation | Name of the operation
             schema:
-              $ref: '#/components/schemas/Lokationsbuendel'
-      responses:
-        '200':
-          description: >-
-            Erfolgreiches Aktualisieren des Lokationsbündels | Successful
-            updating of the location bundle
+              type: string
+              default: AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
+              example: NOCODB_AKTUALISIEREN_LOKATIONSBUENDEL_BASIS
+          - name: parameter1
+            description: LokationsId | Location ID
+            in: query
+            required: true
+            schema:
+              type: string
+              example: '50074561188'
+          - name: parameter2
+            description: Stichtag | Key date
+            in: query
+            required: true
+            schema:
+              type: string
+              format: date-time
+              example: '2024-06-28T12:18:00Z'
+              pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+          - name: parameter3
+            description: Stichtag | Key date
+            in: query
+            required: true
+            schema:
+              type: string
+              format: date-time
+              example: '2024-06-28T12:18:00Z'
+              pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+          - name: parameter1
+            description: OBIS | OBIS
+            in: query
+            required: true
+            schema:
+              type: string
+              example: '123456789'
+        requestBody:
+          required: true
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Lokationsbuendel'
+        responses:
+          '200':
+            description: >-
+              Erfolgreiches Aktualisieren des Lokationsbündels | Successful
+              updating of the location bundle
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Lokationsbuendel'
+          '400':
+            description: Fehlerhafte Anfrage | Bad Request
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ERROR_RESPONSE'
+          '422':
+            description: Nicht verarbeitbare Anfrage | Unprocessable Request
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ERROR_RESPONSE'
+  /AKTUALISIEREN_MARKTLOKATIONS_BASIS:
+      post:
+        tags:
+          - AKTUALISIEREN | UPDATE
+        summary: AKTUALISIEREN_MARKTLOKATIONS_BASIS
+        description: >-
+          Ändern eines Lokationsbündels mittels LokationsId (Parameter1) zum
+          Zeitpunkt (Parameter2) | Changing a location bundle using location ID
+          (Parameter1) at the time (Parameter2)
+        operationId: AKTUALISIEREN_MARKTLOKATIONS_BASIS
+        parameters:
+          - name: command
+            in: query
+            required: true
+            description: Name der Operation | Name of the operation
+            schema:
+              type: string
+              default: AKTUALISIEREN_MARKTLOKATIONS_BASIS
+              example: NOCODB_AKTUALISIEREN_MARKTLOKATIONS_BASIS
+          - name: parameter1
+            description: LokationsId | Location ID
+            in: query
+            required: true
+            schema:
+              type: string
+              example: '50074561188'
+          - name: parameter2
+            description: Stichtag | Key date
+            in: query
+            required: true
+            schema:
+              type: string
+              format: date-time
+              example: '2024-06-28T12:18:00Z'
+              pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+          - name: parameter3
+            description: Stichtag | Key date
+            in: query
+            required: true
+            schema:
+              type: string
+              format: date-time
+              example: '2024-06-28T12:18:00Z'
+              pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+          - name: parameter1
+            description: OBIS | OBIS
+            in: query
+            required: true
+            schema:
+              type: string
+              example: '123456789'
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lokationsbuendel'
+        responses:
+          '200':
+            description: >-
+              Erfolgreiches Aktualisieren des Lokationsbündels | Successful
+              updating of the location bundle
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Lokationsbuendel'
+          '400':
+            description: Fehlerhafte Anfrage | Bad Request
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ERROR_RESPONSE'
+          '422':
+            description: Nicht verarbeitbare Anfrage | Unprocessable Request
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ERROR_RESPONSE'
+  /AKTUALISIEREN_MESSLOKATIONS_BASIS:
+      post:
+        tags:
+          - AKTUALISIEREN | UPDATE
+        summary: AKTUALISIEREN_MESSLOKATIONS_BASIS
+        description: >-
+          Schreiben eines Zählerstands über eine Lokation (Parameter1) 
+          zu einem Zeitpunkt (Parameter2/Parameter3 ) 
+          und einer OBIS Kennzahl (Parameter4) | Writing a meter reading via a location (Parameter1) 
+          at a point in time (Parameter2/Parameter3) and an OBIS code (Parameter4)
+        operationId: AKTUALISIEREN_MESSLOKATIONS_BASIS
+        parameters:
+          - name: command
+            in: query
+            required: true
+            description: Name der Operation | Name of the operation
+            schema:
+              type: string
+              default: AKTUALISIEREN_MESSLOKATIONS_BASIS
+              example: NOCODB_AKTUALISIEREN_MESSLOKATIONS_BASIS
+          - name: parameter1
+            description: LokationsId | Location ID
+            in: query
+            required: true
+            schema:
+              type: string
+              example: '50074561188'
+          - name: parameter2
+            description: Stichtag | Key date
+            in: query
+            required: true
+            schema:
+              type: string
+              format: date-time
+              example: '2024-06-28T12:18:00Z'
+              pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+          - name: parameter3
+            description: Stichtag | Key date
+            in: query
+            required: true
+            schema:
+              type: string
+              format: date-time
+              example: '2024-06-28T12:18:00Z'
+              pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+          - name: parameter1
+            description: OBIS | OBIS
+            in: query
+            required: true
+            schema:
+              type: string
+              example: '123456789'
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lokationsbuendel'
+        responses:
+          '200':
+            description: >-
+              Erfolgreiches Aktualisieren des Lokationsbündels | Successful
+              updating of the location bundle
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Lokationsbuendel'
+          '400':
+            description: Fehlerhafte Anfrage | Bad Request
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ERROR_RESPONSE'
+          '422':
+            description: Nicht verarbeitbare Anfrage | Unprocessable Request
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ERROR_RESPONSE'
+  /AKTUALISIEREN_NETZLOKATION_BASIS:
+      post:
+        tags:
+          - AKTUALISIEREN | UPDATE
+        summary: AKTUALISIEREN_NETZLOKATION_BASIS
+        description: >-
+          Lesen einer Energiemenge über eine Lokation (Parameter1) 
+          in einer Range (Parameter2/Parameter3 ) 
+          und einer OBIS Kennzahl (Parameter4 optional) | Reading an energy quantity via a location (Parameter1) 
+          in a range (Parameter2/Parameter3) and an OBIS code (Parameter4 optional)
+        operationId: AKTUALISIEREN_NETZLOKATION_BASIS
+        parameters:
+          - name: command
+            in: query
+            required: true
+            description: Name der Operation | Name of the operation
+            schema:
+              type: string
+              default: AKTUALISIEREN_NETZLOKATION_BASIS
+              example: NOCODB_AKTUALISIEREN_NETZLOKATION_BASIS
+          - name: parameter1
+            description: LokationsId | Location ID
+            in: query
+            required: true
+            schema:
+              type: string
+              example: '50074561188'
+          - name: parameter2
+            description: Stichtag | Key date
+            in: query
+            required: true
+            schema:
+              type: string
+              format: date-time
+              example: '2024-06-28T12:18:00Z'
+              pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+          - name: parameter3
+            description: Stichtag | Key date
+            in: query
+            required: true
+            schema:
+              type: string
+              format: date-time
+              example: '2024-06-28T12:18:00Z'
+              pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+          - name: parameter1
+            description: OBIS | OBIS
+            in: query
+            required: true
+            schema:
+              type: string
+              example: '123456789'
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lokationsbuendel'
+        responses:
+          '200':
+            description: >-
+              Erfolgreiches Aktualisieren des Lokationsbündels | Successful
+              updating of the location bundle
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Lokationsbuendel'
+          '400':
+            description: Fehlerhafte Anfrage | Bad Request
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ERROR_RESPONSE'
+          '422':
+            description: Nicht verarbeitbare Anfrage | Unprocessable Request
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ERROR_RESPONSE'
+  /AKTUALISIEREN_NETZNUTZUNGSVERTRAG_BASIS:
+      post:
+        tags:
+          - AKTUALISIEREN | UPDATE
+        summary: AKTUALISIEREN_NETZNUTZUNGSVERTRAG_BASIS
+        description: >-
+          Schreiben einer Energiemenge über eine Lokation (Parameter1) 
+          zu einem Zeitpunkt (Parameter2/Parameter3 ) 
+          und einer OBIS Kennzahl (Parameter4) | Writing an energy quantity via a location (Parameter1) 
+          at a point in time (Parameter2/Parameter3) and an OBIS key figure (Parameter4)
+        operationId: AKTUALISIEREN_NETZNUTZUNGSVERTRAG_BASIS
+        parameters:
+          - name: command
+            in: query
+            required: true
+            description: Name der Operation | Name of the operation
+            schema:
+              type: string
+              default: AKTUALISIEREN_NETZNUTZUNGSVERTRAG_BASIS
+              example: AKTUALISIEREN_NETZNUTZUNGSVERTRAG_BASIS
+          - name: parameter1
+            description: LokationsId | Location ID
+            in: query
+            required: true
+            schema:
+              type: string
+              example: '50074561188'
+          - name: parameter2
+            description: Stichtag | Key date
+            in: query
+            required: true
+            schema:
+              type: string
+              format: date-time
+              example: '2024-06-28T12:18:00Z'
+              pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+          - name: parameter3
+            description: Stichtag | Key date
+            in: query
+            required: true
+            schema:
+              type: string
+              format: date-time
+              example: '2024-06-28T12:18:00Z'
+              pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+          - name: parameter4
+            description: OBIS | OBIS
+            in: query
+            required: true
+            schema:
+              type: string
+              example: '123456789'
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lokationsbuendel'
+        responses:
+          '200':
+            description: >-
+              Erfolgreiches Aktualisieren des Lokationsbündels | Successful
+              updating of the location bundle
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Lokationsbuendel'
+          '400':
+            description: Fehlerhafte Anfrage | Bad Request
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ERROR_RESPONSE'
+          '422':
+            description: Nicht verarbeitbare Anfrage | Unprocessable Request
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ERROR_RESPONSE'
   /LESEN_TECHNISCHE_RESSOURCE_BASIS:
     get:
       tags:
