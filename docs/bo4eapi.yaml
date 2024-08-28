@@ -3305,97 +3305,17 @@ components:
       type: object
       description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
       properties:
-          marktlokationsId:
+          netzlokationsId:
             type: string
             default: 'SOME_STRING'
           sparte:
-            type: string
-            default: 'SOME_STRING'
-          energierichtung:
+            $ref: '#/components/schemas/Sparte'
+          zahlerBlindarbeit:
             type: string
             default: 'GAS'
           vertragsart:
             type: string
             default: 'ENERGIELIEFERVERTRAG'
-          vertragsbeginn:
-            type: string
-            default: '2024-04-01T07:40:00Z'
-          vertragskonditionen:
-            haushaltskunde:
-              type: string
-              default: 'SOME_STRING'
-          lokationsId:
-            type: string
-            default: 'SOME_STRING'
-          lokationsTyp:
-            type: string
-            default: '50074561188'
-          vp2Anrede:
-            type: string
-            default: 'SOME_STRING'
-          vp2Name1:
-            type: string
-            default: 'SOME_STRING'
-          vp2Name2:
-            type: string
-            default: 'SOME_STRING'
-          vp2Name3:
-            type: string
-            default: 'SOME_STRING'
-          vp2Name4:
-            type: string
-            default: 'SOME_STRING'
-          vp2Gewerbekennzeichnung:
-            type: string
-            default: 'gewerbekennzeichnung'
-          geschaeftspartnerrolle:
-            type: string
-            default: 'SOME_STRING'
-          exRefName:
-            type: string
-            default: 'SOME_STRING'
-          exRefWert:
-            type: string
-            default: 'SOME_STRING'
-          kpAnrede:
-            type: string
-            default: 'SOME_STRING'
-          kpName1:
-            type: string
-            default: 'SOME_STRING'
-          kpName2:
-            type: string
-            default: 'SOME_STRING'
-          kpName3:
-            type: string
-            default: 'SOME_STRING'
-          kpName4:
-            type: string
-            default: 'SOME_STRING'
-          kpGewerbekennzeichnung:
-            type: string
-            default: 'gewerbekennzeichnung'
-          postleitzahl:
-            type: string
-            default: '12345'
-          ort:
-            type: string
-            default: 'Berlin'
-          strasse:
-            type: string
-            default: 'Berlinerstr'
-          hausnummer:
-            type: string
-            default: '123'
-          landescode:
-            type: string
-            default: 'de'
-          grundlageVerringerungUmlagen:
-            type: string
-            default: 'SOME_STRING'
-          grund:
-            type: string
-            default: 'SOME_STRING'
           empfaenger:
             type: string
             default: 'SOME_STRING'
