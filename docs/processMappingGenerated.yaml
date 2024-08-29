@@ -12595,7 +12595,7 @@ paths:
                   value:
                   - PRUEFIDENTIFIKATOR: PI55016 Kündigung
                     VON [LFN] TRIGGER EVENT: START_KUENDIGUNG
-                    VON [LFN] LESENDE API: '-'
+                    VON [LFN] LESENDE API: LESEN_MARKTLOKATION_BASIS
                     VON [LFN] SCHREIBENDE API: '-'
                     AN [LFA] LESENDE API: LESEN_ENERGIELIEFERVERTAG_BASIS
                     AN [LFA] SCHREIBENDE API: AKTUALISIEREN_ENERGIELIEFERVERTAG_BASIS
