@@ -50,5 +50,6 @@
       "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
       "empfaenger": {"rollencodenummer":"${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"},
       "absender":{"rollencodenummer":"${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"}
-  }
+    }
+}
 }
