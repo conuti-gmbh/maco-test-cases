@@ -1,0 +1,27 @@
+{
+    "stammdaten":{
+      "MARKTLOKATION": [
+      {
+      "boTyp": "MARKTLOKATION",
+      "versionStruktur": "1",
+      "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}"
+      }
+      ],
+      "NETZNUTZUNGSVERTRAG": [
+      {
+      "boTyp": "NETZNUTZUNGSVERTRAG",
+      "versionStruktur": "1",
+      "vertragsart": "${data:jsonPath('$.vertragsart')}",
+      "vertragsende": "${data:jsonPath('$.vertragsende')}"
+      }
+      ],
+      },
+    "transaktionsdaten": {
+      "empfaenger": "${data:jsonPath('$.empfaenger')}",
+      "absender": "${data:jsonPath('$.absender')}",
+      "sparte": "${data:jsonPath('$.sparte')}",
+      "kategorie": "${data:jsonPath('$.kategorie')}",
+      "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}"
+    }
+    }
+   

@@ -38,7 +38,7 @@
     "kategorie": "${data:jsonPath('$.kategorie')}",
     "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}",
     "transaktionsgrundergaenzung": "${data:jsonPath('$.transaktionsgrundergaenzung')}",
-    "transaktionsgrundergaenzungBefristeteAnmeldung": "${data:jsonPath('$.transaktionsgrundergaenzungBefristeteAnmeldung')}",
+    "transaktionsgrundergaenzungBefristeteAnmeldung": "${data:jsonPath('$.transaktionsgrundergaenzungBefristeteAnmeldung')}"
   }
   }
  
