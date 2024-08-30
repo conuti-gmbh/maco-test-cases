@@ -399,9 +399,9 @@ paths:
         - LESEN | READ
       summary: LESEN_MARKTTEILNEHMER_ABSENDER
       description: >-
-        Ändern einer Steuerbaren Ressource mittels LokationsId  (Parameter1) 
-        zum Zeitpunkt (Parameter2) | Changing a controllable resource using LocationId (Parameter1) 
-        at time (Parameter2)
+        Lesen einen absender(marktteilnehmer) mit LokationsId  (Parameter1) 
+        zum Zeitpunkt (Parameter2) | Read a sender (market participant) with location ID (parameter 1)
+        at time (parameter 2)
       operationId: LESEN_MARKTTEILNEHMER_ABSENDER
       parameters:
         - name: command
@@ -437,7 +437,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Kommunikationsdaten"
+                $ref: "#/components/schemas/MARKTTEILNEHMER"
         "400":
           description: Fehlerhafte Anfrage | Bad Request
           content:
@@ -456,9 +456,9 @@ paths:
         - LESEN | READ
       summary: LESEN_MARKTTEILNEHMER_EMPFAENGER
       description: >-
-        Lesen eines Netznutzungsvertrag mittels LokationsId  (Parameter1) 
-        zum Zeitpunkt (Parameter2) | Reading a network usage contract using LocationId (Parameter1) 
-        at time (Parameter2)
+        Lesen einen recipient(marktteilnehmer) mit LokationsId  (Parameter1) 
+        zum Zeitpunkt (Parameter2) | Read a recipient (market participant) with location ID (parameter 1)
+        at time (parameter 2)
       operationId: LESEN_MARKTTEILNEHMER_EMPFAENGER
       parameters:
         - name: command
@@ -489,12 +489,12 @@ paths:
       responses:
         "200":
           description: >-
-            Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of
+            Erfolgreiches Lesen der MARKTTEILNEHMER | Successful reading of
             communication data
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Kommunikationsdaten"
+                $ref: "#/components/schemas/MARKTTEILNEHMER"
         "400":
           description: Fehlerhafte Anfrage | Bad Request
           content:
@@ -506,7 +506,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ERROR_RESPONSE"               
+                $ref: "#/components/schemas/ERROR_RESPONSE"
   /AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
@@ -800,7 +800,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Vertrag"
+                $ref: "#/components/schemas/ENERGIEVERTRAG"
         "400":
           description: Fehlerhafte Anfrage | Bad Request
           content:
@@ -5630,6 +5630,396 @@ components:
         empfaenger:
           type: string
           default: "9900321000005"
+    MARKTTEILNEHMER:
+      type: object
+      description: Schema für start MARKTTEILNEHMER | Scheme for start MARKET PARTICIPANTS
+      properties:
+        marktteilnehmer:
+          type: object
+          properties:
+            boTyp:
+              type: string
+              example: MARKTTEILNEHMER
+            versionStruktur:
+              type: string
+              example: "1"
+            marktrolle:
+              type: string
+              example: ENUM_Marktrolle
+              description: https://github.com/Hochfrequenz/BO4E-dotnet/blob/af2b42a517493cfbef31f21da080fd727850f032/BO4E/ENUM/Marktrolle.cs
+            rollencodenummer:
+              type: string
+              example: "9900051000002"
+            rollencodetyp:
+              type: string
+              example: BDEW
+              description: https://bo4e.github.io/BO4E-python/stable/api/bo4e.enum.html#bo4e.enum.rollencodetyp.Rollencodetyp
+            makoadresse:
+              type: string
+              example: <string>
+            downloadlinkZertifikat:
+              type: string
+              example: <string>
+            kommunikationsparameter:
+              type: object
+              properties:
+                zieladresse:
+                  type: object
+                  properties:
+                    zieladresse1:
+                      type: string
+                      example: <string>
+                    zieladresse2:
+                      type: string
+                      example: <string>
+                    zieladresse3:
+                      type: string
+                      example: <string>
+                    zieladresse4:
+                      type: string
+                      example: <string>
+                    zieladresse5:
+                      type: string
+                      example: <string>
+                zertifikatsAussteller:
+                  type: object
+                  properties:
+                    zertifikatsAussteller1:
+                      type: string
+                      example: <string>
+                    zertifikatsAussteller2:
+                      type: string
+                      example: <string>
+                    zertifikatsAussteller3:
+                      type: string
+                      example: <string>
+                    zertifikatsAussteller4:
+                      type: string
+                      example: <string>
+                    zertifikatsAussteller5:
+                      type: string
+                      example: <string>
+                zertifikatsNutzer:
+                  type: object
+                  properties:
+                    zertifikatsNutzer1:
+                      type: string
+                      example: <string>
+                    zertifikatsNutzer2:
+                      type: string
+                      example: <string>
+                    zertifikatsNutzer3:
+                      type: string
+                      example: <string>
+                    zertifikatsNutzer4:
+                      type: string
+                      example: <string>
+                    zertifikatsNutzer5:
+                      type: string
+                      example: <string>
+            bankverbindung:
+              type: array
+              items:
+                type: object
+                properties:
+                  verwendungszweck:
+                    type: string
+                    example: BV_ZAHLUNG_NNA
+                    description: "ENUMs: 'BV_ZAHLUNG_NNA', 'BV_ZAHLUNG_MMMA', 'BV_ZAHLUNG_MSB_ABRECHNNUNG', 'BV_ZAHLUNG_ENT_SPERREN_ABRECHNUNG', 'BV_SONSTIGE'"
+                  iban:
+                    type: string
+                    example: <string>
+                  kontoinhaber:
+                    type: string
+                    example: <string>
+                  bic:
+                    type: string
+                    example: <string>
+                  kreditinstitut:
+                    type: string
+                    example: <string>
+            erreichbarkeit:
+              type: array
+              items:
+                type: object
+                properties:
+                  verfuegbarkeit:
+                    type: string
+                    example: MONTAG
+                    description: "ENUMs: 'DIENSTAG', 'MITTWOCH', 'DONNERSTAG', 'FREITAG', 'PAUSE'"
+                  zeit:
+                    type: string
+                    example: 08:00-17:00
+            anrede:
+              type: string
+              example: <string>
+            name1:
+              type: string
+              example: <string>
+            name2:
+              type: string
+              example: <string>
+            name3:
+              type: string
+              example: <string>
+            name4:
+              type: string
+              example: <string>
+            gewerbekennzeichnung:
+              type: boolean
+              example: true
+            hrnummer:
+              type: string
+              example: <string>
+            amtsgericht:
+              type: string
+              example: <string>
+            umsatzsteuerId:
+              type: string
+              example: <string>
+            website:
+              type: string
+              example: <string>
+            faxnummer:
+              type: string
+              example: <string>
+            partneradresse:
+              type: object
+              properties:
+                postleitzahl:
+                  type: string
+                  example: <string>
+                ort:
+                  type: string
+                  example: <string>
+                strasse:
+                  type: string
+                  example: <string>
+                hausnummer:
+                  type: string
+                  example: <string>
+                postfach:
+                  type: string
+                  example: <string>
+                adresszusatz:
+                  type: string
+                  example: <string>
+                coErgaenzung:
+                  type: string
+                  example: <string>
+                landescode:
+                  type: string
+                  example: ENUM_Landescode
+                  description: https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Landescode.cs
+                ortsteil:
+                  type: string
+                  example: <string>
+    ENERGIEVERTRAG:
+      type: object
+      description: Schema für start ENERGIEVERTRAG | Scheme for start ENERGY CONTRACT
+      properties:
+        boTyp:
+          type: string
+          example: VERTRAG
+        versionStruktur:
+          type: string
+          example: "1"
+        zeitraumId:
+          type: integer
+          example: 2
+        datenqualitaet:
+          type: string
+          example: ENUM_qualitaet
+        vertragsnummer:
+          type: string
+          example: <string>
+        beschreibung:
+          type: string
+          example: <string>
+        vertragsart:
+          type: string
+          example: ENERGIELIEFERVERTRAG
+        vertragstatus:
+          type: string
+          example: ENUM_Vertragstatus
+        sparte:
+          type: string
+          example: ENUM_Sparte
+        vertragsbeginn:
+          type: string
+          format: date-time
+          example: "0001-01-01T00:00:00Z"
+        vertragsende:
+          type: string
+          format: date-time
+          example: "2023-12-31T23:00:00Z"
+        vertragspartner2:
+          type: array
+          items:
+            type: object
+            properties:
+              boTyp:
+                type: string
+                example: GESCHAEFTSPARTNER
+              versionStruktur:
+                type: string
+                example: "1"
+              gewerbekennzeichnung:
+                type: boolean
+                example: false
+              anrede:
+                type: string
+                example: Name_Z09_5
+              name1:
+                type: string
+                example: Name_Z09_1
+              name2:
+                type: string
+                example: Name_Z09_2
+              name3:
+                type: string
+                example: Name_Z09_3
+              name4:
+                type: string
+                example: Name_Z09_4
+              geschaeftspartnerrolle:
+                type: array
+                items:
+                  type: string
+                  example: ENUM_rolle1
+              partneradresse:
+                type: object
+                properties:
+                  postleitzahl:
+                    type: string
+                    example: <string>
+                  ort:
+                    type: string
+                    example: <string>
+                  strasse:
+                    type: string
+                    example: <string>
+                  hausnummer:
+                    type: string
+                    example: <string>
+                  postfach:
+                    type: string
+                    example: <string>
+                  adresszusatz:
+                    type: string
+                    example: <string>
+                  coErgaenzung:
+                    type: string
+                    example: <string>
+                  landescode:
+                    type: string
+                    example: ENUM_Landescode
+                  ortsteil:
+                    type: string
+                    example: <string>
+              externeReferenzen:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    exRefName:
+                      type: string
+                      example: Kundennummer beim Altlieferanten
+                    exRefWert:
+                      type: string
+                      example: NummerLFA123456_Z01
+        vertragskonditionen:
+          type: object
+          properties:
+            kuendigungsfrist:
+              type: object
+              properties:
+                zeitraumText:
+                  type: string
+                  example: <string>
+            kuendigungstermin:
+              type: string
+              example: <string>
+            abrechnungsintervall:
+              type: integer
+              example: 12
+        korrespondenzpartner:
+          type: object
+          properties:
+            boTyp:
+              type: string
+              example: GESCHAEFTSPARTNER
+            versionStruktur:
+              type: string
+              example: "1"
+            anrede:
+              type: string
+              example: Name_Z04_5
+            name1:
+              type: string
+              example: Name_Z04_1
+            name2:
+              type: string
+              example: Name_Z04_2
+            name3:
+              type: string
+              example: Name_Z04_3
+            name4:
+              type: string
+              example: Name_Z04_4
+            gewerbekennzeichnung:
+              type: boolean
+              example: true
+            partneradresse:
+              type: object
+              properties:
+                postleitzahl:
+                  type: string
+                  example: <string>
+                ort:
+                  type: string
+                  example: <string>
+                strasse:
+                  type: string
+                  example: <string>
+                hausnummer:
+                  type: string
+                  example: <string>
+                postfach:
+                  type: string
+                  example: <string>
+                adresszusatz:
+                  type: string
+                  example: <string>
+                coErgaenzung:
+                  type: string
+                  example: <string>
+                landescode:
+                  type: string
+                  example: ENUM_Landescode
+                ortsteil:
+                  type: string
+                  example: <string>
+        lokationsId:
+          type: string
+          example: <string>
+        lokationsTyp:
+          type: string
+          example: ENUM_Lokationstyp
+        enFG:
+          type: array
+          items:
+            type: object
+            properties:
+              grundlageVerringerungUmlagen:
+                type: string
+                example: ENUM
+              grund:
+                type: array
+                items:
+                  type: string
+                  example: grund1
+
     ENERGIEVERBRAUCH:
       type: object
       description: Schema für start messwertuebermittlung | Scheme for start of measurement value transmission
