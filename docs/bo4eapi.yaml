@@ -393,6 +393,120 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ERROR_RESPONSE"
+  /LESEN_MARKTTEILNEHMER_ABSENDER:
+    get:
+      tags:
+        - LESEN | READ
+      summary: LESEN_MARKTTEILNEHMER_ABSENDER
+      description: >-
+        Ändern einer Steuerbaren Ressource mittels LokationsId  (Parameter1) 
+        zum Zeitpunkt (Parameter2) | Changing a controllable resource using LocationId (Parameter1) 
+        at time (Parameter2)
+      operationId: LESEN_MARKTTEILNEHMER_ABSENDER
+      parameters:
+        - name: command
+          in: query
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
+          schema:
+            type: string
+            default: LESEN_MARKTTEILNEHMER_ABSENDER
+            example: NOCODB_LESEN_MARKTTEILNEHMER_ABSENDER
+        - name: parameter1
+          description: ILN Nummer | ILN number
+          in: query
+          required: true
+          schema:
+            type: string
+            example: "9903790000002"
+        - name: parameter2
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: "2024-06-28T12:18:00Z"
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      responses:
+        "200":
+          description: >-
+            Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of
+            communication data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Kommunikationsdaten"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ERROR_RESPONSE"
+        "422":
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ERROR_RESPONSE"
+  /LESEN_MARKTTEILNEHMER_EMPFAENGER:
+    get:
+      tags:
+        - LESEN | READ
+      summary: LESEN_MARKTTEILNEHMER_EMPFAENGER
+      description: >-
+        Lesen eines Netznutzungsvertrag mittels LokationsId  (Parameter1) 
+        zum Zeitpunkt (Parameter2) | Reading a network usage contract using LocationId (Parameter1) 
+        at time (Parameter2)
+      operationId: LESEN_MARKTTEILNEHMER_EMPFAENGER
+      parameters:
+        - name: command
+          in: query
+          description: >-
+            Name der Operation | Name of the operation (MACO APP interal
+            assignment between process and interface)
+          schema:
+            type: string
+            default: LESEN_MARKTTEILNEHMER_EMPFAENGER
+            example: NOCODB_LESEN_MARKTTEILNEHMER_EMPFAENGER
+        - name: parameter1
+          description: ILN Nummer | ILN number
+          in: query
+          required: true
+          schema:
+            type: string
+            example: "9903790000002"
+        - name: parameter2
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: "2024-06-28T12:18:00Z"
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      responses:
+        "200":
+          description: >-
+            Erfolgreiches Lesen der Kommunikationsdaten | Successful reading of
+            communication data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Kommunikationsdaten"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ERROR_RESPONSE"
+        "422":
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ERROR_RESPONSE"               
   /AKTUALISIEREN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
@@ -455,6 +569,69 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ERROR_RESPONSE"
+  /AKTUALISIEREN_PROZESSDATEN_KUENDIGUNG:
+    post:
+      tags:
+        - AKTUALISIEREN | UPDATE
+      summary: AKTUALISIEREN_PROZESSDATEN_KUENDIGUNG
+      description: >-
+        Lesen einer MaLo mittels LokationsId  (Parameter1) 
+        zum Zeitpunkt (Parameter2) | Reading a MaLo using LocationId (Parameter1) 
+        at time (Parameter2)
+      operationId: AKTUALISIEREN_PROZESSDATEN_KUENDIGUNG
+      parameters:
+        - name: command
+          in: query
+          required: true
+          description: Name der Operation | Name of the operation
+          schema:
+            type: string
+            default: AKTUALISIEREN_PROZESSDATEN_KUENDIGUNG
+            example: NOCODB_AKTUALISIEREN_PROZESSDATEN_KUENDIGUNG
+        - name: parameter1
+          description: ILN Nummer | ILN number
+          in: query
+          required: true
+          schema:
+            type: string
+            example: "9903790000002"
+        - name: parameter2
+          description: Datum (Gültig ab) | Date (Valid from)
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: "2024-06-28T12:18:00Z"
+            pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Marktteilnehmer"
+      responses:
+        "200":
+          description: >-
+            Erfolgreiches Aktualisieren der Kommunikationsdaten | Successful
+            updating of communication data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Kommunikationsdaten"
+        "400":
+          description: Fehlerhafte Anfrage | Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ERROR_RESPONSE"
+        "422":
+          description: Nicht verarbeitbare Anfrage | Unprocessable Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ERROR_RESPONSE"
+
   /ERSTELLEN_KOMMUNIKATIONSDATEN_BASIS:
     post:
       tags:
