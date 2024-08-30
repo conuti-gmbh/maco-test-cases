@@ -1,0 +1,44 @@
+{
+  "stammdaten":{
+    "MARKTLOKATION": [
+    {
+    "boTyp": "MARKTLOKATION",
+    "versionStruktur": "1",
+		"marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
+    "datenqualitaet": "${data:jsonPath('$.datenqualitaetMa')}",
+    "energieherkunft": [
+      {
+        "erzeugungsart": "${data:jsonPath('$.erzeugungsart')}"
+      }
+    ],
+    "statusErzeugendeMaLo": "${data:jsonPath('$.statuserzeugendemalo')}"
+    }
+    ],
+    "MESSLOKATION": [
+      {
+      "boTyp": "MESSLOKATION",
+      "versionStruktur": "1",
+      "messlokationsId": "${data:jsonPath('$.messlokationsId')}",
+      }
+      ],
+    "NETZNUTZUNGSVERTRAG": [
+    {
+    "boTyp": "NETZNUTZUNGSVERTRAG",
+    "versionStruktur": "1",
+		"vertragsart": "${data:jsonPath('$.vertragsart')}",
+    "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
+    "vertragsende": "${data:jsonPath('$.vertragsende')}"
+    }
+    ],
+    },
+  "transaktionsdaten": {
+    "empfaenger": "${data:jsonPath('$.empfaenger')}",
+    "absender": "${data:jsonPath('$.absender')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "kategorie": "${data:jsonPath('$.kategorie')}",
+    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}",
+    "transaktionsgrundergaenzung": "${data:jsonPath('$.transaktionsgrundergaenzung')}",
+    "transaktionsgrundergaenzungBefristeteAnmeldung": "${data:jsonPath('$.transaktionsgrundergaenzungBefristeteAnmeldung')}",
+  }
+  }
+ 
