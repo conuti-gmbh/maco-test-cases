@@ -1,0 +1,38 @@
+{
+    "stammdaten": {
+        "MARKTLOKATION": [
+            {
+                "boTyp": "MARKTLOKATION",
+                "versionStruktur": "1",
+                "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+            }
+        ],
+        "BERECHNUNGSFORMEL": [
+          {
+            "boTyp": "BERECHNUNGSFORMEL",
+            "versionStruktur": "1",
+            "beginndatum": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+            "notwendigkeit": "${data:jsonPath('$.notwendigkeit'):isEmpty():ifElse('null',${data:jsonPath('$.notwendigkeit')})}",
+            "lieferrichtung": "${data:jsonPath('$.lieferrichtung'):isEmpty():ifElse('null',${data:jsonPath('$.lieferrichtung')})}"
+          }
+        ]
+      },
+      "transaktionsdaten": {
+        "sparte":"${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "absender": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+          "rollencodetyp": "BDEW"
+        },
+        "empfaenger": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+          "rollencodetyp": "BDEW"
+        },
+        "kategorie": "Z36",
+        "lokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+      }
+  }
+  
