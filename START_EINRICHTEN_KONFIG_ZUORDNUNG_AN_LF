@@ -1,0 +1,63 @@
+{
+    "stammdaten":{
+      "ANFRAGE": [
+        {
+            "boTyp": "ANFRAGE",
+            "versionStruktur": "1",
+            "anfragekategorie:": "${data:jsonPath('$.anfragekategorie')}",
+            "anfragtyp": "${data:jsonPath('$.anfragetyp')}",
+            "lokationsId": "${data:jsonPath('$.lokationsId1')}",
+            "loktionsTyp": "${data:jsonPath('$.lokationsTyp')}"            
+        }
+      ],
+      "AUFTRAG": [
+        {
+            "boTyp": "AUFTRAG",
+            "versionStruktur": "1",
+            "ausfuehrungsdatum": "${data:jsonPath('$.ausfuehrungsdatum')}",       
+            "positionsdaten": [
+                {
+                  "positionsnummer": "1",
+                  "lokationsId": "${data:jsonPath('$.lokationsId1')}"
+                },
+                {
+                  "positionsnummer": "2",
+                  "lokationsId": "${data:jsonPath('$.lokationsId2')}"
+                }
+              ]
+        }
+      ],
+      "MARKTLOKATION_KUNDENANLAGE": [
+        {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}"
+        }
+        ],
+      "MARKTLOKATION": [
+      {
+      "boTyp": "MARKTLOKATION",
+      "versionStruktur": "1",
+      "marktlokationsId": "${data:jsonPath('$.marktlokationsId')}"
+      }
+      ],
+      "MESSLOKATION": [
+        {
+            "boTyp": "MESSLOKATION",
+            "versionStruktur": "1",
+            "messlokationsId": "${data:jsonPath('$.messlokationsId')}",     
+            "zaehlwerke": [
+                {
+                  "messprodukt": "${data:jsonPath('$.messprodukt')}"
+                }
+              ]
+        }
+      ]
+      },
+    "transaktionsdaten": {
+      "empfaenger": "${data:jsonPath('$.empfaenger')}",
+      "absender": "${data:jsonPath('$.absender')}",
+      "sparte": "${data:jsonPath('$.sparte')}"
+    }
+    }
+   
