@@ -1,0 +1,26 @@
+{
+    "stammdaten": {
+"STATUSMITTEILUNG": [
+        {
+          "boTyp": "STATUSMITTEILUNG",
+          "versionStruktur": "1",
+          "positionsdaten": [
+            {
+              "positionsnummer": 1,
+              "verwendungAb": "${data:jsonPath('$.verwendungAb')}",
+              "auftragsstatus": "${data:jsonPath('$.auftragsstatus')}",
+              "begruendung": {
+                "begruendung1": "${data:jsonPath('$.begruendung1')}"
+              },
+              "lokationsId": "${data:jsonPath('$.lokationsId')}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte')}",
+      "absender":"${data:jsonPath('$.absender')}",
+      "empfaenger":"${data:jsonPath('$.empfaenger')}"
+}
+}
