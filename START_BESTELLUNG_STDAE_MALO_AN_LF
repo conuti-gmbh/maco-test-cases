@@ -1,0 +1,31 @@
+{
+    "stammdaten": {
+        "MARKTLOKATION": [
+            {
+                "boTyp": "MARKTLOKATION",
+                "versionStruktur": "1",
+                "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+                "sparte":"${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+            }
+        ]
+      },
+      "transaktionsdaten": {
+        "sparte":"${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "transaktionsgrundergaenzung": "${data:jsonPath('$.transaktionsgrundergaenzung'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrundergaenzung')})}",
+        "absender": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+          "rollencodetyp": "BDEW"
+        },
+        "empfaenger": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+          "rollencodetyp": "BDEW"
+        },
+        "kategorie": "Z88",
+        "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}"
+      }
+  }
+  
