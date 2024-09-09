@@ -1,0 +1,1080 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Trigger Event API",
+    "description": "API zum Auslösen von ausgehenden Prozessen in der MACO APP",
+    "version": "1.0.0",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.macoapp.de",
+      "description": "Fake Env"
+    },
+    {
+      "url": "https://gateway.gravitee.rcs.lief.makoapp-mps.conuti.dev/core/inproxy/",
+      "description": "LF RCS Gateway"
+    }
+  ],
+  "tags": [
+    {
+      "name": "SLIM EVENTS",
+      "description": "Trigger Event mit Angabe vom Typ und eine BelegId, wo Daten nachgelesen werden können.",
+      "x-description-i18n": null
+    },
+    {
+      "name": "FAT EVENTS",
+      "description": "Trigger Events, die alle notwendigen Informationen enthalten, wo Daten nachgelesen werden können."
+    }
+  ],
+  "paths": {
+    "/inbound": {
+      "post": {
+          "summary": "Trigger Events",
+          "deprecated": false,
+          "description": "reeive Event From Backend",
+          "operationId": "inbound",
+          "tags": [],
+          "parameters": [],
+          "requestBody": {
+              "content": {
+                  "application/json": {
+                      "schema": {
+                          "oneOf": [
+                              {
+                                  "$ref": "#/components/schemas/START_SPERRAUFTRAG"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/START_NEUANLAGE"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/START_PARTIN"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/START_LIEFERBEGINN"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/START_KUENDIGUNG"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/START_ZAEHLERSTAND"
+                              }
+                          ]
+                      },
+                      "example": ""
+                  }
+              }
+          },
+          "responses": {
+              "200": {
+                  "description": "Success",
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "type": "object",
+                              "properties": {
+                                  "businessKey": {
+                                      "type": "string",
+                                      "format": "uuid"
+                                  },
+                                  "message": {
+                                      "type": "string",
+                                      "examples": [
+                                          "received event START_LIEFERBEGINN with id  at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                                      ]
+                                  }
+                              },
+                              "required": [
+                                  "businessKey",
+                                  "message"
+                              ]
+                          },
+                          "examples": {
+                              "1": {
+                                  "summary": "Success",
+                                  "value": {
+                                      "businessKey": "4c7170ed-3518-41ee-8582-39ab65b00107",
+                                      "message": "received event START_LIEFERBEGINN with id  at 2024-08-08T12:58:22Z and started process with businessKey 4c7170ed-3518-41ee-8582-39ab65b00107"
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          },
+          "security": []
+      }
+  },    
+    "/EVENT_MIT_BELEGID": {
+      "post": {
+        "tags": [
+          "SLIM EVENTS"
+        ],
+        "summary": "EVENT_MIT_BELEGID",
+        "description": "Event aus der MCS beim Nachrichteneingang",
+        "operationId": "EVENT_MIT_BELEGID",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EVENT_MIT_BELEGID"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Erfolgreiche Übermittlung des Events"
+          }
+        }
+      }
+    },
+    "/START_SPERRAUFTRAG": {
+      "post": {
+        "tags": [
+          "FAT EVENTS"
+        ],
+        "summary": "START_SPERRAUFTRAG",
+        "description": "Event aus der MCS beim Nachrichteneingang",
+        "operationId": "START_SPERRAUFTRAG",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/START_SPERRAUFTRAG"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Erfolgreiche Übermittlung des Events"
+          }
+        }
+      }
+    },
+    "/START_NEUANLAGE": {
+      "post": {
+        "tags": [
+          "FAT EVENTS"
+        ],
+        "summary": "START_NEUANLAGE",
+        "description": "Event für die Anmeldung einer Neuanlage",
+        "operationId": "START_NEUANLAGE",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/START_NEUANLAGE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Erfolgreiche Übermittlung des Eventss"
+          }
+        }
+      }
+    },
+    "/START_PARTIN": {
+      "post": {
+        "tags": [
+          "FAT EVENTS"
+        ],
+        "summary": "START_PARTIN",
+        "description": "Erfassung / Änderung eigener SA / Kommunikationsdaten. Manuelle Auslösung Partin",
+        "operationId": "START_PARTIN",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/START_PARTIN"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Erfolgreiche Übermittlung des Events"
+          }
+        }
+      }
+    },
+    "/START_LASTGANG": {
+      "post": {
+        "tags": [
+          "FAT EVENTS"
+        ],
+        "summary": "START_LASTGANG",
+        "description": "Erfassung / Änderung Lastgang an makorelevanter Lieferstelle",
+        "operationId": "START_LASTGANG",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/START_LASTGANG"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Erfolgreiche Übermittlung des Events"
+          }
+        }
+      }
+    },
+    "/START_ZAEHLERSTAND": {
+      "post": {
+        "tags": [
+          "FAT EVENTS"
+        ],
+        "summary": "START_ZAEHLERSTAND",
+        "description": "Erfassung / Änderung / Freigabe eines Zählerstand an makorelevanter Lieferstelle",
+        "operationId": "START_ZAEHLERSTAND",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/START_ZAEHLERSTAND"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Erfolgreiche Übermittlung des Events"
+          }
+        }
+      }
+    },
+    "/START_ENERGIEMENGE": {
+      "post": {
+        "tags": [
+          "FAT EVENTS"
+        ],
+        "summary": "START_ENERGIEMENGE",
+        "description": "Erzeugung einer Energiemenge an makorelevanter Lieferstelle",
+        "operationId": "START_ENERGIEMENGE",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/START_ENERGIEMENGE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Erfolgreiche Übermittlung des Events"
+          }
+        }
+      }
+    },
+    "/AENDERUNG_SD": {
+      "post": {
+        "tags": [
+          "FAT EVENTS"
+        ],
+        "summary": "AENDERUNG_SD",
+        "description": "Änderung der Stammdaten einer Lokation",
+        "operationId": "AENDERUNG_SD",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AENDERUNG_SD"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Erfolgreiche Übermittlung des Events"
+          }
+        }
+      }
+    },
+    "/AENDERUNG_AD": {
+      "post": {
+        "tags": [
+          "FAT EVENTS"
+        ],
+        "summary": "AENDERUNG_AD",
+        "description": "Änderung der Abrechnungsdaten einer Lokation",
+        "operationId": "AENDERUNG_AD",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AENDERUNG_AD"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Erfolgreiche Übermittlung des Events"
+          }
+        }
+      }
+    },
+    "/START_KUENDIGUNG": {
+      "post": {
+        "tags": [
+          "FAT EVENTS"
+        ],
+        "summary": "START_KUENDIGUNG",
+        "description": "Start des Prozesses Kündigung an LFA",
+        "operationId": "START_KUENDIGUNG",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/START_KUENDIGUNG"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Erfolgreiche Übermittlung des Events"
+          }
+        }
+      }
+    },
+    "/START_LIEFERBEGINN": {
+      "post": {
+        "tags": [
+          "FAT EVENTS"
+        ],
+        "summary": "START_LIEFERBEGINN",
+        "description": "Start des Prozess Lieferbeginn an NB",
+        "operationId": "START_LIEFERBEGINN",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/START_LIEFERBEGINN"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Erfolgreiche Übermittlung des Events"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "START_SPERRAUFTRAG": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "example": "STARTSPERRAUFTRAG1"
+          },
+          "eventName": {
+            "type": "string",
+            "example": "START_SPERRAUFTRAG"
+          },
+          "marktlokationsId": {
+            "type": "string",
+            "example": "50000083216"
+          },
+          "sparte": {
+            "type": "string",
+            "example": "STROM"
+          },
+          "absenderRollencodenummer": {
+            "type": "string",
+            "example": "9903790000002"
+          },
+          "empfaengerRollencodenummer": {
+            "type": "string",
+            "example": "9900321000005"
+          }
+        }
+      },
+      "START_NEUANLAGE": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "example": "STARTNEUANLAGE1"
+          },
+          "eventName": {
+            "type": "string",
+            "example": "START_NEUANLAGE"
+          },
+          "marktlokationsId": {
+            "type": "string",
+            "example": "1234567890"
+          },
+          "sparte": {
+            "type": "string",
+            "example": "ELEKTRIZITAET"
+          },
+          "energierichtung": {
+            "type": "string",
+            "example": "ABGANG"
+          },
+          "vertragsbeginn": {
+            "type": "string",
+            "example": "2023-01-01T00:00:00Z"
+          },
+          "vertragsende": {
+            "type": "string",
+            "example": "2024-07-01T00:00:00Z"
+          },
+          "haushaltskunde": {
+            "type": "boolean",
+            "example": true
+          },
+          "gewerbekennzeichnung": {
+            "type": "boolean",
+            "example": true
+          },
+          "vpanrede": {
+            "type": "string",
+            "example": "Herr"
+          },
+          "vpname1": {
+            "type": "string",
+            "example": "Mustermann"
+          },
+          "vpname2": {
+            "type": "string",
+            "example": "Max"
+          },
+          "kename2": {
+            "type": "string",
+            "example": "Musterfirma"
+          },
+          "kegewerbekennzeichnung": {
+            "type": "boolean",
+            "example": true
+          },
+          "keplz": {
+            "type": "string",
+            "example": "12345"
+          },
+          "keort": {
+            "type": "string",
+            "example": "Musterstadt"
+          },
+          "kestrasse": {
+            "type": "string",
+            "example": "Musterstrasse"
+          },
+          "kehaushnummer": {
+            "type": "string",
+            "example": "10"
+          },
+          "kelandescode": {
+            "type": "string",
+            "example": "DE"
+          },
+          "keortsteil": {
+            "type": "string",
+            "example": "Zentrum"
+          },
+          "empfaengerRollencodenummer": {
+            "type": "string",
+            "example": "9900321000005"
+          },
+          "transaktonsgrund": {
+            "type": "string",
+            "example": "Z02"
+          },
+          "transaktionsgrundergaenzung": {
+            "type": "string",
+            "example": "E03"
+          },
+          "transaktionsgrundergaenzungBefristeteAnmeldung": {
+            "type": "string",
+            "example": "E03"
+          },
+          "absenderRollencodenummer": {
+            "type": "string",
+            "example": "9903790000002"
+          }
+        }
+      },
+      "START_PARTIN": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "example": "123123"
+          },
+          "eventName": {
+            "type": "string",
+            "example": "START_PARTIN"
+          },
+          "empfaenger": {
+            "$ref": "#/components/schemas/Marktpartner"
+          },
+          "eigenerSA": {
+            "type": "string",
+            "example": "9903790000002"
+          },
+          "eigenerSARolle": {
+            "type": "string",
+            "example": "NB",
+            "enum": [
+              "NB",
+              "LF",
+              "MSB",
+              "MSBA",
+              "GMSB",
+              "MDL",
+              "DL",
+              "BKV",
+              "BKO",
+              "UENB",
+              "KUNDE-SELBST-NN",
+              "MGV",
+              "EIV",
+              "RB",
+              "KUNDE",
+              "INTERESSENT",
+              "KN",
+              "UBA",
+              "BIKO",
+              "ESA"
+            ]
+          }
+        }
+      },
+      "START_LASTGANG": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "example": "124"
+          },
+          "eventName": {
+            "type": "string",
+            "example": "START_LASTGANG"
+          },
+          "lokationsId": {
+            "type": "string",
+            "example": "50074561188"
+          },
+          "lokationsTyp": {
+            "type": "string",
+            "example": "MALO",
+            "enum": [
+              "MALO",
+              "MELO",
+              "NELO",
+              "TECHNISCHE_RESSOURCE"
+            ]
+          },
+          "obisKennzahl": {
+            "type": "string",
+            "example": "1-1:1.9.0"
+          },
+          "zeitraumVon": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-06-28T12:18:00Z",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+          },
+          "zeitraumBis": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-06-28T12:18:00Z",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+          },
+          "absender": {
+            "$ref": "#/components/schemas/Marktpartner"
+          },
+          "empfaenger": {
+            "$ref": "#/components/schemas/Marktpartner"
+          }
+        }
+      },
+      "START_ZAEHLERSTAND": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "example": "123123"
+          },
+          "eventName": {
+            "type": "string",
+            "example": "START_ZAEHLERSTAND"
+          },
+          "lokationsId": {
+            "type": "string",
+            "example": "50074561188"
+          },
+          "lokationsTyp": {
+            "type": "string",
+            "example": "MALO",
+            "enum": [
+              "MALO",
+              "MELO",
+              "NELO",
+              "TECHNISCHE_RESSOURCE"
+            ]
+          },
+          "obisKennzahl": {
+            "type": "string",
+            "example": "1-1:1.9.0"
+          },
+          "zeitraumVon": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-06-28T12:18:00Z",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+          },
+          "zeitraumBis": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-06-28T12:18:00Z",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+          },
+          "absender": {
+            "$ref": "#/components/schemas/Marktpartner"
+          },
+          "empfaenger": {
+            "$ref": "#/components/schemas/Marktpartner"
+          }
+        }
+      },
+      "START_ENERGIEMENGE": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "example": "123123"
+          },
+          "eventName": {
+            "type": "string",
+            "example": "START_ENERGIEMENGE"
+          },
+          "lokationsId": {
+            "type": "string",
+            "example": "50074561188"
+          },
+          "lokationsTyp": {
+            "type": "string",
+            "example": "MALO",
+            "enum": [
+              "MALO",
+              "MELO",
+              "NELO",
+              "TECHNISCHE_RESSOURCE"
+            ]
+          },
+          "obisKennzahl": {
+            "type": "string",
+            "example": "1-1:1.9.0"
+          },
+          "zeitraumVon": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-06-28T12:18:00Z",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+          },
+          "zeitraumBis": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-06-28T12:18:00Z",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+          },
+          "absender": {
+            "$ref": "#/components/schemas/Marktpartner"
+          },
+          "empfaenger": {
+            "$ref": "#/components/schemas/Marktpartner"
+          }
+        }
+      },
+      "AENDERUNG_SD": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "example": "123123"
+          },
+          "eventName": {
+            "type": "string",
+            "example": "AENDERUNG_SD"
+          },
+          "lokationsId": {
+            "type": "string",
+            "example": "50074561188"
+          },
+          "lokationsTyp": {
+            "type": "string",
+            "example": "MALO",
+            "enum": [
+              "MALO",
+              "MELO",
+              "NELO",
+              "TECHNISCHE_RESSOURCE"
+            ]
+          },
+          "aenderungGueltigAb": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-06-28T12:18:00Z",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+          },
+          "empfaenger": {
+            "$ref": "#/components/schemas/Marktpartner"
+          },
+          "eigenerSA": {
+            "type": "string",
+            "example": "9903790000002"
+          },
+          "eigenerSARolle": {
+            "type": "string",
+            "example": "NB",
+            "enum": [
+              "NB",
+              "LF",
+              "MSB",
+              "MSBA",
+              "GMSB",
+              "MDL",
+              "DL",
+              "BKV",
+              "BKO",
+              "UENB",
+              "KUNDE-SELBST-NN",
+              "MGV",
+              "EIV",
+              "RB",
+              "KUNDE",
+              "INTERESSENT",
+              "KN",
+              "UBA",
+              "BIKO",
+              "ESA"
+            ]
+          }
+        }
+      },
+      "AENDERUNG_AD": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "example": "123123"
+          },
+          "eventName": {
+            "type": "string",
+            "example": "AENDERUNG_AD"
+          },
+          "lokationsId": {
+            "type": "string",
+            "example": "50074561188"
+          },
+          "lokationsTyp": {
+            "type": "string",
+            "example": "MALO",
+            "enum": [
+              "MALO",
+              "MELO",
+              "NELO",
+              "TECHNISCHE_RESSOURCE"
+            ]
+          },
+          "aenderungGueltigAb": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-06-28T12:18:00Z",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+          },
+          "empfaenger": {
+            "$ref": "#/components/schemas/Marktpartner"
+          },
+          "eigenerSA": {
+            "type": "string",
+            "example": "9903790000002"
+          },
+          "eigenerSARolle": {
+            "type": "string",
+            "example": "NB",
+            "enum": [
+              "NB",
+              "LF",
+              "MSB",
+              "MSBA",
+              "GMSB",
+              "MDL",
+              "DL",
+              "BKV",
+              "BKO",
+              "UENB",
+              "KUNDE-SELBST-NN",
+              "MGV",
+              "EIV",
+              "RB",
+              "KUNDE",
+              "INTERESSENT",
+              "KN",
+              "UBA",
+              "BIKO",
+              "ESA"
+            ]
+          }
+        }
+      },
+      "START_KUENDIGUNG": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "example": "123123"
+          },
+          "eventName": {
+            "type": "string",
+            "example": "START_KUENDIGUNG"
+          },
+          "lokationsId": {
+            "type": "string",
+            "example": "50074561188"
+          },
+          "lokationsTyp": {
+            "type": "string",
+            "example": "MALO",
+            "enum": [
+              "MALO",
+              "MELO",
+              "NELO",
+              "TECHNISCHE_RESSOURCE"
+            ]
+          },
+          "kuendigungsdatum": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-06-28T12:18:00Z",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+          },
+          "empfaengerLFA": {
+            "$ref": "#/components/schemas/Marktpartner"
+          },
+          "eigenerSA": {
+            "type": "string",
+            "example": "9903790000002"
+          },
+          "eigenerSARolle": {
+            "type": "string",
+            "example": "NB",
+            "enum": [
+              "NB",
+              "LF",
+              "MSB",
+              "MSBA",
+              "GMSB",
+              "MDL",
+              "DL",
+              "BKV",
+              "BKO",
+              "UENB",
+              "KUNDE-SELBST-NN",
+              "MGV",
+              "EIV",
+              "RB",
+              "KUNDE",
+              "INTERESSENT",
+              "KN",
+              "UBA",
+              "BIKO",
+              "ESA"
+            ]
+          },
+          "belegID": {
+            "type": "string",
+            "example": "4711"
+          }
+        }
+      },
+      "START_LIEFERBEGINN": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "example": "123123"
+          },
+          "eventName": {
+            "type": "string",
+            "example": "START_LIEFERBEGINN"
+          },
+          "lokationsId": {
+            "type": "string",
+            "example": "50074561188"
+          },
+          "lokationsTyp": {
+            "type": "string",
+            "example": "MALO",
+            "enum": [
+              "MALO",
+              "MELO",
+              "NELO",
+              "TECHNISCHE_RESSOURCE"
+            ]
+          },
+          "lieferbeginndatum": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-06-28T12:18:00Z",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+          },
+          "empfaengerNB": {
+            "$ref": "#/components/schemas/Marktpartner"
+          },
+          "eigenerSA": {
+            "type": "string",
+            "example": "9903790000002"
+          },
+          "eigenerSARolle": {
+            "type": "string",
+            "example": "NB",
+            "enum": [
+              "NB",
+              "LF",
+              "MSB",
+              "MSBA",
+              "GMSB",
+              "MDL",
+              "DL",
+              "BKV",
+              "BKO",
+              "UENB",
+              "KUNDE-SELBST-NN",
+              "MGV",
+              "EIV",
+              "RB",
+              "KUNDE",
+              "INTERESSENT",
+              "KN",
+              "UBA",
+              "BIKO",
+              "ESA"
+            ]
+          },
+          "belegID": {
+            "type": "string",
+            "example": "4711"
+          }
+        }
+      },
+      "Marktpartner": {
+        "type": "object",
+        "properties": {
+          "rollencodenummer:": {
+            "type": "string",
+            "example": "9903790000002"
+          },
+          "marktrolle": {
+            "type": "string",
+            "example": "LF",
+            "enum": [
+              "NB",
+              "LF",
+              "MSB",
+              "MSBA",
+              "GMSB",
+              "MDL",
+              "DL",
+              "BKV",
+              "BKO",
+              "UENB",
+              "KUNDE-SELBST-NN",
+              "MGV",
+              "EIV",
+              "RB",
+              "KUNDE",
+              "INTERESSENT",
+              "KN",
+              "UBA",
+              "BIKO",
+              "ESA"
+            ]
+          }
+        }
+      },
+      "EVENT_MIT_BELEGID": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "110000000408"
+          },
+          "eventName": {
+            "type": "string",
+            "example": "START_LIEFERBEGINN",
+            "enum": [
+              "START_LIEFERBEGINN",
+              "START_ABR_NN",
+              "START_DEFINITION_SCHALTZEIT",
+              "START_DEFINITION_LEISTUNGSKURVE",
+              "START_DEFINITION_ZÄHLZEIT",
+              "START_KUENDIGUNG",
+              "START_ERHEBUNG_MESSWERTE",
+              "START_AEND_MALO_STRUKTUR_LF",
+              "START_AEND_NNA_MALO",
+              "START_AEND_ABR_BLINDARBEIT",
+              "START_AEND_PROGNOSEGRUNDLAGE",
+              "START_BILA_REL_AEND_VON_NB_MIT_ABHAENGIGK",
+              "START_N_BILA_REL_AEND_VON_NB",
+              "START_N_BILA_REL_AEND_VON_LF",
+              "START_N_BILA_REL_ANFR_ABR_BLINDARBEIT_AN_LF",
+              "START_BILA_REL_ANFR_AN_LF",
+              "START_N_BILA_REL_ANFR_AN_LF",
+              "START_N_BILA_REL_ANFR_AN_MSB_OHNE_ABHAENGIGK",
+              "START_ANFR_AN_MSB_MIT_ABHAENGIGK",
+              "START_BESTELLUNG_ZAEHLZEITDEFINITION",
+              "START_BESTELLUNG_ANGEBOT_KONFIGURATION",
+              "START_BESTELLUNG_KONFIGURATION",
+              "START_VERSAND_STORNO_MSCONS",
+              "START_VERSAND_LIEFERSCHEIN",
+              "START_VERSAND_COMDIS",
+              "START_LIEFERENDE",
+              "START_UEBERSICHT_ZAEHLZEITDEF",
+              "START_UEBERSICHT_SCHALTZEITDEF",
+              "START_UEBERSICHT_LEISTUNGSKURVENDEF",
+              "START_ANFRAGE_STAMMDATEN_MALO",
+              "START_ANFRAGE_MESSWERTE",
+              "START_ANFRAGE_STAMMDATEN_TRANCHE",
+              "START_EOG",
+              "START_VERSAND_BEENDIGUNG_AGV",
+              "START_VERSAND_ANF_STORNO",
+              "START_PREISBLATT",
+              "START_LIEFERBEGINN",
+              "START_AUFTRAGSSTATUS",
+              "START_ANFRAGE_STAMMDATENAENDERUNG",
+              "START_UEBERM_DEFINITION"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
