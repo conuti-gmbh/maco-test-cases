@@ -5,7 +5,7 @@
         "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
         "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
-        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
       }
     ],
     "ENERGIELIEFERVERTRAG": [
@@ -17,7 +17,7 @@
           {
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
-            "gewerbekennzeichnung": false,
+            "gewerbekennzeichnung": false
           }
         ]
       }
@@ -37,17 +37,15 @@
         "versionStruktur": "1",
         "vertragsart": "${data:jsonPath('$.vertragsart'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsart')})}",
         "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
-        "vertragsende": "${data:jsonPath('$.vertragsende'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsende')})}",
+        "vertragsende": "${data:jsonPath('$.vertragsende'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsende')})}"
       }
-    ]
-    
-  },
+    ],
   "transaktionsdaten": {
     "absender": {
       "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"
-    }
+    },
     "empfaenger": {
-      "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
     }
   }
 }
