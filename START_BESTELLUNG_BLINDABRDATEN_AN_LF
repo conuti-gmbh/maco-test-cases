@@ -1,0 +1,30 @@
+{
+    "stammdaten": {
+        "NETZLOKATION": [
+            {
+                "boTyp": "NETZLOKATION",
+                "versionStruktur": "1",
+                "netzlokationsId": "${data:jsonPath('$.netzlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.netzlokationsId')})}",
+                "sparte":"${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+            }
+        ]
+      },
+      "transaktionsdaten": {
+        "sparte":"${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "absender": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+          "rollencodetyp": "BDEW"
+        },
+        "empfaenger": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+          "rollencodetyp": "BDEW"
+        },
+        "kategorie": "Z88",
+        "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}"
+      }
+  }
+  
