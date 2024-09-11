@@ -1,0 +1,54 @@
+"stammdaten": {
+      "VERWENDUNGSZEITRAUM": [
+        {
+          "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
+          "zeitraumId": ${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}"
+        }
+      ],
+      "MARKTLOKATION": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "bilanzierungsgebiet": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "marktrollen": [
+            {
+              "rollencodenummer": "${data:jsonPath('$.rollencodenummer'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummer')})}",
+              "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}"
+            }
+          ]
+        },
+        {
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet1'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet1')})}",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "bilanzierungsgebiet": "${data:jsonPath('$.bilanzierungsgebiet1'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet1')})}",
+          "marktrollen": [
+            {
+              "rollencodenummer": "${data:jsonPath('$.rollencodenummer1'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummer1')})}",
+              "marktrolle": "${data:jsonPath('$.marktrolle1'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle1')})}"
+            }
+          ]
+        }
+      ],
+      "BILANZIERUNG": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet2'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet2')})}",
+          "bilanzkreis": "${data:jsonPath('$.bilanzkreis'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzkreis')})}",
+          "zeitreihentyp": "${data:jsonPath('$.zeitreihentyp'):isEmpty():ifElse('null',${data:jsonPath('$.zeitreihentyp')})}"
+        },
+        {
+          "datenqualitaet": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet3')})}",
+          "bilanzkreis": "${data:jsonPath('$.bilanzkreis1'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzkreis1')})}",
+          "zeitreihentyp": "${data:jsonPath('$.zeitreihentyp1'):isEmpty():ifElse('null',${data:jsonPath('$.zeitreihentyp1')})}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "transaktionsgrundergaenzung": "${data:jsonPath('$.transaktionsgrundergaenzung'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrundergaenzung')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}"
+    }
