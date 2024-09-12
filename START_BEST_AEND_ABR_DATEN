@@ -1,0 +1,44 @@
+ {
+     "stammdaten": {
+      "ANFRAGE": [
+        {
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie'):isEmpty():ifElse('null',${data:jsonPath('$.anfragekategorie')})}",
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
+        }
+      ],
+      "AUFTRAG": [
+        {
+          "ausfuehrungsdatum": "${data:jsonPath('$.ausfuehrungsdatum'):isEmpty():ifElse('null',${data:jsonPath('$.ausfuehrungsdatum')})}",
+          "positionsdaten": [
+            {
+              "positionsnummer": ${data:jsonPath('$.positionsnummer'):isEmpty():ifElse('null',${data:jsonPath('$.positionsnummer')})}
+            }
+          ]
+        }
+      ],
+      "MARKTLOKATION": [
+        {
+          "erforderlichesProduktpaket": [
+            {
+              "produkt": [
+                {
+                  "produktCode": "${data:jsonPath('$.produktCode'):isEmpty():ifElse('null',${data:jsonPath('$.produktCode')})}",
+                  "codeProdukteigenschaft": "${data:jsonPath('$.codeProdukteigenschaft'):isEmpty():ifElse('null',${data:jsonPath('$.codeProdukteigenschaft')})}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender":,
+      "empfaenger":,
+      "abtretungserklaerung": {
+        "passwort": "${data:jsonPath('$.passwort'):isEmpty():ifElse('null',${data:jsonPath('$.passwort')})}",
+        "link1": "${data:jsonPath('$.link1'):isEmpty():ifElse('null',${data:jsonPath('$.link1')})}"
+      }
+    }
+}
