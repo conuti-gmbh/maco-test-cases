@@ -1,0 +1,40 @@
+{
+"stammdaten": {
+      "MESSLOKATION": [
+        {
+          "zaehlwerke": [
+            {
+              "messprodukt": "${data:jsonPath('$.messprodukt'):isEmpty():ifElse('null',${data:jsonPath('$.messprodukt')})}",
+              "notwendigkeitZweiteMessung": "${data:jsonPath('$.notwendigkeitZweiteMessung'):isEmpty():ifElse('null',${data:jsonPath('$.notwendigkeitZweiteMessung')})}",
+              "werteuebermittlungVerwendungszweck": "${data:jsonPath('$.werteuebermittlungVerwendungszweck'):isEmpty():ifElse('null',${data:jsonPath('$.werteuebermittlungVerwendungszweck')})}",
+              "zaehlzeiten": {
+                  "zaehlzeitDefinition": ${data:jsonPath('$.zaehlzeitDefinition'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlzeitDefinition')})}
+              }
+            }
+          ]
+        }
+      ],
+      "ANFRAGE": [
+        {
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie'):isEmpty():ifElse('null',${data:jsonPath('$.anfragekategorie')})}"
+        }
+      ],
+      "AUFTRAG": [
+        {
+          "ausfuehrungsdatum": "${data:jsonPath('$.ausfuehrungsdatum'):isEmpty():ifElse('null',${data:jsonPath('$.ausfuehrungsdatum')})}",
+          "positionsdaten": [
+            {
+              "positionsnummer": ${data:jsonPath('$.positionsnummer'):isEmpty():ifElse('null',${data:jsonPath('$.positionsnummer')})}
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
+    }
+}
