@@ -1,0 +1,29 @@
+"stammdaten": {
+      "STATUSMITTEILUNG": [
+        {
+          "statusObjekt": "${data:jsonPath('$.statusObjekt'):isEmpty():ifElse('null',${data:jsonPath('$.statusObjekt')})}",
+          "auftragsstatus": "${data:jsonPath('$.auftragsstatus'):isEmpty():ifElse('null',${data:jsonPath('$.auftragsstatus')})}",
+          "positionsdaten": [
+            {
+              "positionsnummer": 1,
+              "allgemeineInformationen": {
+                "info1": "${data:jsonPath('$.info1'):isEmpty():ifElse('null',${data:jsonPath('$.info1')})}",
+                "info2": "${data:jsonPath('$.info2'):isEmpty():ifElse('null',${data:jsonPath('$.info2')})}",
+                "info3": "${data:jsonPath('$.info3'):isEmpty():ifElse('null',${data:jsonPath('$.info3')})}",
+                "info4": "${data:jsonPath('$.info4'):isEmpty():ifElse('null',${data:jsonPath('$.info4')})}",
+                "info5": "${data:jsonPath('$.info5'):isEmpty():ifElse('null',${data:jsonPath('$.info5')})}"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "vorgangsreferenznummer": "${data:jsonPath('$.vorgangsreferenznummer'):isEmpty():ifElse('null',${data:jsonPath('$.vorgangsreferenznummer')})}",
+      "sendungsposition": "${data:jsonPath('$.sendungsposition'):isEmpty():ifElse('null',${data:jsonPath('$.sendungsposition')})}",
+      "antwortstatus": "${data:jsonPath('$.antwortstatus'):isEmpty():ifElse('null',${data:jsonPath('$.antwortstatus')})}",
+      "antwortstatusCodeliste": "${data:jsonPath('$.antwortstatusCodeliste'):isEmpty():ifElse('null',${data:jsonPath('$.antwortstatusCodeliste')})}"
+    }

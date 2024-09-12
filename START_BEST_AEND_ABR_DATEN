@@ -30,20 +30,6 @@
             }
           ]
         }
-      ],
-      "STATUSMITTEILUNG": [
-        {
-          "statusObjekt": "${data:jsonPath('$.statusObjekt'):isEmpty():ifElse('null',${data:jsonPath('$.statusObjekt')})}",
-          "auftragsstatus": "${data:jsonPath('$.auftragsstatus'):isEmpty():ifElse('null',${data:jsonPath('$.auftragsstatus')})}",
-          "positionsdaten": [
-            {
-              "positionsnummer": ${data:jsonPath('$.positionsnummer'):isEmpty():ifElse('null',${data:jsonPath('$.positionsnummer')})}
-              "allgemeineInformationen": {
-                "info1": "${data:jsonPath('$.info1'):isEmpty():ifElse('null',${data:jsonPath('$.info1')})}"
-              }
-            }
-          ]
-        }
       ]
     },
     "transaktionsdaten": {
@@ -52,10 +38,7 @@
       "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
       "abtretungserklaerung": {
         "passwort": "${data:jsonPath('$.passwort'):isEmpty():ifElse('null',${data:jsonPath('$.passwort')})}",
-        "link1": "${data:jsonPath('$.link1'):isEmpty():ifElse('null',${data:jsonPath('$.link1')})}",
-        "antwortstatus": "${data:jsonPath('$.antwortstatus'):isEmpty():ifElse('null',${data:jsonPath('$.antwortstatus')})}",
-        "antwortstatusCodeliste": "${data:jsonPath('$.antwortstatusCodeliste'):isEmpty():ifElse('null',${data:jsonPath('$.antwortstatusCodeliste')})}",
-        "vorgangsreferenznummer": "${data:jsonPath('$.vorgangsreferenznummer'):isEmpty():ifElse('null',${data:jsonPath('$.vorgangsreferenznummer')})}"
+        "link1": "${data:jsonPath('$.link1'):isEmpty():ifElse('null',${data:jsonPath('$.link1')})}"
       }
     }
 }
