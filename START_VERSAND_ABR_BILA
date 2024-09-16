@@ -1,0 +1,113 @@
+{
+    "stammdaten": {
+      "VERWENDUNGSZEITRAUM": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
+          "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
+        },
+        {
+            "zeitraumId": ${data:jsonPath('$.zeitraumId4'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId4')})},
+            "datenqualitaet": "${data:jsonPath('$.datenqualitaet4'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet4')})}",
+            "verwendungAb": "${data:jsonPath('$.verwendungAb2'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb2')})}"
+          }
+      ],
+      "MARKTLOKATION": [
+        {
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId1'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId1')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet1'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet1')})}",
+          "netzebene": "${data:jsonPath('$.netzebene'):isEmpty():ifElse('null',${data:jsonPath('$.netzebene')})}",
+          "bilanzierungsgebiet": "${data:jsonPath('$.bilanzierungsgebiet'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsgebiet')})}",
+          "marktrollen": [
+            {
+              "rollencodenummer": "${data:jsonPath('$.rollencodenummer'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummer')})}",
+              "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}"
+            }
+          ],
+          "regelzone": "${data:jsonPath('$.regelzone'):isEmpty():ifElse('null',${data:jsonPath('$.regelzone')})}"
+        },
+        {
+            "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+            "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+            "datenqualitaet": "${data:jsonPath('$.datenqualitaet5'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet5')})}",
+            "marktrollen": [
+              {
+
+                "rollencodenummer": "${data:jsonPath('$.rollencodenummer1'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummer1')})}",
+                "marktrolle": "${data:jsonPath('$.marktrolle1'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle1')})}"
+              }
+            ],
+            "regelzone": "10YDE-RWENET---I"
+          }
+      ],
+      "BILANZIERUNG": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet2'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet2')})}",
+          "lastprofile": [
+            {
+              "bezeichnung": "${data:jsonPath('$.bezeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.bezeichnung')})}",
+              "verfahren": "${data:jsonPath('$.verfahren'):isEmpty():ifElse('null',${data:jsonPath('$.verfahren')})}",
+              "einspeisung": ${data:jsonPath('$.einspeisung'):isEmpty():ifElse('null',${data:jsonPath('$.einspeisung')})},
+              "profilart": "${data:jsonPath('$.profilart'):isEmpty():ifElse('null',${data:jsonPath('$.profilart')})}",
+              "herausgeber": "${data:jsonPath('$.herausgeber'):isEmpty():ifElse('null',${data:jsonPath('$.herausgeber')})}"
+            },
+            {
+              "bezeichnung": "${data:jsonPath('$.bezeichnung1'):isEmpty():ifElse('null',${data:jsonPath('$.bezeichnung1')})}",
+              "profilschar": "${data:jsonPath('$.profilschar'):isEmpty():ifElse('null',${data:jsonPath('$.profilschar')})}",
+              "verfahren": "${data:jsonPath('$.verfahren1'):isEmpty():ifElse('null',${data:jsonPath('$.verfahren1')})}",
+              "einspeisung": ${data:jsonPath('$.einspeisung'):isEmpty():ifElse('null',${data:jsonPath('$.einspeisung')})},
+              "tagesparameter": {
+                "temperaturmessstelle": "${data:jsonPath('$.temperaturmessstelle'):isEmpty():ifElse('null',${data:jsonPath('$.temperaturmessstelle')})}",
+                "dienstanbieter": "${data:jsonPath('$.dienstanbieter'):isEmpty():ifElse('null',${data:jsonPath('$.dienstanbieter')})}",
+                "herausgeber": "${data:jsonPath('$.herausgeber1'):isEmpty():ifElse('null',${data:jsonPath('$.herausgeber1')})}"
+              },
+              "profilart": "${data:jsonPath('$.profilart1'):isEmpty():ifElse('null',${data:jsonPath('$.profilart1')})}",
+              "herausgeber": "${data:jsonPath('$.herausgeber2'):isEmpty():ifElse('null',${data:jsonPath('$.herausgeber2')})}"
+            }
+          ],
+          "bilanzkreis": "${data:jsonPath('$.bilanzkreis'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzkreis')})}",
+          "jahresverbrauchsprognose": {
+            "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse('null',${data:jsonPath('$.wert')})},
+            "einheit": "${data:jsonPath('$.einheit'):isEmpty():ifElse('null',${data:jsonPath('$.einheit')})}"
+          },
+          "temperaturarbeit": {
+            "wert": ${data:jsonPath('$.wert1'):isEmpty():ifElse('null',${data:jsonPath('$.wert1')})},
+            "einheit": "${data:jsonPath('$.einheit1'):isEmpty():ifElse('null',${data:jsonPath('$.einheit1')})}"
+          },
+          "aggregationsverantwortung": "${data:jsonPath('$.aggregationsverantwortung'):isEmpty():ifElse('null',${data:jsonPath('$.aggregationsverantwortung')})}",
+          "zeitreihentyp": "${data:jsonPath('$.zeitreihentyp'):isEmpty():ifElse('null',${data:jsonPath('$.zeitreihentyp')})}",
+          "prognosegrundlage": "${data:jsonPath('$.prognosegrundlage'):isEmpty():ifElse('null',${data:jsonPath('$.prognosegrundlage')})}",
+          "detailsPrognosegrundlage": [
+            "${data:jsonPath('$.detailsPrognosegrundlage'):isEmpty():ifElse('null',${data:jsonPath('$.detailsPrognosegrundlage')})}",
+            "${data:jsonPath('$.detailsPrognosegrundlage1'):isEmpty():ifElse('null',${data:jsonPath('$.detailsPrognosegrundlage1')})}"
+          ]
+        }
+      ],
+      "TRANCHE": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId3'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId3')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet3'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet3')})}",
+          "tranchenId": "${data:jsonPath('$.tranchenId'):isEmpty():ifElse('null',${data:jsonPath('$.tranchenId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "bilanzkreis": "${data:jsonPath('$.bilanzkreis'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzkreis')})}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrund')})}",
+      "transaktionsgrundergaenzung": "${data:jsonPath('$.transaktionsgrundergaenzung'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrundergaenzung')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
+      "bilanzkreis": [
+        {
+          "bezeichnung": "${data:jsonPath('$.bilanzkreis'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzkreis')})}"
+        }
+      ]
+    }
+}
