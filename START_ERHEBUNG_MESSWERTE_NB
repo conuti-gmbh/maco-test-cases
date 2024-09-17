@@ -37,6 +37,7 @@
     },
     "transaktionsdaten": {
       "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "typ": "${data:jsonPath('$.typ'):isEmpty():ifElse('null',${data:jsonPath('$.typ')})}",
       "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
       "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
       "anfrageReferenz": "${data:jsonPath('$.anfrageReferenz'):isEmpty():ifElse('null',${data:jsonPath('$.anfrageReferenz')})}"
