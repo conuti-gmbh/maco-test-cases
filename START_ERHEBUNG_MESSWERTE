@@ -2,50 +2,29 @@
   "stammdaten": {
     "ZAEHLER": [
       {
-        "boTyp": "ZAEHLER",
-        "versionStruktur": "1",
-        "zaehlernummer": "1234567",
-        "sparte": "${data:jsonPath('$.sparte')}"
+        "zaehlernummer": "${data:jsonPath('$.zaehlernummer'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlernummer')})}",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
       }
     ],
     "ENERGIEMENGE": [
       {
-        "boTyp": "ENERGIEMENGE",
-        "versionStruktur": "1",
-        "lokationsId": "${data:jsonPath('$.lokationsId')}",
-        "lokationsTyp": "${data:jsonPath('$.sparte')}",
+        "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+        "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
         "energieverbrauch": [
           {
-            "messwertstatus": "ABGELESEN",
-            "obiskennzahl": "7-0:3.0.0",
-            "wert": 1234.123,
-            "nutzungszeitpunkt": "2023-07-31T04:00:00Z",
-            "position": 1,
-            "ablesedatum": "2023-07-31T04:00:00Z"
+            "messwertstatus": "${data:jsonPath('$.messwertstatus'):isEmpty():ifElse('null',${data:jsonPath('$.messwertstatus')})}",
+            "obiskennzahl": "${data:jsonPath('$.obiskennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obiskennzahl')})}",
+            "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse('null',${data:jsonPath('$.wert')})},
+            "nutzungszeitpunkt": "${data:jsonPath('$.nutzungszeitpunkt'):isEmpty():ifElse('null',${data:jsonPath('$.nutzungszeitpunkt')})}",
+            "position": ${data:jsonPath('$.position'):isEmpty():ifElse('null',${data:jsonPath('$.position')})},
+            "ablesedatum": "${data:jsonPath('$.ablesedatum'):isEmpty():ifElse('null',${data:jsonPath('$.ablesedatum')})}"
           }
         ]
       }
     ]
   },
   "transaktionsdaten": {
-
-    "absender": {
-      "boTyp": "MARKTTEILNEHMER",
-      "versionStruktur": "1",
-      "rollencodenummer": "${data:jsonPath('$.absender')}"
-          {
-            "nummerntyp": "RUF_DURCHWAHL",
-            "rufnummer": "+1234 5678910"
-          }
-        ]
-      }
-    },
-    "empfaenger": {
-      "boTyp": "MARKTTEILNEHMER",
-      "versionStruktur": "1",
-      "rollencodenummer": "${data:jsonPath('$.empfaenger')}",
-      "rollencodetyp": "DVGW"
-    },
-  "zusatzdaten": {}
+    "absender":"${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+    "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
 }
 } 
