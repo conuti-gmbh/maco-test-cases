@@ -1,0 +1,44 @@
+{
+    "stammdaten": {
+      "ZAEHLER": [
+        {
+          "zaehlernummer": "${data:jsonPath('$.zaehlernummer'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlernummer')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+        }
+      ],
+      "ENERGIEMENGE": [
+        {
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+          "energieverbrauch": [
+            {
+              "startdatum": "${data:jsonPath('$.startdatum1'):isEmpty():ifElse('null',${data:jsonPath('$.startdatum1')})}",
+              "enddatum": "${data:jsonPath('$.enddatum1'):isEmpty():ifElse('null',${data:jsonPath('$.enddatum1')})}",
+              "messwertstatus": "${data:jsonPath('$.messwertstatus'):isEmpty():ifElse('null',${data:jsonPath('$.messwertstatus')})}",
+              "obiskennzahl": "${data:jsonPath('$.obiskennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obiskennzahl')})}",
+              "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse('null',${data:jsonPath('$.wert')})},
+              "nutzungszeitpunkt": "${data:jsonPath('$.nutzungszeitpunkt'):isEmpty():ifElse('null',${data:jsonPath('$.nutzungszeitpunkt')})}",
+              "position": ${data:jsonPath('$.position'):isEmpty():ifElse('null',${data:jsonPath('$.position')})},
+              "ablesedatum": "${data:jsonPath('$.ablesedatum'):isEmpty():ifElse('null',${data:jsonPath('$.ablesedatum')})}"
+            },
+            {
+                "startdatum": "${data:jsonPath('$.startdatum2'):isEmpty():ifElse('null',${data:jsonPath('$.startdatum2')})}",
+                "enddatum": "${data:jsonPath('$.enddatum2'):isEmpty():ifElse('null',${data:jsonPath('$.enddatum2')})}",
+                "messwertstatus": "${data:jsonPath('$.messwertstatus1'):isEmpty():ifElse('null',${data:jsonPath('$.messwertstatus1')})}",
+                "obiskennzahl": "${data:jsonPath('$.obiskennzahl1'):isEmpty():ifElse('null',${data:jsonPath('$.obiskennzahl1')})}",
+                "wert": ${data:jsonPath('$.wert1'):isEmpty():ifElse('null',${data:jsonPath('$.wert1')})},
+                "position": ${data:jsonPath('$.position1'):isEmpty():ifElse('null',${data:jsonPath('$.position1')})}
+              }
+          ],
+          "startdatum": "${data:jsonPath('$.startdatum'):isEmpty():ifElse('null',${data:jsonPath('$.startdatum')})}",
+          "enddatum": "${data:jsonPath('$.enddatum'):isEmpty():ifElse('null',${data:jsonPath('$.enddatum')})}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "anfrageReferenz": "${data:jsonPath('$.anfrageReferenz'):isEmpty():ifElse('null',${data:jsonPath('$.anfrageReferenz')})}"
+    }
+}
