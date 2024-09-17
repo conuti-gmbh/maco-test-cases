@@ -1,0 +1,78 @@
+{
+  "data": {
+    "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+        }
+      ],
+      "ANFRAGE": [
+        {
+          "boTyp": "ANFRAGE",
+          "versionStruktur": "1",
+          "lokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie'):isEmpty():ifElse('null',${data:jsonPath('$.anfragekategorie')})}",
+          "anfragetyp": "${data:jsonPath('$.anfragetyp'):isEmpty():ifElse('null',${data:jsonPath('$.anfragetyp')})}"
+        }
+      ],
+      "AUFTRAG": [
+        {
+            "boTyp": "AUFTRAG",
+            "versionStruktur": "1",
+            "positionsdaten": [
+                {
+                    "positionsnummer": 1,
+                    "allgemeindeInformationen": {
+                        "info1": "${data:jsonPath('$.info1'):isEmpty():ifElse('null',${data:jsonPath('$.info1')})}"
+                    }
+                }
+            ]
+        }
+      ],
+      "SPERRAUFTRAG": [
+        {
+            "boTyp": "SPERRAUFTRAG",
+            "versionStruktur": "1",
+            "treffpunkt": {
+                "postleitzahl": "${data:jsonPath('$.postleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.postleitzahl')})}",
+                "ort": "${data:jsonPath('$.ort'):isEmpty():ifElse('null',${data:jsonPath('$.ort')})}",
+                "strasse": "${data:jsonPath('$.strasse'):isEmpty():ifElse('null',${data:jsonPath('$.strasse')})}",
+                "hausnummer": "${data:jsonPath('$.hausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.hausnummer')})}",
+                "landescode": "${data:jsonPath('$.landescode'):isEmpty():ifElse('null',${data:jsonPath('$.landescode')})}",
+                "zusatzInformation": {
+                    "zusatz1": "${data:jsonPath('$.zusatz1'):isEmpty():ifElse('null',${data:jsonPath('$.zusatz1')})}",
+                    "zusatz2": "${data:jsonPath('$.zusatz2'):isEmpty():ifElse('null',${data:jsonPath('$.zusatz2')})}",
+                    "zusatz3": "${data:jsonPath('$.zusatz3'):isEmpty():ifElse('null',${data:jsonPath('$.zusatz3')})}",
+                    "zusatz4": "${data:jsonPath('$.zusatz4'):isEmpty():ifElse('null',${data:jsonPath('$.zusatz4')})}",
+                    "zusatz5": "${data:jsonPath('$.zusatz5'):isEmpty():ifElse('null',${data:jsonPath('$.zusatz5')})}"
+                }
+            }
+        }
+      ]
+    },
+    "transaktionsdaten": {
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "absender": {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+            "rollencodetyp": "BDEW"
+        },
+        "empfaenger": {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+            "rollencodetyp": "BDEW"
+        },
+        "kategorie": "Z52",
+        "freitext": {
+            "freitext1": "${data:jsonPath('$.info1'):isEmpty():ifElse('null',${data:jsonPath('$.info1')})}"
+        }
+    }
+    }
+  }
+}
