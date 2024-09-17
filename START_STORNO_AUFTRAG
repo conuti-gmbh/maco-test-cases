@@ -1,0 +1,54 @@
+{
+  "data": {
+    "stammdaten": {
+      "ANFRAGE": [
+        {
+          "boTyp": "ANFRAGE",
+          "versionStruktur": "1",
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie'):isEmpty():ifElse('null',${data:jsonPath('$.anfragekategorie')})}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "absender": {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+            "rollencodetyp": "BDEW",
+            "ansprechpartner": {
+                "boTyp": "ANSPRECHPARTNER",
+                "versionStruktur": "1",
+                "nachname": "${data:jsonPath('$.nachname'):isEmpty():ifElse('null',${data:jsonPath('$.nachname')})}",
+                "eMailAdresse": "${data:jsonPath('$.eMailAdresse'):isEmpty():ifElse('null',${data:jsonPath('$.eMailAdresse')})}",
+                "rufnummern": [
+                    {
+                        "nummerntyp": "${data:jsonPath('$.nummerntyp1'):isEmpty():ifElse('null',${data:jsonPath('$.nummerntyp1')})}",
+                        "rufnummer": "${data:jsonPath('$.rufnummer1'):isEmpty():ifElse('null',${data:jsonPath('$.rufnummer1')})}"
+                    },
+                    {
+                        "nummerntyp": "${data:jsonPath('$.nummerntyp2'):isEmpty():ifElse('null',${data:jsonPath('$.nummerntyp2')})}",
+                        "rufnummer": "${data:jsonPath('$.rufnummer2'):isEmpty():ifElse('null',${data:jsonPath('$.rufnummer2')})}"
+                    },
+                    {
+                        "nummerntyp": "${data:jsonPath('$.nummerntyp3'):isEmpty():ifElse('null',${data:jsonPath('$.nummerntyp3')})}",
+                        "rufnummer": "${data:jsonPath('$.rufnummer3'):isEmpty():ifElse('null',${data:jsonPath('$.rufnummer3')})}"
+                    },
+                    {
+                        "nummerntyp": "${data:jsonPath('$.nummerntyp4'):isEmpty():ifElse('null',${data:jsonPath('$.nummerntyp4')})}",
+                        "rufnummer": "${data:jsonPath('$.rufnummer4'):isEmpty():ifElse('null',${data:jsonPath('$.rufnummer4')})}"
+                    }
+                ]
+            }
+        },
+        "empfaenger": {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+            "rollencodetyp": "BDEW"
+        },
+        "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}",
+        "auftragsReferenz": "freitext1": "${data:jsonPath('$.auftragsReferenz'):isEmpty():ifElse('null',${data:jsonPath('$.auftragsReferenz')})}"
+    }
+  }
+}
