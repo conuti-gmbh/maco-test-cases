@@ -1,26 +1,9 @@
 {
-  "data": {
-    "stammdaten": {
-      "MARKTLOKATION": [
-        {
-          "boTyp": "MARKTLOKATION",
-          "versionStruktur": "1",
-          "energierichtung": "${data:jsonPath('$.energierichtung'):isEmpty():ifElse('null',${data:jsonPath('$.energierichtung')})}"
-        }
-      ]
-    },
     "transaktionsdaten": {
-      "datenaustauschreferenz": "24295844",
       "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
-      "absender": {
-        "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"
-      },
-      "empfaenger": {
-        "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
-
-      },
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
       "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}",
       "vorgangsreferenznummer": "${data:jsonPath('$.vorgangsreferenznummer'):isEmpty():ifElse('null',${data:jsonPath('$.vorgangsreferenznummer')})}"
     }
-  }
 }
