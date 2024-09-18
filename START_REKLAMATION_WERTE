@@ -1,0 +1,46 @@
+{
+     "stammdaten": {
+      "MESSLOKATION": [
+        {
+          "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+        }
+      ],
+      "ANFRAGE": [
+        {
+          "lokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie'):isEmpty():ifElse('null',${data:jsonPath('$.anfragekategorie')})}",
+          "anfragetyp": "${data:jsonPath('$.anfragetyp'):isEmpty():ifElse('null',${data:jsonPath('$.anfragetyp')})}",
+          "gueltigAb": "${data:jsonPath('$.gueltigAb'):isEmpty():ifElse('null',${data:jsonPath('$.gueltigAb')})}"
+        }
+      ],
+      "REKLAMATION": [
+        {
+          "lokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+          "obiskennzahl": "${data:jsonPath('$.obiskennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obiskennzahl')})}",
+          "reklamationsgrund": "${data:jsonPath('$.reklamationsgrund'):isEmpty():ifElse('null',${data:jsonPath('$.reklamationsgrund')})}",
+          "reklamationsgrundBemerkung": {
+            "bemerkung1": "${data:jsonPath('$.bemerkung1'):isEmpty():ifElse('null',${data:jsonPath('$.bemerkung1')})}",
+            "bemerkung2": "${data:jsonPath('$.bemerkung2'):isEmpty():ifElse('null',${data:jsonPath('$.bemerkung2')})}"
+          }
+        }
+      ],
+      "AUFTRAG": [
+        {
+          "positionsdaten": [
+            {
+              "obiskennzahl": "${data:jsonPath('$.obiskennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obiskennzahl')})}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger":"${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "angebotsreferenz": "${data:jsonPath('$.angebotsreferenz'):isEmpty():ifElse('null',${data:jsonPath('$.angebotsreferenz')})}"
+    }
+}
