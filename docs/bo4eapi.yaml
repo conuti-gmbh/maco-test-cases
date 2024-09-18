@@ -32,18 +32,15 @@ info:
     **Version 1.0.1** - *08. August 2024* - _Autor: DAS_
 
     - Hinzufügen von mehrsprachigen Beschreibungen und Changelog.
-
     - Anpassung der Schema-Beschreibungen in Deutsch und Englisch.
 
-
     **Version 1.0** - *01. August 2024* - _Autor: DAS_
-
 
     - Initiale Version der API-Dokumentation.
 
 
     </details>
-  version: 1.0.1
+  version: 1.0.5
 servers:
   - url: "https://api.macoapp.de"
     description: Mock-Umgebung | Mock environment
