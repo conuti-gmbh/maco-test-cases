@@ -19,6 +19,7 @@ info:
 
     **Version 1.0.5** - *18. September 2024* - _Autor: DAS_
     - Update Default Command auf SAP_ statt NOCODB_
+    - Update Default Beispiel MaloId auf 50074561188
 
     **Version 1.0.4** - *13. September 2024* - _Autor: Tu Quy Nguyen_
     - Update Formatierungen
@@ -229,7 +230,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
@@ -301,7 +302,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
@@ -789,7 +790,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
@@ -846,7 +847,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
@@ -903,7 +904,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
@@ -1074,7 +1075,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (Gültig ab) | Date (Valid from)
           in: query
@@ -1138,7 +1139,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (ab) | Date (from)
           in: query
@@ -1199,7 +1200,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (ab) | Date (from)
           in: query
@@ -1267,7 +1268,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (ab) | Date (from)
           in: query
@@ -1328,7 +1329,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (ab) | Date (from)
           in: query
@@ -1395,7 +1396,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (ab) | Date (from)
           in: query
@@ -1456,7 +1457,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Datum (ab) | Date (from)
           in: query
@@ -1522,7 +1523,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -1566,7 +1567,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -1610,7 +1611,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -1654,7 +1655,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -1798,7 +1799,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -1842,7 +1843,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -1884,7 +1885,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -1934,7 +1935,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -1978,7 +1979,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -2056,7 +2057,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -2135,7 +2136,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -2214,7 +2215,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -2293,7 +2294,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -2371,7 +2372,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -2415,7 +2416,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -2465,7 +2466,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -2509,7 +2510,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "50074561188"
+            example: "74018657187"
         - name: parameter2
           description: Stichtag | Key date
           in: query
@@ -2544,7 +2545,7 @@ components:
           MARKTLOKATION:
             - boTyp: MARKTLOKATION
               versionStruktur: "1"
-              marktlokationsId: "50074561188"
+              marktlokationsId: "74018657187"
               sparte: STROM
               energierichtung: AUSSP
           NETZNUTZUNGSVERTRAG:
@@ -2553,12 +2554,12 @@ components:
               vertragsart: NETZNUTZUNGSVERTRAG
               sparte: STROM
               vertragsende: "2024-06-30T22:00:00Z"
-              lokationsId: "50074561188"
+              lokationsId: "74018657187"
               lokationsTyp: MALO
           BILANZIERUNG:
             - boTyp: BILANZIERUNG
               versionStruktur: "1"
-              marktlokationsId: "50074561188"
+              marktlokationsId: "74018657187"
         transaktionsdaten:
           datenaustauschreferenz: "117398"
           sparte: STROM
@@ -2724,7 +2725,7 @@ components:
           MARKTLOKATION:
             - boTyp: MARKTLOKATION
               versionStruktur: "1"
-              marktlokationsId: "50074561188"
+              marktlokationsId: "74018657187"
               sparte: STROM
               energierichtung: AUSSP
           NETZNUTZUNGSVERTRAG:
@@ -2733,12 +2734,12 @@ components:
               vertragsart: NETZNUTZUNGSVERTRAG
               sparte: STROM
               vertragsende: "2024-06-30T22:00:00Z"
-              lokationsId: "50074561188"
+              lokationsId: "74018657187"
               lokationsTyp: MALO
           BILANZIERUNG:
             - boTyp: BILANZIERUNG
               versionStruktur: "1"
-              marktlokationsId: "50074561188"
+              marktlokationsId: "74018657187"
               bilanzierungsende: "2024-06-30T22:00:00Z"
         transaktionsdaten:
           datenaustauschreferenz: "745100"
@@ -3177,7 +3178,7 @@ components:
           example: "110000000605"
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         energierichtung:
@@ -3243,7 +3244,7 @@ components:
       properties:
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         zaehlernummer:
@@ -3264,7 +3265,7 @@ components:
       properties:
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         zaehlernummer:
@@ -3291,7 +3292,7 @@ components:
       properties:
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         zaehlernummer:
@@ -3326,12 +3327,12 @@ components:
           default: "123456789"
         lokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         energieverbrauch:
           $ref: "#/components/schemas/ENERGIEVERBRAUCH"
         lokationsTyp:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         fertigstellungsdatum:
           type: string
           default: "2024-04-01T07:40:00Z"
@@ -3574,10 +3575,10 @@ components:
           default: "2024-04-01T07:40:00Z"
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         lokationsTyp:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         vertragsartMsb:
           type: string
           default: "SOME_STRING"
@@ -3762,7 +3763,7 @@ components:
       properties:
         marktmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         energierichtung:
@@ -3850,7 +3851,7 @@ components:
           default: "9900321000005"
         marktmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         nachrichtendatum:
           type: string
           default: "SOME_STRING"
@@ -3863,15 +3864,15 @@ components:
       properties:
         marktmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         lokationsTyp:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         anfragekategorie:
           type: string
           default: "SOME_STRING"
@@ -4027,7 +4028,7 @@ components:
       properties:
         marktmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         energierichtung:
@@ -4046,10 +4047,10 @@ components:
           default: "SOME_STRING"
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         lokationsTyp:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         tranchenId:
           type: string
           default: "SOME_STRING"
@@ -4104,10 +4105,10 @@ components:
       properties:
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         lokationsTyp:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         startdatum:
           type: string
           default: "2024-01-01T07:40:00Z"
@@ -4143,7 +4144,7 @@ components:
       properties:
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         absender:
@@ -4164,7 +4165,7 @@ components:
       properties:
         marktmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         artikelId:
@@ -4191,7 +4192,7 @@ components:
       properties:
         netzmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         artikelId:
           type: string
           default: "SOME_STRING"
@@ -4227,10 +4228,10 @@ components:
       properties:
         marktmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         netzmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         lokationszuordnungNelo:
           type: string
           default: "SOME_STRING"
@@ -4278,7 +4279,7 @@ components:
       properties:
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         artikelId:
           type: string
           default: "SOME_STRING"
@@ -4311,7 +4312,7 @@ components:
       properties:
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         energierichtung:
           $ref: "#/components/schemas/Energierichtung"
         bilanzierungsgebiet:
@@ -4328,7 +4329,7 @@ components:
           default: "2024-04-01T07:40:00Z"
         lokationsTyp:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         bezeichnung:
           type: string
           default: "SOME_STRING"
@@ -4396,7 +4397,7 @@ components:
       properties:
         marktmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         energierichtung:
@@ -4436,7 +4437,7 @@ components:
           default: "2024-04-01T07:40:00Z"
         lokationsTyp:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         zaehlernummer:
           type: string
           default: "SOME_STRING"
@@ -4520,10 +4521,10 @@ components:
           default: "DE12345678901234567890123456789012"
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         lokationsTyp:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         anfragekategorie:
           type: string
           default: "SOME_STRING"
@@ -4548,7 +4549,7 @@ components:
       properties:
         marktmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         Postleitzahl:
@@ -4595,7 +4596,7 @@ components:
           default: "SOME_STRING"
         lokationsTyp:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         anfragekategorie:
           type: string
           default: "SOME_STRING"
@@ -4654,10 +4655,10 @@ components:
           default: "SOME_STRING"
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         lokationsTyp:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         anfragekategorie:
           type: string
           default: "SOME_STRING"
@@ -4676,7 +4677,7 @@ components:
       properties:
         marktmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         ename1:
@@ -4988,7 +4989,7 @@ components:
       properties:
         marktmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         statusObjekt:
@@ -5332,7 +5333,7 @@ components:
       properties:
         marktmarktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         sparte:
           $ref: "#/components/schemas/Sparte"
         energierichtung:
@@ -5462,7 +5463,7 @@ components:
           default: "2024-04-01T07:40:00Z"
         lokationsTyp:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         haushaltskunde:
           type: string
           default: "SOME_STRING"
@@ -5630,7 +5631,7 @@ components:
           $ref: "#/components/schemas/Sparte"
         marktlokationsId:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         absender:
           type: string
           default: "9900321000005"
@@ -6036,19 +6037,19 @@ components:
           default: "2024-04-01T07:40:00Z"
         messwertstatus1:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         obiskennzahl1:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         nutzungszeitpunkt:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         wert1:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         position1:
           type: string
-          default: "50074561188"
+          default: "74018657187"
         ablesedatum:
           type: string
           default: "2024-04-01T07:40:00Z"
