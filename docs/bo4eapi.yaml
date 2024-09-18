@@ -17,9 +17,19 @@ info:
 
     <summary>Changelog</summary>
 
+    **Version 1.0.5** - *18. September 2024* - _Autor: DAS_
+    - Update Default Command auf SAP_ statt NOCODB_
+
+    **Version 1.0.4** - *13. September 2024* - _Autor: Tu Quy Nguyen_
+    - Update Formatierungen
+
+    **Version 1.0.3** - *28. August 2024* - _Autor: Tu Quy Nguyen_
+    - Aktualisierung Parameter LESEN Schnittstellen
+
+    **Version 1.0.2** - *20. August 2024* - _Autor: Tu Quy Nguyen_
+    - Schema ergänzt für START_N_BILA_REL_AEND_VON_NB, START_N_BILA_REL_AEND_VON_LF, START_N_BILA_REL_AEND_VON_LF, START_N_BILA_REL_AEND_VON_LF, START_N_BILA_REL_AEND_VON_LF, START_MESSWERTUEBERMITTLUNG, START_MALOIDENT, START_LIEFERENDE, START_KUENDIGUNG
 
     **Version 1.0.1** - *08. August 2024* - _Autor: DAS_
-
 
     - Hinzufügen von mehrsprachigen Beschreibungen und Changelog.
 
@@ -86,7 +96,7 @@ paths:
           schema:
             type: string
             default: LESEN_EVENT_START_KUENDIGUNG
-            example: NOCODB_LESEN_EVENT_START_KUENDIGUNG
+            example: SAP_LESEN_EVENT_START_KUENDIGUNG
         - name: parameter1
           description: >-
             BelegId des Datensatzes in der Tabelle im Backend | DocumentId of
@@ -150,7 +160,7 @@ paths:
           schema:
             type: string
             default: LESEN_EVENT_START_LIEFERBEGINN
-            example: NOCODB_LESEN_EVENT_START_LIEFERBEGINN
+            example: SAP_LESEN_EVENT_START_LIEFERBEGINN
         - name: parameter1
           description: >-
             BelegId des Datensatzes in der Tabelle im Backend | DocumentId of
@@ -355,7 +365,7 @@ paths:
           schema:
             type: string
             default: LESEN_KOMMUNIKATIONSDATEN_BASIS
-            example: NOCODB_LESEN_KOMMUNIKATIONSDATEN_BASIS
+            example: SAP_LESEN_KOMMUNIKATIONSDATEN_BASIS
         - name: parameter1
           description: ILN Nummer | ILN number
           in: query
@@ -412,7 +422,7 @@ paths:
           schema:
             type: string
             default: LESEN_MARKTTEILNEHMER_ABSENDER
-            example: NOCODB_LESEN_MARKTTEILNEHMER_ABSENDER
+            example: SAP_LESEN_MARKTTEILNEHMER_ABSENDER
         - name: parameter1
           description: ILN Nummer | ILN number
           in: query
@@ -469,7 +479,7 @@ paths:
           schema:
             type: string
             default: LESEN_MARKTTEILNEHMER_EMPFAENGER
-            example: NOCODB_LESEN_MARKTTEILNEHMER_EMPFAENGER
+            example: SAP_LESEN_MARKTTEILNEHMER_EMPFAENGER
         - name: parameter1
           description: ILN Nummer | ILN number
           in: query
@@ -775,7 +785,7 @@ paths:
           schema:
             type: string
             default: LESEN_ENERGIELIEFERVERTRAG_BASIS
-            example: NOCODB_LESEN_ENERGIELIEFERVERTRAG_BASIS
+            example: SAP_LESEN_ENERGIELIEFERVERTRAG_BASIS
         - name: parameter1
           description: LokationsId | Location ID
           in: query
@@ -946,7 +956,7 @@ paths:
           schema:
             type: string
             default: LESEN_MESSSTELLENBETRIEBSVERTRAG_BASIS
-            example: NOCODB_LESEN_MESSSTELLENBETRIEBSVERTRAG_BASIS
+            example: SAP_LESEN_MESSSTELLENBETRIEBSVERTRAG_BASIS
         - name: parameter1
           description: LokationsId | Location ID
           in: query
@@ -1003,7 +1013,7 @@ paths:
           schema:
             type: string
             default: LESEN_AVIS_BASIS
-            example: NOCODB_LESEN_AVIS_BASIS
+            example: SAP_LESEN_AVIS_BASIS
         - name: parameter1
           description: avisNummer | avis Number
           in: query
@@ -1124,7 +1134,7 @@ paths:
           schema:
             type: string
             default: LESEN_ENERGIEMENGE_LASTGANG
-            example: NOCODB_LESEN_ENERGIEMENGE_LASTGANG
+            example: SAP_LESEN_ENERGIEMENGE_LASTGANG
         - name: parameter1
           description: LokationsId | Location ID
           in: query
@@ -1253,7 +1263,7 @@ paths:
           schema:
             type: string
             default: LESEN_ENERGIEMENGE_ZAEHLERSTAND
-            example: NOCODB_LESEN_ENERGIEMENGE_ZAEHLERSTAND
+            example: SAP_LESEN_ENERGIEMENGE_ZAEHLERSTAND
         - name: parameter1
           description: LokationsId | Location ID
           in: query
@@ -1381,7 +1391,7 @@ paths:
           schema:
             type: string
             default: LESEN_ENERGIEMENGE_ENERGIEMENGE
-            example: NOCODB_LESEN_ENERGIEMENGE_ENERGIEMENGE
+            example: SAP_LESEN_ENERGIEMENGE_ENERGIEMENGE
         - name: parameter1
           description: LokationsId | Location ID
           in: query
@@ -1508,7 +1518,7 @@ paths:
           schema:
             type: string
             default: LESEN_MARKTLOKATION_BASIS
-            example: NOCODB_LESEN_MARKTLOKATION_BASIS
+            example: SAP_LESEN_MARKTLOKATION_BASIS
         - name: parameter1
           description: LokationsId | Location ID
           in: query
@@ -1690,7 +1700,7 @@ paths:
           schema:
             type: string
             default: LESEN_MESSLOKATION_BASIS
-            example: NOCODB_LESEN_MESSLOKATION_BASIS
+            example: SAP_LESEN_MESSLOKATION_BASIS
         - name: parameter1
           description: LokationsId | Location ID
           in: query
@@ -1784,7 +1794,7 @@ paths:
           schema:
             type: string
             default: LESEN_NETZLOKATION_BASIS
-            example: NOCODB_LESEN_NETZLOKATION_BASIS
+            example: SAP_LESEN_NETZLOKATION_BASIS
         - name: parameter1
           description: LokationsId | Location ID
           in: query
@@ -1828,7 +1838,7 @@ paths:
           schema:
             type: string
             default: LESEN_TRANCHE_BASIS
-            example: NOCODB_LESEN_TRANCHE_BASIS
+            example: SAP_LESEN_TRANCHE_BASIS
         - name: parameter1
           description: LokationsId | Location ID
           in: query
@@ -1920,7 +1930,7 @@ paths:
           schema:
             type: string
             default: LESEN_LOKATIONSBUENDEL_BASIS
-            example: NOCODB_LESEN_LOKATIONSBUENDEL_BASIS
+            example: SAP_LESEN_LOKATIONSBUENDEL_BASIS
         - name: parameter1
           description: LokationsId | Location ID
           in: query
@@ -2357,7 +2367,7 @@ paths:
           schema:
             type: string
             default: LESEN_TECHNISCHE_RESSOURCE_BASIS
-            example: NOCODB_LESEN_TECHNISCHE_RESSOURCE_BASIS
+            example: SAP_LESEN_TECHNISCHE_RESSOURCE_BASIS
         - name: parameter1
           description: LokationsId | Location ID
           in: query
@@ -2451,7 +2461,7 @@ paths:
           schema:
             type: string
             default: LESEN_STEUERBARE_RESSOURCE_BASIS
-            example: NOCODB_LESEN_STEUERBARE_RESSOURCE_BASIS
+            example: SAP_LESEN_STEUERBARE_RESSOURCE_BASIS
         - name: parameter1
           description: LokationsId | Location ID
           in: query
