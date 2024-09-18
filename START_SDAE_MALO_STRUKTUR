@@ -1,0 +1,36 @@
+{
+    "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+        }
+      ],
+      "MESSLOKATION": [
+        {
+          "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "sparte": "${data:jsonPath('$.bezeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.bezeichnung')})}"
+        },
+        {
+          "messlokationsId": "${data:jsonPath('$.messlokationsId1'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId1')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+        }
+      ],
+      "NETZNUTZUNGSVERTRAG": [
+        {
+          "vertragsart": "${data:jsonPath('$.vertragsart'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsart')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsbeginn')})}",
+          "lokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+
+      "gueltigAb": "${data:jsonPath('$.gueltigAb'):isEmpty():ifElse('null',${data:jsonPath('$.gueltigAb')})}"
+    }
+}
