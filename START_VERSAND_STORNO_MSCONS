@@ -1,13 +1,4 @@
 {
-  "stammdaten": {
-  "ENERGIEMENGE": [
-        {
-          "boTyp": "ENERGIEMENGE",
-          "versionStruktur": "1",
-          "lokationsId": "${data:jsonPath('$.lokationsId')}"
-            }
-          ]
-    },
       "transaktionsdaten": {
       "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
       "absender":{"rollencodenummer":"${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"},
