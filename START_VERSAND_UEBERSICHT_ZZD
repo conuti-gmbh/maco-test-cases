@@ -2,7 +2,7 @@
     "stammdaten": {
       "ZAEHLZEITDEFINITION": [
         {
-          "beginndatum": "START_VERSAND_ABR_BILA${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+          "beginndatum": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
           "version": "${data:jsonPath('$.version'):isEmpty():ifElse('null',${data:jsonPath('$.version')})}",
           "notwendigkeit": "${data:jsonPath('$.notwendigkeit'):isEmpty():ifElse('null',${data:jsonPath('$.notwendigkeit')})}",
           "zaehlzeiten": [

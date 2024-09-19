@@ -1,0 +1,24 @@
+{
+    "stammdaten": {
+      "SCHALTZEITDEFINITION": [
+        {
+          "beginndatum": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+          "version": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+          "notwendigkeit": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+          "schaltzeiten": [
+            {
+              "code": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+              "haeufigkeit": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+              "uebermittelbarkeit": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+      "absender": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+      "empfaenger":"${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+      "anfrageReferenz": "${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}"
+    }
+}
