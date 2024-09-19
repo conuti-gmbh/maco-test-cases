@@ -1,0 +1,28 @@
+{
+    "stammdaten": {
+      "ANFRAGE": [
+        {
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie'):isEmpty():ifElse('null',${data:jsonPath('$.anfragekategorie')})}",
+          "anfragetyp": "${data:jsonPath('$.anfragetyp'):isEmpty():ifElse('null',${data:jsonPath('$.anfragetyp')})}"
+        }
+      ],
+      "AUFTRAG": [
+        {
+          "positionsdaten": [
+            {
+              "positionsnummer": ${data:jsonPath('$.positionsnummer'):isEmpty():ifElse('null',${data:jsonPath('$.positionsnummer')})},
+              "startdatum": "${data:jsonPath('$.startdatum'):isEmpty():ifElse('null',${data:jsonPath('$.startdatum')})}",
+              "enddatum": "${data:jsonPath('$.enddatum'):isEmpty():ifElse('null',${data:jsonPath('$.enddatum')})}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
+    }
+}
