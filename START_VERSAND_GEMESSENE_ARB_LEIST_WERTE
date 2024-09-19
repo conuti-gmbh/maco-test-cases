@@ -1,0 +1,33 @@
+{
+    "stammdaten": {
+      "ENERGIEMENGE": [
+        {
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+          "energieverbrauch": [
+            {
+              "messwertstatus": "${data:jsonPath('$.messwertstatus'):isEmpty():ifElse('null',${data:jsonPath('$.messwertstatus')})}",
+              "obiskennzahl": "${data:jsonPath('$.obiskennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obiskennzahl')})}",
+              "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse('null',${data:jsonPath('$.wert')})},
+              "leistungsperiode": "${data:jsonPath('$.leistungsperiode'):isEmpty():ifElse('null',${data:jsonPath('$.leistungsperiode')})}",
+              "position": ${data:jsonPath('$.position'):isEmpty():ifElse('null',${data:jsonPath('$.position')})}
+            },
+            {
+              "messwertstatus": "${data:jsonPath('$.messwertstatus2'):isEmpty():ifElse('null',${data:jsonPath('$.messwertstatus2')})}",
+              "obiskennzahl": "${data:jsonPath('$.obiskennzahl2'):isEmpty():ifElse('null',${data:jsonPath('$.obiskennzahl2')})}",
+              "wert": ${data:jsonPath('$.wert2'):isEmpty():ifElse('null',${data:jsonPath('$.wert2')})},
+              "startdatum": "${data:jsonPath('$.startdatum'):isEmpty():ifElse('null',${data:jsonPath('$.startdatum')})}",
+              "enddatum": "${data:jsonPath('$.enddatum'):isEmpty():ifElse('null',${data:jsonPath('$.enddatum')})}",
+              "position": ${data:jsonPath('$.position2'):isEmpty():ifElse('null',${data:jsonPath('$.position2')})}
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "anfrageReferenz": "${data:jsonPath('$.anfrageReferenz'):isEmpty():ifElse('null',${data:jsonPath('$.anfrageReferenz')})}"
+    }
+}
