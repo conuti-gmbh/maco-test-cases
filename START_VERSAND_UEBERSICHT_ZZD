@@ -1,0 +1,40 @@
+{
+    "stammdaten": {
+      "ZAEHLZEITDEFINITION": [
+        {
+          "beginndatum": "START_VERSAND_ABR_BILA${data:jsonPath('$.beginndatum'):isEmpty():ifElse('null',${data:jsonPath('$.beginndatum')})}",
+          "version": "${data:jsonPath('$.version'):isEmpty():ifElse('null',${data:jsonPath('$.version')})}",
+          "notwendigkeit": "${data:jsonPath('$.notwendigkeit'):isEmpty():ifElse('null',${data:jsonPath('$.notwendigkeit')})}",
+          "zaehlzeiten": [
+            {
+              "code": "${data:jsonPath('$.code'):isEmpty():ifElse('null',${data:jsonPath('$.code')})}",
+              "haeufigkeit": "${data:jsonPath('$.haeufigkeit'):isEmpty():ifElse('null',${data:jsonPath('$.haeufigkeit')})}",
+              "uebermittelbarkeit": "${data:jsonPath('$.uebermittelbarkeit'):isEmpty():ifElse('null',${data:jsonPath('$.uebermittelbarkeit')})}",
+              "ermittlungLeistungsmaximum": "${data:jsonPath('$.ermittlungLeistungsmaximum'):isEmpty():ifElse('null',${data:jsonPath('$.ermittlungLeistungsmaximum')})}",
+              "istBestellbar": ${data:jsonPath('$.istBestellbar'):isEmpty():ifElse('null',${data:jsonPath('$.istBestellbar')})},
+              "typ": "${data:jsonPath('$.typ'):isEmpty():ifElse('null',${data:jsonPath('$.typ')})}",
+              "beschreibungTyp": "${data:jsonPath('$.beschreibungTyp'):isEmpty():ifElse('null',${data:jsonPath('$.beschreibungTyp')})}"
+            }
+          ],
+          "zaehlzeitregister": [
+            {
+              "zaehlzeitDefinition": "${data:jsonPath('$.zaehlzeitDefinition'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlzeitDefinition')})}",
+              "register": "${data:jsonPath('$.register'):isEmpty():ifElse('null',${data:jsonPath('$.register')})}",
+              "schwachlastfaehig": "${data:jsonPath('$.schwachlastfaehig'):isEmpty():ifElse('null',${data:jsonPath('$.schwachlastfaehig')})}"
+            },
+            {
+              "zaehlzeitDefinition": "${data:jsonPath('$.zaehlzeitDefinition1'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlzeitDefinition1')})}",
+              "register": "${data:jsonPath('$.register1'):isEmpty():ifElse('null',${data:jsonPath('$.register1')})}",
+              "schwachlastfaehig": "${data:jsonPath('$.schwachlastfaehig1'):isEmpty():ifElse('null',${data:jsonPath('$.schwachlastfaehig1')})}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "anfrageReferenz": "${data:jsonPath('$.anfrageReferenz'):isEmpty():ifElse('null',${data:jsonPath('$.anfrageReferenz')})}"
+    }
+}
