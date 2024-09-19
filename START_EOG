@@ -36,9 +36,13 @@
             }
           ],
           "regelzone": "${data:jsonPath('$.regelzone'):isEmpty():ifElse('null',${data:jsonPath('$.regelzone')})}",
+          "marktgebiet": "${data:jsonPath('$.regelzone'):isEmpty():ifElse('null',${data:jsonPath('$.regelzone')})}",
           "zaehlwerke": [
             {
               "obisKennzahl": "${data:jsonPath('$.obisKennzahlMalo'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahlMalo')})}",
+              "konzessionsabgabe": {
+                "satz": "${data:jsonPath('$.obisKennzahlMalo'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahlMalo')})}"
+              },
               "verwendungszwecke": [
                 {
                   "marktrolle": "${data:jsonPath('$.verwendungszweckMarktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungszweckMarktrolle')})}",
@@ -63,7 +67,35 @@
             }
           ],
           "sperrstatus": "${data:jsonPath('$.sperrstatus'):isEmpty():ifElse('null',${data:jsonPath('$.sperrstatus')})}",
+          "eigentuemer": {
+            "name1": "${data:jsonPath('$.name1e'):isEmpty():ifElse('null',${data:jsonPath('$.name1e')})}",
+            "gewerbekennzeichnung": ${data:jsonPath('$.sperrstatus'):isEmpty():ifElse('null',${data:jsonPath('$.sperrstatus')})},
+            "geschaeftspartnerrolle": [
+              "${data:jsonPath('$.sperrstatus'):isEmpty():ifElse('null',${data:jsonPath('$.sperrstatus')})}"
+            ],
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.postleitzahle'):isEmpty():ifElse('null',${data:jsonPath('$.postleitzahle')})}",
+              "ort": "${data:jsonPath('$.orte'):isEmpty():ifElse('null',${data:jsonPath('$.orte')})}",
+              "strasse": "${data:jsonPath('$.strassee'):isEmpty():ifElse('null',${data:jsonPath('$.strassee')})}.",
+              "hausnummer": "${data:jsonPath('$.hausnummere'):isEmpty():ifElse('null',${data:jsonPath('$.hausnummere')})}",
+              "landescode": "${data:jsonPath('$.landescodee'):isEmpty():ifElse('null',${data:jsonPath('$.landescodee')})}"
+            }
+          },
+          "hausverwalter": {
+            "name1": "${data:jsonPath('$.name1h'):isEmpty():ifElse('null',${data:jsonPath('$.name1h')})}",
+            "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnungh'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnungh')})},
+            "geschaeftspartnerrolle": [
+              "${data:jsonPath('$.geschaeftspartnerrolleh'):isEmpty():ifElse('null',${data:jsonPath('$.geschaeftspartnerrolleh')})}"
+            ],
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.postleitzahlh'):isEmpty():ifElse('null',${data:jsonPath('$.postleitzahlh')})}",
+              "ort": "${data:jsonPath('$.orth'):isEmpty():ifElse('null',${data:jsonPath('$.orth')})}",
+              "strasse": "${data:jsonPath('$.strasseh'):isEmpty():ifElse('null',${data:jsonPath('$.strasseh')})}.",
+              "hausnummer": "${data:jsonPath('$.hausnummerh'):isEmpty():ifElse('null',${data:jsonPath('$.hausnummerh')})}",
+              "landescode": "${data:jsonPath('$.landescodee'):isEmpty():ifElse('null',${data:jsonPath('$.landescodee')})}"
+            }
         }
+      }
       ],
       "MESSLOKATION": [
         {
@@ -72,6 +104,7 @@
           "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
           "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
           "netzebenemessung": "${data:jsonPath('$.netzebenemessung'):isEmpty():ifElse('null',${data:jsonPath('$.netzebenemessung')})}",
+          "gasqualitaet": "${data:jsonPath('$.gasqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.gasqualitaet')})}",
           "ablesekartenempfaenger": {
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
@@ -117,13 +150,22 @@
               "verfahren": "${data:jsonPath('$.verfahren'):isEmpty():ifElse('null',${data:jsonPath('$.verfahren')})}",
               "profilart": "${data:jsonPath('$.profilart'):isEmpty():ifElse('null',${data:jsonPath('$.profilart')})}",
               "einspeisung": ${data:jsonPath('$.einspeisung'):isEmpty():ifElse('null',${data:jsonPath('$.einspeisung')})},
-              "herausgeber": "${data:jsonPath('$.herausgeber'):isEmpty():ifElse('null',${data:jsonPath('$.herausgeber')})}"
+              "herausgeber": "${data:jsonPath('$.herausgeber'):isEmpty():ifElse('null',${data:jsonPath('$.herausgeber')})}",
+              "tagesparameter": {
+                "klimazone": "${data:jsonPath('$.klimazone'):isEmpty():ifElse('null',${data:jsonPath('$.klimazone')})}",
+                "herausgeber": "${data:jsonPath('$.herausgebertp'):isEmpty():ifElse('null',${data:jsonPath('$.herausgebertp')})}"
+              }
             }
           ],
           "bilanzierungsbeginn": "${data:jsonPath('$.bilanzierungsbeginn'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsbeginn')})}",
+          "bilanzierungsende": "${data:jsonPath('$.bilanzierungsende'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzierungsende')})}",
+          "bilanzkreis": "${data:jsonPath('$.bilanzkreis'):isEmpty():ifElse('null',${data:jsonPath('$.bilanzkreis')})}",
           "jahresverbrauchsprognose": {
             "wert": "${data:jsonPath('$.jvpWert'):isEmpty():ifElse('null',${data:jsonPath('$.jvpWert')})}",
             "einheit": "${data:jsonPath('$.jvpEinheit'):isEmpty():ifElse('null',${data:jsonPath('$.jvpEinheit')})}"
+          },
+          "kundenwert": {
+            "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse('null',${data:jsonPath('$.wert')})}
           },
           "aggregationsverantwortung": "${data:jsonPath('$.aggregationsverantwortung'):isEmpty():ifElse('null',${data:jsonPath('$.aggregationsverantwortung')})}",
           "zeitreihentyp": "${data:jsonPath('$.zeitreihentyp'):isEmpty():ifElse('null',${data:jsonPath('$.zeitreihentyp')})}",
@@ -144,6 +186,15 @@
           "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
           "lokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
           "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+          "vertragspartner2": [
+            {
+              "name1": "${data:jsonPath('$.name1vp2'):isEmpty():ifElse('null',${data:jsonPath('$.name1vp2')})}",
+              "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnungvp2'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnungvp2')})},
+              "geschaeftspartnerrolle": [
+                "${data:jsonPath('$.geschaeftspartnerrollevp2'):isEmpty():ifElse('null',${data:jsonPath('$.geschaeftspartnerrollevp2')})}"
+              ]
+            }
+          ],
           "vertragskonditionen": {
             "haushaltskunde": ${data:jsonPath('$.haushaltskunde'):isEmpty():ifElse('null',${data:jsonPath('$.haushaltskunde')})},
             "netznutzungsabrechnung": {
@@ -155,7 +206,21 @@
             "netznutzungsabrechnungsvariante": "${data:jsonPath('$.netznutzungsabrechnungsvariante'):isEmpty():ifElse('null',${data:jsonPath('$.netznutzungsabrechnungsvariante')})}",
             "netznutzungsabrechnungsgrundlage": "${data:jsonPath('$.netznutzungsabrechnungsgrundlage'):isEmpty():ifElse('null',${data:jsonPath('$.netznutzungsabrechnungsgrundlage')})}",
             "naechstenetznutzungsabrechnung": "${data:jsonPath('$.naechstenetznutzungsabrechnung'):isEmpty():ifElse('null',${data:jsonPath('$.naechstenetznutzungsabrechnung')})}"
-          }
+          },
+          "gemeinderabatt": ${data:jsonPath('$.gemeinderabatt'):isEmpty():ifElse('null',${data:jsonPath('$.gemeinderabatt')})},
+          "korrespondenzpartner": {
+            "name1": "${data:jsonPath('$.name1kp'):isEmpty():ifElse('null',${data:jsonPath('$.name1kp')})}",
+            "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnungkp'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnungkp')})},
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.postleitzahlkp'):isEmpty():ifElse('null',${data:jsonPath('$.postleitzahlkp')})}",
+              "ort": "${data:jsonPath('$.ortkp'):isEmpty():ifElse('null',${data:jsonPath('$.ortkp')})}",
+              "strasse": "${data:jsonPath('$.strassekp'):isEmpty():ifElse('null',${data:jsonPath('$.strassekp')})}.",
+              "hausnummer": "${data:jsonPath('$.hausnummerkp'):isEmpty():ifElse('null',${data:jsonPath('$.hausnummerkp')})}",
+              "landescode": "${data:jsonPath('$.landescodekp'):isEmpty():ifElse('null',${data:jsonPath('$.landescodekp')})}"
+            }
+          },
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
         }
       ],
       "MESSSTELLENBETRIEBSVERTRAG": [
@@ -228,6 +293,7 @@
           ],
           "fernschaltung": "${data:jsonPath('$.fernschaltung'):isEmpty():ifElse('null',${data:jsonPath('$.fernschaltung')})}",
           "messwerterfassung": "${data:jsonPath('$.messwerterfassung'):isEmpty():ifElse('null',${data:jsonPath('$.messwerterfassung')})}",
+          "zaehlergroesse": "${data:jsonPath('$.zaehlergroesse'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlergroesse')})}",
           "geraete": [
             {
               "geraetenummer": "${data:jsonPath('$.geraetenummer'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer')})}"
