@@ -1,0 +1,45 @@
+{
+"stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+        }
+      ],
+      "MESSLOKATION": [
+        {
+          "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}"
+    }
+],
+"NETZLOKATION": [
+    {
+      "netzlokationsId": "${data:jsonPath('$.netzlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.netzlokationsId')})}"
+}
+],
+"TECHNISCHE_RESSOURCE": [
+    {
+      "ressourcenId": "${data:jsonPath('$.ressourcenId'):isEmpty():ifElse('null',${data:jsonPath('$.ressourcenId')})}"
+}
+],
+"STEUERBARE_RESSOURCE": [
+    {
+      "ressourcenId": "${data:jsonPath('$.ressourcenId'):isEmpty():ifElse('null',${data:jsonPath('$.ressourcenId')})}"
+}
+],
+"NETZNUTZUNGSVERTRAG": [
+        {
+          "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsbeginn')})}"
+        }
+    ]
+},
+"transaktionsdaten": {
+    "sparte" :"${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrund')})}",
+    "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}",
+    "absender": {
+        "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}"
+      },
+      "empfaenger": {
+        "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
+      }
+}
+}
