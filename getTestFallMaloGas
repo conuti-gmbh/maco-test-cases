@@ -10,6 +10,7 @@
     "bilanzierungsgebiet":"11YR00000003039P",
     "regelzone":"10YDE-RWENET---I",
     "messtechnischeEinordnung":"IMS",
+    "marktgebiet": "37Y005053MH0000R",
     "netzbetreiberCodeNr": "9870013800007",
     "grundversorgerCodeNr": "9903790000002",
     "sperrstatus": "ENTSPERRT",  

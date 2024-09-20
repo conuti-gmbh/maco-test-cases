@@ -27,7 +27,13 @@
     "register":"XYZ"
     }
     }
-    ]
+    ],
+    "zaehlergroesse": "GAS_G4",
+          "geraete": [
+            {
+              "geraetenummer": "7AMX2002565930"
+            }
+          ]
     }
     ]
     }
