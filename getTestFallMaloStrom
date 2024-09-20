@@ -42,7 +42,8 @@
     "rollencodenummer":"9904446000007",
     "marktrolle":"MSB",
     "rollencodetyp":"BDEW",
-    "weiterverpflichtet":true
+    "weiterverpflichtet":true,
+    "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
     },
     {
       "boTyp": "MARKTTEILNEHMER",
@@ -51,7 +52,15 @@
       "marktrolle":"NB",
       "rollencodetyp":"BDEW",
       "weiterverpflichtet":true
-      }  
+      },  
+      {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "rollencodenummer":"4045399000077",
+        "marktrolle":"UENB",
+        "rollencodetyp":"BDEW",
+        "weiterverpflichtet":true
+        }
     ],
     "zaehlwerke":[
     {

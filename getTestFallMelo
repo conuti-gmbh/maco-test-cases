@@ -34,7 +34,8 @@
   "versionStruktur": "1",
   "rollencodenummer":"9904446000007",
   "marktrolle":"MSB",
-  "weiterverpflichtet":true
+  "weiterverpflichtet":true,
+  "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
   },
   {
     "boTyp": "MARKTTEILNEHMER",

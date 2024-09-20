@@ -41,7 +41,8 @@
     "grundWahlrechtPrognosegrundlage":"NICHT_WEGEN_EIGENVERBRAUCH",
     "detailsPrognosegrundlage":[
     "SLP_SEP"
-    ]
+    ],
+    "abwicklungsmodell": "MODELL_1_BILANZIERUNG_AN_MARKTLOKATION"
     }
     ]
     }
