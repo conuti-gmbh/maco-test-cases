@@ -1,0 +1,34 @@
+{
+    "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+        }
+      ],
+      "ANFRAGE": [
+        {
+          "lokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie'):isEmpty():ifElse('null',${data:jsonPath('$.anfragekategorie')})}",
+          "abonnement": "${data:jsonPath('$.abonnement'):isEmpty():ifElse('null',${data:jsonPath('$.abonnement')})}"
+        }
+      ],
+      "AUFTRAG": [
+        {
+          "ausfuehrungsdatum": "${data:jsonPath('$.ausfuehrungsdatum'):isEmpty():ifElse('null',${data:jsonPath('$.ausfuehrungsdatum')})}",
+          "positionsdaten": [
+            {
+              "positionsnummer": ${data:jsonPath('$.positionsnummer'):isEmpty():ifElse('null',${data:jsonPath('$.positionsnummer')})},
+              "anfragegrund": "${data:jsonPath('$.anfragegrund'):isEmpty():ifElse('null',${data:jsonPath('$.anfragegrund')})}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
+    }
+}
