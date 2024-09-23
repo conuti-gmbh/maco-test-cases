@@ -1,0 +1,38 @@
+{
+    "stammdaten": {
+"STATUSMITTEILUNG": [
+        {
+          "boTyp": "STATUSMITTEILUNG",
+          "versionStruktur": "1",
+          "positionsdaten": [
+            {
+              "positionsnummer": "${data:jsonPath('$.positionsnummer1):isEmpty():ifElse('null',${data:jsonPath('$.positionsnummer1')})}",
+              "verwendungAb": "${data:jsonPath('$.verwendungAb1'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb1')})}",
+              "auftragsstatus": "${data:jsonPath('$.auftragsstatus1'):isEmpty():ifElse('null',${data:jsonPath('$.auftragsstatus1')})}",
+              "begruendung": {
+                "begruendung1": "${data:jsonPath('$.begruendung1'):isEmpty():ifElse('null',${data:jsonPath('$.begruendung1')})}"
+              },
+              "lokationsId": "${data:jsonPath('$.lokationsId1'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId1')})}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender":{
+        "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+        "ansprechpartner": {
+          "nachname": "${data:jsonPath('$.nachnameAbsender'):isEmpty():ifElse('null',${data:jsonPath('$.nachnameAbsender)})}",
+          "eMailAdresse": "${data:jsonPath('$.eMailAdresseAbsender'):isEmpty():ifElse('null',${data:jsonPath('$.eMailAdresseAbsender')})}",
+          "rufnummern":  [
+            {
+              "nummerntyp": "${data:jsonPath('$.nummerntypAbsender'):isEmpty():ifElse('null',${data:jsonPath('$.nummerntypAbsender')})}",
+              "rufnummer": "${data:jsonPath('$.rufnummerAbsender'):isEmpty():ifElse('null',${data:jsonPath('$.rufnummerAbsender')})}"
+            }
+          ]
+        }
+      },
+      "empfaenger":"${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
+}
+}
