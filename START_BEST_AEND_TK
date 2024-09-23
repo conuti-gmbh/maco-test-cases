@@ -14,8 +14,26 @@
           ]
         }
       ],
+      "MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "marktrollen": [
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "marktrolle": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+              "rollencodenummer": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+              "rollencodetyp": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}"
+            }
+          ]
+        }
+      ]
       "ANFRAGE": [
         {
+          "boTyp": "ANFRAGE",
+          "versionStruktur": "1",
           "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
           "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
           "anfragekategorie": "${data:jsonPath('$.anfragekategorie'):isEmpty():ifElse('null',${data:jsonPath('$.anfragekategorie')})}"
@@ -23,6 +41,8 @@
       ],
       "AUFTRAG": [
         {
+          "boTyp": "AUFTRAG",
+          "versionStruktur": "1",
           "ausfuehrungsdatum": "${data:jsonPath('$.ausfuehrungsdatum'):isEmpty():ifElse('null',${data:jsonPath('$.ausfuehrungsdatum')})}",
           "positionsdaten": [
             {
