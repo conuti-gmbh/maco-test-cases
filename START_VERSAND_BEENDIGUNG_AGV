@@ -1,5 +1,4 @@
 {
-  "data": {
     "stammdaten": {
       "MARKTLOKATION": [
         {
@@ -62,4 +61,3 @@
       "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
     }
   }
-}

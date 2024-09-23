@@ -1,14 +1,8 @@
 {
     "stammdaten": {
-      "MARKTLOKATION": [
-        {
-          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
-          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
-        }
-      ],
       "ANFRAGE": [
         {
-          "lokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
           "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
           "anfragekategorie": "${data:jsonPath('$.anfragekategorie'):isEmpty():ifElse('null',${data:jsonPath('$.anfragekategorie')})}",
           "abonnement": "${data:jsonPath('$.abonnement'):isEmpty():ifElse('null',${data:jsonPath('$.abonnement')})}"
