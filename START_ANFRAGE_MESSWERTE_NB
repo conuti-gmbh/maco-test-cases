@@ -1,0 +1,40 @@
+{
+      "stammdaten": {
+      "MESSLOKATION": [
+        {
+          "boTyp": "MESSLOKATION",
+          "versionStruktur": "1",
+          "sparte": "${data:jsonPath('$.sparte')}",
+          "messlokationsId": "${data:jsonPath('$.messlokationsId')}"
+        }
+      ],
+      "ANFRAGE": [
+        {
+          "boTyp": "ANFRAGE",
+          "versionStruktur": "1",
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+          "anfragekategorie": "${data:jsonPath('$.anfragekategorie'):isEmpty():ifElse('null',${data:jsonPath('$.anfragekategorie')})}",
+          "anfragetyp": "${data:jsonPath('$.anfragetyp'):isEmpty():ifElse('null',${data:jsonPath('$.anfragetyp')})}"
+        }
+      ],
+      "AUFTRAG": [
+        {
+          "boTyp": "AUFTRAG",
+          "versionStruktur": "1",
+          "positionsdaten": [
+            {
+              "positionsnummer": 1,
+              "startdatum": "${data:jsonPath('$.startdatum1'):isEmpty():ifElse('null',${data:jsonPath('$.startdatum1')})}",
+              "enddatum": "${data:jsonPath('$.enddatum1'):isEmpty():ifElse('null',${data:jsonPath('$.enddatum1')})}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
+    }
+    }
