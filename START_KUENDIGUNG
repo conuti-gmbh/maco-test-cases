@@ -29,8 +29,7 @@
         "zaehlernummer": "${data:jsonPath('$.zaehlernummer'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlernummer')})}",
         "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
       }
-    ]
-  },
+    ],
     "NETZNUTZUNGSVERTRAG": [
       {
         "boTyp": "VERTRAG",
@@ -48,4 +47,5 @@
       "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
     }
   }
+}
 }
