@@ -1,0 +1,75 @@
+{
+    "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "lokationsadresse": {
+            "postleitzahl": "${data:jsonPath('$.postleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.postleitzahl')})}",
+            "ort": "${data:jsonPath('$.ort'):isEmpty():ifElse('null',${data:jsonPath('$.ort')})}",
+            "strasse": "${data:jsonPath('$.strasse'):isEmpty():ifElse('null',${data:jsonPath('$.strasse')})}.",
+            "hausnummer": "${data:jsonPath('$.hausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.hausnummer')})}",
+            "landescode": "${data:jsonPath('$.landescode'):isEmpty():ifElse('null',${data:jsonPath('$.landescode')})}"
+          }
+        }
+      ],
+      "MESSLOKATION": [
+        {
+          "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "messadresse": {
+            "postleitzahl": "${data:jsonPath('$.postleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.postleitzahl')})}",
+            "ort": "${data:jsonPath('$.ort'):isEmpty():ifElse('null',${data:jsonPath('$.ort')})}",
+            "strasse": "${data:jsonPath('$.strasse'):isEmpty():ifElse('null',${data:jsonPath('$.strasse')})}.",
+            "hausnummer": "${data:jsonPath('$.hausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.hausnummer')})}",
+            "landescode": "${data:jsonPath('$.landescode'):isEmpty():ifElse('null',${data:jsonPath('$.landescode')})}",
+            "zusatzInformation": {
+              "zusatz1": "${data:jsonPath('$.zusatz1'):isEmpty():ifElse('null',${data:jsonPath('$.zusatz1')})}",
+              "zusatz2": "${data:jsonPath('$.zusatz2'):isEmpty():ifElse('null',${data:jsonPath('$.zusatz2')})}",
+              "zusatz3": "${data:jsonPath('$.zusatz3'):isEmpty():ifElse('null',${data:jsonPath('$.zusatz3')})}",
+              "zusatz4": "${data:jsonPath('$.zusatz4'):isEmpty():ifElse('null',${data:jsonPath('$.zusatz4')})}",
+              "zusatz5": "${data:jsonPath('$.zusatz5'):isEmpty():ifElse('null',${data:jsonPath('$.zusatz5')})}."
+            }
+          }
+        }
+      ],
+      "RECHNUNG": [
+        {
+          "rechnungsstatus": "${data:jsonPath('$.rechnungsstatus'):isEmpty():ifElse('null',${data:jsonPath('$.rechnungsstatus')})}",
+          "storno": ${data:jsonPath('$.storno'):isEmpty():ifElse('null',${data:jsonPath('$.storno')})},
+          "rechnungsdatum": "${data:jsonPath('$.rechnungsdatum'):isEmpty():ifElse('null',${data:jsonPath('$.rechnungsdatum')})}",
+          "istSelbstausgestellt": ${data:jsonPath('$.istSelbstausgestellt'):isEmpty():ifElse('null',${data:jsonPath('$.istSelbstausgestellt')})},
+          "bearbeitungsdatum": "${data:jsonPath('$.bearbeitungsdatum'):isEmpty():ifElse('null',${data:jsonPath('$.bearbeitungsdatum')})}",
+          "originalRechnungsnummer": "${data:jsonPath('$.originalRechnungsnummer'):isEmpty():ifElse('null',${data:jsonPath('$.originalRechnungsnummer')})}",
+          "referenzNachrichtendatum": "${data:jsonPath('$.referenzNachrichtendatum'):isEmpty():ifElse('null',${data:jsonPath('$.referenzNachrichtendatum')})}",
+          "rechnungsperiode": {
+            "startdatum": "${data:jsonPath('$.startdatum'):isEmpty():ifElse('null',${data:jsonPath('$.startdatum')})}",
+            "enddatum": "${data:jsonPath('$.enddatum'):isEmpty():ifElse('null',${data:jsonPath('$.enddatum')})}"
+          },
+          "faelligkeitsdatum": "${data:jsonPath('$.faelligkeitsdatum'):isEmpty():ifElse('null',${data:jsonPath('$.faelligkeitsdatum')})}",
+          "rechnungstyp": "${data:jsonPath('$.rechnungstyp'):isEmpty():ifElse('null',${data:jsonPath('$.rechnungstyp')})}",
+          "gesamtbrutto": {
+            "wert": ${data:jsonPath('$.gesamtbrutto.wert'):isEmpty():ifElse('null',${data:jsonPath('$.gesamtbrutto.wert')})},
+            "waehrung": "${data:jsonPath('$.waehrung'):isEmpty():ifElse('null',${data:jsonPath('$.waehrung')})}"
+          },
+          "zuZahlen": {
+            "wert": ${data:jsonPath('$.zuZahlen.wert'):isEmpty():ifElse('null',${data:jsonPath('$.zuZahlen.wert')})},
+            "waehrung": "${data:jsonPath('$.waehrung'):isEmpty():ifElse('null',${data:jsonPath('$.waehrung')})}"
+          },
+          "steuerbetraege": [
+            {
+              "steuerkennzeichen": "${data:jsonPath('$.steuerkennzeichen'):isEmpty():ifElse('null',${data:jsonPath('$.steuerkennzeichen')})}",
+              "basiswert": ${data:jsonPath('$.basiswert'):isEmpty():ifElse('null',${data:jsonPath('$.basiswert')})},
+              "steuerwert": ${data:jsonPath('$.steuerwert'):isEmpty():ifElse('null',${data:jsonPath('$.steuerwert')})},
+              "waehrung": "${data:jsonPath('$.waehrung'):isEmpty():ifElse('null',${data:jsonPath('$.waehrung')})}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}"
+    }
+}
