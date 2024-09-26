@@ -41,6 +41,7 @@
           "istSelbstausgestellt": ${data:jsonPath('$.istSelbstausgestellt'):isEmpty():ifElse('null',${data:jsonPath('$.istSelbstausgestellt')})},
           "bearbeitungsdatum": "${data:jsonPath('$.bearbeitungsdatum'):isEmpty():ifElse('null',${data:jsonPath('$.bearbeitungsdatum')})}",
           "originalRechnungsnummer": "${data:jsonPath('$.originalRechnungsnummer'):isEmpty():ifElse('null',${data:jsonPath('$.originalRechnungsnummer')})}",
+          "referenzDokumentennummer": "${data:jsonPath('$.referenzDokumentennummer'):isEmpty():ifElse('null',${data:jsonPath('$.referenzDokumentennummer')})}",
           "referenzNachrichtendatum": "${data:jsonPath('$.referenzNachrichtendatum'):isEmpty():ifElse('null',${data:jsonPath('$.referenzNachrichtendatum')})}",
           "rechnungsperiode": {
             "startdatum": "${data:jsonPath('$.startdatum'):isEmpty():ifElse('null',${data:jsonPath('$.startdatum')})}",
@@ -63,7 +64,34 @@
               "steuerwert": ${data:jsonPath('$.steuerwert'):isEmpty():ifElse('null',${data:jsonPath('$.steuerwert')})},
               "waehrung": "${data:jsonPath('$.waehrung'):isEmpty():ifElse('null',${data:jsonPath('$.waehrung')})}"
             }
-          ]
+          ],
+          "rechnungspositionen": [
+            {
+              "artikelnummer": "${data:jsonPath('$.artikelnummer'):isEmpty():ifElse('null',${data:jsonPath('$.artikelnummer')})}",
+              "lieferungVon": "${data:jsonPath('$.lieferungVon'):isEmpty():ifElse('null',${data:jsonPath('$.lieferungVon')})}",
+              "lieferungBis": "${data:jsonPath('$.lieferungBis'):isEmpty():ifElse('null',${data:jsonPath('$.lieferungBis')})}"
+              "positionsMenge": {
+                "wert": ${data:jsonPath('$.positionsMenge.wert'):isEmpty():ifElse('null',${data:jsonPath('$.positionsMenge.wert')})},
+                "einheit": "${data:jsonPath('$.waehrung'):isEmpty():ifElse('null',${data:jsonPath('$.waehrung')})}"
+              },
+              "zeitbezogeneMenge": {
+                "wert": ${data:jsonPath('$.zeitbezogeneMenge.wert'):isEmpty():ifElse('null',${data:jsonPath('$.zeitbezogeneMenge.wert')})},
+                "einheit": "${data:jsonPath('$.einheit'):isEmpty():ifElse('null',${data:jsonPath('$.einheit')})}"
+              },
+              "einzelpreis": {
+                "wert": ${data:jsonPath('$.einzelpreis.wert'):isEmpty():ifElse('null',${data:jsonPath('$.einzelpreis.wert')})},
+                "waehrung": "${data:jsonPath('$.waehrung'):isEmpty():ifElse('null',${data:jsonPath('$.waehrung')})}",
+                "bezugswert": "${data:jsonPath('$.bezugswert'):isEmpty():ifElse('null',${data:jsonPath('$.bezugswert')})}"
+              },
+              "teilsummeNetto": {
+                "wert": ${data:jsonPath('$.teilsummeNetto.wert'):isEmpty():ifElse('null',${data:jsonPath('$.teilsummeNetto.wert')})},
+                "waehrung": "E${data:jsonPath('$.waehrung'):isEmpty():ifElse('null',${data:jsonPath('$.waehrung')})}UR"
+              },
+              "teilsummeSteuer": {
+                "steuerkennzeichen": "${data:jsonPath('$.steuerkennzeichen'):isEmpty():ifElse('null',${data:jsonPath('$.steuerkennzeichen')})}"
+              }
+            }
+          ],
         }
       ]
     },
