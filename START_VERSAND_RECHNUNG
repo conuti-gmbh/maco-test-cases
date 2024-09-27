@@ -72,11 +72,11 @@
               "lieferungBis": "${data:jsonPath('$.lieferungBis'):isEmpty():ifElse('null',${data:jsonPath('$.lieferungBis')})}"
               "positionsMenge": {
                 "wert": ${data:jsonPath('$.positionsMenge.wert'):isEmpty():ifElse('null',${data:jsonPath('$.positionsMenge.wert')})},
-                "einheit": "${data:jsonPath('$.waehrung'):isEmpty():ifElse('null',${data:jsonPath('$.waehrung')})}"
+                "einheit": "${data:jsonPath('$.positionsMenge.einheit'):isEmpty():ifElse('null',${data:jsonPath('$.positionsMenge.einheit')})}"
               },
               "zeitbezogeneMenge": {
                 "wert": ${data:jsonPath('$.zeitbezogeneMenge.wert'):isEmpty():ifElse('null',${data:jsonPath('$.zeitbezogeneMenge.wert')})},
-                "einheit": "${data:jsonPath('$.einheit'):isEmpty():ifElse('null',${data:jsonPath('$.einheit')})}"
+                "einheit": "${data:jsonPath('$.zeitbezogeneMenge.einheit'):isEmpty():ifElse('null',${data:jsonPath('$.zeitbezogeneMenge.einheit')})}"
               },
               "einzelpreis": {
                 "wert": ${data:jsonPath('$.einzelpreis.wert'):isEmpty():ifElse('null',${data:jsonPath('$.einzelpreis.wert')})},
