@@ -1,0 +1,96 @@
+{
+    "stammdaten": {
+      "MARKTLOKATION": $exists(DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE) ? [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+          "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="SPARTE"].ATTRIBUTE_VALUE,
+          "energierichtung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="ENERGIERICHTUNG"].ATTRIBUTE_VALUE
+        }
+      ] : [],
+    "TRANCHE": $exists(DATA.VALUES[OBJECT="TRANCHE" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE) ? [
+      {
+        "boTyp": "TRANCHE",
+        "versionStruktur": "1",
+        "sparte": DATA.VALUES[OBJECT="TRANCHE" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+        "verguetungEmpfaenger": DATA.VALUES[OBJECT="TRANCHE" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+        "bildungTranchengroesse": DATA.VALUES[OBJECT="TRANCHE" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+        "aufteilungsmenge": {
+          "wert": DATA.VALUES[OBJECT="TRANCHE" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+          "einheit": DATA.VALUES[OBJECT="TRANCHE" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE
+        }
+      }
+    ] : [],
+      "BILANZIERUNG": [
+        {
+          "boTyp": "BILANZIERUNG",
+          "versionStruktur": "1",
+          "marktlokationsId": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+          "bilanzkreis": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="BILANZKREIS"].ATTRIBUTE_VALUE
+        }
+      ],
+      "NETZNUTZUNGSVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "NETZNUTZUNGSVERTRAG",
+          "vertragsbeginn": $fromMillis($toMillis(DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"].DATE_TIME & '', "[Y0001][M01][D01][H01][m01][s01]"), "[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z"),
+          "vertragsende": $fromMillis($toMillis(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY"].DATE_TIME & '', "[Y0001][M01][D01][H01][m01][s01]"), "[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z"),
+          "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="SPARTE"].ATTRIBUTE_VALUE,
+          "lokationsId": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+          "lokationsTyp": "MALO",
+          "vertragskonditionen": {
+            "haushaltskunde": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="HAUSHALTSKUNDE"].ATTRIBUTE_VALUE
+          }
+        }
+      ],
+      "ENERGIELIEFERVERTRAG": [
+        {
+          "boTyp": "VERTRAG",
+          "versionStruktur": "1",
+          "vertragsart": "ENERGIELIEFERVERTRAG",
+          "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="SPARTE"].ATTRIBUTE_VALUE,
+          "vertragspartner2": [
+            {
+              "boTyp": "GESCHAEFTSPARTNER",
+              "versionStruktur": "1",
+              "gewerbekennzeichnung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+              "anrede": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+              "name1": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+              "name2": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+              "geschaeftspartnerrolle": [
+                "KUNDE"
+              ]
+            }
+          ],
+          "korrespondenzpartner": {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "name1": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+            "gewerbekennzeichnung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+            "partneradresse": {
+              "postleitzahl": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+              "ort": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+              "strasse": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+              "hausnummer": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+              "landescode": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+              "ortsteil": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE
+            }
+          }
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+      "empfaenger": {
+        "rollencodenummer": HEADER.RECEIVER_ID
+      },
+      "transaktionsgrund": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+      "transaktionsgrundergaenzung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+      "transaktionsgrundergaenzungBefristeteAnmeldung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+      "absender": {
+        "rollencodenummer": HEADER.SENDER_ID
+      }
+    }
+}
