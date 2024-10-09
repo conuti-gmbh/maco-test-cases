@@ -1,0 +1,44 @@
+{
+  "stammdaten":{
+    "NETZLOKATION": [
+    {
+    "boTyp": "NETZLOKATION",
+    "versionStruktur": "1",
+		"netzlokationsId": "${data:jsonPath('$.netzlokationsId')}",
+    "datenqualitaet": "${data:jsonPath('$.datenqualitaet')}",
+    "steuerkanal": "${data:jsonPath('$.steuerkanal')}",
+    "produktdatenRelevanteRolle": "${data:jsonPath('$.produktdatenRelevanteRolle')}",
+    "konfigurationsprodukt": "${data:jsonPath('$.konfigurationsprodukt')}",
+    "keinKonfigurationsprodukt": "${data:jsonPath('$.keinKonfigurationsprodukt')}",
+    "leistungskurvendefinition": "${data:jsonPath('$.leistungskurvendefinition')}",
+    "auftraggebenderMarktpartner": [
+      {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "marktrolle": "${data:jsonPath('$.marktrolle')}",
+        "rollencodenummer": "${data:jsonPath('$.rollencodenummer')}"
+      }
+    ],
+    "zaehlwerke": [
+      {
+        "obiskennzahl": "${data:jsonPath('$.obiskennzahl')}",
+        "verwendungszwecke": [
+          {
+            "marktrolle": "${data:jsonPath('$.marktrolle')}",
+            "zweck": "${data:jsonPath('$.zweck')}"
+          }
+        ]
+      }
+    ]
+    }
+    ],
+    },
+  "transaktionsdaten": {
+    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund')}",
+    "empfaenger": "${data:jsonPath('$.empfaenger')}",
+    "absender": "${data:jsonPath('$.absender')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "kategorie": "${data:jsonPath('$.kategorie')}"
+  }
+  }
+ 
