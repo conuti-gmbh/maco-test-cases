@@ -1,0 +1,132 @@
+{
+    "stammdaten": {
+      "VERWENDUNGSZEITRAUM": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
+          "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
+        }
+      ],
+      "MESSLOKATION": [
+        {
+          "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "netzebenemessung": "${data:jsonPath('$.netzebenemessung'):isEmpty():ifElse('null',${data:jsonPath('$.netzebenemessung')})}"
+        }
+      ],
+      "MESSSTELLENBETRIEBSVERTRAG": [
+        {
+          "vertragsart": "${data:jsonPath('$.vertragsart'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsart')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "vertragspartner2": [
+            {
+              "name1": "${data:jsonPath('$.name1'):isEmpty():ifElse('null',${data:jsonPath('$.name1')})}",
+              "name2": "${data:jsonPath('$.name2'):isEmpty():ifElse('null',${data:jsonPath('$.name2')})}",
+              "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnung')})},
+              "geschaeftspartnerrolle": [
+                "${data:jsonPath('$.geschaeftspartnerrolle'):isEmpty():ifElse('null',${data:jsonPath('$.geschaeftspartnerrolle')})}"
+              ]
+            }
+          ],
+          "korrespondenzpartner": {
+            "name1": "${data:jsonPath('$.korrespondenzpartner.name1'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartner.name1')})}",
+            "name2": "${data:jsonPath('$.korrespondenzpartner.name2'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartner.name2')})}",
+            "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnung')})},
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.postleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.postleitzahl')})}",
+              "ort": "${data:jsonPath('$.ort'):isEmpty():ifElse('null',${data:jsonPath('$.ort')})}",
+              "strasse": "${data:jsonPath('$.strasse'):isEmpty():ifElse('null',${data:jsonPath('$.strasse')})}",
+              "postfach": "${data:jsonPath('$.postfach'):isEmpty():ifElse('null',${data:jsonPath('$.postfach')})}",
+              "landescode": "${data:jsonPath('$.landescode'):isEmpty():ifElse('null',${data:jsonPath('$.landescode')})}"
+            }
+          },
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
+        }
+      ],
+      "ZAEHLER": [
+        {
+          "zaehlernummer": "${data:jsonPath('$.zaehlernummer'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlernummer')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "zaehlerauspraegung": "${data:jsonPath('$.zaehlerauspraegung'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlerauspraegung')})}",
+          "zaehlertyp": "${data:jsonPath('$.zaehlertyp'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlertyp')})}",
+          "tarifart": "${data:jsonPath('$.tarifart'):isEmpty():ifElse('null',${data:jsonPath('$.tarifart')})}",
+          "zaehlwerke": [
+            {
+              "bezeichnung": "${data:jsonPath('$.bezeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.bezeichnung')})}",
+              "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
+              "schwachlastfaehig": "${data:jsonPath('$.schwachlastfaehig'):isEmpty():ifElse('null',${data:jsonPath('$.schwachlastfaehig')})}",
+              "vorkommastelle": ${data:jsonPath('$.vorkommastelle'):isEmpty():ifElse('null',${data:jsonPath('$.vorkommastelle')})},
+              "nachkommastelle": ${data:jsonPath('$.nachkommastelle'):isEmpty():ifElse('null',${data:jsonPath('$.nachkommastelle')})},
+              "zaehlzeiten": {
+                "zaehlzeitDefinition": "${data:jsonPath('$.zaehlzeitDefinition'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlzeitDefinition')})}",
+                "register": "${data:jsonPath('$.register'):isEmpty():ifElse('null',${data:jsonPath('$.register')})}"
+              },
+              "konfiguration": "${data:jsonPath('$.konfiguration'):isEmpty():ifElse('null',${data:jsonPath('$.konfiguration')})}",
+              "wertegranularitaet": "${data:jsonPath('$.wertegranularitaet'):isEmpty():ifElse('null',${data:jsonPath('$.wertegranularitaet')})}"
+            }
+          ],
+          "gateway": "${data:jsonPath('$.gateway'):isEmpty():ifElse('null',${data:jsonPath('$.gateway')})}",
+          "fernschaltung": "${data:jsonPath('$.fernschaltung'):isEmpty():ifElse('null',${data:jsonPath('$.fernschaltung')})}",
+          "zaehlertypspezifikation": "${data:jsonPath('$.zaehlertypspezifikation'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlertypspezifikation')})}",
+          "befestigungsart": "${data:jsonPath('$.befestigungsart'):isEmpty():ifElse('null',${data:jsonPath('$.befestigungsart')})}",
+          "geraete": [
+            {
+              "geraetenummer": "${data:jsonPath('$.geraetenummer'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer')})}",
+              "geraeteeigenschaften": {
+                "geraetetyp": "${data:jsonPath('$.geraetetyp'):isEmpty():ifElse('null',${data:jsonPath('$.geraetetyp')})}",
+                "geraetemerkmal": "${data:jsonPath('$.geraetemerkmal'):isEmpty():ifElse('null',${data:jsonPath('$.geraetemerkmal')})}",
+                "faktor": ${data:jsonPath('$.faktor'):isEmpty():ifElse('null',${data:jsonPath('$.faktor')})}
+              }
+            },
+            {
+              "geraetenummer": "${data:jsonPath('$.geraetenummer2'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer2')})}",
+              "geraeteeigenschaften": {
+                "geraetetyp": "${data:jsonPath('$.geraetetyp2'):isEmpty():ifElse('null',${data:jsonPath('$.geraetetyp2')})}",
+                "geraetemerkmal": "${data:jsonPath('$.geraetemerkmal2'):isEmpty():ifElse('null',${data:jsonPath('$.geraetemerkmal2')})}"
+              }
+            },
+            {
+              "geraetenummer": "${data:jsonPath('$.geraetenummer3'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer3')})}",
+              "geraeteeigenschaften": {
+                "geraetetyp": "${data:jsonPath('$.geraetetyp3'):isEmpty():ifElse('null',${data:jsonPath('$.geraetetyp3')})}",
+                "geraetemerkmal": "${data:jsonPath('$.geraetemerkmal3'):isEmpty():ifElse('null',${data:jsonPath('$.geraetemerkmal3')})}"
+              }
+            },
+            {
+              "geraetenummer": "${data:jsonPath('$.geraetenummer4'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer4')})}",
+              "geraeteeigenschaften": {
+                "geraetetyp": "${data:jsonPath('$.geraetetyp4'):isEmpty():ifElse('null',${data:jsonPath('$.geraetetyp4')})}"
+              }
+            },
+            {
+              "geraetenummer": "${data:jsonPath('$.geraetenummer5'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer5')})}",
+              "geraeteeigenschaften": {
+                "geraetetyp": "${data:jsonPath('$.geraetetyp5'):isEmpty():ifElse('null',${data:jsonPath('$.geraetetyp5')})}"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}",
+      "antwortStatusZeitraum": [
+        {
+          "code": "${data:jsonPath('$.code'):isEmpty():ifElse('null',${data:jsonPath('$.code')})}",
+          "liste": "${data:jsonPath('$.liste'):isEmpty():ifElse('null',${data:jsonPath('$.liste')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})}
+        }
+      ]
+    }
+}
