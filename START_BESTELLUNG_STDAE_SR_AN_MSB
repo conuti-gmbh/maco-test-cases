@@ -1,0 +1,69 @@
+{
+    "stammdaten": {
+      "VERWENDUNGSZEITRAUM": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
+          "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
+        },
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet2'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet2')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb2'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb2')})}"
+        }
+      ],
+      "STEUERBARE_RESSOURCE": [
+        {
+          "ressourcenId": "${data:jsonPath('$.ressourcenId'):isEmpty():ifElse('null',${data:jsonPath('$.ressourcenId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "steuerkanal": "${data:jsonPath('$.steuerkanal'):isEmpty():ifElse('null',${data:jsonPath('$.steuerkanal')})}",
+          "konfigurationsprodukt": "${data:jsonPath('$.konfigurationsprodukt'):isEmpty():ifElse('null',${data:jsonPath('$.konfigurationsprodukt')})}",
+          "produktdatenRelevanteRolle": "${data:jsonPath('$.produktdatenRelevanteRolle'):isEmpty():ifElse('null',${data:jsonPath('$.produktdatenRelevanteRolle')})}",
+          "auftraggebenderMarktpartner": {
+            "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+            "rollencodenummer": "${data:jsonPath('$.rollencodenummer'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummer')})}"
+          },
+          "zugeordneteDefinition": {
+            "schaltzeitdefinition": "${data:jsonPath('$.schaltzeitdefinition'):isEmpty():ifElse('null',${data:jsonPath('$.schaltzeitdefinition')})}"
+          }
+        },
+        {
+          "ressourcenId": "${data:jsonPath('$.ressourcenId'):isEmpty():ifElse('null',${data:jsonPath('$.ressourcenId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet2'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet2')})}",
+          "steuerkanal": "${data:jsonPath('$.steuerkanal2'):isEmpty():ifElse('null',${data:jsonPath('$.steuerkanal2')})}",
+          "konfigurationsprodukt": "${data:jsonPath('$.konfigurationsprodukt2'):isEmpty():ifElse('null',${data:jsonPath('$.konfigurationsprodukt2')})}",
+          "produktdatenRelevanteRolle": "${data:jsonPath('$.produktdatenRelevanteRolle2'):isEmpty():ifElse('null',${data:jsonPath('$.produktdatenRelevanteRolle2')})}",
+          "auftraggebenderMarktpartner": {
+            "marktrolle": "${data:jsonPath('$.marktrolle2'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle2')})}",
+            "rollencodenummer": "${data:jsonPath('$.rollencodenummer2'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummer2')})}"
+          },
+          "zugeordneteDefinition": {
+            "schaltzeitdefinition": "${data:jsonPath('$.schaltzeitdefinition2'):isEmpty():ifElse('null',${data:jsonPath('$.schaltzeitdefinition2')})}"
+          }
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}",
+      "antwortStatusZeitraum": [
+        {
+          "code": "${data:jsonPath('$.code'):isEmpty():ifElse('null',${data:jsonPath('$.code')})}",
+          "liste": "${data:jsonPath('$.liste'):isEmpty():ifElse('null',${data:jsonPath('$.liste')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})}
+        },
+        {
+          "code": "${data:jsonPath('$.code2'):isEmpty():ifElse('null',${data:jsonPath('$.code2')})}",
+          "liste": "${data:jsonPath('$.liste2'):isEmpty():ifElse('null',${data:jsonPath('$.liste2')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})}
+        }
+      ]
+    }
+}
