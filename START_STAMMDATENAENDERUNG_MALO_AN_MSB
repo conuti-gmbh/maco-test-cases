@@ -1,65 +1,72 @@
 {
-  "stammdaten":{
-    "MARKTLOKATION": [
-    {
-    "boTyp": "MARKTLOKATION",
-    "versionStruktur": "1",
-		"marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
-    "sparte": "${data:jsonPath('$.sparte')}",
-    "energierichtung": "${data:jsonPath('$.energierichtung')}"
-    }
-    ],
-    "NETZNUTZUNGSVERTRAG": [
-    {
-    "boTyp": "NETZNUTZUNGSVERTRAG",
-    "versionStruktur": "1",
-		"vertragsart": "${data:jsonPath('$.vertragsart')}",
-    "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}"
-    }
-    ],
-    "MESSSTELLENBETRIEBSVERTRAG": [
-      {
-        "boTyp": "VERTRAG",
-        "versionStruktur": "1",
-        "vertragsart": "${data:jsonPath('$.vertragsartMsb'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsartMsb')})}",
-        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
-        "vertragspartner2": [
-          {
-            "boTyp": "GESCHAEFTSPARTNER",
-            "geschaeftspartnerrolle": [
-              "${data:jsonPath('$.vp2Geschaeftspartnerrolle'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Geschaeftspartnerrolle')})}"
-            ],
-            "versionStruktur": "1",
-            "gewerbekennzeichnung": ${data:jsonPath('$.vp2Gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Gewerbekennzeichnung')})},
-            "name1": "${data:jsonPath('$.vp2Name1'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Name1')})}",
-            "name2": "${data:jsonPath('$.vp2Name2'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Name2')})}"
-          }
-        ],
-        "korrespondenzpartner": {
-          "boTyp": "GESCHAEFTSPARTNER",
-          "versionStruktur": "1",
-          "name1": "${data:jsonPath('$.kpName1'):isEmpty():ifElse('null',${data:jsonPath('$.kpName1')})}",
-          "name2": "${data:jsonPath('$.kpName2'):isEmpty():ifElse('null',${data:jsonPath('$.kpName2')})}",
-          "gewerbekennzeichnung": ${data:jsonPath('$.kpGewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.kpGewerbekennzeichnung')})},
-          "partneradresse": {
-            "postleitzahl": "${data:jsonPath('$.kpPostleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.kpPostleitzahl')})}",
-            "ort": "${data:jsonPath('$.kpOrt'):isEmpty():ifElse('null',${data:jsonPath('$.kpOrt')})}",
-            "strasse": "${data:jsonPath('$.kpStrasse'):isEmpty():ifElse('null',${data:jsonPath('$.kpStrasse')})}",
-            "hausnummer": "${data:jsonPath('$.kpHausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.kpHausnummer')})}",
-            "landescode": "${data:jsonPath('$.landescode'):isEmpty():ifElse('null',${data:jsonPath('$.landescode')})}"
-          }
-        },
-        "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
-        "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
-      }
-    ],
+  "stammdaten": {
+      "VERWENDUNGSZEITRAUM": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
+          "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
+        }
+      ],
+      "MARKTLOKATION": [
+        {
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "netzebene": "${data:jsonPath('$.netzebene'):isEmpty():ifElse('null',${data:jsonPath('$.netzebene')})}",
+          "umspannung": "${data:jsonPath('$.umspannung'):isEmpty():ifElse('null',${data:jsonPath('$.umspannung')})}",
+          "marktrollen": [
+            {
+              "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+              "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnung')})},
+              "rollencodenummer": "${data:jsonPath('$.rollencodenummerUENB'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummerUENB')})}",
+              "rollencodetyp": "${data:jsonPath('$.rollencodetypUENB'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetypUENB')})}"
+            },
+            {
+              "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+              "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnung')})},
+              "rollencodenummer": "${data:jsonPath('$.rollencodenummerMSB'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummerMSB')})}",
+              "rollencodetyp": "${data:jsonPath('$.rollencodetypMSB'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetypMSB')})}",
+              "weiterverpflichtet": ${data:jsonPath('$.weiterverpflichtet'):isEmpty():ifElse('null',${data:jsonPath('$.weiterverpflichtet')})}",
+              "messstellenbetreiberEigenschaft": "${data:jsonPath('$.messstellenbetreiberEigenschaft'):isEmpty():ifElse('null',${data:jsonPath('$.messstellenbetreiberEigenschaft')})}""
+            }
+          ],
+          "messtechnischeEinordnung": "${data:jsonPath('$.messtechnischeEinordnung'):isEmpty():ifElse('null',${data:jsonPath('$.messtechnischeEinordnung')})}",
+          "energieherkunft": [
+            {
+              "erzeugungsart": "${data:jsonPath('$.erzeugungsart'):isEmpty():ifElse('null',${data:jsonPath('$.erzeugungsart')})}"
+            }
+          ]
+        }
+      ],
+      "BILANZIERUNG": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "lastprofile": [
+            {
+              "referenzprofilbezeichnung": "${data:jsonPath('$.referenzprofilbezeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.referenzprofilbezeichnung')})}",
+              "einspeisung": ${data:jsonPath('$.einspeisung'):isEmpty():ifElse('null',${data:jsonPath('$.einspeisung')})}
+            }
+          ],
+          "temperaturarbeit": {
+            "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse('null',${data:jsonPath('$.wert')})},
+            "einheit": "${data:jsonPath('$.einheit'):isEmpty():ifElse('null',${data:jsonPath('$.einheit')})}"
+          },
+          "prognosegrundlage": "${data:jsonPath('$.prognosegrundlage'):isEmpty():ifElse('null',${data:jsonPath('$.prognosegrundlage')})}",
+          "detailsPrognosegrundlage": [
+            "${data:jsonPath('$.detailsPrognosegrundlage'):isEmpty():ifElse('null',${data:jsonPath('$.detailsPrognosegrundlage')})}"
+          ]
+        }
+      ]
     },
-  "transaktionsdaten": {
-    "empfaenger": "${data:jsonPath('$.empfaenger')}",
-    "absender": "${data:jsonPath('$.absender')}",
-    "sparte": "${data:jsonPath('$.sparte')}",
-    "kategorie": "${data:jsonPath('$.kategorie')}",
-    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
-  }
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "transaktionsgrundergaenzung": "${data:jsonPath('$.transaktionsgrundergaenzung'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrundergaenzung')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}"
+    }
   }
  
