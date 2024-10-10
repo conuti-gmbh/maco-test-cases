@@ -1,14 +1,21 @@
 {
   "stammdaten":{
+    "VERWENDUNGSZEITRAUM": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId')},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet')}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb')}",
+          "verwendungBis": "${data:jsonPath('$.verwendungBis')}"
+        }
+      ],
     "NETZLOKATION": [
     {
-    "boTyp": "NETZLOKATION",
-    "versionStruktur": "1",
 		"netzlokationsId": "${data:jsonPath('$.netzlokationsId')}",
+    "sparte": "${data:jsonPath('$.sparte')}",
+    "zeitraumId": ${data:jsonPath('$.zeitraumId')},
+    "datenqualitaet": "${data:jsonPath('$.datenqualitaet')}",
     "marktrollen": [
       {
-        "boTyp": "MARKTTEILNEHMER",
-        "versionStruktur": "1",
         "marktrolle": "${data:jsonPath('$.marktrolle')}",
         "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung')},
         "rollencodenummer": "${data:jsonPath('$.rollencodenummer')}",
@@ -23,8 +30,7 @@
     "empfaenger": "${data:jsonPath('$.empfaenger')}",
     "absender": "${data:jsonPath('$.absender')}",
     "sparte": "${data:jsonPath('$.sparte')}",
-    "kategorie": "${data:jsonPath('$.kategorie')}",
-    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
+    "kategorie": "${data:jsonPath('$.kategorie')}"
   }
   }
  
