@@ -17,14 +17,6 @@
       }
     ]
     }
-    ],
-    "NETZNUTZUNGSVERTRAG": [
-    {
-    "boTyp": "NETZNUTZUNGSVERTRAG",
-    "versionStruktur": "1",
-		"vertragsart": "${data:jsonPath('$.vertragsart')}",
-    "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}"
-    }
     ]
     },
   "transaktionsdaten": {
