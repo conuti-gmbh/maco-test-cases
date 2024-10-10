@@ -1,20 +1,52 @@
 {
-  "stammdaten":{
-    "TECHNISCHE_RESSOURCE": [
-      {
-      "boTyp": "TECHNISCHE_RESSOURCE",
-      "versionStruktur": "1",
-      "ressourcenId": "${data:jsonPath('$.technischeRessourcenId')}",
-      "lokationszuordnung": "${data:jsonPath('$.lokationszuordnungTr')}"
-      }
+  "stammdaten": {
+      "VERWENDUNGSZEITRAUM": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
+          "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
+        },
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet2'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet2')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb2'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb2')})}"
+        }
       ],
+      "TECHNISCHE_RESSOURCE": [
+        {
+          "ressourcenId": "${data:jsonPath('$.ressourcenId'):isEmpty():ifElse('null',${data:jsonPath('$.ressourcenId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "referenzNetzlokation": "${data:jsonPath('$.referenzNetzlokation'):isEmpty():ifElse('null',${data:jsonPath('$.referenzNetzlokation')})}",
+          "nennleistung": {
+            "abgabe": ${data:jsonPath('$.abgabe'):isEmpty():ifElse('null',${data:jsonPath('$.abgabe')})}
+          },
+          "speicherkapazitaet": ${data:jsonPath('$.speicherkapazitaet'):isEmpty():ifElse('null',${data:jsonPath('$.speicherkapazitaet')})},
+          "speicherart": "${data:jsonPath('$.speicherart'):isEmpty():ifElse('null',${data:jsonPath('$.speicherart')})}",
+          "art": "${data:jsonPath('$.art'):isEmpty():ifElse('null',${data:jsonPath('$.art')})}"
+        },
+        {
+          "ressourcenId": "${data:jsonPath('$.ressourcenId'):isEmpty():ifElse('null',${data:jsonPath('$.ressourcenId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet2'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet2')})}",
+          "referenzNetzlokation": "${data:jsonPath('$.referenzNetzlokation'):isEmpty():ifElse('null',${data:jsonPath('$.referenzNetzlokation')})}",
+          "nennleistung": {
+            "abgabe": ${data:jsonPath('$.abgabe'):isEmpty():ifElse('null',${data:jsonPath('$.abgabe')})}
+          },
+          "speicherkapazitaet": ${data:jsonPath('$.speicherkapazitaet'):isEmpty():ifElse('null',${data:jsonPath('$.speicherkapazitaet')})},
+          "speicherart": "${data:jsonPath('$.speicherart'):isEmpty():ifElse('null',${data:jsonPath('$.speicherart')})}",
+          "art": "${data:jsonPath('$.art'):isEmpty():ifElse('null',${data:jsonPath('$.art')})}"
+        }
+      ]
     },
-  "transaktionsdaten": {
-    "empfaenger": "${data:jsonPath('$.empfaenger')}",
-    "absender": "${data:jsonPath('$.absender')}",
-    "sparte": "${data:jsonPath('$.sparte')}",
-    "kategorie": "${data:jsonPath('$.kategorie')}",
-    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
-  }
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}"
+    }
   }
  
