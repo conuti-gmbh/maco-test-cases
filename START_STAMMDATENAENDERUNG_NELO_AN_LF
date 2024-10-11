@@ -2,35 +2,47 @@
   "stammdaten":{
     "VERWENDUNGSZEITRAUM": [
         {
-          "zeitraumId": ${data:jsonPath('$.zeitraumId')},
-          "datenqualitaet": "${data:jsonPath('$.datenqualitaet')}",
-          "verwendungAb": "${data:jsonPath('$.verwendungAb')}",
-          "verwendungBis": "${data:jsonPath('$.verwendungBis')}"
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
+          "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
         }
       ],
     "NETZLOKATION": [
     {
-		"netzlokationsId": "${data:jsonPath('$.netzlokationsId')}",
-    "sparte": "${data:jsonPath('$.sparte')}",
-    "zeitraumId": ${data:jsonPath('$.zeitraumId')},
-    "datenqualitaet": "${data:jsonPath('$.datenqualitaet')}",
-    "marktrollen": [
+      "netzlokationsId": "${data:jsonPath('$.netzlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.netzlokationsId')})}",
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+      "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+    "steuerkanal": ${data:jsonPath('$.steuerkanal'):isEmpty():ifElse('null',${data:jsonPath('$.steuerkanal')})},
+    "produktdatenRelevanteRolle": "${data:jsonPath('$.produktdatenRelevanteRolle'):isEmpty():ifElse('null',${data:jsonPath('$.produktdatenRelevanteRolle')})}",
+    "konfigurationsprodukt": "${data:jsonPath('$.konfigurationsprodukt'):isEmpty():ifElse('null',${data:jsonPath('$.konfigurationsprodukt')})}",
+    "leistungskurvendefinition": "${data:jsonPath('$.leistungskurvendefinition'):isEmpty():ifElse('null',${data:jsonPath('$.leistungskurvendefinition')})}",
+    "auftraggebenderMarktpartner": {
+      "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+      "rollencodenummer": "${data:jsonPath('$.rollencodenummer'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummer')})}"
+    },
+    "zaehlwerke": [
       {
-        "marktrolle": "${data:jsonPath('$.marktrolle')}",
-        "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung')},
-        "rollencodenummer": "${data:jsonPath('$.rollencodenummer')}",
-        "rollencodetyp": "${data:jsonPath('$.rollencodetyp')}",
-        "messstellenbetreiberEigenschaft": "${data:jsonPath('$.messstellenbetreiberEigenschaft')}"
+        "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
+        "verwendungszwecke": [
+          {
+            "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+            "zweck": [
+              "${data:jsonPath('$.zweck'):isEmpty():ifElse('null',${data:jsonPath('$.zweck')})}"
+            ]
+          }
+        ]
       }
     ]
     }
     ]
     },
   "transaktionsdaten": {
-    "empfaenger": "${data:jsonPath('$.empfaenger')}",
-    "absender": "${data:jsonPath('$.absender')}",
-    "sparte": "${data:jsonPath('$.sparte')}",
-    "kategorie": "${data:jsonPath('$.kategorie')}"
+    "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+    "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+    "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+    "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}"
   }
   }
  
