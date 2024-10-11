@@ -28,7 +28,7 @@
               "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnung')})},
               "rollencodenummer": "${data:jsonPath('$.rollencodenummerMSB'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummerMSB')})}",
               "rollencodetyp": "${data:jsonPath('$.rollencodetypMSB'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetypMSB')})}",
-              "weiterverpflichtet": ${data:jsonPath('$.weiterverpflichtet'):isEmpty():ifElse('null',${data:jsonPath('$.weiterverpflichtet')})}",
+              "weiterverpflichtet": ${data:jsonPath('$.weiterverpflichtet'):isEmpty():ifElse('null',${data:jsonPath('$.weiterverpflichtet')})},
               "messstellenbetreiberEigenschaft": "${data:jsonPath('$.messstellenbetreiberEigenschaft'):isEmpty():ifElse('null',${data:jsonPath('$.messstellenbetreiberEigenschaft')})}""
             }
           ],

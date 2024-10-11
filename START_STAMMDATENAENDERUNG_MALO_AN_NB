@@ -1,70 +1,76 @@
 {
-  "stammdaten":{
-    "MARKTLOKATION": [
-    {
-    "boTyp": "MARKTLOKATION",
-    "versionStruktur": "1",
-		"marktlokationsId": "${data:jsonPath('$.marktlokationsId')}",
-    "sparte": "${data:jsonPath('$.sparte')}",
-    "energierichtung": "${data:jsonPath('$.energierichtung')}"
+  "stammdaten": {
+      "VERWENDUNGSZEITRAUM": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}"
+        }
+      ],
+      "MARKTLOKATION": [
+        {
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "zaehlwerke": [
+            {
+              "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
+              "verwendungszwecke": [
+                {
+                  "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+                  "zweck": [
+                  ]
+                }
+              ],
+              "zaehlzeiten": {
+                "zaehlzeitDefinition": "${data:jsonPath('$.zaehlzeitDefinition'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlzeitDefinition')})}",
+                "register": "${data:jsonPath('$.register'):isEmpty():ifElse('null',${data:jsonPath('$.register')})}"
+              },
+              "wertegranularitaet": "${data:jsonPath('$.wertegranularitaet'):isEmpty():ifElse('null',${data:jsonPath('$.wertegranularitaet')})}"
+            },
+            {
+              "obisKennzahl": "${data:jsonPath('$.obisKennzahl2'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl2')})}",
+              "verwendungszwecke": [
+                {
+                  "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+                  "zweck": [
+                  ]
+                }
+              ],
+              "zaehlzeiten": {
+                "zaehlzeitDefinition": "${data:jsonPath('$.zaehlzeitDefinition'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlzeitDefinition')})}",
+                "register": "${data:jsonPath('$.register'):isEmpty():ifElse('null',${data:jsonPath('$.register')})}"
+              },
+              "wertegranularitaet": "${data:jsonPath('$.wertegranularitaet'):isEmpty():ifElse('null',${data:jsonPath('$.wertegranularitaet')})}"
+            }
+          ],
+          "produktdatenRelevanteRolle": "${data:jsonPath('$.produktdatenRelevanteRolle'):isEmpty():ifElse('null',${data:jsonPath('$.produktdatenRelevanteRolle')})}",
+          "leistungskurvendefinition": "${data:jsonPath('$.leistungskurvendefinition'):isEmpty():ifElse('null',${data:jsonPath('$.leistungskurvendefinition')})}"
+        }
+      ],
+      "MESSSTELLENBETRIEBSVERTRAG": [
+        {
+          "vertragsart": "${data:jsonPath('$.vertragsart'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsart')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+            "vertragskonditionen": {
+              "geplanteTurnusablesung": {
+                "ableseZeitraum": "${data:jsonPath('$.ableseZeitraum'):isEmpty():ifElse('null',${data:jsonPath('$.ableseZeitraum')})}"
+              }
+            },
+          "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+          "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}",
+
     }
-    ],
-    "NETZNUTZUNGSVERTRAG": [
-    {
-    "boTyp": "NETZNUTZUNGSVERTRAG",
-    "versionStruktur": "1",
-		"vertragsart": "${data:jsonPath('$.vertragsartNN')}",
-    "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}"
-    }
-    ],
-    "ENERGIELIEFERVERTRAG": [
-    {
-    "boTyp": "ENERGIELIEFERVERTRAG",
-    "versionStruktur": "1",
-		"vertragsart": "${data:jsonPath('$.vertragsartNN')}",
-    "sparte": "${data:jsonPath('$.sparte')}",
-    "vertragspartner2": [
-      {
-        "boTyp": "GESCHAEFTSPARTNER",
-        "versionStruktur": "1",
-        "anrede": "${data:jsonPath('$.vertragspartner2Anrede')}",
-        "name1": "${data:jsonPath('$.vertragspartner2Name1')}",
-        "name2": "${data:jsonPath('$.vertragspartner2Name2')}",
-        "name3": "${data:jsonPath('$.vertragspartner2Name3')}",
-        "name4": "${data:jsonPath('$.vertragspartner2Name4')}",
-        "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung')},
-        "geschaeftspartnerrolle": [
-          "${data:jsonPath('$.geschaeftspartnerrolle')}"
-        ]
-      }
-    ],
-    "korrespondenzpartner": {
-      "boTyp": "GESCHAEFTSPARTNER",
-      "versionStruktur": "1",
-      "anrede": "${data:jsonPath('$.korrespondenzpartnerAnrede')}",
-      "name1": "${data:jsonPath('$.korrespondenzpartnerName1')}",
-      "name2": "${data:jsonPath('$.korrespondenzpartnerName2')}",
-      "name3": "${data:jsonPath('$.korrespondenzpartnerName3')}",
-      "name4": "${data:jsonPath('$.korrespondenzpartnerName4')}",
-      "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung')},
-      "partneradresse": {
-        "postleitzahl": "${data:jsonPath('$.postleitzahl')}",
-        "ort": "${data:jsonPath('$.ort')}",
-        "strasse": "${data:jsonPath('$.strasse')}",
-        "hausnummer": "${data:jsonPath('$.hausnummer')}",
-        "landescode": "${data:jsonPath('$.landescode')}"
-      }
-    },
-    "lokationsId": "${data:jsonPath('$.lokationsId')}",
-    "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
-    },
-    },
-  "transaktionsdaten": {
-    "empfaenger": "${data:jsonPath('$.empfaenger')}",
-    "absender": "${data:jsonPath('$.absender')}",
-    "sparte": "${data:jsonPath('$.sparte')}",
-    "kategorie": "${data:jsonPath('$.kategorie')}",
-    "gueltigAb": "${data:jsonPath('$.gueltigAb')}"
-  }
   }
  
