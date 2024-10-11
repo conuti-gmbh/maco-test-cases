@@ -1,0 +1,115 @@
+{
+    "stammdaten": {
+      "VERWENDUNGSZEITRAUM": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaetVwz'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaetVwz')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}"
+        },
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet2'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet2')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb2'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb2')})}"
+        }
+      ],
+      "MESSLOKATION": [
+        {
+          "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "messadrsese": {
+            "postleitzahl": "${data:jsonPath('$.messadressePostleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.messadressePostleitzahl')})}",
+            "ort": "${data:jsonPath('$.messadresseOrt'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseOrt')})}",
+            "strasse": "${data:jsonPath('$.messadresseStrasse'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseStrasse')})}",
+            "hausnummer": "${data:jsonPath('$.messadresseHausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseHausnummer')})}",
+            "landescode": "${data:jsonPath('$.messadresseLandescode'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseLandescode')})}",
+            "zusatzInformation": {
+              "zusatz1": "${data:jsonPath('$.messadresseZusatz1'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseZusatz1')})}",
+              "zusatz2": "${data:jsonPath('$.messadresseZusatz2'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseZusatz2')})}"
+            }
+          },
+          "ablesekartenempfaenger": {
+            "geschaeftspartnerrolle": [
+              "${data:jsonPath('$.ablempfGeschaeftspartnerrolle'):isEmpty():ifElse('null',${data:jsonPath('$.ablempfGeschaeftspartnerrolle')})}"
+            ],
+            "gewerbekennzeichnung": ${data:jsonPath('$.ablempfGewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.ablempfGewerbekennzeichnung')})},
+            "name1": "${data:jsonPath('$.ablempfName1'):isEmpty():ifElse('null',${data:jsonPath('$.ablempfName1')})}",
+            "name2": "${data:jsonPath('$.ablempfName2'):isEmpty():ifElse('null',${data:jsonPath('$.ablempfName2')})}",
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.ablempfPostleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.ablempfPostleitzahl')})}",
+              "ort": "${data:jsonPath('$.ablempfOrt'):isEmpty():ifElse('null',${data:jsonPath('$.ablempfOrt')})}",
+              "strasse": "${data:jsonPath('$.ablempfStrasse'):isEmpty():ifElse('null',${data:jsonPath('$.ablempfStrasse')})}",
+              "hausnummer": "${data:jsonPath('$.ablempfHausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.ablempfHausnummer')})}",
+              "landescode": "${data:jsonPath('$.ablempfLandescode'):isEmpty():ifElse('null',${data:jsonPath('$.ablempfLandescode')})}"
+            }
+          }
+        }
+      ],
+      "MESSSTELLENBETRIEBSVERTRAG": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "netzebenemessung": "${data:jsonPath('$.netzebenemessung'):isEmpty():ifElse('null',${data:jsonPath('$.netzebenemessung')})}",
+          "vertragsart": "${data:jsonPath('$.vertragsart'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsart')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "vertragspartner2": [
+            {
+              "name1": "${data:jsonPath('$.vp2Name1'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Name1')})}",
+              "name2": "${data:jsonPath('$.vp2Name2'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Name2')})}",
+              "gewerbekennzeichnung": "${data:jsonPath('$.vp2Gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Gewerbekennzeichnung')})}",
+              "geschaeftspartnerrolle": [
+                "${data:jsonPath('$.vp2Geschaeftspartnerrolle'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Geschaeftspartnerrolle')})}"
+              ]
+            }
+          ],
+          "korrespondenzpartner": {
+            "name1": "${data:jsonPath('$.kpName1'):isEmpty():ifElse('null',${data:jsonPath('$.kpName1')})}",
+            "name2": "${data:jsonPath('$.kpName2'):isEmpty():ifElse('null',${data:jsonPath('$.kpName2')})}",
+            "gewerbekennzeichnung": "${data:jsonPath('$.kpGewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.kpGewerbekennzeichnung')})}",
+            "partneradresse": {
+              "postleitzahl": "${data:jsonPath('$.kpPostleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.kpPostleitzahl')})}",
+              "ort": "${data:jsonPath('$.kpOrt'):isEmpty():ifElse('null',${data:jsonPath('$.kpOrt')})}",
+              "strasse": "${data:jsonPath('$.kpStrasse'):isEmpty():ifElse('null',${data:jsonPath('$.kpStrasse')})}",
+              "hausnummer": "${data:jsonPath('$.kpHausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.kpHausnummer')})}",
+              "landescode": "${data:jsonPath('$.kpLandescode'):isEmpty():ifElse('null',${data:jsonPath('$.kpLandescode')})}"
+            }
+          }
+        }
+      ],
+      "ZAEHLER": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "zaehlerauspraegung": "${data:jsonPath('$.zaehlerauspraegung'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlerauspraegung')})}",
+          "zaehlertyp": "${data:jsonPath('$.zaehlertyp'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlertyp')})}",
+          "tarifart": "${data:jsonPath('$.tarifart'):isEmpty():ifElse('null',${data:jsonPath('$.tarifart')})}",
+          "zaehlwerke": [
+            {
+              "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
+              "schwachlastfaehig": "${data:jsonPath('$.schwachlastfaehig'):isEmpty():ifElse('null',${data:jsonPath('$.schwachlastfaehig')})}",
+              "vorkommastelle": "${data:jsonPath('$.vorkommastelle'):isEmpty():ifElse('null',${data:jsonPath('$.vorkommastelle')})}",
+              "nachkommastelle": "${data:jsonPath('$.nachkommastelle'):isEmpty():ifElse('null',${data:jsonPath('$.nachkommastelle')})}",
+              "wertegranularitaet": "${data:jsonPath('$.wertegranularitaet'):isEmpty():ifElse('null',${data:jsonPath('$.wertegranularitaet')})}"
+            }
+          ],
+          "zaehlernummer": "${data:jsonPath('$.zaehlernummer'):isEmpty():ifElse('null',${data:jsonPath('$.zaehlernummer')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "fernschaltung": "${data:jsonPath('$.fernschaltung'):isEmpty():ifElse('null',${data:jsonPath('$.fernschaltung')})}",
+          "messwerterfassung": "${data:jsonPath('$.messwerterfassung'):isEmpty():ifElse('null',${data:jsonPath('$.messwerterfassung')})}",
+          "befestigungsart": "${data:jsonPath('$.befestigungsart'):isEmpty():ifElse('null',${data:jsonPath('$.befestigungsart')})}",
+          "geraete": [
+            {
+              "geraetenummer": "${data:jsonPath('$.geraetenummer'):isEmpty():ifElse('null',${data:jsonPath('$.geraetenummer')})}"
+            }
+          ]
+        }
+      ]
+    },
+    "transaktionsdaten": {
+      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}",
+      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+  }
+}
