@@ -87,7 +87,7 @@
         "rollencodenummer": HEADER.RECEIVER_ID
       },
       "transaktionsgrund": DATA.VALUES[OBJECT="TRANSAKTION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUND"].ATTRIBUTE_VALUE,
-      "transaktionsgrundergaenzung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+      "transaktionsgrundergaenzung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUNDERGAENZUNG"].ATTRIBUTE_VALUE,
       "transaktionsgrundergaenzungBefristeteAnmeldung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
       "absender": {
         "rollencodenummer": HEADER.SENDER_ID
