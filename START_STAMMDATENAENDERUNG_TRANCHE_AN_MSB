@@ -1,0 +1,99 @@
+{
+  "stammdaten": {
+   "VERWENDUNGSZEITRAUM": [
+     {
+       "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+       "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+       "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
+       "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
+     },
+     {
+         "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+         "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+         "verwendungAb": "${data:jsonPath('$.verwendungAb2'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb2')})}"
+       }
+   ],
+   "TRANCHE": [
+     {
+       "tranchenId": "${data:jsonPath('$.tranchenId'):isEmpty():ifElse('null',${data:jsonPath('$.tranchenId')})}",
+       "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+       "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+       "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+       "zaehlwerke": [
+         {
+           "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
+           "verwendungszwecke": [
+             {
+               "marktrolle": "${data:jsonPath('$.marktrolleNB'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleNB')})}",
+               "zweck": [
+                 "${data:jsonPath('$.zweckNB'):isEmpty():ifElse('null',${data:jsonPath('$.zweckNB')})}"
+               ]
+             },
+             {
+                "marktrolle": "${data:jsonPath('$.marktrolleLF'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleLF')})}",
+                "zweck": [
+                  "${data:jsonPath('$.zweckLF'):isEmpty():ifElse('null',${data:jsonPath('$.zweckLF')})}"
+                ]
+              },
+              {
+                "marktrolle": "${data:jsonPath('$.marktrolleUENB'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleUENB')})}",
+                "zweck": [
+                  "${data:jsonPath('$.zweckUENB'):isEmpty():ifElse('null',${data:jsonPath('$.zweckUENB')})}"
+                ]
+              }
+           ]
+         }
+       ]
+     },
+     {
+         "tranchenId": "${data:jsonPath('$.tranchenId'):isEmpty():ifElse('null',${data:jsonPath('$.tranchenId')})}",
+         "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+         "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})},
+         "datenqualitaet": "${data:jsonPath('$.datenqualitaet2'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet2')})}",
+         "zaehlwerke": [
+           {
+             "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
+             "verwendungszwecke": [
+                {
+                    "marktrolle": "${data:jsonPath('$.marktrolleNB'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleNB')})}",
+                    "zweck": [
+                      "${data:jsonPath('$.zweckNB'):isEmpty():ifElse('null',${data:jsonPath('$.zweckNB')})}"
+                    ]
+                  },
+                  {
+                     "marktrolle": "${data:jsonPath('$.marktrolleLF'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleLF')})}",
+                     "zweck": [
+                       "${data:jsonPath('$.zweckLF'):isEmpty():ifElse('null',${data:jsonPath('$.zweckLF')})}"
+                     ]
+                   },
+                   {
+                     "marktrolle": "${data:jsonPath('$.marktrolleUENB'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleUENB')})}",
+                     "zweck": [
+                       "${data:jsonPath('$.zweckUENB'):isEmpty():ifElse('null',${data:jsonPath('$.zweckUENB')})}"
+                     ]
+                   }
+             ]
+           }
+         ]
+       }
+ ]
+ },
+ "transaktionsdaten": {
+   "sparte": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+   "absender": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+   "empfaenger": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+   "kategorie": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+   "antwortStatusZeitraum": [
+     {
+       "code": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+       "liste": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+       "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})}
+     },
+     {
+       "code": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+       "liste": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+       "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})}
+     }
+   ]
+ }
+}
