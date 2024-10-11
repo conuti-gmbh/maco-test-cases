@@ -1,0 +1,75 @@
+{
+     "stammdaten": {
+      "VERWENDUNGSZEITRAUM": [
+        {
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
+          "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
+        },
+        {
+            "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+            "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+            "verwendungAb": "${data:jsonPath('$.verwendungAb2'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb2')})}"
+          }
+      ],
+      "TRANCHE": [
+        {
+          "tranchenId": "${data:jsonPath('$.tranchenId'):isEmpty():ifElse('null',${data:jsonPath('$.tranchenId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "zaehlwerke": [
+            {
+              "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
+              "verwendungszwecke": [
+                {
+                  "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+                  "zweck": [
+                    "${data:jsonPath('$.zweck'):isEmpty():ifElse('null',${data:jsonPath('$.zweck')})}"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+            "tranchenId": "${data:jsonPath('$.tranchenId'):isEmpty():ifElse('null',${data:jsonPath('$.tranchenId')})}",
+            "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+            "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})},
+            "datenqualitaet": "${data:jsonPath('$.datenqualitaet2'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet2')})}",
+            "zaehlwerke": [
+              {
+                "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
+                "verwendungszwecke": [
+                  {
+                    "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+                    "zweck": [
+                      "${data:jsonPath('$.zweck'):isEmpty():ifElse('null',${data:jsonPath('$.zweck')})}"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+    ]
+    },
+    "transaktionsdaten": {
+      "sparte": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+      "absender": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+      "empfaenger": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+      "kategorie": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+      "antwortStatusZeitraum": [
+        {
+          "code": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+          "liste": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})}
+        },
+        {
+          "code": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+          "liste": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})}
+        }
+      ]
+    }
+}

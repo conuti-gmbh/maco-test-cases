@@ -11,53 +11,7 @@
       "MARKTLOKATION": [
         {
           "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
-          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
-          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
-          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
-          "netzebene": "${data:jsonPath('$.netzebene'):isEmpty():ifElse('null',${data:jsonPath('$.netzebene')})}",
-          "umspannung": "${data:jsonPath('$.umspannung'):isEmpty():ifElse('null',${data:jsonPath('$.umspannung')})}",
-          "marktrollen": [
-            {
-              "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
-              "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnung')})},
-              "rollencodenummer": "${data:jsonPath('$.rollencodenummerUENB'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummerUENB')})}",
-              "rollencodetyp": "${data:jsonPath('$.rollencodetypUENB'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetypUENB')})}"
-            },
-            {
-              "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
-              "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnung')})},
-              "rollencodenummer": "${data:jsonPath('$.rollencodenummerMSB'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummerMSB')})}",
-              "rollencodetyp": "${data:jsonPath('$.rollencodetypMSB'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetypMSB')})}",
-              "weiterverpflichtet": ${data:jsonPath('$.weiterverpflichtet'):isEmpty():ifElse('null',${data:jsonPath('$.weiterverpflichtet')})},
-              "messstellenbetreiberEigenschaft": "${data:jsonPath('$.messstellenbetreiberEigenschaft'):isEmpty():ifElse('null',${data:jsonPath('$.messstellenbetreiberEigenschaft')})}""
-            }
-          ],
-          "messtechnischeEinordnung": "${data:jsonPath('$.messtechnischeEinordnung'):isEmpty():ifElse('null',${data:jsonPath('$.messtechnischeEinordnung')})}",
-          "energieherkunft": [
-            {
-              "erzeugungsart": "${data:jsonPath('$.erzeugungsart'):isEmpty():ifElse('null',${data:jsonPath('$.erzeugungsart')})}"
-            }
-          ]
-        }
-      ],
-      "BILANZIERUNG": [
-        {
-          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
-          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
-          "lastprofile": [
-            {
-              "referenzprofilbezeichnung": "${data:jsonPath('$.referenzprofilbezeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.referenzprofilbezeichnung')})}",
-              "einspeisung": ${data:jsonPath('$.einspeisung'):isEmpty():ifElse('null',${data:jsonPath('$.einspeisung')})}
-            }
-          ],
-          "temperaturarbeit": {
-            "wert": ${data:jsonPath('$.wert'):isEmpty():ifElse('null',${data:jsonPath('$.wert')})},
-            "einheit": "${data:jsonPath('$.einheit'):isEmpty():ifElse('null',${data:jsonPath('$.einheit')})}"
-          },
-          "prognosegrundlage": "${data:jsonPath('$.prognosegrundlage'):isEmpty():ifElse('null',${data:jsonPath('$.prognosegrundlage')})}",
-          "detailsPrognosegrundlage": [
-            "${data:jsonPath('$.detailsPrognosegrundlage'):isEmpty():ifElse('null',${data:jsonPath('$.detailsPrognosegrundlage')})}"
-          ]
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
         }
       ]
     },
