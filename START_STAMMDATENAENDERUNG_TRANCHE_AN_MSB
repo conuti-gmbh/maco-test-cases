@@ -24,11 +24,23 @@
            "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
            "verwendungszwecke": [
              {
-               "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+               "marktrolle": "${data:jsonPath('$.marktrolleNB'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleNB')})}",
                "zweck": [
-                 "${data:jsonPath('$.zweck'):isEmpty():ifElse('null',${data:jsonPath('$.zweck')})}"
+                 "${data:jsonPath('$.zweckNB'):isEmpty():ifElse('null',${data:jsonPath('$.zweckNB')})}"
                ]
-             }
+             },
+             {
+                "marktrolle": "${data:jsonPath('$.marktrolleLF'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleLF')})}",
+                "zweck": [
+                  "${data:jsonPath('$.zweckLF'):isEmpty():ifElse('null',${data:jsonPath('$.zweckLF')})}"
+                ]
+              },
+              {
+                "marktrolle": "${data:jsonPath('$.marktrolleUENB'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleUENB')})}",
+                "zweck": [
+                  "${data:jsonPath('$.zweckUENB'):isEmpty():ifElse('null',${data:jsonPath('$.zweckUENB')})}"
+                ]
+              }
            ]
          }
        ]
@@ -42,12 +54,24 @@
            {
              "obisKennzahl": "${data:jsonPath('$.obisKennzahl'):isEmpty():ifElse('null',${data:jsonPath('$.obisKennzahl')})}",
              "verwendungszwecke": [
-               {
-                 "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
-                 "zweck": [
-                   "${data:jsonPath('$.zweck'):isEmpty():ifElse('null',${data:jsonPath('$.zweck')})}"
-                 ]
-               }
+                {
+                    "marktrolle": "${data:jsonPath('$.marktrolleNB'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleNB')})}",
+                    "zweck": [
+                      "${data:jsonPath('$.zweckNB'):isEmpty():ifElse('null',${data:jsonPath('$.zweckNB')})}"
+                    ]
+                  },
+                  {
+                     "marktrolle": "${data:jsonPath('$.marktrolleLF'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleLF')})}",
+                     "zweck": [
+                       "${data:jsonPath('$.zweckLF'):isEmpty():ifElse('null',${data:jsonPath('$.zweckLF')})}"
+                     ]
+                   },
+                   {
+                     "marktrolle": "${data:jsonPath('$.marktrolleUENB'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolleUENB')})}",
+                     "zweck": [
+                       "${data:jsonPath('$.zweckUENB'):isEmpty():ifElse('null',${data:jsonPath('$.zweckUENB')})}"
+                     ]
+                   }
              ]
            }
          ]

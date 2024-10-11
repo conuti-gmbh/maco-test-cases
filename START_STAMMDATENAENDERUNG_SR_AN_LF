@@ -1,34 +1,57 @@
 {
   "stammdaten": {
-      "VERWENDUNGSZEITRAUM": [
-        {
+    "VERWENDUNGSZEITRAUM": [
+      {
           "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
           "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
           "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
-        }
-      ],
-      "STEUERBARE_RESSOURCE": [
+          "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
+        },
         {
-          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
-          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
-          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
-          "marktrollen": [
-            {
-              "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
-              "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnung')})},
-              "rollencodenummer": "${data:jsonPath('$.rollencodenummer'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummer')})}",
-              "rollencodetyp": "${data:jsonPath('$.rollencodetyp'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetyp')})}",
-              "messstellenbetreiberEigenschaft": "${data:jsonPath('$.messstellenbetreiberEigenschaft'):isEmpty():ifElse('null',${data:jsonPath('$.messstellenbetreiberEigenschaft')})}"
-            }
-          ]
+            "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+            "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+            "verwendungAb": "${data:jsonPath('$.verwendungAb2'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb2')})}"
+          }
+    ],
+    "STEUERBARE_RESSOURCE": [
+      {
+        "ressourcenId": "${data:jsonPath('$.ressourcenId'):isEmpty():ifElse('null',${data:jsonPath('$.ressourcenId')})}",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+        "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+        "steuerkanal": "${data:jsonPath('$.steuerkanal'):isEmpty():ifElse('null',${data:jsonPath('$.steuerkanal')})}",
+        "konfigurationsprodukt": "${data:jsonPath('$.konfigurationsprodukt'):isEmpty():ifElse('null',${data:jsonPath('$.konfigurationsprodukt')})}",
+        "produktdatenRelevanteRolle": "${data:jsonPath('$.produktdatenRelevanteRolle'):isEmpty():ifElse('null',${data:jsonPath('$.produktdatenRelevanteRolle')})}",
+        "auftraggebenderMarktpartner": {
+          "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+          "rollencodenummer": "${data:jsonPath('$.rollencodenummer'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummer')})}"
+        },
+        "zugeordneteDefinition": {
+          "schaltzeitdefinition": "${data:jsonPath('$.schaltzeitdefinition'):isEmpty():ifElse('null',${data:jsonPath('$.schaltzeitdefinition')})}"
         }
-      ]
-    },
-    "transaktionsdaten": {
-      "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
-      "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
-      "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
-      "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}"
-    }
+      },
+      {
+          "ressourcenId": "${data:jsonPath('$.ressourcenId'):isEmpty():ifElse('null',${data:jsonPath('$.ressourcenId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId2'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId2')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet2'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet2')})}",
+          "steuerkanal": "${data:jsonPath('$.steuerkanal'):isEmpty():ifElse('null',${data:jsonPath('$.steuerkanal')})}",
+          "konfigurationsprodukt": "${data:jsonPath('$.konfigurationsprodukt'):isEmpty():ifElse('null',${data:jsonPath('$.konfigurationsprodukt')})}",
+          "produktdatenRelevanteRolle": "${data:jsonPath('$.produktdatenRelevanteRolle'):isEmpty():ifElse('null',${data:jsonPath('$.produktdatenRelevanteRolle')})}",
+          "auftraggebenderMarktpartner": {
+            "marktrolle": "${data:jsonPath('$.marktrolle'):isEmpty():ifElse('null',${data:jsonPath('$.marktrolle')})}",
+            "rollencodenummer": "${data:jsonPath('$.rollencodenummer'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodenummer')})}"
+          },
+          "zugeordneteDefinition": {
+            "schaltzeitdefinition": "${data:jsonPath('$.schaltzeitdefinition'):isEmpty():ifElse('null',${data:jsonPath('$.schaltzeitdefinition')})}"
+          }
+        }
+    ]
+  },
+  "transaktionsdaten": {
+    "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+    "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+    "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+    "kategorie": "${data:jsonPath('$.kategorie'):isEmpty():ifElse('null',${data:jsonPath('$.kategorie')})}"
   }
- 
+}
