@@ -1,9 +1,21 @@
 {
     "stammdaten": {
+      "MARKTLOKATION": [
+        {
+          "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+        }
+      ],
+      "MESSLOKATION": [
+        {
+          "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+          "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+        }
+      ],
       "ANFRAGE": [
         {
-          "anfragekategorie": "${data:jsonPath('$.anfragekategorie'):isEmpty():ifElse('null',${data:jsonPath('$.anfragekategorie')})}",
-          "anfragetyp": "${data:jsonPath('$.anfragetyp'):isEmpty():ifElse('null',${data:jsonPath('$.anfragetyp')})}",
+          "anfragekategorie": "PROZESSDATENBERICHT",
+          "anfragetyp": "WERTEERMITTLUNG",
           "gueltigAb": "${data:jsonPath('$.gueltigAb'):isEmpty():ifElse('null',${data:jsonPath('$.gueltigAb')})}",
           "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
           "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
