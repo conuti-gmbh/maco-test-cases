@@ -1,0 +1,51 @@
+{
+  "stammdaten": {
+    "MESSLOKATION": [
+      {
+        "boTyp": "MESSLOKATION",
+        "versionStruktur": "1",
+        "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+      }
+    ],
+    "MESSSTELLENBETRIEBSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "vertragsart": "${data:jsonPath('$.vertragsartMsb'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsartMsb')})}",
+        "vertragspartner2": [
+          {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "gewerbekennzeichnung": ${data:jsonPath('$.gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.gewerbekennzeichnung')})},
+            "geschaeftspartnerrolle": [
+              "${data:jsonPath('$.geschaeftspartnerrolle'):isEmpty():ifElse('null',${data:jsonPath('$.geschaeftspartnerrolle')})}"
+            ],
+            "name1": "${data:jsonPath('$.name1'):isEmpty():ifElse('null',${data:jsonPath('$.name1')})}"
+          }
+        ],
+        "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+        "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
+      }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "${data:jsonPath('$.vertragsartNn'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsartNn')})}",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "vertragsende": "${data:jsonPath('$.vertragsende'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsende')})}",
+        "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+        "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}"
+      }
+    ]
+  },
+  "transaktionsdaten": {
+    "absender": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+    "empfaenger": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+    "endezumtermin": "${data:jsonPath('$.endezumtermin'):isEmpty():ifElse('null',${data:jsonPath('$.endezumtermin')})}",
+    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrund')})}"
+    }
+  }
+}
