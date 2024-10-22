@@ -1,0 +1,116 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "${data:jsonPath('$.marktlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.marktlokationsId')})}",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+      }
+    ]
+    "MESSLOKATION": [
+      {
+        "boTyp": "MESSLOKATION",
+        "versionStruktur": "1",
+        "messlokationsId": "${data:jsonPath('$.messlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.messlokationsId')})}",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "messadresse": {
+          "postleitzahl": "${data:jsonPath('$.messadressePostleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.messadressePostleitzahl')})}",
+          "ort": "${data:jsonPath('$.messadresseOrt'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseOrt')})}",
+          "strasse": "${data:jsonPath('$.messadresseStrasse'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseStrasse')})}",
+          "hausnummer": "${data:jsonPath('$.messadresseHausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseHausnummer')})}",
+          "landescode": "${data:jsonPath('$.messadresseLandescode'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseLandescode')})}",
+          "zusatzInformation": {
+            "zusatz1": "${data:jsonPath('$.messadresseZusatz1'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseZusatz1')})}",
+            "zusatz2": "${data:jsonPath('$.messadresseZusatz2'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseZusatz2')})}",
+            "zusatz3": "${data:jsonPath('$.messadresseZusatz3'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseZusatz3')})}",
+            "zusatz4": "${data:jsonPath('$.messadresseZusatz4'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseZusatz4')})}",
+            "zusatz5": "${data:jsonPath('$.messadresseZusatz5'):isEmpty():ifElse('null',${data:jsonPath('$.messadresseZusatz5')})}"
+          }
+        },
+        "ablesekartenempfaenger": {
+          "boTyp": "GESCHAEFTSPARTNER",
+          "versionStruktur": "1",
+          "anrede": "${data:jsonPath('$.ablesekartenempfaengerAnrede'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerAnrede')})}",
+          "name1": "${data:jsonPath('$.ablesekartenempfaengerName1'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerName1')})}",
+          "name2": "${data:jsonPath('$.ablesekartenempfaengerName2'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerName2')})}",
+          "name3": "${data:jsonPath('$.ablesekartenempfaengerName3'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerName3')})}",
+          "name4": "${data:jsonPath('$.ablesekartenempfaengerName4'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerName4')})}",
+          "gewerbekennzeichnung": ${data:jsonPath('$.ablesekartenempfaengerGewerbekennezeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerGewerbekennzeichnung')})},
+          "geschaeftspartnerrolle": [
+            "${data:jsonPath('$.ablesekartenempfaengerGeschaeftspartnerrolle'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerGeschaeftspartnerrolle')})}",
+          ],
+          "partneradresse": {
+            "postleitzahl": "${data:jsonPath('$.ablesekartenempfaengerPostleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerPostleitzahl')})}",
+            "ort": "${data:jsonPath('$.ablesekartenempfaengerOrt'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerOrt')})}",
+            "strasse": "${data:jsonPath('$.ablesekartenempfaengerStrasse'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerStrasse')})}",
+            "hausnummer": "${data:jsonPath('$.ablesekartenempfaengerHausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerHausnummer')})}",
+            "landescode": "${data:jsonPath('$.ablesekartenempfaengerLandescode'):isEmpty():ifElse('null',${data:jsonPath('$.ablesekartenempfaengerLandescode')})}"
+          }
+        }
+      }
+    ],
+    "MESSSTELLENBETRIEBSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "sparte": "${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+        "vertragsart": "${data:jsonPath('$.vertragsartMsb'):isEmpty():ifElse('null',${data:jsonPath('$.vertragsartMsb')})}",
+        "vertragspartner2": [
+          {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "gewerbekennzeichnung": ${data:jsonPath('$.vp2Gewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Gewerbekennzeichnung')})},
+            "geschaeftspartnerrolle": [
+              "${data:jsonPath('$.vp2Geschaeftspartnerrolle'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Geschaeftspartnerrolle')})}"
+            ],
+            "anrede": "${data:jsonPath('$.vp2Anrede'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Anrede')})}",
+            "name1": "${data:jsonPath('$.vp2Name1'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Name1')})}",
+            "name2": "${data:jsonPath('$.vp2Name2'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Name2')})}",
+            "name3": "${data:jsonPath('$.vp2Name3'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Name3')})}",
+            "name4": "${data:jsonPath('$.vp2Name4'):isEmpty():ifElse('null',${data:jsonPath('$.vp2Name4')})}"
+          }
+        ],
+        "vertragskonditionen": {
+          "beauftragungMsb": "${data:jsonPath('$.beauftragungMsb'):isEmpty():ifElse('null',${data:jsonPath('$.beauftragungMsb')})}",
+        },
+        "lokationsId": "${data:jsonPath('$.lokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsId')})}",
+        "lokationsTyp": "${data:jsonPath('$.lokationsTyp'):isEmpty():ifElse('null',${data:jsonPath('$.lokationsTyp')})}",
+        "korrespondenzpartner": {
+          "boTyp": "GESCHAEFTSPARTNER",
+          "versionStruktur": "1",
+          "anrede": "${data:jsonPath('$.korrespondenzpartnerAnrede'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartnerAnrede')})}",
+          "name1": "${data:jsonPath('$.korrespondenzpartnerName1'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartnerName1')})}",
+          "name2": "${data:jsonPath('$.korrespondenzpartnerName2'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartnerName2')})}",
+          "name3": "${data:jsonPath('$.korrespondenzpartnerName3'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartnerName3')})}",
+          "name4": "${data:jsonPath('$.korrespondenzpartnerName4'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartnerName4')})}",
+          "gewerbekennzeichnung": ${data:jsonPath('$.korrespondenzpartnerGewerbekennzeichnung'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartnerGewerbekennzeichnung')})},
+          "partneradresse": {
+            "postleitzahl": "${data:jsonPath('$.korrespondenzpartnerPostleitzahl'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartnerPostleitzahl')})}",
+            "ort": "${data:jsonPath('$.korrespondenzpartnerOrt'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartnerOrt')})}",
+            "strasse": "${data:jsonPath('$.korrespondenzpartnerStrasse'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartnerStrasse')})}",
+            "hausnummer": "${data:jsonPath('$.korrespondenzpartnerHausnummer'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartnerHausnummer')})}",
+            "landescode": "${data:jsonPath('$.korrespondenzpartnerLandescode'):isEmpty():ifElse('null',${data:jsonPath('$.korrespondenzpartnerLandescode')})}",
+          }
+        }
+      }
+    ]
+  },
+  "transaktionsdaten": {
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "${data:jsonPath('$.absender'):isEmpty():ifElse('null',${data:jsonPath('$.absender')})}",
+      "rollencodetyp": "${data:jsonPath('$.rollencodetypAbsender'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetypAbsender')})}",
+    },
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "${data:jsonPath('$.empfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.empfaenger')})}",
+      "rollencodetyp": "${data:jsonPath('$.rollencodetypEmpfaenger'):isEmpty():ifElse('null',${data:jsonPath('$.rollencodetypEmpfaenger')})}"
+    }
+    "datumleistungsbeginn": "${data:jsonPath('$.datumleistungsbeginn'):isEmpty():ifElse('null',${data:jsonPath('$.datumleistungsbeginn')})}",
+    "transaktionsgrund": "${data:jsonPath('$.transaktionsgrund'):isEmpty():ifElse('null',${data:jsonPath('$.transaktionsgrund')})}"
+    }
+  }
+}
