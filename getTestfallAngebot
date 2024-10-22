@@ -1,0 +1,46 @@
+{
+    "stammdaten":{
+                "ANGEBOT": [
+          {
+            "boTyp": "ANGEBOT",
+            "versionStruktur": "1",
+            "anfragereferenz": "REF12345678910",
+            "angebotsdatum": "2024-05-31T22:00:00Z",
+            "sparte": "STROM",
+            "varianten": [
+              {
+                "gesamtmenge": {
+                  "wert": 1,
+                  "einheit": "STUECK"
+                },
+                "gesamtkosten": {
+                  "wert": 2000,
+                  "waehrung": "EUR"
+                },
+                "teile": [
+                  {
+                    "positionen": [
+                      {
+                        "positionsbezeichung": "1",
+                        "positionspreis": {
+                          "wert": 2000
+                        },
+                        "positionsbetrag": {
+                          "wert": 2000
+                        },
+                        "artikelnummer": "ZAEHLEINRICHTUNG"
+                      }
+                    ],
+                    "verweisKatalognummer": {
+                      "katalognummer": "1",
+                      "zeilennummer": "2",
+                      "versionsnummer": "3"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    }
+}
