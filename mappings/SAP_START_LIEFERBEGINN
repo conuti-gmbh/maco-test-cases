@@ -6,7 +6,24 @@
           "versionStruktur": "1",
           "marktlokationsId": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
           "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="SPARTE"].ATTRIBUTE_VALUE,
-          "energierichtung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="ENERGIERICHTUNG"].ATTRIBUTE_VALUE
+          "energierichtung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="ENERGIERICHTUNG"].ATTRIBUTE_VALUE,
+          "erforderlichesProduktpaket": [
+            {
+              "produktpaketId": 1,
+              "produkt": [
+                {
+                  "produktCode": "9991000002082",
+                  "wertedetails": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="BILANZKREIS"].ATTRIBUTE_VALUE
+                },
+                {
+                  "produktCode": "9991000002008",
+                  "codeProdukteigenschaft": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="MESSTECHNISCHEEINORDNUNG"].ATTRIBUTE_VALUE
+                }
+              ],
+              "umsetzungsgradvorgabe": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR",
+              "priorisierung": "PRIORITAET1"
+            }
+          ]
         }
       ] : [],
     "TRANCHE": $exists(DATA.VALUES[OBJECT="TRANCHE" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE) ? [
