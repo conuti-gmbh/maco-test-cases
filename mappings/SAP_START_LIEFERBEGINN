@@ -68,7 +68,7 @@
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
             "name1": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="NAME1"].ATTRIBUTE_VALUE,
-            "gewerbekennzeichnung": boolean(DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="GEWERBEKENNZEICHNUNG"].ATTRIBUTE_VALUE = "true",
+            "gewerbekennzeichnung": $boolean(DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="GEWERBEKENNZEICHNUNG"].ATTRIBUTE_VALUE = "true"),
             "partneradresse": {
               "postleitzahl": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="POSTLEITZAHL"].ATTRIBUTE_VALUE,
               "ort": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="ORT"].ATTRIBUTE_VALUE,
