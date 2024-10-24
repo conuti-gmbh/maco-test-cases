@@ -6,7 +6,24 @@
           "versionStruktur": "1",
           "marktlokationsId": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
           "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="SPARTE"].ATTRIBUTE_VALUE,
-          "energierichtung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="ENERGIERICHTUNG"].ATTRIBUTE_VALUE
+          "energierichtung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="ENERGIERICHTUNG"].ATTRIBUTE_VALUE,
+          "erforderlichesProduktpaket": [
+            {
+              "produktpaketId": 1,
+              "produkt": [
+                {
+                  "produktCode": "9991000002082",
+                  "wertedetails": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="BILANZKREIS"].ATTRIBUTE_VALUE
+                },
+                {
+                  "produktCode": "9991000002008",
+                  "codeProdukteigenschaft": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="MESSTECHNISCHEEINORDNUNG"].ATTRIBUTE_VALUE
+                }
+              ],
+              "umsetzungsgradvorgabe": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR",
+              "priorisierung": "PRIORITAET1"
+            }
+          ]
         }
       ] : [],
     "TRANCHE": $exists(DATA.VALUES[OBJECT="TRANCHE" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE) ? [
@@ -41,7 +58,7 @@
           "lokationsId": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
           "lokationsTyp": "MALO",
           "vertragskonditionen": {
-            "haushaltskunde": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="HAUSHALTSKUNDE"].ATTRIBUTE_VALUE
+            "haushaltskunde": $boolean(DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="HAUSHALTSKUNDE"].ATTRIBUTE_VALUE = "HH")
           }
         }
       ],
@@ -55,10 +72,10 @@
             {
               "boTyp": "GESCHAEFTSPARTNER",
               "versionStruktur": "1",
-              "gewerbekennzeichnung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
-              "anrede": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
-              "name1": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
-              "name2": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+              "gewerbekennzeichnung": $boolean(DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="GEWERBEKENNZEICHNUNG"].ATTRIBUTE_VALUE = "true"),
+              "anrede": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="ANREDE"].ATTRIBUTE_VALUE,
+              "name1": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="NAME1"].ATTRIBUTE_VALUE,
+              "name2": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="NAME2"].ATTRIBUTE_VALUE,
               "geschaeftspartnerrolle": [
                 "KUNDE"
               ]
@@ -67,15 +84,15 @@
           "korrespondenzpartner": {
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
-            "name1": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
-            "gewerbekennzeichnung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+            "name1": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="NAME1"].ATTRIBUTE_VALUE,
+            "gewerbekennzeichnung": $boolean(DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="GEWERBEKENNZEICHNUNG"].ATTRIBUTE_VALUE = "true"),
             "partneradresse": {
-              "postleitzahl": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
-              "ort": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
-              "strasse": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
-              "hausnummer": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
-              "landescode": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
-              "ortsteil": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE
+              "postleitzahl": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="POSTLEITZAHL"].ATTRIBUTE_VALUE,
+              "ort": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="ORT"].ATTRIBUTE_VALUE,
+              "strasse": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="STRASSE"].ATTRIBUTE_VALUE,
+              "hausnummer": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="HAUSNUMMER"].ATTRIBUTE_VALUE,
+              "landescode": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="LANDESCODE"].ATTRIBUTE_VALUE,
+              "ortsteil": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="ORTSTEIL"].ATTRIBUTE_VALUE
             }
           }
         }
@@ -88,7 +105,7 @@
       },
       "transaktionsgrund": DATA.VALUES[OBJECT="TRANSAKTION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUND"].ATTRIBUTE_VALUE,
       "transaktionsgrundergaenzung": DATA.VALUES[OBJECT="TRANSAKTION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUNDERGAENZUNG"].ATTRIBUTE_VALUE,
-      "transaktionsgrundergaenzungBefristeteAnmeldung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+      "transaktionsgrundergaenzungBefristeteAnmeldung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUNDERGAENZUNGBEFRISTETEANMELDUNG"].ATTRIBUTE_VALUE,
       "absender": {
         "rollencodenummer": HEADER.SENDER_ID
       }
