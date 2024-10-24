@@ -76,7 +76,7 @@
               "hausnummer": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="HAUSNUMMER"].ATTRIBUTE_VALUE,
               "landescode": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="LANDESCODE"].ATTRIBUTE_VALUE,
               "ortsteil": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="ORTSTEIL"].ATTRIBUTE_VALUE
-            }
+             }
           }
         }
       ]
