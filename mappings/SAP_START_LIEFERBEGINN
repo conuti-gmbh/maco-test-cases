@@ -55,7 +55,7 @@
             {
               "boTyp": "GESCHAEFTSPARTNER",
               "versionStruktur": "1",
-              "gewerbekennzeichnung": $boolean(DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="GEWERBEKENNZEICHNUNG"].ATTRIBUTE_VALUE = "true",
+              "gewerbekennzeichnung": $boolean(DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="GEWERBEKENNZEICHNUNG"].ATTRIBUTE_VALUE = "true"),
               "anrede": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="ANREDE"].ATTRIBUTE_VALUE,
               "name1": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="NAME1"].ATTRIBUTE_VALUE,
               "name2": DATA.VALUES[OBJECT="BUSINESS_PARTNER" and ATTRIBUTE_NAME="NAME2"].ATTRIBUTE_VALUE,
