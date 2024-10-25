@@ -42,6 +42,7 @@
           "startdatum": "2023-12-31T23:00:00Z",
           "enddatum": "2024-12-31T23:00:00Z"
         },
+        "datenqualitaet": "GUELTIGE_DATEN",
         "energierichtung": "AUSSP",
         "netzebene": "NSP",
         "marktlokationsId": "50074561188",
@@ -160,6 +161,7 @@
           "startdatum": "2024-12-31T23:00:00Z",
           "enddatum": "2025-12-31T23:00:00Z"
         },
+        "datenqualitaet": "GUELTIGE_DATEN",
         "energierichtung": "AUSSP",
         "netzebene": "NSP",
         "marktlokationsId": "50074561188",
@@ -277,6 +279,7 @@
           "zeitraumId": 4,
           "startdatum": "2025-12-31T23:00:00Z"
         },
+        "datenqualitaet": "GUELTIGE_DATEN",
         "energierichtung": "AUSSP",
         "netzebene": "NSP",
         "marktlokationsId": "50074561188",
@@ -386,6 +389,143 @@
             "anteilProzent": 5.2
           }
         ]
+      }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "vertragsart": "NETZNUTZUNGSVERTRAG",
+        "vertragsnummer": "123456",
+        "marktlokationsId": "50000083289",
+        "vertragsbeginn": "2023-02-28T23:00:00+00:00",
+        "vertragsende": "2024-08-30T22:00:00+00:00",
+        "zeitliche_gueltigkeit": {
+          "zeitraumId": 2,
+          "startdatum": "2023-12-31T23:00:00Z",
+          "enddatum": "2024-12-31T23:00:00Z"
+        },
+        "datenqualitaet": "GUELTIGE_DATEN",
+        "gemeinderabatt": 0,
+        "vertragspartner2": [
+          {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "geschaeftspartnerrolle": [
+              "KUNDE"
+            ],
+            "gewerbekennzeichnung": false,
+            "name1": "Mustermann",
+            "name2": "Max"
+          }
+        ],
+        "vertragskonditionen": {
+          "netznutzungszahler": "LIEFERANT",
+          "netznutzungsvertrag": "LIEFERANTEN_NB",
+          "netznutzungsabrechnungsgrundlage": "LIEFERSCHEIN",
+          "netznutzungsabrechnungsvariante": "ARBEITSPREIS_GRUNDPREIS",
+          "naechstenetznutzungsabrechnung": "01011201",
+          "netznutzungsabrechnungIntervall": 12,
+          "beinhaltetSingulaerGenutzteBetriebsmittel": true,
+          "haushaltskunde": true,
+          "terminnetznutzungsabrechnung": "0101",
+          "abrechnungsintervall": 12,
+          "startAbrechnungsjahr": "2024-03-14T14:30:31Z",
+          "geplanteTurnusablesung": {
+            "ableseZeitraum": "01011201"
+          },
+          "netznutzungsabrechnung": {
+            "abrechnungsZeitraum": "01011201"
+          }
+        }
+      },
+      {
+        "boTyp": "VERTRAG",
+        "vertragsart": "NETZNUTZUNGSVERTRAG",
+        "vertragsnummer": "123456",
+        "marktlokationsId": "50000083289",
+        "vertragsbeginn": "2023-02-28T23:00:00+00:00",
+        "vertragsende": "2024-08-30T22:00:00+00:00",
+        "zeitliche_gueltigkeit": {
+          "zeitraumId": 3,
+          "startdatum": "2023-12-31T23:00:00Z",
+          "enddatum": "2024-12-31T23:00:00Z"
+        },
+        "datenqualitaet": "GUELTIGE_DATEN",
+        "gemeinderabatt": 0,
+        "vertragspartner2": [
+          {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "geschaeftspartnerrolle": [
+              "KUNDE"
+            ],
+            "gewerbekennzeichnung": false,
+            "name1": "Mustermann",
+            "name2": "Max"
+          }
+        ],
+        "vertragskonditionen": {
+          "netznutzungszahler": "LIEFERANT",
+          "netznutzungsvertrag": "LIEFERANTEN_NB",
+          "netznutzungsabrechnungsgrundlage": "LIEFERSCHEIN",
+          "netznutzungsabrechnungsvariante": "ARBEITSPREIS_GRUNDPREIS",
+          "naechstenetznutzungsabrechnung": "01011201",
+          "netznutzungsabrechnungIntervall": 12,
+          "beinhaltetSingulaerGenutzteBetriebsmittel": true,
+          "haushaltskunde": true,
+          "terminnetznutzungsabrechnung": "0101",
+          "abrechnungsintervall": 12,
+          "startAbrechnungsjahr": "2024-03-14T14:30:31Z",
+          "geplanteTurnusablesung": {
+            "ableseZeitraum": "01011201"
+          },
+          "netznutzungsabrechnung": {
+            "abrechnungsZeitraum": "01011201"
+          }
+        }
+      },
+      {
+        "boTyp": "VERTRAG",
+        "vertragsart": "NETZNUTZUNGSVERTRAG",
+        "vertragsnummer": "123456",
+        "marktlokationsId": "50000083289",
+        "vertragsbeginn": "2023-02-28T23:00:00+00:00",
+        "vertragsende": "2024-08-30T22:00:00+00:00",
+        "zeitliche_gueltigkeit": {
+          "zeitraumId": 4,
+          "startdatum": "2023-12-31T23:00:00Z",
+          "enddatum": "2024-12-31T23:00:00Z"
+        },
+        "datenqualitaet": "GUELTIGE_DATEN",
+        "gemeinderabatt": 0,
+        "vertragspartner2": [
+          {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "geschaeftspartnerrolle": [
+              "KUNDE"
+            ],
+            "gewerbekennzeichnung": false,
+            "name1": "Mustermann",
+            "name2": "Max"
+          }
+        ],
+        "vertragskonditionen": {
+          "netznutzungszahler": "LIEFERANT",
+          "netznutzungsvertrag": "LIEFERANTEN_NB",
+          "netznutzungsabrechnungsgrundlage": "LIEFERSCHEIN",
+          "netznutzungsabrechnungsvariante": "ARBEITSPREIS_GRUNDPREIS",
+          "naechstenetznutzungsabrechnung": "01011201",
+          "netznutzungsabrechnungIntervall": 12,
+          "beinhaltetSingulaerGenutzteBetriebsmittel": true,
+          "haushaltskunde": true,
+          "terminnetznutzungsabrechnung": "0101",
+          "abrechnungsintervall": 12,
+          "startAbrechnungsjahr": "2024-03-14T14:30:31Z",
+          "geplanteTurnusablesung": {
+            "ableseZeitraum": "01011201"
+          },
+          "netznutzungsabrechnung": {
+            "abrechnungsZeitraum": "01011201"
+          }
+        }
       }
     ]
   }
