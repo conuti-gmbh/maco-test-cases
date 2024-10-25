@@ -1,0 +1,71 @@
+{
+    "stammdaten":{
+    "LOKATIONSBUENDEL":[
+    {
+        "boTyp": "LOKATIONSBUENDEL",
+        "versionStruktur": "1",
+        "lokationsbuendelstrukturId": "9992000000026",
+        "lokationsbuendelNummer": 1,
+        "standardisierteLokationsbuendelstruktur": true,
+        "zuordnungObjectcode": [
+          {
+            "referenzLokationsTyp": "MALO", 
+            "referenzLokationsId": "74018657187",
+            "objectcode": [
+              {
+                "objectcode": "9992000001016",
+                "lokationsbuendelNummer": 1
+              }
+            ],
+            "vorgelagerteLokationTyp": null, 
+            "vorgelagerteLokationId": null,
+            "referenzMarktlokationTechnischeRessource": [
+            ]
+          },
+          {
+            "referenzLokationsTyp": "MELO", 
+            "referenzLokationsId": "DE36854189874FDVFMOZZNWOTQ2BIGVPP",
+            "objectcode": [
+              {
+                "objectcode": "9992000001032",
+                "lokationsbuendelNummer": 1
+              }
+            ],
+            "vorgelagerteLokationTyp": null, 
+            "vorgelagerteLokationId": null,
+            "referenzMarktlokationTechnischeRessource": [
+            ]
+          },
+          {
+            "referenzLokationsTyp": "NELO", 
+            "referenzLokationsId": "12345678901",
+            "objectcode": [
+              {
+                "objectcode": "9992000001256",
+                "lokationsbuendelNummer": 1
+              }
+            ],
+            "vorgelagerteLokationTyp": null, 
+            "vorgelagerteLokationId": null,
+            "referenzMarktlokationTechnischeRessource": [
+            ]
+          },
+          {
+            "referenzLokationsTyp": "TR", 
+            "referenzLokationsId": "90123456789",
+            "objectcode": [
+              {
+                "objectcode": "9992000001024",
+                "lokationsbuendelNummer": 1
+              }
+            ],
+            "vorgelagerteLokationTyp": null, 
+            "vorgelagerteLokationId": null,
+            "referenzMarktlokationTechnischeRessource": [
+            ]
+          }
+        ]
+    }
+    ]
+    }
+    }
