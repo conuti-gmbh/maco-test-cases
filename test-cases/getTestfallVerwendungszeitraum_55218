@@ -42,7 +42,7 @@
           "startdatum": "2023-12-31T23:00:00Z",
           "enddatum": "2024-12-31T23:00:00Z"
         },
-        "datenqualitaet": "DATEN",
+        "datenqualitaet": "DATEN ",
         "energierichtung": "AUSSP",
         "netzebene": "NSP",
         "marktlokationsId": "50074561188",
