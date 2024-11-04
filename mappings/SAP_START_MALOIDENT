@@ -1,0 +1,70 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": marktlokationsId,
+        "sparte": "STROM",
+        "energierichtung": energierichtung
+      }
+    ],
+    "TRANCHE": $exists(tranchenIds) ? $map(tranchenIds, function($id) {
+      {
+        "boTyp": "TRANCHE",
+        "versionStruktur": "1",
+        "tranchenId": $id
+      }
+    }) : [],
+    "ZAEHLER": $exists(zaehlernummern) ? $map(zaehlernummern, function($zaehler) {
+      {
+        "boTyp": "ZAEHLER",
+        "versionStruktur": "1",
+        "zaehlernummer": $zaehler
+      }
+    }) : [],
+    "MESSLOKATION": $exists(meloIds) ? $map(meloIds, function($meloId) {
+      {
+        "boTyp": "MESSLOKATION",
+        "versionStruktur": "1",
+        "messlokationsId": $meloId
+      }
+    }) : [],
+    "ENERGIELIEFERVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "ENERGIELIEFERVERTRAG",
+        "sparte": "STROM",
+        "vertragspartner2": [
+          {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "anrede": anrede,
+            "name1": name1,
+            "name2": name2,
+            "geschaeftspartnerrolle": [
+              "KUNDE"
+            ],
+            "externeReferenzen": [
+              {
+                "exRefName": "Kundennummer beim Altlieferanten",
+                "exRefWert": exRefName
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transaktionsdaten": {
+    "energierichtung": energierichtung,
+    "ausfuehrungsdatum": ausfuehrungsdatum,
+    "empfaenger": {
+      "rollencodenummer": empfaenger
+    },
+    "absender": {
+      "rollencodenummer": absender
+    }
+  }
+}
