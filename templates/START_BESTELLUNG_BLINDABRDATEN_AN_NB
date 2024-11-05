@@ -5,9 +5,29 @@
                 "boTyp": "NETZLOKATION",
                 "versionStruktur": "1",
                 "netzlokationsId": "${data:jsonPath('$.netzlokationsId'):isEmpty():ifElse('null',${data:jsonPath('$.netzlokationsId')})}",
-                "sparte":"${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}"
+                "sparte":"${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
+                "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+                "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+                "abrechnungsdaten": [
+                  {
+                    "artikelId": "${data:jsonPath('$.artikelId'):isEmpty():ifElse('null',${data:jsonPath('$.artikelId')})}",
+                    "artikelIdTyp": "${data:jsonPath('$.artikelIdTyp'):isEmpty():ifElse('null',${data:jsonPath('$.artikelIdTyp')})}",
+                    "abrechnungBlindarbeit": ${data:jsonPath('$.abrechnungBlindarbeit'):isEmpty():ifElse('null',${data:jsonPath('$.abrechnungBlindarbeit')})},
+                    "zahlerBlindarbeit": "${data:jsonPath('$.zahlerBlindarbeit'):isEmpty():ifElse('null',${data:jsonPath('$.zahlerBlindarbeit')})}"
+                  }
+                ]
             }
-        ]
+        ],
+        "VERWENDUNGSZEITRAUM": [
+        {
+          "boTyp": "VERWENDUNGSZEITRAUM",
+          "versionStruktur": "1",
+          "zeitraumId": ${data:jsonPath('$.zeitraumId'):isEmpty():ifElse('null',${data:jsonPath('$.zeitraumId')})},
+          "datenqualitaet": "${data:jsonPath('$.datenqualitaet'):isEmpty():ifElse('null',${data:jsonPath('$.datenqualitaet')})}",
+          "verwendungAb": "${data:jsonPath('$.verwendungAb'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungAb')})}",
+          "verwendungBis": "${data:jsonPath('$.verwendungBis'):isEmpty():ifElse('null',${data:jsonPath('$.verwendungBis')})}"
+        }
+      ],
       },
       "transaktionsdaten": {
         "sparte":"${data:jsonPath('$.sparte'):isEmpty():ifElse('null',${data:jsonPath('$.sparte')})}",
