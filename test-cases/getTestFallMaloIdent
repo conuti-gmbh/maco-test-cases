@@ -1,0 +1,51 @@
+{
+  "zusatzdaten": {
+    "maloIdentDaten": [
+      {
+        "lokationsId": "74018657187",
+        "trefferMaloid": true,
+        "trefferTrancheId": false,
+        "trefferAdresse1": true,
+        "trefferKundennummer": false,
+        "trefferName": false,
+        "trefferGeraetenummer": false,
+        "trefferMeloid": false,
+        "trefferAdresse2": true,
+        "trefferMakorelevant": true,
+        "trefferStillgelegt": false,
+        "trefferNetzgebiet": true,
+        "trefferNetzgebiet3KJ": true
+      },
+      {
+        "lokationsId": "74018547981",
+        "trefferMaloid": true,
+        "trefferTrancheId": false,
+        "trefferAdresse1": true,
+        "trefferKundennummer": false,
+        "trefferName": false,
+        "trefferGeraetenummer": false,
+        "trefferMeloid": false,
+        "trefferAdresse2": true,
+        "trefferMakorelevant": true,
+        "trefferStillgelegt": false,
+        "trefferNetzgebiet": true,
+        "trefferNetzgebiet3KJ": true
+      },
+      {
+        "lokationsId": "74018595741",
+        "trefferMaloid": true,
+        "trefferTrancheId": false,
+        "trefferAdresse1": true,
+        "trefferKundennummer": false,
+        "trefferName": false,
+        "trefferGeraetenummer": false,
+        "trefferMeloid": false,
+        "trefferAdresse2": true,
+        "trefferMakorelevant": true,
+        "trefferStillgelegt": false,
+        "trefferNetzgebiet": true,
+        "trefferNetzgebiet3KJ": true
+      }
+    ]
+  }
+}
