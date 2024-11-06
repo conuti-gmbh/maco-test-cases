@@ -39,19 +39,21 @@
             "marktrolle": "UENB"
           }
         ]
-      },
-      {
-        "boTyp": "MESSLOKATION",
-        "messlokationsId": "DE0032106765712000000000000000037",
-        "marktrollen": [
-          {
-            "boTyp": "MARKTTEILNEHMER",
-            "versionStruktur": "1",
-            "rollencodenummer": "9904446000007",
-            "marktrolle": "MSB"
-          }
-        ]
       }      
+    ],
+    "MESSLOKATION" : [
+        {
+            "boTyp": "MESSLOKATION",
+            "messlokationsId": "DE0032106765712000000000000000037",
+            "marktrollen": [
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "rollencodenummer": "9904446000007",
+                "marktrolle": "MSB"
+              }
+            ]
+        }
     ]
   }
 }
