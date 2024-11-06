@@ -1,0 +1,57 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "energierichtung": "AUSSP",
+        "marktlokationsId": "74018657187",
+        "messtechnischeEinordnung": "IMS",
+        "lokationsadresse": {
+          "postleitzahl": "77746",
+          "ort": "Schutterwald",
+          "strasse": "Ahornweg",
+          "hausnummer": "5",
+          "landescode": "DE"
+        },
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "rollencodenummer": "9903790000002",
+            "marktrolle": "LF"
+          },
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "rollencodenummer": "9904446000007",
+            "marktrolle": "MSB"
+          },
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "rollencodenummer": "9900321000005",
+            "marktrolle": "NB"
+          },
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "rollencodenummer": "4045399000077",
+            "marktrolle": "UENB"
+          }
+        ]
+      },
+      {
+        "boTyp": "MESSLOKATION",
+        "messlokationsId": "DE0032106765712000000000000000037",
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "rollencodenummer": "9904446000007",
+            "marktrolle": "MSB"
+          }
+        ]
+      }      
+    ]
+  }
+}
