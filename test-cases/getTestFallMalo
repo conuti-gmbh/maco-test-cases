@@ -6,7 +6,7 @@
     "inbetriebnahmeDatum":"2019-02-28T23:00:00+00:00",
     "energierichtung":"AUSSP",
     "netzebene":"NSP",
-    "marktlokationsId":"50074561188",
+    "marktlokationsId":"74018657187",
     "bilanzierungsgebiet":"11YR00000003039P",
     "regelzone":"10YDE-RWENET---I",
     "messtechnischeEinordnung":"IMS",
@@ -14,10 +14,10 @@
     "grundversorgerCodeNr": "9903790000002",
     "sperrstatus": "ENTSPERRT",  
     "lokationsadresse":{
-    "postleitzahl":"12346",
-    "ort":"Ort",
-    "strasse":"Straße",
-    "hausnummer":"3",
+    "postleitzahl":"77746",
+    "ort":"Schutterwald",
+    "strasse":"Ahornweg",
+    "hausnummer":"5",
     "adresszusatz":"Hinterhaus",
     "landescode":"DE"
     },
@@ -84,10 +84,10 @@
     ],
     "netznutzungsabrechnungsdaten":[
     {
-    "marktlokation.netznutzungsabrechnungsdaten.singulaereBetriebsmittel":{
+    "singulaereBetriebsmittel":{
     "wert":0
     },
-    "marktlokation.netznutzungsabrechnungsdaten.preisSingulaereBetriebsmittel":{
+    "preisSingulaereBetriebsmittel":{
     "wert":0
     },
     "zuschlag":0,
