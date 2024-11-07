@@ -26,7 +26,7 @@
     "boTyp": "MARKTTEILNEHMER",
     "versionStruktur": "1",
     "rollencodenummer":"4045399000077",
-    "marktrolle":"MGV",
+    "marktrolle":"UENB",
     "rollencodetyp":"BDEW"
     },
     {
@@ -42,7 +42,8 @@
     "rollencodenummer":"9904446000007",
     "marktrolle":"MSB",
     "rollencodetyp":"BDEW",
-    "weiterverpflichtet":true
+    "weiterverpflichtet":true,
+    "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
     },
     {
       "boTyp": "MARKTTEILNEHMER",
