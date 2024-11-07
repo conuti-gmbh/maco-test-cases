@@ -51,7 +51,7 @@
             ]
           },
           {
-            "referenzLokationsTyp": "TR", 
+            "referenzLokationsTyp": "TECHNISCHE_RESSOURCE", 
             "referenzLokationsId": "90123456789",
             "objectcode": [
               {
