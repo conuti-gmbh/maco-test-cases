@@ -1,91 +1,95 @@
 {
-  "stammdaten":{
-  "ENERGIELIEFERVERTRAG":[
-{
-  "boTyp": "VERTRAG",
-  "versionStruktur": "1",
-  "vertragsnummer": "134568",
-  "beschreibung": "Test",
-  "vertragsart": "ENERGIELIEFERVERTRAG",
-  "vertragstatus": "BEENDET",
-  "sparte": "GAS",
-  "vertragsbeginn": "2023-04-01T00:00:00Z",
-  "vertragsende": "2023-04-01T00:00:00Z",
-  "vertragspartner2": [
-    {
-      "boTyp": "GESCHAEFTSPARTNER",
-      "versionStruktur": "1",
-      "gewerbekennzeichnung": false,
-      "anrede": "Test",
-      "name1": "Test",
-      "name2": "Test",
-      "name3": "Test",
-      "name4": "Test",
-      "geschaeftspartnerrolle": [
-        "KUNDE"
-      ],
-      "partneradresse": {
-        "postleitzahl": "42553",
-        "ort": "Test",
-        "strasse": "Test",
-        "hausnummer": "3",
-        "postfach": "1345",
-        "adresszusatz": "Test",
-        "coErgaenzung": "Test",
-        "landescode": "DE",
-        "ortsteil": "Test"
-      },
-      "externeReferenzen": [
-        {
-          "exRefName": "Kundennummer beim Altlieferanten",
-          "exRefWert": "NummerLFA123456_Z01"
+  "stammdaten": {
+    "ENERGIELIEFERVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsnummer": "134568",
+        "beschreibung": "Test",
+        "vertragsart": "ENERGIELIEFERVERTRAG",
+        "vertragstatus": "BEENDET",
+        "sparte": "GAS",
+        "vertragsbeginn": "2023-04-01T00:00:00Z",
+        "vertragsende": "2023-04-01T00:00:00Z",
+        "vertragspartner2": [
+          {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "gewerbekennzeichnung": false,
+            "anrede": "Test",
+            "name1": "Test",
+            "name2": "Test",
+            "name3": "Test",
+            "name4": "Test",
+            "geschaeftspartnerrolle": [
+              "KUNDE"
+            ],
+            "partneradresse": {
+              "postleitzahl": "42553",
+              "ort": "Test",
+              "strasse": "Test",
+              "hausnummer": "3",
+              "postfach": "1345",
+              "adresszusatz": "Test",
+              "coErgaenzung": "Test",
+              "landescode": "DE",
+              "ortsteil": "Test"
+            },
+            "externeReferenzen": [
+              {
+                "exRefName": "Kundennummer beim Altlieferanten",
+                "exRefWert": "NummerLFA123456_Z01"
+              },
+              {
+                "exRefName": "Kundennummer beim Lieferanten",
+                "exRefWert": "NummerLFN123456_Z01"
+              }
+            ]
+          }
+        ],
+        "vertragskonditionen": {
+          "kuendigungsfrist": {
+            "zeitraumText": "01JM"
+          },
+          "kuendigungstermin": "2023-04-01T00:00:00Z",
+          "abrechnungsintervall": 12
         },
-        {
-          "exRefName": "Kundennummer beim Lieferanten",
-          "exRefWert": "NummerLFN123456_Z01"
+        "korrespondenzpartner": {
+          "boTyp": "GESCHAEFTSPARTNER",
+          "versionStruktur": "1",
+          "anrede": "Test",
+          "name1": "Test",
+          "name2": "Test",
+          "name3": "Test",
+          "name4": "Test",
+          "gewerbekennzeichnung": true,
+          "partneradresse": {
+            "postleitzahl": "42553",
+            "ort": "Test",
+            "strasse": "Test",
+            "hausnummer": "3",
+            "postfach": "1345",
+            "adresszusatz": "Test",
+            "coErgaenzung": "Test",
+            "landescode": "DE",
+            "ortsteil": "Test"
+          }
+        },
+        "lokationsId": "50074561188",
+        "lokationsTyp": "MALO",
+        "enFG": [
+          {
+            "grundlageVerringerungUmlagen": "KEINE_ANGABE",
+            "grund": [
+              "ENFG_STROMSPEICHER_UND_VERLUSTENERGIE"
+            ]
+          }
+        ],
+        "gueltigkeitszeitraum": {
+          "startdatum": "2024-04-22T19:58:43.0Z",
+          "zeitraumId": 1
         }
-      ]
-    }
-  ],
-  "vertragskonditionen": {
-    "kuendigungsfrist": {
-      "zeitraumText": "01JM"
-    },
-    "kuendigungstermin": "2023-04-01T00:00:00Z",
-    "abrechnungsintervall": 12
-  },
-  "korrespondenzpartner": {
-    "boTyp": "GESCHAEFTSPARTNER",
-    "versionStruktur": "1",
-    "anrede": "Test",
-      "name1": "Test",
-      "name2": "Test",
-      "name3": "Test",
-      "name4": "Test",
-    "gewerbekennzeichnung": true,
-    "partneradresse": {
-      "postleitzahl": "42553",
-        "ort": "Test",
-        "strasse": "Test",
-        "hausnummer": "3",
-        "postfach": "1345",
-        "adresszusatz": "Test",
-        "coErgaenzung": "Test",
-        "landescode": "DE",
-        "ortsteil": "Test"
-    }
-  },
-  "lokationsId": "50074561188",
-  "lokationsTyp": "MALO",
-  "enFG": [
-    {
-      "grundlageVerringerungUmlagen": "KEINE_ANGABE",
-      "grund": [
-        "ENFG_STROMSPEICHER_UND_VERLUSTENERGIE"
-      ]
-    }
-  ]
-}
-]
+      }
+    ]
   }
 }

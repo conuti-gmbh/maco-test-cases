@@ -1,49 +1,53 @@
 {
-    "stammdaten":{
-    "BILANZIERUNG":[
-    {
-    "boTyp":"BILANZIERUNG",
-    "bilanzkreis": "11Y0-0000-0076-N",
-    "bilanzierungsbeginn": "2023-02-28T23:00:00+00:00",
-    "bilanzierungsende": "2024-04-30T22:00:00+00:00",   
-    "marktlokationsId":"50000083289",
-    "lastprofile":[
-    {
-    "bezeichnung":"H00",
-    "verfahren":"ANALYTISCH",
-    "profilart":"ART_STANDARDLASTPROFIL",
-    "einspeisung":false,
-    "tagesparameter": {
-                "klimazone": "Werl",
-                "herausgeber": "NB"
-              },
-    "herausgeber":"NB"
-    }
-    ],
-    "jahresverbrauchsprognose":{
-    "wert":2000,
-    "einheit":"KWH"
-    },
-    "vorjahresverbrauch": {
-    "wert": 45.8,
-    "einheit": "KWH"
-    },
-    "kundenwert":{
-    "wert":5000
-    },
-    "verbrauchsaufteilung":{
-    "wert":0.3
-    },
-    "aggregationsverantwortung":"UENB",
-    "zeitreihentyp":"SLS",
-    "prognosegrundlage":"PROFILE",
-    "wahlrechtPrognosegrundlage":"DURCH_LF",
-    "grundWahlrechtPrognosegrundlage":"NICHT_WEGEN_EIGENVERBRAUCH",
-    "detailsPrognosegrundlage":[
-    "SLP_SEP"
-    ],
-    "abwicklungsmodell": "MODELL_1_BILANZIERUNG_AN_MARKTLOKATION"
-    }
+  "stammdaten": {
+    "BILANZIERUNG": [
+      {
+        "boTyp": "BILANZIERUNG",
+        "bilanzkreis": "11Y0-0000-0076-N",
+        "bilanzierungsbeginn": "2023-02-28T23:00:00+00:00",
+        "bilanzierungsende": "2024-04-30T22:00:00+00:00",
+        "marktlokationsId": "50000083289",
+        "lastprofile": [
+          {
+            "bezeichnung": "H00",
+            "verfahren": "ANALYTISCH",
+            "profilart": "ART_STANDARDLASTPROFIL",
+            "einspeisung": false,
+            "tagesparameter": {
+              "klimazone": "Werl",
+              "herausgeber": "NB"
+            },
+            "herausgeber": "NB"
+          }
+        ],
+        "jahresverbrauchsprognose": {
+          "wert": 2000,
+          "einheit": "KWH"
+        },
+        "vorjahresverbrauch": {
+          "wert": 45.8,
+          "einheit": "KWH"
+        },
+        "kundenwert": {
+          "wert": 5000
+        },
+        "verbrauchsaufteilung": {
+          "wert": 0.3
+        },
+        "aggregationsverantwortung": "UENB",
+        "zeitreihentyp": "SLS",
+        "prognosegrundlage": "PROFILE",
+        "wahlrechtPrognosegrundlage": "DURCH_LF",
+        "grundWahlrechtPrognosegrundlage": "NICHT_WEGEN_EIGENVERBRAUCH",
+        "detailsPrognosegrundlage": [
+          "SLP_SEP"
+        ],
+        "abwicklungsmodell": "MODELL_1_BILANZIERUNG_AN_MARKTLOKATION",
+        "gueltigkeitszeitraum": {
+          "startdatum": "2024-04-22T19:58:43.0Z",
+          "zeitraumId": 1
+        }        
+      }
     ]
-    }
-    }
+  }
+}
