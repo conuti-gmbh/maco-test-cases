@@ -1,0 +1,146 @@
+{
+  "boTyp": "ZAEHLER", 
+  "versionStruktur": "1",
+  "zaehlernummer": "21520111",
+  "messlokationsId": "DE0009697056900614312080040415111",
+  "marktlokationsId": "50754496000",
+  "sparte": "STROM",
+  "gueltigkeitszeitraum": {
+    "zeitraumId": null,
+    "startdatum": null,
+    "enddatum": null
+  },
+  "datenqualitaet": null,
+  "zaehlerauspraegung": "EINRICHTUNGSZAEHLER",
+  "zaehlertyp": "ELEKTRONISCHERHAUSHALTSZAEHLER",
+  "tarifart": "EINTARIF",
+  "zaehlerkonstante": 1,
+  "eichungBis": "2032-00-00T00:00:00Z",
+  "zaehlwerke": [
+    {
+      "zaehlwerkId": "1",
+      "bezeichnung": "<string>",
+      "richtung": "AUSSP",
+      "obisKennzahl": "1-1:1.8.0",
+      "vorkommastellen": 7,
+      "nachkommastellen": 3,
+      "wandlerfaktor": 1,
+      "einheit": "KWH",
+      "schwachlastfaehig": "NICHT_SCHWACHLASTFAEHIG",
+      "verwendungszwecke": [
+        {
+          "marktrolle": "NB",
+          "zweck": [
+            "NETZNUTZUNGSABRECHNUNG"
+          ]
+        }
+      ],
+      "verbrauchsart": null,
+      "unterbrechbarkeit": null,
+      "waermenutzung": null,
+      "konzessionsabgabe": {
+        "satz": null,
+        "kosten": null,
+        "kategorie": null
+      },
+      "steuerbefreit": false,
+      "vorkommastelle": 7,
+      "nachkommastelle": 3,
+      "abrechnungsrelevant": true,
+      "anzahlAblesungen": null,
+      "zaehlzeiten": {
+        "zaehlzeitDefinition": "<string>",
+        "register": "<string>",
+        "schwachlastfaehig": "ENUM_Schwachlastfaehig"
+        //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Schwachlastfaehig.cs
+      },
+      "konfiguration": "<string>",
+      "wertegranularitaet": "ENUM_siehe.Liste.Kommentar",
+      //"JAEHRLICH", "HALBJAEHRLICH", "QUARTALSWEISE", "MONATLICH"
+      "notwendigkeitZweiteMessung": "ENUM_siehe.Liste.Kommentar",
+      //"VORHANDEN", "NICHT_VORHANDEN"
+      "werteuebermittlungVerwendungszweck": "ENUM_siehe.Liste.Kommentar",
+      //"VORHANDEN", "NICHT_VORHANDEN"
+      "artEMobilitaet": "ENUM_siehe.Liste.Kommentar"
+      //"WB", "LS", "LP"
+    }
+  ],
+  "zaehlerhersteller": {
+    "boTyp": "GESCHAEFTSPARTNER",
+    "versionStruktur": "1",
+    "anrede": "<string>",
+    "name1": "<string>",
+    "name2": "<string>",
+    "name3": "<string>",
+    "name4": "<string>",
+    "gewerbekennzeichnung": true,
+    "hrnummer": "<string>",
+    "amtsgericht": "<string>",
+    "kontaktweg": [
+      "ENUM_Kontaktart1",
+      "ENUM_Kontaktart2",
+      "..."
+      //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Kontaktart.cs
+    ],
+    "umsatzsteuerId": "<string>",
+    "glaeubigerId": "<string>",
+    "eMailAdresse": "<string>",
+    "website": "<string>",
+    "geschaeftspartnerrolle": [
+      "ENUM_Geschaeftspartnerrolle1",
+      "ENUM_Geschaeftspartnerrolle2",
+      "..."
+      //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Geschaeftspartnerrolle.cs
+    ],
+    "partneradresse": {
+      "postleitzahl": "<string>",
+      "ort": "<string>",
+      "strasse": "<string>",
+      "hausnummer": "<string>",
+      "postfach": "<string>",
+      "adresszusatz": "<string>",
+      "coErgaenzung": "<string>",
+      "landescode": "ENUM_Landescode",
+      //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Landescode.cs
+      "ortsteil": "<string>"
+    }
+  },
+  "gateway": "<string>",
+  "fernschaltung": "ENUM_Fernschaltung",
+  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Fernschaltung.cs
+  "messwerterfassung": "ENUM_Messwerterfassung",
+  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Messwerterfassung.cs
+  "zaehlertypspezifikation": "ENUM_Zaehlertypspezifikation",
+  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/ZaehlertypSpezifikation.cs
+  "befestigungsart": "ENUM_Befestigungsart",
+  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Befestigungsart.cs
+  "zaehlergroesse": "ENUM_Geraetemerkmal",
+  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Geraetemerkmal.cs
+  "geraete": [
+    {
+      "geraetenummer": "<string>",
+      "weitereGeraetenummern": [
+        "<string>",
+        "<string>"
+      ],
+      "geraeteeigenschaften": {
+        "geraetetyp": "ENUM_Geraetetyp",
+        //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Geraetetyp.cs
+        "geraetemerkmal": "ENUM_Geraetemerkmal",
+        //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Geraetemerkmal.cs
+        "faktor": 1,
+        "volumenerfassung": "ENUM_Volumenerfassung.siehe.Liste.Kommentar"
+      //"HOCHFREQUENZSONDE", "KENNLINIENKORREKTUR", "SCHLEICHMENGENUNTERDRUECKUNG"
+      }
+    }
+  ],
+  "mengenumwertertyp": "ENUM_Mengenumwertertyp.siehe.Liste.Kommentar",
+  //"DICHTEMENGENUMWERTER", "TEMPERATURMENGENUMWERTER", "ZUSTANDSMENGENUMWERTER"
+  "volumenerfassung": "ENUM_Volumenerfassung.siehe.Liste.Kommentar",
+  //"HOCHFREQUENZSONDE", "KENNLINIENKORREKTUR", "SCHLEICHMENGENUNTERDRUECKUNG"
+  "serialnummer": "<string>",
+  "geraetemerkmal": "ENUM_Geraetemerkmal",
+  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Geraetemerkmal.cs
+  "herstellungsdatum": "2019-00-00T00:00:00Z",
+  "baujahr": "<string>"
+}
