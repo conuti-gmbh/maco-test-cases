@@ -10,10 +10,10 @@
     "vertragsnummer": "12345",
     "beschreibung": "XYZ",
     "vertragsart": "ENERGIELIEFERVERTRAG",
-    "vertragstatus": "GEKUENDIGT",
+    "vertragstatus": "BEENDET",
     "sparte": "STROM",
     "vertragsbeginn": "0001-01-01T00:00:00Z",
-    "vertragsende": null,
+    "vertragsende": "2025-11-31T23:00:00Z",
     "vertragspartner2": [
       {
         "boTyp": "GESCHAEFTSPARTNER",
@@ -53,7 +53,7 @@
       "kuendigungsfrist": {
         "zeitraumText": null
       },
-      "kuendigungstermin": "2024-12-31T23:00:00Z",
+      "kuendigungstermin": null,
       "abrechnungsintervall": null
     },
     "korrespondenzpartner": {
