@@ -10,10 +10,10 @@
     "vertragsnummer": "12345",
     "beschreibung": "XYZ",
     "vertragsart": "ENERGIELIEFERVERTRAG",
-    "vertragstatus": "GEKUENDIGT",
+    "vertragstatus": "BEENDET",
     "sparte": "STROM",
     "vertragsbeginn": "0001-01-01T00:00:00Z",
-    "vertragsende": null,
+    "vertragsende": "2025-11-31T23:00:00Z",
     "vertragspartner2": [
       {
         "boTyp": "GESCHAEFTSPARTNER",
@@ -21,7 +21,7 @@
         "gewerbekennzeichnung": false,
         "anrede": "Herr",
         "name1": "Hai",
-        "name2": "Fisch",
+        "name2": "Fisch>",
         "name3": null,
         "geschaeftspartnerrolle": [
           "KUNDE"
@@ -51,9 +51,9 @@
     ],
     "vertragskonditionen": {
       "kuendigungsfrist": {
-        "zeitraumText": null
+        "zeitraumText": "18WT"
       },
-      "kuendigungstermin": "2024-12-31T23:00:00Z",
+      "kuendigungstermin": "2025-10-12T23:00:00Z",
       "abrechnungsintervall": null
     },
     "korrespondenzpartner": {
@@ -61,7 +61,7 @@
       "versionStruktur": "1",
       "anrede": "Herr",
         "name1": "Hai",
-        "name2": "Fisch>",
+        "name2": "Fisch",
         "name3": null,
       "gewerbekennzeichnung": false,
       "partneradresse": {
