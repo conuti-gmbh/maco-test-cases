@@ -1,3 +1,0 @@
-Testfallid: testfall1
-Zweck: Testen einer Anmeldung .....
-Erwartetes Ergebnis: Ablehnung A99
