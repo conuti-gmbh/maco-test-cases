@@ -3,9 +3,9 @@
     "ID": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
     "EVENTNAME": "START_KUENDIGUNG",
     "TESTSZENARIO": "1",
-    "SENDER_ID": "9979052000006",
+    "SENDER_ID": "9903526000002",
     "SENDER_CODELIST": "293",
-    "RECEIVER_ID": "9903729000007", 
+    "RECEIVER_ID": "9903526000002", 
     "RECEIVER_CODELIST": "293"
   },
   "DATA": {
@@ -14,7 +14,7 @@
       "MDOC_TYPE": "SWTDOC",
       "MDOC_STATUS": "",
       "CREATED_BY": "MSKUPCH",
-      "CREATED_AT": 20241004060230,
+      "CREATED_AT": 20251104060230,
       "CHANGED_BY": "",
       "CHANGED_AT": 0
     },
@@ -155,7 +155,7 @@
     "DATE_TYPES": [
       {
         "DATE_TYPE": "END_SUPPLY_FIX",
-        "DATE_TIME": 20241031220000
+        "DATE_TIME": 20251030230000
       },
       {
         "DATE_TYPE": "END_SUPPLY_VAR",
@@ -167,8 +167,8 @@
         "MA_EVENT": "START_KUENDIGUNG",
         "DEXTASKID": "",
         "MA_GUID": "",
-        "CREATED_AT": 20241004060230,
-        "CHANGED_AT": 20241004060249,
+        "CREATED_AT": 20251104060230,
+        "CHANGED_AT": 20251104060249,
         "STATUS": "PENDING"
       }
     ],
