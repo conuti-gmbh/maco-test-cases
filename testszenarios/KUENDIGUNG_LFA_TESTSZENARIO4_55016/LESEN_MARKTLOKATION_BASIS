@@ -1,4 +1,7 @@
 {
+  "stammdaten":{
+  "MARKTLOKATION":[
+{
   "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
   "marktlokationsId": "50754496000",
@@ -406,4 +409,7 @@
     }
   ],
   "paketId": null
+}
+  ]
+}
 }

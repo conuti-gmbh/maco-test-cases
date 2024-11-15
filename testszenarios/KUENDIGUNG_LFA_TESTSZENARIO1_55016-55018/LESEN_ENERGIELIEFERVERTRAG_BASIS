@@ -1,4 +1,7 @@
 {
+  "stammdaten":{
+  "ENERGIELIEFERVERTRAG":[
+{
   "boTyp": "VERTRAG",
   "versionStruktur": "1",
   "gueltigkeitszeitraum": {
@@ -86,4 +89,7 @@
       ]
     }
   ]
+}
+]
+}
 }
