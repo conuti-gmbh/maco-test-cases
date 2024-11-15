@@ -16,7 +16,7 @@
     "vertragstatus": "GEKUENDIGT",
     "sparte": "STROM",
     "vertragsbeginn": "0001-01-01T00:00:00Z",
-    "vertragsende": null,
+    "vertragsende": "9999-12-31T23:59:59Z",
     "vertragspartner2": [
       {
         "boTyp": "GESCHAEFTSPARTNER",
