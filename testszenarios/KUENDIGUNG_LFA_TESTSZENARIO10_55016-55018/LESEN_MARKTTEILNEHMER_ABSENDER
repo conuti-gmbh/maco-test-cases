@@ -1,4 +1,7 @@
 {
+  "stammdaten":{
+  "MARKTTEILNEHMER":[
+{
   "marktteilnehmer": {
     "boTyp": "MARKTTEILNEHMER",
     "versionStruktur": "1",
@@ -62,4 +65,7 @@
       "ortsteil": null
     }
   }
+}
+  ]
+}
 }

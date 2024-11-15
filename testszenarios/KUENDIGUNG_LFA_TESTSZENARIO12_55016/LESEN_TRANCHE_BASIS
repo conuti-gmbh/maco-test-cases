@@ -1,4 +1,7 @@
 {
+  "stammdaten":{
+  "TRANCHE":[
+{
   "boTyp": "TRANCHE",
   "versionStruktur": "1",
   "tranchenId": "50754496999",
@@ -309,4 +312,7 @@
       ]
     }
   ]
+}
+]
+}
 }

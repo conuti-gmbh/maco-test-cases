@@ -1,4 +1,7 @@
 {
+  "stammdaten":{
+  "BILANZIERUNG":[
+{
   "boTyp": "BILANZIERUNG",
   "versionStruktur": "1",
   "marktlokationsId": "<string>",
@@ -134,4 +137,7 @@
       ]
     }
   ]
+}
+]
+}
 }
