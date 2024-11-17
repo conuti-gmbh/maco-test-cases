@@ -5,7 +5,7 @@
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
           "marktlokationsId": DATA.VALUES[OBJECT="MARKET_LOCATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
-          "sparte": DATA.VALUES[OBJECT="SWITCHDOCMESSAGE" and ATTRIBUTE_NAME="SPARTYP"].ATTRIBUTE_VALUE = "01" ? "STROM" : "GAS"  ,
+          "sparte": DATA.VALUES[OBJECT="SWITCHDOC" and ATTRIBUTE_NAME="SPARTYP"].ATTRIBUTE_VALUE = "01" ? "STROM" : "GAS"  ,
           "energierichtung": DATA.VALUES[OBJECT="SWITCHDOCMESSAGE" and ATTRIBUTE_NAME="DIRECTION"].ATTRIBUTE_VALUE = "1" ? "AUSSP" : "EINSP"       
         }
       ] : [],
@@ -47,7 +47,7 @@
                   $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY"].DATE_TIME & "", 8, 2) & ":" &
                   $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY"].DATE_TIME & "", 10, 2) & ":" &
                   $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY"].DATE_TIME & "", 12, 2) & "Z",
-          "sparte": DATA.VALUES[OBJECT="SWITCHDOCMESSAGE" and ATTRIBUTE_NAME="SPARTYP"].ATTRIBUTE_VALUE = "01" ? "STROM" : "GAS" ,
+          "sparte": DATA.VALUES[OBJECT="SWITCHDOC" and ATTRIBUTE_NAME="SPARTYP"].ATTRIBUTE_VALUE = "01" ? "STROM" : "GAS" ,
           "lokationsId": DATA.VALUES[OBJECT="MARKET_LOCATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
           "lokationsTyp": "MALO",
           "vertragskonditionen": {
@@ -57,7 +57,7 @@
       ]
     },
     "transaktionsdaten": {
-      "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="SPARTE"].ATTRIBUTE_VALUE,
+      "sparte": DATA.VALUES[OBJECT="SWITCHDOC" and ATTRIBUTE_NAME="SPARTYP"].ATTRIBUTE_VALUE = "01" ? "STROM" : "GAS",
       "empfaenger": {
         "rollencodenummer": HEADER.RECEIVER_ID
       },
