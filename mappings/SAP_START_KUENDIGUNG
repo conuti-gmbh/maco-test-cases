@@ -52,22 +52,22 @@
                 "boTyp": "VERTRAG",
                 "versionStruktur": "1",
                 "vertragsart": "NETZNUTZUNGSVERTRAG",
-                "vertragsbeginn": DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"] ? (
+                "vertragsbeginn": $exists(DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"]) and DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"].DATE_TIME != "" ? (
                     $substring(DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"].DATE_TIME & "", 0, 4) & "-" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"].DATE_TIME & "", 4, 2) & "-" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"].DATE_TIME & "", 6, 2) & "T" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"].DATE_TIME & "", 8, 2) & ":" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"].DATE_TIME & "", 10, 2) & ":" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"].DATE_TIME & "", 12, 2) & "Z"
-                ) : null,
-                "vertragsende": DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"] ? (
+                ) : undefined,
+                "vertragsende": $exists(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"]) and DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME != "" ? (
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME & "", 0, 4) & "-" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME & "", 4, 2) & "-" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME & "", 6, 2) & "T" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME & "", 8, 2) & ":" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME & "", 10, 2) & ":" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME & "", 12, 2) & "Z"
-                ) : null,
+                ) : undefined,
                 "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="SPARTE"].ATTRIBUTE_VALUE,
                 "lokationsId": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
                 "lokationsTyp": "MALO",
@@ -120,7 +120,7 @@
         "transaktionsgrund": DATA.VALUES[OBJECT="TRANSAKTION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUND"].ATTRIBUTE_VALUE,
         "transaktionsgrundergaenzung": DATA.VALUES[OBJECT="TRANSAKTION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUNDERGAENZUNG"].ATTRIBUTE_VALUE,
         "transaktionsgrundergaenzungBefristeteAnmeldung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUNDERGAENZUNGBEFRISTETEANMELDUNG"].ATTRIBUTE_VALUE,
-        "endezumtermin": DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_VAR"] ? (
+        "endezumtermin": $exists(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_VAR"]) and DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_VAR"].DATE_TIME != "" ? (
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_VAR"].DATE_TIME & "", 0, 4) & "-" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_VAR"].DATE_TIME & "", 4, 2) & "-" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_VAR"].DATE_TIME & "", 6, 2) & "T" &
