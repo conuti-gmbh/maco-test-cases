@@ -56,7 +56,7 @@
       "kuendigungsfrist": {
         "zeitraumText": null
       },
-      "kuendigungstermin": null,
+      "kuendigungstermin": "2025-10-31T23:00:00Z",
       "abrechnungsintervall": null
     },
     "korrespondenzpartner": {
