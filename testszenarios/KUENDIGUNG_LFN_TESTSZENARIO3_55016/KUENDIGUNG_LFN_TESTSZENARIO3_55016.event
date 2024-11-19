@@ -14,7 +14,7 @@
       "MDOC_TYPE": "SWTDOC",
       "MDOC_STATUS": "",
       "CREATED_BY": "MSKUPCH",
-      "CREATED_AT": 20250804060230,
+      "CREATED_AT": 20251104060230,
       "CHANGED_BY": "",
       "CHANGED_AT": 0
     },
@@ -28,7 +28,7 @@
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "ANREDE",
-        "ATTRIBUTE_VALUE": "0002",
+        "ATTRIBUTE_VALUE": "HERR",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -76,7 +76,7 @@
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "GEWERBEKENNZEICHNUNG",
-        "ATTRIBUTE_VALUE": "true",
+        "ATTRIBUTE_VALUE": "false",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -155,7 +155,7 @@
     "DATE_TYPES": [
       {
         "DATE_TYPE": "END_SUPPLY_FIX",
-        "DATE_TIME": 20251030230000
+        "DATE_TIME": 20241116230000
       },
       {
         "DATE_TYPE": "END_SUPPLY_VAR",
@@ -167,8 +167,8 @@
         "MA_EVENT": "START_KUENDIGUNG",
         "DEXTASKID": "",
         "MA_GUID": "",
-        "CREATED_AT": 20250804060230,
-        "CHANGED_AT": 20250804060249,
+        "CREATED_AT": 20251104060230,
+        "CHANGED_AT": 20251104060249,
         "STATUS": "PENDING"
       }
     ],

@@ -28,7 +28,7 @@
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "ANREDE",
-        "ATTRIBUTE_VALUE": "0002",
+        "ATTRIBUTE_VALUE": "FRAU",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -58,7 +58,7 @@
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "NAME2",
-        "ATTRIBUTE_VALUE": "Walter",
+        "ATTRIBUTE_VALUE": "Vanessa",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -76,7 +76,7 @@
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "GEWERBEKENNZEICHNUNG",
-        "ATTRIBUTE_VALUE": "true",
+        "ATTRIBUTE_VALUE": "false",
         "ATTRIBUTE_TYPE": ""
       },
       {

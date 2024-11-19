@@ -5,7 +5,7 @@
     "TESTSZENARIO": "KUENDIGUNG_LFN_TESTSZENARIO1_55016",
     "SENDER_ID": "9903526000002",
     "SENDER_CODELIST": "293",
-    "RECEIVER_ID": "9903526000002", 
+    "RECEIVER_ID": "9979052000006", 
     "RECEIVER_CODELIST": "293"
   },
   "DATA": {
@@ -28,7 +28,7 @@
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "ANREDE",
-        "ATTRIBUTE_VALUE": "0002",
+        "ATTRIBUTE_VALUE": "HERR",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -76,7 +76,7 @@
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "GEWERBEKENNZEICHNUNG",
-        "ATTRIBUTE_VALUE": "true",
+        "ATTRIBUTE_VALUE": "false",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -94,7 +94,7 @@
       {
         "OBJECT": "MARKTLOKATION",
         "ATTRIBUTE_NAME": "KEY",
-        "ATTRIBUTE_VALUE": "74018657187",
+        "ATTRIBUTE_VALUE": "50754496000",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -155,7 +155,7 @@
     "DATE_TYPES": [
       {
         "DATE_TYPE": "END_SUPPLY_FIX",
-        "DATE_TIME": 20251030230000
+        "DATE_TIME": 20241116230000
       },
       {
         "DATE_TYPE": "END_SUPPLY_VAR",

@@ -28,7 +28,7 @@
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "ANREDE",
-        "ATTRIBUTE_VALUE": "0002",
+        "ATTRIBUTE_VALUE": "HERR",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -76,7 +76,7 @@
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "GEWERBEKENNZEICHNUNG",
-        "ATTRIBUTE_VALUE": "true",
+        "ATTRIBUTE_VALUE": "false",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -155,7 +155,7 @@
     "DATE_TYPES": [
       {
         "DATE_TYPE": "END_SUPPLY_FIX",
-        "DATE_TIME": 20251030230000
+        "DATE_TIME": 20241030230000
       },
       {
         "DATE_TYPE": "END_SUPPLY_VAR",

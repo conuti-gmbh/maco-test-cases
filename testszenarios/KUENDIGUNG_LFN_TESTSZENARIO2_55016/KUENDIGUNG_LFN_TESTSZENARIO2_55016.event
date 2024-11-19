@@ -14,7 +14,7 @@
       "MDOC_TYPE": "SWTDOC",
       "MDOC_STATUS": "",
       "CREATED_BY": "MSKUPCH",
-      "CREATED_AT": 20250804060230,
+      "CREATED_AT": 20251104060230,
       "CHANGED_BY": "",
       "CHANGED_AT": 0
     },
@@ -28,7 +28,7 @@
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "ANREDE",
-        "ATTRIBUTE_VALUE": "0002",
+        "ATTRIBUTE_VALUE": "HERR",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -52,13 +52,13 @@
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "NAME1",
-        "ATTRIBUTE_VALUE": "Glöppel",
+        "ATTRIBUTE_VALUE": "Grzetiung GmbH",
         "ATTRIBUTE_TYPE": ""
       },
       {
         "OBJECT": "BUSINESS_PARTNER",
         "ATTRIBUTE_NAME": "NAME2",
-        "ATTRIBUTE_VALUE": "Walter",
+        "ATTRIBUTE_VALUE": "Walter Glöppel",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -112,7 +112,7 @@
       {
         "OBJECT": "MARKTLOKATION",
         "ATTRIBUTE_NAME": "HAUSHALTSKUNDE",
-        "ATTRIBUTE_VALUE": "true",
+        "ATTRIBUTE_VALUE": "false",
         "ATTRIBUTE_TYPE": ""
       },
       {
@@ -167,8 +167,8 @@
         "MA_EVENT": "START_KUENDIGUNG",
         "DEXTASKID": "",
         "MA_GUID": "",
-        "CREATED_AT": 20250804060230,
-        "CHANGED_AT": 20250804060249,
+        "CREATED_AT": 20251104060230,
+        "CHANGED_AT": 20251104060249,
         "STATUS": "PENDING"
       }
     ],
