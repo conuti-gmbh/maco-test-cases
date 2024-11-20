@@ -116,7 +116,14 @@
         "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="SPARTE"].ATTRIBUTE_VALUE,
         "empfaenger": {
             "rollencodenummer": HEADER.RECEIVER_ID,
-            "rollencodetyp": HEADER.RECEIVER_CODELIST
+            "rollencodetyp": $map(HEADER.RECEIVER_CODELIST, function($value) {
+                $switch($value, 
+                    "9", "GLN",
+                    "293", "BDEW",
+                    "332", "DVGW",
+                    $value
+                )
+            })
         },
         "transaktionsgrund": DATA.VALUES[OBJECT="TRANSAKTION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUND"].ATTRIBUTE_VALUE,
         "transaktionsgrundergaenzung": DATA.VALUES[OBJECT="TRANSAKTION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUNDERGAENZUNG"].ATTRIBUTE_VALUE,
@@ -130,7 +137,15 @@
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_VAR"].DATE_TIME & "", 12, 2) & "Z"
                 ) : null,
         "absender": {
-            "rollencodenummer": HEADER.SENDER_ID
+            "rollencodenummer": HEADER.SENDER_ID,
+            "rollencodetyp": $map(HEADER.SENDER_CODELIST, function($value) {
+                $switch($value, 
+                    "9", "GLN",
+                    "293", "BDEW",
+                    "332", "DVGW",
+                    $value
+                )
+            })            
         }
     }
 }
