@@ -47,28 +47,6 @@
   "bilanzierungsbeginn": "0001-01-01T00:00:00Z",
   "bilanzierungsende": "2025-10-31T23:00:00Z",
   "bilanzkreis": "11Y0-0000-0076-N",
-  "bilanzkreis": [
-    {
-      "bezeichnung": "11X------12334",
-      "prioritaet": 1
-    },
-    {
-      "bezeichnung": "11X------12335",
-      "prioritaet": 2
-    },
-    {
-      "bezeichnung": "11X------12336",
-      "prioritaet": 3
-    },
-    {
-      "bezeichnung": "11X------12337",
-      "prioritaet": 4
-    },
-    {
-      "bezeichnung": "11X------12338",
-      "prioritaet": 5
-    }
-  ],
   "jahresverbrauchsprognose": {
     "wert": 2300,
     "einheit": "KWH"
