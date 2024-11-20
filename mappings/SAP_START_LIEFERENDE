@@ -94,7 +94,8 @@
     "transaktionsdaten": {
       "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
       "empfaenger": {
-        "rollencodenummer": HEADER.RECEIVER_ID
+        "rollencodenummer": HEADER.RECEIVER_ID,
+            "rollencodetyp": HEADER.RECEIVER_CODELIST
       },
       "transaktionsgrund": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
       "transaktionsgrundergaenzung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
