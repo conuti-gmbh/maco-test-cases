@@ -56,7 +56,7 @@
       "kuendigungsfrist": {
         "zeitraumText": "30WT"
       },
-      "kuendigungstermin": null,
+      "kuendigungstermin": "2026-12-31T23:59:59Z",
       "abrechnungsintervall": null
     },
     "korrespondenzpartner": {
