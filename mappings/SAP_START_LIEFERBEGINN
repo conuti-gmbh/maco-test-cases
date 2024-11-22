@@ -112,13 +112,24 @@
       "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="SPARTE"].ATTRIBUTE_VALUE,
       "empfaenger": {
         "rollencodenummer": HEADER.RECEIVER_ID,
-            "rollencodetyp": HEADER.RECEIVER_CODELIST
+            "rollencodetyp": $map(HEADER.SENDER_CODELIST, function($value) {
+                    $value = $value = "9" ? "GLN" :
+                            $value = "293" ? "BDEW" :
+                            $value = "332" ? "DVGW" :
+                            $value
+                  })
       },
       "transaktionsgrund": DATA.VALUES[OBJECT="TRANSAKTION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUND"].ATTRIBUTE_VALUE,
       "transaktionsgrundergaenzung": DATA.VALUES[OBJECT="TRANSAKTION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUNDERGAENZUNG"].ATTRIBUTE_VALUE,
       "transaktionsgrundergaenzungBefristeteAnmeldung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUNDERGAENZUNGBEFRISTETEANMELDUNG"].ATTRIBUTE_VALUE,
       "absender": {
-        "rollencodenummer": HEADER.SENDER_ID
+        "rollencodenummer": HEADER.SENDER_ID,
+        "rollencodetyp": $map(HEADER.SENDER_CODELIST, function($value) {
+                    $value = $value = "9" ? "GLN" :
+                            $value = "293" ? "BDEW" :
+                            $value = "332" ? "DVGW" :
+                            $value
+                  })
       }
     }
 }
