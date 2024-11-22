@@ -59,7 +59,7 @@
                     $substring(DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"].DATE_TIME & "", 8, 2) & ":" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"].DATE_TIME & "", 10, 2) & ":" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="START_SUPPLY"].DATE_TIME & "", 12, 2) & "Z"
-                ) : undefined,
+                ) : null,
                 "vertragsende": $exists(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"]) and DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME != "" ? (
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME & "", 0, 4) & "-" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME & "", 4, 2) & "-" &
@@ -67,12 +67,12 @@
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME & "", 8, 2) & ":" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME & "", 10, 2) & ":" &
                     $substring(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_FIX"].DATE_TIME & "", 12, 2) & "Z"
-                ) : undefined,
+                ) : null,
                 "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="SPARTE"].ATTRIBUTE_VALUE,
                 "lokationsId": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
                 "lokationsTyp": "MALO",
                 "vertragskonditionen": {
-                    "haushaltskunde": $boolean(DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="HAUSHALTSKUNDE"].ATTRIBUTE_VALUE = "HH")
+                    "haushaltskunde": $boolean(DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="HAUSHALTSKUNDE"].ATTRIBUTE_VALUE = "true")
                 }
             }
         ],
