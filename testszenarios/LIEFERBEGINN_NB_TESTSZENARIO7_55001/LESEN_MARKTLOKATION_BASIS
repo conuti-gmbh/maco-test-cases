@@ -245,7 +245,7 @@
       "gueltigBis": "2025-10-14T07:52:00Z"
     }
   ],
-  "messtechnischeEinordnung": "KME_MME",
+  "messtechnischeEinordnung": "IMS",
   "netznutzungsabrechnungsdaten": [
     {
       "artikelId": "1",
