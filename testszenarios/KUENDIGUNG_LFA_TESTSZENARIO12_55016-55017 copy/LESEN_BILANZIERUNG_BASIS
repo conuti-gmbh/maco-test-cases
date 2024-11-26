@@ -1,0 +1,121 @@
+{
+  "stammdaten":{
+  "BILANZIERUNG":[
+{
+  "boTyp": "BILANZIERUNG",
+  "versionStruktur": "1",
+  "marktlokationsId": "<string>",
+  "gueltigkeitszeitraum": {
+    "zeitraumId": null,
+    "startdatum": null,
+    "enddatum": null
+  },
+  "datenqualitaet": null,
+  "lastprofile": [
+    {
+      "bezeichnung": "XYZ",
+      "profilschar": null,
+      "verfahren": "SYNTHETISCH",
+      "einspeisung": false,
+      "tagesparameter": {
+        "klimazone": null,
+        "temperaturmessstelle": null,
+        "dienstanbieter": null,
+        "herausgeber": null
+      },
+      "profilart": "ART_STANDARDLASTPROFIL",
+      "herausgeber": "NB",
+      "referenzprofilbezeichnung": "XYZ"
+    }
+  ],
+  "lastprofileBilanzierungsbeteiligter": [
+    {
+        "bezeichnung": "ZYX",
+        "profilschar": null,
+        "verfahren": "SYNTHETISCH",
+      "einspeisung": false,
+      "tagesparameter": {
+        "klimazone": null,
+        "temperaturmessstelle": null,
+        "dienstanbieter": null,
+        "herausgeber": null
+      },
+      "profilart": "ART_STANDARDLASTPROFIL",
+      "herausgeber": "NB"
+    }
+  ],
+  "bilanzierungsbeginn": "0001-01-01T00:00:00Z",
+  "bilanzierungsende": "2025-10-31T23:00:00Z",
+  "bilanzkreis": "11Y0-0000-0076-N",
+  "jahresverbrauchsprognose": {
+    "wert": 2300,
+    "einheit": "KWH"
+  },
+  "vorjahresverbrauch": {
+    "wert": 2500,
+    "einheit": "KWH"
+  },
+  "temperaturarbeit": {
+    "wert": null,
+    "einheit": null
+  },
+  "kundenwert": {
+    "wert": 2550,
+    "einheit": "KWH"
+  },
+  "verbrauchsaufteilung": {
+    "wert": null,
+    "einheit": null
+  },
+  "zeitreihentyp": "SLS",
+  "aggregationsverantwortung": "VNB",
+  "prognosegrundlage": "PROFILE",
+  "detailsPrognosegrundlage": [
+    "SLP_SEP"  ],
+  "wahlrechtPrognosegrundlage": "DURCH_LF",
+  "fallgruppenzuordnung": null,
+  "prioritaet": "1",
+  "grundWahlrechtPrognosegrundlage": "DURCH_LF",
+  "abwicklungsmodell": "MODELL_1_BILANZIERUNG_AN_MARKTLOKATION",
+  "datenDerBeteiligtenMarktrolle": [
+    {
+      "marktlokationsId": "50754496999",
+      "lastprofile": [
+        {
+          "bezeichnung": "H0",
+          "profilschar": null,
+          "verfahren": "SYNTHETISCH",
+          "tagesparameter": {
+            "klimazone": null,
+            "temperaturmessstelle": null,
+            "dienstanbieter": null,
+            "herausgeber": null
+          },
+          "einspeisung": false,
+          "profilart": "ART_STANDARDLASTPROFIL",
+          "herausgeber": "NB"
+        }
+      ],
+      "jahresverbrauchsprognose": {
+        "wert": 2300,
+        "einheit": "KWH"
+      },
+      "temperaturarbeit": {
+        "wert": null,
+        "einheit": null
+      },
+      "bilanzkreis": "11Y0-0000-0076-N",
+      "bilanzkreisAn": "11Y0-0000-0076-N",
+      "bilanzkreisVon": "11Y0-0000-0077-N",
+      "zeitreihentyp": "SLS",
+      "aggregationsverantwortung": "VNB",
+      "prognosegrundlage": "PROFILE",
+      "detailsPrognosegrundlage": [
+        "SLP_SEP"
+      ]
+    }
+  ]
+}
+]
+}
+}
