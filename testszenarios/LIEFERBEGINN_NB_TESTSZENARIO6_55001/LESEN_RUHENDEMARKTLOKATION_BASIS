@@ -1,10 +1,10 @@
 {
   "stammdaten":{
-  "MARKTLOKATION_KUNDENANLAGE":[
+  "RUHENDE_MARKTLOKATION":[
 {
-  "boTyp": "MARKTLOKATION_KUNDENANLAGE",
+  "boTyp": "RUHENDE_MARKTLOKATION",
   "versionStruktur": "1",
-  "marktlokationsId": "50754496000",
+  "marktlokationsId": "50754496001",
   "zukuenftigerMeldepunkt": null,
   "sparte": "STROM",
   "gueltigkeitszeitraum": {
