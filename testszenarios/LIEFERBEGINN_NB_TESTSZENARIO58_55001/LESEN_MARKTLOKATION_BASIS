@@ -1,8 +1,8 @@
 {
   "stammdaten":{
-  "MARKTLOKATION":[
+  "MARKTLOKATION_KUNDENANLAGE":[
 {
-  "boTyp": "MARKTLOKATION",
+  "boTyp": "MARKTLOKATION_KUNDENANLAGE",
   "versionStruktur": "1",
   "marktlokationsId": "50754496000",
   "zukuenftigerMeldepunkt": null,
@@ -13,6 +13,7 @@
     "enddatum": null
   },
   "datenqualitaet": null,
+  "inbetriebnahmedatum": "2029-12-31T23:59:59Z",
   "energierichtung": "AUSSP",
   "bilanzierungsmethode": "SLP",
   "verbrauchsart": "KL",

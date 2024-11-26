@@ -1,10 +1,10 @@
 {
   "stammdaten":{
-  "RUHENDE_MARKTLOKATION":[
+  "MARKTLOKATION_KUNDENANLAGE":[
 {
-  "boTyp": "RUHENDE_MARKTLOKATION",
+  "boTyp": "MARKTLOKATION_KUNDENANLAGE",
   "versionStruktur": "1",
-  "marktlokationsId": "50754496001",
+  "marktlokationsId": "50754496000",
   "zukuenftigerMeldepunkt": null,
   "sparte": "STROM",
   "gueltigkeitszeitraum": {
@@ -13,7 +13,7 @@
     "enddatum": null
   },
   "datenqualitaet": null,
-  "energierichtung": "EINSP",
+  "energierichtung": "AUSSP",
   "bilanzierungsmethode": "SLP",
   "verbrauchsart": "KL",
   "unterbrechbar": false,
@@ -245,7 +245,7 @@
       "gueltigBis": "2025-10-14T07:52:00Z"
     }
   ],
-  "messtechnischeEinordnung": "IMS",
+  "messtechnischeEinordnung": "KME_MME",
   "netznutzungsabrechnungsdaten": [
     {
       "artikelId": "1",
