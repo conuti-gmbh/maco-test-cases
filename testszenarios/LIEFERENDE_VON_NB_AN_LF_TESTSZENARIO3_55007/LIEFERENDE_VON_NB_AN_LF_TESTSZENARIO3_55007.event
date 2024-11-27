@@ -154,7 +154,7 @@
       {
         "OBJECT": "NETZNUTZUNGSVERTRAG",
         "ATTRIBUTE_NAME": "vertragsende",
-        "ATTRIBUTE_VALUE": "2025-11-01T23:00:00Z",
+        "ATTRIBUTE_VALUE": "2025-10-31T23:00:00Z",
         "ATTRIBUTE_TYPE": ""
       }
     ],
