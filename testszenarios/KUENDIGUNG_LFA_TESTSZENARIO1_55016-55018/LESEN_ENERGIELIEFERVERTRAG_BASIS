@@ -80,15 +80,7 @@
     }
   },
   "lokationsId": "50754496000",
-  "lokationsTyp": "MALO",
-  "enFG": [
-    {
-      "grundlageVerringerungUmlagen": "KEINE_ANGABE",
-      "grund": [
-        "null"
-      ]
-  }
-]
+  "lokationsTyp": "MALO"
 }
 ]
 }
