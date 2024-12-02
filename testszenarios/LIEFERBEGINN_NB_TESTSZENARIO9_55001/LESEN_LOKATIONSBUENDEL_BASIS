@@ -29,7 +29,22 @@
         "Marktlokation1",
         "Marktlokation2"
       ]
-    },
+    }
+  ]
+},
+{
+  "boTyp": "LOKATIONSBUENDEL",
+  "versionStruktur": "1",
+  "gueltigkeitszeitraum": {
+    "zeitraumId": null,
+    "startdatum": null,
+    "enddatum": null
+  },
+  "datenqualitaet": null,
+  "lokationsbuendelstrukturId": "56143614",
+  "lokationsbuendelNummer": 1,
+  "standardisierteLokationsbuendelstruktur": true,
+  "zuordnungObjectcode": [
     {
         "referenzLokationsTyp": "MALO",
         "referenzLokationsId": "50754496001",
