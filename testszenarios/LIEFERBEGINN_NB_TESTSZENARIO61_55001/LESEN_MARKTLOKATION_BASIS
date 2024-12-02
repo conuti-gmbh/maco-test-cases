@@ -13,7 +13,7 @@
     "enddatum": null
   },
   "datenqualitaet": null,
-  "inbetriebnahmedatum": null,
+  "inbetriebnahmedatum": "9999-12-31T23:59:59Z",
   "energierichtung": "AUSSP",
   "bilanzierungsmethode": "SLP",
   "verbrauchsart": "KL",
