@@ -207,9 +207,7 @@
         "register": "XYZ",
         "schwachlastfaehig": "XYZ"
       },
-      "leistungskurvendefinition": {
-        "leistungskurvendefinition": "XYZ"
-      },
+      "leistungskurvendefinition": "XYZ",
       "konfiguration": null,
       "messprodukt": "9991000000044",
       "wertegranularitaet": "JAEHRLICH",
@@ -234,7 +232,7 @@
         }
       ],
       "obiskennzahl": "1-1:1.9.0",
-      "wert": "2500",
+      "wert": 2500,
       "einheit": "KWH"
     }
   ],
@@ -366,7 +364,7 @@
   "modulNetzentgelte": null,
   "produktdatenRelevanteRolle": "LF",
   "konfigurationsprodukt": null,
-  "leistungskurvendefinition": null,
+  "leistungskurvendefinition": "ZYZ",
   "beteiligterMarktpartner": {
     "boTyp": "MARKTTEILNEHMER",
     "versionStruktur": "1",
