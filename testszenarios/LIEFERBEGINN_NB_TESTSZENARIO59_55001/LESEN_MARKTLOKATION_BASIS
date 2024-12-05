@@ -1,8 +1,8 @@
 {
   "stammdaten":{
-  "MARKTLOKATION_KUNDENANLAGE":[
+  "MARKTLOKATION":[
 {
-  "boTyp": "MARKTLOKATION_KUNDENANLAGE",
+  "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
   "marktlokationsId": "50754496000",
   "zukuenftigerMeldepunkt": null,
@@ -13,7 +13,7 @@
     "enddatum": null
   },
   "datenqualitaet": null,
-  "inbetriebnahmedatum": "2029-12-31T23:59:59Z",
+  "inbetriebnahmedatum": "2015-12-31T23:59:59Z",
   "energierichtung": "AUSSP",
   "bilanzierungsmethode": "SLP",
   "verbrauchsart": "KL",
@@ -23,7 +23,7 @@
   "netzbetreiberCodeNr": "9900683000008",
   "gebietTyp": "VERSORGUNGSGEBIET",
   "netzgebietNr": "12345", 
-  "bilanzierungsgebiet": "11YR00000004025V",
+  "bilanzierungsgebiet": "11YR00000004065V",
   "grundversorgerCodeNr": "9900683000008",
   "endkunde": {
     "boTyp": "GESCHAEFTSPARTNER",

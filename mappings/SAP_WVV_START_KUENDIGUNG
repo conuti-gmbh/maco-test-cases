@@ -94,14 +94,26 @@
     "transaktionsdaten": {
       "sparte": DATA.VALUES[OBJECT="SWITCHDOC" and ATTRIBUTE_NAME="SPARTYP"].ATTRIBUTE_VALUE = "01" ? "STROM" : "GAS",
       "empfaenger": {
-        "rollencodenummer": HEADER.RECEIVER_ID
+          "rollencodenummer": HEADER.RECEIVER_ID,
+          "rollencodetyp": $map(HEADER.SENDER_CODELIST, function($value) {
+                  $value = $value = "9" ? "GLN" :
+                          $value = "293" ? "BDEW" :
+                          $value = "332" ? "DVGW" :
+                          $value
+                })
       },
       "transaktionsgrund": DATA.VALUES[OBJECT="SWITCHDOCMESSAGE" and ATTRIBUTE_NAME="TRANSREASON"].ATTRIBUTE_VALUE,
         "transaktionsgrundergaenzung": DATA.VALUES[OBJECT="SWITCHDOCMESSAGE" and ATTRIBUTE_NAME="DIRECTION"].ATTRIBUTE_VALUE = "1" ? "ZW4" : "ZW3",
       "transaktionsgrundergaenzungBefristeteAnmeldung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUNDERGAENZUNGBEFRISTETEANMELDUNG"].ATTRIBUTE_VALUE,
       "endezumtermin": $fromMillis($toMillis(DATA.DATE_TYPES[DATE_TYPE="END_SUPPLY_VAR"].DATE_TIME & '', "[Y0001][M01][D01][H01][m01][s01]"), "[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z"),
       "absender": {
-        "rollencodenummer": HEADER.SENDER_ID
+          "rollencodenummer": HEADER.SENDER_ID,
+          "rollencodetyp": $map(HEADER.SENDER_CODELIST, function($value) {
+                  $value = $value = "9" ? "GLN" :
+                          $value = "293" ? "BDEW" :
+                          $value = "332" ? "DVGW" :
+                          $value
+                })
       }
     }
 }

@@ -9,6 +9,15 @@
           "energierichtung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="ENERGIERICHTUNG"].ATTRIBUTE_VALUE
         }
       ] : [],
+      "RUHENDE_MARKTLOKATION": $exists(DATA.VALUES[OBJECT="RUHENDE_MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE) ? [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+          "sparte": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="SPARTE"].ATTRIBUTE_VALUE,
+          "energierichtung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="ENERGIERICHTUNG"].ATTRIBUTE_VALUE
+        }
+      ] : [],
     "TRANCHE": $exists(DATA.VALUES[OBJECT="TRANCHE" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE) ? [
       {
         "boTyp": "TRANCHE",
@@ -97,8 +106,8 @@
         "rollencodenummer": HEADER.RECEIVER_ID,
             "rollencodetyp": HEADER.RECEIVER_CODELIST
       },
-      "transaktionsgrund": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
-      "transaktionsgrundergaenzung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
+      "transaktionsgrund": DATA.VALUES[OBJECT="TRANSAKTION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUND"].ATTRIBUTE_VALUE,
+      "transaktionsgrundergaenzung": DATA.VALUES[OBJECT="TRANSAKTION" and ATTRIBUTE_NAME="TRANSAKTIONSGRUNDERGAENZUNG"].ATTRIBUTE_VALUE,
       "transaktionsgrundergaenzungBefristeteAnmeldung": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="KEY"].ATTRIBUTE_VALUE,
       "absender": {
         "rollencodenummer": HEADER.SENDER_ID
