@@ -1,3 +1,4 @@
 {
-  "stammdaten" : stammdaten
+  "stammdaten" : stammdaten,
+  "transaktionsdaten" : transaktionsdaten
 }
