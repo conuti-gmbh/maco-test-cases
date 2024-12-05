@@ -37,12 +37,12 @@
             "produktpaketId": 1,
             "produkt": [
               {
-                "produktCode": "9991000002082",
-                "wertedetails": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="BILANZKREIS"].ATTRIBUTE_VALUE
+                "produktCode": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="PRODUKTCODE1"].ATTRIBUTE_VALUE,
+                "wertedetails": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="PRODUKT1_WERTEDETAILS"].ATTRIBUTE_VALUE
               },
               {
-                "produktCode": "9991000002008",
-                "codeProdukteigenschaft": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="MESSTECHNISCHEEINORDNUNG"].ATTRIBUTE_VALUE
+                "produktCode": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="PRODUKTCODE2"].ATTRIBUTE_VALUE,
+                "codeProdukteigenschaft": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="PRODUKT2_PRODUKTEIGENSCHAFT"].ATTRIBUTE_VALUE
               }
             ],
             "umsetzungsgradvorgabe": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="UMSETZUNGSGRADVORGABE"].ATTRIBUTE_VALUE
