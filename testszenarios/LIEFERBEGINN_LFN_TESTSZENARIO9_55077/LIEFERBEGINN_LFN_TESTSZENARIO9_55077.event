@@ -116,14 +116,32 @@
         "ATTRIBUTE_TYPE": ""
       },
       {
+        "OBJECT": "TRANCHE",
+        "ATTRIBUTE_NAME": "SPARTE",
+        "ATTRIBUTE_VALUE": "STROM",
+        "ATTRIBUTE_TYPE": ""
+      },
+      {
         "OBJECT": "MARKTLOKATION",
-        "ATTRIBUTE_NAME": "BILANZKREIS",
+        "ATTRIBUTE_NAME": "PRODUKTCODE1",
+        "ATTRIBUTE_VALUE": "9991000002082",
+        "ATTRIBUTE_TYPE": ""
+      },
+      {
+        "OBJECT": "MARKTLOKATION",
+        "ATTRIBUTE_NAME": "PRODUKT1_WERTEDETAILS",
         "ATTRIBUTE_VALUE": "11Y0-0000-0077-K",
         "ATTRIBUTE_TYPE": ""
       },
       {
         "OBJECT": "MARKTLOKATION",
-        "ATTRIBUTE_NAME": "MESSTECHNISCHEEINORDNUNG",
+        "ATTRIBUTE_NAME": "PRODUKTCODE2",
+        "ATTRIBUTE_VALUE": "9991000002008",
+        "ATTRIBUTE_TYPE": ""
+      },
+      {
+        "OBJECT": "MARKTLOKATION",
+        "ATTRIBUTE_NAME": "PRODUKT2_PRODUKTEIGENSCHAFT",
         "ATTRIBUTE_VALUE": "9991000002115",
         "ATTRIBUTE_TYPE": ""
       },
