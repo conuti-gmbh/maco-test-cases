@@ -38,10 +38,14 @@
             "produkt": [
               {
                 "produktCode": "9991000002082",
-                "wertedetails": "11XEONBAYERN---I"
+                "wertedetails": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="BILANZKREIS"].ATTRIBUTE_VALUE
+              },
+              {
+                "produktCode": "9991000002008",
+                "codeProdukteigenschaft": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="MESSTECHNISCHEEINORDNUNG"].ATTRIBUTE_VALUE
               }
             ],
-            "umsetzungsgradvorgabe": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR"
+            "umsetzungsgradvorgabe": DATA.VALUES[OBJECT="MARKTLOKATION" and ATTRIBUTE_NAME="UMSETZUNGSGRADVORGABE"].ATTRIBUTE_VALUE
           }
         ]
       }
