@@ -364,7 +364,7 @@
   "modulNetzentgelte": null,
   "produktdatenRelevanteRolle": "LF",
   "konfigurationsprodukt": null,
-  "leistungskurvendefinition": null,
+  "leistungskurvendefinition": "XZZ",
   "beteiligterMarktpartner": {
     "boTyp": "MARKTTEILNEHMER",
     "versionStruktur": "1",
