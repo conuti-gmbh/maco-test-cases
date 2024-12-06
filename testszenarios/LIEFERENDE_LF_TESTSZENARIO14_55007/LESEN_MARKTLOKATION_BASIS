@@ -7,6 +7,7 @@
   "marktlokationsId": "50754496000",
   "zukuenftigerMeldepunkt": null,
   "sparte": "STROM",
+  "ruhendeMarktlokation": true,
   "gueltigkeitszeitraum": {
     "zeitraumId": null,
     "startdatum": null,
