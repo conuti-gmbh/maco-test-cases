@@ -1,8 +1,8 @@
 {
   "stammdaten":{
-  "MARKTLOKATION_KUNDENANLAGE":[
+  "RUHENDE_MARKTLOKATION":[
 {
-  "boTyp": "MARKTLOKATION_KUNDENANLAGE",
+  "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
   "marktlokationsId": "50754496000",
   "zukuenftigerMeldepunkt": null,
