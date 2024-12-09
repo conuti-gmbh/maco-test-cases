@@ -1,10 +1,10 @@
 {
   "stammdaten":{
-  "RUHENDE_MARKTLOKATION":[
+  "MARKTLOKATION":[
 {
   "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
-  "marktlokationsId": "50754496001",
+  "marktlokationsId": "50754496000",
   "zukuenftigerMeldepunkt": null,
   "sparte": "STROM",
   "gueltigkeitszeitraum": {
@@ -13,9 +13,8 @@
     "enddatum": null
   },
   "datenqualitaet": null,
-  "inbetriebnahmedatum": "2013-12-31T23:59:59Z",
-  "ruhendeMarktlokation": true,
-  "energierichtung": "EINSP",
+  "inbetriebnahmedatum": "2015-12-31T23:59:59Z",
+  "energierichtung": "AUSSP",
   "bilanzierungsmethode": "SLP",
   "verbrauchsart": "KL",
   "unterbrechbar": false,
@@ -24,7 +23,7 @@
   "netzbetreiberCodeNr": "9900683000008",
   "gebietTyp": "VERSORGUNGSGEBIET",
   "netzgebietNr": "12345", 
-  "bilanzierungsgebiet": "11YR00006004025V",
+  "bilanzierungsgebiet": "11YR00000004065V",
   "grundversorgerCodeNr": "9900683000008",
   "endkunde": {
     "boTyp": "GESCHAEFTSPARTNER",
@@ -67,11 +66,11 @@
     "landescode": "DE",
     "ortsteil": "Riff",
     "zusatzInformation": {
-      "zusatz1": null,
-      "zusatz2": null,
-      "zusatz3": null,
-      "zusatz4": null,
-      "zusatz5": null
+      "zusatz1": "X",
+      "zusatz2": "Y",
+      "zusatz3": "Z",
+      "zusatz4": "A",
+      "zusatz5": "B"
     }
   },
   "katasteradresse": { 
@@ -204,13 +203,11 @@
       "abrechnungsrelevant": true,
       "anzahlAblesungen": 1,
       "zaehlzeiten": {
-        "zaehlzeitDefinition": null,
-        "register": null,
-        "schwachlastfaehig": null
+        "zaehlzeitDefinition": "XYZ",
+        "register": "XYZ",
+        "schwachlastfaehig": "XYZ"
       },
-      "leistungskurvendefinition": {
-        "leistungskurvendefinition": null
-      },
+      "leistungskurvendefinition": "XYZ",
       "konfiguration": null,
       "messprodukt": "9991000000044",
       "wertegranularitaet": "JAEHRLICH",
@@ -235,7 +232,7 @@
         }
       ],
       "obiskennzahl": "1-1:1.9.0",
-      "wert": "2500",
+      "wert": 2500,
       "einheit": "KWH"
     }
   ],
@@ -247,7 +244,7 @@
       "gueltigBis": "2025-10-14T07:52:00Z"
     }
   ],
-  "messtechnischeEinordnung": "IMS",
+  "messtechnischeEinordnung": "KME_MME",
   "netznutzungsabrechnungsdaten": [
     {
       "artikelId": "1",
@@ -257,21 +254,21 @@
       "zuschlag": 5.78,
       "abschlag": 5.87,
       "singulaereBetriebsmittel": {
-        "wert": null,
-        "einheit": null
+        "wert": 5.78,
+        "einheit": "KWH"
       },
       "preisSingulaereBetriebsmittel": {
-        "wert": null,
-        "einheit": null,
-        "bezugswert": null,
-        "status": null
+        "wert": 5.78,
+        "einheit": "KWH",
+        "bezugswert": 5.78,
+        "status": "XYZ"
       },
       "abrechnungBlindarbeit": null,
       "zahlerBlindarbeit": null,
       "zahlerBlindarbeitLf": null,
       "zaehlzeiten": {
-        "zaehlzeitDefinition": null,
-        "register": null
+        "zaehlzeitDefinition": "XYZ",
+        "register": "XYZ"
       }
     }
   ],
@@ -286,7 +283,7 @@
     }
   ],
   "sperrstatus": "ENTSPERRT",
-  "referenzMarktlokationsId": "50754496001",
+  "referenzMarktlokationsId": "50754496000",
   "energieherkunft": [
     {
       "erzeugungsart": null,
@@ -367,7 +364,7 @@
   "modulNetzentgelte": null,
   "produktdatenRelevanteRolle": "LF",
   "konfigurationsprodukt": null,
-  "leistungskurvendefinition": null,
+  "leistungskurvendefinition": "ZYZ",
   "beteiligterMarktpartner": {
     "boTyp": "MARKTTEILNEHMER",
     "versionStruktur": "1",
@@ -383,7 +380,7 @@
         {
           "produktCode": "9991000002008",
           "codeProdukteigenschaft": "9991000002115",
-          "wertedetails": null
+          "wertedetails": "XYT"
         }
       ],
       "umsetzungsgradvorgabe": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR",
@@ -398,11 +395,11 @@
       "netzebene": null,
       "zaehlwerke": [
         {
-          "obisKennzahl": null,
+          "obisKennzahl": "1-1:1.9.0",
           "verwendungszwecke": [
             {
               "zweck": [
-                null
+                "XYZ"
               ]
             }
           ]

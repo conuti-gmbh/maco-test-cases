@@ -13,7 +13,7 @@
     "enddatum": null
   },
   "datenqualitaet": null,
-  "inbetriebnahmedatum": "9999-12-31T23:59:59Z",
+  "inbetriebnahmedatum": "2013-12-31T23:59:59Z",
   "ruhendeMarktlokation": false,
   "energierichtung": "EINSP",
   "bilanzierungsmethode": "SLP",
