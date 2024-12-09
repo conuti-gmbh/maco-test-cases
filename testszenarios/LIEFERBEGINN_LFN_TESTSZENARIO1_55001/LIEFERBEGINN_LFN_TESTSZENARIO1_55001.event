@@ -1,114 +1,110 @@
 {
-  "zusatzdaten": {
-    "erpEvent": {
-      "stammdaten": {
-        "MARKTLOKATION": [
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "50754496000",
+        "sparte": "STROM",
+        "erforderlichesProduktpaket": [
           {
-            "boTyp": "MARKTLOKATION",
-            "versionStruktur": "1",
-            "marktlokationsId": "50754496000",
-            "sparte": "STROM",
-            "erforderlichesProduktpaket": [
+            "produktpaketId": 1,
+            "produkt": [
               {
-                "produktpaketId": 1,
-                "produkt": [
-                  {
-                    "produktCode": "9991000002082",
-                    "wertedetails": "11Y0-0000-0077-K"
-                  },
-                  {
-                    "produktCode": "9991000002008",
-                    "codeProdukteigenschaft": "9991000002115"
-                  }
-                ],
-                "umsetzungsgradvorgabe": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR"
+                "produktCode": "9991000002082",
+                "wertedetails": "11Y0-0000-0077-K"
+              },
+              {
+                "produktCode": "9991000002008",
+                "codeProdukteigenschaft": "9991000002115"
               }
+            ],
+            "umsetzungsgradvorgabe": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR"
+          }
+        ]
+      }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "NETZNUTZUNGSVERTRAG",
+        "sparte": "STROM",
+        "vertragsbeginn": "2025-10-31T23:00:00Z",
+        "vertragskonditionen": {
+          "haushaltskunde": true
+        }
+      }
+    ],
+    "ENERGIELIEFERVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "ENERGIELIEFERVERTRAG",
+        "sparte": "STROM",
+        "vertragspartner2": [
+          {
+            "boTyp": "GESCHAEFTSPARTNER",
+            "versionStruktur": "1",
+            "anrede": "Herr",
+            "name1": "Glöppel",
+            "name2": "Walter",
+            "gewerbekennzeichnung": false,
+            "geschaeftspartnerrolle": [
+              "KUNDE"
             ]
           }
         ],
-        "NETZNUTZUNGSVERTRAG": [
-          {
-            "boTyp": "VERTRAG",
-            "versionStruktur": "1",
-            "vertragsart": "NETZNUTZUNGSVERTRAG",
-            "sparte": "STROM",
-            "vertragsbeginn": "2025-10-31T23:00:00Z",
-            "vertragskonditionen": {
-              "haushaltskunde": true
-            }
+        "korrespondenzpartner": {
+          "boTyp": "GESCHAEFTSPARTNER",
+          "versionStruktur": "1",
+          "name1": "Glöppel",
+          "gewerbekennzeichnung": false,
+          "partneradresse": {
+            "postleitzahl": "41515",
+            "ort": "Grevenbroich",
+            "strasse": "Bahnstraße",
+            "hausnummer": "49",
+            "landescode": "DE"
           }
-        ],
-        "ENERGIELIEFERVERTRAG": [
+        },
+        "enFG": [
           {
-            "boTyp": "VERTRAG",
-            "versionStruktur": "1",
-            "vertragsart": "ENERGIELIEFERVERTRAG",
-            "sparte": "STROM",
-            "vertragspartner2": [
-              {
-                "boTyp": "GESCHAEFTSPARTNER",
-                "versionStruktur": "1",
-                "anrede": "Herr",
-                "name1": "Glöppel",
-                "name2": "Walter",
-                "gewerbekennzeichnung": false,
-                "geschaeftspartnerrolle": [
-                  "KUNDE"
-                ]
-              }
-            ],
-            "korrespondenzpartner": {
-              "boTyp": "GESCHAEFTSPARTNER",
-              "versionStruktur": "1",
-              "name1": "Glöppel",
-              "gewerbekennzeichnung": false,
-              "partneradresse": {
-                "postleitzahl": "41515",
-                "ort": "Grevenbroich",
-                "strasse": "Bahnstraße",
-                "hausnummer": "49",
-                "landescode": "DE"
-              }
-            },
-            "enFG": [
-              {
-                "grundlageVerringerungUmlagen": "ERFUELLT_VORAUSSETZUNG_NACH_ENFG",
-                "grund": [
-                  "ENFG_ELEKTRISCH_ANGETRIEBENE_WAERMEPUMPEN"
-                ]
-              }
+            "grundlageVerringerungUmlagen": "ERFUELLT_VORAUSSETZUNG_NACH_ENFG",
+            "grund": [
+              "ENFG_ELEKTRISCH_ANGETRIEBENE_WAERMEPUMPEN"
             ]
           }
         ]
-      },
-      "transaktionsdaten": {
-        "datenaustauschreferenz": "ECC88C17AF9A90",
-        "sparte": "STROM",
-        "transaktionsgrund": "E01",
-        "transaktionsgrundergaenzung": "ZW4",
-        "vorgangsnummer": "53572DC609FC09D8761DECC88C17AF9A90",
-        "pruefidentifikator": "55001",
-        "absender": {
-          "boTyp": "MARKTTEILNEHMER",
-          "versionStruktur": "1",
-          "rollencodenummer": "9903526000002",
-          "rollencodetyp": "BDEW"
-        },
-        "empfaenger": {
-          "boTyp": "MARKTTEILNEHMER",
-          "versionStruktur": "1",
-          "rollencodenummer": "9900683000008",
-          "rollencodetyp": "BDEW"
-        },
-        "dokumentennummer": "8761DECC88C17AF9A90",
-        "kategorie": "E01",
-        "nachrichtendatum": "2024-12-06T11:41:00Z",
-        "nachrichtenreferenznummer": "ECC88C17AF9A91"
-      },
-      "zusatzdaten": {
-        "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
-        "eventname": "START_LIEFERBEGINN"
       }
-    }
+    ]
+  },
+  "transaktionsdaten": {
+    "datenaustauschreferenz": "ECC88C17AF9A90",
+    "sparte": "STROM",
+    "transaktionsgrund": "E01",
+    "transaktionsgrundergaenzung": "ZW4",
+    "vorgangsnummer": "53572DC609FC09D8761DECC88C17AF9A90",
+    "pruefidentifikator": "55001",
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "9903526000002",
+      "rollencodetyp": "BDEW"
+    },
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "9900683000008",
+      "rollencodetyp": "BDEW"
+    },
+    "dokumentennummer": "8761DECC88C17AF9A90",
+    "kategorie": "E01",
+    "nachrichtendatum": "2024-12-06T11:41:00Z",
+    "nachrichtenreferenznummer": "ECC88C17AF9A91"
+  },
+  "zusatzdaten": {
+    "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
+    "eventname": "START_LIEFERBEGINN"
   }
 }
