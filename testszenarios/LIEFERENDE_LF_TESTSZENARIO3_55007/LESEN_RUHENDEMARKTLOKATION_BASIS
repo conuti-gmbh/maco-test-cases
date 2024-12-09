@@ -4,7 +4,7 @@
 {
   "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
-  "marktlokationsId": "50754496000",
+  "marktlokationsId": "50754496001",
   "zukuenftigerMeldepunkt": null,
   "sparte": "STROM",
   "gueltigkeitszeitraum": {
@@ -14,7 +14,7 @@
   },
   "datenqualitaet": null,
   "inbetriebnahmedatum": "9999-12-31T23:59:59Z",
-  "ruhendeMarktlokation": false,
+  "ruhendeMarktlokation": true,
   "energierichtung": "EINSP",
   "bilanzierungsmethode": "SLP",
   "verbrauchsart": "KL",
@@ -286,7 +286,7 @@
     }
   ],
   "sperrstatus": "ENTSPERRT",
-  "referenzMarktlokationsId": "50754496999",
+  "referenzMarktlokationsId": "50754496001",
   "energieherkunft": [
     {
       "erzeugungsart": null,
