@@ -6,7 +6,6 @@
           {
             "boTyp": "MARKTLOKATION",
             "versionStruktur": "1",
-            "marktlokationsId": "50754496000",
             "sparte": "STROM",
             "erforderlichesProduktpaket": [
               {
@@ -32,7 +31,10 @@
             "versionStruktur": "1",
             "vertragsart": "NETZNUTZUNGSVERTRAG",
             "sparte": "STROM",
-            "vertragsbeginn": "2025-10-31T23:00:00Z"
+            "vertragsbeginn": "2025-10-31T23:00:00Z",
+            "vertragskonditionen": {
+              "haushaltskunde": true
+            }
           }
         ]
       },

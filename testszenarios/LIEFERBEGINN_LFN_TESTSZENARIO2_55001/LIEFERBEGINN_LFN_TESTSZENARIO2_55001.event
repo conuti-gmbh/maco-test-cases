@@ -34,7 +34,7 @@
             "sparte": "STROM",
             "vertragsbeginn": "2025-10-31T23:00:00Z",
             "vertragskonditionen": {
-              "haushaltskunde": false
+              "haushaltskunde": true
             },
             "lokationsId": "50754496000",
             "lokationsTyp": "MALO"
