@@ -1,0 +1,164 @@
+
+{
+    "stammdaten":{
+    "MESSLOKATION":[
+        {
+  "boTyp": "MESSLOKATION",
+  "versionStruktur": "1",
+  "messlokationsId": "<string>",
+  "zukuenftigerMeldepunkt": true,
+  "sparte": "STROM",
+  "gueltigkeitszeitraum": {
+    "zeitraumId": 1,
+    "startdatum": "2024-12-31T23:00:00Z",
+    "enddatum": "2025-12-31T23:00:00Z"
+  },
+  "datenqualitaet": "ENUM_qualitaet",
+  "netzebenemessung": "NSP",
+  "messgebietNr": "<string>",
+  "grundzustaendigerMSBCodeNr": "<string>",
+  "messadresse": {
+    "postleitzahl": "<string>",
+    "ort": "<string>",
+    "strasse": "<string>",
+    "hausnummer": "<string>",
+    "postfach": "<string>",
+    "adresszusatz": "<string>",
+    "coErgaenzung": "<string>",
+    "gewerbekennzeichnung": true,
+    "landescode": "DE",
+    "ortsteil": "<string>",
+    "zusatzInformation": {
+      "zusatz1": "<string>",
+      "zusatz2": "<string>",
+      "zusatz3": "<string>",
+      "zusatz4": "<string>",
+      "zusatz5": "<string>"
+    }
+  },
+  "geraete": [
+    {
+      "geraetetyp": "RLM_ZAEHLER",
+      "bezeichnung": "<string>",
+      "geraeteeigenschaften": {
+        "geraetetyp": "RLM_ZAEHLER",
+        "geraetemerkmal": "MEHRTARIF"
+      },
+      "geraetenummer": "<string>",
+      "weitereGeraetenummern": [
+        "<string>",
+        "<string>"
+      ],
+      "geraetereferenz": "<string>"
+    }
+  ],
+  "messdienstleistung": [
+    {
+      "dienstleistungstyp": "DATENBEREITSTELLUNG_TAEGLICH",
+      "bezeichnung": "<string>"
+    }
+  ],
+  "messlokationszaehler": [
+    "zaehler1",
+    "zaehler2",
+    "..."
+  ],
+  "bilanzierungsmethode": "RLM",
+  "abrechnungmessstellenbetriebnna": false,
+  "gasqualitaet": null,
+  "verlustfaktor": 5.4,
+  "zaehlwerke": [
+    {
+      "zaehlwerkId": "<string>",
+      "bezeichnung": "<string>",
+      "richtung": "EINSP",
+      "obisKennzahl": "<string>",
+      "wandlerfaktor": 5,
+      "einheit": "KWH",
+      "schwachlastfaehig": "NICHT_SCHWACHLASTFAEHIG",
+      "verwendungszwecke": [
+        {
+          "marktrolle": "NB",
+          "zweck": [
+            "NETZNUTZUNGSABRECHNUNG"
+          ]
+        }
+      ],
+      "verbrauchsart": "KL",
+      "unterbrechbarkeit": "NUV",
+      "waermenutzung": "WAERMEPUMPE",
+      "konzessionsabgabe": {
+        "satz": "SA",
+        "kosten": 12.58,
+        "kategorie": "<string>"
+      },
+      "steuerbefreit": true,
+      "vorkommastelle": "8",
+      "abrechnungsrelevant": true,
+      "anzahlAblesungen": "2",
+      "zaehlzeiten": {
+        "zaehlzeitDefinition": "<string>",
+        "register": "<string>",
+        "schwachlastfaehig": "NICHT_SCHWACHLASTFAEHIG"
+      },
+      "konfiguration": "<string>",
+      "messprodukt": "<string>",
+      "wertegranularitaet": "MONATLICH",
+      "notwendigkeitZweiteMessung": "VORHANDEN",
+      "werteuebermittlungVerwendungszweck": "VORHANDEN",
+      "artEMobilitaet": null
+    }
+  ],
+  "betriebszustand": "REGELBETRIEB",
+  "ablesekartenempfaenger": {
+    "boTyp": "GESCHAEFTSPARTNER",
+    "geschaeftspartnerrolle": [
+      "KUNDE"
+    ],
+    "versionStruktur": "1",
+    "gewerbekennzeichnung": false,
+    "anrede": "<string>",
+    "name1": "<string>",
+    "name2": "<string>",
+    "name3": "<string>",
+    "name4": "<string>",
+    "partneradresse": {
+      "postleitzahl": "<string>",
+      "ort": "<string>",
+      "strasse": "<string>",
+      "hausnummer": "<string>",
+      "landescode": "<string>",
+      "ortsteil": "<string>"
+    }
+  },
+  "marktrollen": [
+    {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "zeitliche_gueltigkeit": {
+        "zeitraumId": 1,
+        "startdatum": "2024-12-31T23:00:00Z",
+        "enddatum": "2025-12-31T23:00:00Z"
+      },
+      "marktrolle": "MSB",
+      "rollencodenummer": "9904455000006",
+      "rollencodetyp": "<string>",
+      "weiterverpflichtet": false,
+      "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+    }
+  ],
+  "referenzMarktlokationsId": "<string>",
+  "verwendungsumfang": "MESSLOKATION_PROZESSUAL_BEHANDELT",
+  "lokationszuordnung": "BEGINNT",
+  "beteiligterMarktpartner": {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "marktrolle": "NB",
+    "gewerbekennzeichnung": true,
+    "rollencodenummer": "9900259000002",
+    "rollencodetyp": "BDEW"
+  }
+}
+    ]
+}
+}
