@@ -1,71 +1,63 @@
 {
-  "zusatzdaten": {
-    "erpEvent": {
-      "stammdaten": {
-        "MARKTLOKATION": [
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "sparte": "STROM",
+        "marktlokationsId": "50754496000",
+        "erforderlichesProduktpaket": [
           {
-            "boTyp": "MARKTLOKATION",
-            "versionStruktur": "1",
-            "sparte": "STROM",
-            "erforderlichesProduktpaket": [
+            "produktpaketId": 1,
+            "produkt": [
               {
-                "produktpaketId": 1,
-                "produkt": [
-                  {
-                    "produktCode": "9991000002082",
-                    "wertedetails": "11Y0-0000-0077-K"
-                  },
-                  {
-                    "produktCode": "9991000002008",
-                    "codeProdukteigenschaft": "9991000002115"
-                  }
-                ],
-                "umsetzungsgradvorgabe": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR"
+                "produktCode": "9991000002082",
+                "wertedetails": "11Y0-0000-0077-K"
+              },
+              {
+                "produktCode": "9991000002008",
+                "codeProdukteigenschaft": "9991000002115"
               }
-            ]
-          }
-        ],
-        "NETZNUTZUNGSVERTRAG": [
-          {
-            "boTyp": "VERTRAG",
-            "versionStruktur": "1",
-            "vertragsart": "NETZNUTZUNGSVERTRAG",
-            "sparte": "STROM",
-            "vertragsbeginn": "2025-10-31T23:00:00Z",
-            "vertragskonditionen": {
-              "haushaltskunde": true
-            }
+            ],
+            "umsetzungsgradvorgabe": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR"
           }
         ]
-      },
-      "transaktionsdaten": {
-        "datenaustauschreferenz": "5CDC3D313B1CB0",
-        "sparte": "STROM",
-        "transaktionsgrund": "E03",
-        "transaktionsgrundergaenzung": "ZW0",
-        "vorgangsnummer": "3C63D42F1E05495E7E315CDC3D313B1CB0",
-        "pruefidentifikator": "55077",
-        "absender": {
-          "boTyp": "MARKTTEILNEHMER",
-          "versionStruktur": "1",
-          "rollencodenummer": "9903526000002",
-          "rollencodetyp": "BDEW"
-        },
-        "empfaenger": {
-          "boTyp": "MARKTTEILNEHMER",
-          "versionStruktur": "1",
-          "rollencodenummer": "9900683000008",
-          "rollencodetyp": "BDEW"
-        },
-        "dokumentennummer": "E7E315CDC3D313B1CB0",
-        "kategorie": "E01",
-        "nachrichtendatum": "2024-12-06T14:38:00Z",
-        "nachrichtenreferenznummer": "5CDC3D313B1CB1"
-      },
-      "zusatzdaten": {
-        "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
-        "eventname": "START_LIEFERBEGINN"
       }
-    }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "NETZNUTZUNGSVERTRAG",
+        "sparte": "STROM",
+        "vertragsbeginn": "2025-10-31T23:00:00Z",
+        "vertragskonditionen": {
+          "haushaltskunde": true
+        }
+      }
+    ]
+  },
+  "transaktionsdaten": {
+    "sparte": "STROM",
+    "transaktionsgrund": "E03",
+    "transaktionsgrundergaenzung": "ZW0",
+    "pruefidentifikator": "55077",
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "9903526000002",
+      "rollencodetyp": "BDEW"
+    },
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "rollencodenummer": "9900683000008",
+      "rollencodetyp": "BDEW"
+    },
+    "kategorie": "E01"
+  },
+  "zusatzdaten": {
+    "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
+    "eventname": "START_LIEFERBEGINN"
   }
 }
