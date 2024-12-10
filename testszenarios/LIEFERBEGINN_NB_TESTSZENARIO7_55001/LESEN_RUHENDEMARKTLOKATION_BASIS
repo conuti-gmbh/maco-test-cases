@@ -206,9 +206,7 @@
         "register": null,
         "schwachlastfaehig": null
       },
-      "leistungskurvendefinition": {
-        "leistungskurvendefinition": null
-      },
+"leistungskurvendefinition": null,
       "konfiguration": null,
       "messprodukt": "9991000000044",
       "wertegranularitaet": "JAEHRLICH",
