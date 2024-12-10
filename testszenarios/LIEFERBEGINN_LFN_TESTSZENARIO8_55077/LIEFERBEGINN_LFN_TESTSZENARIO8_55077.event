@@ -25,6 +25,14 @@
         ]
       }
     ],
+    "TRANCHE": [
+      {
+        "boTyp": "TRANCHE",
+        "versionStruktur": "1",
+        "tranchenId": "50754497111",
+        "sparte": "STROM"
+      }
+    ],
     "NETZNUTZUNGSVERTRAG": [
       {
         "boTyp": "VERTRAG",
