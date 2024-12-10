@@ -54,7 +54,7 @@
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
             "anrede": "Herr",
-            "name1": "Glu00f6ppel",
+            "name1": "Glöppel",
             "name2": "Walter",
             "gewerbekennzeichnung": true,
             "geschaeftspartnerrolle": [
@@ -65,12 +65,12 @@
         "korrespondenzpartner": {
           "boTyp": "GESCHAEFTSPARTNER",
           "versionStruktur": "1",
-          "name1": "Glu00f6ppel",
+          "name1": "Glöppel",
           "gewerbekennzeichnung": true,
           "partneradresse": {
             "postleitzahl": "41515",
             "ort": "Grevenbroich",
-            "strasse": "Bahnstrau00dfe",
+            "strasse": "Bahnstraße",
             "hausnummer": "49",
             "landescode": "DE"
           }
