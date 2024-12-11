@@ -1,0 +1,20 @@
+{
+  "stammdaten":{
+  "ENERGIELIEFERVERTRAG":[
+    {
+      "boTyp": "VERTRAG",
+      "versionStruktur": "1",
+      "vertragsart": "ENERGIELIEFERVERTRAG",
+      "sparte": "STROM",
+      "enFG": [
+        {
+          "grundlageVerringerungUmlagen": "ERFUELLT_VORAUSSETZUNG_NACH_ENFG",
+          "grund": [
+            "ENFG_STROMSPEICHER_UND_VERLUSTENERGIE"
+          ]
+        }
+      ]
+    }
+  ]
+}
+}

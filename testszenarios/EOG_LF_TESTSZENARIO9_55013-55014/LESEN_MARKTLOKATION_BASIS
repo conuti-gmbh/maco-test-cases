@@ -1,0 +1,24 @@
+{
+  "stammdaten":{
+  "MARKTLOKATION":[
+    {
+      "boTyp": "MARKTLOKATION",
+      "versionStruktur": "1",
+      "sparte": "STROM",
+      "versorgungsart": "ERSATZVERSORGUNG",
+      "erforderlichesProduktpaket": [
+        {
+          "produktpaketId": 1,
+          "produkt": [
+            {
+              "produktCode": "9991000002082",
+              "wertedetails": "11Y0-0000-0076-N"
+            }
+          ],
+          "umsetzungsgradvorgabe": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR"
+        }
+      ]
+    }
+  ]
+}
+}
