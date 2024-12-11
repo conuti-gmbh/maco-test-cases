@@ -1,179 +1,46 @@
 {
-  "HEADER": {
-    "ID": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
-    "EVENTNAME": "START_LIEFERENDE",
-    "TESTSZENARIO": "LIEFERENDE_VON_NB_AN_LF_TESTSZENARIO2_55007",
-    "SENDER_ID": "9900683000008",
-    "SENDER_CODELIST": "293",
-    "RECEIVER_ID": "9903526000002",
-    "RECEIVER_CODELIST": "293"
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "50754496000",
+        "sparte": "STROM"
+      }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "NETZNUTZUNGSVERTRAG",
+        "sparte": "STROM",
+        "vertragsende": "2025-10-15T23:00:00Z"
+      }
+    ]
   },
-  "DATA": {
-    "MDOC_GUID": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
-    "HEADER": {
-      "MDOC_TYPE": "SWTDOC",
-      "MDOC_STATUS": "",
-      "CREATED_BY": "MSKUPCH",
-      "CREATED_AT": 20251104060230,
-      "CHANGED_BY": "",
-      "CHANGED_AT": 0
+  "transaktionsdaten": {
+    "sparte": "STROM",
+    "transaktionsgrund": "Z33",
+    "transaktionsgrundergaenzung": "ZW3",
+    "pruefidentifikator": "55007",
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": true,
+      "rollencodenummer": "9900683000008",
+      "rollencodetyp": "BDEW"
     },
-    "VALUES": [
-      {
-        "OBJECT": "ADD_MARKET_PARTNER",
-        "ATTRIBUTE_NAME": "KEY",
-        "ATTRIBUTE_VALUE": "SL-NWV",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "BUSINESS_PARTNER",
-        "ATTRIBUTE_NAME": "ANREDE",
-        "ATTRIBUTE_VALUE": "HERR",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "BUSINESS_PARTNER",
-        "ATTRIBUTE_NAME": "HAUSNUMMER",
-        "ATTRIBUTE_VALUE": "49",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "BUSINESS_PARTNER",
-        "ATTRIBUTE_NAME": "KEY",
-        "ATTRIBUTE_VALUE": "1100000087",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "BUSINESS_PARTNER",
-        "ATTRIBUTE_NAME": "LANDESCODE",
-        "ATTRIBUTE_VALUE": "DE",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "BUSINESS_PARTNER",
-        "ATTRIBUTE_NAME": "NAME1",
-        "ATTRIBUTE_VALUE": "Glöppel",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "BUSINESS_PARTNER",
-        "ATTRIBUTE_NAME": "NAME2",
-        "ATTRIBUTE_VALUE": "Walter",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "BUSINESS_PARTNER",
-        "ATTRIBUTE_NAME": "ORT",
-        "ATTRIBUTE_VALUE": "Grevenbroich",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "BUSINESS_PARTNER",
-        "ATTRIBUTE_NAME": "POSTLEITZAHL",
-        "ATTRIBUTE_VALUE": "41515",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "BUSINESS_PARTNER",
-        "ATTRIBUTE_NAME": "GEWERBEKENNZEICHNUNG",
-        "ATTRIBUTE_VALUE": "false",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "BUSINESS_PARTNER",
-        "ATTRIBUTE_NAME": "STRASSE",
-        "ATTRIBUTE_VALUE": "Bahnstraße",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "INT_METERING_POINT",
-        "ATTRIBUTE_NAME": "KEY",
-        "ATTRIBUTE_VALUE": "ta6JJFrEgF6YNm1GLezzSm",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "MARKTLOKATION",
-        "ATTRIBUTE_NAME": "KEY",
-        "ATTRIBUTE_VALUE": "50754496000",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "MARKTLOKATION",
-        "ATTRIBUTE_NAME": "ENERGIERICHTUNG",
-        "ATTRIBUTE_VALUE": "EINSP",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "MARKTLOKATION",
-        "ATTRIBUTE_NAME": "SPARTE",
-        "ATTRIBUTE_VALUE": "STROM",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "MARKTLOKATION",
-        "ATTRIBUTE_NAME": "HAUSHALTSKUNDE",
-        "ATTRIBUTE_VALUE": "true",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "TRANSAKTION",
-        "ATTRIBUTE_NAME": "TRANSAKTIONSGRUND",
-        "ATTRIBUTE_VALUE": "Z33",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "MARKTLOKATION",
-        "ATTRIBUTE_NAME": "BILANZKREIS",
-        "ATTRIBUTE_VALUE": "11Y0-0000-0077-K",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "MARKTLOKATION",
-        "ATTRIBUTE_NAME": "MESSTECHNISCHEEINORDNUNG",
-        "ATTRIBUTE_VALUE": "9991000002115",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "TRANSAKTION",
-        "ATTRIBUTE_NAME": "TRANSAKTIONSGRUNDERGAENZUNG",
-        "ATTRIBUTE_VALUE": "ZW3",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "RECEIVER",
-        "ATTRIBUTE_NAME": "KEY",
-        "ATTRIBUTE_VALUE": "SL-CCV",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "SENDER",
-        "ATTRIBUTE_NAME": "KEY",
-        "ATTRIBUTE_VALUE": "SN-CCN",
-        "ATTRIBUTE_TYPE": ""
-      },
-      {
-        "OBJECT": "NETZNUTZUNGSVERTRAG",
-        "ATTRIBUTE_NAME": "vertragsende",
-        "ATTRIBUTE_VALUE": "2025-10-15T23:00:00Z",
-        "ATTRIBUTE_TYPE": ""
-      }
-    ],
-    "DATE_TYPES": [
-      {
-        "DATE_TYPE": "END_SUPPLY",
-        "DATE_TIME": 20251015230000
-      }
-    ],
-    "REFERENCES": [
-      {
-        "MA_EVENT": "START_LIEFERENDE",
-        "DEXTASKID": "",
-        "MA_GUID": "",
-        "CREATED_AT": 20251104060230,
-        "CHANGED_AT": 20251104060249,
-        "STATUS": "PENDING"
-      }
-    ],
-    "ISUDOC": []
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": true,
+      "rollencodenummer": "9903526000002",
+      "rollencodetyp": "BDEW"
+    },
+    "kategorie": "E02"
+  },
+  "zusatzdaten": {
+    "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
+    "eventname": "START_LIEFERENDE"
   }
 }

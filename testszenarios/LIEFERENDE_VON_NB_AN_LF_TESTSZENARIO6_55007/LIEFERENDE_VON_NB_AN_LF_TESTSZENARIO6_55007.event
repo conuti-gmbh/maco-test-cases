@@ -1,48 +1,46 @@
 {
-    "stammdaten": {
-      "MARKTLOKATION": [
-        {
-          "boTyp": "MARKTLOKATION",
-          "versionStruktur": "1",
-          "marktlokationsId": "50754496000",
-          "sparte": "STROM"
-        }
-      ],
-      "NETZNUTZUNGSVERTRAG": [
-        {
-          "boTyp": "VERTRAG",
-          "versionStruktur": "1",
-          "vertragsart": "NETZNUTZUNGSVERTRAG",
-          "sparte": "STROM",
-          "vertragsende": "2025-10-31T23:00:00Z"
-        }
-      ]
-    },
-    "transaktionsdaten": {
-      "sparte": "STROM",
-      "transaktionsgrund": "ZQ7",
-      "transaktionsgrundergaenzung": "ZW4",
-      "pruefidentifikator": "55007",
-      "absender": {
-        "boTyp": "MARKTTEILNEHMER",
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
-        "gewerbekennzeichnung": true,
-        "rollencodenummer": "9900683000008",
-        "rollencodetyp": "BDEW"
-      },
-      "empfaenger": {
-        "boTyp": "MARKTTEILNEHMER",
+        "marktlokationsId": "50754496000",
+        "sparte": "STROM"
+      }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
         "versionStruktur": "1",
-        "gewerbekennzeichnung": true,
-        "rollencodenummer": "9903526000002",
-        "rollencodetyp": "BDEW"
-      },
-      "kategorie": "E02",
-      "nachrichtendatum": "2025-06-24T12:31:00Z",
-      "vertragsende": "2025-10-31T23:00:00Z"
+        "vertragsart": "NETZNUTZUNGSVERTRAG",
+        "sparte": "STROM",
+        "vertragsende": "2025-10-31T23:00:00Z"
+      }
+    ]
+  },
+  "transaktionsdaten": {
+    "sparte": "STROM",
+    "transaktionsgrund": "ZQ7",
+    "transaktionsgrundergaenzung": "ZW4",
+    "pruefidentifikator": "55007",
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": true,
+      "rollencodenummer": "9900683000008",
+      "rollencodetyp": "BDEW"
     },
-    "zusatzdaten": {
-      "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
-      "eventname": "START_LIEFERENDE"
-    }
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": true,
+      "rollencodenummer": "9903526000002",
+      "rollencodetyp": "BDEW"
+    },
+    "kategorie": "E02"
+  },
+  "zusatzdaten": {
+    "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
+    "eventname": "START_LIEFERENDE"
+  }
 }
