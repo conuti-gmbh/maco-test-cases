@@ -13,10 +13,6 @@
               {
                 "produktCode": "9991000002082",
                 "wertedetails": "11Y0-0000-0077-K"
-              },
-              {
-                "produktCode": "9991000002008",
-                "codeProdukteigenschaft": "9991000002115"
               }
             ],
             "umsetzungsgradvorgabe": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR"
@@ -67,15 +63,7 @@
             "hausnummer": "49",
             "landescode": "DE"
           }
-        },
-        "enFG": [
-          {
-            "grundlageVerringerungUmlagen": "ERFUELLT_VORAUSSETZUNG_NACH_ENFG",
-            "grund": [
-              "ENFG_ELEKTRISCH_ANGETRIEBENE_WAERMEPUMPEN"
-            ]
-          }
-        ]
+        }
       }
     ]
   },
