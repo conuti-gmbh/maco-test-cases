@@ -1,0 +1,71 @@
+{
+  "stammdaten":{
+  "MARKTTEILNEHMER":[
+{
+  "marktteilnehmer": {
+    "boTyp": "MARKTTEILNEHMER",
+    "versionStruktur": "1",
+    "gueltigkeitszeitraum": {
+      "zeitraumId": null,
+      "startdatum": null,
+      "enddatum": null
+    },
+    "datenqualitaet": null,
+    "marktrolle": "LF",
+    "rollencodenummer": "9900683000008",
+    "rollencodetyp": "BDEW",
+    "makoadresse": "erdgas.netz.eswe@xi.eswe.com",
+    "downloadlinkZertifikat": "https://www.eswe-versorgung.de/fileadmin/user_upload/dateien/impressum/ESWE-Versorgung-Zertifikate/strom.vertrieb.eswe%40xi.eswe.com.cer",
+    "kommunikationsparameter": {
+      "zieladresse": {
+        "zieladresse1": null
+      },
+      "zertifikatsAussteller": {
+        "zertifikatsAussteller1": null
+      },
+      "zertifikatsNutzer": {
+        "zertifikatsNutzer1": null
+      }
+    },
+    "bankverbindung": [
+      {
+        "verwendungszweck": "BV_ZAHLUNG_NNA",
+        "iban": "DE80 5108 0060 0026 8902 00",
+        "kontoinhaber": "ESWE Versorgungs AG",
+        "bic": "DRESDEFF510",
+        "kreditinstitut": "Commerzbank"
+      }
+    ],
+    "erreichbarkeit": [
+      {
+        "verfuegbarkeit": "MONTAG",
+        "zeit": "08:00-17:00"
+      }
+    ],
+    "anrede": "Frau",
+    "name1": "Elke",
+    "name2": "Nielbock",
+    "name3": null,
+    "name4": null,
+    "gewerbekennzeichnung": true,
+    "hrnummer": "HRB 2105",
+    "amtsgericht": "Wiesbaden",
+    "umsatzsteuerId": "DE 113822541",
+    "website": "www.eswe-versorgung.de",
+    "faxnummer": "0611 780-2339",
+    "partneradresse": {
+      "postleitzahl": "65189",
+      "ort": "Wiesbaden",
+      "strasse": "Konradinerallee",
+      "hausnummer": "25",
+      "postfach": null,
+      "adresszusatz": null,
+      "coErgaenzung": null,
+      "landescode": "DE",
+      "ortsteil": null
+    }
+  }
+}
+  ]
+}
+}
