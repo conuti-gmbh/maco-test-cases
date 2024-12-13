@@ -1,0 +1,33 @@
+{
+  "stammdaten":{
+  "BILANZIERUNG":[
+    {
+      "boTyp": "BILANZIERUNG",
+      "versionStruktur": "1",
+      "marktlokationsId": "50754496000",
+      "lastprofile": [
+        {
+          "bezeichnung": "H0",
+          "verfahren": "SYNTHETISCH",
+          "einspeisung": false,
+          "profilart": "ART_STANDARDLASTPROFIL",
+          "herausgeber": "NB"
+        }
+      ],
+      "jahresverbrauchsprognose": {
+        "wert": 2000,
+        "einheit": "KWH"
+      },
+      "aggregationsverantwortung": "VNB",
+      "zeitreihentyp": "SLS",
+      "wahlrechtPrognosegrundlage": "DURCH_LF_NICHT_GEGEBEN",
+      "grundWahlrechtPrognosegrundlage": "NICHT_WEGEN_GROSSEN_VERBRAUCHS",
+      "prognosegrundlage": "PROFILE",
+      "detailsPrognosegrundlage": [
+        "SLP_SEP"
+      ],
+      "abwicklungsmodell": "MODELL_1_BILANZIERUNG_AN_MARKTLOKATION"
+    }
+  ]
+}
+}

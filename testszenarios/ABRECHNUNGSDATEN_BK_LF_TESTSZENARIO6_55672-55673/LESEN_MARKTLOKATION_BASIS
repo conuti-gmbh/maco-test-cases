@@ -1,0 +1,29 @@
+{
+  "stammdaten":{
+  "MARKTLOKATION":[
+    {
+      "boTyp": "MARKTLOKATION",
+      "versionStruktur": "1",
+      "marktlokationsId": "50754496000",
+      "sparte": "STROM",
+      "gueltigkeitszeitraum": {
+        "zeitraumId": 1,
+        "startdatum": "2025-04-02T22:00:00Z"
+      },
+      "datenqualitaet": "ERWARTETE_DATEN",
+      "bilanzierungsgebiet": "11YR00000002596Z",
+      "marktrollen": [
+        {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "marktrolle": "UENB",
+          "gewerbekennzeichnung": true,
+          "rollencodenummer": "4045399000077",
+          "rollencodetyp": "BDEW"
+        }
+      ],
+      "regelzone": "10YDE-RWENET---I"
+    }
+  ]
+}
+}
