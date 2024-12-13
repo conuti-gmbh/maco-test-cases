@@ -69,15 +69,7 @@
         "versionStruktur": "1",
         "vertragsart": "NETZNUTZUNGSVERTRAG",
         "sparte": "STROM",
-        "vertragsbeginn": "2025-10-31T23:00:00Z"
-      },
-      {
-        "boTyp": "VERTRAG",
-        "versionStruktur": "1",
-        "vertragsart": "NETZNUTZUNGSVERTRAG",
-        "sparte": "STROM",
         "datenqualitaet": "INFORMATIVE_DATEN",
-        "vertragsbeginn": "2025-10-31T23:00:00Z",
         "vertragskonditionen": {
           "haushaltskunde": true
         }
@@ -118,7 +110,8 @@
       "rollencodenummer": "9900683000008",
       "rollencodetyp": "BDEW"
     },
-    "kategorie": "E01"
+    "kategorie": "E01",
+    "vertragsbeginn": "2025-10-31T23:00:00Z"
   },
   "zusatzdaten": {
     "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
