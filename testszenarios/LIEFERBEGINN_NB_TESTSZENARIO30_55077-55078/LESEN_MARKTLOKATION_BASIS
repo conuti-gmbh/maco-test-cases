@@ -23,6 +23,18 @@
           "zusatz5": "Dr."
         }
       },
+      "erforderlichesProduktpaket": [
+    {
+      "produktpaketId": 1,
+      "produkt": [
+        {
+          "produktCode": "9991000002008",
+          "codeProdukteigenschaft": "9991000002115",
+          "wertedetails": "2000"
+        }
+      ]
+    }
+    ],
       "marktrollen": [
         {
           "boTyp": "MARKTTEILNEHMER",
