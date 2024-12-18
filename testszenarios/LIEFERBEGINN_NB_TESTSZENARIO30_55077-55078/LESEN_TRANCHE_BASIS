@@ -4,7 +4,7 @@
 {
   "boTyp": "TRANCHE",
   "versionStruktur": "1",
-  "marktlokationsId": "50754496000",
+  "tranchenId": "50754496000",
   "zukuenftigerMeldepunkt": null,
   "sparte": "STROM",
   "gueltigkeitszeitraum": {
@@ -387,6 +387,11 @@
       "priorisierung": "PRIORITAET1"
     }
   ],
+  "bildungTranchengroesse": "PROZENTUAL",
+  "aufteilungsmenge": {
+    "wert": 5.3,
+    "einheit": "PROZENT"
+  },
   "datenDerBeteiligtenMarktrolle": [
     {
       "marktlokationsId": null,
