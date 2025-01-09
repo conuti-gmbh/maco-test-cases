@@ -1,4 +1,5 @@
 {
   "stammdaten" : stammdaten,
-  "transaktionsdaten" : transaktionsdaten
+  "transaktionsdaten" : transaktionsdaten,
+  "zusatzdaten" : zusatzdaten  
 }
