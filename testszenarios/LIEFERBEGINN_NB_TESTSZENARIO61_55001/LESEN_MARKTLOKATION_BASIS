@@ -5,6 +5,13 @@
   "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
   "marktlokationsId": "50754496000",
+  "marktlokationsTyp": [
+    {
+      "typ": "STANDARD_MARKTLOKATION",
+      "gueltigAb": "2023-08-01T22:00:00Z",
+      "gueltigBis": "2023-08-01T22:00:00Z"
+    }
+  ],
   "zukuenftigerMeldepunkt": null,
   "sparte": "STROM",
   "gueltigkeitszeitraum": {
