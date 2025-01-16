@@ -14,7 +14,7 @@
       "versionStruktur": "1",
       "vertragsart": "${data:jsonPath('$.vertragsart')}",
       "vertragsbeginn": "${data:jsonPath('$.vertragsbeginn')}",
-      "lokationsId": "${data:jsonPath('$.lokationsId')}"
+      "lokationsId": "${data:jsonPath('$.lokationsId')}",
       "lokationsTyp": "${data:jsonPath('$.lokationsTyp')}"
       }
       ],
