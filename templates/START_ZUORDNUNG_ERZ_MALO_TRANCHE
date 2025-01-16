@@ -18,7 +18,7 @@
       {
       "boTyp": "MESSLOKATION",
       "versionStruktur": "1",
-      "messlokationsId": "${data:jsonPath('$.messlokationsId')}",
+      "messlokationsId": "${data:jsonPath('$.messlokationsId')}"
       }
       ],
     "NETZNUTZUNGSVERTRAG": [
