@@ -1,0 +1,38 @@
+{
+  "stammdaten": {
+    "TRANCHE": [
+      {
+        "boTyp": "TRANCHE",
+        "versionStruktur": "1",
+        "marktlokationsId": "10017211334",
+        "sparte": "STROM"
+      }
+    ]
+  },
+  "transaktionsdaten": {
+    "sparte": "STROM",
+    "transaktionsgrund": "ZG6",
+    "transaktionsgrundergaenzung": "ZW3",
+    "pruefidentifikator": "55037",
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": true,
+      "rollencodenummer": "9903526000002",
+      "rollencodetyp": "BDEW"
+    },
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": true,
+      "rollencodenummer": "9900683000008",
+      "rollencodetyp": "BDEW"
+    },
+    "kategorie": "E01",
+    "vertragsende": "2025-04-30T22:00:00Z"
+  },
+  "zusatzdaten": {
+    "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
+    "eventname": "START_BEENDIGUNG_DER_ZUORDNUNG"
+  }
+}
