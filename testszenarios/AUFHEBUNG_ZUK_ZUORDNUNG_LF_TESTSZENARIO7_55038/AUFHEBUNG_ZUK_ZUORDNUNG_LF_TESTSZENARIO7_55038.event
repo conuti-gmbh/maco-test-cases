@@ -18,8 +18,8 @@
   },
   "transaktionsdaten": {
     "sparte": "STROM",
-    "transaktionsgrund": "ZG9",
-    "transaktionsgrundergaenzung": "ZW4",
+    "transaktionsgrund": "ZH0",
+    "transaktionsgrundergaenzung": "ZW3",
     "pruefidentifikator": "55038",
     "absender": {
       "boTyp": "MARKTTEILNEHMER",

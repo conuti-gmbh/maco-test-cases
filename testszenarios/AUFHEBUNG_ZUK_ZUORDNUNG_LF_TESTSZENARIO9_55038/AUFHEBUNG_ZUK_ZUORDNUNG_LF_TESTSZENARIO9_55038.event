@@ -9,8 +9,8 @@
         "beteiligterMarktpartner": {
           "boTyp": "MARKTTEILNEHMER",
           "versionStruktur": "1",
-          "marktrolle": "LF",
-          "rollencodenummer": "9903790000002",
+          "marktrolle": "NB",
+          "rollencodenummer": "9900321000005",
           "rollencodetyp": "BDEW"
         }
       }
@@ -18,7 +18,7 @@
   },
   "transaktionsdaten": {
     "sparte": "STROM",
-    "transaktionsgrund": "ZG9",
+    "transaktionsgrund": "ZH1",
     "transaktionsgrundergaenzung": "ZW4",
     "pruefidentifikator": "55038",
     "absender": {

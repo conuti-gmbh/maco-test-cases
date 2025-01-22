@@ -1,10 +1,10 @@
 {
   "stammdaten": {
-    "MARKTLOKATION": [
+    "TRANCHE": [
       {
-        "boTyp": "MARKTLOKATION",
+        "boTyp": "TRANCHE",
         "versionStruktur": "1",
-        "marktlokationsId": "10017211334",
+        "tranchenId": "10017211334",
         "sparte": "STROM",
         "beteiligterMarktpartner": {
           "boTyp": "MARKTTEILNEHMER",
@@ -18,8 +18,8 @@
   },
   "transaktionsdaten": {
     "sparte": "STROM",
-    "transaktionsgrund": "ZG9",
-    "transaktionsgrundergaenzung": "ZW4",
+    "transaktionsgrund": "ZH0",
+    "transaktionsgrundergaenzung": "ZW3",
     "pruefidentifikator": "55038",
     "absender": {
       "boTyp": "MARKTTEILNEHMER",
