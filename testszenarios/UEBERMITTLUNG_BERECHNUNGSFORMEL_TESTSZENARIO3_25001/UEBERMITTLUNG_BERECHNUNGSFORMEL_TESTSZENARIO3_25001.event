@@ -17,7 +17,7 @@
           "zeitraumId": 1,
           "startdatum": "2025-02-28T23:00:00Z"
         },
-        "notwendigkeit": "BERECHNUNGSFORMEL_NICHT_NOTWENDIG"
+        "notwendigkeit": "BERECHNUNGSFORMEL_TRIVIAL"
       }
     ]
   },

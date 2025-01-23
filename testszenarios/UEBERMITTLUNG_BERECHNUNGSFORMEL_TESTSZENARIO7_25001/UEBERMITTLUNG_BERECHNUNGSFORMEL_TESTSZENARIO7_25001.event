@@ -17,7 +17,22 @@
           "zeitraumId": 1,
           "startdatum": "2025-02-28T23:00:00Z"
         },
-        "notwendigkeit": "BERECHNUNGSFORMEL_NICHT_NOTWENDIG"
+        "notwendigkeit": "BERECHNUNGSFORMEL_NOTWENDIG",
+        "rechenschrittId": 1,
+        "rechenschritte": [
+          {
+            "rechenschrittBestandteilId": 1,
+            "operation": "ADDITION",
+            "messlokationsId": "DE0009697056900614312080040415222",
+            "energieflussrichtung": "AUSSP"
+          },
+          {
+            "rechenschrittBestandteilId": 1,
+            "operation": "ADDITION",
+            "messlokationsId": "DE0009697056900614312080040415333",
+            "energieflussrichtung": "AUSSP"
+          }
+        ]
       }
     ]
   },
@@ -39,7 +54,7 @@
       "rollencodetyp": "BDEW"
     },
     "kategorie": "Z36",
-    "lokationsId": "50754496000",
+    "lokationsId": "52754496222",
     "lokationsTyp": "MALO"
   },
   "zusatzdaten": {
