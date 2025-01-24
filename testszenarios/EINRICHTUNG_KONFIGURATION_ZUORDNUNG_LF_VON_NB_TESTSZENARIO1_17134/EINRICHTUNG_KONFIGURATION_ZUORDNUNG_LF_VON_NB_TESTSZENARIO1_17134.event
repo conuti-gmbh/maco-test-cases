@@ -1,44 +1,92 @@
 {
   "stammdaten": {
-    "VERWENDUNGSZEITRAUM": [
+    "MARKTLOKATION": [
       {
-        "boTyp": "VERWENDUNGSZEITRAUM",
+        "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
-        "zeitraumId": 1,
-        "datenqualitaet": "GUELTIGE_DATEN",
-        "verwendungAb": "2025-02-28T23:00:00Z"
-      }
-    ],
-    "BERECHNUNGSFORMEL": [
-      {
-        "boTyp": "BERECHNUNGSFORMEL",
-        "versionStruktur": "1",
-        "gueltigkeitszeitraum": {
-          "zeitraumId": 1,
-          "startdatum": "2025-02-28T23:00:00Z"
-        },
-        "notwendigkeit": "BERECHNUNGSFORMEL_NOTWENDIG",
-        "rechenschrittId": 1,
-        "rechenschritte": [
+        "marktlokationsId": "50754496000",
+        "marktlokationsTyp": [
           {
-            "rechenschrittBestandteilId": 1,
-            "operation": "ADDITION",
-            "messlokationsId": "DE0009697056900614312080040415222",
-            "energieflussrichtung": "AUSSP"
-          },
+            "typ": "STANDARD_MARKTLOKATION"
+          }
+        ],
+        "marktrollen": [
           {
-            "rechenschrittBestandteilId": 1,
-            "operation": "ADDITION",
-            "messlokationsId": "DE0009697056900614312080040415333",
-            "energieflussrichtung": "AUSSP"
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "LF",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9903790000002",
+            "rollencodetyp": "BDEW"
+          }
+        ],
+        "zaehlwerke": [
+          {
+            "verwendungszwecke": [
+              {
+                "marktrolle": "NB",
+                "zweck": [
+                  "ES_LIEGT_KEIN_VERWENDUNGSZWECK_VOR"
+                ]
+              },
+              {
+                "marktrolle": "LF",
+                "zweck": [
+                  "ENDKUNDENABRECHNUNG"
+                ]
+              }
+            ],
+            "messprodukt": "9991000000044",
+            "zaehlzeiten": {
+              "zaehlzeitDefinition": null
+            }
           }
         ]
+      }
+    ],
+    "MESSLOKATION": [
+      {
+        "boTyp": "MESSLOKATION",
+        "versionStruktur": "1",
+        "messlokationsId": "DE0009697056900614312080040415111",
+        "zaehlwerke": [
+          {
+            "messprodukt": "99910000001516"
+          }
+        ]
+      }
+    ],
+    "ANFRAGE": [
+      {
+        "boTyp": "ANFRAGE",
+        "versionStruktur": "1",
+        "lokationsId": "50754496000",
+        "lokationsTyp": "MALO",
+        "anfragekategorie": "EINRICHTUNG_KONFIGURATION_AUFGRUND_ZUORDNUNG_LF",
+        "energierichtung": "AUSSP"
+      }
+    ],
+    "AUFTRAG": [
+      {
+        "boTyp": "AUFTRAG",
+        "versionStruktur": "1",
+        "ausfuehrungsdatum": "2025-06-30T22:00:00Z",
+        "positionsdaten": [
+          {
+            "positionsnummer": 1,
+            "lokationsId": "50754496000"
+          },
+          {
+            "positionsnummer": 2,
+            "lokationsId": "DE0009697056900614312080040415111"
+          }
+        ],
+        "energierichtung": "AUSSP"
       }
     ]
   },
   "transaktionsdaten": {
     "sparte": "STROM",
-    "pruefidentifikator": "25001",
     "absender": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
@@ -52,13 +100,10 @@
       "gewerbekennzeichnung": true,
       "rollencodenummer": "9900683000008",
       "rollencodetyp": "BDEW"
-    },
-    "kategorie": "Z36",
-    "lokationsId": "52754496222",
-    "lokationsTyp": "MALO"
+    }
   },
   "zusatzdaten": {
     "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
-    "eventname": "START_UEBERMITTLUNG_BERECHNUNGSFORMEL"
+    "eventname": "START_EINRICHTUNG_KONFIGURATION_ZUORDNUNG_LF_VON_NB"
   }
 }
