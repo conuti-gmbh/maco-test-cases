@@ -17,12 +17,28 @@
           "zeitraumId": 1,
           "startdatum": "2025-02-28T23:00:00Z"
         },
-        "notwendigkeit": "BERECHNUNGSFORMEL_TRIVIAL"
+        "notwendigkeit": "BERECHNUNGSFORMEL_NOTWENDIG",
+        "rechenschrittId": 1,
+        "rechenschritte": [
+          {
+            "rechenschrittBestandteilId": 1,
+            "operation": "ADDITION",
+            "messlokationsId": "DE0009697056900614312080040415222",
+            "energieflussrichtung": "AUSSP"
+          },
+          {
+            "rechenschrittBestandteilId": 1,
+            "operation": "ADDITION",
+            "messlokationsId": "DE0009697056900614312080040415333",
+            "energieflussrichtung": "AUSSP"
+          }
+        ]
       }
     ]
   },
   "transaktionsdaten": {
     "sparte": "STROM",
+    "pruefidentifikator": "25001",
     "absender": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
@@ -37,7 +53,8 @@
       "rollencodenummer": "9900683000008",
       "rollencodetyp": "BDEW"
     },
-    "lokationsId": "50754496000",
+    "kategorie": "Z36",
+    "lokationsId": "52754496222",
     "lokationsTyp": "MALO"
   },
   "zusatzdaten": {

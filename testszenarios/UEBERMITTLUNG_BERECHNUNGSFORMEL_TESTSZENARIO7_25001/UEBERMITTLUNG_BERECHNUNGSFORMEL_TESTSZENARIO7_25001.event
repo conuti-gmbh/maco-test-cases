@@ -38,7 +38,6 @@
   },
   "transaktionsdaten": {
     "sparte": "STROM",
-    "pruefidentifikator": "25001",
     "absender": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
@@ -53,7 +52,6 @@
       "rollencodenummer": "9900683000008",
       "rollencodetyp": "BDEW"
     },
-    "kategorie": "Z36",
     "lokationsId": "52754496222",
     "lokationsTyp": "MALO"
   },
