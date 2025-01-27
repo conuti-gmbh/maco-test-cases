@@ -13,6 +13,7 @@
     }
   ],
   "zukuenftigerMeldepunkt": null,
+  "inbetriebnahmedatum": "2001-08-01T22:00:00Z",
   "sparte": "STROM",
   "gueltigkeitszeitraum": {
     "zeitraumId": null,
