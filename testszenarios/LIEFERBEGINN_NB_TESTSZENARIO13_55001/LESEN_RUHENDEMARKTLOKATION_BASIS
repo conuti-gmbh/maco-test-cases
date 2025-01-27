@@ -4,7 +4,7 @@
 {
   "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
-  "marktlokationsId": "50754496001",
+  "marktlokationsId": "50754496000",
   "marktlokationsTyp": [
     {
       "typ": "RUHENDE_MARKTLOKATION",
@@ -13,6 +13,7 @@
     }
   ],
   "zukuenftigerMeldepunkt": null,
+  "inbetriebnahmedatum": "2001-08-01T22:00:00Z",
   "sparte": "STROM",
   "gueltigkeitszeitraum": {
     "zeitraumId": null,
