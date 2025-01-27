@@ -1,0 +1,130 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "54754496444",
+        "sparte": "STROM",
+        "zaehlwerke": [
+          {
+            "verwendungszwecke": [
+              {
+                "marktrolle": "NB",
+                "zweck": [
+                  "ES_LIEGT_KEIN_VERWENDUNGSZWECK_VOR"
+                ]
+              },
+              {
+                "marktrolle": "LF",
+                "zweck": [
+                  "ES_LIEGT_KEIN_VERWENDUNGSZWECK_VOR"
+                ]
+              },
+              {
+                "marktrolle": "UENB",
+                "zweck": [
+                  "ERMITTLUNG_AUSGEGLICHENHEIT_BILANZKREIS"
+                ]
+              }
+            ],
+            "messprodukt": "9991000000078"
+          }
+        ],
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "UENB",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "4045399000077",
+            "rollencodetyp": "BDEW"
+          }
+        ]
+      },
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "54754496555",
+        "marktlokationsTyp": [
+          {
+            "typ": "KUNDENANLAGE"
+          }
+        ],
+        "sparte": "STROM",
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "LF",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9903790000002",
+            "rollencodetyp": "BDEW"
+          }
+        ]
+      }
+    ],
+    "MESSLOKATION": [
+      {
+        "boTyp": "MESSLOKATION",
+        "versionStruktur": "1",
+        "messlokationsId": "DE0009697056900614312080040415444",
+        "sparte": "STROM",
+        "zaehlwerke": [
+          {
+            "messprodukt": "9991000000218"
+          }
+        ]
+      }
+    ],
+    "ANFRAGE": [
+      {
+        "boTyp": "ANFRAGE",
+        "versionStruktur": "1",
+        "lokationsId": "54754496444",
+        "lokationsTyp": "MALO",
+        "anfragekategorie": "EINRICHTUNG_KONFIGURATION_AUFGRUND_ZUORDNUNG_LF",
+        "anfragetyp": "AKTIVIERUNG_KONFIGURATION",
+        "energierichtung": "EINSP"
+      }
+    ],
+    "AUFTRAG": [
+      {
+        "boTyp": "AUFTRAG",
+        "versionStruktur": "1",
+        "ausfuehrungsdatum": "2025-06-30T22:00:00Z",
+        "positionsdaten": [
+          {
+            "positionsnummer": 1,
+            "lokationsId": "54754496444"
+          },
+          {
+            "positionsnummer": 2,
+            "lokationsId": "DE0009697056900614312080040415444"
+          }
+        ]
+      }
+    ]
+  },
+  "transaktionsdaten": {
+    "sparte": "STROM",
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": true,
+      "rollencodenummer": "9903526000002",
+      "rollencodetyp": "BDEW"
+    },
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": true,
+      "rollencodenummer": "9900683000008",
+      "rollencodetyp": "BDEW"
+    }
+  },
+  "zusatzdaten": {
+    "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
+    "eventname": "START_EINRICHTUNG_KONFIGURATION_ZUORDNUNG_LF_VON_NB"
+  }
+}

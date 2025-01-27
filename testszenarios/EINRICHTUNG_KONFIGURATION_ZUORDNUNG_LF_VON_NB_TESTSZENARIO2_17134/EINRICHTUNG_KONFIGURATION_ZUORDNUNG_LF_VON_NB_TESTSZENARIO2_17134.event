@@ -1,0 +1,204 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "54754496444",
+        "marktlokationsTyp": [
+          {
+            "typ": "STANDARD_MARKTLOKATION"
+          }
+        ],
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "UENB",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "4045399000077",
+            "rollencodetyp": "BDEW"
+          }
+        ]
+      }
+    ],
+    "MESSLOKATION": [
+      {
+        "boTyp": "MESSLOKATION",
+        "versionStruktur": "1",
+        "messlokationsId": "DE0009697056900614312080040415444",
+        "sparte": "STROM",
+        "zaehlwerke": [
+          {
+            "messprodukt": "9991000000226"
+          }
+        ]
+      },
+      {
+        "boTyp": "MESSLOKATION",
+        "versionStruktur": "1",
+        "messlokationsId": "DE0009697056900614312080040415555",
+        "sparte": "STROM",
+        "zaehlwerke": [
+          {
+            "messprodukt": "9991000000226"
+          }
+        ]
+      }
+    ],
+    "ANFRAGE": [
+      {
+        "boTyp": "ANFRAGE",
+        "versionStruktur": "1",
+        "lokationsId": "54754496444",
+        "lokationsTyp": "MALO",
+        "anfragekategorie": "EINRICHTUNG_KONFIGURATION_AUFGRUND_ZUORDNUNG_LF",
+        "energierichtung": "EINSP"
+      }
+    ],
+    "AUFTRAG": [
+      {
+        "boTyp": "AUFTRAG",
+        "versionStruktur": "1",
+        "ausfuehrungsdatum": "2025-06-30T22:00:00Z",
+        "positionsdaten": [
+          {
+            "positionsnummer": 1,
+            "anfragegrund": "NEUKONFIGURATION",
+            "lokationsId": "20072281444"
+          },
+          {
+            "positionsnummer": 2,
+            "anfragegrund": "NEUKONFIGURATION",
+            "lokationsId": "20072281555"
+          },
+          {
+            "positionsnummer": 3,
+            "lokationsId": "DE0009697056900614312080040415444"
+          },
+          {
+            "positionsnummer": 4,
+            "lokationsId": "DE0009697056900614312080040415555"
+          }
+        ]
+      }
+    ],
+    "TRANCHE": [
+      {
+        "boTyp": "TRANCHE",
+        "versionStruktur": "1",
+        "tranchenId": "20072281444",
+        "sparte": "STROM",
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "LF",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9903790000002",
+            "rollencodetyp": "BDEW"
+          }
+        ],
+        "zaehlwerke": [
+          {
+            "verwendungszwecke": [
+              {
+                "marktrolle": "NB",
+                "zweck": [
+                  "BILANZKREISABRECHNUNG",
+                  "UEBERMITTLUNG_AN_DAS_HKNR"
+                ]
+              },
+              {
+                "marktrolle": "LF",
+                "zweck": [
+                  "ENDKUNDENABRECHNUNG"
+                ]
+              },
+              {
+                "marktrolle": "UENB",
+                "zweck": [
+                  "ERMITTLUNG_AUSGEGLICHENHEIT_BILANZKREIS"
+                ]
+              }
+            ],
+            "messprodukt": "9991000000143"
+          }
+        ],
+        "aufteilungsmenge": {
+          "wert": 50,
+          "einheit": "PROZENT"
+        },
+        "bildungTranchengroesse": "PROZENTUAL"
+      },
+      {
+        "boTyp": "TRANCHE",
+        "versionStruktur": "1",
+        "tranchenId": "20072281555",
+        "sparte": "STROM",
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "LF",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9903790000002",
+            "rollencodetyp": "BDEW"
+          }
+        ],
+        "zaehlwerke": [
+          {
+            "verwendungszwecke": [
+              {
+                "marktrolle": "NB",
+                "zweck": [
+                  "BILANZKREISABRECHNUNG",
+                  "UEBERMITTLUNG_AN_DAS_HKNR"
+                ]
+              },
+              {
+                "marktrolle": "LF",
+                "zweck": [
+                  "ENDKUNDENABRECHNUNG"
+                ]
+              },
+              {
+                "marktrolle": "UENB",
+                "zweck": [
+                  "ERMITTLUNG_AUSGEGLICHENHEIT_BILANZKREIS"
+                ]
+              }
+            ],
+            "messprodukt": "9991000000143"
+          }
+        ],
+        "aufteilungsmenge": {
+          "wert": 50,
+          "einheit": "PROZENT"
+        },
+        "bildungTranchengroesse": "PROZENTUAL"
+      }
+    ]
+  },
+  "transaktionsdaten": {
+    "sparte": "STROM",
+    "absender": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": true,
+      "rollencodenummer": "9903526000002",
+      "rollencodetyp": "BDEW"
+    },
+    "empfaenger": {
+      "boTyp": "MARKTTEILNEHMER",
+      "versionStruktur": "1",
+      "gewerbekennzeichnung": true,
+      "rollencodenummer": "9900683000008",
+      "rollencodetyp": "BDEW"
+    }
+  },
+  "zusatzdaten": {
+    "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
+    "eventname": "START_EINRICHTUNG_KONFIGURATION_ZUORDNUNG_LF_VON_NB"
+  }
+}
