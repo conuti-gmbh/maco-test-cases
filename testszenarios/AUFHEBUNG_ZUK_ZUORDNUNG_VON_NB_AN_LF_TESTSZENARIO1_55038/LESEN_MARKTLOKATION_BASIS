@@ -1,4 +1,7 @@
 {
+  "stammdaten":{
+  "MARKTLOKATION":[
+{
   "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
   "marktlokationsId": "50754496000",
@@ -290,67 +293,65 @@
   "eigentuemer": {
     "boTyp": "GESCHAEFTSPARTNER",
     "versionStruktur": "1",
-    "anrede": "<string>",
-    "name1": "<string>",
-    "name2": "<string>",
-    "name3": "<string>",
-    "gewerbekennzeichnung": true,
+    "anrede": "Herr",
+    "name1": "Hai",
+    "name2": "Fisch>",
+    "name3": null,
+    "gewerbekennzeichnung": false,
     "geschaeftspartnerrolle": [
       "EIGENTUEMER"
     ],
-    "hrnummer": "<string>",
-    "amtsgericht": "<string>",
+    "hrnummer": null,
+    "amtsgericht": null,
     "kontaktweg": [
-      "Kontaktart1",
-      "Kontaktart2"
+      "TELEFON"
     ],
-    "umsatzsteuerId": "<string>",
-    "glaeubigerId": "<string>",
-    "eMailAdresse": "<string>",
-    "website": "<string>",
+    "umsatzsteuerId": null,
+    "glaeubigerId": null,
+    "eMailAdresse": "hai.fisch@web.de",
+    "website": null,
     "partneradresse": {
-      "postleitzahl": "<string>",
-      "ort": "<string>",
-      "strasse": "<string>",
-      "hausnummer": "<string>",
-      "postfach": "<string>",
-      "adresszusatz": "<string>",
-      "coErgaenzung": "<string>",
+      "postleitzahl": "65189",
+      "ort": "Wiesbaden",
+      "strasse": "Körallenweg",
+      "hausnummer": "10",
+      "postfach": null,
+      "adresszusatz": null,
+      "coErgaenzung": null,
       "landescode": "DE",
-      "ortsteil": "<string>"
+      "ortsteil": "Riff"
     }
   },
   "hausverwalter": {
     "boTyp": "GESCHAEFTSPARTNER",
     "versionStruktur": "1",
-    "anrede": "<string>",
-    "name1": "<string>",
-    "name2": "<string>",
-    "name3": "<string>",
-    "gewerbekennzeichnung": true,
+    "anrede": "Herr",
+    "name1": "Hai",
+    "name2": "Fisch>",
+    "name3": null,
+    "gewerbekennzeichnung": false,
     "geschaeftspartnerrolle": [
       "HAUSVERWALTER"
     ],
-    "hrnummer": "<string>",
-    "amtsgericht": "<string>",
+    "hrnummer": null,
+    "amtsgericht": null,
     "kontaktweg": [
-      "Kontaktart1",
-      "Kontaktart2"
+      "TELEFON"
     ],
-    "umsatzsteuerId": "<string>",
-    "glaeubigerId": "<string>",
-    "eMailAdresse": "<string>",
-    "website": "<string>",
+    "umsatzsteuerId": null,
+    "glaeubigerId": null,
+    "eMailAdresse": "hai.fisch@web.de",
+    "website": null,
     "partneradresse": {
-      "postleitzahl": "<string>",
-      "ort": "<string>",
-      "strasse": "<string>",
-      "hausnummer": "<string>",
-      "postfach": "<string>",
-      "adresszusatz": "<string>",
-      "coErgaenzung": "<string>",
-      "landescode": "ENUM_Landescode",
-      "ortsteil": "<string>"
+      "postleitzahl": "65189",
+      "ort": "Wiesbaden",
+      "strasse": "Körallenweg",
+      "hausnummer": "10",
+      "postfach": null,
+      "adresszusatz": null,
+      "coErgaenzung": null,
+      "landescode": "DE",
+      "ortsteil": "Riff"
     }
   },
   "verguetungEmpfaenger": null,
@@ -406,4 +407,7 @@
     }
   ],
   "paketId": null
+}
+  ]
+}
 }
