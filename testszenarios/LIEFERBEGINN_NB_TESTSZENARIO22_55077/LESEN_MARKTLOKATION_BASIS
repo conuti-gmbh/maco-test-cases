@@ -294,7 +294,7 @@
   "energieherkunft": [
     {
       "erzeugungsart": "KWK",
-      "anteilProzent": 100
+      "anteilProzent": 90
     }
   ],
   "versorgungsart": null,
