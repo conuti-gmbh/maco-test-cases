@@ -6,6 +6,7 @@
       "versionStruktur": "1",
       "sparte": "STROM",
       "versorgungsart": "ERSATZVERSORGUNG",
+      "grundversorgerCodeNr": "9900496000002",
       "erforderlichesProduktpaket": [
         {
           "produktpaketId": 1,
