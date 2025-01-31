@@ -1,14 +1,18 @@
 {
-  "stammdaten":{
-  "NETZNUTZUNGSVERTRAG":[
-    {
+  "stammdaten": {
+    "NETZNUTZUNGSVERTRAG": [
+      {
         "boTyp": "VERTRAG",
         "versionStruktur": "1",
         "vertragsart": "NETZNUTZUNGSVERTRAG",
         "sparte": "STROM",
-        "lokationsId": "50074561188",
-        "lokationsTyp": "MALO"
+        "lokationsId": "50363191616",
+        "lokationsTyp": "MALO",
+        "vertragsbeginn": "2025-06-30T22:00:00Z",
+        "vertragskonditionen": {
+          "haushaltskunde": true
+        }
       }
-  ]
-}
+    ]
+  }
 }
