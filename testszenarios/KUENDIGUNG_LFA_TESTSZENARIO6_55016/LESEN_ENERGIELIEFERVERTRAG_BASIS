@@ -6,8 +6,8 @@
     "versionStruktur": "1",
     "gueltigkeitszeitraum": {
       "zeitraumId": null,
-      "startdatum": null,
-      "enddatum": null
+      "startdatum": "0001-01-01T00:00:00Z",
+      "enddatum": "9999-12-31T23:59:59Z"
     },
     "datenqualitaet": null,
     "vertragsnummer": "12345",
