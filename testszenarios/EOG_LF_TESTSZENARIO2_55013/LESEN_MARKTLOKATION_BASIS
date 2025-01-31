@@ -289,7 +289,7 @@
       "anteilProzent": null
     }
   ],
-  "versorgungsart": "GRUNDVERSORGUNG",
+  "versorgungsart": null,
   "eigentuemer": {
     "boTyp": "GESCHAEFTSPARTNER",
     "versionStruktur": "1",

@@ -1,0 +1,14 @@
+{
+  "stammdaten":{
+  "NETZNUTZUNGSVERTRAG":[
+    {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "NETZNUTZUNGSVERTRAG",
+        "sparte": "STROM",
+        "lokationsId": "50074561188",
+        "lokationsTyp": "MALO"
+      }
+  ]
+}
+}
