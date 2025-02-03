@@ -414,186 +414,304 @@
           }
         ],
         "paketId": null
-      }
-    ],
-    "BILANZIERUNG": [
+      },
       {
-        "boTyp": "BILANZIERUNG",
+        "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
-        "marktlokationsId": "<string>",
+        "marktlokationsId": "50754496000",
+        "marktlokationsTyp": [
+          {
+            "typ": "STANDARD_MARKTLOKATION",
+            "gueltigAb": "2023-08-01T22:00:00Z",
+            "gueltigBis": "2023-08-01T22:00:00Z"
+          }
+        ],
+        "zukuenftigerMeldepunkt": null,
+        "sparte": "STROM",
         "gueltigkeitszeitraum": {
           "zeitraumId": null,
           "startdatum": null,
           "enddatum": null
         },
         "datenqualitaet": null,
-        "lastprofile": [
-          {
-            "bezeichnung": "XYZ",
-            "profilschar": null,
-            "verfahren": "SYNTHETISCH",
-            "einspeisung": false,
-            "tagesparameter": {
-              "klimazone": null,
-              "temperaturmessstelle": null,
-              "dienstanbieter": null,
-              "herausgeber": null
-            },
-            "profilart": "ART_STANDARDLASTPROFIL",
-            "herausgeber": "NB",
-            "referenzprofilbezeichnung": "XYZ"
+        "energierichtung": "AUSSP",
+        "bilanzierungsmethode": "SLP",
+        "verbrauchsart": "KL",
+        "unterbrechbar": false,
+        "netzebene": "NSP",
+        "umspannung": null,
+        "netzbetreiberCodeNr": "9900683000008",
+        "gebietTyp": "VERSORGUNGSGEBIET",
+        "netzgebietNr": "12345", 
+        "bilanzierungsgebiet": "11YR00000004025V",
+        "grundversorgerCodeNr": "9900683000008",
+        "endkunde": {
+          "boTyp": "GESCHAEFTSPARTNER",
+          "versionStruktur": "1",
+          "anrede": "Herr",
+          "name1": "Hai",
+          "name2": "Fisch",
+          "name3": null,
+          "gewerbekennzeichnung": false,
+          "hrnummer": null,
+          "amtsgericht": null,
+          "kontaktweg": [
+            "TELEFONAT",
+            "E_MAIL"
+          ],
+          "umsatzsteuerId": null,
+          "glaeubigerId": null,
+          "eMailAdresse": "hai.fisch@web.de",
+          "website": null,
+          "partneradresse": {
+            "postleitzahl": "65189",
+            "ort": "Wiesbaden",
+            "strasse": "Körallenweg",
+            "hausnummer": "10",
+            "postfach": null,
+            "adresszusatz": null,
+            "coErgaenzung": null,
+            "landescode": "DE",
+            "ortsteil": "Riff"
           }
-        ],
-        "lastprofileBilanzierungsbeteiligter": [
-          {
-            "bezeichnung": "ZYX",
-            "profilschar": null,
-            "verfahren": "SYNTHETISCH",
-            "einspeisung": false,
-            "tagesparameter": {
-              "klimazone": null,
-              "temperaturmessstelle": null,
-              "dienstanbieter": null,
-              "herausgeber": null
-            },
-            "profilart": "ART_STANDARDLASTPROFIL",
-            "herausgeber": "NB"
+        },
+        "lokationsadresse": {
+          "postleitzahl": "65189",
+          "ort": "Wiesbaden",
+          "strasse": "Körallenweg",
+          "hausnummer": "10",
+          "postfach": null,
+          "adresszusatz": null,
+          "coErgaenzung": null,
+          "landescode": "DE",
+          "ortsteil": "Riff",
+          "zusatzInformation": {
+            "zusatz1": null,
+            "zusatz2": null,
+            "zusatz3": null,
+            "zusatz4": null,
+            "zusatz5": null
           }
+        },
+        "katasteradresse": { 
+          "gemarkung_flur": "1",
+          "flurstueck": "1",
+          "flurstueckNummer": "1"
+        },
+        "geokoordinaten": { 
+          "breitengrad": "1",
+          "laengengrad": "1",
+          "ostwert": "1",
+          "nordwert": "1",
+          "zone": "1",
+          "hochwert": "1",
+          "rechtswert": "1"
+        },
+        "marktrollen": [ 
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "gueltigkeitszeitraum": {
+              "zeitraumId": 1,
+              "startdatum": "2022-12-31T23:00:00Z",
+              "enddatum": "2025-12-31T23:00:00Z"
+            },
+            "marktrolle": "MSB",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9906464000001",
+            "rollencodetyp": "BDEW",
+            "weiterverpflichtet": false,
+            "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+          },
+          {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "gueltigkeitszeitraum": {
+                "zeitraumId": 1,
+                "startdatum": "2022-12-31T23:00:00Z",
+                "enddatum": "2025-12-31T23:00:00Z"
+              },
+              "marktrolle": "NB",
+              "gewerbekennzeichnung": true,
+              "rollencodenummer": "9900683000008",
+              "rollencodetyp": "BDEW"
+            },
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "gueltigkeitszeitraum": {
+                "zeitraumId": 1,
+                "startdatum": "2022-12-31T23:00:00Z",
+                "enddatum": "2025-12-31T23:00:00Z"
+              },
+              "marktrolle": "LF",
+              "gewerbekennzeichnung": true,
+              "rollencodenummer": "9979052000006",
+              "rollencodetyp": "BDEW"
+            },
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "gueltigkeitszeitraum": {
+                "zeitraumId": 1,
+                "startdatum": "2022-12-31T23:00:00Z",
+                "enddatum": "2025-12-31T23:00:00Z"
+              },
+              "marktrolle": "UENB",
+              "gewerbekennzeichnung": true,
+              "rollencodenummer": "4033872000058", 
+              "rollencodetyp": "BDEW"
+            },
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "gueltigkeitszeitraum": {
+                "zeitraumId": 1,
+                "startdatum": "2022-12-31T23:00:00Z",
+                "enddatum": "2025-12-31T23:00:00Z"
+              },
+              "marktrolle": "BIKO",
+              "gewerbekennzeichnung": true,
+              "rollencodenummer": "4033872000027",
+              "rollencodetyp": "BDEW"
+            },
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "gueltigkeitszeitraum": {
+                "zeitraumId": 1,
+                "startdatum": "2022-12-31T23:00:00Z",
+                "enddatum": "2025-12-31T23:00:00Z"
+              },
+              "marktrolle": "BKV", 
+              "gewerbekennzeichnung": true,
+              "rollencodenummer": "4033872000034",
+              "rollencodetyp": "BDEW"
+            }
         ],
-        "bilanzierungsbeginn": "0001-01-01T00:00:00Z",
-        "bilanzierungsende": "2025-10-31T23:00:00Z",
-        "bilanzkreis": "11Y0-0000-0076-N",
-        "jahresverbrauchsprognose": {
-          "wert": 2300,
-          "einheit": "KWH"
-        },
-        "vorjahresverbrauch": {
-          "wert": 2500,
-          "einheit": "KWH"
-        },
-        "temperaturarbeit": {
-          "wert": null,
-          "einheit": null
-        },
-        "kundenwert": {
-          "wert": 2550,
-          "einheit": "KWH"
-        },
-        "verbrauchsaufteilung": {
-          "wert": null,
-          "einheit": null
-        },
+        "regelzone": "1", 
+        "marktgebiet": null,
         "zeitreihentyp": "SLS",
-        "aggregationsverantwortung": "VNB",
-        "prognosegrundlage": "PROFILE",
-        "detailsPrognosegrundlage": [
-          "SLP_SEP"
-        ],
-        "wahlrechtPrognosegrundlage": "DURCH_LF",
-        "fallgruppenzuordnung": null,
-        "prioritaet": "1",
-        "grundWahlrechtPrognosegrundlage": "DURCH_LF",
-        "abwicklungsmodell": "MODELL_1_BILANZIERUNG_AN_MARKTLOKATION",
-        "datenDerBeteiligtenMarktrolle": [
+        "zaehlwerke": [
           {
-            "marktlokationsId": "50754496000",
-            "lastprofile": [
+            "zaehlwerkId": "1", 
+            "bezeichnung": "HT",
+            "richtung": "AUSSP",
+            "obisKennzahl": "1-1:1.9.0",
+            "wandlerfaktor": 1,
+            "einheit": "KWH",
+            "schwachlastfaehig": "NICHT_SCHWACHLASTFAEHIG",
+            "verwendungszwecke": [
               {
-                "bezeichnung": "H0",
-                "profilschar": null,
-                "verfahren": "SYNTHETISCH",
-                "tagesparameter": {
-                  "klimazone": null,
-                  "temperaturmessstelle": null,
-                  "dienstanbieter": null,
-                  "herausgeber": null
-                },
-                "einspeisung": false,
-                "profilart": "ART_STANDARDLASTPROFIL",
-                "herausgeber": "NB"
+                "marktrolle": "NB",
+                "zweck": [
+                  "NETZNUTZUNGSABRECHNUNG"
+                ]
               }
             ],
-            "jahresverbrauchsprognose": {
-              "wert": 2300,
-              "einheit": "KWH"
+            "verbrauchsart": "KL",
+            "unterbrechbarkeit": "NUV",
+            "waermenutzung": null,
+            "konzessionsabgabe": {
+              "satz": "TA",
+              "kosten": 0,
+              "kategorie": "1"
             },
-            "temperaturarbeit": {
+            "steuerbefreit": false,
+            "vorkommastelle": 7,
+            "nachkommastelle": 3,
+            "abrechnungsrelevant": true,
+            "anzahlAblesungen": 1,
+            "zaehlzeiten": {
+              "zaehlzeitDefinition": null,
+              "register": null,
+              "schwachlastfaehig": null
+            },
+      "leistungskurvendefinition": null,
+            "konfiguration": null,
+            "messprodukt": "9991000000044",
+            "wertegranularitaet": "JAEHRLICH",
+            "notwendigkeitZweiteMessung": "NICHT_VORHANDEN",
+            "werteuebermittlungVerwendungszweck": "NICHT_VORHANDEN",
+            "artEMobilitaet": null
+          }
+        ],
+        "zaehlwerkeBeteiligteMarktrolle": [
+          null
+        ],
+        "verbrauchsmenge": [
+          {
+            "startdatum": "2023-10-14T07:52:00Z",
+            "enddatum": "2024-10-14T07:52:00Z",
+            "wertermittlungsverfahren": "PROGNOSE",
+            "messwertstatus": "PROGNOSEWERT",
+            "statuszusatzinformationen": [ 
+              {
+                "art": "PLAUSIBILISIERUNGSHINWEIS",
+                "status": "KUNDENSELBSTABLESUNG"
+              }
+            ],
+            "obiskennzahl": "1-1:1.9.0",
+            "wert": 2500,
+            "einheit": "KWH"
+          }
+        ],
+        "zugehoerigeMesslokationen": [
+          {
+            "messlokationsId": "DE0009697056900614312080040415111",
+            "arithmetik": "ADDITION",
+            "gueltigSeit": "2022-10-14T07:52:00Z",
+            "gueltigBis": "2025-10-14T07:52:00Z"
+          }
+        ],
+        "messtechnischeEinordnung": "KME_MME",
+        "netznutzungsabrechnungsdaten": [
+          {
+            "artikelId": "1",
+            "artikelIdTyp": "ARTIKELID",
+            "anzahl": 5,
+            "gemeinderabatt": 5.45,
+            "zuschlag": 5.78,
+            "abschlag": 5.87,
+            "singulaereBetriebsmittel": {
               "wert": null,
               "einheit": null
             },
-            "bilanzkreis": "11Y0-0000-0076-N",
-            "bilanzkreisAn": "11Y0-0000-0076-N",
-            "bilanzkreisVon": "11Y0-0000-0077-N",
-            "zeitreihentyp": "SLS",
-            "aggregationsverantwortung": "VNB",
-            "prognosegrundlage": "PROFILE",
-            "detailsPrognosegrundlage": [
-              "SLP_SEP"
-            ]
-          }
-        ]
-      }
-    ],
-    "ENERGIELIEFERVERTRAG": [
-      {
-        "boTyp": "VERTRAG",
-        "versionStruktur": "1",
-        "gueltigkeitszeitraum": {
-          "zeitraumId": null,
-          "startdatum": null,
-          "enddatum": null
-        },
-        "datenqualitaet": null,
-        "vertragsnummer": "12345",
-        "beschreibung": "XYZ",
-        "vertragsart": "ENERGIELIEFERVERTRAG",
-        "vertragstatus": "GEKUENDIGT",
-        "sparte": "STROM",
-        "vertragsbeginn": "0001-01-01T00:00:00Z",
-        "vertragsende": "9999-12-31T23:59:59Z",
-        "vertragspartner2": [
-          {
-            "boTyp": "GESCHAEFTSPARTNER",
-            "versionStruktur": "1",
-            "gewerbekennzeichnung": false,
-            "anrede": "Herr",
-            "name1": "Hai",
-            "name2": "Fisch",
-            "name3": null,
-            "geschaeftspartnerrolle": [
-              "KUNDE"
-            ],
-            "partneradresse": {
-              "postleitzahl": "65189",
-              "ort": "Wiesbaden",
-              "strasse": "Körallenweg",
-              "hausnummer": "10",
-              "postfach": null,
-              "adresszusatz": null,
-              "coErgaenzung": null,
-              "landescode": "DE",
-              "ortsteil": "Riff"
+            "preisSingulaereBetriebsmittel": {
+              "wert": null,
+              "einheit": null,
+              "bezugswert": null,
+              "status": null
             },
-            "externeReferenzen": [
-              {
-                "exRefName": "Kundennummer beim Altlieferanten",
-                "exRefWert": "NummerLFA123456_Z01"
-              },
-              {
-                "exRefName": "Kundennummer beim Lieferanten",
-                "exRefWert": "NummerLFN123456_Z01"
-              }
-            ]
+            "abrechnungBlindarbeit": null,
+            "zahlerBlindarbeit": null,
+            "zahlerBlindarbeitLf": null,
+            "zaehlzeiten": {
+              "zaehlzeitDefinition": null,
+              "register": null
+            }
           }
         ],
-        "vertragskonditionen": {
-          "kuendigungsfrist": {
-            "zeitraumText": null
-          },
-          "kuendigungstermin": "2025-07-31T23:00:00Z",
-          "abrechnungsintervall": null
-        },
-        "korrespondenzpartner": {
+        "messstellenbetriebsabrechnungsdaten": [
+          {
+            "messstellenbetriebsabrechnung": true,
+            "artikelId": "1",
+            "artikelIdTyp": "ARTIKELID",
+            "anzahl": 5,
+            "zuschlag": 5.78,
+            "abschlag": 5.87
+          }
+        ],
+        "sperrstatus": "ENTSPERRT",
+        "referenzMarktlokationsId": "50754496000",
+        "energieherkunft": [
+          {
+            "erzeugungsart": null,
+            "anteilProzent": null
+          }
+        ],
+        "versorgungsart": null,
+        "eigentuemer": {
           "boTyp": "GESCHAEFTSPARTNER",
           "versionStruktur": "1",
           "anrede": "Herr",
@@ -601,6 +719,18 @@
           "name2": "Fisch>",
           "name3": null,
           "gewerbekennzeichnung": false,
+          "geschaeftspartnerrolle": [
+            "EIGENTUEMER"
+          ],
+          "hrnummer": null,
+          "amtsgericht": null,
+          "kontaktweg": [
+            "TELEFON"
+          ],
+          "umsatzsteuerId": null,
+          "glaeubigerId": null,
+          "eMailAdresse": "hai.fisch@web.de",
+          "website": null,
           "partneradresse": {
             "postleitzahl": "65189",
             "ort": "Wiesbaden",
@@ -613,97 +743,26 @@
             "ortsteil": "Riff"
           }
         },
-        "lokationsId": "50754496000",
-        "lokationsTyp": "MALO",
-        "enFG": [
-          {
-            "grundlageVerringerungUmlagen": "KEINE_ANGABE",
-            "grund": [
-              null
-            ]
-          }
-        ]
-      }
-    ],
-    "NETZNUTZUNGSVERTRAG": [
-      {
-        "boTyp": "VERTRAG",
-        "versionStruktur": "1",
-        "vertragsnummer": "14658841",
-        "beschreibung": "XYZ",
-        "vertragsart": "NETZNUTZUNGSVERTRAG",
-        "vertragsstatus": "BEENDET",
-        "sparte": "STROM",
-        "gueltigkeitszeitraum": {
-          "zeitraumId": null,
-          "startdatum": null,
-          "enddatum": null
-        },
-        "datenqualitaet": null,
-        "vertragsbeginn": "0001-01-01T00:00:00Z",
-        "vertragsende": "2025-10-31T23:00:00Z",
-        "vertragspartner2": [
-          {
-            "boTyp": "GESCHAEFTSPARTNER",
-            "versionStruktur": "1",
-            "gewerbekennzeichnung": false,
-            "anrede": "Herr",
-            "name1": "Hai",
-            "name2": "Fisch",
-            "name3": null,
-            "geschaeftspartnerrolle": [
-              "KUNDE"
-            ],
-            "partneradresse": {
-              "postleitzahl": "65189",
-              "ort": "Wiesbaden",
-              "strasse": "Körallenweg",
-              "hausnummer": "10",
-              "postfach": null,
-              "adresszusatz": null,
-              "coErgaenzung": null,
-              "landescode": "DE",
-              "ortsteil": "Riff"
-            }
-          }
-        ],
-        "vertragskonditionen": {
-          "startAbrechnungsjahr": "0001-01-01T00:00:00Z",
-          "geplanteTurnusablesung": {
-            "einheit": "JAHR",
-            "dauer": 1,
-            "startdatum": "0001-01-01T00:00:00Z",
-            "enddatum": "2025-10-31T23:00:00Z",
-            "ableseZeitraum": "<string>"
-          },
-          "netznutzungsabrechnung": {
-            "einheit": "0101",
-            "dauer": 5,
-            "startdatum": "0001-01-01T00:00:00Z",
-            "enddatum": "2025-10-31T23:00:00Z",
-            "abrechnungsZeitraum": "1031"
-          },
-          "netznutzungsabrechnungIntervall": 1,
-          "haushaltskunde": true,
-          "netznutzungsvertrag": "LIEFERANTEN_NB",
-          "netznutzungszahler": "LIEFERANT",
-          "netznutzungsabrechnungsvariante": "ARBEITSPREIS_GRUNDPREIS",
-          "netznutzungsabrechnungsgrundlage": "LIEFERSCHEIN",
-          "beinhaltetSingulaerGenutzteBetriebsmittel": null,
-          "naechstenetznutzungsabrechnung": "2025"
-        },
-        "gemeinderabatt": 52,
-        "korrespondenzpartner": {
+        "hausverwalter": {
           "boTyp": "GESCHAEFTSPARTNER",
           "versionStruktur": "1",
-          "gewerbekennzeichnung": false,
           "anrede": "Herr",
           "name1": "Hai",
-          "name2": "Fisch",
+          "name2": "Fisch>",
           "name3": null,
+          "gewerbekennzeichnung": false,
           "geschaeftspartnerrolle": [
-            "KUNDE"
+            "HAUSVERWALTER"
           ],
+          "hrnummer": null,
+          "amtsgericht": null,
+          "kontaktweg": [
+            "TELEFON"
+          ],
+          "umsatzsteuerId": null,
+          "glaeubigerId": null,
+          "eMailAdresse": "hai.fisch@web.de",
+          "website": null,
           "partneradresse": {
             "postleitzahl": "65189",
             "ort": "Wiesbaden",
@@ -716,9 +775,60 @@
             "ortsteil": "Riff"
           }
         },
-        "lokationsId": "50754496999",
-        "lokationsTyp": "MALO"
+        "verguetungEmpfaenger": null,
+        "statusErzeugendeMalo": null,
+        "fernsteuerbarkeit": "TECHNISCH_NICHT_FERNSTEUERBAR",
+        "foerderungsLand": null,
+        "redispatch": false,
+        "lokationszuordnung": null,
+        "modulNetzentgelte": null,
+        "produktdatenRelevanteRolle": "LF",
+        "konfigurationsprodukt": null,
+        "leistungskurvendefinition": null,
+        "beteiligterMarktpartner": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "marktrolle": "NB",
+          "gewerbekennzeichnung": true,
+          "rollencodenummer": "9900683000008",
+          "rollencodetyp": "BDEW"
+        },
+        "erforderlichesProduktpaket": [
+          {
+            "produktpaketId": 1,
+            "produkt": [
+              {
+                "produktCode": "9991000002008",
+                "codeProdukteigenschaft": "9991000002115",
+                "wertedetails": null
+              }
+            ],
+            "umsetzungsgradvorgabe": "ZUORDNUNG_NUR_WENN_PRODUKTPAKET_UMSETZBAR",
+            "priorisierung": "PRIORITAET1"
+          }
+        ],
+        "datenDerBeteiligtenMarktrolle": [
+          {
+            "marktlokationsId": null,
+            "regelzone": null,
+            "bilanzierungsgebiet": null,
+            "netzebene": null,
+            "zaehlwerke": [
+              {
+                "obisKennzahl": null,
+                "verwendungszwecke": [
+                  {
+                    "zweck": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "paketId": null
       }
-    ]
+]
   }
 }
