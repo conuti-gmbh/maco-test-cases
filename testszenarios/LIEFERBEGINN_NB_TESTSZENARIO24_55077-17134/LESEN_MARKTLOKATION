@@ -1,0 +1,48 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "50754496000",
+        "marktlokationsTyp": [
+          {
+            "typ": "STANDARD_MARKTLOKATION"
+          }
+        ],
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "LF",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9903790000002",
+            "rollencodetyp": "BDEW"
+          }
+        ],
+        "zaehlwerke": [
+          {
+            "verwendungszwecke": [
+              {
+                "marktrolle": "NB",
+                "zweck": [
+                  "ES_LIEGT_KEIN_VERWENDUNGSZWECK_VOR"
+                ]
+              },
+              {
+                "marktrolle": "LF",
+                "zweck": [
+                  "ENDKUNDENABRECHNUNG"
+                ]
+              }
+            ],
+            "messprodukt": "9991000000044",
+            "zaehlzeiten": {
+              "zaehlzeitDefinition": null
+            }
+          }
+        ]
+      }
+    ]
+}
+}

@@ -1,0 +1,16 @@
+{
+  "stammdaten": {
+    "MESSLOKATION": [
+      {
+        "boTyp": "MESSLOKATION",
+        "versionStruktur": "1",
+        "messlokationsId": "DE0009697056900614312080040415111",
+        "zaehlwerke": [
+          {
+            "messprodukt": "99910000001516"
+          }
+        ]
+      }
+    ]
+}
+}
