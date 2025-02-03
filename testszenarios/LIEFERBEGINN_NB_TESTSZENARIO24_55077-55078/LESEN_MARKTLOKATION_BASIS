@@ -1,0 +1,87 @@
+{
+  "stammdaten":{
+  "MARKTLOKATION":[
+    {
+      "boTyp": "MARKTLOKATION",
+      "versionStruktur": "1",
+      "marktlokationsId": "50754496011",
+      "marktlokationsTyp": [
+    {
+      "typ": "STANDARD_MARKTLOKATION",
+      "gueltigAb": "2023-08-01T22:00:00Z",
+      "gueltigBis": "2023-08-01T22:00:00Z"
+    }
+  ],
+      "sparte": "STROM",
+      "energierichtung": "EINSP",
+      "netzebene": "NSP",
+      "bilanzierungsgebiet": "11YR00000002596Z",
+      "lokationsadresse": {
+        "postleitzahl": "12345",
+        "ort": "Ort",
+        "strasse": "Strasse",
+        "hausnummer": "1",
+        "landescode": "DE",
+        "zusatzInformation": {
+          "zusatz1": "Mustermann",
+          "zusatz2": "Hans",
+          "zusatz3": "von",
+          "zusatz4": "zu",
+          "zusatz5": "Dr."
+        }
+      },
+      "erforderlichesProduktpaket": [
+    {
+      "produktpaketId": 1,
+      "produkt": [
+        {
+          "produktCode": "9991000002008",
+          "codeProdukteigenschaft": "9991000002115",
+          "wertedetails": "2000"
+        }
+      ]
+    }
+    ],
+      "marktrollen": [
+        {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "4045399000077",
+          "marktrolle": "UENB"
+        },
+        {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "9904446000007",
+          "marktrolle": "MSB",
+          "weiterverpflichtet": true,
+          "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+        }
+      ],
+      "regelzone": "10YDE-RWENET---I",
+      "zaehlwerke": [
+        {
+          "obisKennzahl": "1-0:2.9.0",
+          "verwendungszwecke": [
+            {
+              "marktrolle": "LF",
+              "zweck": [
+                "MEHRMINDERMENGENABRECHNUNG",
+                "ENDKUNDENABRECHNUNG"
+              ]
+            }
+          ],
+          "wertegranularitaet": "JAEHRLICH"
+        }
+      ],
+      "messtechnischeEinordnung": "KME_MME",
+      "energieherkunft": [
+        {
+          "erzeugungsart": "EEG"
+        }
+      ],
+      "statusErzeugendeMalo": "SONSTIGE_DIREKTVERMARKTUNG"
+    }
+  ]
+}
+}
