@@ -293,7 +293,7 @@
   "referenzMarktlokationsId": "50754496000",
   "energieherkunft": [
     {
-      "erzeugungsart": "SONSTIGES",
+      "erzeugungsart": "SONSTIGE",
       "anteilProzent": 90
     }
   ],
