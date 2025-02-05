@@ -4,7 +4,7 @@
 {
   "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
-  "marktlokationsId": "50754497983",
+  "marktlokationsId": "50754497383",
   "marktlokationsTyp": [
     {
       "typ": "STANDARD_MARKTLOKATION",
@@ -30,7 +30,7 @@
   "netzbetreiberCodeNr": "9900496000002",
   "gebietTyp": "VERSORGUNGSGEBIET",
   "netzgebietNr": "12345", 
-  "bilanzierungsgebiet": "11YR00003034025V",
+  "bilanzierungsgebiet": "11YR00303034025V",
   "grundversorgerCodeNr": "9900683000008",
   "endkunde": {
     "boTyp": "GESCHAEFTSPARTNER",
