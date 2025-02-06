@@ -4,7 +4,7 @@
       {
         "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
-        "marktlokationsId": "50754496000",
+        "marktlokationsId": "54754496444",
         "marktlokationsTyp": [
           {
             "typ": "STANDARD_MARKTLOKATION",
@@ -20,7 +20,7 @@
           "enddatum": null
         },
         "datenqualitaet": null,
-        "energierichtung": "AUSSP",
+        "energierichtung": "EINSP",
         "bilanzierungsmethode": "SLP",
         "verbrauchsart": "KL",
         "unterbrechbar": false,
