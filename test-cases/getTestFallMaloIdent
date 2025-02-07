@@ -18,38 +18,6 @@ OUTBOUND
        "trefferStillgelegt_9": false,
        "trefferNetzgebiet_10": true,
        "trefferNetzgebiet3KJ_11": true
-     },
-     {
-       "lokationsId": "74018657188",
-       "trefferAdresse_1a": true,
-	   "trefferAdresse_1b": true,
-	   "trefferName_2a": false,
-       "trefferName_2b": false,
-	   "trefferGeraetenummer_3": false,
-	   "trefferMaloid_4": true,
-       "trefferMeloId_5": false,
-	   "trefferTrancheId_6": false,
-       "trefferKundennummer_7": false,
-       "trefferMakorelevant_8": true,
-       "trefferStillgelegt_9": false,
-       "trefferNetzgebiet_10": true,
-       "trefferNetzgebiet3KJ_11": true
-     },
-     {
-       "lokationsId": "74018657189",
-       "trefferAdresse_1a": true,
-	   "trefferAdresse_1b": true,
-	   "trefferName_2a": false,
-       "trefferName_2b": false,
-	   "trefferGeraetenummer_3": false,
-	   "trefferMaloid_4": true,
-       "trefferMeloId_5": false,
-	   "trefferTrancheId_6": false,
-       "trefferKundennummer_7": false,
-       "trefferMakorelevant_8": true,
-       "trefferStillgelegt_9": false,
-       "trefferNetzgebiet_10": true,
-       "trefferNetzgebiet3KJ_11": true
      }
      ]
   }
