@@ -4,7 +4,7 @@
 {
   "boTyp": "BILANZIERUNG",
   "versionStruktur": "1",
-  "marktlokationsId": "<string>",
+  "marktlokationsId": "50754496000",
   "gueltigkeitszeitraum": {
     "zeitraumId": null,
     "startdatum": null,

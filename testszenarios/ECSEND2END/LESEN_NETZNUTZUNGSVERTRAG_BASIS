@@ -32,7 +32,7 @@
       "partneradresse": {
         "postleitzahl": "65189",
       "ort": "Wiesbaden",
-      "strasse": "Körallenweg",
+      "strasse": "Korallenweg",
       "hausnummer": "10",
       "postfach": null,
       "adresszusatz": null,
@@ -82,7 +82,7 @@
         "partneradresse": {
           "postleitzahl": "65189",
         "ort": "Wiesbaden",
-        "strasse": "Körallenweg",
+        "strasse": "Korallenweg",
         "hausnummer": "10",
         "postfach": null,
         "adresszusatz": null,
@@ -91,7 +91,7 @@
         "ortsteil": "Riff"
     }
   },
-  "lokationsId": "50754496999",
+  "lokationsId": "50754496000",
   "lokationsTyp": "MALO"
 }
 ]
