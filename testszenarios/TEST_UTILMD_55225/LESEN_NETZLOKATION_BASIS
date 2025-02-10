@@ -1,0 +1,39 @@
+{
+  "stammdaten":{
+    "VERWENDUNGSZEITRAUM": [
+        {
+          "boTyp": "VERWENDUNGSZEITRAUM",
+          "versionStruktur": "1",
+          "zeitraumId": 1,
+          "datenqualitaet": "IM_SYSTEM_VORHANDENE_DATEN",
+          "verwendungAb": "2024-10-20T22:00:00Z",
+          "verwendungBis": "2024-12-24T23:00:00Z"
+        }
+      ],
+"NETZLOKATION": [
+        {
+          "boTyp": "NETZLOKATION",
+          "versionStruktur": "1",
+          "netzlokationsId": "E1688110000",
+          "sparte": "STROM",
+          "gueltigkeitszeitraum": {
+            "zeitraumId": 1,
+            "startdatum": "2024-10-20T22:00:00Z",
+            "enddatum": "2024-12-24T23:00:00Z"
+          },
+          "datenqualitaet": "ERWARTETE_DATEN",
+          "marktrollen": [
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "marktrolle": "MSB",
+              "gewerbekennzeichnung": true,
+              "rollencodenummer": "9900496000555",
+              "rollencodetyp": "BDEW",
+              "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+            }
+          ]
+        }
+      ]
+}
+}
