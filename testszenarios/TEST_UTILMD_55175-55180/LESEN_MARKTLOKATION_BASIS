@@ -1,0 +1,28 @@
+{
+  "stammdaten":{
+"MARKTLOKATION": [
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "50074561188",
+          "marktlokationsTyp": [
+            {
+              "typ": "STANDARD_MARKTLOKATION"
+            }
+          ],
+          "sparte": "STROM"
+        },
+        {
+          "boTyp": "MARKTLOKATION",
+          "versionStruktur": "1",
+          "marktlokationsId": "50074561199",
+          "marktlokationsTyp": [
+            {
+              "typ": "RUHENDE_MARKTLOKATION"
+            }
+          ],
+          "sparte": "STROM"
+        }
+      ]
+}
+}

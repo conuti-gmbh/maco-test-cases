@@ -1,0 +1,12 @@
+{
+  "stammdaten":{
+"TECHNISCHE_RESSOURCE": [
+        {
+          "boTyp": "TECHNISCHE_RESSOURCE",
+          "versionStruktur": "1",
+          "ressourcenId": "D417MLM8164",
+          "sparte": "STROM"
+        }
+      ]
+}
+}
