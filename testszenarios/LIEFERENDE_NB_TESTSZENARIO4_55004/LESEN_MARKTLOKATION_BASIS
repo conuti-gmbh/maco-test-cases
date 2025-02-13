@@ -7,7 +7,7 @@
         "marktlokationsId": "20072281644",
         "marktlokationsTyp": [
           {
-            "typ": "STANDARD_MARKTLOKATION",
+            "typ": "RUHENDE_MARKTLOKATION",
             "gueltigAb": "2023-08-01T22:00:00Z",
             "gueltigBis": "2023-08-01T22:00:00Z"
           }
