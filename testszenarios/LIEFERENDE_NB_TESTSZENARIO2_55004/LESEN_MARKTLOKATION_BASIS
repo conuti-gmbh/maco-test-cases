@@ -26,11 +26,11 @@
         "unterbrechbar": false,
         "netzebene": "NSP",
         "umspannung": null,
-        "netzbetreiberCodeNr": "9903323000007",
+        "netzbetreiberCodeNr": "9900321000005",
         "gebietTyp": "VERSORGUNGSGEBIET",
         "netzgebietNr": "12345",
         "bilanzierungsgebiet": "11YR00000004025V",
-        "grundversorgerCodeNr": "9903323000007",
+        "grundversorgerCodeNr": "9900321000005",
         "endkunde": {
           "boTyp": "GESCHAEFTSPARTNER",
           "versionStruktur": "1",
