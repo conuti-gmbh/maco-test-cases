@@ -23,7 +23,7 @@
       "versionStruktur": "1",
       "gewerbekennzeichnung": false,
       "anrede": "Herr",
-      "name1": "Haiko",
+      "name1": "Hai",
       "name2": "Fisch",
       "name3": null,
       "geschaeftspartnerrolle": [
@@ -32,7 +32,7 @@
       "partneradresse": {
         "postleitzahl": "65189",
       "ort": "Wiesbaden",
-      "strasse": "Korallenweg",
+      "strasse": "Körallenweg",
       "hausnummer": "10",
       "postfach": null,
       "adresszusatz": null,
@@ -52,7 +52,7 @@
       "ableseZeitraum": "<string>"
     },
     "netznutzungsabrechnung": {
-      "einheit": "0101",
+      "einheit": "JAHR",
       "dauer": 5,
       "startdatum": "0001-01-01T00:00:00Z",
       "enddatum": "2025-10-31T23:00:00Z",
@@ -82,7 +82,7 @@
         "partneradresse": {
           "postleitzahl": "65189",
         "ort": "Wiesbaden",
-        "strasse": "Korallenweg",
+        "strasse": "Körallenweg",
         "hausnummer": "10",
         "postfach": null,
         "adresszusatz": null,
@@ -94,6 +94,6 @@
   "lokationsId": "50754496000",
   "lokationsTyp": "MALO"
 }
-]
+  ]
 }
 }
