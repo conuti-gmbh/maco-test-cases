@@ -8,8 +8,8 @@
         "marktlokationsTyp": [
           {
             "typ": "RUHENDE_MARKTLOKATION",
-            "gueltigAb": "2023-08-01T22:00:00Z",
-            "gueltigBis": "2023-08-01T22:00:00Z"
+            "gueltigAb": "2025-08-01T22:00:00Z",
+            "gueltigBis": "2026-08-01T22:00:00Z"
           }
         ],
         "zukuenftigerMeldepunkt": null,
