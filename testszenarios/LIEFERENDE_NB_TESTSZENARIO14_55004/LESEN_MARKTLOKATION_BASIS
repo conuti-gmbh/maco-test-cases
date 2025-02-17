@@ -4,7 +4,7 @@
       {
         "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
-        "marktlokationsId": "50754496099",
+        "marktlokationsId": "50754496000",
         "marktlokationsTyp": [
           {
             "typ": "STANDARD_MARKTLOKATION",
@@ -127,12 +127,12 @@
             "versionStruktur": "1",
             "gueltigkeitszeitraum": {
               "zeitraumId": 1,
-              "startdatum": "2022-12-31T23:00:00Z",
+              "startdatum": "2025-08-31T22:00:00Z",
               "enddatum": "2025-12-31T23:00:00Z"
             },
             "marktrolle": "LF",
             "gewerbekennzeichnung": true,
-            "rollencodenummer": "9979052000006",
+            "rollencodenummer": "9903323000007",
             "rollencodetyp": "BDEW"
           },
           {

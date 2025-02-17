@@ -4,12 +4,12 @@
       {
         "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
-        "marktlokationsId": "20072281677",
+        "marktlokationsId": "20072281644",
         "marktlokationsTyp": [
           {
             "typ": "RUHENDE_MARKTLOKATION",
-            "gueltigAb": "2023-08-01T22:00:00Z",
-            "gueltigBis": "2023-08-01T22:00:00Z"
+            "gueltigAb": "2025-08-01T22:00:00Z",
+            "gueltigBis": "2026-08-01T22:00:00Z"
           }
         ],
         "zukuenftigerMeldepunkt": null,
@@ -127,12 +127,12 @@
             "versionStruktur": "1",
             "gueltigkeitszeitraum": {
               "zeitraumId": 1,
-              "startdatum": "2022-12-31T23:00:00Z",
+              "startdatum": "2025-08-31T22:00:00Z",
               "enddatum": "2025-12-31T23:00:00Z"
             },
             "marktrolle": "LF",
             "gewerbekennzeichnung": true,
-            "rollencodenummer": "9979052000006",
+            "rollencodenummer": "9903323000007",
             "rollencodetyp": "BDEW"
           },
           {
