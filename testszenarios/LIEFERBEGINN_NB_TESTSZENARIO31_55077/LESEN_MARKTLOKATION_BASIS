@@ -4,7 +4,7 @@
 {
   "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
-  "marktlokationsId": "50754497984",
+  "marktlokationsId": "50754496011",
   "marktlokationsTyp": [
     {
       "typ": "STANDARD_MARKTLOKATION",
@@ -20,24 +20,24 @@
     "enddatum": null
   },
   "datenqualitaet": null,
-  "inbetriebnahmedatum": "2013-12-31T23:59:59Z",
-  "energierichtung": "EINSP",
-  "bilanzierungsmethode": "RLM",
+  "inbetriebnahmedatum": "2015-12-31T23:59:59Z",
+  "energierichtung": "AUSSP",
+  "bilanzierungsmethode": "SLP",
   "verbrauchsart": "KL",
   "unterbrechbar": false,
   "netzebene": "NSP",
   "umspannung": null,
-  "netzbetreiberCodeNr": "9900496000002",
+  "netzbetreiberCodeNr": "9900683000008",
   "gebietTyp": "VERSORGUNGSGEBIET",
   "netzgebietNr": "12345", 
-  "bilanzierungsgebiet": "11YR00063034025V",
+  "bilanzierungsgebiet": "11YR09606064065V",
   "grundversorgerCodeNr": "9900683000008",
   "endkunde": {
     "boTyp": "GESCHAEFTSPARTNER",
     "versionStruktur": "1",
     "anrede": "Herr",
     "name1": "Hai",
-    "name2": "Fösch",
+    "name2": "Fisch",
     "name3": null,
     "gewerbekennzeichnung": false,
     "hrnummer": null,
@@ -184,7 +184,7 @@
       "zaehlwerkId": "1", 
       "bezeichnung": "HT",
       "richtung": "AUSSP",
-      "obisKennzahl": "1-1:1.29.0",
+      "obisKennzahl": "1-1:1.9.0",
       "wandlerfaktor": 1,
       "einheit": "KWH",
       "schwachlastfaehig": "NICHT_SCHWACHLASTFAEHIG",
@@ -228,18 +228,18 @@
   ],
   "verbrauchsmenge": [
     {
-      "startdatum": "2024-09-14T07:52:00Z",
+      "startdatum": "2023-10-14T07:52:00Z",
       "enddatum": "2024-10-14T07:52:00Z",
-      "wertermittlungsverfahren": "MESSUNG",
-      "messwertstatus": "ABGELESEN",
+      "wertermittlungsverfahren": "PROGNOSE",
+      "messwertstatus": "PROGNOSEWERT",
       "statuszusatzinformationen": [ 
         {
           "art": "PLAUSIBILISIERUNGSHINWEIS",
-          "status": "PLAUSIBEL_WG_KONTROLLABLESUNG"
+          "status": "KUNDENSELBSTABLESUNG"
         }
       ],
-      "obiskennzahl": "1-1:1.29.0",
-      "wert": "25000",
+      "obiskennzahl": "1-1:1.9.0",
+      "wert": 2500,
       "einheit": "KWH"
     }
   ],
@@ -251,7 +251,7 @@
       "gueltigBis": "2025-10-14T07:52:00Z"
     }
   ],
-  "messtechnischeEinordnung": "IMS",
+  "messtechnischeEinordnung": "KME_MME",
   "netznutzungsabrechnungsdaten": [
     {
       "artikelId": "1",
@@ -293,8 +293,8 @@
   "referenzMarktlokationsId": "50754496000",
   "energieherkunft": [
     {
-      "erzeugungsart": "EEG_DV",
-      "anteilProzent": 90
+      "erzeugungsart": "SONSTIGE",
+      "anteilProzent": null
     }
   ],
   "versorgungsart": null,
