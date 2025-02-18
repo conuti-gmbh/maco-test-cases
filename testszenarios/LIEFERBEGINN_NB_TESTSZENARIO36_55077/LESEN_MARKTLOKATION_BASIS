@@ -271,7 +271,7 @@
   ],
   "zugehoerigeMesslokationen": [
     {
-      "messlokationsId": "DE0009697056900614312080040415111",
+      "messlokationsId": "DE0009697056900614412080040415111",
       "arithmetik": "ADDITION",
       "gueltigSeit": "2022-10-14T07:52:00Z",
       "gueltigBis": "2025-10-14T07:52:00Z"
