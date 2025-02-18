@@ -144,6 +144,32 @@
           "startdatum": "2022-12-31T23:00:00Z",
           "enddatum": "2025-12-31T23:00:00Z"
         },
+        "marktrolle": "LF",
+        "gewerbekennzeichnung": true,
+        "rollencodenummer": "9979052000009",
+        "rollencodetyp": "BDEW"
+      },
+      {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gueltigkeitszeitraum": {
+          "zeitraumId": 1,
+          "startdatum": "2022-12-31T23:00:00Z",
+          "enddatum": "2025-12-31T23:00:00Z"
+        },
+        "marktrolle": "LF",
+        "gewerbekennzeichnung": true,
+        "rollencodenummer": "9979052000010",
+        "rollencodetyp": "BDEW"
+      },
+      {
+        "boTyp": "MARKTTEILNEHMER",
+        "versionStruktur": "1",
+        "gueltigkeitszeitraum": {
+          "zeitraumId": 1,
+          "startdatum": "2022-12-31T23:00:00Z",
+          "enddatum": "2025-12-31T23:00:00Z"
+        },
         "marktrolle": "UENB",
         "gewerbekennzeichnung": true,
         "rollencodenummer": "4033872000058", 
