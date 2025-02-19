@@ -12,10 +12,10 @@
     },
     "datenqualitaet": null,
     "marktrolle": "LF",
-    "rollencodenummer": "9903526000002",
+    "rollencodenummer": "9979052000006",
     "rollencodetyp": "BDEW",
-    "makoadresse": "lieferant@datenpi.wvv.de",
-    "downloadlinkZertifikat": "XYZ",
+    "makoadresse": "erdgas.netz.eswe@xi.eswe.com",
+    "downloadlinkZertifikat": "https://www.eswe-versorgung.de/fileadmin/user_upload/dateien/impressum/ESWE-Versorgung-Zertifikate/strom.vertrieb.eswe%40xi.eswe.com.cer",
     "kommunikationsparameter": {
       "zieladresse": {
         "zieladresse1": null
@@ -30,10 +30,10 @@
     "bankverbindung": [
       {
         "verwendungszweck": "BV_ZAHLUNG_NNA",
-        "iban": "DE03790500000000043737",
-        "kontoinhaber": "Stadtwerke Würzburg AG>",
-        "bic": "BYLADEM1SWU",
-        "kreditinstitut": "Sparkasse Mainfranken Würzburg"
+        "iban": "DE80 5108 0060 0026 8902 00",
+        "kontoinhaber": "ESWE Versorgungs AG",
+        "bic": "DRESDEFF510",
+        "kreditinstitut": "Commerzbank"
       }
     ],
     "erreichbarkeit": [
@@ -42,22 +42,22 @@
         "zeit": "08:00-17:00"
       }
     ],
-    "anrede": "FIRMA",
-    "name1": null,
-    "name2": "Juristische Dienste",
+    "anrede": "Frau",
+    "name1": "Elke",
+    "name2": "Nielbock",
     "name3": null,
     "name4": null,
     "gewerbekennzeichnung": true,
-    "hrnummer": "HRB 162",
-    "amtsgericht": "Würzburg",
-    "umsatzsteuerId": "DE 811189340",
-    "website": "www.wvv.de",
-    "faxnummer": "<string>",
+    "hrnummer": "HRB 2105",
+    "amtsgericht": "Wiesbaden",
+    "umsatzsteuerId": "DE 113822541",
+    "website": "www.eswe-versorgung.de",
+    "faxnummer": "0611 780-2339",
     "partneradresse": {
-      "postleitzahl": "97070",
-      "ort": "Würzburg",
-      "strasse": "Haugerring",
-      "hausnummer": "5",
+      "postleitzahl": "65189",
+      "ort": "Wiesbaden",
+      "strasse": "Konradinerallee",
+      "hausnummer": "25",
       "postfach": null,
       "adresszusatz": null,
       "coErgaenzung": null,
