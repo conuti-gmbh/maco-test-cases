@@ -1,0 +1,120 @@
+{
+  "stammdaten":{
+  "TRANCHE": [
+        {
+          "boTyp": "TRANCHE",
+          "versionStruktur": "1",
+          "tranchenId": "50074561189",
+          "sparte": "STROM",
+          "marktrollen": [ 
+            {
+              "boTyp": "MARKTTEILNEHMER",
+              "versionStruktur": "1",
+              "gueltigkeitszeitraum": {
+                "zeitraumId": 1,
+                "startdatum": "2022-12-31T23:00:00Z",
+                "enddatum": "2025-12-31T23:00:00Z"
+              },
+              "marktrolle": "MSB",
+              "gewerbekennzeichnung": true,
+              "rollencodenummer": "9906464000001",
+              "rollencodetyp": "BDEW",
+              "weiterverpflichtet": false,
+              "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+            },
+            {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "gueltigkeitszeitraum": {
+                  "zeitraumId": 1,
+                  "startdatum": "2022-12-31T23:00:00Z",
+                  "enddatum": "2025-12-31T23:00:00Z"
+                },
+                "marktrolle": "NB",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "9900683000008",
+                "rollencodetyp": "BDEW"
+              },
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "gueltigkeitszeitraum": {
+                  "zeitraumId": 1,
+                  "startdatum": "2022-12-31T23:00:00Z",
+                  "enddatum": "2025-12-31T23:00:00Z"
+                },
+                "marktrolle": "LF",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "9979052000006",
+                "rollencodetyp": "BDEW"
+              },
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "gueltigkeitszeitraum": {
+                  "zeitraumId": 1,
+                  "startdatum": "2022-12-31T23:00:00Z",
+                  "enddatum": "2025-12-31T23:00:00Z"
+                },
+                "marktrolle": "LF",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "9979052000009",
+                "rollencodetyp": "BDEW"
+              },
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "gueltigkeitszeitraum": {
+                  "zeitraumId": 1,
+                  "startdatum": "2022-12-31T23:00:00Z",
+                  "enddatum": "2025-12-31T23:00:00Z"
+                },
+                "marktrolle": "LF",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "9979052000010",
+                "rollencodetyp": "BDEW"
+              },
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "gueltigkeitszeitraum": {
+                  "zeitraumId": 1,
+                  "startdatum": "2022-12-31T23:00:00Z",
+                  "enddatum": "2025-12-31T23:00:00Z"
+                },
+                "marktrolle": "UENB",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "4033872000058", 
+                "rollencodetyp": "BDEW"
+              },
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "gueltigkeitszeitraum": {
+                  "zeitraumId": 1,
+                  "startdatum": "2022-12-31T23:00:00Z",
+                  "enddatum": "2025-12-31T23:00:00Z"
+                },
+                "marktrolle": "BIKO",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "4033872000027",
+                "rollencodetyp": "BDEW"
+              },
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "gueltigkeitszeitraum": {
+                  "zeitraumId": 1,
+                  "startdatum": "2022-12-31T23:00:00Z",
+                  "enddatum": "2025-12-31T23:00:00Z"
+                },
+                "marktrolle": "BKV", 
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "4033872000034",
+                "rollencodetyp": "BDEW"
+              }
+          ]
+        }
+      ]
+}
+}
