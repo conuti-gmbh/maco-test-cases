@@ -319,7 +319,7 @@
   "referenzMarktlokationsId": "50754496000",
   "energieherkunft": [
     {
-      "erzeugungsart": "SONSTIGE",
+      "erzeugungsart": "EEG",
       "anteilProzent": null
     }
   ],
