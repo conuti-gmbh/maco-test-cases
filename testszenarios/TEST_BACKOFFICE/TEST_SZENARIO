@@ -1,0 +1,18 @@
+{
+  "stammdaten":{
+  "MARKTLOKATION":[
+{
+  "boTyp": "MARKTLOKATION",
+  "versionStruktur": "1",
+  "marktlokationsId": "50754497058",
+  "marktlokationsTyp": [
+    {
+      "typ": "STANDARD_MARKTLOKATION",
+      "gueltigAb": "2023-08-01T22:00:00Z",
+      "gueltigBis": "2023-08-01T22:00:00Z"
+    }
+  ]
+}
+  ]
+}
+}
