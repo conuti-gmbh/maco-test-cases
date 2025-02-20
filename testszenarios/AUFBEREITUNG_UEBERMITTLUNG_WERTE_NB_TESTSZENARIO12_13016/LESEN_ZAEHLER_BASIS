@@ -52,17 +52,12 @@
         "zaehlzeitDefinition": "<string>",
         "register": "<string>",
         "schwachlastfaehig": "ENUM_Schwachlastfaehig"
-        //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Schwachlastfaehig.cs
       },
       "konfiguration": "<string>",
       "wertegranularitaet": "ENUM_siehe.Liste.Kommentar",
-      //"JAEHRLICH", "HALBJAEHRLICH", "QUARTALSWEISE", "MONATLICH"
       "notwendigkeitZweiteMessung": "ENUM_siehe.Liste.Kommentar",
-      //"VORHANDEN", "NICHT_VORHANDEN"
       "werteuebermittlungVerwendungszweck": "ENUM_siehe.Liste.Kommentar",
-      //"VORHANDEN", "NICHT_VORHANDEN"
       "artEMobilitaet": "ENUM_siehe.Liste.Kommentar"
-      //"WB", "LS", "LP"
     }
   ],
   "zaehlerhersteller": {
@@ -78,9 +73,7 @@
     "amtsgericht": "<string>",
     "kontaktweg": [
       "ENUM_Kontaktart1",
-      "ENUM_Kontaktart2",
-      "..."
-      //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Kontaktart.cs
+      "ENUM_Kontaktart2"
     ],
     "umsatzsteuerId": "<string>",
     "glaeubigerId": "<string>",
@@ -88,9 +81,7 @@
     "website": "<string>",
     "geschaeftspartnerrolle": [
       "ENUM_Geschaeftspartnerrolle1",
-      "ENUM_Geschaeftspartnerrolle2",
-      "..."
-      //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Geschaeftspartnerrolle.cs
+      "ENUM_Geschaeftspartnerrolle2"
     ],
     "partneradresse": {
       "postleitzahl": "<string>",
@@ -101,21 +92,15 @@
       "adresszusatz": "<string>",
       "coErgaenzung": "<string>",
       "landescode": "ENUM_Landescode",
-      //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Landescode.cs
       "ortsteil": "<string>"
     }
   },
   "gateway": "<string>",
   "fernschaltung": "ENUM_Fernschaltung",
-  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Fernschaltung.cs
   "messwerterfassung": "ENUM_Messwerterfassung",
-  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Messwerterfassung.cs
   "zaehlertypspezifikation": "ENUM_Zaehlertypspezifikation",
-  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/ZaehlertypSpezifikation.cs
   "befestigungsart": "ENUM_Befestigungsart",
-  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Befestigungsart.cs
   "zaehlergroesse": "ENUM_Geraetemerkmal",
-  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Geraetemerkmal.cs
   "geraete": [
     {
       "geraetenummer": "<string>",
@@ -125,22 +110,16 @@
       ],
       "geraeteeigenschaften": {
         "geraetetyp": "ENUM_Geraetetyp",
-        //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Geraetetyp.cs
         "geraetemerkmal": "ENUM_Geraetemerkmal",
-        //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Geraetemerkmal.cs
         "faktor": 1,
         "volumenerfassung": "ENUM_Volumenerfassung.siehe.Liste.Kommentar"
-      //"HOCHFREQUENZSONDE", "KENNLINIENKORREKTUR", "SCHLEICHMENGENUNTERDRUECKUNG"
       }
     }
   ],
   "mengenumwertertyp": "ENUM_Mengenumwertertyp.siehe.Liste.Kommentar",
-  //"DICHTEMENGENUMWERTER", "TEMPERATURMENGENUMWERTER", "ZUSTANDSMENGENUMWERTER"
   "volumenerfassung": "ENUM_Volumenerfassung.siehe.Liste.Kommentar",
-  //"HOCHFREQUENZSONDE", "KENNLINIENKORREKTUR", "SCHLEICHMENGENUNTERDRUECKUNG"
   "serialnummer": "<string>",
   "geraetemerkmal": "ENUM_Geraetemerkmal",
-  //https://github.com/Hochfrequenz/BO4E-dotnet/blob/main/BO4E/ENUM/Geraetemerkmal.cs
   "herstellungsdatum": "2019-00-00T00:00:00Z",
   "baujahr": "<string>"
 }
