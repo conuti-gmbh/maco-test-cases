@@ -1,0 +1,22 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "54754496333",
+        "netzbetreiberCodeNr": "9900321000005",
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "LF",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9903323000007",
+            "rollencodetyp": "BDEW"
+          }
+        ]
+      }
+    ]
+  }
+}
