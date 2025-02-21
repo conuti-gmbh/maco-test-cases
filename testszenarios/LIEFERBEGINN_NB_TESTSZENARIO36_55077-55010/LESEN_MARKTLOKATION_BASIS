@@ -265,7 +265,7 @@
       "preisSingulaereBetriebsmittel": {
         "wert": 5.78,
         "einheit": "EUR",
-        "status": "XYZ"
+        "status": "VORLAEUFIG"
       },
       "abrechnungBlindarbeit": null,
       "zahlerBlindarbeit": null,
