@@ -52,7 +52,7 @@
       "ableseZeitraum": "<string>"
     },
     "netznutzungsabrechnung": {
-      "einheit": "0101",
+      "einheit": "JAHR",
       "dauer": 5,
       "startdatum": "0001-01-01T00:00:00Z",
       "enddatum": "2025-10-31T23:00:00Z",

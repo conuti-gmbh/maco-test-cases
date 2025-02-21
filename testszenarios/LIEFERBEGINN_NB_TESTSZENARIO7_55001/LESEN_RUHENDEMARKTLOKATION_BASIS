@@ -89,7 +89,7 @@
     "laengengrad": "1",
     "ostwert": "1",
     "nordwert": "1",
-    "zone": "1",
+    "zone": null,
     "hochwert": "1",
     "rechtswert": "1"
   },
@@ -222,9 +222,7 @@
       "artEMobilitaet": null
     }
   ],
-  "zaehlwerkeBeteiligteMarktrolle": [
-    null
-  ],
+"zaehlwerkeBeteiligteMarktrolle": [],
   "verbrauchsmenge": [
     {
       "startdatum": "2023-10-14T07:52:00Z",
@@ -503,7 +501,7 @@
     "laengengrad": "1",
     "ostwert": "1",
     "nordwert": "1",
-    "zone": "1",
+    "zone": null,
     "hochwert": "1",
     "rechtswert": "1"
   },
@@ -636,9 +634,7 @@
       "artEMobilitaet": null
     }
   ],
-  "zaehlwerkeBeteiligteMarktrolle": [
-    null
-  ],
+"zaehlwerkeBeteiligteMarktrolle": [],
   "verbrauchsmenge": [
     {
       "startdatum": "2023-10-14T07:52:00Z",
