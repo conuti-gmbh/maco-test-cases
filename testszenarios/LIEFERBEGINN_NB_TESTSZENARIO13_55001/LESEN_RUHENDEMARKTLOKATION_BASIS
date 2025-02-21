@@ -223,9 +223,7 @@
       "artEMobilitaet": null
     }
   ],
-  "zaehlwerkeBeteiligteMarktrolle": [
-    null
-  ],
+"zaehlwerkeBeteiligteMarktrolle": [],
   "verbrauchsmenge": [
     {
       "startdatum": "2023-10-14T07:52:00Z",
@@ -638,9 +636,7 @@
       "artEMobilitaet": null
     }
   ],
-  "zaehlwerkeBeteiligteMarktrolle": [
-    null
-  ],
+"zaehlwerkeBeteiligteMarktrolle": [],
   "verbrauchsmenge": [
     {
       "startdatum": "2023-10-14T07:52:00Z",
