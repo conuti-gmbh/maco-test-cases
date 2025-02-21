@@ -84,9 +84,7 @@
     "enFG": [
     {
       "grundlageVerringerungUmlagen": "KEINE_ANGABE",
-      "grund": [
-        null
-      ]
+"grund": null
   }
 ]
 }
