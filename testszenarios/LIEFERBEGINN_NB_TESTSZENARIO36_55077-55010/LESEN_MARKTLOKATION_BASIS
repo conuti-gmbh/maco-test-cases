@@ -223,9 +223,7 @@
       "artEMobilitaet": null
     }
   ],
-  "zaehlwerkeBeteiligteMarktrolle": [
-    null
-  ],
+  "zaehlwerkeBeteiligteMarktrolle": [],
   "verbrauchsmenge": [
     {
       "startdatum": "2023-10-14T07:52:00Z",
@@ -266,8 +264,7 @@
       },
       "preisSingulaereBetriebsmittel": {
         "wert": 5.78,
-        "einheit": "KWH",
-        "bezugswert": 5.78,
+        "einheit": "EUR",
         "status": "XYZ"
       },
       "abrechnungBlindarbeit": null,
