@@ -358,7 +358,7 @@
   "fernsteuerbarkeit": "TECHNISCH_NICHT_FERNSTEUERBAR",
   "foerderungsLand": null,
   "redispatch": false,
-  "lokationszuordnung": null,
+  "lokationszuordnung": "BEGINNT",
   "modulNetzentgelte": null,
   "produktdatenRelevanteRolle": "LF",
   "konfigurationsprodukt": null,
