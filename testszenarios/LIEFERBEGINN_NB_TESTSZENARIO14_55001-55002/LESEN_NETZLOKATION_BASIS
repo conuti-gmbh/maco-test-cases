@@ -4,7 +4,7 @@
 {
   "boTyp": "NETZLOKATION",
   "versionStruktur": "1",
-  "marktlokationsId": "50754496000",
+  "netzlokationsId": "50754496000",
   "zukuenftigerMeldepunkt": null,
   "sparte": "STROM",
   "gueltigkeitszeitraum": {

@@ -7,7 +7,7 @@
   "marktlokationsId": "50854496000",
   "marktlokationsTyp": [
     {
-      "typ": "KUNDENANLAGE",
+      "typ": "STANDARD_MARKTLOKATION",
       "gueltigAb": "2023-08-01T22:00:00Z",
       "gueltigBis": "2023-08-01T22:00:00Z"
     }

@@ -12,7 +12,7 @@
     "enddatum": null
   },
   "datenqualitaet": null,
-  "lokationszuordnung": "Z01",
+  "lokationszuordnung": "BEGINNT",
   "referenzMesslokation": null,
   "referenzMarktlokation": null,
   "referenzNetzlokation": null,
