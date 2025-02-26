@@ -87,7 +87,11 @@
                 "rollencodenummer": "4033872000034",
                 "rollencodetyp": "BDEW"
               }
-          ]
+          ],
+          "aufteilungsmenge": {
+            "wert": 30,
+            "einheit": "PROZENT"
+          }
         },
         {
           "boTyp": "TRANCHE",
@@ -175,7 +179,11 @@
                 "rollencodenummer": "4033872000034",
                 "rollencodetyp": "BDEW"
               }
-          ]
+          ],
+          "aufteilungsmenge": {
+            "wert": 30,
+            "einheit": "PROZENT"
+          }
         },
         {
           "boTyp": "TRANCHE",
@@ -263,7 +271,11 @@
                 "rollencodenummer": "4033872000034",
                 "rollencodetyp": "BDEW"
               }
-          ]
+          ],
+          "aufteilungsmenge": {
+            "wert": 40,
+            "einheit": "PROZENT"
+          }
         }
       ]
 }
