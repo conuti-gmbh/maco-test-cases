@@ -4,7 +4,18 @@
       {
         "boTyp": "TRANCHE",
         "versionStruktur": "1",
-        "tranchenId": "20072281444"
+        "tranchenId": "20072281444",
+        "statusErzeugendeMalo": "GEFOERDERTE_DIREKTVERMARKTUNG"
+      },
+      {
+        "boTyp": "TRANCHE",
+        "versionStruktur": "1",
+        "tranchenId": "20072281555"
+      },
+      {
+        "boTyp": "TRANCHE",
+        "versionStruktur": "1",
+        "tranchenId": "20072281555"
       }
     ]
   }
