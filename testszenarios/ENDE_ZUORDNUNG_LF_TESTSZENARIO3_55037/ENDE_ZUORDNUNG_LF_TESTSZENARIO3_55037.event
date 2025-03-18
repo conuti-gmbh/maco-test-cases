@@ -7,6 +7,14 @@
         "marktlokationsId": "10017211334",
         "sparte": "STROM"
       }
+    ],
+    "NETZNUTZUNGSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "NETZNUTZUNGSVERTRAG",
+        "vertragsende": "2025-04-30T22:00:00Z"
+      }
     ]
   },
   "transaktionsdaten": {
@@ -26,11 +34,10 @@
       "gewerbekennzeichnung": true,
       "rollencodenummer": "9900683000008",
       "rollencodetyp": "BDEW"
-    },
-    "vertragsende": "2025-04-30T22:00:00Z"
+    }
   },
   "zusatzdaten": {
     "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
-    "eventname": "START_BEENDIGUNG_DER_ZUORDNUNG_NB_AN_LF"
+    "eventname": "START_ENDE_ZUORDNUNG"
   }
 }
