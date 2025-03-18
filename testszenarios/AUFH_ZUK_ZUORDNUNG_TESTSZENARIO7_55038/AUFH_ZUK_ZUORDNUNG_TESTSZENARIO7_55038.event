@@ -1,10 +1,10 @@
 {
   "stammdaten": {
-    "TRANCHE": [
+    "MARKTLOKATION": [
       {
-        "boTyp": "TRANCHE",
+        "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
-        "tranchenId": "10017211334",
+        "marktlokationsId": "10017211334",
         "sparte": "STROM",
         "beteiligterMarktpartner": {
           "boTyp": "MARKTTEILNEHMER",
@@ -18,7 +18,7 @@
   },
   "transaktionsdaten": {
     "sparte": "STROM",
-    "transaktionsgrund": "ZG9",
+    "transaktionsgrund": "ZH0",
     "transaktionsgrundergaenzung": "ZW3",
     "absender": {
       "boTyp": "MARKTTEILNEHMER",
@@ -38,6 +38,6 @@
   },
   "zusatzdaten": {
     "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
-    "eventname": "START_AUFHEBUNG_ZUK_ZUORDNUNG_LF"
+    "eventname": "AUFH_ZUK_ZUORDNUNG"
   }
 }
