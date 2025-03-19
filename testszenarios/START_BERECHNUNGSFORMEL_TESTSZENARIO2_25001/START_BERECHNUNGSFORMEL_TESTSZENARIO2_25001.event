@@ -17,7 +17,7 @@
           "zeitraumId": 1,
           "startdatum": "2025-02-28T23:00:00Z"
         },
-        "notwendigkeit": "BERECHNUNGSFORMEL_TRIVIAL"
+        "notwendigkeit": "BERECHNUNGSFORMEL_NICHT_NOTWENDIG"
       }
     ]
   },
@@ -42,6 +42,6 @@
   },
   "zusatzdaten": {
     "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
-    "eventname": "START_UEBERMITTLUNG_BERECHNUNGSFORMEL"
+    "eventname": "START_BERECHNUNGSFORMEL"
   }
 }
