@@ -1,0 +1,77 @@
+{
+  "stammdaten": {
+    "MARKTTEILNEHMER": [
+      {
+        "marktteilnehmer": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "gueltigkeitszeitraum": {
+            "zeitraumId": null,
+            "startdatum": null,
+            "enddatum": null
+          },
+          "datenqualitaet": null,
+          "marktrolle": "LF",
+          "rollencodenummer": "9903526000002",
+          "rollencodetyp": "BDEW",
+          "makoadresse": "lieferant@datenpi.wvv.de",
+          "downloadlinkZertifikat": "XYZ",
+          "ansprechpartner": {
+            "boTyp": "ANSPRECHPARTNER",
+            "versionStruktur": "1",
+            "nachname": "Max Mustermannn",
+            "eMailAdresse": "m.mustermann@email.de"
+          },
+          "kommunikationsparameter": {
+            "zieladresse": {
+              "zieladresse1": null
+            },
+            "zertifikatsAussteller": {
+              "zertifikatsAussteller1": null
+            },
+            "zertifikatsNutzer": {
+              "zertifikatsNutzer1": null
+            }
+          },
+          "bankverbindung": [
+            {
+              "verwendungszweck": "BV_ZAHLUNG_NNA",
+              "iban": "DE03790500000000043737",
+              "kontoinhaber": "Stadtwerke Würzburg AG>",
+              "bic": "BYLADEM1SWU",
+              "kreditinstitut": "Sparkasse Mainfranken Würzburg"
+            }
+          ],
+          "erreichbarkeit": [
+            {
+              "verfuegbarkeit": "MONTAG",
+              "zeit": "08:00-17:00"
+            }
+          ],
+          "anrede": "FIRMA",
+          "name1": null,
+          "name2": "Juristische Dienste",
+          "name3": null,
+          "name4": null,
+          "gewerbekennzeichnung": true,
+          "hrnummer": "HRB 162",
+          "amtsgericht": "Würzburg",
+          "umsatzsteuerId": "DE 811189340",
+          "website": "www.wvv.de",
+          "faxnummer": "<string>",
+          "partneradresse": {
+            "postleitzahl": "97070",
+            "ort": "Würzburg",
+            "strasse": "Haugerring",
+            "hausnummer": "5",
+            "postfach": null,
+            "adresszusatz": null,
+            "coErgaenzung": null,
+            "landescode": "DE",
+            "ortsteil": null
+          }
+        }
+      }
+    ]
+  }
+}
