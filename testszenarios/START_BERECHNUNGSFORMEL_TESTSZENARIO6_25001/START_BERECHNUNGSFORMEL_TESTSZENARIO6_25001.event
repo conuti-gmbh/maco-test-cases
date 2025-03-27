@@ -28,7 +28,13 @@
       "versionStruktur": "1",
       "gewerbekennzeichnung": true,
       "rollencodenummer": "9903526000002",
-      "rollencodetyp": "BDEW"
+      "rollencodetyp": "BDEW",
+      "ansprechpartner": {
+        "boTyp": "ANSPRECHPARTNER",
+        "versionStruktur": "1",
+        "nachname": "Max Mustermannn",
+        "eMailAdresse": "m.mustermann@email.de"
+      }
     },
     "empfaenger": {
       "boTyp": "MARKTTEILNEHMER",

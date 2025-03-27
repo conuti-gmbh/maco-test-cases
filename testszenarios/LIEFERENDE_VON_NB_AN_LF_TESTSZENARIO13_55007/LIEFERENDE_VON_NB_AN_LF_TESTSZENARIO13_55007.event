@@ -1,10 +1,15 @@
 {
   "stammdaten": {
-    "RUHENDE_MARKTLOKATION": [
+    "MARKTLOKATION": [
       {
         "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
         "marktlokationsId": "50754496000",
+        "marktlokationsTyp": [
+          {
+            "typ": "RUHENDE_MARKTLOKATION"
+          }
+        ],
         "sparte": "STROM"
       }
     ],
@@ -26,6 +31,7 @@
     "absender": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
+      "marktrolle": "NB",
       "gewerbekennzeichnung": true,
       "rollencodenummer": "9900683000008",
       "rollencodetyp": "BDEW"
@@ -33,6 +39,7 @@
     "empfaenger": {
       "boTyp": "MARKTTEILNEHMER",
       "versionStruktur": "1",
+      "marktrolle": "LF",
       "gewerbekennzeichnung": true,
       "rollencodenummer": "9903526000002",
       "rollencodetyp": "BDEW"
