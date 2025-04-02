@@ -1,0 +1,15 @@
+{
+  "stammdaten": {
+    "NETZNUTZUNGSVERTRAG": [
+      {
+        "boTyp": "VERTRAG",
+        "versionStruktur": "1",
+        "vertragsart": "NETZNUTZUNGSVERTRAG",
+        "vertragsstatus": "ENUM_Vertragsstatus",
+        "sparte": "STROM",
+        "vertragsbeginn": "2022-12-31T23:00:00Z",
+        "vertragsende": "2025-04-27T22:00:00Z"
+      }
+    ]
+  }
+}
