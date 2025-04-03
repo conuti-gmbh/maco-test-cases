@@ -4,7 +4,7 @@
 {
   "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
-  "marktlokationsId": "50854497022",
+  "marktlokationsId": "50854497023",
   "marktlokationsTyp": [
     {
       "typ": "KUNDENANLAGE",
@@ -417,7 +417,7 @@
 {
   "boTyp": "MARKTLOKATION",
   "versionStruktur": "1",
-  "marktlokationsId": "50854496023",
+  "marktlokationsId": "50854496024",
   "marktlokationsTyp": [
     {
       "typ": "RUHENDE_MARKTLOKATION",
