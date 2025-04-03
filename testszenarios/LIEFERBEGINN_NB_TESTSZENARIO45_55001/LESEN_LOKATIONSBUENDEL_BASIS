@@ -47,7 +47,7 @@
   "zuordnungObjectcode": [
     {
         "referenzLokationsTyp": "MALO",
-        "referenzLokationsId": "50754496001",
+        "referenzLokationsId": "50854496023",
         "objectcode": [
           {
             "objectcode": "1463515",
@@ -55,7 +55,7 @@
           }
         ],
         "vorgelagerteLokationTyp": "NELO", 
-        "vorgelagerteLokationId": "11754496023",
+        "vorgelagerteLokationId": "11754496000",
         "referenzMarktlokationTechnischeRessource": [
           "Marktlokation1",
           "Marktlokation2"
