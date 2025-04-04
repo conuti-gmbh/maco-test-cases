@@ -10,7 +10,7 @@
         "vertragsbeginn": "2024-12-31T23:00:00Z",
         "vertragskonditionen": {
           "vertragslaufzeit": {
-            "dauer": 12,
+            "dauer": 1,
             "zeiteinheit": "MONAT"
           }
         }
