@@ -8,7 +8,12 @@
         "vertragsstatus": "ENUM_Vertragsstatus",
         "sparte": "STROM",
         "vertragsbeginn": "2024-12-31T23:00:00Z",
-        "vertragsende": "2025-04-30T22:00:00Z"
+        "vertragskonditionen": {
+          "vertragslaufzeit": {
+            "dauer": 12,
+            "zeiteinheit": "MONAT"
+          }
+        }
       }
     ]
   }
