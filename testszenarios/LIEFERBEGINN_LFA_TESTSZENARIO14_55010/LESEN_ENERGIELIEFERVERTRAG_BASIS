@@ -9,7 +9,12 @@
         "sparte": "STROM",
         "vertragsbeginn": "2024-12-31T23:00:00Z",
         "vertragsende": "2025-06-29T22:00:00Z",
-        "vertragslaufzeit": 1,
+        "vertragskonditionen": {
+          "vertragslaufzeit": {
+            "dauer": 1,
+            "zeiteinheit": "MONAT"
+          }
+        },
         "vertragspartner2": [
           {
             "boTyp": "GESCHAEFTSPARTNER",
