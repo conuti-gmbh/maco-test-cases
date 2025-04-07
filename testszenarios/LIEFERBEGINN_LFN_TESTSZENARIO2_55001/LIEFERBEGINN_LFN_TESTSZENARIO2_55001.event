@@ -31,6 +31,7 @@
         "vertragsart": "NETZNUTZUNGSVERTRAG",
         "sparte": "STROM",
         "vertragsbeginn": "2025-10-31T23:00:00Z",
+        "vertragsende": "2025-11-30T23:00:00Z",
         "vertragskonditionen": {
           "haushaltskunde": true
         },
@@ -85,6 +86,7 @@
     "sparte": "STROM",
     "transaktionsgrund": "E01",
     "transaktionsgrundergaenzung": "ZW4",
+    "transaktionsgrundergaenzungBefristeteAnmeldung": "E03",
     "pruefidentifikator": "55001",
     "absender": {
       "boTyp": "MARKTTEILNEHMER",

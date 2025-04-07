@@ -5,6 +5,12 @@
         "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
         "sparte": "STROM",
+        "marktlokationsId": "50754496000",
+        "marktlokationsTyp": [
+          {
+            "typ": "RUHENDE_MARKTLOKATION"
+          }
+        ],
         "erforderlichesProduktpaket": [
           {
             "produktpaketId": 1,
@@ -21,14 +27,6 @@
             "umsetzungsgradvorgabe": "ZUORDNUNG_AUCH_WENN_PRODUKTPAKET_NICHT_UMSETZBAR"
           }
         ]
-      }
-    ],
-    "RUHENDE_MARKTLOKATION": [
-      {
-        "boTyp": "MARKTLOKATION",
-        "versionStruktur": "1",
-        "marktlokationsId": "50754496000",
-        "sparte": "STROM"
       }
     ],
     "NETZNUTZUNGSVERTRAG": [
