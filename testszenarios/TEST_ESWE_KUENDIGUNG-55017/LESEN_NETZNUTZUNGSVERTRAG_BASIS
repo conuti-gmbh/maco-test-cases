@@ -1,0 +1,74 @@
+{
+  "stammdaten":{
+"NETZNUTZUNGSVERTRAG": [
+            {
+                "boTyp": "NETZNUTZUNGSVERTRAG",
+                "versionStruktur": "1",
+                "sparte": "STROM",
+                "vertragsart": "NETZNUTZUNGSVERTRAG",
+                "vertragsnummer": "3014375229",
+                "lokationsId": "50929224778",
+                "lokationsTyp": "MALO",
+                "vertragsstatus": "AKTIV",
+                "vertragsende": "9999-12-31T23:59:59Z",
+                "vertragsbeginn": "2015-02-12T23:00:00Z",
+                "vertragskonditionen": {
+                    "netznutzungszahler": "LIEFERANT",
+                    "NETZNUTZUNGSVERTRAG": "LIEFERANTEN_NB",
+                    "netznutzungsabrechnung": {
+                        "dauer": 365,
+                        "startdatum": "20241014",
+                        "enddatum": "20251014"
+                    },
+                    "beinhaltetSingulaerGenutzteBetriebsmittel": false,
+                    "haushaltskunde": true,
+                    "abrechnungUeberNna": true,
+                    "startAbrechnungsjahr": "20230915",
+                    "abrechnungsintervall": 12,
+                    "kuendigungsfrist": {
+                        "startdatum": "2015-02-12T23:00:00Z",
+                        "enddatum": "9999-12-31T23:59:59Z"
+                    },
+                    "vertragslaufzeit": {
+                        "startdatum": "2015-02-12T23:00:00Z",
+                        "enddatum": "9999-12-31T23:59:59Z"
+                    },
+                    "kuendigungstermin": "00000000",
+                    "abschlagszyklus": {
+                        "zeiteinheit": "MONAT",
+                        "dauer": 1
+                    },
+                    "anzahlAbschlaege": 12,
+                    "vertragsverlaengerung": {
+                        "startdatum": "2015-02-12T23:00:00Z",
+                        "enddatum": "9999-12-31T23:59:59Z"
+                    }
+                },
+                "abrechnungUeberNna": true,
+                "vertragspartner2": [
+                    {
+                        "boTyp": "GESCHAEFTSPARTNER",
+                        "versionStruktur": "1",
+                        "anrede": "Frau",
+                        "name1": "Janika",
+                        "name2": "Quint",
+                        "gewerbekennzeichnung": false,
+                        "partneradresse": {
+                            "postleitzahl": "65205",
+                            "ort": "Wiesbaden",
+                            "strasse": "Stolberger Straße",
+                            "hausnummer": "16",
+                            "adresszusatz": "a",
+                            "landescode": "DE"
+                        }
+                    }
+                ],
+                "enFG": [
+                    {
+                        "grundlageVerringerungUmlagen": "KEINE_ANGABE"
+                    }
+                ]
+            }
+        ]
+}
+}

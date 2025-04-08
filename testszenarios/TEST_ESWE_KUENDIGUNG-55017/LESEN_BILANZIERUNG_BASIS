@@ -1,0 +1,38 @@
+{
+  "stammdaten":{
+    "BILANZIERUNG": [
+            {
+                "boTyp": "BILANZIERUNG",
+                "versionStruktur": "1",
+                "aggregationsverantwortung": "VNB",
+                "zeitreihentyp": "SLS",
+                "prognosegrundlage": "PROFILE",
+                "bilanzierungsbeginn": "20150301",
+                "bilanzierungsende": "99991231",
+                "bilanzkreis": "11XESWEVERSORWIG",
+                "jahresverbrauchsprognose": {
+                    "wert": 1310,
+                    "einheit": "KWH"
+                },
+                "wahlrechtPrognosegrundlage": "DURCH_LF",
+                "grundWahlrechtPrognosegrundlage": "DURCH_LF",
+                "abwicklungsmodell": "MODELL_1_BILANZIERUNG_AN_MARKTLOKATION",
+                "vorjahresverbrauch": {
+                    "wert": 1310,
+                    "einheit": "KWH"
+                },
+                "lastprofile": [
+                    {
+                        "bezeichnung": "H0",
+                        "verfahren": "SYNTHETISCH",
+                        "profilart": "ART_STANDARDLASTPROFIL",
+                        "einspeisung": false
+                    }
+                ],
+                "detailsPrognosegrundlage": [
+                    "SLP_SEP"
+                ]
+            }
+        ]
+}
+}
