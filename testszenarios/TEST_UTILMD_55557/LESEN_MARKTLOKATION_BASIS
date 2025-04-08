@@ -5,7 +5,8 @@
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
           "marktlokationsId": "50928462204",
-          "sparte": "STROM"
+          "sparte": "STROM",
+          "netzbetreiberCodeNr": "9900683000008"
         }
       ]
 }
