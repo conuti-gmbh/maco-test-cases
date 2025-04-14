@@ -1,13 +1,13 @@
 {
-  "stammdaten":{
-"MARKTLOKATION": [
-        {
-          "boTyp": "MARKTLOKATION",
-          "versionStruktur": "1",
-          "marktlokationsId": "50928462204",
-          "sparte": "STROM",
-          "netzbetreiberCodeNr": "9900683000008"
-        }
-      ]
-}
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "50928462204",
+        "sparte": "STROM",
+        "netzbetreiberCodeNr": "9900683000008"
+      }
+    ]
+  }
 }
