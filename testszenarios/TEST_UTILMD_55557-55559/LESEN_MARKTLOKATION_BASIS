@@ -1,12 +1,12 @@
 {
-  "stammdaten":{
-"MARKTLOKATION": [
-        {
-          "boTyp": "MARKTLOKATION",
-          "versionStruktur": "1",
-          "marktlokationsId": "50928462204",
-          "sparte": "STROM"
-        }
-      ]
-}
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "50928462204",
+        "sparte": "STROM"
+      }
+    ]
+  }
 }
