@@ -1,0 +1,153 @@
+{
+  "stammdaten":{
+    "MARKTLOKATION": [
+                    {
+                        "boTyp": "MARKTLOKATION",
+                        "versionStruktur": "1",
+                        "marktlokationsId": "51175856331",
+                        "sparte": "STROM",
+                        "energierichtung": "AUSSP",
+                        "unterbrechbar": false,
+                        "netzebene": "ND",
+                        "lokationsadresse": {
+                            "postleitzahl": "65197",
+                            "ort": "Wiesbaden",
+                            "strasse": "Winkeler Straße",
+                            "hausnummer": "9",
+                            "landescode": "DE",
+                            "ortsteil": "Rheingauviertel, Hollerborn",
+                            "zusatzinformation": {
+                                "zusatz1": "I. L."
+                            }
+                        },
+                        "sperrstatus": "ENTSPERRT",
+                        "redispatch": false,
+                        "zukuenftigerMeldepunkt": false,
+                        "marktrollen": [
+                            {
+                                "boTyp": "MARKTTEILNEHMER",
+                                "versionStruktur": "1",
+                                "geschaeftspartnerrolle": "MARKTPARTNER",
+                                "anrede": "Ohne Anrede",
+                                "name1": "Stadtwerke Wiesbaden Netz GmbH",
+                                "partneradresse": {
+                                    "postleitzahl": "65189",
+                                    "ort": "Wiesbaden",
+                                    "strasse": "Konradinerallee",
+                                    "hausnummer": "25",
+                                    "landescode": "DE"
+                                },
+                                "gewerbekennzeichnung": true,
+                                "marktrolle": "NB",
+                                "rollencodenummer": "9900683000008",
+                                "rollencodetyp": "BDEW",
+                                "weiterverpflichtet": false,
+                                "bankverbindung": [
+                                    {
+                                        "iban": "DE84510500150103051363",
+                                        "bic": "NASSDE55XXX",
+                                        "kreditinstitut": "Nassauische Sparkasse"
+                                    }
+                                ]
+                            },
+                            {
+                                "boTyp": "MARKTTEILNEHMER",
+                                "versionStruktur": "1",
+                                "geschaeftspartnerrolle": "MARKTPARTNER",
+                                "anrede": "Firma",
+                                "name1": "RWE Energy AG",
+                                "partneradresse": {
+                                    "postleitzahl": "44139",
+                                    "ort": "Dortmund",
+                                    "strasse": "Rheinlanddamm",
+                                    "hausnummer": "24",
+                                    "landescode": "DE"
+                                },
+                                "gewerbekennzeichnung": true,
+                                "marktrolle": "UENB",
+                                "rollencodenummer": "4045399000077",
+                                "rollencodetyp": "GLN",
+                                "weiterverpflichtet": false
+                            },
+                            {
+                                "boTyp": "MARKTTEILNEHMER",
+                                "versionStruktur": "1",
+                                "geschaeftspartnerrolle": "MARKTPARTNER",
+                                "anrede": "Ohne Anrede",
+                                "name1": "ESWE Versorgungs AG",
+                                "partneradresse": {
+                                    "postleitzahl": "65189",
+                                    "ort": "Wiesbaden",
+                                    "strasse": "Konradinerallee",
+                                    "hausnummer": "25",
+                                    "landescode": "DE"
+                                },
+                                "gewerbekennzeichnung": true,
+                                "marktrolle": "LF",
+                                "rollencodenummer": "9903854000005",
+                                "rollencodetyp": "BDEW",
+                                "umsatzsteuerId": "DE113822541",
+                                "weiterverpflichtet": false,
+                                "bankverbindung": [
+                                    {
+                                        "iban": "DE49510900000030121805",
+                                        "bic": "WIBADE5WXXX",
+                                        "kreditinstitut": "Wiesbadener Volksbank"
+                                    },
+                                    {
+                                        "iban": "DE34510500150100041189",
+                                        "bic": "NASSDE55XXX",
+                                        "kreditinstitut": "Nassauische Sparkasse"
+                                    }
+                                ]
+                            },
+                            {
+                                "boTyp": "MARKTTEILNEHMER",
+                                "versionStruktur": "1",
+                                "geschaeftspartnerrolle": "MARKTPARTNER",
+                                "anrede": "Ohne Anrede",
+                                "name1": "Stadtwerke Wiesbaden Netz GmbH",
+                                "partneradresse": {
+                                    "postleitzahl": "65189",
+                                    "ort": "Wiesbaden",
+                                    "strasse": "Konradinerallee",
+                                    "hausnummer": "25",
+                                    "landescode": "DE"
+                                },
+                                "gewerbekennzeichnung": true,
+                                "marktrolle": "MSB",
+                                "rollencodenummer": "9906464000001",
+                                "rollencodetyp": "BDEW",
+                                "weiterverpflichtet": false,
+                                "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER",
+                                "bankverbindung": [
+                                    {
+                                        "iban": "DE84510500150103051363",
+                                        "bic": "NASSDE55XXX",
+                                        "kreditinstitut": "Nassauische Sparkasse"
+                                    }
+                                ]
+                            }
+                        ],
+                        "erforderlichesProduktpaket": [
+                            {
+                                "produktpaketId": 1,
+                                "produkt": [
+                                    {
+                                        "produktCode": "9991000002082",
+                                        "wertedetails": "11XESWEVERSORWIG"
+                                    }
+                                ],
+                                "umsetzungsgradvorgabe": "ZUORDNUNG_AUCH_WENN_PRODUKTPAKET_NICHT_UMSETZBAR",
+                                "priorisierung": "PRIORITAET1"
+                            }
+                        ],
+                        "marktlokationsTyp": [
+                            {
+                                "typ": "STANDARD_MARKTLOKATION"
+                            }
+                        ]
+                    }
+                ]
+  }
+}
