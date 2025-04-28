@@ -53,12 +53,38 @@
       }
     ],
     "vertragskonditionen": {
-      "kuendigungsfrist": {
-        "zeitraumText": null
-      },
-      "kuendigungstermin": null,
-      "abrechnungsintervall": null
-    },
+                    "netznutzungszahler": "LIEFERANT",
+                    "NETZNUTZUNGSVERTRAG": "LIEFERANTEN_NB",
+                    "netznutzungsabrechnung": {
+                        "dauer": 365,
+                        "startdatum": "20240728",
+                        "enddatum": "20250728"
+                    },
+                    "beinhaltetSingulaerGenutzteBetriebsmittel": false,
+                    "haushaltskunde": true,
+                    "abrechnungUeberNna": true,
+                    "startAbrechnungsjahr": "20230705",
+                    "abrechnungsintervall": 12,
+                    "kuendigungsfrist": {
+                        "startdatum": "2016-07-31T22:00:00Z",
+                        "enddatum": "9999-12-31T23:59:59Z",
+                        "zeitraumText": "02WM"
+                    },
+                    "vertragslaufzeit": {
+                        "startdatum": "2016-07-31T22:00:00Z",
+                        "enddatum": "2025-05-31T22:00:00Z"
+                    },
+                    "kuendigungstermin": "2025-05-17T22:00:00Z",
+                    "abschlagszyklus": {
+                        "zeiteinheit": "MONAT",
+                        "dauer": 1
+                    },
+                    "anzahlAbschlaege": 12,
+                    "vertragsverlaengerung": {
+                        "startdatum": "2016-07-31T22:00:00Z",
+                        "enddatum": "9999-12-31T23:59:59Z"
+                    }
+                },
     "korrespondenzpartner": {
       "boTyp": "GESCHAEFTSPARTNER",
       "versionStruktur": "1",
