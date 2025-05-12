@@ -56,6 +56,10 @@
     "kuendigungsfrist": {
       "zeitraumText": null
     },
+    "vertragslaufzeit": {
+                        "startdatum": "2002-07-09T22:00:00Z",
+                        "enddatum": "9999-12-31T23:59:59Z"
+    },
     "kuendigungstermin": "2025-07-31T23:00:00Z",
     "abrechnungsintervall": null
   },
