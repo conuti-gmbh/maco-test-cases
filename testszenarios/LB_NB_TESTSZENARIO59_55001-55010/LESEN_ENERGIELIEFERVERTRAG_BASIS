@@ -58,7 +58,7 @@
     },
     "vertragslaufzeit": {
                         "startdatum": "2002-07-09T22:00:00Z",
-                        "enddatum": "2010-12-31T23:59:59Z"
+                        "enddatum": "2011-12-31T23:59:59Z"
     },
     "kuendigungstermin": "2025-07-31T23:00:00Z",
     "abrechnungsintervall": null
