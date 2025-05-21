@@ -1,0 +1,46 @@
+{
+  "stammdaten":{
+  "ENERGIELIEFERVERTRAG":[
+    {
+      "boTyp": "VERTRAG",
+      "versionStruktur": "1",
+      "vertragsart": "ENERGIELIEFERVERTRAG",
+      "sparte": "STROM",
+      "vertragspartner2": [
+        {
+          "boTyp": "GESCHAEFTSPARTNER",
+          "versionStruktur": "1",
+          "name1": "Musterman",
+          "name2": "Müller",
+          "gewerbekennzeichnung": false,
+          "geschaeftspartnerrolle": [
+            "KUNDE"
+          ]
+        }
+      ],
+      "korrespondenzpartner": {
+        "boTyp": "GESCHAEFTSPARTNER",
+        "versionStruktur": "1",
+        "name1": "Musterman",
+        "name2": "Musterman",
+        "gewerbekennzeichnung": false,
+        "partneradresse": {
+          "postleitzahl": "99423",
+          "ort": "Weimar",
+          "strasse": "Steubenstrasse",
+          "postfach": "3",
+          "landescode": "DE"
+        }
+      },
+      "enFG": [
+        {
+          "grundlageVerringerungUmlagen": "ERFUELLT_VORAUSSETZUNG_NACH_ENFG",
+          "grund": [
+            "ENFG_STROMSPEICHER_UND_VERLUSTENERGIE"
+          ]
+        }
+      ]
+    }
+  ]
+}
+}
