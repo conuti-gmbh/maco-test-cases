@@ -1,0 +1,323 @@
+[
+  {
+    "businessKey": "<businessKey>",
+    "processDate": null,
+    "dataSource": "OUTBOUND",
+    "version": 1,
+    "edifactVersion": 202504,
+    "data": {
+      "stammdaten": {
+        "MARKTLOKATION": [
+          {
+            "boTyp": "MARKTLOKATION",
+            "versionStruktur": "1",
+            "marktlokationsId": "50363198116",
+            "marktlokationsTyp": [
+              {
+                "typ": "STANDARD_MARKTLOKATION"
+              }
+            ],
+            "sparte": "STROM",
+            "datenqualitaet": "INFORMATIVE_DATEN",
+            "netzebene": "NSP",
+            "marktrollen": [
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "marktrolle": "LF",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "9900496000004",
+                "rollencodetyp": "BDEW"
+              },
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "marktrolle": "UENB",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "9900496000005",
+                "rollencodetyp": "BDEW"
+              },
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "marktrolle": "MSB",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "9900496000003",
+                "rollencodetyp": "BDEW",
+                "weiterverpflichtet": false,
+                "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+              }
+            ],
+            "zaehlwerke": [
+              {
+                "obisKennzahl": "1-0:1.9.0",
+                "messprodukt": "9991000000044",
+                "wertegranularitaet": "JAEHRLICH",
+                "zaehlzeiten": {
+                  "zaehlzeitDefinition": "ABC"
+                }
+              }
+            ],
+            "messtechnischeEinordnung": "IMS",
+            "konfigurationsprodukt": "9991000000721",
+            "leistungskurvendefinition": "ABC"
+          }
+        ],
+        "NETZLOKATION": [
+          {
+            "boTyp": "NETZLOKATION",
+            "versionStruktur": "1",
+            "netzlokationsId": "E1688110018",
+            "sparte": "STROM",
+            "datenqualitaet": "INFORMATIVE_DATEN",
+            "steuerkanal": true,
+            "konfigurationsprodukt": "9991000000721",
+            "leistungskurvendefinition": "XZY",
+            "marktrollen": [
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "marktrolle": "MSB",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "9900496000003",
+                "rollencodetyp": "BDEW",
+                "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+              }
+            ],
+            "zaehlwerke": [
+              {
+                "obisKennzahl": "1-0:5.29.0"
+              }
+            ]
+          }
+        ],
+        "MESSLOKATION": [
+          {
+            "boTyp": "MESSLOKATION",
+            "versionStruktur": "1",
+            "messlokationsId": "DE0032106765712000000000000001217",
+            "sparte": "STROM",
+            "datenqualitaet": "INFORMATIVE_DATEN",
+            "netzebenemessung": "NSP",
+            "messadresse": {
+              "postleitzahl": "99423",
+              "ort": "Weimar",
+              "strasse": "Steubenstrasse",
+              "hausnummer": "a",
+              "postfach": "6",
+              "landescode": "DE",
+              "zusatzInformation": {
+                "zusatz1": "Max",
+                "zusatz2": "Mustermann"
+              }
+            },
+            "zaehlwerke": [
+              {
+                "zaehlzeiten": {
+                  "zaehlzeitDefinition": "XZC"
+                },
+                "messprodukt": "9991000000151",
+                "notwendigkeitZweiteMessung": "NICHT_VORHANDEN",
+                "werteuebermittlungVerwendungszweck": "NICHT_VORHANDEN"
+              }
+            ],
+            "marktrollen": [
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "marktrolle": "MSB",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "9900496000003",
+                "rollencodetyp": "BDEW",
+                "weiterverpflichtet": false,
+                "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+              },
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "marktrolle": "GMSB",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "9900496000000",
+                "rollencodetyp": "BDEW"
+              }
+            ]
+          }
+        ],
+        "TECHNISCHE_RESSOURCE": [
+          {
+            "boTyp": "TECHNISCHE_RESSOURCE",
+            "versionStruktur": "1",
+            "ressourcenId": "D417MLM8120",
+            "sparte": "STROM",
+            "datenqualitaet": "INFORMATIVE_DATEN",
+            "referenzNetzlokation": "E1688110018",
+            "referenzSteuerbareRessource": "C816417ST19",
+            "nennleistung": {
+              "aufnahme": 100
+            },
+            "verbrauchsart": "KL",
+            "enwg": false,
+            "art": "STROMVERBRAUCH"
+          }
+        ],
+        "STEUERBARE_RESSOURCE": [
+          {
+            "boTyp": "STEUERBARE_RESSOURCE",
+            "versionStruktur": "1",
+            "ressourcenId": "C816417ST19",
+            "sparte": "STROM",
+            "datenqualitaet": "INFORMATIVE_DATEN",
+            "steuerkanal": "AN_AUS",
+            "konfigurationsprodukt": "9991000000721",
+            "marktrollen": [
+              {
+                "boTyp": "MARKTTEILNEHMER",
+                "versionStruktur": "1",
+                "marktrolle": "MSB",
+                "gewerbekennzeichnung": true,
+                "rollencodenummer": "9900496000003",
+                "rollencodetyp": "BDEW",
+                "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+              }
+            ],
+            "zugeordneteDefinition": {
+              "leistungskurvendefinition": "XZC"
+            }
+          }
+        ],
+        "LOKATIONSBUENDEL": [
+          {
+            "boTyp": "LOKATIONSBUENDEL",
+            "versionStruktur": "1",
+            "lokationsbuendelstrukturId": "9992000000026",
+            "datenqualitaet": "INFORMATIVE_DATEN",
+            "standardisierteLokationsbuendelstruktur": true,
+            "zuordnungObjectcode": [
+              {
+                "referenzLokationsTyp": "NELO",
+                "referenzLokationsId": "E1688110018",
+                "objectcode": [
+                  {
+                    "objectcode": "9992000001256"
+                  }
+                ]
+              },
+              {
+                "referenzLokationsTyp": "MALO",
+                "referenzLokationsId": "50363198116",
+                "objectcode": [
+                  {
+                    "objectcode": "9992000001016"
+                  }
+                ]
+              },
+              {
+                "referenzLokationsTyp": "MELO",
+                "referenzLokationsId": "DE0032106765712000000000000001217",
+                "objectcode": [
+                  {
+                    "objectcode": "9992000001032"
+                  }
+                ]
+              },
+              {
+                "referenzLokationsTyp": "TECHNISCHE_RESSOURCE",
+                "referenzLokationsId": "D417MLM8120",
+                "objectcode": [
+                  {
+                    "objectcode": "9992000001024"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ZAEHLER": [
+          {
+            "boTyp": "ZAEHLER",
+            "versionStruktur": "1",
+            "zaehlernummer": "1LGZ0061578888",
+            "messlokationsId": "DE0032106765712000000000000001217",
+            "sparte": "STROM",
+            "datenqualitaet": "INFORMATIVE_DATEN",
+            "zaehlertyp": "MODERNEMESSEINRICHTUNG",
+            "zaehlwerke": [
+              {
+                "obisKennzahl": "1-0:1.8.0",
+                "konfiguration": "34590456ujdfsdghdlktztbbb",
+                "wertegranularitaet": "JAEHRLICH"
+              }
+            ],
+            "gateway": "1ESY0012345678",
+            "zaehlertypspezifikation": "MME_STANDARD",
+            "geraete": [
+              {
+                "geraetenummer": "1LGZ0061578301",
+                "geraeteeigenschaften": {
+                  "geraetetyp": "KOMMUNIKATIONSEINRICHTUNG",
+                  "geraetemerkmal": "ETHERNET_KOM"
+                }
+              },
+              {
+                "geraetenummer": "1LGZ0061578302",
+                "geraeteeigenschaften": {
+                  "geraetetyp": "STEUEREINRICHTUNG",
+                  "geraetemerkmal": "RUNDSTEUEREMPFAENGER"
+                }
+              },
+              {
+                "geraetenummer": "1ESY0012345678",
+                "geraeteeigenschaften": {
+                  "geraetetyp": "SMARTMETERGATEWAY"
+                }
+              }
+            ]
+          }
+        ],
+        "BILANZIERUNG": [
+          {
+            "boTyp": "BILANZIERUNG",
+            "versionStruktur": "1",
+            "datenqualitaet": "INFORMATIVE_DATEN",
+            "marktlokationsId": "50363198116",
+            "jahresverbrauchsprognose": {
+              "wert": 1000,
+              "einheit": "KWH"
+            },
+            "prognosegrundlage": "PROFILE",
+            "detailsPrognosegrundlage": [
+              "SLP_SEP"
+            ]
+          }
+        ]
+      },
+      "transaktionsdaten": {
+        "datenaustauschreferenz": "M3SPY15L",
+        "sparte": "STROM",
+        "transaktionsgrund": "ZY4",
+        "vorgangsnummer": "KBG27094210000000000929931413171000",
+        "pruefidentifikator": "55060",
+        "absender": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "gewerbekennzeichnung": true,
+          "rollencodenummer": "9900496000001",
+          "rollencodetyp": "BDEW"
+        },
+        "empfaenger": {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "gewerbekennzeichnung": true,
+          "rollencodenummer": "9900496000002",
+          "rollencodetyp": "BDEW"
+        },
+        "dokumentennummer": "BGMM3PDHVFE",
+        "kategorie": "E44",
+        "nachrichtendatum": "2025-06-05T09:45:00Z",
+        "nachrichtenreferenznummer": "UNHM35EC46C",
+        "anfragereferenznummer": "1234567890"
+      },
+      "zusatzdaten": {}
+    }
+  }
+]
