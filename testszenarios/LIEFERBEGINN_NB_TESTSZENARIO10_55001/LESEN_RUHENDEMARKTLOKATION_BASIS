@@ -231,7 +231,7 @@
           "startdatum": "2023-10-14T07:52:00Z",
           "enddatum": "2024-10-14T07:52:00Z",
           "wertermittlungsverfahren": "PROGNOSE",
-          "messwertstatus": "PROGNOSEWERT",
+          "messwertstatus": "ENERGIEMENGESUMMIERT",
           "statuszusatzinformationen": [ 
             {
               "art": "PLAUSIBILISIERUNGSHINWEIS",
