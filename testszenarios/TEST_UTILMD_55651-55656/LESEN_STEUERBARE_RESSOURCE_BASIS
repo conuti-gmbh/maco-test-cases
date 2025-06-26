@@ -1,8 +1,8 @@
 {
   "stammdaten": {
-    "NETZLOKATION": [
+    "STEUERBARE_RESSOURCE": [
       {
-        "boTyp": "NETZLOKATION",
+        "boTyp": "STEUERBARE_RESSOURCE",
         "versionStruktur": "1",
         "ressourcenId": "C816417ST77",
         "sparte": "STROM",
