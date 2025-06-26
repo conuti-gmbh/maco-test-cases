@@ -1,0 +1,13 @@
+{
+  "stammdaten": {
+    "TRANCHE": [
+      {
+        "boTyp": "TRANCHE",
+        "versionStruktur": "1",
+        "tranchenId": "50074561189",
+        "sparte": "STROM",
+        "datenqualitaet": "GUELTIGE_DATEN"
+      }
+    ]
+  }
+}

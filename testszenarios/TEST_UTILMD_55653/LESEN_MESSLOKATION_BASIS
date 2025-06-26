@@ -1,0 +1,13 @@
+{
+  "stammdaten": {
+    "MESSLOKATION": [
+      {
+        "boTyp": "MESSLOKATION",
+        "versionStruktur": "1",
+        "messlokationsId": "DE0032106765712000000000000001217",
+        "sparte": "STROM",
+        "datenqualitaet": "GUELTIGE_DATEN"
+      }
+    ]
+  }
+}

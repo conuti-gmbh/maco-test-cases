@@ -1,0 +1,13 @@
+{
+  "stammdaten": {
+    "NETZLOKATION": [
+      {
+        "boTyp": "NETZLOKATION",
+        "versionStruktur": "1",
+        "ressourcenId": "C816417ST77",
+        "sparte": "STROM",
+        "datenqualitaet": "GUELTIGE_DATEN"
+      }
+    ]
+  }
+}
