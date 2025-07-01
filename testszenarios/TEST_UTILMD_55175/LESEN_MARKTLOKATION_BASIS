@@ -7,7 +7,7 @@
           "marktlokationsId": "50361128000",
           "marktlokationsTyp": [
             {
-              "typ": "RUHENDE_MARKTLOKATION"
+              "typ": "STANDARD_MARKTLOKATION"
             }
           ],
           "sparte": "STROM"
@@ -15,14 +15,15 @@
         {
           "boTyp": "MARKTLOKATION",
           "versionStruktur": "1",
-          "marktlokationsId": "50361128000",
+          "marktlokationsId": "50363198102",
           "marktlokationsTyp": [
             {
-              "typ": "STANDARD_MARKTLOKATION"
+              "typ": "RUHENDE_MARKTLOKATION"
             }
           ],
           "sparte": "STROM"
-        }
+        },
+
       ]
 }
 }
