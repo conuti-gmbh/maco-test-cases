@@ -8,15 +8,15 @@
         "vertragsstatus": "ENUM_Vertragsstatus",
         "sparte": "STROM",
         "vertragsbeginn": "2024-12-31T23:00:00Z",
-        "vertragsende": "2025-12-31T23:00:00Z",
+        "vertragsende": "2026-12-31T23:00:00Z",
         "vertragslaufzeit": 1,
         "vertragspartner2": [
           {
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
             "gewerbekennzeichnung": false,
-            "name1": "Mustermann",
-            "name2": "Max",
+            "name1": "Max Mustermann",
+            "name2": null,
             "geschaeftspartnerrolle": [
               "KUNDE"
             ]
