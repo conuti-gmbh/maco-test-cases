@@ -1,29 +1,12 @@
 {
-  "stammdaten":{
-"TECHNISCHE_RESSOURCE": [
-        {
-          "boTyp": "TECHNISCHE_RESSOURCE",
-          "versionStruktur": "1",
-          "ressourcenId": "D417MLM8120",
-          "sparte": "STROM",
-          "gueltigkeitszeitraum": {
-            "zeitraumId": 1,
-            "startdatum": "2024-10-20T22:00:00Z",
-            "enddatum": "2024-12-24T23:00:00Z"
-          },
-          "datenqualitaet": "GUELTIGE_DATEN",
-          "referenzNetzlokation": "E1688117482",
-          "referenzSteuerbareRessource": "C816417ST19",
-          "nennleistung": {
-            "aufnahme": 95,
-            "abgabe": 130
-          },
-          "speicherkapazitaet": 265,
-          "speicherart": "PUMPSPEICHER",
-          "enwg": true,
-          "weitereEinrichtung": false,
-          "art": "SPEICHER"
-        }
-      ]
-}
+  "stammdaten": {
+    "TECHNISCHE_RESSOURCE": [
+      {
+        "boTyp": "TECHNISCHE_RESSOURCE",
+        "versionStruktur": "1",
+        "ressourcenId": "D417MLM8120",
+        "sparte": "STROM"
+      }
+    ]
+  }
 }

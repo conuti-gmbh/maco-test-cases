@@ -1,29 +1,12 @@
 {
-  "stammdaten":{
-"STEUERBARE_RESSOURCE": [
-        {
-          "boTyp": "STEUERBARE_RESSOURCE",
-          "versionStruktur": "1",
-          "ressourcenId": "C816417ST19",
-          "sparte": "STROM",
-          "gueltigkeitszeitraum": {
-            "zeitraumId": 1,
-            "startdatum": "2024-10-20T22:00:00Z",
-            "enddatum": "2024-12-24T23:00:00Z"
-          },
-          "datenqualitaet": "GUELTIGE_DATEN",
-          "marktrollen": [
-            {
-              "boTyp": "MARKTTEILNEHMER",
-              "versionStruktur": "1",
-              "marktrolle": "MSB",
-              "gewerbekennzeichnung": true,
-              "rollencodenummer": "9900496000555",
-              "rollencodetyp": "BDEW",
-              "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
-            }
-          ]
-        }
-      ]
-}
+  "stammdaten": {
+    "STEUERBARE_RESSOURCE": [
+      {
+        "boTyp": "STEUERBARE_RESSOURCE",
+        "versionStruktur": "1",
+        "ressourcenId": "C816417ST19",
+        "sparte": "STROM"
+      }
+    ]
+  }
 }
