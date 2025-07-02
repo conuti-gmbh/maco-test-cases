@@ -15,8 +15,8 @@
             "boTyp": "GESCHAEFTSPARTNER",
             "versionStruktur": "1",
             "gewerbekennzeichnung": false,
-            "name1": "Mustermann",
-            "name2": "Max",
+            "name1": "Max",
+            "name2": "Mustermann",
             "geschaeftspartnerrolle": [
               "KUNDE"
             ]
