@@ -1,15 +1,5 @@
 {
   "stammdaten": {
-    "VERWENDUNGSZEITRAUM": [
-      {
-        "boTyp": "VERWENDUNGSZEITRAUM",
-        "versionStruktur": "1",
-        "zeitraumId": 1,
-        "datenqualitaet": "IM_SYSTEM_VORHANDENE_DATEN",
-        "verwendungAb": "2024-10-20T22:00:00Z",
-        "verwendungBis": "2024-12-24T23:00:00Z"
-      }
-    ],
     "NETZLOKATION": [
       {
         "boTyp": "NETZLOKATION",
