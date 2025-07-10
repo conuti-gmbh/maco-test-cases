@@ -1,0 +1,10 @@
+{
+  "stammdaten": {
+    "boTyp": "VERTRAG",
+    "versionStruktur": "1",
+    "vertragsnummer": "12345676",
+    "vertragsart": "NETZNUTZUNGSVERTRAG",
+    "vertragsstatus": "AKTIV",
+    "vertragsbeginn": "2022-12-31T23:00:00Z"
+  }
+}
