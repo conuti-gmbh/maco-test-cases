@@ -15,7 +15,7 @@
     "enddatum": null
   },
   "datenqualitaet": null,
-  "vertragsbeginn": "0001-01-01T00:00:00Z",
+  "vertragsbeginn": "2020-01-01T00:00:00Z",
   "vertragsende": "9999-12-31T23:59:59Z",
   "vertragspartner2": [
     {
@@ -23,7 +23,7 @@
       "versionStruktur": "1",
       "gewerbekennzeichnung": false,
       "anrede": "Herr",
-      "name1": "Hai",
+      "name1": "Häi",
       "name2": "Fisch",
       "name3": null,
       "geschaeftspartnerrolle": [
@@ -43,18 +43,18 @@
     }
   ],
   "vertragskonditionen": {
-    "startAbrechnungsjahr": "0001-01-01T00:00:00Z",
+    "startAbrechnungsjahr": "2020-01-01T00:00:00Z",
     "geplanteTurnusablesung": {
       "einheit": "JAHR",
       "dauer": 1,
-      "startdatum": "0001-01-01T00:00:00Z",
+      "startdatum": "2020-01-01T00:00:00Z",
       "enddatum": "2025-10-31T23:00:00Z",
       "ableseZeitraum": "<string>"
     },
     "netznutzungsabrechnung": {
       "einheit": "JAHR",
       "dauer": 5,
-      "startdatum": "0001-01-01T00:00:00Z",
+      "startdatum": "2020-01-01T00:00:00Z",
       "enddatum": "2025-10-31T23:00:00Z",
       "abrechnungsZeitraum": "1031"
     },
