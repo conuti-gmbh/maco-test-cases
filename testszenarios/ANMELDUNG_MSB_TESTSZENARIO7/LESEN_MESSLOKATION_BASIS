@@ -1,0 +1,44 @@
+
+{
+    "stammdaten":{
+    "MESSLOKATION":[{
+      "boTyp": "MESSLOKATION",
+      "versionStruktur": "1",
+      "messlokationsId": "DE00014545768S0000000000000003054",
+      "sparte": "STROM",
+      "netzebenemessung": "NSP",
+      "marktrollen": [
+        {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "9904446000007",
+          "marktrolle": "MSB",
+          "weiterverpflichtet": true,
+          "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+        },
+        {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "9904446000008",
+          "marktrolle": "MSB",
+          "weiterverpflichtet": true,
+          "messstellenbetreiberEigenschaft": "WETTBEWERBLICHER_MESSSTELLENBETREIBER"
+        },
+        {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "9900321000005",
+          "marktrolle": "NB",
+          "weiterverpflichtet": true
+        },
+        {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "9904446000007",
+          "marktrolle": "GMSB"
+        }
+      ]
+    }
+    ]
+}
+}
