@@ -1,0 +1,33 @@
+{
+  "stammdaten": {
+    "MESSLOKATION": [
+      {
+        "boTyp": "MESSLOKATION",
+        "versionStruktur": "1",
+        "messlokationsId": "DE0032106765712000000000000000037",
+        "sparte": "STROM",
+        "datenqualitaet": "INFORMATIVE_DATEN",
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "MSB",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9904446000007",
+            "rollencodetyp": "BDEW",
+            "weiterverpflichtet": true,
+            "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+          },
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "GMSB",
+            "gewerbekennzeichnung": true,
+            "rollencodenummer": "9904446000007",
+            "rollencodetyp": "BDEW"
+          }
+        ]
+      }
+    ]
+  }
+}
