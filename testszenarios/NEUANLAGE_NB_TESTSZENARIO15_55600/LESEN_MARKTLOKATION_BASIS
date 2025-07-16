@@ -20,7 +20,7 @@
         "unterbrechbar": false,
         "netzebene": "NSP",
         "umspannung": null,
-        "netzbetreiberCodeNr": "9900327000009",
+        "netzbetreiberCodeNr": "9900683000008",
         "gebietTyp": "VERSORGUNGSGEBIET",
         "netzgebietNr": "12345",
         "bilanzierungsgebiet": "11YR00000004065V",
@@ -126,7 +126,7 @@
             },
             "marktrolle": "LF",
             "gewerbekennzeichnung": true,
-            "rollencodenummer": null,
+            "rollencodenummer": "9979052000006",
             "rollencodetyp": "BDEW"
           },
           {
@@ -406,6 +406,13 @@
           }
         ],
         "paketId": null
+      },
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "50754496002",
+        "zukuenftigerMeldepunkt": null,
+        "sparte": "STROM"
       }
     ]
   }

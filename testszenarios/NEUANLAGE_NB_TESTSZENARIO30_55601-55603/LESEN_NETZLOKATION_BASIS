@@ -1,8 +1,8 @@
 {
-  "stammdaten": {
-    "MARKTLOKATION": [
-      {
-        "boTyp": "MARKTLOKATION",
+  "stammdaten":{
+  "NETZLOKATION":[
+    {
+        "boTyp": "NETZLOKATION",
         "versionStruktur": "1",
         "marktlokationsId": "50754496000",
         "zukuenftigerMeldepunkt": null,
@@ -20,7 +20,7 @@
         "unterbrechbar": false,
         "netzebene": "NSP",
         "umspannung": null,
-        "netzbetreiberCodeNr": "9900327000009",
+        "netzbetreiberCodeNr": "9900683000008",
         "gebietTyp": "VERSORGUNGSGEBIET",
         "netzgebietNr": "12345",
         "bilanzierungsgebiet": "11YR00000004065V",
@@ -126,7 +126,7 @@
             },
             "marktrolle": "LF",
             "gewerbekennzeichnung": true,
-            "rollencodenummer": null,
+            "rollencodenummer": "9979052000006",
             "rollencodetyp": "BDEW"
           },
           {
@@ -207,7 +207,7 @@
               "register": null,
               "schwachlastfaehig": null
             },
-            "leistungskurvendefinition": null,
+            "leistungskurvendefinition": "XYZ",
             "konfiguration": null,
             "messprodukt": "9991000000044",
             "wertegranularitaet": "JAEHRLICH",
@@ -216,7 +216,9 @@
             "artEMobilitaet": null
           }
         ],
-        "zaehlwerkeBeteiligteMarktrolle": [],
+        "zaehlwerkeBeteiligteMarktrolle": [
+          null
+        ],
         "verbrauchsmenge": [
           {
             "startdatum": "2023-10-14T07:52:00Z",
@@ -362,7 +364,7 @@
         "modulNetzentgelte": null,
         "produktdatenRelevanteRolle": "LF",
         "konfigurationsprodukt": null,
-        "leistungskurvendefinition": null,
+        "leistungskurvendefinition": "XYZ",
         "beteiligterMarktpartner": {
           "boTyp": "MARKTTEILNEHMER",
           "versionStruktur": "1",
@@ -407,6 +409,6 @@
         ],
         "paketId": null
       }
-    ]
-  }
+  ]
+}
 }
