@@ -189,7 +189,9 @@
                 ]
               }
             ],
-            "verbrauchsart": "KL",
+            "verbrauchsart": [
+            "KL"
+            ]
             "unterbrechbarkeit": "NUV",
             "waermenutzung": null,
             "konzessionsabgabe": {
