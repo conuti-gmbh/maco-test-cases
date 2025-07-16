@@ -1,10 +1,10 @@
 {
   "stammdaten": {
-    "MARKTLOKATION": [
+    "STEUERBARE_RESSOURCE": [
       {
-        "boTyp": "MARKTLOKATION",
+        "boTyp": "STEUERBARE_RESSOURCE",
         "versionStruktur": "1",
-        "marktlokationsId": "50754496000",
+        "ressourcenId": "C816417ST77",
         "sparte": "STROM",
         "datenqualitaet": "INFORMATIVE_DATEN",
         "marktrollen": [
@@ -15,7 +15,6 @@
             "gewerbekennzeichnung": true,
             "rollencodenummer": "9910812000000",
             "rollencodetyp": "BDEW",
-            "weiterverpflichtet": false,
             "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
           }
         ]
