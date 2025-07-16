@@ -16,9 +16,7 @@
   "inbetriebnahmedatum": "2015-12-31T23:59:59Z",
   "energierichtung": "AUSSP",
   "bilanzierungsmethode": "SLP",
-  "verbrauchsart": [
-  "KL"
-  ],
+  "verbrauchsart": "KL",
   "unterbrechbar": false,
   "netzebene": "NSP",
   "umspannung": null,
