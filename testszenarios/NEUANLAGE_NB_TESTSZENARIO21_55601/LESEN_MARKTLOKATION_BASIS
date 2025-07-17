@@ -128,7 +128,7 @@
             },
             "marktrolle": "LF",
             "gewerbekennzeichnung": true,
-            "rollencodenummer": null,
+            "rollencodenummer": "9979052000006",
             "rollencodetyp": "BDEW"
           },
           {
@@ -410,6 +410,11 @@
           }
         ],
         "paketId": null
+      },
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "50754496002"
       }
     ]
   }
