@@ -1,0 +1,12 @@
+{
+  "stammdaten": {
+    "BILANZIERUNG": [
+      {
+        "boTyp": "BILANZIERUNG",
+        "versionStruktur": "1",
+        "marktlokationsId": "50754496000",
+        "prognosegrundlage": "PROFILE"
+      }
+    ]
+  }
+}

@@ -16,9 +16,7 @@
         "inbetriebnahmedatum": "2015-12-31T23:59:59Z",
         "energierichtung": "AUSSP",
         "bilanzierungsmethode": "SLP",
-        "verbrauchsart": [
-          "KL"
-        ],
+        "verbrauchsart": "KL",
         "unterbrechbar": false,
         "netzebene": "NSP",
         "umspannung": null,
@@ -128,7 +126,7 @@
             },
             "marktrolle": "LF",
             "gewerbekennzeichnung": true,
-            "rollencodenummer": null,
+            "rollencodenummer": "9900683000008",
             "rollencodetyp": "BDEW"
           },
           {
@@ -191,9 +189,7 @@
                 ]
               }
             ],
-            "verbrauchsart": [
-              "KL"
-            ],
+            "verbrauchsart": "KL",
             "unterbrechbarkeit": "NUV",
             "waermenutzung": null,
             "konzessionsabgabe": {
@@ -410,12 +406,6 @@
           }
         ],
         "paketId": null
-      },
-      {
-        "boTyp": "MARKTLOKATION",
-        "versionStruktur": "1",
-        "marktlokationsId": "50754496001",
-        "sparte": "STROM"
       }
     ]
   }

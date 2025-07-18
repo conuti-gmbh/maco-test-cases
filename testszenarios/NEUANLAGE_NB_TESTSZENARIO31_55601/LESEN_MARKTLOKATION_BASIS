@@ -22,7 +22,7 @@
         "unterbrechbar": false,
         "netzebene": "NSP",
         "umspannung": null,
-        "netzbetreiberCodeNr": "9900683000008",
+        "netzbetreiberCodeNr": "9900327000009",
         "gebietTyp": "VERSORGUNGSGEBIET",
         "netzgebietNr": "12345",
         "bilanzierungsgebiet": "11YR00000004065V",
@@ -414,8 +414,7 @@
       {
         "boTyp": "MARKTLOKATION",
         "versionStruktur": "1",
-        "marktlokationsId": "50754496001",
-        "sparte": "STROM"
+        "marktlokationsId": "50754496001"
       }
     ]
   }

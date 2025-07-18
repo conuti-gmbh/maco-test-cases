@@ -1,0 +1,22 @@
+{
+  "stammdaten": {
+    "MARKTLOKATION": [
+      {
+        "boTyp": "MARKTLOKATION",
+        "versionStruktur": "1",
+        "marktlokationsId": "50074561188",
+        "datenqualitaet": "INFORMATIVE_DATEN",
+        "marktrollen": [
+          {
+            "boTyp": "MARKTTEILNEHMER",
+            "versionStruktur": "1",
+            "marktrolle": "MSB",
+            "rollencodenummer": "9904446000007",
+            "weiterverpflichtet": true,
+            "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER"
+          }
+        ]
+      }
+    ]
+  }
+}
