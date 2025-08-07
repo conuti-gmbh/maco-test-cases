@@ -1,0 +1,17 @@
+{
+  "stammdaten": {
+    "AUFTRAG": [
+      {
+        "boTyp": "AUFTRAG",
+        "versionStruktur": "1",
+        "ausfuehrungsdatum": "2025-08-31T22:00:00Z",
+        "positionsdaten": [
+          {
+            "positionsnummer": 1,
+            "lokationsId": "DE0009697056900614312080040415111"
+          }
+        ]
+      }
+    ]
+  }
+}

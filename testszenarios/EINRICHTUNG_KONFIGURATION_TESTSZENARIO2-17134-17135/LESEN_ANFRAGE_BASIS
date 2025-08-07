@@ -1,0 +1,15 @@
+{
+  "stammdaten": {
+    "ANFRAGE": [
+      {
+        "boTyp": "ANFRAGE",
+        "versionStruktur": "1",
+        "anfragekategorie": "EINRICHTUNG_KONFIGURATION_AUFGRUND_ZUORDNUNG_LF",
+        "anfragetyp": "AKTIVIERUNG_KONFIGURATION",
+        "lokationsId": "DE0009697056900614312080040415111",
+        "lokationsTyp": "MELO",
+        "energierichtung": "AUSSP"
+      }
+    ]
+  }
+}
