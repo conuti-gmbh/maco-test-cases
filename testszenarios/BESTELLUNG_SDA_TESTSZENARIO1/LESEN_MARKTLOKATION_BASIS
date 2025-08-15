@@ -23,7 +23,7 @@
   "datenqualitaet": null,
   "energierichtung": "AUSSP",
   "bilanzierungsmethode": "SLP",
-  "verbrauchsart": "KL",
+  "verbrauchsart": ["KL"],
   "unterbrechbar": false,
   "netzebene": "NSP",
   "umspannung": null,
