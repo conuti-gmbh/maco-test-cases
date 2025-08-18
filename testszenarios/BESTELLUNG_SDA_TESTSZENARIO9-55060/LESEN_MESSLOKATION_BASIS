@@ -1,0 +1,120 @@
+
+{
+    "stammdaten":{
+    "MESSLOKATION":[
+     {
+                "boTyp": "MESSLOKATION",
+                "versionStruktur": "1",
+                "messlokationsId": "DE00068365191STROM000008000014722",
+                "sparte": "GAS",
+                "energierichtung": "AUSSP",
+                "netzebenemessung": "NSP",
+                "grundzustaendigerMSBCodeNr": "SMSB00001",
+                "messadresse": {
+                    "postleitzahl": "65191",
+                    "ort": "Wiesbaden",
+                    "strasse": "Von-Leyden-Straße",
+                    "hausnummer": "15",
+                    "landescode": "DE",
+                    "ortsteil": "Bierstadt",
+                    "zusatzinformation": {
+                        "zusatz1": "II.L."
+                    }
+                },
+                "bilanzierungsmethode": "SLP",
+                "abrechnungmessstellenbetriebnna": true,
+                "ablesekartenempfaenger": {
+                    "anrede": "0005",
+                    "name1": "Leeranlage ESWE",
+                    "name2": "202508154010482397",
+                    "gewerbekennzeichnung": false,
+                    "partneradresse": {
+                        "postleitzahl": "65191",
+                        "ort": "Wiesbaden",
+                        "strasse": "Von-Leyden-Straße",
+                        "hausnummer": "15",
+                        "landescode": "DE",
+                        "ortsteil": "Bierstadt",
+                        "zusatzinformation": {
+                            "zusatz1": "II.L."
+                        }
+                    }
+                },
+                "referenzMarktlokationsId": "50928530142",
+                "zukuenftigerMeldepunkt": false,
+                "lokationszuordnung": "UNVERAENDERT",
+                "messlokationszaehler": [
+                    "000000000005074423"
+                ],
+                "geraete": [
+    {
+      "geraetetyp": "ELEKTRONISCHER_HAUSHALTSZAEHLER",
+      "geraeteeigenschaften": {
+        "geraetetyp": "ELEKTRONISCHER_HAUSHALTSZAEHLER"
+      }
+    }
+  ],
+                "zaehlwerke": [
+                    {
+                        "zaehlwerkId": "002",
+                        "bezeichnung": "HT",
+                        "richtung": "AUSSP",
+                        "obisKennzahl": "1-1:1.8.0",
+                        "wandlerfaktor": 1,
+                        "einheit": "KWH",
+                        "steuerbefreit": false,
+                        "vorkommastelle": 6,
+                        "nachkommastelle": 0,
+                        "abrechnungsrelevant": true,
+                        "wertegranularitaet": "JAEHRLICH",
+                        "keinKonfigurationsprodukt": true,
+                        "messprodukt": "9991000000218",
+              "notwendigkeitZweiteMessung": "NICHT_VORHANDEN",
+              "werteuebermittlungVerwendungszweck": "NICHT_VORHANDEN"
+                    }
+                ],
+                "marktrollen": [
+                    {
+                        "boTyp": "MARKTTEILNEHMER",
+                        "versionStruktur": "1",
+                        "geschaeftspartnerrolle": "MARKTPARTNER",
+                        "anrede": "Ohne Anrede",
+                        "name1": "Stadtwerke Wiesbaden Netz GmbH",
+                        "partneradresse": {
+                            "postleitzahl": "65189",
+                            "ort": "Wiesbaden",
+                            "strasse": "Konradinerallee",
+                            "hausnummer": "25",
+                            "landescode": "DE"
+                        },
+                        "gewerbekennzeichnung": true,
+                        "marktrolle": "MSB",
+                        "rollencodenummer": "9800191400007",
+                        "rollencodetyp": "BDEW",
+                        "weiterverpflichtet": false,
+                        "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER",
+                        "bankverbindung": [
+                            {
+                                "iban": "DE84510500150103051363",
+                                "bic": "NASSDE55XXX",
+                                "kreditinstitut": "Nassauische Sparkasse"
+                            }
+                        ],
+                        "zuordnungVon": "2010-09-30T22:00:00Z",
+                        "zuordnungBis": "9999-12-31T22:59:59Z"
+                    },
+                    {
+                        "gewerbekennzeichnung": false,
+                        "marktrolle": "GMSB",
+                        "rollencodenummer": "9800191400007",
+                        "rollencodetyp": "BDEW",
+                        "weiterverpflichtet": false,
+                        "messstellenbetreiberEigenschaft": "GRUNDZUSTAENDIGER_MESSSTELLENBETREIBER",
+                        "zuordnungVon": "2010-09-30T22:00:00Z",
+                        "zuordnungBis": "9999-12-30T23:00:00Z"
+                    }
+                ]
+            }
+    ]
+}
+}

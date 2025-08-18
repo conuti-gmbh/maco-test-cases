@@ -1,0 +1,22 @@
+{
+  "stammdaten":{
+  "ZAEHLER": [
+        {
+          "boTyp": "ZAEHLER",
+          "versionStruktur": "1",
+          "zaehlernummer": "EL001IK01013852469",
+          "messlokationsId": "DE0032106765712000000000000000037",
+          "sparte": "STROM",
+          "datenqualitaet": "INFORMATIVE_DATEN",
+          "zaehlertyp": "DREHSTROMZAEHLER",
+          "zaehlwerke": [
+            {
+              "obisKennzahl": "1-1:1.8.0",
+              "wertegranularitaet": "JAEHRLICH"
+            }
+          ],
+          "messwerterfassung": "MANUELL_AUSGELESENE"
+        }
+      ]
+}
+}
