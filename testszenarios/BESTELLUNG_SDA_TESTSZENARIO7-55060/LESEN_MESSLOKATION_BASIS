@@ -48,7 +48,7 @@
                 ],
                 "zaehlwerke": [
                     {
-                        "zaehlwerkId": "001",
+                        "zaehlwerkId": "002",
                         "bezeichnung": "HT",
                         "richtung": "AUSSP",
                         "obisKennzahl": "1-1:1.8.0",
