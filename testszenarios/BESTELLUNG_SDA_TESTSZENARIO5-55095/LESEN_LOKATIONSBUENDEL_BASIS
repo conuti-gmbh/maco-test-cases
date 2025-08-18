@@ -1,0 +1,51 @@
+{
+  "stammdaten":{
+  "LOKATIONSBUENDEL": [
+        {
+          "boTyp": "LOKATIONSBUENDEL",
+          "versionStruktur": "1",
+          "lokationsbuendelstrukturId": "9992000000026",
+          "datenqualitaet": "INFORMATIVE_DATEN",
+          "standardisierteLokationsbuendelstruktur": true,
+          "zuordnungObjectcode": [
+            {
+              "referenzLokationsTyp": "NELO",
+              "referenzLokationsId": "E1688117482",
+              "objectcode": [
+                {
+                  "objectcode": "9992000001256"
+                }
+              ]
+            },
+            {
+              "referenzLokationsTyp": "MALO",
+              "referenzLokationsId": "50074561188",
+              "objectcode": [
+                {
+                  "objectcode": "9992000001016"
+                }
+              ]
+            },
+            {
+              "referenzLokationsTyp": "MELO",
+              "referenzLokationsId": "DE0032106765712000000000000000037",
+              "objectcode": [
+                {
+                  "objectcode": "9992000001032"
+                }
+              ]
+            },
+            {
+              "referenzLokationsTyp": "TECHNISCHE_RESSOURCE",
+              "referenzLokationsId": "D417MLM8164",
+              "objectcode": [
+                {
+                  "objectcode": "9992000001024"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+}
+}
