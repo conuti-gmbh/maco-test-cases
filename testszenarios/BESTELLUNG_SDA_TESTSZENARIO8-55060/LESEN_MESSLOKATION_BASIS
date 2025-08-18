@@ -46,6 +46,14 @@
                 "messlokationszaehler": [
                     "000000000005074423"
                 ],
+                "geraete": [
+    {
+      "geraetetyp": "ELEKTRONISCHER_HAUSHALTSZAEHLER",
+      "geraeteeigenschaften": {
+        "geraetetyp": "ELEKTRONISCHER_HAUSHALTSZAEHLER"
+      }
+    }
+  ],
                 "zaehlwerke": [
                     {
                         "zaehlwerkId": "002",
