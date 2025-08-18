@@ -23,7 +23,7 @@
   "datenqualitaet": null,
   "energierichtung": "EINSP",
   "bilanzierungsmethode": "SLP",
-  "verbrauchsart": "KL",
+  "verbrauchsart": ["KL"],
   "unterbrechbar": false,
   "netzebene": "NSP",
   "umspannung": null,
@@ -196,7 +196,7 @@
           ]
         }
       ],
-      "verbrauchsart": "KL",
+      "verbrauchsart": ["KL"],
       "unterbrechbarkeit": "NUV",
       "waermenutzung": null,
       "konzessionsabgabe": {
