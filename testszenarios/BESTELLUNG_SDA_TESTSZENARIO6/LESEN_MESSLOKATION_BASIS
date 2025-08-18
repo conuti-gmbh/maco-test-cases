@@ -23,6 +23,13 @@
           "marktrolle": "NB",
           "weiterverpflichtet": true
         },
+                {
+          "boTyp": "MARKTTEILNEHMER",
+          "versionStruktur": "1",
+          "rollencodenummer": "9979052000006",
+          "marktrolle": "LF",
+          "weiterverpflichtet": true
+        },
         {
           "boTyp": "MARKTTEILNEHMER",
           "versionStruktur": "1",
