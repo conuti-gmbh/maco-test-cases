@@ -181,7 +181,7 @@
   "zeitreihentyp": "SLS",
   "zaehlwerke": [
     {
-      "zaehlwerkId": "1", 
+      "zaehlwerkId": "1-02-0-001", 
       "bezeichnung": "HT",
       "richtung": "AUSSP",
       "obisKennzahl": "1-1:1.9.0",
