@@ -252,7 +252,7 @@
   "messtechnischeEinordnung": "KME_MME",
   "netznutzungsabrechnungsdaten": [
     {
-      "artikelId": "1",
+      "artikelId": "1-02-0-001",
       "artikelIdTyp": "ARTIKELID",
       "anzahl": 5,
       "gemeinderabatt": 5.45,
