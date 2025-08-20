@@ -280,7 +280,7 @@
   "messstellenbetriebsabrechnungsdaten": [
     {
       "messstellenbetriebsabrechnung": true,
-      "artikelId": "1",
+      "artikelId": "1-02-0-001",
       "artikelIdTyp": "ARTIKELID",
       "anzahl": 5,
       "zuschlag": 5.78,
