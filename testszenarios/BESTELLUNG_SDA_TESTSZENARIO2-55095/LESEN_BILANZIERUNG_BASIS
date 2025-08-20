@@ -91,7 +91,7 @@
             "dienstanbieter": null,
             "herausgeber": null
           },
-          "einspeisung": false,
+          "einspeisung": true,
           "profilart": "ART_STANDARDLASTPROFIL",
           "herausgeber": "NB"
         }
