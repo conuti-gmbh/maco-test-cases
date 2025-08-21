@@ -5,7 +5,7 @@
      {
                 "boTyp": "MESSLOKATION",
                 "versionStruktur": "1",
-                "messlokationsId": "DE00068365191STROM000008000014744",
+                "messlokationsId": "DE0004962168400000000000010788525",
                 "sparte": "GAS",
                 "energierichtung": "AUSSP",
                 "netzebenemessung": "NSP",
@@ -50,7 +50,7 @@
     {
       "geraetetyp": "IMS_ZAEHLER",
       "geraeteeigenschaften": {
-        "geraetetyp": "IMS_ZAEHLER"
+        "geraetetyp": "BLA_ZAEHLER"
       }
     }
   ],
