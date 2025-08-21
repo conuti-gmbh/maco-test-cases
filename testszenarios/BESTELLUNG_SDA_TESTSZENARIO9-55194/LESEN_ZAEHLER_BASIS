@@ -1,22 +1,29 @@
 {
-  "stammdaten":{
-  "ZAEHLER": [
-        {
-          "boTyp": "ZAEHLER",
-          "versionStruktur": "1",
-          "zaehlernummer": "EL001IK01013852469",
-          "messlokationsId": "DE0004962168400000000000010788525",
-          "sparte": "STROM",
-          "datenqualitaet": "INFORMATIVE_DATEN",
-          "zaehlertyp": "DREHSTROMZAEHLER",
-          "zaehlwerke": [
-            {
-              "obisKennzahl": "1-1:1.8.0",
-              "wertegranularitaet": "JAEHRLICH"
+  "stammdaten": {
+    "ZAEHLER": [
+      {
+        "boTyp": "ZAEHLER",
+        "versionStruktur": "1",
+        "zaehlernummer": "EL001IK01013852469",
+        "messlokationsId": "DE0004962168400000000000010788525",
+        "sparte": "STROM",
+        "datenqualitaet": "INFORMATIVE_DATEN",
+        "zaehlwerke": [
+          {
+            "obisKennzahl": "1-1:1.8.0",
+            "wertegranularitaet": "JAEHRLICH"
+          }
+        ],
+        "messwerterfassung": "MANUELL_AUSGELESENE",
+        "geraete": [
+          {
+            "geraetenummer": "7ELS9636042229",
+            "geraeteeigenschaften": {
+              "geraetetyp": "SMARTMETERGATEWAY"
             }
-          ],
-          "messwerterfassung": "MANUELL_AUSGELESENE"
-        }
-      ]
-}
+          }
+        ]
+      }
+    ]
+  }
 }
