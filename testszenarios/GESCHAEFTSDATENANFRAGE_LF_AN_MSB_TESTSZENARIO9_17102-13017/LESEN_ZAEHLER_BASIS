@@ -1,0 +1,12 @@
+{
+  "stammdaten": {
+    "ZAEHLER": [
+      {
+        "boTyp": "ZAEHLER",
+        "versionStruktur": "1",
+        "zaehlernummer": "EL001IK01013852469",
+        "sparte": "STROM"
+      }
+    ]
+  }
+}
