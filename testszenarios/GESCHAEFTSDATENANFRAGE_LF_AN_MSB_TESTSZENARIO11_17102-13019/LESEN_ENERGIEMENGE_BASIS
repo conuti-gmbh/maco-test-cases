@@ -10,7 +10,7 @@
           {
             "startdatum": "2022-12-31T23:00:00Z",
             "enddatum": "2023-03-15T23:00:00Z",
-            "messwertstatus": "ANGABE_FUER_LIEFERSCHEIN",
+            "messwertstatus": "ABGELESEN",
             "obiskennzahl": "1-0:1.9.0",
             "wert": 2000,
             "position": 1
