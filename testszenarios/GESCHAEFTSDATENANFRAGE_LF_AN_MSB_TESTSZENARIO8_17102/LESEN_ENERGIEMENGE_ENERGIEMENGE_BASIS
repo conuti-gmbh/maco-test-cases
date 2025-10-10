@@ -1,0 +1,28 @@
+{
+  "stammdaten": {
+      "ENERGIEMENGE": [
+        {
+          "boTyp": "ENERGIEMENGE",
+          "versionStruktur": "1",
+          "lokationsId": "57685676748",
+          "lokationsTyp": "MALO",
+          "energieverbrauch": [
+            {
+              "startdatum": "2024-12-31T23:00:00Z",
+              "enddatum": "2025-01-31T23:00:00Z",
+              "messwertstatus": "VOLAEUFIGERWERT",
+              "statuszusatzinformationen": [
+                {
+                  "art": "KORREKTURGRUND",
+                  "status": "KEIN_ZUGANG"
+                }
+              ],
+              "obiskennzahl": "1-1:1.9.0",
+              "wert": 10123,
+              "position": 1
+            }
+          ]
+        }
+      ]
+  }
+}
