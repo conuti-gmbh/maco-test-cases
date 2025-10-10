@@ -8,7 +8,6 @@
         "lokationsTyp": "MELO",
         "energieverbrauch": [
           {
-            "startdatum": "2023-03-01T23:00:00Z",
             "messwertstatus": "ABGELESEN",
             "statuszusatzinformationen": [
               {
