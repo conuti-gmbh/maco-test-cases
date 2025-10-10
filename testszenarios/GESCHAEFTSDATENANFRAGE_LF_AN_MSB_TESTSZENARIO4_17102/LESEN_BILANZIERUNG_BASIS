@@ -109,9 +109,9 @@
       "bilanzkreisVon": "11Y0-0000-0077-N",
       "zeitreihentyp": "SLS",
       "aggregationsverantwortung": "VNB",
-      "prognosegrundlage": "PROFILE",
+      "prognosegrundlage": "WERTE",
       "detailsPrognosegrundlage": [
-        "SLP_SEP"
+        "RLM"
       ]
     }
   ]
