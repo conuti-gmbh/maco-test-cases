@@ -4,7 +4,7 @@
 {
   "boTyp": "BILANZIERUNG",
   "versionStruktur": "1",
-  "marktlokationsId": "50074561122",
+  "marktlokationsId": "57685676748",
   "gueltigkeitszeitraum": {
     "zeitraumId": null,
     "startdatum": null,
@@ -107,7 +107,7 @@
       "bilanzkreisVon": "11Y0-0000-0077-N",
       "zeitreihentyp": "SLS",
       "aggregationsverantwortung": "VNB",
-      "prognosegrundlage": "WERTE"
+      "prognosegrundlage": "PROFILE"
     }
   ]
 }

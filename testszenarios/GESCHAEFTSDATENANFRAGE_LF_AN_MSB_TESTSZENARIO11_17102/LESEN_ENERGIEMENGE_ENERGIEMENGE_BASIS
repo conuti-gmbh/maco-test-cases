@@ -8,7 +8,7 @@
         "lokationsTyp": "MALO",
         "energieverbrauch": [
           {
-            "startdatum": "2022-12-31T23:00:00Z",
+            "startdatum": "2024-12-31T23:00:00Z",
             "enddatum": "2023-03-15T23:00:00Z",
             "messwertstatus": "ABGELESEN",
             "obiskennzahl": "1-0:1.9.0",
