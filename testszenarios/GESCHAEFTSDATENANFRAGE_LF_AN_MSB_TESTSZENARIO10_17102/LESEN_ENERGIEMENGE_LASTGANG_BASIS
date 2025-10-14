@@ -8,7 +8,7 @@
         "lokationsTyp": "MELO",
         "energieverbrauch": [
           {
-            "startdatum": "2023-10-04T22:00:00Z",
+            "startdatum": "2024-12-31T23:00:00Z",
             "enddatum": "2023-10-04T22:15:00Z",
             "messwertstatus": "ABGELESEN",
             "obiskennzahl": "1-1:1.29.0",
