@@ -36,7 +36,9 @@
       "rollencodenummer": "9870006600000",
       "rollencodetyp": "DVGW"
     },
-    "kategorie": "E02"
+    "kategorie": "E02",
+    "zaehlerstandsinfo": true,
+    "freitext": "Textfrei"
   },
   "zusatzdaten": {
     "prozessId": "00505688-E4A2-1EDF-A0C2-C81842E2515E",
